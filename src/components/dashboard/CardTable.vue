@@ -148,7 +148,3 @@ function toggleExpanded() {
     </button>
   </div>
 </template>
-
-<style>
-  import '../../styles/dashboard.css';
-</style>

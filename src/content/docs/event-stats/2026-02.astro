@@ -1,0 +1,77 @@
+---
+// src/content/docs/event-stats/2026-02.astro
+import eventData from '../../../data/events/2026-02.json';
+import cardsJson from '../../../data/cards.json';
+import {
+  getCaptainStats,
+  getCardStats,
+  getTopCardsForCaptain,
+  calculateDeckDiversity,
+  type EventData,
+  type CardLookup,
+} from '../../../utils/event-stats';
+import StatsHeader from '../../../components/dashboard/StatsHeader.astro';
+import CaptainChart from '../../../components/dashboard/CaptainChart.vue';
+import CardTable from '../../../components/dashboard/CardTable.vue';
+import PairingPreview from '../../../components/dashboard/PairingPreview.astro';
+import InsightsPanel from '../../../components/dashboard/InsightsPanel.astro';
+import Layout from '../../layouts/layout.astro';
+
+title: "February Monthly 2026 - Event Stats"
+description: "Statistics and insights from the February Monthly 2026 tournament event"
+
+// Type-safe data loading
+const event = eventData as EventData;
+const cards = cardsJson as CardLookup;
+
+// Calculate statistics
+const captainStats = getCaptainStats(event, cards);
+const cardStats = getCardStats(event, cards);
+const deckDiversity = calculateDeckDiversity(event, cards);
+
+// Get most popular items for insights
+const mostPopularCaptain = captainStats[0];
+const mostPlayedCard = cardStats[0];
+
+// Get top cards for most popular captain (for pairing preview)
+const topCardsForTopCaptain = getTopCardsForCaptain(
+  event,
+  mostPopularCaptain.slug,
+  cards,
+  5
+);
+---
+
+<Layout title={frontmatter.title} {frontmatter.description}>
+  <h1>February Monthly 2026 - Event Statistics</h1>
+
+  <p>
+    Welcome to the event statistics dashboard for the February Monthly 2026 tournament.
+    This page visualizes captain and card usage data from <strong>{event.players.length}</strong> champion participants.
+  </p>
+
+  <StatsHeader eventData={event} />
+
+  <div class="dashboard-grid">
+    <div class="dashboard-grid__left">
+      <CaptainChart stats={captainStats} client:load />
+      <CardTable stats={cardStats} client:load />
+    </div>
+
+    <div class="dashboard-grid__right">
+      <PairingPreview
+        captainName={mostPopularCaptain.name}
+        topCards={topCardsForTopCaptain}
+      />
+      <InsightsPanel
+        mostPopularCaptain={mostPopularCaptain}
+        mostPlayedCard={mostPlayedCard}
+        deckDiversity={deckDiversity}
+      />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  import '../../../styles/dashboard.css';
+</style>

@@ -45,7 +45,3 @@ const maxCount = computed(() =>
     </div>
   </div>
 </template>
-
-<style>
-  import '../../styles/dashboard.css';
-</style>

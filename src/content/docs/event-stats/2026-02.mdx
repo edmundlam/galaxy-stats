@@ -1,5 +1,8 @@
 ---
-// src/content/docs/event-stats/2026-02.mdx
+title: "February Monthly 2026 - Event Stats"
+description: "Statistics and insights from the February Monthly 2026 tournament event"
+---
+
 import eventData from '../../../data/events/2026-02.json';
 import cardsJson from '../../../data/cards.json';
 import {
@@ -7,67 +10,35 @@ import {
   getCardStats,
   getTopCardsForCaptain,
   calculateDeckDiversity,
-  type EventData,
-  type CardLookup,
 } from '../../../utils/event-stats';
 import StatsHeader from '../../../components/dashboard/StatsHeader.astro';
 import CaptainChart from '../../../components/dashboard/CaptainChart.vue';
 import CardTable from '../../../components/dashboard/CardTable.vue';
 import PairingPreview from '../../../components/dashboard/PairingPreview.astro';
 import InsightsPanel from '../../../components/dashboard/InsightsPanel.astro';
-
-title: "February Monthly 2026 - Event Stats"
-description: "Statistics and insights from the February Monthly 2026 tournament event"
-sidebar:
-  badge: { text: "Event Stats", variant: "neutral" }
-
-// Type-safe data loading
-const event = eventData as EventData;
-const cards = cardsJson as CardLookup;
-
-// Calculate statistics
-const captainStats = getCaptainStats(event, cards);
-const cardStats = getCardStats(event, cards);
-const deckDiversity = calculateDeckDiversity(event, cards);
-
-// Get most popular items for insights
-const mostPopularCaptain = captainStats[0];
-const mostPlayedCard = cardStats[0];
-
-// Get top cards for most popular captain (for pairing preview)
-const topCardsForTopCaptain = getTopCardsForCaptain(
-  event,
-  mostPopularCaptain.slug,
-  cards,
-  5
-);
----
+import '../../../styles/dashboard.css';
 
 # February Monthly 2026 - Event Statistics
 
-Welcome to the event statistics dashboard for the February Monthly 2026 tournament. This page visualizes captain and card usage data from {event.players.length} champion participants.
+Welcome to the event statistics dashboard for the February Monthly 2026 tournament. This page visualizes captain and card usage data from the event.
 
-<StatsHeader eventData={event} />
+<StatsHeader eventData={eventData} />
 
 <div class="dashboard-grid">
   <div class="dashboard-grid__left">
-    <CaptainChart stats={captainStats} client:load />
-    <CardTable stats={cardStats} client:load />
+    <CaptainChart stats={getCaptainStats(eventData, cardsJson)} client:load />
+    <CardTable stats={getCardStats(eventData, cardsJson)} client:load />
   </div>
 
   <div class="dashboard-grid__right">
     <PairingPreview
-      captainName={mostPopularCaptain.name}
-      topCards={topCardsForTopCaptain}
+      captainName={getCaptainStats(eventData, cardsJson)[0].name}
+      topCards={getTopCardsForCaptain(eventData, getCaptainStats(eventData, cardsJson)[0].slug, cardsJson, 5)}
     />
     <InsightsPanel
-      mostPopularCaptain={mostPopularCaptain}
-      mostPlayedCard={mostPlayedCard}
-      deckDiversity={deckDiversity}
+      mostPopularCaptain={getCaptainStats(eventData, cardsJson)[0]}
+      mostPlayedCard={getCardStats(eventData, cardsJson)[0]}
+      deckDiversity={calculateDeckDiversity(eventData, cardsJson)}
     />
   </div>
 </div>
-
-<style>
-  import '../../../styles/dashboard.css';
-</style>
