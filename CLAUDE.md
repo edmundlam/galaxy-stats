@@ -26,6 +26,10 @@ npm run preview
 
 # Run Astro CLI directly
 npm run astro [command]
+
+# Parse event HTML to JSON data
+npm run parse-event <html-file> <event-id>
+# Example: npm run parse-event context/2026-02.html 2026-02
 ```
 
 ## Architecture
@@ -57,6 +61,22 @@ Content is managed through Astro's content collections system, configured in `sr
 ### TypeScript
 
 Uses Astro's strict TypeScript configuration (`astro/tsconfigs/strict`).
+
+### Data Pipeline
+
+Event data is parsed from HTML into JSON format using `scripts/parse-event.ts`:
+
+- **Input**: Event HTML files from galaxy.fun (stored in `context/` directory)
+- **Outputs**:
+  - `src/data/events/<event-id>.json`: Per-player records with captain and decklist
+  - `src/data/cards.json`: Card slug-to-display-name lookup (merged across all events)
+
+**Parser usage**: `npm run parse-event context/2026-03.html 2026-03`
+
+The parser extracts:
+- Event metadata (name, date, total champion count)
+- Player records (username, captain card slug, deck card slugs)
+- Card display names for all referenced cards
 
 ## Adding Content
 
