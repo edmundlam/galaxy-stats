@@ -21,6 +21,15 @@ export default defineConfig({
                 label: 'Reference',
                 autogenerate: { directory: 'reference' },
             },
+            {
+                label: 'Event Stats',
+                items: [
+                    {
+                        label: 'February Monthly 2026',
+                        slug: 'event-stats/2026-02',
+                    },
+                ],
+            },
         ],
 		}), vue()],
 });
