@@ -1,0 +1,43 @@
+---
+// src/components/dashboard/InsightsPanel.astro
+import type { CaptainStats, CardStats } from '../../utils/event-stats';
+
+interface Props {
+  mostPopularCaptain: CaptainStats;
+  mostPlayedCard: CardStats;
+  deckDiversity: number;
+}
+
+const { mostPopularCaptain, mostPlayedCard, deckDiversity } = Astro.props;
+---
+
+<div class="dashboard-section">
+  <h2 class="dashboard-section__title">Key Insights</h2>
+
+  <div class="insights-list">
+    <div class="insight-item">
+      <div class="insight-item__label">Most Popular Captain</div>
+      <div class="insight-item__value insight-item__value--highlight">
+        {mostPopularCaptain.name} ({mostPopularCaptain.count} players)
+      </div>
+    </div>
+
+    <div class="insight-item">
+      <div class="insight-item__label">Most Played Card</div>
+      <div class="insight-item__value insight-item__value--highlight">
+        {mostPlayedCard.name} ({mostPlayedCard.count} times)
+      </div>
+    </div>
+
+    <div class="insight-item">
+      <div class="insight-item__label">Deck Diversity</div>
+      <div class="insight-item__value">
+        {deckDiversity.toFixed(1)}% of card pool used
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  import '../../styles/dashboard.css';
+</style>
