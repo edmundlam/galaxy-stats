@@ -1,0 +1,25 @@
+{
+  "name": "src",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "parse-event": "ts-node scripts/parse-event.ts"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.38.2",
+    "@astrojs/vue": "^6.0.1",
+    "astro": "^6.0.1",
+    "sharp": "^0.34.2",
+    "vue": "^3.5.30"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "node-html-parser": "^7.1.0",
+    "ts-node": "^10.9.2"
+  }
+}
