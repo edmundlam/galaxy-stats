@@ -1,0 +1,34 @@
+---
+// src/components/dashboard/PairingPreview.astro
+import type { CardStats } from '../../utils/event-stats';
+
+interface Props {
+  captainName: string;
+  topCards: CardStats[];
+}
+
+const { captainName, topCards } = Astro.props;
+---
+
+<div class="dashboard-section">
+  <h2 class="dashboard-section__title">Top Cards for {captainName}</h2>
+
+  <div class="pairing-list">
+    {
+      topCards.length > 0 ? (
+        topCards.map((card) => (
+          <div class="pairing-item">
+            <span class="pairing-item__name">{card.name}</span>
+            <span class="pairing-item__value">{card.count} ({card.percentage.toFixed(1)}%)</span>
+          </div>
+        ))
+      ) : (
+        <p style="color: var(--sl-color-text-low);">No pairing data available</p>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  import '../../styles/dashboard.css';
+</style>
