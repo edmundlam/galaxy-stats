@@ -1,0 +1,2494 @@
+{
+  "event": {
+    "id": "2026-02",
+    "name": "February Monthly",
+    "date": "2026-02-20",
+    "total_champions": 183
+  },
+  "players": [
+    {
+      "username": "!!!",
+      "captain": "legend_of_loxley",
+      "deck": [
+        "mech_a_man",
+        "maverick_icewing",
+        "wicked_witch",
+        "anubis",
+        "combustible_dragon",
+        "thunder_of_dragons",
+        "wormscale_tinkerer",
+        "netherbinder",
+        "rollo",
+        "oracle_of_fortunes",
+        "mr_fox",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "a duck",
+      "captain": "indiana_clones",
+      "deck": [
+        "aladdin",
+        "maverick_icewing",
+        "ace_of_hearts",
+        "mysterio_the_great_and_powerful",
+        "thunder_of_dragons",
+        "kid_icarus",
+        "sinbad",
+        "pirate_prince",
+        "smug",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox"
+      ]
+    },
+    {
+      "username": "adu",
+      "captain": "sorcerous_serena",
+      "deck": [
+        "viscount_chocolat",
+        "twilight_sprinkles",
+        "pixie",
+        "life_saver",
+        "kool_wip",
+        "cherry_topples",
+        "the_candy_cane_crook",
+        "the_sour_patch_kid",
+        "candy_claws",
+        "gingerbread_witch",
+        "doopity_doo",
+        "the_three_chef_keteers"
+      ]
+    },
+    {
+      "username": "agnosfaith",
+      "captain": "trash_panda",
+      "deck": [
+        "aladdin",
+        "beanie_baby",
+        "toadie",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "daedalus",
+        "scale_a_tor",
+        "thunder_of_dragons",
+        "wink",
+        "flopsy",
+        "wormscale_tinkerer",
+        "lance_a_little"
+      ]
+    },
+    {
+      "username": "Anatchi",
+      "captain": "trash_panda",
+      "deck": [
+        "aladdin",
+        "beanie_baby",
+        "mech_a_man",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "mimic",
+        "scale_a_tor",
+        "thunder_of_dragons",
+        "sir_francis_drake",
+        "smug",
+        "wormscale_tinkerer",
+        "rollo"
+      ]
+    },
+    {
+      "username": "Anton",
+      "captain": "legend_of_loxley",
+      "deck": [
+        "aladdin",
+        "mech_a_man",
+        "maverick_icewing",
+        "sailor_moonshine",
+        "thunder_of_dragons",
+        "sir_francis_drake",
+        "pirate_prince",
+        "weird_beard",
+        "wormscale_tinkerer",
+        "oracle_of_fortunes",
+        "gulliver",
+        "barbosa"
+      ]
+    },
+    {
+      "username": "AOA",
+      "captain": "jay_sparrow",
+      "deck": [
+        "aladdin",
+        "plunder_penny",
+        "shanty",
+        "jelly_roger",
+        "calypso",
+        "innkeeper",
+        "blackbeard",
+        "hercules",
+        "the_burninator",
+        "sailor_moonshine",
+        "sir_francis_drake",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Astrid The Cat",
+      "captain": "gokatoo",
+      "deck": [
+        "beanie_baby",
+        "mortakon",
+        "mech_a_man",
+        "maverick_icewing",
+        "wicked_witch",
+        "anubis",
+        "guinevere",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "Austin",
+      "captain": "legend_of_loxley",
+      "deck": [
+        "aladdin",
+        "plunder_penny",
+        "maverick_icewing",
+        "mirror_mage",
+        "wormscale_tinkerer",
+        "netherbinder",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_huntsman",
+        "the_butcher",
+        "pretty_patissier"
+      ]
+    },
+    {
+      "username": "bacho",
+      "captain": "lucky_leprechaun",
+      "deck": [
+        "cotton_candy_dandy",
+        "knight_of_the_holy_cane",
+        "twilight_sprinkles",
+        "pixie",
+        "frosting_dragon",
+        "kool_wip",
+        "cherry_topples",
+        "the_candy_cane_crook",
+        "chubby_cheep",
+        "lollipop_faerie",
+        "gingerbread_witch",
+        "dastardly_spirit"
+      ]
+    },
+    {
+      "username": "Bailout",
+      "captain": "skip_the_time_skipper",
+      "deck": [
+        "frog_prince",
+        "mech_a_man",
+        "nutcracker_prince",
+        "maverick_icewing",
+        "tsarmina_the_tyrant",
+        "ace_of_hearts",
+        "mysterio_the_great_and_powerful",
+        "pisces",
+        "wormscale_tinkerer",
+        "rollo",
+        "sunflare_glider",
+        "mr_fox"
+      ]
+    },
+    {
+      "username": "BigSi",
+      "captain": "the_beanstalk",
+      "deck": [
+        "mech_a_man",
+        "barrel_of_monkeys",
+        "ace_of_hearts",
+        "daedalus",
+        "the_giving_tree",
+        "pied_piper",
+        "snapping_hydra",
+        "miss_muffet",
+        "lance_a_little",
+        "chubby_cheep",
+        "mr_fox",
+        "miseria"
+      ]
+    },
+    {
+      "username": "Billys",
+      "captain": "wizard_headmaster",
+      "deck": [
+        "nightshade",
+        "faerie_queen",
+        "mirror_mage",
+        "ace_of_hearts",
+        "wormtongue",
+        "pisces",
+        "chaos",
+        "moppet",
+        "fae_familiar",
+        "sir_francis_drake",
+        "prospero",
+        "flopsy"
+      ]
+    },
+    {
+      "username": "Bleech",
+      "captain": "jay_sparrow",
+      "deck": [
+        "shanty",
+        "jelly_roger",
+        "innkeeper",
+        "blackbeard",
+        "hercules",
+        "glory_seeker",
+        "pisces",
+        "wink",
+        "sir_francis_drake",
+        "wormscale_tinkerer",
+        "mr_fox",
+        "the_huntsman"
+      ]
+    },
+    {
+      "username": "BoobTrapYeti",
+      "captain": "hades",
+      "deck": [
+        "aladdin",
+        "morgan_le_fae",
+        "mechanical_dragon",
+        "combustible_dragon",
+        "scale_a_tor",
+        "the_giving_tree",
+        "the_burninator",
+        "chaos",
+        "sinbad",
+        "sir_francis_drake",
+        "the_fates",
+        "snapping_hydra"
+      ]
+    },
+    {
+      "username": "bookcell",
+      "captain": "goat_t",
+      "deck": [
+        "mechanical_dragon",
+        "the_burninator",
+        "sir_francis_drake",
+        "smug",
+        "flopsy",
+        "wormscale_tinkerer",
+        "lance_a_little",
+        "netherbinder",
+        "oracle_of_fortunes",
+        "sunflare_glider",
+        "mr_fox",
+        "miseria"
+      ]
+    },
+    {
+      "username": "Brave",
+      "captain": "king_midas",
+      "deck": [
+        "beanie_baby",
+        "ace_of_hearts",
+        "the_burninator",
+        "thunder_of_dragons",
+        "kid_icarus",
+        "sinbad",
+        "pirate_prince",
+        "flopsy",
+        "wormscale_tinkerer",
+        "gummy_wyrm",
+        "lance_a_little",
+        "uther_pendragon"
+      ]
+    },
+    {
+      "username": "Briguy",
+      "captain": "the_candyman",
+      "deck": [
+        "wormscale_tinkerer",
+        "viscount_chocolat",
+        "cotton_candy_dandy",
+        "twilight_sprinkles",
+        "pixie",
+        "kool_wip",
+        "cherry_topples",
+        "the_candy_cane_crook",
+        "the_sour_patch_kid",
+        "gingerbread_witch",
+        "jelly_ton",
+        "doopity_doo"
+      ]
+    },
+    {
+      "username": "brizzi10",
+      "captain": "dorothy",
+      "deck": [
+        "aladdin",
+        "toto",
+        "toadie",
+        "maverick_icewing",
+        "tsarmina_the_tyrant",
+        "mirror_mage",
+        "elm_minster",
+        "ace_of_hearts",
+        "guinevere",
+        "scale_a_tor",
+        "kid_icarus",
+        "jaws"
+      ]
+    },
+    {
+      "username": "burgundymyr",
+      "captain": "dorothy",
+      "deck": [
+        "maverick_icewing",
+        "tsarmina_the_tyrant",
+        "faerie_queen",
+        "guinevere",
+        "pisces",
+        "sir_francis_drake",
+        "flopsy",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_huntsman"
+      ]
+    },
+    {
+      "username": "BustopherJones",
+      "captain": "indiana_clones",
+      "deck": [
+        "toto",
+        "maverick_icewing",
+        "guinevere",
+        "hephaestus",
+        "scale_a_tor",
+        "the_burninator",
+        "thunder_of_dragons",
+        "pisces",
+        "sir_francis_drake",
+        "flopsy",
+        "wormscale_tinkerer",
+        "mr_fox"
+      ]
+    },
+    {
+      "username": "Cait",
+      "captain": "faker_the_caker_baker",
+      "deck": [
+        "wormscale_tinkerer",
+        "gummy_wyrm",
+        "knight_of_the_holy_cane",
+        "twilight_sprinkles",
+        "jaws",
+        "kool_wip",
+        "candy_apple_tree",
+        "the_sour_patch_kid",
+        "lemonhead",
+        "gingerbread_witch",
+        "licorice",
+        "miseria"
+      ]
+    },
+    {
+      "username": "Channing",
+      "captain": "legend_of_loxley",
+      "deck": [
+        "caramel",
+        "twilight_sprinkles",
+        "frosting_dragon",
+        "kool_wip",
+        "cherry_topples",
+        "catatouille",
+        "lance_a_little",
+        "chubby_cheep",
+        "lollipop_faerie",
+        "lemonhead",
+        "jelly_ton",
+        "licorice"
+      ]
+    },
+    {
+      "username": "Chase",
+      "captain": "trash_panda",
+      "deck": [
+        "aladdin",
+        "maverick_icewing",
+        "combustible_dragon",
+        "scale_a_tor",
+        "the_burninator",
+        "sir_francis_drake",
+        "smug",
+        "wormscale_tinkerer",
+        "lance_a_little",
+        "sunflare_glider",
+        "mr_fox",
+        "miseria"
+      ]
+    },
+    {
+      "username": "clandestine07",
+      "captain": "frowny_the_clown",
+      "deck": [
+        "aladdin",
+        "maverick_icewing",
+        "daedalus",
+        "snapping_hydra",
+        "wormscale_tinkerer",
+        "miss_muffet",
+        "cherry_topples",
+        "the_sour_patch_kid",
+        "lollipop_faerie",
+        "mr_fox",
+        "doopity_doo",
+        "miseria"
+      ]
+    },
+    {
+      "username": "Cookar",
+      "captain": "lightning_thief",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "the_burninator",
+        "pisces",
+        "chaos",
+        "sir_francis_drake",
+        "the_fates",
+        "flopsy",
+        "wormscale_tinkerer",
+        "netherbinder",
+        "sunflare_glider",
+        "mr_fox"
+      ]
+    },
+    {
+      "username": "crayz",
+      "captain": "zagreus",
+      "deck": [
+        "aladdin",
+        "mech_a_man",
+        "don_quixote",
+        "elm_minster",
+        "ace_of_hearts",
+        "glory_seeker",
+        "daedalus",
+        "space_ranger_woody",
+        "chaos",
+        "wink",
+        "sir_francis_drake",
+        "flopsy"
+      ]
+    },
+    {
+      "username": "DisturbedSalmon72",
+      "captain": "jason_of_the_argonauts",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "combustible_dragon",
+        "hephaestus",
+        "scale_a_tor",
+        "the_burninator",
+        "thunder_of_dragons",
+        "smug",
+        "wormscale_tinkerer",
+        "gummy_wyrm",
+        "lance_a_little",
+        "miseria"
+      ]
+    },
+    {
+      "username": "Ello",
+      "captain": "sweet_tooth",
+      "deck": [
+        "viscount_chocolat",
+        "cotton_candy_dandy",
+        "jaws",
+        "kool_wip",
+        "cherry_topples",
+        "the_sour_patch_kid",
+        "lollipop_faerie",
+        "lemonhead",
+        "gingerbread_witch",
+        "licorice",
+        "doopity_doo",
+        "the_three_chef_keteers"
+      ]
+    },
+    {
+      "username": "EmptyBerry",
+      "captain": "the_collector",
+      "deck": [
+        "aladdin",
+        "beanie_baby",
+        "frog_prince",
+        "mech_a_man",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "scale_a_tor",
+        "the_burninator",
+        "sir_francis_drake",
+        "snapping_hydra",
+        "flopsy",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Estanislau",
+      "captain": "candy_pandy",
+      "deck": [
+        "frosting_dragon",
+        "kool_wip",
+        "cherry_topples",
+        "lance_a_little",
+        "lollipop_faerie",
+        "gingerbread_witch",
+        "rollo",
+        "mr_fox",
+        "doopity_doo",
+        "miseria",
+        "the_butcher",
+        "crystal"
+      ]
+    },
+    {
+      "username": "Evolivolution",
+      "captain": "indiana_clones",
+      "deck": [
+        "aladdin",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "ace_of_hearts",
+        "guinevere",
+        "scale_a_tor",
+        "pisces",
+        "sir_francis_drake",
+        "smug",
+        "wormscale_tinkerer",
+        "gummy_wyrm",
+        "frosting_dragon"
+      ]
+    },
+    {
+      "username": "EziBakeRoflCake",
+      "captain": "candy_pandy",
+      "deck": [
+        "knight_of_the_holy_cane",
+        "twilight_sprinkles",
+        "keeb",
+        "jaws",
+        "frosting_dragon",
+        "kool_wip",
+        "cherry_topples",
+        "the_candy_cane_crook",
+        "lance_a_little",
+        "rollo",
+        "miseria",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "Fafner",
+      "captain": "this_little_piggie",
+      "deck": [
+        "aladdin",
+        "toto",
+        "don_quixote",
+        "ace_of_hearts",
+        "guinevere",
+        "the_burninator",
+        "pisces",
+        "sir_francis_drake",
+        "smug",
+        "wormscale_tinkerer",
+        "rollo",
+        "miseria"
+      ]
+    },
+    {
+      "username": "Flying Galaxy",
+      "captain": "double_dealer",
+      "deck": [
+        "shanty",
+        "nightshade",
+        "the_burninator",
+        "pisces",
+        "wink",
+        "flopsy",
+        "wormscale_tinkerer",
+        "rollo",
+        "weensy",
+        "mr_fox",
+        "miseria",
+        "the_huntsman"
+      ]
+    },
+    {
+      "username": "ForKrin",
+      "captain": "silversmith",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "ace_of_hearts",
+        "guinevere",
+        "the_burninator",
+        "wormscale_tinkerer",
+        "rollo",
+        "sunflare_glider",
+        "mr_fox",
+        "miseria",
+        "the_butcher",
+        "crystal"
+      ]
+    },
+    {
+      "username": "Fouxdufafa",
+      "captain": "lightning_thief",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "calypso",
+        "nightshade",
+        "genie_of_the_lamp",
+        "elm_minster",
+        "the_burninator",
+        "sinbad",
+        "prospero",
+        "snapping_hydra",
+        "wormscale_tinkerer",
+        "miseria"
+      ]
+    },
+    {
+      "username": "FrankBezos",
+      "captain": "mira",
+      "deck": [
+        "plunder_penny",
+        "shanty",
+        "morgan_le_fae",
+        "calypso",
+        "nightshade",
+        "genie_of_the_lamp",
+        "chaos",
+        "wink",
+        "fae_familiar",
+        "rudolph_the_red",
+        "wormscale_tinkerer",
+        "crystal"
+      ]
+    },
+    {
+      "username": "Frankquith",
+      "captain": "lightning_thief",
+      "deck": [
+        "aladdin",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "mimic",
+        "ace_of_hearts",
+        "combustible_dragon",
+        "scale_a_tor",
+        "the_burninator",
+        "thunder_of_dragons",
+        "sir_francis_drake",
+        "wormscale_tinkerer",
+        "miseria"
+      ]
+    },
+    {
+      "username": "Frozen_Dread",
+      "captain": "nathaniel_drake",
+      "deck": [
+        "aladdin",
+        "toto",
+        "mech_a_man",
+        "maverick_icewing",
+        "the_burninator",
+        "flopsy",
+        "wormscale_tinkerer",
+        "lance_a_little",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "Gerptcq",
+      "captain": "legend_of_loxley",
+      "deck": [
+        "aladdin",
+        "mech_a_man",
+        "maverick_icewing",
+        "tsarmina_the_tyrant",
+        "mirror_mage",
+        "sailor_moonshine",
+        "thunder_of_dragons",
+        "pirate_prince",
+        "wormscale_tinkerer",
+        "rollo",
+        "oracle_of_fortunes",
+        "barbosa"
+      ]
+    },
+    {
+      "username": "Godfrey1126",
+      "captain": "sweet_tooth",
+      "deck": [
+        "cotton_candy_dandy",
+        "twilight_sprinkles",
+        "keeb",
+        "kool_wip",
+        "cherry_topples",
+        "the_candy_cane_crook",
+        "the_sour_patch_kid",
+        "lollipop_faerie",
+        "gingerbread_witch",
+        "chubby_bunny",
+        "jelly_ton",
+        "the_three_chef_keteers"
+      ]
+    },
+    {
+      "username": "GoodDigestion",
+      "captain": "sweet_tooth",
+      "deck": [
+        "maverick_icewing",
+        "mirror_mage",
+        "wicked_witch",
+        "the_burninator",
+        "cotton_candy_dandy",
+        "gummy_wyrm",
+        "knight_of_the_holy_cane",
+        "frosting_dragon",
+        "weensy",
+        "mr_fox",
+        "miseria",
+        "crystal"
+      ]
+    },
+    {
+      "username": "Guliver",
+      "captain": "luna_girl",
+      "deck": [
+        "mortakon",
+        "mech_a_man",
+        "maverick_icewing",
+        "ace_of_hearts",
+        "pied_piper",
+        "pisces",
+        "chaos",
+        "the_fates",
+        "monstro",
+        "wormscale_tinkerer",
+        "miseria",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "HarryJohnson",
+      "captain": "toucan_samuel",
+      "deck": [
+        "aladdin",
+        "don_quixote",
+        "ogre_magi",
+        "blackbeard",
+        "hercules",
+        "sir_francis_drake",
+        "pirate_king",
+        "lance_a_little",
+        "gulliver",
+        "mr_fox",
+        "miseria",
+        "the_huntsman"
+      ]
+    },
+    {
+      "username": "Header",
+      "captain": "nathaniel_drake",
+      "deck": [
+        "toto",
+        "flopsy",
+        "wormscale_tinkerer",
+        "knight_of_the_holy_cane",
+        "twilight_sprinkles",
+        "jaws",
+        "lance_a_little",
+        "weensy",
+        "miseria",
+        "barbosa",
+        "crystal",
+        "pretty_patissier"
+      ]
+    },
+    {
+      "username": "helpmeasap",
+      "captain": "nathaniel_drake",
+      "deck": [
+        "toto",
+        "the_burninator",
+        "flopsy",
+        "wormscale_tinkerer",
+        "knight_of_the_holy_cane",
+        "keeb",
+        "cherry_topples",
+        "lance_a_little",
+        "netherbinder",
+        "mr_fox",
+        "miseria",
+        "pretty_patissier"
+      ]
+    },
+    {
+      "username": "hogehoge",
+      "captain": "wizard_headmaster",
+      "deck": [
+        "aladdin",
+        "mortakon",
+        "mech_a_man",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "the_burninator",
+        "pisces",
+        "chaos",
+        "smug",
+        "snapping_hydra",
+        "flopsy",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "HollyCreep",
+      "captain": "double_dealer",
+      "deck": [
+        "nightshade",
+        "pisces",
+        "chaos",
+        "flopsy",
+        "gummy_wyrm",
+        "caramel",
+        "cherry_topples",
+        "weensy",
+        "licorice",
+        "dastardly_spirit",
+        "friendly_spirit",
+        "the_three_chef_keteers"
+      ]
+    },
+    {
+      "username": "IIInfinity",
+      "captain": "gloria_clementine",
+      "deck": [
+        "smug",
+        "wormscale_tinkerer",
+        "viscount_chocolat",
+        "cotton_candy_dandy",
+        "gummy_wyrm",
+        "twilight_sprinkles",
+        "lance_a_little",
+        "weensy",
+        "mr_fox",
+        "doopity_doo",
+        "miseria",
+        "the_huntsman"
+      ]
+    },
+    {
+      "username": "isomorphic",
+      "captain": "princess_animall",
+      "deck": [
+        "maverick_icewing",
+        "faerie_queen",
+        "ace_of_hearts",
+        "guinevere",
+        "the_burninator",
+        "monstro",
+        "pirate_king",
+        "prospero",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "jasobaa",
+      "captain": "silversmith",
+      "deck": [
+        "aladdin",
+        "shanty",
+        "mech_a_man",
+        "maverick_icewing",
+        "calypso",
+        "ogre_magi",
+        "chaos",
+        "the_fates",
+        "pirate_prince",
+        "smug",
+        "flopsy",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Jasperov",
+      "captain": "frowny_the_clown",
+      "deck": [
+        "wormscale_tinkerer",
+        "twilight_sprinkles",
+        "pixie",
+        "cherry_topples",
+        "the_candy_cane_crook",
+        "the_sour_patch_kid",
+        "chubby_cheep",
+        "lollipop_faerie",
+        "jelly_ton",
+        "licorice",
+        "the_three_chef_keteers",
+        "pretty_patissier"
+      ]
+    },
+    {
+      "username": "JoeOnToast",
+      "captain": "charlie_pots",
+      "deck": [
+        "aladdin",
+        "glory_seeker",
+        "daedalus",
+        "chaos",
+        "fae_familiar",
+        "wormscale_tinkerer",
+        "miss_muffet",
+        "knight_of_the_holy_cane",
+        "pixie",
+        "jaws",
+        "catatouille",
+        "the_three_chef_keteers"
+      ]
+    },
+    {
+      "username": "Jubi",
+      "captain": "legend_of_loxley",
+      "deck": [
+        "aladdin",
+        "maverick_icewing",
+        "tsarmina_the_tyrant",
+        "innkeeper",
+        "sailor_moonshine",
+        "sinbad",
+        "sir_francis_drake",
+        "wormscale_tinkerer",
+        "gummy_wyrm",
+        "caramel",
+        "oracle_of_fortunes",
+        "barbosa"
+      ]
+    },
+    {
+      "username": "Jump2warp",
+      "captain": "boy_who_cried_werewolf",
+      "deck": [
+        "beanie_baby",
+        "frog_prince",
+        "toto",
+        "tsarmina_the_tyrant",
+        "charlotte",
+        "moonshadow",
+        "the_giving_tree",
+        "pied_piper",
+        "wink",
+        "monstro",
+        "snapping_hydra",
+        "the_rat_king"
+      ]
+    },
+    {
+      "username": "Just  Sean",
+      "captain": "queen_harpolia",
+      "deck": [
+        "beanie_baby",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "the_burninator",
+        "thunder_of_dragons",
+        "sir_francis_drake",
+        "flopsy",
+        "rollo",
+        "oracle_of_fortunes",
+        "mr_fox",
+        "miseria",
+        "the_huntsman"
+      ]
+    },
+    {
+      "username": "Justini12",
+      "captain": "charlie_pots",
+      "deck": [
+        "mechanical_dragon",
+        "wormscale_tinkerer",
+        "twilight_sprinkles",
+        "pixie",
+        "keeb",
+        "frosting_dragon",
+        "kool_wip",
+        "the_candy_cane_crook",
+        "lollipop_faerie",
+        "oracle_of_fortunes",
+        "mr_fox",
+        "miseria"
+      ]
+    },
+    {
+      "username": "kannami",
+      "captain": "trash_panda",
+      "deck": [
+        "aladdin",
+        "maverick_icewing",
+        "ace_of_hearts",
+        "the_burninator",
+        "sabrina",
+        "wormscale_tinkerer",
+        "cherry_topples",
+        "rollo",
+        "weensy",
+        "mr_fox",
+        "miseria",
+        "crystal"
+      ]
+    },
+    {
+      "username": "karfast",
+      "captain": "lady_of_the_lake",
+      "deck": [
+        "aladdin",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "wormscale_tinkerer",
+        "lance_a_little",
+        "rollo",
+        "oracle_of_fortunes",
+        "sunflare_glider",
+        "mr_fox",
+        "miseria",
+        "the_huntsman",
+        "crystal"
+      ]
+    },
+    {
+      "username": "kataminga",
+      "captain": "merryweather",
+      "deck": [
+        "aladdin",
+        "prickles",
+        "tsarmina_the_tyrant",
+        "don_quixote",
+        "innkeeper",
+        "glory_seeker",
+        "charlotte",
+        "daedalus",
+        "moonshadow",
+        "chaos",
+        "wink",
+        "pirate_king"
+      ]
+    },
+    {
+      "username": "Komodo",
+      "captain": "lady_of_the_lake",
+      "deck": [
+        "aladdin",
+        "maverick_icewing",
+        "faerie_queen",
+        "the_burninator",
+        "wormscale_tinkerer",
+        "rollo",
+        "weensy",
+        "mr_fox",
+        "miseria",
+        "the_huntsman",
+        "the_butcher",
+        "crystal"
+      ]
+    },
+    {
+      "username": "Kvkriemhild",
+      "captain": "dungeon_master",
+      "deck": [
+        "aladdin",
+        "mechanical_dragon",
+        "blackbeard",
+        "hercules",
+        "daedalus",
+        "smug",
+        "lance_a_little",
+        "sunflare_glider",
+        "friendly_spirit",
+        "uther_pendragon",
+        "mr_fox",
+        "the_huntsman"
+      ]
+    },
+    {
+      "username": "Longshot27",
+      "captain": "sorcerous_serena",
+      "deck": [
+        "calypso",
+        "genie_of_the_lamp",
+        "mirror_mage",
+        "elm_minster",
+        "chaos",
+        "fae_familiar",
+        "the_fates",
+        "faerie_godfather",
+        "cotton_candy_dandy",
+        "chubby_cheep",
+        "miseria",
+        "crystal"
+      ]
+    },
+    {
+      "username": "LordLoss",
+      "captain": "sorcerous_serena",
+      "deck": [
+        "viscount_chocolat",
+        "cotton_candy_dandy",
+        "pixie",
+        "keeb",
+        "jaws",
+        "kool_wip",
+        "cherry_topples",
+        "lollipop_faerie",
+        "lemonhead",
+        "candy_claws",
+        "licorice",
+        "doopity_doo"
+      ]
+    },
+    {
+      "username": "LSV",
+      "captain": "sorcerous_serena",
+      "deck": [
+        "morgan_le_fae",
+        "calypso",
+        "nightshade",
+        "genie_of_the_lamp",
+        "mirror_mage",
+        "chaos",
+        "sir_francis_drake",
+        "the_fates",
+        "wormscale_tinkerer",
+        "cherry_topples",
+        "lollipop_faerie",
+        "crystal"
+      ]
+    },
+    {
+      "username": "luckyalien",
+      "captain": "frowny_the_clown",
+      "deck": [
+        "aladdin",
+        "ghoulade_man",
+        "twilight_sprinkles",
+        "pixie",
+        "keeb",
+        "candy_apple_tree",
+        "catatouille",
+        "lollipop_faerie",
+        "jelly_ton",
+        "weensy",
+        "licorice",
+        "the_three_chef_keteers"
+      ]
+    },
+    {
+      "username": "lunatic",
+      "captain": "merryweather",
+      "deck": [
+        "aladdin",
+        "prickles",
+        "tsarmina_the_tyrant",
+        "don_quixote",
+        "innkeeper",
+        "glory_seeker",
+        "charlotte",
+        "daedalus",
+        "moonshadow",
+        "chaos",
+        "wink",
+        "pirate_king"
+      ]
+    },
+    {
+      "username": "Lunco",
+      "captain": "lightning_thief",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "wicked_witch",
+        "ace_of_hearts",
+        "the_burninator",
+        "thunder_of_dragons",
+        "pisces",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "Mattie!",
+      "captain": "goat_t",
+      "deck": [
+        "aladdin",
+        "mech_a_man",
+        "moonshadow",
+        "snapping_hydra",
+        "wormscale_tinkerer",
+        "knight_of_the_holy_cane",
+        "frosting_dragon",
+        "candy_apple_tree",
+        "the_candy_cane_crook",
+        "lance_a_little",
+        "candy_claws",
+        "licorice"
+      ]
+    },
+    {
+      "username": "May",
+      "captain": "jay_sparrow",
+      "deck": [
+        "shanty",
+        "blackbeard",
+        "hercules",
+        "ace_of_hearts",
+        "glory_seeker",
+        "wink",
+        "sir_francis_drake",
+        "wormscale_tinkerer",
+        "friendly_spirit",
+        "mr_fox",
+        "miseria",
+        "the_huntsman"
+      ]
+    },
+    {
+      "username": "mbpro",
+      "captain": "jay_sparrow",
+      "deck": [
+        "aladdin",
+        "plunder_penny",
+        "shanty",
+        "jelly_roger",
+        "calypso",
+        "innkeeper",
+        "blackbeard",
+        "hercules",
+        "the_burninator",
+        "sailor_moonshine",
+        "wink",
+        "sir_francis_drake"
+      ]
+    },
+    {
+      "username": "Melkman",
+      "captain": "sweet_tooth",
+      "deck": [
+        "cotton_candy_dandy",
+        "gummy_wyrm",
+        "knight_of_the_holy_cane",
+        "jumping_jelly_beans",
+        "kool_wip",
+        "the_sour_patch_kid",
+        "lollipop_faerie",
+        "lemonhead",
+        "gingerbread_witch",
+        "chubby_bunny",
+        "the_three_chef_keteers",
+        "pretty_patissier"
+      ]
+    },
+    {
+      "username": "Meowsma",
+      "captain": "preeminent_prodigy",
+      "deck": [
+        "aladdin",
+        "the_burninator",
+        "chaos",
+        "sir_francis_drake",
+        "the_fates",
+        "wormscale_tinkerer",
+        "cherry_topples",
+        "lance_a_little",
+        "netherbinder",
+        "rollo",
+        "miseria",
+        "crystal"
+      ]
+    },
+    {
+      "username": "Metteagle",
+      "captain": "the_candyman",
+      "deck": [
+        "viscount_chocolat",
+        "gummy_wyrm",
+        "pixie",
+        "frosting_dragon",
+        "kool_wip",
+        "candy_apple_tree",
+        "the_candy_cane_crook",
+        "the_sour_patch_kid",
+        "lollipop_faerie",
+        "jelly_ton",
+        "doopity_doo",
+        "miseria"
+      ]
+    },
+    {
+      "username": "Mikeyo",
+      "captain": "this_little_piggie",
+      "deck": [
+        "aladdin",
+        "shanty",
+        "tsarmina_the_tyrant",
+        "innkeeper",
+        "blackbeard",
+        "moonshadow",
+        "pisces",
+        "wink",
+        "sinbad",
+        "the_rat_king",
+        "mr_fox",
+        "the_huntsman"
+      ]
+    },
+    {
+      "username": "Mikokoloko",
+      "captain": "zheng_yi_sao",
+      "deck": [
+        "aladdin",
+        "shanty",
+        "mech_a_man",
+        "jelly_roger",
+        "calypso",
+        "ace_of_hearts",
+        "sailor_moonshine",
+        "sir_francis_drake",
+        "pirate_king",
+        "pirate_prince",
+        "weird_beard",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "MJG",
+      "captain": "zagreus",
+      "deck": [
+        "aladdin",
+        "maverick_icewing",
+        "ace_of_hearts",
+        "hephaestus",
+        "chaos",
+        "sir_francis_drake",
+        "flopsy",
+        "wormscale_tinkerer",
+        "viscount_chocolat",
+        "gummy_wyrm",
+        "knight_of_the_holy_cane",
+        "kool_wip"
+      ]
+    },
+    {
+      "username": "mudblood",
+      "captain": "lightning_thief",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "mirror_mage",
+        "ace_of_hearts",
+        "the_burninator",
+        "sabrina",
+        "pisces",
+        "wink",
+        "the_fates",
+        "wormscale_tinkerer",
+        "cotton_candy_dandy",
+        "rollo"
+      ]
+    },
+    {
+      "username": "myrzy",
+      "captain": "dorothy",
+      "deck": [
+        "mortakon",
+        "mech_a_man",
+        "maverick_icewing",
+        "combustible_dragon",
+        "guinevere",
+        "hephaestus",
+        "scale_a_tor",
+        "wormscale_tinkerer",
+        "netherbinder",
+        "rollo",
+        "miseria",
+        "crystal"
+      ]
+    },
+    {
+      "username": "Napenator",
+      "captain": "jay_sparrow",
+      "deck": [
+        "viscount_chocolat",
+        "gummy_wyrm",
+        "twilight_sprinkles",
+        "the_candy_cane_crook",
+        "candy_claws",
+        "netherbinder",
+        "sunflare_glider",
+        "licorice",
+        "friendly_spirit",
+        "mr_fox",
+        "the_huntsman",
+        "barbosa"
+      ]
+    },
+    {
+      "username": "NikolaiSW",
+      "captain": "dorothy",
+      "deck": [
+        "mech_a_man",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "guinevere",
+        "the_burninator",
+        "thunder_of_dragons",
+        "pisces",
+        "pirate_prince",
+        "smug",
+        "wormscale_tinkerer",
+        "lance_a_little",
+        "mr_fox"
+      ]
+    },
+    {
+      "username": "nitrogen15",
+      "captain": "gokatoo",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "wicked_witch",
+        "daedalus",
+        "the_burninator",
+        "wormscale_tinkerer",
+        "rollo",
+        "oracle_of_fortunes",
+        "sunflare_glider",
+        "mr_fox",
+        "miseria",
+        "the_huntsman"
+      ]
+    },
+    {
+      "username": "Nokaut",
+      "captain": "double_dealer",
+      "deck": [
+        "wink",
+        "faerie_godfather",
+        "cotton_candy_dandy",
+        "caramel",
+        "twilight_sprinkles",
+        "pixie",
+        "cherry_topples",
+        "the_candy_cane_crook",
+        "chubby_cheep",
+        "gingerbread_witch",
+        "weensy",
+        "the_three_chef_keteers"
+      ]
+    },
+    {
+      "username": "omok23",
+      "captain": "nathaniel_drake",
+      "deck": [
+        "toto",
+        "maverick_icewing",
+        "gummy_wyrm",
+        "knight_of_the_holy_cane",
+        "jaws",
+        "candy_apple_tree",
+        "catatouille",
+        "lance_a_little",
+        "netherbinder",
+        "rollo",
+        "miseria",
+        "pretty_patissier"
+      ]
+    },
+    {
+      "username": "Orchis Heart",
+      "captain": "professor_whos_who",
+      "deck": [
+        "maverick_icewing",
+        "ace_of_hearts",
+        "guinevere",
+        "hephaestus",
+        "pisces",
+        "smug",
+        "flopsy",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "Pexi",
+      "captain": "lucky_leprechaun",
+      "deck": [
+        "cotton_candy_dandy",
+        "knight_of_the_holy_cane",
+        "twilight_sprinkles",
+        "pixie",
+        "kool_wip",
+        "cherry_topples",
+        "the_candy_cane_crook",
+        "catatouille",
+        "chubby_cheep",
+        "lollipop_faerie",
+        "candy_claws",
+        "gingerbread_witch"
+      ]
+    },
+    {
+      "username": "pidancet",
+      "captain": "dorothy",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "guinevere",
+        "mephisto",
+        "chaos",
+        "flopsy",
+        "wormscale_tinkerer",
+        "rollo",
+        "weensy",
+        "miseria",
+        "the_butcher",
+        "crystal"
+      ]
+    },
+    {
+      "username": "pomme verte",
+      "captain": "dungeon_master",
+      "deck": [
+        "aladdin",
+        "shanty",
+        "mech_a_man",
+        "maverick_icewing",
+        "innkeeper",
+        "blackbeard",
+        "hercules",
+        "ace_of_hearts",
+        "glory_seeker",
+        "combustible_dragon",
+        "the_burninator",
+        "mr_fox"
+      ]
+    },
+    {
+      "username": "PressReset",
+      "captain": "jay_sparrow",
+      "deck": [
+        "aladdin",
+        "plunder_penny",
+        "innkeeper",
+        "wicked_witch",
+        "blackbeard",
+        "hercules",
+        "the_burninator",
+        "wink",
+        "sir_francis_drake",
+        "smug",
+        "snapping_hydra",
+        "flopsy"
+      ]
+    },
+    {
+      "username": "PuppyByte",
+      "captain": "king_midas",
+      "deck": [
+        "beanie_baby",
+        "maverick_icewing",
+        "ace_of_hearts",
+        "scale_a_tor",
+        "the_burninator",
+        "thunder_of_dragons",
+        "kid_icarus",
+        "sir_francis_drake",
+        "smug",
+        "wormscale_tinkerer",
+        "uther_pendragon",
+        "mr_fox"
+      ]
+    },
+    {
+      "username": "QtotheQ",
+      "captain": "romeo",
+      "deck": [
+        "mortakon",
+        "mech_a_man",
+        "viscount_chocolat",
+        "miss_muffet",
+        "jaws",
+        "cherry_topples",
+        "candy_apple_tree",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_butcher",
+        "crystal"
+      ]
+    },
+    {
+      "username": "Quiddity",
+      "captain": "candy_pandy",
+      "deck": [
+        "the_burninator",
+        "sir_francis_drake",
+        "wormscale_tinkerer",
+        "knight_of_the_holy_cane",
+        "twilight_sprinkles",
+        "jaws",
+        "the_candy_cane_crook",
+        "lance_a_little",
+        "chubby_cheep",
+        "lollipop_faerie",
+        "miseria",
+        "pretty_patissier"
+      ]
+    },
+    {
+      "username": "RadChad",
+      "captain": "double_dealer",
+      "deck": [
+        "maverick_icewing",
+        "the_burninator",
+        "pisces",
+        "chaos",
+        "smug",
+        "wormscale_tinkerer",
+        "netherbinder",
+        "rollo",
+        "weensy",
+        "mr_fox",
+        "miseria",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "raffsputin",
+      "captain": "melody",
+      "deck": [
+        "aladdin",
+        "plunder_penny",
+        "morgan_le_fae",
+        "calypso",
+        "mirror_mage",
+        "ogre_magi",
+        "elm_minster",
+        "chaos",
+        "moppet",
+        "fae_familiar",
+        "prospero",
+        "the_rat_king"
+      ]
+    },
+    {
+      "username": "Ravenous",
+      "captain": "the_beanstalk",
+      "deck": [
+        "mech_a_man",
+        "daedalus",
+        "the_giving_tree",
+        "pied_piper",
+        "monstro",
+        "snapping_hydra",
+        "miss_muffet",
+        "lance_a_little",
+        "sleeping_giant",
+        "uther_pendragon",
+        "mr_fox",
+        "miseria"
+      ]
+    },
+    {
+      "username": "RayWanderer",
+      "captain": "this_little_piggie",
+      "deck": [
+        "maverick_icewing",
+        "ace_of_hearts",
+        "guinevere",
+        "the_burninator",
+        "pisces",
+        "smug",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_butcher",
+        "crystal"
+      ]
+    },
+    {
+      "username": "Revlyn",
+      "captain": "jay_sparrow",
+      "deck": [
+        "aladdin",
+        "plunder_penny",
+        "shanty",
+        "mech_a_man",
+        "calypso",
+        "innkeeper",
+        "blackbeard",
+        "sir_francis_drake",
+        "pirate_prince",
+        "mr_fox",
+        "the_huntsman",
+        "barbosa"
+      ]
+    },
+    {
+      "username": "rxxi",
+      "captain": "the_candyman",
+      "deck": [
+        "barrel_of_monkeys",
+        "knight_of_the_holy_cane",
+        "keeb",
+        "jumping_jelly_beans",
+        "cherry_topples",
+        "the_sour_patch_kid",
+        "chubby_cheep",
+        "lollipop_faerie",
+        "lemonhead",
+        "gingerbread_witch",
+        "the_blue_faerie",
+        "pretty_patissier"
+      ]
+    },
+    {
+      "username": "sabataco",
+      "captain": "wizard_headmaster",
+      "deck": [
+        "morgan_le_fae",
+        "toadie",
+        "calypso",
+        "nightshade",
+        "mirror_mage",
+        "ogre_magi",
+        "elm_minster",
+        "chaos",
+        "moppet",
+        "sir_francis_drake",
+        "prospero",
+        "rudolph_the_red"
+      ]
+    },
+    {
+      "username": "sacakewalk",
+      "captain": "gloria_clementine",
+      "deck": [
+        "maverick_icewing",
+        "ace_of_hearts",
+        "combustible_dragon",
+        "guinevere",
+        "the_burninator",
+        "pisces",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_huntsman",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "Sank",
+      "captain": "wizard_headmaster",
+      "deck": [
+        "plunder_penny",
+        "morgan_le_fae",
+        "calypso",
+        "nightshade",
+        "genie_of_the_lamp",
+        "mirror_mage",
+        "elm_minster",
+        "chaos",
+        "fae_familiar",
+        "the_fates",
+        "prospero",
+        "rudolph_the_red"
+      ]
+    },
+    {
+      "username": "Scoranio",
+      "captain": "dorothy",
+      "deck": [
+        "toto",
+        "maverick_icewing",
+        "tsarmina_the_tyrant",
+        "mirror_mage",
+        "ace_of_hearts",
+        "guinevere",
+        "scale_a_tor",
+        "the_burninator",
+        "wink",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox"
+      ]
+    },
+    {
+      "username": "Serenity",
+      "captain": "mira",
+      "deck": [
+        "plunder_penny",
+        "shanty",
+        "morgan_le_fae",
+        "calypso",
+        "nightshade",
+        "faerie_queen",
+        "ogre_magi",
+        "wink",
+        "fae_familiar",
+        "faerie_godfather",
+        "flopsy",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Shego",
+      "captain": "tajima_patron_of_sweets",
+      "deck": [
+        "gummy_wyrm",
+        "knight_of_the_holy_cane",
+        "twilight_sprinkles",
+        "pixie",
+        "jaws",
+        "kool_wip",
+        "cherry_topples",
+        "the_candy_cane_crook",
+        "the_sour_patch_kid",
+        "lemonhead",
+        "licorice",
+        "doopity_doo"
+      ]
+    },
+    {
+      "username": "SirMordred",
+      "captain": "candy_pandy",
+      "deck": [
+        "viscount_chocolat",
+        "caramel",
+        "twilight_sprinkles",
+        "keeb",
+        "jaws",
+        "kool_wip",
+        "the_candy_cane_crook",
+        "lance_a_little",
+        "chubby_cheep",
+        "candy_claws",
+        "doopity_doo",
+        "miseria"
+      ]
+    },
+    {
+      "username": "SkyBreaker",
+      "captain": "frowny_the_clown",
+      "deck": [
+        "maverick_icewing",
+        "the_burninator",
+        "chaos",
+        "sir_francis_drake",
+        "wormscale_tinkerer",
+        "gummy_wyrm",
+        "pixie",
+        "frosting_dragon",
+        "cherry_topples",
+        "sunflare_glider",
+        "mr_fox",
+        "miseria"
+      ]
+    },
+    {
+      "username": "Slimey",
+      "captain": "the_candyman",
+      "deck": [
+        "cotton_candy_dandy",
+        "gummy_wyrm",
+        "knight_of_the_holy_cane",
+        "keeb",
+        "kool_wip",
+        "cherry_topples",
+        "the_candy_cane_crook",
+        "the_sour_patch_kid",
+        "lollipop_faerie",
+        "gingerbread_witch",
+        "jelly_ton",
+        "doopity_doo"
+      ]
+    },
+    {
+      "username": "smallchild1",
+      "captain": "zheng_yi_sao",
+      "deck": [
+        "aladdin",
+        "plunder_penny",
+        "shanty",
+        "mech_a_man",
+        "jelly_roger",
+        "calypso",
+        "ogre_magi",
+        "sailor_moonshine",
+        "sir_francis_drake",
+        "pirate_king",
+        "pirate_prince",
+        "weird_beard"
+      ]
+    },
+    {
+      "username": "Sn0_Man",
+      "captain": "zheng_yi_sao",
+      "deck": [
+        "aladdin",
+        "shanty",
+        "mech_a_man",
+        "jelly_roger",
+        "calypso",
+        "innkeeper",
+        "sailor_moonshine",
+        "sinbad",
+        "sir_francis_drake",
+        "pirate_king",
+        "pirate_prince",
+        "weird_beard"
+      ]
+    },
+    {
+      "username": "Spiked",
+      "captain": "mira",
+      "deck": [
+        "shanty",
+        "toadie",
+        "fun_gal",
+        "don_quixote",
+        "faerie_queen",
+        "sailor_moonshine",
+        "pisces",
+        "faerie_godfather",
+        "flopsy",
+        "leapfrog",
+        "dastardly_spirit",
+        "friendly_spirit"
+      ]
+    },
+    {
+      "username": "SpoootKnight",
+      "captain": "trash_panda",
+      "deck": [
+        "aladdin",
+        "beanie_baby",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "combustible_dragon",
+        "the_burninator",
+        "thunder_of_dragons",
+        "sir_francis_drake",
+        "smug",
+        "flopsy",
+        "wormscale_tinkerer",
+        "oracle_of_fortunes"
+      ]
+    },
+    {
+      "username": "StarterSauce",
+      "captain": "dragonmother",
+      "deck": [
+        "beanie_baby",
+        "frog_prince",
+        "prickles",
+        "toadie",
+        "mimic",
+        "black_hole",
+        "mirror_mage",
+        "blackbeard",
+        "hercules",
+        "ace_of_hearts",
+        "guinevere",
+        "raggedy_ann"
+      ]
+    },
+    {
+      "username": "SussySenpai",
+      "captain": "silversmith",
+      "deck": [
+        "mortakon",
+        "mech_a_man",
+        "maverick_icewing",
+        "wicked_witch",
+        "ace_of_hearts",
+        "combustible_dragon",
+        "the_burninator",
+        "pisces",
+        "smug",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox"
+      ]
+    },
+    {
+      "username": "Syllabi",
+      "captain": "elec_drake",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "mirror_mage",
+        "wormscale_tinkerer",
+        "twilight_sprinkles",
+        "the_candy_cane_crook",
+        "the_sour_patch_kid",
+        "lance_a_little",
+        "lollipop_faerie",
+        "gingerbread_witch",
+        "licorice",
+        "miseria"
+      ]
+    },
+    {
+      "username": "TarquinTarquin",
+      "captain": "trash_panda",
+      "deck": [
+        "maverick_icewing",
+        "guinevere",
+        "the_burninator",
+        "pisces",
+        "sir_francis_drake",
+        "flopsy",
+        "wormscale_tinkerer",
+        "lance_a_little",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "crystal"
+      ]
+    },
+    {
+      "username": "Terroking",
+      "captain": "wizard_headmaster",
+      "deck": [
+        "aladdin",
+        "morgan_le_fae",
+        "calypso",
+        "nightshade",
+        "mirror_mage",
+        "elm_minster",
+        "mysterio_the_great_and_powerful",
+        "chaos",
+        "faerie_godfather",
+        "prospero",
+        "rollo",
+        "crystal"
+      ]
+    },
+    {
+      "username": "teyi111",
+      "captain": "gloria_clementine",
+      "deck": [
+        "maverick_icewing",
+        "ace_of_hearts",
+        "guinevere",
+        "the_burninator",
+        "sir_francis_drake",
+        "flopsy",
+        "wormscale_tinkerer",
+        "rollo",
+        "oracle_of_fortunes",
+        "mr_fox",
+        "miseria",
+        "the_huntsman"
+      ]
+    },
+    {
+      "username": "TheDarkLink",
+      "captain": "gloria_clementine",
+      "deck": [
+        "maverick_icewing",
+        "wicked_witch",
+        "ace_of_hearts",
+        "the_burninator",
+        "pisces",
+        "wink",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_huntsman",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "Thedeeeem",
+      "captain": "legend_of_loxley",
+      "deck": [
+        "maverick_icewing",
+        "guinevere",
+        "the_burninator",
+        "snapping_hydra",
+        "wormscale_tinkerer",
+        "rollo",
+        "weensy",
+        "mr_fox",
+        "miseria",
+        "the_huntsman",
+        "the_butcher",
+        "crystal"
+      ]
+    },
+    {
+      "username": "Thenian",
+      "captain": "lady_of_the_lake",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "hephaestus",
+        "sir_francis_drake",
+        "wormscale_tinkerer",
+        "gummy_wyrm",
+        "frosting_dragon",
+        "lance_a_little",
+        "rollo",
+        "oracle_of_fortunes",
+        "mr_fox",
+        "miseria"
+      ]
+    },
+    {
+      "username": "ThGreatWar",
+      "captain": "legend_of_loxley",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "the_burninator",
+        "thunder_of_dragons",
+        "wink",
+        "sir_francis_drake",
+        "wormscale_tinkerer",
+        "lance_a_little",
+        "netherbinder",
+        "oracle_of_fortunes",
+        "friendly_spirit",
+        "mr_fox"
+      ]
+    },
+    {
+      "username": "thPion",
+      "captain": "jason_of_the_argonauts",
+      "deck": [
+        "mortakon",
+        "mech_a_man",
+        "maverick_icewing",
+        "black_hole",
+        "genie_of_the_lamp",
+        "wicked_witch",
+        "ace_of_hearts",
+        "combustible_dragon",
+        "mephisto",
+        "mysterio_the_great_and_powerful",
+        "snapping_hydra",
+        "flopsy"
+      ]
+    },
+    {
+      "username": "TidalBase",
+      "captain": "boy_who_cried_werewolf",
+      "deck": [
+        "frog_prince",
+        "toto",
+        "mimic",
+        "tsarmina_the_tyrant",
+        "charlotte",
+        "moonshadow",
+        "pied_piper",
+        "monstro",
+        "snapping_hydra",
+        "gummy_wyrm",
+        "licorice",
+        "pretty_patissier"
+      ]
+    },
+    {
+      "username": "tretherio",
+      "captain": "this_little_piggie",
+      "deck": [
+        "maverick_icewing",
+        "wicked_witch",
+        "ace_of_hearts",
+        "guinevere",
+        "hephaestus",
+        "the_burninator",
+        "pisces",
+        "snapping_hydra",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "trhchris1",
+      "captain": "mira",
+      "deck": [
+        "shanty",
+        "toadie",
+        "fun_gal",
+        "don_quixote",
+        "faerie_queen",
+        "sailor_moonshine",
+        "pisces",
+        "faerie_godfather",
+        "flopsy",
+        "leapfrog",
+        "dastardly_spirit",
+        "friendly_spirit"
+      ]
+    },
+    {
+      "username": "Tsynapse",
+      "captain": "charlie_pots",
+      "deck": [
+        "aladdin",
+        "glory_seeker",
+        "daedalus",
+        "chaos",
+        "fae_familiar",
+        "wormscale_tinkerer",
+        "miss_muffet",
+        "knight_of_the_holy_cane",
+        "pixie",
+        "jaws",
+        "catatouille",
+        "the_three_chef_keteers"
+      ]
+    },
+    {
+      "username": "UrBoyJC",
+      "captain": "double_dealer",
+      "deck": [
+        "pisces",
+        "chaos",
+        "wormscale_tinkerer",
+        "gummy_wyrm",
+        "pixie",
+        "life_saver",
+        "kool_wip",
+        "cherry_topples",
+        "the_candy_cane_crook",
+        "dastardly_spirit",
+        "friendly_spirit",
+        "the_three_chef_keteers"
+      ]
+    },
+    {
+      "username": "Varron",
+      "captain": "gloria_clementine",
+      "deck": [
+        "ace_of_hearts",
+        "the_burninator",
+        "sir_francis_drake",
+        "smug",
+        "wormscale_tinkerer",
+        "lance_a_little",
+        "rollo",
+        "oracle_of_fortunes",
+        "weensy",
+        "mr_fox",
+        "miseria",
+        "the_huntsman"
+      ]
+    },
+    {
+      "username": "viralpanacea",
+      "captain": "nathaniel_drake",
+      "deck": [
+        "toto",
+        "maverick_icewing",
+        "wormscale_tinkerer",
+        "viscount_chocolat",
+        "cotton_candy_dandy",
+        "pixie",
+        "lance_a_little",
+        "rollo",
+        "oracle_of_fortunes",
+        "miseria",
+        "the_huntsman",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "Vulaas",
+      "captain": "double_dealer",
+      "deck": [
+        "mechanical_dragon",
+        "ace_of_hearts",
+        "glory_seeker",
+        "the_burninator",
+        "pisces",
+        "wink",
+        "wormscale_tinkerer",
+        "caramel",
+        "cherry_topples",
+        "lance_a_little",
+        "gingerbread_witch",
+        "friendly_spirit"
+      ]
+    },
+    {
+      "username": "WaffleMelons",
+      "captain": "trash_panda",
+      "deck": [
+        "aladdin",
+        "toto",
+        "maverick_icewing",
+        "glory_seeker",
+        "the_burninator",
+        "wormscale_tinkerer",
+        "lance_a_little",
+        "netherbinder",
+        "rollo",
+        "oracle_of_fortunes",
+        "miseria",
+        "crystal"
+      ]
+    },
+    {
+      "username": "woodabe",
+      "captain": "nathaniel_drake",
+      "deck": [
+        "maverick_icewing",
+        "ace_of_hearts",
+        "glory_seeker",
+        "guinevere",
+        "the_burninator",
+        "pisces",
+        "wormscale_tinkerer",
+        "lance_a_little",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "YAAAHA",
+      "captain": "dorothy",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "hephaestus",
+        "scale_a_tor",
+        "the_giving_tree",
+        "the_burninator",
+        "sinbad",
+        "sir_francis_drake",
+        "pirate_king",
+        "pirate_prince",
+        "wormscale_tinkerer",
+        "mr_fox"
+      ]
+    },
+    {
+      "username": "Zachplaysgames",
+      "captain": "sir_galahad",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "ace_of_hearts",
+        "guinevere",
+        "the_burninator",
+        "smug",
+        "flopsy",
+        "wormscale_tinkerer",
+        "frosting_dragon",
+        "rollo",
+        "mr_fox",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "zathras",
+      "captain": "wizard_headmaster",
+      "deck": [
+        "aladdin",
+        "plunder_penny",
+        "morgan_le_fae",
+        "calypso",
+        "nightshade",
+        "mirror_mage",
+        "elm_minster",
+        "chaos",
+        "fae_familiar",
+        "prospero",
+        "rudolph_the_red",
+        "miss_muffet"
+      ]
+    },
+    {
+      "username": "Zer0",
+      "captain": "dr_agon",
+      "deck": [
+        "maverick_icewing",
+        "black_hole",
+        "wicked_witch",
+        "anubis",
+        "ace_of_hearts",
+        "the_burninator",
+        "pisces",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_butcher"
+      ]
+    },
+    {
+      "username": "zrandles",
+      "captain": "trash_panda",
+      "deck": [
+        "maverick_icewing",
+        "ace_of_hearts",
+        "the_burninator",
+        "pisces",
+        "pirate_prince",
+        "smug",
+        "snapping_hydra",
+        "wormscale_tinkerer",
+        "rollo",
+        "mr_fox",
+        "miseria",
+        "the_butcher"
+      ]
+    }
+  ]
+}
