@@ -1,0 +1,43 @@
+---
+// src/components/dashboard/StatsHeader.astro
+import type { EventData } from '../../utils/event-stats';
+
+interface Props {
+  eventData: EventData;
+}
+
+const { eventData } = Astro.props;
+
+// Calculate metrics
+const uniqueCaptains = new Set(eventData.players.map(p => p.captain)).size;
+const uniqueCards = new Set(eventData.players.flatMap(p => p.deck)).size;
+const totalDeckCards = eventData.players.reduce((sum, p) => sum + p.deck.length, 0);
+---
+
+<div class="dashboard">
+  <div class="stats-header">
+    <div class="stat-card">
+      <div class="stat-card__value">{eventData.players.length}</div>
+      <div class="stat-card__label">Total Players</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-card__value">{uniqueCaptains}</div>
+      <div class="stat-card__label">Unique Captains</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-card__value">{uniqueCards}</div>
+      <div class="stat-card__label">Unique Cards</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-card__value">{totalDeckCards}</div>
+      <div class="stat-card__label">Total Deck Cards</div>
+    </div>
+  </div>
+</div>
+
+<style>
+  import '../../styles/dashboard.css';
+</style>
