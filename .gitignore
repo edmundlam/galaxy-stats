@@ -32,3 +32,6 @@ pnpm-debug.log*
 *.tmp
 .cache/
 .superpowers
+
+# Claude Code worktrees
+.claude/worktrees/
