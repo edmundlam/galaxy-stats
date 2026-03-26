@@ -19,9 +19,7 @@ clean:
 
 help:
 	@echo "Available targets:"
-	@echo "  install  - Install dependencies and create virtual environment"
-	@echo "  run      - Run the bot"
-	@echo "  test     - Run all tests"
-	@echo "  lint     - Run linter and format checker"
+	@echo "  install  - Install dependencies and set up pre-commit hooks"
+	@echo "  lint     - Run linter and formatter (ruff)"
 	@echo "  clean    - Remove virtual environment"
 	@echo "  help     - Show this help message"

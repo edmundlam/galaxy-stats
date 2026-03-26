@@ -12,6 +12,8 @@ Galaxy Stats is a documentation site for "Once Upon a Galaxy Tournament Stats" b
 
 ## Development Commands
 
+### Astro / Node.js
+
 ```bash
 # Start development server
 npm run dev
@@ -30,6 +32,32 @@ npm run astro [command]
 # Parse event HTML to JSON data
 npm run parse-event <html-file> <event-id>
 # Example: npm run parse-event context/2026-02.html 2026-02
+```
+
+### Python Tooling (via Makefile)
+
+```bash
+# Install Python dependencies and pre-commit hooks
+make install
+
+# Run linter and formatter
+make lint
+
+# Remove virtual environment
+make clean
+
+# Show all available commands
+make help
+```
+
+### Adding Python Dependencies
+
+```bash
+# Add a runtime dependency
+uv add <package>
+
+# Add a development dependency
+uv add <package> --dev
 ```
 
 ## Architecture
