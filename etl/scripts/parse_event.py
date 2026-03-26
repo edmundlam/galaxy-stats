@@ -3,9 +3,9 @@
 
 This script parses HTML event data from galaxy.fun and converts it to JSON format.
 It creates three output files:
-1. src/data/events/<event-id>.json - Event metadata and player data
-2. src/data/cards.json - Deck cards only (slug -> display name)
-3. src/data/captains.json - Captain cards only (slug -> display name)
+1. dist/events/<event-id>.json - Event metadata and player data
+2. dist/cards.json - Deck cards only (slug -> display name)
+3. dist/captains.json - Captain cards only (slug -> display name)
 """
 
 import argparse
@@ -172,9 +172,10 @@ def main() -> int:
         event_data, cards_map, captains_map = parse_event(args.html_file, args.event_id)
 
         # Setup paths
-        project_root = Path.cwd()
-        events_dir = project_root / "src" / "data" / "events"
-        data_dir = project_root / "src" / "data"
+        # Go up from etl/scripts/ to project root, then to etl/dist/
+        project_root = Path(__file__).parent.parent.parent  # Go up from etl/scripts/ to project root
+        events_dir = project_root / "etl" / "dist" / "events"
+        data_dir = project_root / "etl" / "dist"
 
         # Create directories
         events_dir.mkdir(parents=True, exist_ok=True)

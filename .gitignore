@@ -1,9 +1,20 @@
 # Astro build output
-dist/
 .astro/
+frontend/dist/
+frontend/.astro/
 
 # Node.js
-node_modules/
+frontend/node_modules/
+
+# Python
+etl/.venv/
+etl/uv.lock
+etl/__pycache__/
+*.pyc
+*.pyo
+
+# Raw input data (gitignored locally, committed in CI if needed)
+etl/context/*.html
 
 # Environment files
 .env
