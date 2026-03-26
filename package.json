@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "parse-event": "ts-node scripts/parse-event.ts"
+    "parse-event": "ts-node scripts/parse-event.ts",
+    "parse-event:py": "python scripts/parse_event.py"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.38.2",
