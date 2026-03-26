@@ -8,8 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "parse-event": "ts-node scripts/parse-event.ts",
-    "parse-event:py": "python scripts/parse_event.py"
+    "parse-event": "python scripts/parse_event.py"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.38.2",
@@ -18,9 +17,5 @@
     "sharp": "^0.34.2",
     "vue": "^3.5.30"
   },
-  "devDependencies": {
-    "@types/node": "^25.5.0",
-    "node-html-parser": "^7.1.0",
-    "ts-node": "^10.9.2"
-  }
+  "devDependencies": {}
 }

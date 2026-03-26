@@ -30,8 +30,9 @@ npm run preview
 npm run astro [command]
 
 # Parse event HTML to JSON data
-npm run parse-event <html-file> <event-id>
-# Example: npm run parse-event context/2026-02.html 2026-02
+npm run parse-event:py <html-file> <event-id>
+# Example: npm run parse-event:py context/2026-02.html 2026-02
+# Or via Make: make parse-event HTML_FILE=context/2026-02.html EVENT_ID=2026-02
 ```
 
 ### Python Tooling (via Makefile)
@@ -92,19 +93,21 @@ Uses Astro's strict TypeScript configuration (`astro/tsconfigs/strict`).
 
 ### Data Pipeline
 
-Event data is parsed from HTML into JSON format using `scripts/parse-event.ts`:
+Event data is parsed from HTML into JSON format using `scripts/parse_event.py`:
 
 - **Input**: Event HTML files from galaxy.fun (stored in `context/` directory)
 - **Outputs**:
   - `src/data/events/<event-id>.json`: Per-player records with captain and decklist
-  - `src/data/cards.json`: Card slug-to-display-name lookup (merged across all events)
+  - `src/data/cards.json`: Deck card slug-to-display-name lookup (merged across all events)
+  - `src/data/captains.json`: Captain card slug-to-display-name lookup (merged across all events)
 
-**Parser usage**: `npm run parse-event context/2026-03.html 2026-03`
+**Parser usage**: `npm run parse-event:py context/2026-03.html 2026-03` or `make parse-event HTML_FILE=context/2026-03.html EVENT_ID=2026-03`
 
 The parser extracts:
 - Event metadata (name, date, total champion count)
 - Player records (username, captain card slug, deck card slugs)
 - Card display names for all referenced cards
+- Separates captain cards and deck cards into distinct files for better organization
 
 ## Adding Content
 
