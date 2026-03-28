@@ -177,6 +177,33 @@ def assign_cluster_colors(n: int) -> list[str]:
     return colors
 
 
+def assign_deck_archetype(deck_cards: list[str], card_to_cluster: dict, card_freq: dict, clusters: list) -> str:
+    """Assign archetype to deck using frequency-weighted scoring.
+
+    Args:
+        deck_cards: List of card slugs in the deck
+        card_to_cluster: Mapping of card slugs to cluster IDs
+        card_freq: Frequency of each card in the dataset
+        clusters: List of cluster data with labels
+
+    Returns:
+        The archetype label for this deck
+    """
+    cluster_scores = defaultdict(int)
+    for card_slug in deck_cards:
+        if card_slug in card_to_cluster:
+            cluster_scores[card_to_cluster[card_slug]] += card_freq.get(card_slug, 0)
+
+    if not cluster_scores:
+        return "Mixed"
+
+    winning_cluster_id = max(cluster_scores, key=cluster_scores.get)
+    for cluster in clusters:
+        if cluster["id"] == winning_cluster_id:
+            return cluster["label"]
+    return "Mixed"
+
+
 def calculate_captain_stats(
     players: list[dict], cards_map: dict, captains_map: dict, all_cards: list[str], card_idx: dict, matrix: np.ndarray
 ) -> list[dict]:
@@ -323,6 +350,27 @@ def analyze_event(event_id: str, dist_dir: Path, n_clusters: int = 6) -> dict:
     # Calculate captain statistics
     captain_data = calculate_captain_stats(players, cards_map, captains_map, all_cards, card_idx, matrix)
 
+    # Build card-to-cluster mapping
+    card_to_cluster = {}
+    for cluster in clusters:
+        for card in cluster["cards"]:
+            card_to_cluster[card["slug"]] = cluster["id"]
+
+    # Build card frequency map for archetype assignment
+    card_freq_map = {card: int(card_freq[card_idx[card]]) for card in all_cards}
+
+    # Group players by captain with archetype assignment
+    captain_players = defaultdict(list)
+    for player in players:
+        archetype = assign_deck_archetype(player["deck"], card_to_cluster, card_freq_map, clusters)
+        captain_players[player["captain"]].append(
+            {"username": player["username"], "archetype": archetype, "deck": player["deck"]}
+        )
+
+    # Attach players to captain objects
+    for captain in captain_data:
+        captain["players"] = captain_players.get(captain["slug"], [])
+
     # Build top cards list
     top_cards = []
     for card in sorted(all_cards, key=lambda c: -int(card_freq[card_idx[c]])):
@@ -339,6 +387,7 @@ def analyze_event(event_id: str, dist_dir: Path, n_clusters: int = 6) -> dict:
         "clusters": clusters,
         "captains": captain_data,
         "top_cards": top_cards[:30],  # Top 30 cards
+        "cluster_map": {cluster["label"]: cluster["color"] for cluster in clusters},
     }
 
     return output

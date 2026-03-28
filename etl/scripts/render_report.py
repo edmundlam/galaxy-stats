@@ -176,6 +176,53 @@ def get_html_template() -> str:
   .best-bar-fill { height:100%; border-radius:3px; background:var(--accent); opacity:0.7; }
   .best-pct { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); width:34px; text-align:right; flex-shrink:0; }
 
+  /* Archetype badge styles */
+  .tag { display:inline-flex; align-items:center; font-family:'IBM Plex Mono',monospace;
+          font-size:9px; letter-spacing:1px; text-transform:uppercase;
+          padding:2px 7px; border-radius:2px; font-weight:500; }
+  .tag-treasure { background:rgba(200,169,110,0.12); color:var(--c-treasure); border:1px solid rgba(200,169,110,0.25); }
+  .tag-candy { background:rgba(232,125,158,0.12); color:var(--c-candy); border:1px solid rgba(232,125,158,0.25); }
+  .tag-mage { background:rgba(158,110,200,0.12); color:var(--c-mage); border:1px solid rgba(158,110,200,0.25); }
+  .tag-pirates { background:rgba(110,158,200,0.12); color:var(--c-pirates); border:1px solid rgba(110,158,200,0.25); }
+  .tag-animals { background:rgba(110,200,158,0.12); color:var(--c-animals); border:1px solid rgba(110,200,158,0.25); }
+  .tag-fringe { background:rgba(122,125,138,0.12); color:var(--c-fringe); border:1px solid rgba(122,125,138,0.25); }
+
+  /* Decklists view */
+  .decklist-option-a { display:flex; flex-direction:column; gap:4px; }
+  .player-row { border:1px solid var(--border); border-radius:3px; overflow:hidden; }
+  .player-row-header { display:flex; align-items:center; gap:8px; padding:7px 10px;
+                      cursor:pointer; background:var(--surface2); transition:background 0.15s; user-select:none; }
+  .player-row-header:hover { background:#1e2230; }
+  .player-username { font-family:'IBM Plex Mono',monospace; font-size:11px; flex:1; }
+  .expand-icon { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted);
+                transition:transform 0.2s; flex-shrink:0; }
+  .player-row.open .expand-icon { transform:rotate(90deg); }
+  .player-deck { display:none; padding:8px 10px; border-top:1px solid var(--border); background:var(--bg); }
+  .player-row.open .player-deck { display:block; }
+  .deck-pills { display:flex; flex-wrap:wrap; gap:4px; }
+  .deck-pill { font-family:'IBM Plex Mono',monospace; font-size:10px; padding:2px 8px;
+               border-radius:2px; background:var(--surface2); border:1px solid var(--border); color:var(--text); }
+
+  /* Legend and filter */
+  .legend { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; padding:12px 14px;
+           background:var(--surface); border:1px solid var(--border); border-radius:4px; align-items:center; }
+  .legend-label { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px;
+                 text-transform:uppercase; color:var(--muted); margin-right:4px; flex-shrink:0; }
+  .legend-item { display:flex; align-items:center; gap:5px; font-family:'IBM Plex Mono',monospace; font-size:10px; }
+  .legend-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+
+  .captain-filter { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:20px; align-items:center; }
+  .filter-label { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px;
+                 text-transform:uppercase; color:var(--muted); margin-right:2px; }
+  .filter-btn { background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:1px;
+                text-transform:uppercase; color:var(--muted); padding:5px 10px; cursor:pointer;
+                transition:all 0.15s; }
+  .filter-btn:hover { color:var(--text); }
+  .filter-btn.active { color:var(--accent); border-color:rgba(200,169,110,0.4);
+                      background:rgba(200,169,110,0.08); }
+  .captain-card.hidden { display:none; }
+
   @media(max-width:700px){
     header,nav,main{padding-left:16px;padding-right:16px;}
     header{padding-top:32px;}
@@ -225,7 +272,9 @@ def get_html_template() -> str:
   <!-- CAPTAINS -->
   <div class="section" id="captains">
     <div class="section-title">Captain Analysis</div>
-    <div class="section-desc">Toggle between <strong>Signature Cards</strong> — which cards are over-represented relative to the overall meta (lift) — and <strong>Best 12</strong> — the most commonly picked cards among winners using this captain. Captains with fewer than 5 finishers are flagged; treat their data cautiously.</div>
+    <div class="section-desc">Toggle between <strong>Signature Cards</strong> (lift), <strong>Best 12</strong> (most picked), or <strong>Decklists</strong> — individual player decklists grouped by captain. Cards are color-coded by archetype cluster. Captains with fewer than 5 finishers are flagged; treat their data cautiously.</div>
+    <div class="legend" id="archetype-legend"></div>
+    <div class="captain-filter" id="captain-filter"></div>
     <div class="captains-grid" id="captains-container"></div>
   </div>
 
@@ -294,29 +343,75 @@ function pill(card, color, opacity) {
 // CAPTAINS
 function renderCaptains() {
   const c = document.getElementById('captains-container');
+
+  // Build card name lookup and color mapping
+  const cardInfo = {};
+  const archColors = {};
+  DATA.clusters.forEach(cl => {
+    archColors[cl.label] = cl.color;
+    cl.cards.forEach(card => {
+      cardInfo[card.slug] = { name: card.name, color: cl.color };
+    });
+  });
+
   c.innerHTML = DATA.captains.map((cap, i) => {
+    const uid = `cap-${i}`;
     const warn = cap.n < 5;
+
+    // Track archetypes for filtering
+    const archetypesPresent = cap.players ?
+      [...new Set(cap.players.map(p => p.archetype))].join(' ') : '';
+
+    // Signature rows (existing)
     const sigRows = cap.signature.map(tc => {
       const cls = tc.lift >= 10 ? 'lift-hi' : tc.lift >= 5 ? 'lift-mid' : 'lift-lo';
+      const color = cardInfo[tc.card.replace(/\\s+/g, '_').toLowerCase()]?.color;
       return `<div class="lift-row">
-        <div class="lift-name">${tc.card}</div>
-        <div class="lift-freq">${tc.freq}/${tc.n}</div>
+        <div class="lift-name" style="color:${color || ''}">${tc.card}</div>
+        <div class="lift-freq">${tc.freq}/${cap.n}</div>
         <div class="lift-badge ${cls}">${tc.lift}×</div>
       </div>`;
     }).join('');
 
-    const bestRows = cap.best12.map(tc => `
-      <div class="best-row">
-        <div class="best-name">${tc.card}</div>
+    // Best 12 rows (existing)
+    const bestRows = cap.best12.map(tc => {
+      const color = cardInfo[tc.card.replace(/\\s+/g, '_').toLowerCase()]?.color;
+      return `<div class="best-row">
+        <div class="best-name" style="color:${color || ''}">${tc.card}</div>
         <div class="best-track">
           <div class="best-bar-wrap"><div class="best-bar-fill" style="width:${tc.pct}%"></div></div>
           <div class="best-pct">${tc.pct}%</div>
         </div>
-      </div>`).join('');
+      </div>`;
+    }).join('');
 
-    const uid = `cap-${i}`;
+    // Decklists view (new)
+    const deckView = cap.players && cap.players.length > 0 ?
+      `<div class="decklist-option-a">
+        ${cap.players.map((p, pi) => `
+          <div class="player-row" id="${uid}p${pi}" data-archetypes="${p.archetype}">
+            <div class="player-row-header" onclick="togglePlayer('${uid}p${pi}')">
+              <span class="player-username">${p.username}</span>
+              <span class="tag" style="background:${archColors[p.archetype]}20; color:${archColors[p.archetype]}; border-color:${archColors[p.archetype]}40">
+                ${p.archetype}
+              </span>
+              <span class="expand-icon">▶</span>
+            </div>
+            <div class="player-deck">
+              <div class="deck-pills">
+                ${p.deck.map(cardSlug => {
+                  const info = cardInfo[cardSlug] || { name: cardSlug, color: '' };
+                  return `<span class="deck-pill" style="${info.color ? 'color:' + info.color + 'cc;border-color:' + info.color + '30' : ''}">${info.name}</span>`;
+                }).join('')}
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>` :
+      '<div style="padding:16px; color:var(--muted); font-size:11px;">No decklist data available</div>';
+
     return `
-      <div class="captain-card">
+      <div class="captain-card" data-archetypes="${archetypesPresent}">
         <div class="captain-header">
           <div class="captain-name">${cap.name}</div>
           <div class="captain-n ${warn ? 'warn' : ''}">n=${cap.n}${warn ? ' ⚠' : ''}</div>
@@ -324,9 +419,11 @@ function renderCaptains() {
         <div class="toggle-bar">
           <button class="toggle-btn active" onclick="switchView('${uid}','sig',this)">Signature</button>
           <button class="toggle-btn" onclick="switchView('${uid}','best',this)">Best 12</button>
+          <button class="toggle-btn" onclick="switchView('${uid}','deck',this)">Decklists</button>
         </div>
         <div class="view active" id="${uid}-sig"><div class="lift-rows">${sigRows}</div></div>
         <div class="view" id="${uid}-best"><div class="best-rows">${bestRows}</div></div>
+        <div class="view" id="${uid}-deck">${deckView}</div>
       </div>`;
   }).join('');
 }
@@ -339,10 +436,58 @@ function switchView(uid, view, btn) {
   document.getElementById(`${uid}-${view}`).classList.add('active');
 }
 
+// Render archetype legend
+function renderArchetypeLegend() {
+  const c = document.getElementById('archetype-legend');
+  const archetypes = Object.entries(DATA.cluster_map || {});
+  c.innerHTML = `<span class="legend-label">Archetypes</span>` +
+    archetypes.map(([label, color]) => `
+      <div class="legend-item">
+        <div class="legend-dot" style="background:${color}"></div>
+        ${label}
+      </div>`).join('');
+}
+
+// Render captain filter
+function renderCaptainFilter() {
+  const c = document.getElementById('captain-filter');
+  const archetypes = ['all', ...Object.keys(DATA.cluster_map || {})];
+  c.innerHTML = `<span class="filter-label">Show</span>` +
+    archetypes.map(arch => `
+      <button class="filter-btn ${arch === 'all' ? 'active' : ''}"
+              onclick="filterCaptains('${arch}', this)">
+        ${arch === 'all' ? 'All' : arch}
+      </button>`).join('');
+}
+
+// Filter captains by archetype
+function filterCaptains(key, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.captain-card').forEach(card => {
+    if (key === 'all') {
+      card.classList.remove('hidden');
+    } else {
+      const archs = card.dataset.archetypes || '';
+      card.classList.toggle('hidden', !archs.includes(key));
+    }
+  });
+}
+
+// Toggle player row expansion
+function togglePlayer(id) {
+  const row = document.getElementById(id);
+  row.classList.toggle('open');
+}
+
 // INIT
 renderBars();
 renderClusters();
 renderCaptains();
+if (DATA.cluster_map) {
+  renderArchetypeLegend();
+  renderCaptainFilter();
+}
 setTimeout(animateBars, 80);
 </script>
 </body>
