@@ -256,7 +256,7 @@ function renderBars() {
 function animateBars() {
   requestAnimationFrame(() => {
     document.querySelectorAll('.bar-fill').forEach(el => { el.style.width = el.dataset.w + '%'; });
-  };
+  });
 }
 
 // CLUSTERS
