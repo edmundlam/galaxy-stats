@@ -1,41 +1,112 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Meta Analysis Reports</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galaxy Stats — OUAG Tournament Meta Analysis</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #13161e;
+    --surface2: #1a1e2a;
+    --border: #252a38;
+    --accent: #c8a96e;
+    --text: #e8e4dc;
+    --muted: #7a7d8a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:'IBM Plex Sans',sans-serif; font-weight:300; min-height:100vh; line-height:1.6; }
 
-  <!-- Redirect -->
+  /* HEADER */
+  header { padding:48px 40px 36px; border-bottom:1px solid var(--border); position:relative; overflow:hidden; }
+  header::before { content:''; position:absolute; top:-60px; right:-60px; width:360px; height:360px; background:radial-gradient(circle, rgba(200,169,110,0.07) 0%, transparent 70%); pointer-events:none; }
+  .event-label { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+  h1 { font-family:'Playfair Display',serif; font-size:clamp(28px,5vw,52px); font-weight:900; line-height:1.1; letter-spacing:-1px; }
+  .subtitle { margin-top:12px; color:var(--muted); font-size:13px; font-family:'IBM Plex Mono',monospace; }
 
-  <meta http-equiv="refresh" content="0; url=reports/2026-02/" />
+  /* MAIN */
+  main { padding:40px; max-width:900px; }
+  .section { margin-bottom:48px; animation:fadeUp 0.35s ease both; }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+  .section-title { font-family:'Playfair Display',serif; font-size:26px; font-weight:700; margin-bottom:16px; color:var(--accent); }
+  .section-desc { color:var(--muted); font-size:14px; line-height:1.7; margin-bottom:24px; }
 
-  <!-- Canonical (helps SEO avoid indexing the redirect page itself) -->
+  /* REPORT CARDS */
+  .report-list { display:flex; flex-direction:column; gap:16px; }
+  .report-card { background:var(--surface); border:1px solid var(--border); border-radius:4px; padding:24px; transition:border-color 0.2s, transform 0.2s; position:relative; overflow:hidden; }
+  .report-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+  .report-card.latest::before { content:'LATEST'; position:absolute; top:0; right:0; background:var(--accent); color:var(--bg); font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:2px; padding:4px 10px; border-bottom-left-radius:4px; font-weight:500; }
+  .report-card.preliminary::before { content:'PRELIMINARY'; position:absolute; top:0; right:0; background:var(--muted); color:var(--bg); font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:2px; padding:4px 10px; border-bottom-left-radius:4px; font-weight:500; }
+  .report-title { font-family:'Playfair Display',serif; font-size:20px; font-weight:700; margin-bottom:8px; }
+  .report-date { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:12px; }
+  .report-link { display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--accent); text-decoration:none; letter-spacing:1px; transition:color 0.2s; }
+  .report-link:hover { color:var(--text); }
 
-  <link rel="canonical" href="reports/2026-02/" />
+  /* LINKS */
+  .links-section { display:flex; flex-wrap:wrap; gap:12px; }
+  .link-card { background:var(--surface); border:1px solid var(--border); border-radius:4px; padding:16px 20px; text-decoration:none; transition:border-color 0.2s, transform 0.2s; flex:1; min-width:200px; }
+  .link-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+  .link-title { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:6px; }
+  .link-desc { font-size:13px; color:var(--muted); }
 
-  <!-- Mobile friendliness -->
+  /* FOOTER */
+  footer { padding:32px 40px; border-top:1px solid var(--border); margin-top:40px; }
+  .footer-content { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); line-height:1.8; }
+  .footer-content a { color:var(--accent); text-decoration:none; }
+  .footer-content a:hover { color:var(--text); }
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Optional: prevent caching if you want the redirect to always be fresh -->
-
-  <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /> -->
-
-  <style>
-    body {
-      font-family: system-ui, -apple-system, sans-serif;
-      padding: 2rem;
-      line-height: 1.5;
-    }
-  </style>
-
+  @media(max-width:700px){
+    header,main,footer{padding-left:16px;padding-right:16px;}
+    header{padding-top:32px;}
+    .links-section{flex-direction:column;}
+    .link-card{min-width:auto;}
+  }
+</style>
 </head>
 <body>
-  <h1>Once Upon A Galaxy Gauntlet Reports</h1>
-  <p>Redirecting to the latest report…</p>
-  <p>
-    If you are not redirected,
-    <a href="reports/2026-02/">click here</a>.
-  </p>
+
+<header>
+  <div class="event-label">Once Upon A Galaxy</div>
+  <h1>Tournament Meta Analysis</h1>
+  <div class="subtitle">Data-driven insights into card popularity, captain synergies, and deck archetypes</div>
+</header>
+
+<main>
+  <div class="section">
+    <div class="section-title">Reports</div>
+    <div class="section-desc">Comprehensive analysis of winning decklists from galaxy.fun tournaments</div>
+    <div class="report-list">
+      <a href="reports/2026-02/" class="report-card latest">
+        <div class="report-title">February 2026 Gauntlet</div>
+        <div class="report-date">February 2026</div>
+        <span class="report-link">View Report →</span>
+      </a>
+      <a href="reports/2026-03/" class="report-card preliminary">
+        <div class="report-title">March 2026 Gauntlet</div>
+        <div class="report-date">March 2026</div>
+        <span class="report-link">View Report →</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Quick Links</div>
+    <div class="links-section">
+      <a href="about.html" class="link-card">
+        <div class="link-title">About</div>
+        <div class="link-desc">How the analysis works, clustering methodology, technical details</div>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-content">
+    Galaxy Stats — Open source tournament analysis for Once Upon A Galaxy<br>
+    <a href="https://github.com/edmundlam/galaxy-stats">github.com/edmundlam/galaxy-stats</a>
+  </div>
+</footer>
+
 </body>
 </html>

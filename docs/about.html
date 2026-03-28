@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Galaxy Stats</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #13161e;
+    --surface2: #1a1e2a;
+    --border: #252a38;
+    --accent: #c8a96e;
+    --text: #e8e4dc;
+    --muted: #7a7d8a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:'IBM Plex Sans',sans-serif; font-weight:300; min-height:100vh; line-height:1.6; }
+
+  /* HEADER */
+  header { padding:48px 40px 36px; border-bottom:1px solid var(--border); position:relative; overflow:hidden; }
+  header::before { content:''; position:absolute; top:-60px; right:-60px; width:360px; height:360px; background:radial-gradient(circle, rgba(200,169,110,0.07) 0%, transparent 70%); pointer-events:none; }
+  .event-label { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+  h1 { font-family:'Playfair Display',serif; font-size:clamp(28px,5vw,52px); font-weight:900; line-height:1.1; letter-spacing:-1px; }
+  .subtitle { margin-top:12px; color:var(--muted); font-size:13px; font-family:'IBM Plex Mono',monospace; }
+
+  /* MAIN */
+  main { padding:40px; max-width:900px; }
+  .section { margin-bottom:48px; animation:fadeUp 0.35s ease both; }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+  .section-title { font-family:'Playfair Display',serif; font-size:26px; font-weight:700; margin-bottom:16px; color:var(--accent); }
+  .section-content { color:var(--text); font-size:15px; line-height:1.8; }
+  .section-content p { margin-bottom:16px; }
+  .section-content strong { color:var(--text); font-weight:500; }
+
+  /* CARDS */
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:4px; padding:24px; margin-bottom:18px; }
+  .card-title { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+  .card-content { font-size:14px; line-height:1.7; color:var(--muted); }
+  .card-content strong { color:var(--text); }
+
+  /* LIST */
+  ul { list-style:none; padding:0; margin:0; }
+  li { padding:8px 0; border-bottom:1px solid var(--border); font-size:14px; color:var(--muted); }
+  li:last-child { border-bottom:none; }
+  li::before { content:'→'; margin-right:10px; color:var(--accent); }
+
+  /* BACK LINK */
+  .back-link { display:inline-block; margin:20px 40px 40px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); text-decoration:none; letter-spacing:1px; transition:color 0.2s; }
+  .back-link:hover { color:var(--accent); }
+
+  /* TECH STACK */
+  .tech-list { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+  .tech-item { font-family:'IBM Plex Mono',monospace; font-size:11px; padding:6px 12px; background:var(--surface2); border:1px solid var(--border); border-radius:2px; color:var(--muted); }
+  .tech-item strong { color:var(--accent); font-weight:500; }
+
+  @media(max-width:700px){
+    header,main{padding-left:16px;padding-right:16px;}
+    header{padding-top:32px;}
+    .back-link{margin-left:16px;margin-right:16px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="event-label">Galaxy Stats</div>
+  <h1>About</h1>
+  <div class="subtitle">Meta analysis reports for "Once Upon A Galaxy" tournaments</div>
+</header>
+
+<main>
+  <div class="section">
+    <div class="section-title">What is Galaxy Stats?</div>
+    <div class="section-content">
+      <p>Galaxy Stats processes tournament data from <strong>galaxy.fun</strong> to generate comprehensive meta analysis reports. We analyze winning decklists from gauntlet finishers to uncover:</p>
+    </div>
+    <ul>
+      <li>Card popularity across the meta</li>
+      <li>Natural card archetypes through clustering</li>
+      <li>Captain-specific synergies and signatures</li>
+      <li>Optimal deck building recommendations</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">How the Analysis Works</div>
+
+    <div class="card">
+      <div class="card-title">Data Collection</div>
+      <div class="card-content">
+        We parse tournament results from galaxy.fun, extracting winning decks, captains, and card compositions. No personal data is collected — only aggregate deck statistics.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Card Clustering</div>
+      <div class="card-content">
+        Cards are grouped by how frequently they appear together in winning decks. We use <strong>hierarchical clustering</strong> to find natural groupings — if Gold and Gems appear together often, they form a "Treasure" cluster. Each cluster represents a playstyle archetype (Treasures, Candy, Mage, Pirates, Animals, etc.).
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Captain Analysis — Lift</div>
+      <div class="card-content">
+        <strong>Lift</strong> measures which cards are over-represented with specific captains. It compares how often a card appears with a captain versus how often it appears overall. A lift of 2.0× means the card appears twice as often with this captain than expected. This reveals each captain's unique "signature cards."
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Best 12 Analysis</div>
+      <div class="card-content">
+        For each captain, we identify the 12 most commonly played cards across all winning decks piloted by that captain. This represents data-driven optimal picks for deck building.
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">What You'll Find in Reports</div>
+    <div class="card-content">
+      <p><strong>Top Cards:</strong> Overall popularity across all winning decks — these are the cards players add voluntarily on top of the default set.</p>
+      <p><strong>Card Archetypes:</strong> Natural groupings based on co-occurrence patterns, showing which cards are played together.</p>
+      <p><strong>Captain Signatures:</strong> Lift-based associations revealing unique synergies between captains and specific cards.</p>
+      <p><strong>Best Picks:</strong> Frequency-based recommendations per captain for optimal deck building.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Technical Stack</div>
+    <div class="tech-list">
+      <div class="tech-item"><strong>BeautifulSoup4</strong> — HTML parsing</div>
+      <div class="tech-item"><strong>NumPy</strong> — Matrix operations</div>
+      <div class="tech-item"><strong>SciPy</strong> — Hierarchical clustering</div>
+      <div class="tech-item"><strong>Python</strong> — ETL pipeline</div>
+      <div class="tech-item"><strong>GitHub Pages</strong> — Static hosting</div>
+    </div>
+    <div class="card-content" style="margin-top:16px;">
+      Reports are standalone HTML files with embedded CSS, JavaScript, and data. No external dependencies, no tracking, works offline.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Open Source</div>
+    <div class="card-content">
+      <p>Galaxy Stats is open source. The ETL pipeline, analysis scripts, and report generation code are available on GitHub.</p>
+      <p style="margin-top:12px; color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:12px;">
+        <a href="https://github.com/edmundlam/galaxy-stats" style="color:var(--accent); text-decoration:none;">github.com/edmundlam/galaxy-stats</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<a href="/" class="back-link">← Back to latest report</a>
+
+</body>
+</html>
