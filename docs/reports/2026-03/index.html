@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Once Upon A Galaxy — February 2026 Meta Analysis</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #13161e;
+    --surface2: #1a1e2a;
+    --border: #252a38;
+    --accent: #c8a96e;
+    --text: #e8e4dc;
+    --muted: #7a7d8a;
+    --c-treasure: #c8a96e;
+    --c-candy: #e87d9e;
+    --c-mage: #9e6ec8;
+    --c-pirates: #6e9ec8;
+    --c-animals: #6ec89e;
+    --c-fringe: #5a5d6a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:'IBM Plex Sans',sans-serif; font-weight:300; min-height:100vh; line-height:1.6; }
+
+  /* HEADER */
+  header { padding:48px 40px 36px; border-bottom:1px solid var(--border); position:relative; overflow:hidden; }
+  header::before { content:''; position:absolute; top:-60px; right:-60px; width:360px; height:360px; background:radial-gradient(circle, rgba(200,169,110,0.07) 0%, transparent 70%); pointer-events:none; }
+  .event-label { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+  h1 { font-family:'Playfair Display',serif; font-size:clamp(28px,5vw,52px); font-weight:900; line-height:1.1; letter-spacing:-1px; }
+  .subtitle { margin-top:12px; color:var(--muted); font-size:13px; font-family:'IBM Plex Mono',monospace; }
+  .stats-row { display:flex; gap:32px; margin-top:28px; flex-wrap:wrap; }
+  .stat-value { font-family:'Playfair Display',serif; font-size:32px; font-weight:700; color:var(--accent); line-height:1; }
+  .stat-label { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); letter-spacing:2px; text-transform:uppercase; margin-top:3px; }
+
+  /* NAV */
+  nav { display:flex; border-bottom:1px solid var(--border); padding:0 40px; overflow-x:auto; scrollbar-width:none; }
+  nav::-webkit-scrollbar { display:none; }
+  nav button { background:none; border:none; color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:2px; text-transform:uppercase; padding:16px 20px; cursor:pointer; border-bottom:2px solid transparent; transition:all 0.2s; white-space:nowrap; }
+  nav button:hover { color:var(--text); }
+  nav button.active { color:var(--accent); border-bottom-color:var(--accent); }
+
+  /* MAIN */
+  main { padding:40px; max-width:1400px; }
+  .section { display:none; }
+  .section.active { display:block; animation:fadeUp 0.35s ease both; }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+  .section-title { font-family:'Playfair Display',serif; font-size:26px; font-weight:700; margin-bottom:6px; }
+  .section-desc { color:var(--muted); font-size:13px; margin-bottom:32px; max-width:680px; line-height:1.75; }
+  .note { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); margin-top:24px; padding:12px 16px; border-left:2px solid var(--border); line-height:1.8; }
+
+  /* BAR CHART */
+  .bar-chart { display:flex; flex-direction:column; gap:5px; }
+  .bar-row { display:grid; grid-template-columns:180px 1fr 48px; align-items:center; gap:10px; }
+  .bar-name { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--text); text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .bar-track { background:var(--surface2); height:22px; border-radius:2px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:2px; background:linear-gradient(90deg,var(--accent),rgba(200,169,110,0.55)); transition:width 0.9s cubic-bezier(0.16,1,0.3,1); position:relative; }
+  .bar-fill::after { content:''; position:absolute; top:0;left:0;right:0; height:1px; background:rgba(255,255,255,0.12); }
+  .bar-pct { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); }
+  @media(max-width:600px){
+    .bar-row{grid-template-columns:110px 1fr 40px;}
+    .bar-name{font-size:10px;}
+  }
+
+  /* CLUSTERS */
+  .clusters-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; }
+  .cluster-card { background:var(--surface); border:1px solid var(--border); border-radius:4px; padding:22px; position:relative; overflow:hidden; }
+  .cluster-top-bar { position:absolute; top:0;left:0;right:0; height:3px; }
+  .cluster-header { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+  .cluster-label { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:2px; text-transform:uppercase; font-weight:500; }
+  .cluster-count { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); margin-left:auto; }
+
+  /* sub-sections within Treasures */
+  .subsection-label { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); margin:14px 0 8px; padding-bottom:4px; border-bottom:1px solid var(--border); }
+  .subsection-label:first-of-type { margin-top:0; }
+
+  .pills { display:flex; flex-wrap:wrap; gap:5px; }
+  .pill { font-family:'IBM Plex Mono',monospace; font-size:11px; padding:3px 9px; border-radius:2px; background:var(--surface2); border:1px solid; display:flex; align-items:center; gap:5px; }
+  .pill-freq { opacity:0.45; font-size:10px; }
+
+  /* CAPTAINS */
+  .captains-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:18px; }
+  .captain-card { background:var(--surface); border:1px solid var(--border); border-radius:4px; overflow:hidden; }
+  .captain-header { display:flex; align-items:center; gap:8px; padding:18px 20px 14px; border-bottom:1px solid var(--border); }
+  .captain-name { font-family:'Playfair Display',serif; font-size:17px; font-weight:700; flex:1; }
+  .captain-n { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); background:var(--surface2); padding:3px 7px; border-radius:2px; }
+  .captain-n.warn { color:#c87a6e; background:rgba(200,122,110,0.1); }
+
+  /* Toggle */
+  .toggle-bar { display:flex; border-bottom:1px solid var(--border); }
+  .toggle-btn { flex:1; background:none; border:none; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); padding:10px 8px; cursor:pointer; border-bottom:2px solid transparent; transition:all 0.15s; }
+  .toggle-btn.active { color:var(--accent); border-bottom-color:var(--accent); }
+  .toggle-btn:hover:not(.active) { color:var(--text); }
+
+  .view { display:none; padding:16px 20px; }
+  .view.active { display:block; }
+
+  /* Signature (lift) rows */
+  .lift-rows { display:flex; flex-direction:column; gap:7px; }
+  .lift-row { display:grid; grid-template-columns:1fr auto auto; align-items:center; gap:8px; }
+  .lift-name { font-family:'IBM Plex Mono',monospace; font-size:11px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .lift-freq { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); flex-shrink:0; }
+  .lift-badge { font-family:'IBM Plex Mono',monospace; font-size:10px; padding:2px 6px; border-radius:2px; min-width:48px; text-align:center; flex-shrink:0; }
+  .lift-hi { background:rgba(200,169,110,0.15); color:var(--c-treasure); }
+  .lift-mid { background:rgba(110,158,200,0.12); color:var(--c-pirates); }
+  .lift-lo { background:rgba(122,125,138,0.08); color:var(--muted); }
+
+  /* Best 12 rows */
+  .best-rows { display:flex; flex-direction:column; gap:6px; }
+  .best-row { display:grid; grid-template-columns:1fr auto; align-items:center; gap:8px; }
+  .best-name { font-family:'IBM Plex Mono',monospace; font-size:11px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .best-track { display:flex; align-items:center; gap:6px; }
+  .best-bar-wrap { width:60px; height:6px; background:var(--surface2); border-radius:3px; overflow:hidden; flex-shrink:0; }
+  .best-bar-fill { height:100%; border-radius:3px; background:var(--accent); opacity:0.7; }
+  .best-pct { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); width:34px; text-align:right; flex-shrink:0; }
+
+  @media(max-width:700px){
+    header,nav,main{padding-left:16px;padding-right:16px;}
+    header{padding-top:32px;}
+    .captains-grid{grid-template-columns:1fr;}
+    .clusters-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="event-label">Once Upon A Galaxy · Meta Analysis</div>
+  <h1>February 2026<br>Gauntlet Report</h1>
+  <div class="subtitle">2026-02-20 · 138 of 183 champions · 6-win gauntlet finishers</div>
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-value">138</div><div class="stat-label">Players</div></div>
+    <div class="stat-item"><div class="stat-value">48</div><div class="stat-label">Captains played</div></div>
+    <div class="stat-item"><div class="stat-value">124</div><div class="stat-label">Unique cards</div></div>
+    <div class="stat-item"><div class="stat-value">61.6%</div><div class="stat-label">Top card rate</div></div>
+  </div>
+</header>
+
+<nav>
+  <button class="active" onclick="showSection('top-cards',this)">Top Cards</button>
+  <button onclick="showSection('clusters',this)">Card Archetypes</button>
+  <button onclick="showSection('captains',this)">Captains</button>
+</nav>
+
+<main>
+
+  <!-- TOP CARDS -->
+  <div class="section active" id="top-cards">
+    <div class="section-title">Card Popularity</div>
+    <div class="section-desc">How often each card appeared across all 138 winning decklists. These are the 12 cards players voluntarily added on top of the shared default set — high playrates signal genuine conviction.</div>
+    <div class="bar-chart" id="bar-chart-container"></div>
+    <div class="note">All 124 unique cards appeared at least once. Top 30 shown.</div>
+  </div>
+
+  <!-- CLUSTERS -->
+  <div class="section" id="clusters">
+    <div class="section-title">Card Archetypes</div>
+    <div class="section-desc">Cards grouped by co-occurrence frequency using Jaccard similarity + hierarchical clustering, then labelled with known archetype names. The Treasures cluster is split into core cards (high-frequency, broadly used) and situational picks (lower frequency, more conditional).</div>
+    <div class="clusters-grid" id="clusters-container"></div>
+    <div class="note">Cards with 5+ appearances included (96 of 124 total). Archetype names provided by game knowledge; cluster groupings derived purely from data.</div>
+  </div>
+
+  <!-- CAPTAINS -->
+  <div class="section" id="captains">
+    <div class="section-title">Captain Analysis</div>
+    <div class="section-desc">Toggle between <strong>Signature Cards</strong> — which cards are over-represented relative to the overall meta (lift) — and <strong>Best 12</strong> — the most commonly picked cards among winners using this captain. Captains with fewer than 5 finishers are flagged; treat their data cautiously.</div>
+    <div class="captains-grid" id="captains-container"></div>
+  </div>
+
+</main>
+
+<script>
+const DATA = {"event":{"id":"2026-02","name":"February Monthly","date":"2026-02-20","total_champions":183},"total_players":138,"clusters":[{"id":"treasures","label":"Treasures","color":"#c8a96e","core":[{"slug":"wormscale_tinkerer","name":"Wormscale Tinkerer","freq":85,"pct":61.6},{"slug":"maverick_icewing","name":"Maverick & Icewing","freq":66,"pct":47.8},{"slug":"miseria","name":"Miseria","freq":59,"pct":42.8},{"slug":"mr_fox","name":"Mr. Fox","freq":59,"pct":42.8},{"slug":"the_burninator","name":"The Burninator","freq":53,"pct":38.4},{"slug":"rollo","name":"Rollo","freq":47,"pct":34.1},{"slug":"aladdin","name":"Aladdin","freq":46,"pct":33.3},{"slug":"sir_francis_drake","name":"Sir Francis Drake","freq":40,"pct":29.0},{"slug":"ace_of_hearts","name":"Ace of Hearts","freq":37,"pct":26.8},{"slug":"lance_a_little","name":"Lance A Little","freq":32,"pct":23.2},{"slug":"pisces","name":"Pisces","freq":31,"pct":22.5},{"slug":"flopsy","name":"Flopsy","freq":29,"pct":21.0},{"slug":"mechanical_dragon","name":"Mechanical Dragon","freq":28,"pct":20.3}],"situational":[{"slug":"mech_a_man","name":"Mech-a-Man","freq":25,"pct":18.1},{"slug":"the_butcher","name":"The Butcher","freq":25,"pct":18.1},{"slug":"guinevere","name":"Guinevere","freq":22,"pct":15.9},{"slug":"smug","name":"Smug","freq":22,"pct":15.9},{"slug":"the_huntsman","name":"The Huntsman","freq":21,"pct":15.2},{"slug":"crystal","name":"Crystal","freq":19,"pct":13.8},{"slug":"oracle_of_fortunes","name":"Oracle of Fortunes","freq":16,"pct":11.6},{"slug":"thunder_of_dragons","name":"Thunder of Dragons","freq":16,"pct":11.6},{"slug":"scale_a_tor","name":"Scale-a-tor","freq":14,"pct":10.1},{"slug":"weensy","name":"Weensy","freq":13,"pct":9.4},{"slug":"netherbinder","name":"Netherbinder","freq":12,"pct":8.7},{"slug":"combustible_dragon","name":"Combustible Dragon","freq":11,"pct":8.0},{"slug":"wicked_witch","name":"Wicked Witch","freq":11,"pct":8.0},{"slug":"beanie_baby","name":"Beanie Baby","freq":10,"pct":7.2},{"slug":"sunflare_glider","name":"Sunflare Glider","freq":10,"pct":7.2},{"slug":"hephaestus","name":"Hephaestus","freq":8,"pct":5.8},{"slug":"mortakon","name":"Mortakon","freq":7,"pct":5.1}]},{"id":"candy","label":"Candy","color":"#e87d9e","cards":[{"slug":"cherry_topples","name":"Cherry Topples","freq":25,"pct":18.1},{"slug":"gummy_wyrm","name":"Gummy Wyrm","freq":19,"pct":13.8},{"slug":"kool_wip","name":"Kool Wip","freq":19,"pct":13.8},{"slug":"twilight_sprinkles","name":"Twilight Sprinkles","freq":19,"pct":13.8},{"slug":"lollipop_faerie","name":"Lollipop Faerie","freq":18,"pct":13.0},{"slug":"the_candy_cane_crook","name":"The Candy Cane Crook","freq":18,"pct":13.0},{"slug":"knight_of_the_holy_cane","name":"Knight of the Holy Cane","freq":17,"pct":12.3},{"slug":"pixie","name":"Pixie","freq":16,"pct":11.6},{"slug":"cotton_candy_dandy","name":"Cotton Candy Dandy","freq":14,"pct":10.1},{"slug":"gingerbread_witch","name":"Gingerbread Witch","freq":14,"pct":10.1},{"slug":"jaws","name":"Jaws","freq":13,"pct":9.4},{"slug":"the_sour_patch_kid","name":"The Sour Patch Kid","freq":13,"pct":9.4},{"slug":"frosting_dragon","name":"Frosting Dragon","freq":12,"pct":8.7},{"slug":"licorice","name":"Licorice","freq":12,"pct":8.7},{"slug":"doopity_doo","name":"Doopity Doo","freq":11,"pct":8.0},{"slug":"the_three_chef_keteers","name":"The Three Chef-Keteers","freq":11,"pct":8.0},{"slug":"viscount_chocolat","name":"Viscount Chocolat","freq":11,"pct":8.0},{"slug":"chubby_cheep","name":"Chubby Cheep","freq":10,"pct":7.2},{"slug":"keeb","name":"Keeb","freq":9,"pct":6.5},{"slug":"jelly_ton","name":"Jelly-ton","freq":7,"pct":5.1},{"slug":"lemonhead","name":"Lemonhead","freq":7,"pct":5.1},{"slug":"miss_muffet","name":"Miss Muffet","freq":7,"pct":5.1},{"slug":"candy_claws","name":"Candy Claws","freq":6,"pct":4.3},{"slug":"caramel","name":"Caramel","freq":6,"pct":4.3},{"slug":"candy_apple_tree","name":"Candy Apple Tree","freq":6,"pct":4.3},{"slug":"catatouille","name":"Catatouille","freq":6,"pct":4.3}]},{"id":"mage","label":"Mage","color":"#9e6ec8","cards":[{"slug":"chaos","name":"Chaos","freq":26,"pct":18.8},{"slug":"calypso","name":"Calypso","freq":17,"pct":12.3},{"slug":"mirror_mage","name":"Mirror Mage","freq":16,"pct":11.6},{"slug":"nightshade","name":"Nightshade","freq":11,"pct":8.0},{"slug":"plunder_penny","name":"Plunder Penny","freq":11,"pct":8.0},{"slug":"elm_minster","name":"Elm Minster","freq":9,"pct":6.5},{"slug":"fae_familiar","name":"Fae Familiar","freq":9,"pct":6.5},{"slug":"morgan_le_fae","name":"Morgan Le Fae","freq":9,"pct":6.5},{"slug":"the_fates","name":"The Fates","freq":9,"pct":6.5},{"slug":"prospero","name":"Prospero","freq":8,"pct":5.8},{"slug":"genie_of_the_lamp","name":"Genie of the Lamp","freq":6,"pct":4.3},{"slug":"ogre_magi","name":"Ogre Magi","freq":6,"pct":4.3}]},{"id":"pirates","label":"Pirates / Hunt","color":"#6e9ec8","cards":[{"slug":"wink","name":"Wink","freq":19,"pct":13.8},{"slug":"shanty","name":"Shanty","freq":16,"pct":11.6},{"slug":"pirate_prince","name":"Pirate Prince","freq":12,"pct":8.7},{"slug":"blackbeard","name":"Blackbeard","freq":11,"pct":8.0},{"slug":"glory_seeker","name":"Glory Seeker","freq":11,"pct":8.0},{"slug":"innkeeper","name":"Innkeeper","freq":11,"pct":8.0},{"slug":"sailor_moonshine","name":"Sailor Moonshine","freq":10,"pct":7.2},{"slug":"hercules","name":"Hercules","freq":9,"pct":6.5},{"slug":"pirate_king","name":"Pirate King","freq":8,"pct":5.8},{"slug":"sinbad","name":"Sinbad","freq":8,"pct":5.8},{"slug":"jelly_roger","name":"Jelly Roger","freq":6,"pct":4.3},{"slug":"barbosa","name":"Barbosa","freq":6,"pct":4.3}]},{"id":"animals","label":"Animals","color":"#6ec89e","cards":[{"slug":"snapping_hydra","name":"Snapping Hydra","freq":15,"pct":10.9},{"slug":"toto","name":"Toto","freq":12,"pct":8.7},{"slug":"tsarmina_the_tyrant","name":"Tsarmina, the Tyrant","freq":11,"pct":8.0},{"slug":"pretty_patissier","name":"Pretty Patissier","freq":9,"pct":6.5},{"slug":"moonshadow","name":"Moonshadow","freq":6,"pct":4.3},{"slug":"frog_prince","name":"Frog Prince","freq":5,"pct":3.6},{"slug":"monstro","name":"Monstro","freq":5,"pct":3.6},{"slug":"pied_piper","name":"Pied Piper","freq":5,"pct":3.6},{"slug":"the_giving_tree","name":"The Giving Tree","freq":5,"pct":3.6}]},{"id":"fringe","label":"Other / Fringe","color":"#5a5d6a","cards":[{"slug":"daedalus","name":"Daedalus","freq":11,"pct":8.0},{"slug":"friendly_spirit","name":"Friendly Spirit","freq":9,"pct":6.5},{"slug":"don_quixote","name":"Don Quixote","freq":7,"pct":5.1},{"slug":"faerie_queen","name":"Faerie Queen","freq":7,"pct":5.1},{"slug":"faerie_godfather","name":"Faerie Godfather","freq":6,"pct":4.3},{"slug":"toadie","name":"Toadie","freq":6,"pct":4.3},{"slug":"dastardly_spirit","name":"Dastardly Spirit","freq":5,"pct":3.6}]}],"captains":[{"slug":"legend_of_loxley","name":"Legend of Loxley","n":8,"signature":[{"card":"Barbosa","lift":8.6,"freq":3,"n":8},{"card":"Gulliver","lift":8.6,"freq":1,"n":8},{"card":"Anubis","lift":5.8,"freq":1,"n":8},{"card":"Caramel","lift":5.8,"freq":2,"n":8},{"card":"Oracle of Fortunes","lift":5.4,"freq":5,"n":8},{"card":"Sailor Moonshine","lift":5.2,"freq":3,"n":8},{"card":"Netherbinder","lift":4.3,"freq":3,"n":8},{"card":"Thunder of Dragons","lift":4.3,"freq":4,"n":8}],"best12":[{"card":"Maverick & Icewing","freq":7,"n":8,"pct":88.0},{"card":"Wormscale Tinkerer","freq":7,"n":8,"pct":88.0},{"card":"Oracle of Fortunes","freq":5,"n":8,"pct":62.0},{"card":"Aladdin","freq":4,"n":8,"pct":50.0},{"card":"Mr. Fox","freq":4,"n":8,"pct":50.0},{"card":"Rollo","freq":4,"n":8,"pct":50.0},{"card":"Thunder of Dragons","freq":4,"n":8,"pct":50.0},{"card":"Barbosa","freq":3,"n":8,"pct":38.0},{"card":"Mech-a-Man","freq":3,"n":8,"pct":38.0},{"card":"Netherbinder","freq":3,"n":8,"pct":38.0},{"card":"Sailor Moonshine","freq":3,"n":8,"pct":38.0},{"card":"Sir Francis Drake","freq":3,"n":8,"pct":38.0}]},{"slug":"trash_panda","name":"Trash Panda","n":8,"signature":[{"card":"Sabrina","lift":8.6,"freq":1,"n":8},{"card":"Beanie Baby","lift":5.2,"freq":3,"n":8},{"card":"Mimic","lift":4.3,"freq":1,"n":8},{"card":"Scale-a-tor","lift":3.7,"freq":3,"n":8},{"card":"Thunder of Dragons","lift":3.2,"freq":3,"n":8},{"card":"Combustible Dragon","lift":3.1,"freq":2,"n":8},{"card":"Smug","lift":3.1,"freq":4,"n":8},{"card":"Toadie","lift":2.9,"freq":1,"n":8}],"best12":[{"card":"Maverick & Icewing","freq":8,"n":8,"pct":100.0},{"card":"Wormscale Tinkerer","freq":8,"n":8,"pct":100.0},{"card":"Aladdin","freq":6,"n":8,"pct":75.0},{"card":"The Burninator","freq":6,"n":8,"pct":75.0},{"card":"Miseria","freq":5,"n":8,"pct":62.0},{"card":"Rollo","freq":5,"n":8,"pct":62.0},{"card":"Lance A Little","freq":4,"n":8,"pct":50.0},{"card":"Mr. Fox","freq":4,"n":8,"pct":50.0},{"card":"Sir Francis Drake","freq":4,"n":8,"pct":50.0},{"card":"Smug","freq":4,"n":8,"pct":50.0},{"card":"Beanie Baby","freq":3,"n":8,"pct":38.0},{"card":"Crystal","freq":3,"n":8,"pct":38.0}]},{"slug":"jay_sparrow","name":"Jay Sparrow","n":7,"signature":[{"card":"Hercules","lift":11.0,"freq":5,"n":7},{"card":"Blackbeard","lift":10.8,"freq":6,"n":7},{"card":"Jelly Roger","lift":9.9,"freq":3,"n":7},{"card":"Innkeeper","lift":9.0,"freq":5,"n":7},{"card":"Plunder Penny","lift":7.2,"freq":4,"n":7},{"card":"Barbosa","lift":6.6,"freq":2,"n":7},{"card":"Shanty","lift":6.2,"freq":5,"n":7},{"card":"Friendly Spirit","lift":4.4,"freq":2,"n":7}],"best12":[{"card":"Blackbeard","freq":6,"n":7,"pct":86.0},{"card":"Sir Francis Drake","freq":6,"n":7,"pct":86.0},{"card":"Hercules","freq":5,"n":7,"pct":71.0},{"card":"Innkeeper","freq":5,"n":7,"pct":71.0},{"card":"Shanty","freq":5,"n":7,"pct":71.0},{"card":"Aladdin","freq":4,"n":7,"pct":57.0},{"card":"Mr. Fox","freq":4,"n":7,"pct":57.0},{"card":"Plunder Penny","freq":4,"n":7,"pct":57.0},{"card":"The Huntsman","freq":4,"n":7,"pct":57.0},{"card":"Wink","freq":4,"n":7,"pct":57.0},{"card":"Calypso","freq":3,"n":7,"pct":43.0},{"card":"Jelly Roger","freq":3,"n":7,"pct":43.0}]},{"slug":"dorothy","name":"Dorothy","n":7,"signature":[{"card":"Mephisto","lift":9.9,"freq":1,"n":7},{"card":"Scale-a-tor","lift":5.6,"freq":4,"n":7},{"card":"Guinevere","lift":5.4,"freq":6,"n":7},{"card":"Tsarmina, the Tyrant","lift":5.4,"freq":3,"n":7},{"card":"Hephaestus","lift":4.9,"freq":2,"n":7},{"card":"Kid Icarus","lift":4.9,"freq":1,"n":7},{"card":"The Giving Tree","lift":3.9,"freq":1,"n":7},{"card":"Pirate Prince","lift":3.3,"freq":2,"n":7}],"best12":[{"card":"Maverick & Icewing","freq":7,"n":7,"pct":100.0},{"card":"Guinevere","freq":6,"n":7,"pct":86.0},{"card":"Wormscale Tinkerer","freq":6,"n":7,"pct":86.0},{"card":"Mr. Fox","freq":4,"n":7,"pct":57.0},{"card":"Rollo","freq":4,"n":7,"pct":57.0},{"card":"Scale-a-tor","freq":4,"n":7,"pct":57.0},{"card":"Mechanical Dragon","freq":3,"n":7,"pct":43.0},{"card":"Miseria","freq":3,"n":7,"pct":43.0},{"card":"The Burninator","freq":3,"n":7,"pct":43.0},{"card":"Tsarmina, the Tyrant","freq":3,"n":7,"pct":43.0},{"card":"Ace of Hearts","freq":2,"n":7,"pct":29.0},{"card":"Crystal","freq":2,"n":7,"pct":29.0}]},{"slug":"wizard_headmaster","name":"Wizard Headmaster","n":6,"signature":[{"card":"Wormtongue","lift":23.0,"freq":1,"n":6},{"card":"Rudolph the Red","lift":17.2,"freq":3,"n":6},{"card":"Moppet","lift":15.3,"freq":2,"n":6},{"card":"Prospero","lift":14.4,"freq":5,"n":6},{"card":"Nightshade","lift":10.5,"freq":5,"n":6},{"card":"Elm Minster","lift":10.2,"freq":4,"n":6},{"card":"Morgan Le Fae","lift":10.2,"freq":4,"n":6},{"card":"Fae Familiar","lift":7.7,"freq":3,"n":6}],"best12":[{"card":"Chaos","freq":6,"n":6,"pct":100.0},{"card":"Mirror Mage","freq":5,"n":6,"pct":83.0},{"card":"Nightshade","freq":5,"n":6,"pct":83.0},{"card":"Prospero","freq":5,"n":6,"pct":83.0},{"card":"Calypso","freq":4,"n":6,"pct":67.0},{"card":"Elm Minster","freq":4,"n":6,"pct":67.0},{"card":"Morgan Le Fae","freq":4,"n":6,"pct":67.0},{"card":"Aladdin","freq":3,"n":6,"pct":50.0},{"card":"Fae Familiar","freq":3,"n":6,"pct":50.0},{"card":"Rudolph the Red","freq":3,"n":6,"pct":50.0},{"card":"Flopsy","freq":2,"n":6,"pct":33.0},{"card":"Moppet","freq":2,"n":6,"pct":33.0}]},{"slug":"double_dealer","name":"Double Dealer","n":6,"signature":[{"card":"Caramel","lift":11.5,"freq":3,"n":6},{"card":"Life Saver","lift":11.5,"freq":1,"n":6},{"card":"Dastardly Spirit","lift":9.2,"freq":2,"n":6},{"card":"Friendly Spirit","lift":7.7,"freq":3,"n":6},{"card":"Weensy","lift":7.1,"freq":4,"n":6},{"card":"The Three Chef-Keteers","lift":6.3,"freq":3,"n":6},{"card":"Nightshade","lift":4.2,"freq":2,"n":6},{"card":"Faerie Godfather","lift":3.8,"freq":1,"n":6}],"best12":[{"card":"Pisces","freq":5,"n":6,"pct":83.0},{"card":"Cherry Topples","freq":4,"n":6,"pct":67.0},{"card":"Weensy","freq":4,"n":6,"pct":67.0},{"card":"Wormscale Tinkerer","freq":4,"n":6,"pct":67.0},{"card":"Caramel","freq":3,"n":6,"pct":50.0},{"card":"Chaos","freq":3,"n":6,"pct":50.0},{"card":"Friendly Spirit","freq":3,"n":6,"pct":50.0},{"card":"The Burninator","freq":3,"n":6,"pct":50.0},{"card":"The Three Chef-Keteers","freq":3,"n":6,"pct":50.0},{"card":"Wink","freq":3,"n":6,"pct":50.0},{"card":"Dastardly Spirit","freq":2,"n":6,"pct":33.0},{"card":"Flopsy","freq":2,"n":6,"pct":33.0}]},{"slug":"nathaniel_drake","name":"Nathaniel Drake","n":6,"signature":[{"card":"Toto","lift":9.6,"freq":5,"n":6},{"card":"Pretty Patissier","lift":7.7,"freq":3,"n":6},{"card":"Lance A Little","lift":4.3,"freq":6,"n":6},{"card":"Knight of the Holy Cane","lift":4.1,"freq":3,"n":6},{"card":"Barbosa","lift":3.8,"freq":1,"n":6},{"card":"Candy Apple Tree","lift":3.8,"freq":1,"n":6},{"card":"Catatouille","lift":3.8,"freq":1,"n":6},{"card":"Netherbinder","lift":3.8,"freq":2,"n":6}],"best12":[{"card":"Lance A Little","freq":6,"n":6,"pct":100.0},{"card":"Miseria","freq":6,"n":6,"pct":100.0},{"card":"Toto","freq":5,"n":6,"pct":83.0},{"card":"Wormscale Tinkerer","freq":5,"n":6,"pct":83.0},{"card":"Maverick & Icewing","freq":4,"n":6,"pct":67.0},{"card":"Rollo","freq":4,"n":6,"pct":67.0},{"card":"Flopsy","freq":3,"n":6,"pct":50.0},{"card":"Knight of the Holy Cane","freq":3,"n":6,"pct":50.0},{"card":"Mr. Fox","freq":3,"n":6,"pct":50.0},{"card":"Pretty Patissier","freq":3,"n":6,"pct":50.0},{"card":"The Burninator","freq":3,"n":6,"pct":50.0},{"card":"The Butcher","freq":3,"n":6,"pct":50.0}]},{"slug":"lightning_thief","name":"Lightning Thief","n":5,"signature":[{"card":"Sabrina","lift":13.8,"freq":1,"n":5},{"card":"Mimic","lift":6.9,"freq":1,"n":5},{"card":"The Fates","lift":6.1,"freq":2,"n":5},{"card":"Mechanical Dragon","lift":4.9,"freq":5,"n":5},{"card":"Genie of the Lamp","lift":4.6,"freq":1,"n":5},{"card":"Prospero","lift":3.4,"freq":1,"n":5},{"card":"Sinbad","lift":3.4,"freq":1,"n":5},{"card":"Thunder of Dragons","lift":3.4,"freq":2,"n":5}],"best12":[{"card":"Maverick & Icewing","freq":5,"n":5,"pct":100.0},{"card":"Mechanical Dragon","freq":5,"n":5,"pct":100.0},{"card":"The Burninator","freq":5,"n":5,"pct":100.0},{"card":"Wormscale Tinkerer","freq":5,"n":5,"pct":100.0},{"card":"Ace of Hearts","freq":3,"n":5,"pct":60.0},{"card":"Miseria","freq":3,"n":5,"pct":60.0},{"card":"Pisces","freq":3,"n":5,"pct":60.0},{"card":"Mr. Fox","freq":2,"n":5,"pct":40.0},{"card":"Rollo","freq":2,"n":5,"pct":40.0},{"card":"Sir Francis Drake","freq":2,"n":5,"pct":40.0},{"card":"The Fates","freq":2,"n":5,"pct":40.0},{"card":"Thunder of Dragons","freq":2,"n":5,"pct":40.0}]},{"slug":"gloria_clementine","name":"Gloria Clementine","n":5,"signature":[{"card":"The Huntsman","lift":6.6,"freq":5,"n":5},{"card":"Weensy","lift":4.2,"freq":2,"n":5},{"card":"Oracle of Fortunes","lift":3.4,"freq":2,"n":5},{"card":"Ace of Hearts","lift":3.0,"freq":4,"n":5},{"card":"Combustible Dragon","lift":2.5,"freq":1,"n":5},{"card":"Doopity Doo","lift":2.5,"freq":1,"n":5},{"card":"Guinevere","lift":2.5,"freq":2,"n":5},{"card":"Smug","lift":2.5,"freq":2,"n":5}],"best12":[{"card":"Miseria","freq":5,"n":5,"pct":100.0},{"card":"Mr. Fox","freq":5,"n":5,"pct":100.0},{"card":"The Huntsman","freq":5,"n":5,"pct":100.0},{"card":"Wormscale Tinkerer","freq":5,"n":5,"pct":100.0},{"card":"Ace of Hearts","freq":4,"n":5,"pct":80.0},{"card":"Rollo","freq":4,"n":5,"pct":80.0},{"card":"The Burninator","freq":4,"n":5,"pct":80.0},{"card":"Maverick & Icewing","freq":3,"n":5,"pct":60.0},{"card":"Guinevere","freq":2,"n":5,"pct":40.0},{"card":"Lance A Little","freq":2,"n":5,"pct":40.0},{"card":"Oracle of Fortunes","freq":2,"n":5,"pct":40.0},{"card":"Pisces","freq":2,"n":5,"pct":40.0}]},{"slug":"sorcerous_serena","name":"Sorcerous Serena","n":4,"signature":[{"card":"Life Saver","lift":17.2,"freq":1,"n":4},{"card":"Candy Claws","lift":11.5,"freq":2,"n":4},{"card":"Genie of the Lamp","lift":11.5,"freq":2,"n":4},{"card":"The Fates","lift":7.7,"freq":2,"n":4},{"card":"Doopity Doo","lift":6.3,"freq":2,"n":4},{"card":"Viscount Chocolat","lift":6.3,"freq":2,"n":4},{"card":"Faerie Godfather","lift":5.8,"freq":1,"n":4},{"card":"Cotton Candy Dandy","lift":4.9,"freq":2,"n":4}],"best12":[{"card":"Cherry Topples","freq":3,"n":4,"pct":75.0},{"card":"Calypso","freq":2,"n":4,"pct":50.0},{"card":"Candy Claws","freq":2,"n":4,"pct":50.0},{"card":"Chaos","freq":2,"n":4,"pct":50.0},{"card":"Cotton Candy Dandy","freq":2,"n":4,"pct":50.0},{"card":"Crystal","freq":2,"n":4,"pct":50.0},{"card":"Doopity Doo","freq":2,"n":4,"pct":50.0},{"card":"Genie of the Lamp","freq":2,"n":4,"pct":50.0},{"card":"Kool Wip","freq":2,"n":4,"pct":50.0},{"card":"Lollipop Faerie","freq":2,"n":4,"pct":50.0},{"card":"Mirror Mage","freq":2,"n":4,"pct":50.0},{"card":"Pixie","freq":2,"n":4,"pct":50.0}]},{"slug":"the_candyman","name":"The Candyman","n":4,"signature":[{"card":"The Blue Faerie","lift":34.5,"freq":1,"n":4},{"card":"Barrel of Monkeys","lift":17.2,"freq":1,"n":4},{"card":"Jumping Jelly Beans","lift":17.2,"freq":1,"n":4},{"card":"Jelly-ton","lift":14.8,"freq":3,"n":4},{"card":"The Sour Patch Kid","lift":10.6,"freq":4,"n":4},{"card":"Doopity Doo","lift":9.4,"freq":3,"n":4},{"card":"Keeb","lift":7.7,"freq":2,"n":4},{"card":"Gingerbread Witch","lift":7.4,"freq":3,"n":4}],"best12":[{"card":"The Sour Patch Kid","freq":4,"n":4,"pct":100.0},{"card":"Cherry Topples","freq":3,"n":4,"pct":75.0},{"card":"Doopity Doo","freq":3,"n":4,"pct":75.0},{"card":"Gingerbread Witch","freq":3,"n":4,"pct":75.0},{"card":"Jelly-ton","freq":3,"n":4,"pct":75.0},{"card":"Kool Wip","freq":3,"n":4,"pct":75.0},{"card":"Lollipop Faerie","freq":3,"n":4,"pct":75.0},{"card":"The Candy Cane Crook","freq":3,"n":4,"pct":75.0},{"card":"Cotton Candy Dandy","freq":2,"n":4,"pct":50.0},{"card":"Gummy Wyrm","freq":2,"n":4,"pct":50.0},{"card":"Keeb","freq":2,"n":4,"pct":50.0},{"card":"Knight of the Holy Cane","freq":2,"n":4,"pct":50.0}]},{"slug":"frowny_the_clown","name":"Frowny the Clown","n":4,"signature":[{"card":"Ghoulade Man","lift":34.5,"freq":1,"n":4},{"card":"Jelly-ton","lift":9.9,"freq":2,"n":4},{"card":"Pixie","lift":6.5,"freq":3,"n":4},{"card":"The Three Chef-Keteers","lift":6.3,"freq":2,"n":4},{"card":"Candy Apple Tree","lift":5.8,"freq":1,"n":4},{"card":"Catatouille","lift":5.8,"freq":1,"n":4},{"card":"Licorice","lift":5.8,"freq":2,"n":4},{"card":"Lollipop Faerie","lift":5.8,"freq":3,"n":4}],"best12":[{"card":"Cherry Topples","freq":3,"n":4,"pct":75.0},{"card":"Lollipop Faerie","freq":3,"n":4,"pct":75.0},{"card":"Pixie","freq":3,"n":4,"pct":75.0},{"card":"Wormscale Tinkerer","freq":3,"n":4,"pct":75.0},{"card":"Aladdin","freq":2,"n":4,"pct":50.0},{"card":"Jelly-ton","freq":2,"n":4,"pct":50.0},{"card":"Licorice","freq":2,"n":4,"pct":50.0},{"card":"Maverick & Icewing","freq":2,"n":4,"pct":50.0},{"card":"Miseria","freq":2,"n":4,"pct":50.0},{"card":"Mr. Fox","freq":2,"n":4,"pct":50.0},{"card":"The Sour Patch Kid","freq":2,"n":4,"pct":50.0},{"card":"The Three Chef-Keteers","freq":2,"n":4,"pct":50.0}]},{"slug":"sweet_tooth","name":"Sweet Tooth","n":4,"signature":[{"card":"Chubby Bunny","lift":34.5,"freq":2,"n":4},{"card":"Jumping Jelly Beans","lift":17.2,"freq":1,"n":4},{"card":"Cotton Candy Dandy","lift":9.9,"freq":4,"n":4},{"card":"Lemonhead","lift":9.9,"freq":2,"n":4},{"card":"The Three Chef-Keteers","lift":9.4,"freq":3,"n":4},{"card":"The Sour Patch Kid","lift":8.0,"freq":3,"n":4},{"card":"Gingerbread Witch","lift":7.4,"freq":3,"n":4},{"card":"Lollipop Faerie","lift":5.8,"freq":3,"n":4}],"best12":[{"card":"Cotton Candy Dandy","freq":4,"n":4,"pct":100.0},{"card":"Gingerbread Witch","freq":3,"n":4,"pct":75.0},{"card":"Kool Wip","freq":3,"n":4,"pct":75.0},{"card":"Lollipop Faerie","freq":3,"n":4,"pct":75.0},{"card":"The Sour Patch Kid","freq":3,"n":4,"pct":75.0},{"card":"The Three Chef-Keteers","freq":3,"n":4,"pct":75.0},{"card":"Cherry Topples","freq":2,"n":4,"pct":50.0},{"card":"Chubby Bunny","freq":2,"n":4,"pct":50.0},{"card":"Gummy Wyrm","freq":2,"n":4,"pct":50.0},{"card":"Knight of the Holy Cane","freq":2,"n":4,"pct":50.0},{"card":"Lemonhead","freq":2,"n":4,"pct":50.0},{"card":"Crystal","freq":1,"n":4,"pct":25.0}]},{"slug":"candy_pandy","name":"Candy Pandy","n":4,"signature":[{"card":"Jaws","lift":8.0,"freq":3,"n":4},{"card":"Keeb","lift":7.7,"freq":2,"n":4},{"card":"Chubby Cheep","lift":6.9,"freq":2,"n":4},{"card":"Doopity Doo","lift":6.3,"freq":2,"n":4},{"card":"Candy Claws","lift":5.8,"freq":1,"n":4},{"card":"Caramel","lift":5.8,"freq":1,"n":4},{"card":"Frosting Dragon","lift":5.8,"freq":2,"n":4},{"card":"The Candy Cane Crook","lift":5.8,"freq":3,"n":4}],"best12":[{"card":"Lance A Little","freq":4,"n":4,"pct":100.0},{"card":"Miseria","freq":4,"n":4,"pct":100.0},{"card":"Jaws","freq":3,"n":4,"pct":75.0},{"card":"Kool Wip","freq":3,"n":4,"pct":75.0},{"card":"The Candy Cane Crook","freq":3,"n":4,"pct":75.0},{"card":"Twilight Sprinkles","freq":3,"n":4,"pct":75.0},{"card":"Cherry Topples","freq":2,"n":4,"pct":50.0},{"card":"Chubby Cheep","freq":2,"n":4,"pct":50.0},{"card":"Doopity Doo","freq":2,"n":4,"pct":50.0},{"card":"Frosting Dragon","freq":2,"n":4,"pct":50.0},{"card":"Keeb","freq":2,"n":4,"pct":50.0},{"card":"Knight of the Holy Cane","freq":2,"n":4,"pct":50.0}]},{"slug":"this_little_piggie","name":"This Little Piggie","n":4,"signature":[{"card":"The Rat King","lift":11.5,"freq":1,"n":4},{"card":"Moonshadow","lift":5.8,"freq":1,"n":4},{"card":"Don Quixote","lift":4.9,"freq":1,"n":4},{"card":"Guinevere","lift":4.7,"freq":3,"n":4},{"card":"Pisces","lift":4.5,"freq":4,"n":4},{"card":"Hephaestus","lift":4.3,"freq":1,"n":4},{"card":"Sinbad","lift":4.3,"freq":1,"n":4},{"card":"Blackbeard","lift":3.1,"freq":1,"n":4}],"best12":[{"card":"Pisces","freq":4,"n":4,"pct":100.0},{"card":"Ace of Hearts","freq":3,"n":4,"pct":75.0},{"card":"Guinevere","freq":3,"n":4,"pct":75.0},{"card":"Mr. Fox","freq":3,"n":4,"pct":75.0},{"card":"Rollo","freq":3,"n":4,"pct":75.0},{"card":"The Burninator","freq":3,"n":4,"pct":75.0},{"card":"Wormscale Tinkerer","freq":3,"n":4,"pct":75.0},{"card":"Aladdin","freq":2,"n":4,"pct":50.0},{"card":"Maverick & Icewing","freq":2,"n":4,"pct":50.0},{"card":"Miseria","freq":2,"n":4,"pct":50.0},{"card":"Smug","freq":2,"n":4,"pct":50.0},{"card":"The Butcher","freq":2,"n":4,"pct":50.0}]},{"slug":"mira","name":"Mira","n":4,"signature":[{"card":"Fun Gal","lift":34.5,"freq":2,"n":4},{"card":"Leapfrog","lift":34.5,"freq":2,"n":4},{"card":"Faerie Godfather","lift":17.2,"freq":3,"n":4},{"card":"Faerie Queen","lift":14.8,"freq":3,"n":4},{"card":"Dastardly Spirit","lift":13.8,"freq":2,"n":4},{"card":"Toadie","lift":11.5,"freq":2,"n":4},{"card":"Don Quixote","lift":9.9,"freq":2,"n":4},{"card":"Rudolph the Red","lift":8.6,"freq":1,"n":4}],"best12":[{"card":"Shanty","freq":4,"n":4,"pct":100.0},{"card":"Faerie Godfather","freq":3,"n":4,"pct":75.0},{"card":"Faerie Queen","freq":3,"n":4,"pct":75.0},{"card":"Flopsy","freq":3,"n":4,"pct":75.0},{"card":"Calypso","freq":2,"n":4,"pct":50.0},{"card":"Dastardly Spirit","freq":2,"n":4,"pct":50.0},{"card":"Don Quixote","freq":2,"n":4,"pct":50.0},{"card":"Fae Familiar","freq":2,"n":4,"pct":50.0},{"card":"Friendly Spirit","freq":2,"n":4,"pct":50.0},{"card":"Fun Gal","freq":2,"n":4,"pct":50.0},{"card":"Leapfrog","freq":2,"n":4,"pct":50.0},{"card":"Morgan Le Fae","freq":2,"n":4,"pct":50.0}]},{"slug":"indiana_clones","name":"Indiana Clones","n":3,"signature":[{"card":"Kid Icarus","lift":11.5,"freq":1,"n":3},{"card":"Mysterio, the Great and Powerful","lift":11.5,"freq":1,"n":3},{"card":"Scale-a-tor","lift":6.6,"freq":2,"n":3},{"card":"Hephaestus","lift":5.8,"freq":1,"n":3},{"card":"Sinbad","lift":5.8,"freq":1,"n":3},{"card":"Thunder of Dragons","lift":5.8,"freq":2,"n":3},{"card":"Guinevere","lift":4.2,"freq":2,"n":3},{"card":"Smug","lift":4.2,"freq":2,"n":3}],"best12":[{"card":"Maverick & Icewing","freq":3,"n":3,"pct":100.0},{"card":"Wormscale Tinkerer","freq":3,"n":3,"pct":100.0},{"card":"Ace of Hearts","freq":2,"n":3,"pct":67.0},{"card":"Aladdin","freq":2,"n":3,"pct":67.0},{"card":"Guinevere","freq":2,"n":3,"pct":67.0},{"card":"Mr. Fox","freq":2,"n":3,"pct":67.0},{"card":"Pisces","freq":2,"n":3,"pct":67.0},{"card":"Scale-a-tor","freq":2,"n":3,"pct":67.0},{"card":"Sir Francis Drake","freq":2,"n":3,"pct":67.0},{"card":"Smug","freq":2,"n":3,"pct":67.0},{"card":"Thunder of Dragons","freq":2,"n":3,"pct":67.0},{"card":"Flopsy","freq":1,"n":3,"pct":33.0}]},{"slug":"silversmith","name":"Silversmith","n":3,"signature":[{"card":"Ogre Magi","lift":7.7,"freq":1,"n":3},{"card":"Mortakon","lift":6.6,"freq":1,"n":3},{"card":"The Fates","lift":5.1,"freq":1,"n":3},{"card":"Sunflare Glider","lift":4.6,"freq":1,"n":3},{"card":"Combustible Dragon","lift":4.2,"freq":1,"n":3},{"card":"Smug","lift":4.2,"freq":2,"n":3},{"card":"Wicked Witch","lift":4.2,"freq":1,"n":3},{"card":"Pirate Prince","lift":3.8,"freq":1,"n":3}],"best12":[{"card":"Maverick & Icewing","freq":3,"n":3,"pct":100.0},{"card":"Wormscale Tinkerer","freq":3,"n":3,"pct":100.0},{"card":"Ace of Hearts","freq":2,"n":3,"pct":67.0},{"card":"Mech-a-Man","freq":2,"n":3,"pct":67.0},{"card":"Mr. Fox","freq":2,"n":3,"pct":67.0},{"card":"Rollo","freq":2,"n":3,"pct":67.0},{"card":"Smug","freq":2,"n":3,"pct":67.0},{"card":"The Burninator","freq":2,"n":3,"pct":67.0},{"card":"Aladdin","freq":1,"n":3,"pct":33.0},{"card":"Calypso","freq":1,"n":3,"pct":33.0},{"card":"Chaos","freq":1,"n":3,"pct":33.0},{"card":"Combustible Dragon","freq":1,"n":3,"pct":33.0}]},{"slug":"charlie_pots","name":"Charlie Pots","n":3,"signature":[{"card":"Catatouille","lift":15.3,"freq":2,"n":3},{"card":"Miss Muffet","lift":13.1,"freq":2,"n":3},{"card":"Fae Familiar","lift":10.2,"freq":2,"n":3},{"card":"Pixie","lift":8.6,"freq":3,"n":3},{"card":"Daedalus","lift":8.4,"freq":2,"n":3},{"card":"Glory Seeker","lift":8.4,"freq":2,"n":3},{"card":"The Three Chef-Keteers","lift":8.4,"freq":2,"n":3},{"card":"Jaws","lift":7.1,"freq":2,"n":3}],"best12":[{"card":"Pixie","freq":3,"n":3,"pct":100.0},{"card":"Wormscale Tinkerer","freq":3,"n":3,"pct":100.0},{"card":"Aladdin","freq":2,"n":3,"pct":67.0},{"card":"Catatouille","freq":2,"n":3,"pct":67.0},{"card":"Chaos","freq":2,"n":3,"pct":67.0},{"card":"Daedalus","freq":2,"n":3,"pct":67.0},{"card":"Fae Familiar","freq":2,"n":3,"pct":67.0},{"card":"Glory Seeker","freq":2,"n":3,"pct":67.0},{"card":"Jaws","freq":2,"n":3,"pct":67.0},{"card":"Knight of the Holy Cane","freq":2,"n":3,"pct":67.0},{"card":"Miss Muffet","freq":2,"n":3,"pct":67.0},{"card":"The Three Chef-Keteers","freq":2,"n":3,"pct":67.0}]},{"slug":"lady_of_the_lake","name":"Lady of the Lake","n":3,"signature":[{"card":"Faerie Queen","lift":6.6,"freq":1,"n":3},{"card":"Hephaestus","lift":5.8,"freq":1,"n":3},{"card":"Oracle of Fortunes","lift":5.8,"freq":2,"n":3},{"card":"Crystal","lift":4.8,"freq":2,"n":3},{"card":"Sunflare Glider","lift":4.6,"freq":1,"n":3},{"card":"The Huntsman","lift":4.4,"freq":2,"n":3},{"card":"Frosting Dragon","lift":3.8,"freq":1,"n":3},{"card":"Weensy","lift":3.5,"freq":1,"n":3}],"best12":[{"card":"Maverick & Icewing","freq":3,"n":3,"pct":100.0},{"card":"Miseria","freq":3,"n":3,"pct":100.0},{"card":"Mr. Fox","freq":3,"n":3,"pct":100.0},{"card":"Rollo","freq":3,"n":3,"pct":100.0},{"card":"Wormscale Tinkerer","freq":3,"n":3,"pct":100.0},{"card":"Aladdin","freq":2,"n":3,"pct":67.0},{"card":"Crystal","freq":2,"n":3,"pct":67.0},{"card":"Lance A Little","freq":2,"n":3,"pct":67.0},{"card":"Mechanical Dragon","freq":2,"n":3,"pct":67.0},{"card":"Oracle of Fortunes","freq":2,"n":3,"pct":67.0},{"card":"The Huntsman","freq":2,"n":3,"pct":67.0},{"card":"Faerie Queen","freq":1,"n":3,"pct":33.0}]},{"slug":"zheng_yi_sao","name":"Zheng Yi Sao","n":3,"signature":[{"card":"Weird Beard","lift":34.5,"freq":3,"n":3},{"card":"Jelly Roger","lift":23.0,"freq":3,"n":3},{"card":"Pirate King","lift":17.2,"freq":3,"n":3},{"card":"Sailor Moonshine","lift":13.8,"freq":3,"n":3},{"card":"Pirate Prince","lift":11.5,"freq":3,"n":3},{"card":"Shanty","lift":8.6,"freq":3,"n":3},{"card":"Calypso","lift":8.1,"freq":3,"n":3},{"card":"Ogre Magi","lift":7.7,"freq":1,"n":3}],"best12":[{"card":"Aladdin","freq":3,"n":3,"pct":100.0},{"card":"Calypso","freq":3,"n":3,"pct":100.0},{"card":"Jelly Roger","freq":3,"n":3,"pct":100.0},{"card":"Mech-a-Man","freq":3,"n":3,"pct":100.0},{"card":"Pirate King","freq":3,"n":3,"pct":100.0},{"card":"Pirate Prince","freq":3,"n":3,"pct":100.0},{"card":"Sailor Moonshine","freq":3,"n":3,"pct":100.0},{"card":"Shanty","freq":3,"n":3,"pct":100.0},{"card":"Sir Francis Drake","freq":3,"n":3,"pct":100.0},{"card":"Weird Beard","freq":3,"n":3,"pct":100.0},{"card":"Ace of Hearts","freq":1,"n":3,"pct":33.0},{"card":"Innkeeper","freq":1,"n":3,"pct":33.0}]}],"top_cards":[{"name":"Wormscale Tinkerer","freq":85,"pct":61.6},{"name":"Maverick & Icewing","freq":66,"pct":47.8},{"name":"Miseria","freq":59,"pct":42.8},{"name":"Mr. Fox","freq":59,"pct":42.8},{"name":"The Burninator","freq":53,"pct":38.4},{"name":"Rollo","freq":47,"pct":34.1},{"name":"Aladdin","freq":46,"pct":33.3},{"name":"Sir Francis Drake","freq":40,"pct":29.0},{"name":"Ace of Hearts","freq":37,"pct":26.8},{"name":"Lance A Little","freq":32,"pct":23.2},{"name":"Pisces","freq":31,"pct":22.5},{"name":"Flopsy","freq":29,"pct":21.0},{"name":"Mechanical Dragon","freq":28,"pct":20.3},{"name":"Chaos","freq":26,"pct":18.8},{"name":"Cherry Topples","freq":25,"pct":18.1},{"name":"Mech-a-Man","freq":25,"pct":18.1},{"name":"The Butcher","freq":25,"pct":18.1},{"name":"Guinevere","freq":22,"pct":15.9},{"name":"Smug","freq":22,"pct":15.9},{"name":"The Huntsman","freq":21,"pct":15.2},{"name":"Crystal","freq":19,"pct":13.8},{"name":"Gummy Wyrm","freq":19,"pct":13.8},{"name":"Kool Wip","freq":19,"pct":13.8},{"name":"Twilight Sprinkles","freq":19,"pct":13.8},{"name":"Wink","freq":19,"pct":13.8},{"name":"Lollipop Faerie","freq":18,"pct":13.0},{"name":"The Candy Cane Crook","freq":18,"pct":13.0},{"name":"Calypso","freq":17,"pct":12.3},{"name":"Knight of the Holy Cane","freq":17,"pct":12.3},{"name":"Mirror Mage","freq":16,"pct":11.6}]};
+
+function showSection(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  if (id === 'top-cards') animateBars();
+}
+
+// BAR CHART
+function renderBars() {
+  const c = document.getElementById('bar-chart-container');
+  const max = DATA.top_cards[0].pct;
+  c.innerHTML = DATA.top_cards.map(card => `
+    <div class="bar-row">
+      <div class="bar-name">${card.name}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0%" data-w="${card.pct/max*100}"></div></div>
+      <div class="bar-pct">${card.pct}%</div>
+    </div>`).join('');
+}
+function animateBars() {
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.bar-fill').forEach(el => { el.style.width = el.dataset.w + '%'; });
+  });
+}
+
+// CLUSTERS
+function renderClusters() {
+  const c = document.getElementById('clusters-container');
+  c.innerHTML = DATA.clusters.map(cl => {
+    const color = cl.color;
+    let inner = '';
+    if (cl.core) {
+      inner = `
+        <div class="subsection-label" style="color:${color}99">Core — high frequency</div>
+        <div class="pills">${cl.core.map(card => pill(card, color, 0.8)).join('')}</div>
+        <div class="subsection-label" style="color:${color}60;margin-top:14px">Situational — lower frequency</div>
+        <div class="pills">${cl.situational.map(card => pill(card, color, 0.35)).join('')}</div>`;
+    } else {
+      inner = `<div class="pills">${cl.cards.map(card => pill(card, color, 0.7)).join('')}</div>`;
+    }
+    return `
+      <div class="cluster-card">
+        <div class="cluster-top-bar" style="background:${color};opacity:0.75"></div>
+        <div class="cluster-header">
+          <span class="cluster-label" style="color:${color}">${cl.label}</span>
+          <span class="cluster-count">${(cl.core ? cl.core.length + cl.situational.length : cl.cards.length)} cards</span>
+        </div>
+        ${inner}
+      </div>`;
+  }).join('');
+}
+function pill(card, color, opacity) {
+  return `<div class="pill" style="border-color:${color}${Math.round(opacity*99).toString(16).padStart(2,'0')}">
+    <span>${card.name}</span><span class="pill-freq">${card.freq}</span>
+  </div>`;
+}
+
+// CAPTAINS
+function renderCaptains() {
+  const c = document.getElementById('captains-container');
+  c.innerHTML = DATA.captains.map((cap, i) => {
+    const warn = cap.n < 5;
+    const sigRows = cap.signature.map(tc => {
+      const cls = tc.lift >= 10 ? 'lift-hi' : tc.lift >= 5 ? 'lift-mid' : 'lift-lo';
+      return `<div class="lift-row">
+        <div class="lift-name">${tc.card}</div>
+        <div class="lift-freq">${tc.freq}/${tc.n}</div>
+        <div class="lift-badge ${cls}">${tc.lift}×</div>
+      </div>`;
+    }).join('');
+
+    const bestRows = cap.best12.map(tc => `
+      <div class="best-row">
+        <div class="best-name">${tc.card}</div>
+        <div class="best-track">
+          <div class="best-bar-wrap"><div class="best-bar-fill" style="width:${tc.pct}%"></div></div>
+          <div class="best-pct">${tc.pct}%</div>
+        </div>
+      </div>`).join('');
+
+    const uid = `cap-${i}`;
+    return `
+      <div class="captain-card">
+        <div class="captain-header">
+          <div class="captain-name">${cap.name}</div>
+          <div class="captain-n ${warn ? 'warn' : ''}">n=${cap.n}${warn ? ' ⚠' : ''}</div>
+        </div>
+        <div class="toggle-bar">
+          <button class="toggle-btn active" onclick="switchView('${uid}','sig',this)">Signature</button>
+          <button class="toggle-btn" onclick="switchView('${uid}','best',this)">Best 12</button>
+        </div>
+        <div class="view active" id="${uid}-sig"><div class="lift-rows">${sigRows}</div></div>
+        <div class="view" id="${uid}-best"><div class="best-rows">${bestRows}</div></div>
+      </div>`;
+  }).join('');
+}
+
+function switchView(uid, view, btn) {
+  const card = btn.closest('.captain-card');
+  card.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+  card.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(`${uid}-${view}`).classList.add('active');
+}
+
+// INIT
+renderBars();
+renderClusters();
+renderCaptains();
+setTimeout(animateBars, 80);
+</script>
+</body>
+</html>
