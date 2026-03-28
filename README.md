@@ -2,78 +2,127 @@
 
 Meta analysis reports for "Once Upon a Galaxy" tournaments
 
-## Structure
-
-- **`etl/`**: Python scripts that parse event HTML into JSON reports
-- **`docs/`**: Static HTML reports (served by GitHub Pages)
-- **`Makefile`**: Root-level build automation
-
 ## Quick Start
 
 ```bash
 # Install Python dependencies
 make install
 
-# Process event data and generate report
-make report HTML=etl/context/2026-02.html EVENT_ID=2026-02
+# Download event HTML from galaxy.fun and save to etl/context/
+# Then generate full report (all 5 steps: parse → analyze → render → copy → update)
+make report HTML_FILE=context/2026-03.html EVENT_ID=2026-03
+```
+
+## Architecture
+
+Galaxy Stats generates standalone HTML reports through a **3-stage ETL pipeline**:
+
+```mermaid
+flowchart LR
+    A[galaxy.fun Event HTML] --> B[Stage 1: Parse<br/>extract players, decks]
+    B --> C[Stage 2: Analyze<br/>clustering, lift, best12]
+    C --> D[Stage 3: Render<br/>generate HTML report]
+    D --> E[Stage 4: Copy<br/>to docs/ folder]
+    E --> F[Stage 5: Update<br/>redirect to latest]
+    F --> G[GitHub Pages]
+```
+
+### Directory Structure
+
+```
+galaxy-stats/
+├── etl/                    # Python ETL pipeline
+│   ├── scripts/
+│   │   ├── parse_event.py      # Step 1: Parse HTML → JSON
+│   │   ├── analyze_event.py    # Step 2: Analyze JSON (clustering, lift, best12)
+│   │   └── render_report.py    # Step 3: Render HTML from analysis
+│   ├── context/               # Source HTML files from galaxy.fun
+│   └── dist/                  # Intermediate analysis + final report
+├── docs/                   # Static HTML reports (served by GitHub Pages)
+└── Makefile               # Build automation
 ```
 
 ## Workflow
 
-1. **Parse event HTML** → Generates report HTML:
-   ```bash
-   make parse-event HTML=etl/context/2026-02.html EVENT_ID=2026-02
-   ```
-   Output: `etl/dist/events/2026-02-report.html`
+### Full Workflow (All 5 Steps)
 
-2. **Copy to docs** → Copies report to docs folder:
-   ```bash
-   make copy-report EVENT_ID=2026-02
-   ```
-   Result: `docs/reports/2026-02/index.html`
-
-3. **Update redirect** → Points root to latest report:
-   ```bash
-   make update-latest EVENT_ID=2026-02
-   ```
-
-4. **Deploy** → Push to GitHub, auto-deploys via GitHub Pages
-
-**Or do all three in one command:**
 ```bash
-make report HTML=etl/context/2026-02.html EVENT_ID=2026-02
+make report HTML_FILE=context/2026-03.html EVENT_ID=2026-03
 ```
 
-## Available Commands
+This runs:
+1. **Parse** → Extracts players, captains, decks from event HTML
+2. **Analyze** → Calculates clusters, lift, and best12 per captain
+3. **Render** → Generates standalone HTML report
+4. **Copy** → Moves report to `docs/reports/<event-id>/`
+5. **Update** → Updates root `docs/index.html` redirect
 
-Run `make help` to see all available commands, or use:
+### Individual Steps (for debugging)
 
 ```bash
-# ETL
-make etl-install          # Install Python deps
-make etl-parse            # Parse event HTML
-make etl-lint             # Lint Python code
-make etl-format           # Format Python code
-make etl-add PKG=requests # Add Python package
-
-# Reports
-make report               # Full workflow: parse → copy → update redirect
-make copy-report          # Copy generated report to docs/
-make update-latest        # Update docs/index.html redirect to latest
+make etl-parse    HTML_FILE=context/2026-03.html EVENT_ID=2026-03
+make etl-analyze  EVENT_ID=2026-03
+make etl-render   EVENT_ID=2026-03
+make copy-report  EVENT_ID=2026-03
+make update-latest EVENT_ID=2026-03
 ```
 
 ## Development
 
-For ETL work, you can work directly in the `etl/` directory:
+### Python Tooling
+
 ```bash
-cd etl
-uv add requests                                # Add Python package
-uv run scripts/parse_event.py context/2026-02.html 2026-02
+make install     # Install Python dependencies (numpy, scipy, beautifulsoup4)
+make lint        # Run linter and formatter
+make format      # Format code
+make clean       # Remove virtual environment
+make help        # Show all available commands
 ```
 
-## Project Overview
+### Adding Dependencies
 
-Galaxy Stats processes tournament statistics from galaxy.fun HTML files and generates standalone interactive HTML reports. Reports are static files requiring no build step and are served directly via GitHub Pages.
+```bash
+# From the etl/ directory
+uv add <package>           # Runtime dependency
+uv add <package> --dev     # Development dependency
+```
 
-- **Python**: Event HTML parsing and report generation
-- **HTML/CSS/JS**: Standalone interactive reports with embedded data
+### Working Directly in etl/
+
+```bash
+cd etl
+uv run scripts/parse_event.py context/2026-03.html 2026-03
+uv run scripts/analyze_event.py 2026-03
+uv run scripts/render_report.py 2026-03
+```
+
+## Report Structure
+
+Each report is a **single, self-contained HTML file** with:
+- **Embedded CSS**: Dark theme with custom typography (Playfair Display, IBM Plex)
+- **Embedded JSON**: Tournament data in a `DATA` constant
+- **Interactive JavaScript**: Tab navigation, animated charts, toggle views
+- **No external dependencies**: Works offline, no build step required
+
+Report sections:
+- **Top Cards**: Bar chart showing card popularity across all winning decks
+- **Card Archetypes**: Clustered cards (Treasures, Candy, Mage, Pirates, Animals, Fringe)
+- **Captain Analysis**: Signature cards (lift) and best 12 picks per captain
+
+## Adding New Reports
+
+1. **Download event HTML** from galaxy.fun → save to `etl/context/2026-04.html`
+2. **Generate report**: `make report HTML_FILE=context/2026-04.html EVENT_ID=2026-04`
+3. **Verify locally**: Open `docs/reports/2026-04/index.html` in browser
+4. **Review cluster labels** (auto-generated, can edit in `etl/dist/events/2026-04-analysis.json`)
+5. **Commit and push**: GitHub Pages will auto-deploy
+
+## Troubleshooting
+
+**Wrong HTML path error**: Use `HTML_FILE=context/2026-03.html` (relative to etl/), NOT `etl/context/2026-03.html`
+
+**Cluster names don't make sense**: Edit labels in `etl/dist/events/<event-id>-analysis.json` and re-run `make etl-render`
+
+**Report renders with no CSS**: Check `render_report.py` template uses single braces `{` for CSS/JS
+
+**Wrong event data**: Delete `etl/dist/events/<event-id>-analysis.json` and re-run `make etl-analyze`
