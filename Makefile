@@ -1,4 +1,8 @@
-.PHONY: help install dev build parse-event
+.PHONY: help install report parse-event copy-report update-latest lint format clean
+
+# === Configuration ===
+ETL_DIST = etl/dist/events
+DOCS_DIR = docs
 
 # === Help ===
 help:		## Show this help message
@@ -21,36 +25,29 @@ etl-format:		## Format Python code
 etl-clean:		## Remove Python venv and locks
 	cd etl && rm -rf .venv uv.lock
 
-etl-parse:		## Parse event: make etl-parse HTML_FILE=context/2026-02.html EVENT_ID=2026-02
+etl-parse:		## Parse event: make etl-parse HTML_FILE=etl/context/2026-02.html EVENT_ID=2026-02
 	cd etl && uv run scripts/parse_event.py $(HTML_FILE) $(EVENT_ID)
 
-# === Frontend Commands ===
-frontend-install:	## Install Node dependencies
-	cd frontend && npm install
+# === Report Commands ===
+copy-report:		## Copy generated report to docs: make copy-report EVENT_ID=2026-02
+	@mkdir -p $(DOCS_DIR)/reports/$(EVENT_ID)
+	@cp $(ETL_DIST)/$(EVENT_ID)-report.html $(DOCS_DIR)/reports/$(EVENT_ID)/index.html
+	@echo "Report copied to $(DOCS_DIR)/reports/$(EVENT_ID)/index.html"
 
-frontend-add:		## Add Node package: make frontend-add PKG=vue
-	cd frontend && npm add $(PKG)
+update-latest:		## Update docs/index.html to point to latest report: make update-latest EVENT_ID=2026-02
+	@echo "Updating $(DOCS_DIR)/index.html to point to $(EVENT_ID)..."
+	@sed -i '' 's|url=reports/[^/]*|url=reports/$(EVENT_ID)|' $(DOCS_DIR)/index.html
+	@sed -i '' 's|href="reports/[^/]*|href="reports/$(EVENT_ID)|' $(DOCS_DIR)/index.html
+	@echo "Redirect updated to reports/$(EVENT_ID)/"
 
-frontend-dev:		## Start dev server
-	cd frontend && npm run dev
-
-frontend-build:		## Build for production
-	cd frontend && npm run build
-
-frontend-preview:	## Preview production build
-	cd frontend && npm run preview
-
-frontend-clean:		## Remove frontend build artifacts
-	cd frontend && rm -rf node_modules .astro dist
+report: etl-parse copy-report update-latest		## Full workflow: parse → copy → update redirect (HTML_FILE and EVENT_ID required)
 
 # === Convenience Commands (aliases) ===
-install: etl-install frontend-install		## Install all dependencies
-dev: frontend-dev				## Start dev server (alias)
-build: frontend-build				## Build for production (alias)
-parse-event: etl-parse				## Parse event (alias)
-lint: etl-lint					## Lint code (alias)
-format: etl-format				## Format code (alias)
-clean: etl-clean frontend-clean		## Clean all artifacts
+install: etl-install		## Install dependencies (alias)
+parse-event: etl-parse		## Parse event (alias)
+lint: etl-lint			## Lint code (alias)
+format: etl-format		## Format code (alias)
+clean: etl-clean		## Clean artifacts (alias)
 
 # === Default target ===
 .DEFAULT_GOAL := help
