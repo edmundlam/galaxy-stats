@@ -1,0 +1,5528 @@
+{
+  "event": {
+    "id": "2026-02",
+    "name": "February Monthly",
+    "date": "2026-02-20",
+    "total_champions": 183
+  },
+  "total_players": 138,
+  "clusters": [
+    {
+      "id": "cluster_4",
+      "label": "Mech-a-Man",
+      "color": "#6e9ec8",
+      "cards": [
+        {
+          "slug": "mech_a_man",
+          "name": "Mech-a-Man",
+          "freq": 25,
+          "pct": 18.1
+        },
+        {
+          "slug": "snapping_hydra",
+          "name": "Snapping Hydra",
+          "freq": 15,
+          "pct": 10.9
+        },
+        {
+          "slug": "pirate_prince",
+          "name": "Pirate Prince",
+          "freq": 12,
+          "pct": 8.7
+        },
+        {
+          "slug": "daedalus",
+          "name": "Daedalus",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "slug": "glory_seeker",
+          "name": "Glory Seeker",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "slug": "tsarmina_the_tyrant",
+          "name": "Tsarmina, the Tyrant",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "slug": "wicked_witch",
+          "name": "Wicked Witch",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "slug": "chubby_cheep",
+          "name": "Chubby Cheep",
+          "freq": 10,
+          "pct": 7.2
+        },
+        {
+          "slug": "friendly_spirit",
+          "name": "Friendly Spirit",
+          "freq": 9,
+          "pct": 6.5
+        },
+        {
+          "slug": "keeb",
+          "name": "Keeb",
+          "freq": 9,
+          "pct": 6.5
+        },
+        {
+          "slug": "pirate_king",
+          "name": "Pirate King",
+          "freq": 8,
+          "pct": 5.8
+        },
+        {
+          "slug": "sinbad",
+          "name": "Sinbad",
+          "freq": 8,
+          "pct": 5.8
+        },
+        {
+          "slug": "don_quixote",
+          "name": "Don Quixote",
+          "freq": 7,
+          "pct": 5.1
+        },
+        {
+          "slug": "faerie_queen",
+          "name": "Faerie Queen",
+          "freq": 7,
+          "pct": 5.1
+        },
+        {
+          "slug": "jelly_ton",
+          "name": "Jelly-ton",
+          "freq": 7,
+          "pct": 5.1
+        },
+        {
+          "slug": "miss_muffet",
+          "name": "Miss Muffet",
+          "freq": 7,
+          "pct": 5.1
+        },
+        {
+          "slug": "mortakon",
+          "name": "Mortakon",
+          "freq": 7,
+          "pct": 5.1
+        },
+        {
+          "slug": "barbosa",
+          "name": "Barbosa",
+          "freq": 6,
+          "pct": 4.3
+        },
+        {
+          "slug": "caramel",
+          "name": "Caramel",
+          "freq": 6,
+          "pct": 4.3
+        },
+        {
+          "slug": "faerie_godfather",
+          "name": "Faerie Godfather",
+          "freq": 6,
+          "pct": 4.3
+        },
+        {
+          "slug": "moonshadow",
+          "name": "Moonshadow",
+          "freq": 6,
+          "pct": 4.3
+        },
+        {
+          "slug": "ogre_magi",
+          "name": "Ogre Magi",
+          "freq": 6,
+          "pct": 4.3
+        },
+        {
+          "slug": "toadie",
+          "name": "Toadie",
+          "freq": 6,
+          "pct": 4.3
+        },
+        {
+          "slug": "dastardly_spirit",
+          "name": "Dastardly Spirit",
+          "freq": 5,
+          "pct": 3.6
+        },
+        {
+          "slug": "frog_prince",
+          "name": "Frog Prince",
+          "freq": 5,
+          "pct": 3.6
+        },
+        {
+          "slug": "monstro",
+          "name": "Monstro",
+          "freq": 5,
+          "pct": 3.6
+        },
+        {
+          "slug": "pied_piper",
+          "name": "Pied Piper",
+          "freq": 5,
+          "pct": 3.6
+        },
+        {
+          "slug": "the_giving_tree",
+          "name": "The Giving Tree",
+          "freq": 5,
+          "pct": 3.6
+        },
+        {
+          "slug": "charlotte",
+          "name": "Charlotte",
+          "freq": 4,
+          "pct": 2.9
+        },
+        {
+          "slug": "kid_icarus",
+          "name": "Kid Icarus",
+          "freq": 4,
+          "pct": 2.9
+        },
+        {
+          "slug": "mimic",
+          "name": "Mimic",
+          "freq": 4,
+          "pct": 2.9
+        },
+        {
+          "slug": "mysterio_the_great_and_powerful",
+          "name": "Mysterio, the Great and Powerful",
+          "freq": 4,
+          "pct": 2.9
+        },
+        {
+          "slug": "uther_pendragon",
+          "name": "Uther Pendragon",
+          "freq": 4,
+          "pct": 2.9
+        },
+        {
+          "slug": "anubis",
+          "name": "Anubis",
+          "freq": 3,
+          "pct": 2.2
+        },
+        {
+          "slug": "black_hole",
+          "name": "Black Hole",
+          "freq": 3,
+          "pct": 2.2
+        },
+        {
+          "slug": "moppet",
+          "name": "Moppet",
+          "freq": 3,
+          "pct": 2.2
+        },
+        {
+          "slug": "prickles",
+          "name": "Prickles",
+          "freq": 3,
+          "pct": 2.2
+        },
+        {
+          "slug": "the_rat_king",
+          "name": "The Rat King",
+          "freq": 3,
+          "pct": 2.2
+        },
+        {
+          "slug": "barrel_of_monkeys",
+          "name": "Barrel of Monkeys",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "slug": "chubby_bunny",
+          "name": "Chubby Bunny",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "slug": "fun_gal",
+          "name": "Fun Gal",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "slug": "gulliver",
+          "name": "Gulliver",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "slug": "jumping_jelly_beans",
+          "name": "Jumping Jelly Beans",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "slug": "leapfrog",
+          "name": "Leapfrog",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "slug": "life_saver",
+          "name": "Life Saver",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "slug": "mephisto",
+          "name": "Mephisto",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "slug": "sabrina",
+          "name": "Sabrina",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "slug": "ghoulade_man",
+          "name": "Ghoulade Man",
+          "freq": 1,
+          "pct": 0.7
+        },
+        {
+          "slug": "nutcracker_prince",
+          "name": "Nutcracker Prince",
+          "freq": 1,
+          "pct": 0.7
+        },
+        {
+          "slug": "raggedy_ann",
+          "name": "Raggedy Ann",
+          "freq": 1,
+          "pct": 0.7
+        },
+        {
+          "slug": "sleeping_giant",
+          "name": "Sleeping Giant",
+          "freq": 1,
+          "pct": 0.7
+        },
+        {
+          "slug": "space_ranger_woody",
+          "name": "Space Ranger Woody",
+          "freq": 1,
+          "pct": 0.7
+        },
+        {
+          "slug": "the_blue_faerie",
+          "name": "The Blue Faerie",
+          "freq": 1,
+          "pct": 0.7
+        },
+        {
+          "slug": "wormtongue",
+          "name": "Wormtongue",
+          "freq": 1,
+          "pct": 0.7
+        }
+      ]
+    },
+    {
+      "id": "cluster_2",
+      "label": "Cherry Topples",
+      "color": "#e87d9e",
+      "cards": [
+        {
+          "slug": "cherry_topples",
+          "name": "Cherry Topples",
+          "freq": 25,
+          "pct": 18.1
+        },
+        {
+          "slug": "gummy_wyrm",
+          "name": "Gummy Wyrm",
+          "freq": 19,
+          "pct": 13.8
+        },
+        {
+          "slug": "kool_wip",
+          "name": "Kool Wip",
+          "freq": 19,
+          "pct": 13.8
+        },
+        {
+          "slug": "twilight_sprinkles",
+          "name": "Twilight Sprinkles",
+          "freq": 19,
+          "pct": 13.8
+        },
+        {
+          "slug": "lollipop_faerie",
+          "name": "Lollipop Faerie",
+          "freq": 18,
+          "pct": 13.0
+        },
+        {
+          "slug": "the_candy_cane_crook",
+          "name": "The Candy Cane Crook",
+          "freq": 18,
+          "pct": 13.0
+        },
+        {
+          "slug": "knight_of_the_holy_cane",
+          "name": "Knight of the Holy Cane",
+          "freq": 17,
+          "pct": 12.3
+        },
+        {
+          "slug": "pixie",
+          "name": "Pixie",
+          "freq": 16,
+          "pct": 11.6
+        },
+        {
+          "slug": "cotton_candy_dandy",
+          "name": "Cotton Candy Dandy",
+          "freq": 14,
+          "pct": 10.1
+        },
+        {
+          "slug": "gingerbread_witch",
+          "name": "Gingerbread Witch",
+          "freq": 14,
+          "pct": 10.1
+        },
+        {
+          "slug": "jaws",
+          "name": "Jaws",
+          "freq": 13,
+          "pct": 9.4
+        },
+        {
+          "slug": "the_sour_patch_kid",
+          "name": "The Sour Patch Kid",
+          "freq": 13,
+          "pct": 9.4
+        },
+        {
+          "slug": "frosting_dragon",
+          "name": "Frosting Dragon",
+          "freq": 12,
+          "pct": 8.7
+        },
+        {
+          "slug": "licorice",
+          "name": "Licorice",
+          "freq": 12,
+          "pct": 8.7
+        },
+        {
+          "slug": "toto",
+          "name": "Toto",
+          "freq": 12,
+          "pct": 8.7
+        },
+        {
+          "slug": "doopity_doo",
+          "name": "Doopity Doo",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "slug": "the_three_chef_keteers",
+          "name": "The Three Chef-Keteers",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "slug": "viscount_chocolat",
+          "name": "Viscount Chocolat",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "slug": "pretty_patissier",
+          "name": "Pretty Patissier",
+          "freq": 9,
+          "pct": 6.5
+        },
+        {
+          "slug": "lemonhead",
+          "name": "Lemonhead",
+          "freq": 7,
+          "pct": 5.1
+        },
+        {
+          "slug": "candy_apple_tree",
+          "name": "Candy Apple Tree",
+          "freq": 6,
+          "pct": 4.3
+        },
+        {
+          "slug": "candy_claws",
+          "name": "Candy Claws",
+          "freq": 6,
+          "pct": 4.3
+        },
+        {
+          "slug": "catatouille",
+          "name": "Catatouille",
+          "freq": 6,
+          "pct": 4.3
+        }
+      ]
+    },
+    {
+      "id": "cluster_3",
+      "label": "Aladdin",
+      "color": "#9e6ec8",
+      "cards": [
+        {
+          "slug": "aladdin",
+          "name": "Aladdin",
+          "freq": 46,
+          "pct": 33.3
+        },
+        {
+          "slug": "sir_francis_drake",
+          "name": "Sir Francis Drake",
+          "freq": 40,
+          "pct": 29.0
+        },
+        {
+          "slug": "lance_a_little",
+          "name": "Lance A Little",
+          "freq": 32,
+          "pct": 23.2
+        },
+        {
+          "slug": "flopsy",
+          "name": "Flopsy",
+          "freq": 29,
+          "pct": 21.0
+        },
+        {
+          "slug": "mechanical_dragon",
+          "name": "Mechanical Dragon",
+          "freq": 28,
+          "pct": 20.3
+        },
+        {
+          "slug": "chaos",
+          "name": "Chaos",
+          "freq": 26,
+          "pct": 18.8
+        },
+        {
+          "slug": "smug",
+          "name": "Smug",
+          "freq": 22,
+          "pct": 15.9
+        },
+        {
+          "slug": "the_huntsman",
+          "name": "The Huntsman",
+          "freq": 21,
+          "pct": 15.2
+        },
+        {
+          "slug": "crystal",
+          "name": "Crystal",
+          "freq": 19,
+          "pct": 13.8
+        },
+        {
+          "slug": "oracle_of_fortunes",
+          "name": "Oracle of Fortunes",
+          "freq": 16,
+          "pct": 11.6
+        },
+        {
+          "slug": "thunder_of_dragons",
+          "name": "Thunder of Dragons",
+          "freq": 16,
+          "pct": 11.6
+        },
+        {
+          "slug": "scale_a_tor",
+          "name": "Scale-a-tor",
+          "freq": 14,
+          "pct": 10.1
+        },
+        {
+          "slug": "weensy",
+          "name": "Weensy",
+          "freq": 13,
+          "pct": 9.4
+        },
+        {
+          "slug": "netherbinder",
+          "name": "Netherbinder",
+          "freq": 12,
+          "pct": 8.7
+        },
+        {
+          "slug": "combustible_dragon",
+          "name": "Combustible Dragon",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "slug": "beanie_baby",
+          "name": "Beanie Baby",
+          "freq": 10,
+          "pct": 7.2
+        },
+        {
+          "slug": "sunflare_glider",
+          "name": "Sunflare Glider",
+          "freq": 10,
+          "pct": 7.2
+        },
+        {
+          "slug": "hephaestus",
+          "name": "Hephaestus",
+          "freq": 8,
+          "pct": 5.8
+        }
+      ]
+    },
+    {
+      "id": "cluster_1",
+      "label": "Wormscale Tinkerer",
+      "color": "#c8a96e",
+      "cards": [
+        {
+          "slug": "wormscale_tinkerer",
+          "name": "Wormscale Tinkerer",
+          "freq": 85,
+          "pct": 61.6
+        },
+        {
+          "slug": "maverick_icewing",
+          "name": "Maverick & Icewing",
+          "freq": 66,
+          "pct": 47.8
+        },
+        {
+          "slug": "miseria",
+          "name": "Miseria",
+          "freq": 59,
+          "pct": 42.8
+        },
+        {
+          "slug": "mr_fox",
+          "name": "Mr. Fox",
+          "freq": 59,
+          "pct": 42.8
+        },
+        {
+          "slug": "the_burninator",
+          "name": "The Burninator",
+          "freq": 53,
+          "pct": 38.4
+        },
+        {
+          "slug": "rollo",
+          "name": "Rollo",
+          "freq": 47,
+          "pct": 34.1
+        },
+        {
+          "slug": "ace_of_hearts",
+          "name": "Ace of Hearts",
+          "freq": 37,
+          "pct": 26.8
+        },
+        {
+          "slug": "pisces",
+          "name": "Pisces",
+          "freq": 31,
+          "pct": 22.5
+        },
+        {
+          "slug": "the_butcher",
+          "name": "The Butcher",
+          "freq": 25,
+          "pct": 18.1
+        },
+        {
+          "slug": "guinevere",
+          "name": "Guinevere",
+          "freq": 22,
+          "pct": 15.9
+        }
+      ]
+    },
+    {
+      "id": "cluster_6",
+      "label": "Wink",
+      "color": "#7a7d8a",
+      "cards": [
+        {
+          "slug": "wink",
+          "name": "Wink",
+          "freq": 19,
+          "pct": 13.8
+        },
+        {
+          "slug": "calypso",
+          "name": "Calypso",
+          "freq": 17,
+          "pct": 12.3
+        },
+        {
+          "slug": "shanty",
+          "name": "Shanty",
+          "freq": 16,
+          "pct": 11.6
+        },
+        {
+          "slug": "blackbeard",
+          "name": "Blackbeard",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "slug": "innkeeper",
+          "name": "Innkeeper",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "slug": "plunder_penny",
+          "name": "Plunder Penny",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "slug": "sailor_moonshine",
+          "name": "Sailor Moonshine",
+          "freq": 10,
+          "pct": 7.2
+        },
+        {
+          "slug": "hercules",
+          "name": "Hercules",
+          "freq": 9,
+          "pct": 6.5
+        },
+        {
+          "slug": "jelly_roger",
+          "name": "Jelly Roger",
+          "freq": 6,
+          "pct": 4.3
+        },
+        {
+          "slug": "weird_beard",
+          "name": "Weird Beard",
+          "freq": 4,
+          "pct": 2.9
+        }
+      ]
+    },
+    {
+      "id": "cluster_5",
+      "label": "Mirror Mage",
+      "color": "#6ec89e",
+      "cards": [
+        {
+          "slug": "mirror_mage",
+          "name": "Mirror Mage",
+          "freq": 16,
+          "pct": 11.6
+        },
+        {
+          "slug": "nightshade",
+          "name": "Nightshade",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "slug": "elm_minster",
+          "name": "Elm Minster",
+          "freq": 9,
+          "pct": 6.5
+        },
+        {
+          "slug": "fae_familiar",
+          "name": "Fae Familiar",
+          "freq": 9,
+          "pct": 6.5
+        },
+        {
+          "slug": "morgan_le_fae",
+          "name": "Morgan Le Fae",
+          "freq": 9,
+          "pct": 6.5
+        },
+        {
+          "slug": "the_fates",
+          "name": "The Fates",
+          "freq": 9,
+          "pct": 6.5
+        },
+        {
+          "slug": "prospero",
+          "name": "Prospero",
+          "freq": 8,
+          "pct": 5.8
+        },
+        {
+          "slug": "genie_of_the_lamp",
+          "name": "Genie of the Lamp",
+          "freq": 6,
+          "pct": 4.3
+        },
+        {
+          "slug": "rudolph_the_red",
+          "name": "Rudolph the Red",
+          "freq": 4,
+          "pct": 2.9
+        }
+      ]
+    }
+  ],
+  "captains": [
+    {
+      "slug": "legend_of_loxley",
+      "name": "Legend of Loxley",
+      "n": 8,
+      "signature": [
+        {
+          "card": "Barbosa",
+          "lift": 8.6,
+          "freq": 3,
+          "n": 8
+        },
+        {
+          "card": "Gulliver",
+          "lift": 8.6,
+          "freq": 1,
+          "n": 8
+        },
+        {
+          "card": "Anubis",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 8
+        },
+        {
+          "card": "Caramel",
+          "lift": 5.8,
+          "freq": 2,
+          "n": 8
+        },
+        {
+          "card": "Oracle of Fortunes",
+          "lift": 5.4,
+          "freq": 5,
+          "n": 8
+        },
+        {
+          "card": "Sailor Moonshine",
+          "lift": 5.2,
+          "freq": 3,
+          "n": 8
+        },
+        {
+          "card": "Netherbinder",
+          "lift": 4.3,
+          "freq": 3,
+          "n": 8
+        },
+        {
+          "card": "Thunder of Dragons",
+          "lift": 4.3,
+          "freq": 4,
+          "n": 8
+        }
+      ],
+      "best12": [
+        {
+          "card": "Maverick & Icewing",
+          "freq": 7,
+          "n": 8,
+          "pct": 88.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 7,
+          "n": 8,
+          "pct": 88.0
+        },
+        {
+          "card": "Oracle of Fortunes",
+          "freq": 5,
+          "n": 8,
+          "pct": 62.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 4,
+          "n": 8,
+          "pct": 50.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 4,
+          "n": 8,
+          "pct": 50.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 4,
+          "n": 8,
+          "pct": 50.0
+        },
+        {
+          "card": "Thunder of Dragons",
+          "freq": 4,
+          "n": 8,
+          "pct": 50.0
+        },
+        {
+          "card": "Barbosa",
+          "freq": 3,
+          "n": 8,
+          "pct": 38.0
+        },
+        {
+          "card": "Mech-a-Man",
+          "freq": 3,
+          "n": 8,
+          "pct": 38.0
+        },
+        {
+          "card": "Netherbinder",
+          "freq": 3,
+          "n": 8,
+          "pct": 38.0
+        },
+        {
+          "card": "Sailor Moonshine",
+          "freq": 3,
+          "n": 8,
+          "pct": 38.0
+        },
+        {
+          "card": "Sir Francis Drake",
+          "freq": 3,
+          "n": 8,
+          "pct": 38.0
+        }
+      ],
+      "players": [
+        {
+          "username": "!!!",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "mech_a_man",
+            "maverick_icewing",
+            "wicked_witch",
+            "anubis",
+            "combustible_dragon",
+            "thunder_of_dragons",
+            "wormscale_tinkerer",
+            "netherbinder",
+            "rollo",
+            "oracle_of_fortunes",
+            "mr_fox",
+            "the_butcher"
+          ]
+        },
+        {
+          "username": "Anton",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "mech_a_man",
+            "maverick_icewing",
+            "sailor_moonshine",
+            "thunder_of_dragons",
+            "sir_francis_drake",
+            "pirate_prince",
+            "weird_beard",
+            "wormscale_tinkerer",
+            "oracle_of_fortunes",
+            "gulliver",
+            "barbosa"
+          ]
+        },
+        {
+          "username": "Austin",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "plunder_penny",
+            "maverick_icewing",
+            "mirror_mage",
+            "wormscale_tinkerer",
+            "netherbinder",
+            "rollo",
+            "mr_fox",
+            "miseria",
+            "the_huntsman",
+            "the_butcher",
+            "pretty_patissier"
+          ]
+        },
+        {
+          "username": "Channing",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "caramel",
+            "twilight_sprinkles",
+            "frosting_dragon",
+            "kool_wip",
+            "cherry_topples",
+            "catatouille",
+            "lance_a_little",
+            "chubby_cheep",
+            "lollipop_faerie",
+            "lemonhead",
+            "jelly_ton",
+            "licorice"
+          ]
+        },
+        {
+          "username": "Gerptcq",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "mech_a_man",
+            "maverick_icewing",
+            "tsarmina_the_tyrant",
+            "mirror_mage",
+            "sailor_moonshine",
+            "thunder_of_dragons",
+            "pirate_prince",
+            "wormscale_tinkerer",
+            "rollo",
+            "oracle_of_fortunes",
+            "barbosa"
+          ]
+        },
+        {
+          "username": "Jubi",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "maverick_icewing",
+            "tsarmina_the_tyrant",
+            "innkeeper",
+            "sailor_moonshine",
+            "sinbad",
+            "sir_francis_drake",
+            "wormscale_tinkerer",
+            "gummy_wyrm",
+            "caramel",
+            "oracle_of_fortunes",
+            "barbosa"
+          ]
+        },
+        {
+          "username": "Thedeeeem",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "guinevere",
+            "the_burninator",
+            "snapping_hydra",
+            "wormscale_tinkerer",
+            "rollo",
+            "weensy",
+            "mr_fox",
+            "miseria",
+            "the_huntsman",
+            "the_butcher",
+            "crystal"
+          ]
+        },
+        {
+          "username": "ThGreatWar",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "mechanical_dragon",
+            "the_burninator",
+            "thunder_of_dragons",
+            "wink",
+            "sir_francis_drake",
+            "wormscale_tinkerer",
+            "lance_a_little",
+            "netherbinder",
+            "oracle_of_fortunes",
+            "friendly_spirit",
+            "mr_fox"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "trash_panda",
+      "name": "Trash Panda",
+      "n": 8,
+      "signature": [
+        {
+          "card": "Sabrina",
+          "lift": 8.6,
+          "freq": 1,
+          "n": 8
+        },
+        {
+          "card": "Beanie Baby",
+          "lift": 5.2,
+          "freq": 3,
+          "n": 8
+        },
+        {
+          "card": "Mimic",
+          "lift": 4.3,
+          "freq": 1,
+          "n": 8
+        },
+        {
+          "card": "Scale-a-tor",
+          "lift": 3.7,
+          "freq": 3,
+          "n": 8
+        },
+        {
+          "card": "Thunder of Dragons",
+          "lift": 3.2,
+          "freq": 3,
+          "n": 8
+        },
+        {
+          "card": "Combustible Dragon",
+          "lift": 3.1,
+          "freq": 2,
+          "n": 8
+        },
+        {
+          "card": "Smug",
+          "lift": 3.1,
+          "freq": 4,
+          "n": 8
+        },
+        {
+          "card": "Toadie",
+          "lift": 2.9,
+          "freq": 1,
+          "n": 8
+        }
+      ],
+      "best12": [
+        {
+          "card": "Maverick & Icewing",
+          "freq": 8,
+          "n": 8,
+          "pct": 100.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 8,
+          "n": 8,
+          "pct": 100.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 6,
+          "n": 8,
+          "pct": 75.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 6,
+          "n": 8,
+          "pct": 75.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 5,
+          "n": 8,
+          "pct": 62.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 5,
+          "n": 8,
+          "pct": 62.0
+        },
+        {
+          "card": "Lance A Little",
+          "freq": 4,
+          "n": 8,
+          "pct": 50.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 4,
+          "n": 8,
+          "pct": 50.0
+        },
+        {
+          "card": "Sir Francis Drake",
+          "freq": 4,
+          "n": 8,
+          "pct": 50.0
+        },
+        {
+          "card": "Smug",
+          "freq": 4,
+          "n": 8,
+          "pct": 50.0
+        },
+        {
+          "card": "Beanie Baby",
+          "freq": 3,
+          "n": 8,
+          "pct": 38.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 3,
+          "n": 8,
+          "pct": 38.0
+        }
+      ],
+      "players": [
+        {
+          "username": "agnosfaith",
+          "archetype": "Aladdin",
+          "deck": [
+            "aladdin",
+            "beanie_baby",
+            "toadie",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "daedalus",
+            "scale_a_tor",
+            "thunder_of_dragons",
+            "wink",
+            "flopsy",
+            "wormscale_tinkerer",
+            "lance_a_little"
+          ]
+        },
+        {
+          "username": "Anatchi",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "beanie_baby",
+            "mech_a_man",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "mimic",
+            "scale_a_tor",
+            "thunder_of_dragons",
+            "sir_francis_drake",
+            "smug",
+            "wormscale_tinkerer",
+            "rollo"
+          ]
+        },
+        {
+          "username": "Chase",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "maverick_icewing",
+            "combustible_dragon",
+            "scale_a_tor",
+            "the_burninator",
+            "sir_francis_drake",
+            "smug",
+            "wormscale_tinkerer",
+            "lance_a_little",
+            "sunflare_glider",
+            "mr_fox",
+            "miseria"
+          ]
+        },
+        {
+          "username": "kannami",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "maverick_icewing",
+            "ace_of_hearts",
+            "the_burninator",
+            "sabrina",
+            "wormscale_tinkerer",
+            "cherry_topples",
+            "rollo",
+            "weensy",
+            "mr_fox",
+            "miseria",
+            "crystal"
+          ]
+        },
+        {
+          "username": "SpoootKnight",
+          "archetype": "Aladdin",
+          "deck": [
+            "aladdin",
+            "beanie_baby",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "combustible_dragon",
+            "the_burninator",
+            "thunder_of_dragons",
+            "sir_francis_drake",
+            "smug",
+            "flopsy",
+            "wormscale_tinkerer",
+            "oracle_of_fortunes"
+          ]
+        },
+        {
+          "username": "TarquinTarquin",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "guinevere",
+            "the_burninator",
+            "pisces",
+            "sir_francis_drake",
+            "flopsy",
+            "wormscale_tinkerer",
+            "lance_a_little",
+            "rollo",
+            "mr_fox",
+            "miseria",
+            "crystal"
+          ]
+        },
+        {
+          "username": "WaffleMelons",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "toto",
+            "maverick_icewing",
+            "glory_seeker",
+            "the_burninator",
+            "wormscale_tinkerer",
+            "lance_a_little",
+            "netherbinder",
+            "rollo",
+            "oracle_of_fortunes",
+            "miseria",
+            "crystal"
+          ]
+        },
+        {
+          "username": "zrandles",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "ace_of_hearts",
+            "the_burninator",
+            "pisces",
+            "pirate_prince",
+            "smug",
+            "snapping_hydra",
+            "wormscale_tinkerer",
+            "rollo",
+            "mr_fox",
+            "miseria",
+            "the_butcher"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "jay_sparrow",
+      "name": "Jay Sparrow",
+      "n": 7,
+      "signature": [
+        {
+          "card": "Hercules",
+          "lift": 11.0,
+          "freq": 5,
+          "n": 7
+        },
+        {
+          "card": "Blackbeard",
+          "lift": 10.8,
+          "freq": 6,
+          "n": 7
+        },
+        {
+          "card": "Jelly Roger",
+          "lift": 9.9,
+          "freq": 3,
+          "n": 7
+        },
+        {
+          "card": "Innkeeper",
+          "lift": 9.0,
+          "freq": 5,
+          "n": 7
+        },
+        {
+          "card": "Plunder Penny",
+          "lift": 7.2,
+          "freq": 4,
+          "n": 7
+        },
+        {
+          "card": "Barbosa",
+          "lift": 6.6,
+          "freq": 2,
+          "n": 7
+        },
+        {
+          "card": "Shanty",
+          "lift": 6.2,
+          "freq": 5,
+          "n": 7
+        },
+        {
+          "card": "Friendly Spirit",
+          "lift": 4.4,
+          "freq": 2,
+          "n": 7
+        }
+      ],
+      "best12": [
+        {
+          "card": "Blackbeard",
+          "freq": 6,
+          "n": 7,
+          "pct": 86.0
+        },
+        {
+          "card": "Sir Francis Drake",
+          "freq": 6,
+          "n": 7,
+          "pct": 86.0
+        },
+        {
+          "card": "Hercules",
+          "freq": 5,
+          "n": 7,
+          "pct": 71.0
+        },
+        {
+          "card": "Innkeeper",
+          "freq": 5,
+          "n": 7,
+          "pct": 71.0
+        },
+        {
+          "card": "Shanty",
+          "freq": 5,
+          "n": 7,
+          "pct": 71.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Plunder Penny",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "The Huntsman",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Wink",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Calypso",
+          "freq": 3,
+          "n": 7,
+          "pct": 43.0
+        },
+        {
+          "card": "Jelly Roger",
+          "freq": 3,
+          "n": 7,
+          "pct": 43.0
+        }
+      ],
+      "players": [
+        {
+          "username": "AOA",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "plunder_penny",
+            "shanty",
+            "jelly_roger",
+            "calypso",
+            "innkeeper",
+            "blackbeard",
+            "hercules",
+            "the_burninator",
+            "sailor_moonshine",
+            "sir_francis_drake",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Bleech",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "shanty",
+            "jelly_roger",
+            "innkeeper",
+            "blackbeard",
+            "hercules",
+            "glory_seeker",
+            "pisces",
+            "wink",
+            "sir_francis_drake",
+            "wormscale_tinkerer",
+            "mr_fox",
+            "the_huntsman"
+          ]
+        },
+        {
+          "username": "May",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "shanty",
+            "blackbeard",
+            "hercules",
+            "ace_of_hearts",
+            "glory_seeker",
+            "wink",
+            "sir_francis_drake",
+            "wormscale_tinkerer",
+            "friendly_spirit",
+            "mr_fox",
+            "miseria",
+            "the_huntsman"
+          ]
+        },
+        {
+          "username": "mbpro",
+          "archetype": "Wink",
+          "deck": [
+            "aladdin",
+            "plunder_penny",
+            "shanty",
+            "jelly_roger",
+            "calypso",
+            "innkeeper",
+            "blackbeard",
+            "hercules",
+            "the_burninator",
+            "sailor_moonshine",
+            "wink",
+            "sir_francis_drake"
+          ]
+        },
+        {
+          "username": "Napenator",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "viscount_chocolat",
+            "gummy_wyrm",
+            "twilight_sprinkles",
+            "the_candy_cane_crook",
+            "candy_claws",
+            "netherbinder",
+            "sunflare_glider",
+            "licorice",
+            "friendly_spirit",
+            "mr_fox",
+            "the_huntsman",
+            "barbosa"
+          ]
+        },
+        {
+          "username": "PressReset",
+          "archetype": "Aladdin",
+          "deck": [
+            "aladdin",
+            "plunder_penny",
+            "innkeeper",
+            "wicked_witch",
+            "blackbeard",
+            "hercules",
+            "the_burninator",
+            "wink",
+            "sir_francis_drake",
+            "smug",
+            "snapping_hydra",
+            "flopsy"
+          ]
+        },
+        {
+          "username": "Revlyn",
+          "archetype": "Aladdin",
+          "deck": [
+            "aladdin",
+            "plunder_penny",
+            "shanty",
+            "mech_a_man",
+            "calypso",
+            "innkeeper",
+            "blackbeard",
+            "sir_francis_drake",
+            "pirate_prince",
+            "mr_fox",
+            "the_huntsman",
+            "barbosa"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "dorothy",
+      "name": "Dorothy",
+      "n": 7,
+      "signature": [
+        {
+          "card": "Mephisto",
+          "lift": 9.9,
+          "freq": 1,
+          "n": 7
+        },
+        {
+          "card": "Scale-a-tor",
+          "lift": 5.6,
+          "freq": 4,
+          "n": 7
+        },
+        {
+          "card": "Guinevere",
+          "lift": 5.4,
+          "freq": 6,
+          "n": 7
+        },
+        {
+          "card": "Tsarmina, the Tyrant",
+          "lift": 5.4,
+          "freq": 3,
+          "n": 7
+        },
+        {
+          "card": "Hephaestus",
+          "lift": 4.9,
+          "freq": 2,
+          "n": 7
+        },
+        {
+          "card": "Kid Icarus",
+          "lift": 4.9,
+          "freq": 1,
+          "n": 7
+        },
+        {
+          "card": "The Giving Tree",
+          "lift": 3.9,
+          "freq": 1,
+          "n": 7
+        },
+        {
+          "card": "Pirate Prince",
+          "lift": 3.3,
+          "freq": 2,
+          "n": 7
+        }
+      ],
+      "best12": [
+        {
+          "card": "Maverick & Icewing",
+          "freq": 7,
+          "n": 7,
+          "pct": 100.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 6,
+          "n": 7,
+          "pct": 86.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 6,
+          "n": 7,
+          "pct": 86.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Scale-a-tor",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Mechanical Dragon",
+          "freq": 3,
+          "n": 7,
+          "pct": 43.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 3,
+          "n": 7,
+          "pct": 43.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 3,
+          "n": 7,
+          "pct": 43.0
+        },
+        {
+          "card": "Tsarmina, the Tyrant",
+          "freq": 3,
+          "n": 7,
+          "pct": 43.0
+        },
+        {
+          "card": "Ace of Hearts",
+          "freq": 2,
+          "n": 7,
+          "pct": 29.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 2,
+          "n": 7,
+          "pct": 29.0
+        }
+      ],
+      "players": [
+        {
+          "username": "brizzi10",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "toto",
+            "toadie",
+            "maverick_icewing",
+            "tsarmina_the_tyrant",
+            "mirror_mage",
+            "elm_minster",
+            "ace_of_hearts",
+            "guinevere",
+            "scale_a_tor",
+            "kid_icarus",
+            "jaws"
+          ]
+        },
+        {
+          "username": "burgundymyr",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "tsarmina_the_tyrant",
+            "faerie_queen",
+            "guinevere",
+            "pisces",
+            "sir_francis_drake",
+            "flopsy",
+            "wormscale_tinkerer",
+            "rollo",
+            "mr_fox",
+            "miseria",
+            "the_huntsman"
+          ]
+        },
+        {
+          "username": "myrzy",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "mortakon",
+            "mech_a_man",
+            "maverick_icewing",
+            "combustible_dragon",
+            "guinevere",
+            "hephaestus",
+            "scale_a_tor",
+            "wormscale_tinkerer",
+            "netherbinder",
+            "rollo",
+            "miseria",
+            "crystal"
+          ]
+        },
+        {
+          "username": "NikolaiSW",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "mech_a_man",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "guinevere",
+            "the_burninator",
+            "thunder_of_dragons",
+            "pisces",
+            "pirate_prince",
+            "smug",
+            "wormscale_tinkerer",
+            "lance_a_little",
+            "mr_fox"
+          ]
+        },
+        {
+          "username": "pidancet",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "mechanical_dragon",
+            "guinevere",
+            "mephisto",
+            "chaos",
+            "flopsy",
+            "wormscale_tinkerer",
+            "rollo",
+            "weensy",
+            "miseria",
+            "the_butcher",
+            "crystal"
+          ]
+        },
+        {
+          "username": "Scoranio",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "toto",
+            "maverick_icewing",
+            "tsarmina_the_tyrant",
+            "mirror_mage",
+            "ace_of_hearts",
+            "guinevere",
+            "scale_a_tor",
+            "the_burninator",
+            "wink",
+            "wormscale_tinkerer",
+            "rollo",
+            "mr_fox"
+          ]
+        },
+        {
+          "username": "YAAAHA",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "mechanical_dragon",
+            "hephaestus",
+            "scale_a_tor",
+            "the_giving_tree",
+            "the_burninator",
+            "sinbad",
+            "sir_francis_drake",
+            "pirate_king",
+            "pirate_prince",
+            "wormscale_tinkerer",
+            "mr_fox"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "wizard_headmaster",
+      "name": "Wizard Headmaster",
+      "n": 6,
+      "signature": [
+        {
+          "card": "Wormtongue",
+          "lift": 23.0,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Rudolph the Red",
+          "lift": 17.2,
+          "freq": 3,
+          "n": 6
+        },
+        {
+          "card": "Moppet",
+          "lift": 15.3,
+          "freq": 2,
+          "n": 6
+        },
+        {
+          "card": "Prospero",
+          "lift": 14.4,
+          "freq": 5,
+          "n": 6
+        },
+        {
+          "card": "Nightshade",
+          "lift": 10.5,
+          "freq": 5,
+          "n": 6
+        },
+        {
+          "card": "Elm Minster",
+          "lift": 10.2,
+          "freq": 4,
+          "n": 6
+        },
+        {
+          "card": "Morgan Le Fae",
+          "lift": 10.2,
+          "freq": 4,
+          "n": 6
+        },
+        {
+          "card": "Fae Familiar",
+          "lift": 7.7,
+          "freq": 3,
+          "n": 6
+        }
+      ],
+      "best12": [
+        {
+          "card": "Chaos",
+          "freq": 6,
+          "n": 6,
+          "pct": 100.0
+        },
+        {
+          "card": "Mirror Mage",
+          "freq": 5,
+          "n": 6,
+          "pct": 83.0
+        },
+        {
+          "card": "Nightshade",
+          "freq": 5,
+          "n": 6,
+          "pct": 83.0
+        },
+        {
+          "card": "Prospero",
+          "freq": 5,
+          "n": 6,
+          "pct": 83.0
+        },
+        {
+          "card": "Calypso",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Elm Minster",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Morgan Le Fae",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Fae Familiar",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Rudolph the Red",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Flopsy",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        },
+        {
+          "card": "Moppet",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Billys",
+          "archetype": "Aladdin",
+          "deck": [
+            "nightshade",
+            "faerie_queen",
+            "mirror_mage",
+            "ace_of_hearts",
+            "wormtongue",
+            "pisces",
+            "chaos",
+            "moppet",
+            "fae_familiar",
+            "sir_francis_drake",
+            "prospero",
+            "flopsy"
+          ]
+        },
+        {
+          "username": "hogehoge",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "mortakon",
+            "mech_a_man",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "the_burninator",
+            "pisces",
+            "chaos",
+            "smug",
+            "snapping_hydra",
+            "flopsy",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "sabataco",
+          "archetype": "Aladdin",
+          "deck": [
+            "morgan_le_fae",
+            "toadie",
+            "calypso",
+            "nightshade",
+            "mirror_mage",
+            "ogre_magi",
+            "elm_minster",
+            "chaos",
+            "moppet",
+            "sir_francis_drake",
+            "prospero",
+            "rudolph_the_red"
+          ]
+        },
+        {
+          "username": "Sank",
+          "archetype": "Mirror Mage",
+          "deck": [
+            "plunder_penny",
+            "morgan_le_fae",
+            "calypso",
+            "nightshade",
+            "genie_of_the_lamp",
+            "mirror_mage",
+            "elm_minster",
+            "chaos",
+            "fae_familiar",
+            "the_fates",
+            "prospero",
+            "rudolph_the_red"
+          ]
+        },
+        {
+          "username": "Terroking",
+          "archetype": "Aladdin",
+          "deck": [
+            "aladdin",
+            "morgan_le_fae",
+            "calypso",
+            "nightshade",
+            "mirror_mage",
+            "elm_minster",
+            "mysterio_the_great_and_powerful",
+            "chaos",
+            "faerie_godfather",
+            "prospero",
+            "rollo",
+            "crystal"
+          ]
+        },
+        {
+          "username": "zathras",
+          "archetype": "Aladdin",
+          "deck": [
+            "aladdin",
+            "plunder_penny",
+            "morgan_le_fae",
+            "calypso",
+            "nightshade",
+            "mirror_mage",
+            "elm_minster",
+            "chaos",
+            "fae_familiar",
+            "prospero",
+            "rudolph_the_red",
+            "miss_muffet"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "double_dealer",
+      "name": "Double Dealer",
+      "n": 6,
+      "signature": [
+        {
+          "card": "Caramel",
+          "lift": 11.5,
+          "freq": 3,
+          "n": 6
+        },
+        {
+          "card": "Life Saver",
+          "lift": 11.5,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Dastardly Spirit",
+          "lift": 9.2,
+          "freq": 2,
+          "n": 6
+        },
+        {
+          "card": "Friendly Spirit",
+          "lift": 7.7,
+          "freq": 3,
+          "n": 6
+        },
+        {
+          "card": "Weensy",
+          "lift": 7.1,
+          "freq": 4,
+          "n": 6
+        },
+        {
+          "card": "The Three Chef-Keteers",
+          "lift": 6.3,
+          "freq": 3,
+          "n": 6
+        },
+        {
+          "card": "Nightshade",
+          "lift": 4.2,
+          "freq": 2,
+          "n": 6
+        },
+        {
+          "card": "Faerie Godfather",
+          "lift": 3.8,
+          "freq": 1,
+          "n": 6
+        }
+      ],
+      "best12": [
+        {
+          "card": "Pisces",
+          "freq": 5,
+          "n": 6,
+          "pct": 83.0
+        },
+        {
+          "card": "Cherry Topples",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Weensy",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Caramel",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Chaos",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Friendly Spirit",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "The Three Chef-Keteers",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Wink",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Dastardly Spirit",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        },
+        {
+          "card": "Flopsy",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Flying Galaxy",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "shanty",
+            "nightshade",
+            "the_burninator",
+            "pisces",
+            "wink",
+            "flopsy",
+            "wormscale_tinkerer",
+            "rollo",
+            "weensy",
+            "mr_fox",
+            "miseria",
+            "the_huntsman"
+          ]
+        },
+        {
+          "username": "HollyCreep",
+          "archetype": "Aladdin",
+          "deck": [
+            "nightshade",
+            "pisces",
+            "chaos",
+            "flopsy",
+            "gummy_wyrm",
+            "caramel",
+            "cherry_topples",
+            "weensy",
+            "licorice",
+            "dastardly_spirit",
+            "friendly_spirit",
+            "the_three_chef_keteers"
+          ]
+        },
+        {
+          "username": "Nokaut",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "wink",
+            "faerie_godfather",
+            "cotton_candy_dandy",
+            "caramel",
+            "twilight_sprinkles",
+            "pixie",
+            "cherry_topples",
+            "the_candy_cane_crook",
+            "chubby_cheep",
+            "gingerbread_witch",
+            "weensy",
+            "the_three_chef_keteers"
+          ]
+        },
+        {
+          "username": "RadChad",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "the_burninator",
+            "pisces",
+            "chaos",
+            "smug",
+            "wormscale_tinkerer",
+            "netherbinder",
+            "rollo",
+            "weensy",
+            "mr_fox",
+            "miseria",
+            "the_butcher"
+          ]
+        },
+        {
+          "username": "UrBoyJC",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "pisces",
+            "chaos",
+            "wormscale_tinkerer",
+            "gummy_wyrm",
+            "pixie",
+            "life_saver",
+            "kool_wip",
+            "cherry_topples",
+            "the_candy_cane_crook",
+            "dastardly_spirit",
+            "friendly_spirit",
+            "the_three_chef_keteers"
+          ]
+        },
+        {
+          "username": "Vulaas",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "mechanical_dragon",
+            "ace_of_hearts",
+            "glory_seeker",
+            "the_burninator",
+            "pisces",
+            "wink",
+            "wormscale_tinkerer",
+            "caramel",
+            "cherry_topples",
+            "lance_a_little",
+            "gingerbread_witch",
+            "friendly_spirit"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nathaniel_drake",
+      "name": "Nathaniel Drake",
+      "n": 6,
+      "signature": [
+        {
+          "card": "Toto",
+          "lift": 9.6,
+          "freq": 5,
+          "n": 6
+        },
+        {
+          "card": "Pretty Patissier",
+          "lift": 7.7,
+          "freq": 3,
+          "n": 6
+        },
+        {
+          "card": "Lance A Little",
+          "lift": 4.3,
+          "freq": 6,
+          "n": 6
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "lift": 4.1,
+          "freq": 3,
+          "n": 6
+        },
+        {
+          "card": "Barbosa",
+          "lift": 3.8,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Candy Apple Tree",
+          "lift": 3.8,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Catatouille",
+          "lift": 3.8,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Netherbinder",
+          "lift": 3.8,
+          "freq": 2,
+          "n": 6
+        }
+      ],
+      "best12": [
+        {
+          "card": "Lance A Little",
+          "freq": 6,
+          "n": 6,
+          "pct": 100.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 6,
+          "n": 6,
+          "pct": 100.0
+        },
+        {
+          "card": "Toto",
+          "freq": 5,
+          "n": 6,
+          "pct": 83.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 5,
+          "n": 6,
+          "pct": 83.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Flopsy",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Pretty Patissier",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "The Butcher",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Frozen_Dread",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "toto",
+            "mech_a_man",
+            "maverick_icewing",
+            "the_burninator",
+            "flopsy",
+            "wormscale_tinkerer",
+            "lance_a_little",
+            "rollo",
+            "mr_fox",
+            "miseria",
+            "the_butcher"
+          ]
+        },
+        {
+          "username": "Header",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "toto",
+            "flopsy",
+            "wormscale_tinkerer",
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "jaws",
+            "lance_a_little",
+            "weensy",
+            "miseria",
+            "barbosa",
+            "crystal",
+            "pretty_patissier"
+          ]
+        },
+        {
+          "username": "helpmeasap",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "toto",
+            "the_burninator",
+            "flopsy",
+            "wormscale_tinkerer",
+            "knight_of_the_holy_cane",
+            "keeb",
+            "cherry_topples",
+            "lance_a_little",
+            "netherbinder",
+            "mr_fox",
+            "miseria",
+            "pretty_patissier"
+          ]
+        },
+        {
+          "username": "omok23",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "toto",
+            "maverick_icewing",
+            "gummy_wyrm",
+            "knight_of_the_holy_cane",
+            "jaws",
+            "candy_apple_tree",
+            "catatouille",
+            "lance_a_little",
+            "netherbinder",
+            "rollo",
+            "miseria",
+            "pretty_patissier"
+          ]
+        },
+        {
+          "username": "viralpanacea",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "toto",
+            "maverick_icewing",
+            "wormscale_tinkerer",
+            "viscount_chocolat",
+            "cotton_candy_dandy",
+            "pixie",
+            "lance_a_little",
+            "rollo",
+            "oracle_of_fortunes",
+            "miseria",
+            "the_huntsman",
+            "the_butcher"
+          ]
+        },
+        {
+          "username": "woodabe",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "ace_of_hearts",
+            "glory_seeker",
+            "guinevere",
+            "the_burninator",
+            "pisces",
+            "wormscale_tinkerer",
+            "lance_a_little",
+            "rollo",
+            "mr_fox",
+            "miseria",
+            "the_butcher"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lightning_thief",
+      "name": "Lightning Thief",
+      "n": 5,
+      "signature": [
+        {
+          "card": "Sabrina",
+          "lift": 13.8,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Mimic",
+          "lift": 6.9,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "The Fates",
+          "lift": 6.1,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Mechanical Dragon",
+          "lift": 4.9,
+          "freq": 5,
+          "n": 5
+        },
+        {
+          "card": "Genie of the Lamp",
+          "lift": 4.6,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Prospero",
+          "lift": 3.4,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Sinbad",
+          "lift": 3.4,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Thunder of Dragons",
+          "lift": 3.4,
+          "freq": 2,
+          "n": 5
+        }
+      ],
+      "best12": [
+        {
+          "card": "Maverick & Icewing",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "Mechanical Dragon",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "Ace of Hearts",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Pisces",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Sir Francis Drake",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "The Fates",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Thunder of Dragons",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Cookar",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "mechanical_dragon",
+            "the_burninator",
+            "pisces",
+            "chaos",
+            "sir_francis_drake",
+            "the_fates",
+            "flopsy",
+            "wormscale_tinkerer",
+            "netherbinder",
+            "sunflare_glider",
+            "mr_fox"
+          ]
+        },
+        {
+          "username": "Fouxdufafa",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "mechanical_dragon",
+            "calypso",
+            "nightshade",
+            "genie_of_the_lamp",
+            "elm_minster",
+            "the_burninator",
+            "sinbad",
+            "prospero",
+            "snapping_hydra",
+            "wormscale_tinkerer",
+            "miseria"
+          ]
+        },
+        {
+          "username": "Frankquith",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "mimic",
+            "ace_of_hearts",
+            "combustible_dragon",
+            "scale_a_tor",
+            "the_burninator",
+            "thunder_of_dragons",
+            "sir_francis_drake",
+            "wormscale_tinkerer",
+            "miseria"
+          ]
+        },
+        {
+          "username": "Lunco",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "mechanical_dragon",
+            "wicked_witch",
+            "ace_of_hearts",
+            "the_burninator",
+            "thunder_of_dragons",
+            "pisces",
+            "wormscale_tinkerer",
+            "rollo",
+            "mr_fox",
+            "miseria",
+            "the_butcher"
+          ]
+        },
+        {
+          "username": "mudblood",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "mechanical_dragon",
+            "mirror_mage",
+            "ace_of_hearts",
+            "the_burninator",
+            "sabrina",
+            "pisces",
+            "wink",
+            "the_fates",
+            "wormscale_tinkerer",
+            "cotton_candy_dandy",
+            "rollo"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gloria_clementine",
+      "name": "Gloria Clementine",
+      "n": 5,
+      "signature": [
+        {
+          "card": "The Huntsman",
+          "lift": 6.6,
+          "freq": 5,
+          "n": 5
+        },
+        {
+          "card": "Weensy",
+          "lift": 4.2,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Oracle of Fortunes",
+          "lift": 3.4,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Ace of Hearts",
+          "lift": 3.0,
+          "freq": 4,
+          "n": 5
+        },
+        {
+          "card": "Combustible Dragon",
+          "lift": 2.5,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Doopity Doo",
+          "lift": 2.5,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Guinevere",
+          "lift": 2.5,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Smug",
+          "lift": 2.5,
+          "freq": 2,
+          "n": 5
+        }
+      ],
+      "best12": [
+        {
+          "card": "Miseria",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "The Huntsman",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "Ace of Hearts",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Lance A Little",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Oracle of Fortunes",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Pisces",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        }
+      ],
+      "players": [
+        {
+          "username": "IIInfinity",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "smug",
+            "wormscale_tinkerer",
+            "viscount_chocolat",
+            "cotton_candy_dandy",
+            "gummy_wyrm",
+            "twilight_sprinkles",
+            "lance_a_little",
+            "weensy",
+            "mr_fox",
+            "doopity_doo",
+            "miseria",
+            "the_huntsman"
+          ]
+        },
+        {
+          "username": "sacakewalk",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "ace_of_hearts",
+            "combustible_dragon",
+            "guinevere",
+            "the_burninator",
+            "pisces",
+            "wormscale_tinkerer",
+            "rollo",
+            "mr_fox",
+            "miseria",
+            "the_huntsman",
+            "the_butcher"
+          ]
+        },
+        {
+          "username": "teyi111",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "ace_of_hearts",
+            "guinevere",
+            "the_burninator",
+            "sir_francis_drake",
+            "flopsy",
+            "wormscale_tinkerer",
+            "rollo",
+            "oracle_of_fortunes",
+            "mr_fox",
+            "miseria",
+            "the_huntsman"
+          ]
+        },
+        {
+          "username": "TheDarkLink",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "wicked_witch",
+            "ace_of_hearts",
+            "the_burninator",
+            "pisces",
+            "wink",
+            "wormscale_tinkerer",
+            "rollo",
+            "mr_fox",
+            "miseria",
+            "the_huntsman",
+            "the_butcher"
+          ]
+        },
+        {
+          "username": "Varron",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "ace_of_hearts",
+            "the_burninator",
+            "sir_francis_drake",
+            "smug",
+            "wormscale_tinkerer",
+            "lance_a_little",
+            "rollo",
+            "oracle_of_fortunes",
+            "weensy",
+            "mr_fox",
+            "miseria",
+            "the_huntsman"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sorcerous_serena",
+      "name": "Sorcerous Serena",
+      "n": 4,
+      "signature": [
+        {
+          "card": "Life Saver",
+          "lift": 17.2,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Candy Claws",
+          "lift": 11.5,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Genie of the Lamp",
+          "lift": 11.5,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "The Fates",
+          "lift": 7.7,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Doopity Doo",
+          "lift": 6.3,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Viscount Chocolat",
+          "lift": 6.3,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Faerie Godfather",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Cotton Candy Dandy",
+          "lift": 4.9,
+          "freq": 2,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "Cherry Topples",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Calypso",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Candy Claws",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Chaos",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Cotton Candy Dandy",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Doopity Doo",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Genie of the Lamp",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Kool Wip",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Lollipop Faerie",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Mirror Mage",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Pixie",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        }
+      ],
+      "players": [
+        {
+          "username": "adu",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "viscount_chocolat",
+            "twilight_sprinkles",
+            "pixie",
+            "life_saver",
+            "kool_wip",
+            "cherry_topples",
+            "the_candy_cane_crook",
+            "the_sour_patch_kid",
+            "candy_claws",
+            "gingerbread_witch",
+            "doopity_doo",
+            "the_three_chef_keteers"
+          ]
+        },
+        {
+          "username": "Longshot27",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "calypso",
+            "genie_of_the_lamp",
+            "mirror_mage",
+            "elm_minster",
+            "chaos",
+            "fae_familiar",
+            "the_fates",
+            "faerie_godfather",
+            "cotton_candy_dandy",
+            "chubby_cheep",
+            "miseria",
+            "crystal"
+          ]
+        },
+        {
+          "username": "LordLoss",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "viscount_chocolat",
+            "cotton_candy_dandy",
+            "pixie",
+            "keeb",
+            "jaws",
+            "kool_wip",
+            "cherry_topples",
+            "lollipop_faerie",
+            "lemonhead",
+            "candy_claws",
+            "licorice",
+            "doopity_doo"
+          ]
+        },
+        {
+          "username": "LSV",
+          "archetype": "Aladdin",
+          "deck": [
+            "morgan_le_fae",
+            "calypso",
+            "nightshade",
+            "genie_of_the_lamp",
+            "mirror_mage",
+            "chaos",
+            "sir_francis_drake",
+            "the_fates",
+            "wormscale_tinkerer",
+            "cherry_topples",
+            "lollipop_faerie",
+            "crystal"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "the_candyman",
+      "name": "The Candyman",
+      "n": 4,
+      "signature": [
+        {
+          "card": "The Blue Faerie",
+          "lift": 34.5,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Barrel of Monkeys",
+          "lift": 17.2,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Jumping Jelly Beans",
+          "lift": 17.2,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Jelly-ton",
+          "lift": 14.8,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "The Sour Patch Kid",
+          "lift": 10.6,
+          "freq": 4,
+          "n": 4
+        },
+        {
+          "card": "Doopity Doo",
+          "lift": 9.4,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Keeb",
+          "lift": 7.7,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Gingerbread Witch",
+          "lift": 7.4,
+          "freq": 3,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "The Sour Patch Kid",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Cherry Topples",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Doopity Doo",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Gingerbread Witch",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Jelly-ton",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Kool Wip",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Lollipop Faerie",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "The Candy Cane Crook",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Cotton Candy Dandy",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Gummy Wyrm",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Keeb",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Briguy",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "wormscale_tinkerer",
+            "viscount_chocolat",
+            "cotton_candy_dandy",
+            "twilight_sprinkles",
+            "pixie",
+            "kool_wip",
+            "cherry_topples",
+            "the_candy_cane_crook",
+            "the_sour_patch_kid",
+            "gingerbread_witch",
+            "jelly_ton",
+            "doopity_doo"
+          ]
+        },
+        {
+          "username": "Metteagle",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "viscount_chocolat",
+            "gummy_wyrm",
+            "pixie",
+            "frosting_dragon",
+            "kool_wip",
+            "candy_apple_tree",
+            "the_candy_cane_crook",
+            "the_sour_patch_kid",
+            "lollipop_faerie",
+            "jelly_ton",
+            "doopity_doo",
+            "miseria"
+          ]
+        },
+        {
+          "username": "rxxi",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "barrel_of_monkeys",
+            "knight_of_the_holy_cane",
+            "keeb",
+            "jumping_jelly_beans",
+            "cherry_topples",
+            "the_sour_patch_kid",
+            "chubby_cheep",
+            "lollipop_faerie",
+            "lemonhead",
+            "gingerbread_witch",
+            "the_blue_faerie",
+            "pretty_patissier"
+          ]
+        },
+        {
+          "username": "Slimey",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "cotton_candy_dandy",
+            "gummy_wyrm",
+            "knight_of_the_holy_cane",
+            "keeb",
+            "kool_wip",
+            "cherry_topples",
+            "the_candy_cane_crook",
+            "the_sour_patch_kid",
+            "lollipop_faerie",
+            "gingerbread_witch",
+            "jelly_ton",
+            "doopity_doo"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "frowny_the_clown",
+      "name": "Frowny the Clown",
+      "n": 4,
+      "signature": [
+        {
+          "card": "Ghoulade Man",
+          "lift": 34.5,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Jelly-ton",
+          "lift": 9.9,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Pixie",
+          "lift": 6.5,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "The Three Chef-Keteers",
+          "lift": 6.3,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Candy Apple Tree",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Catatouille",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Licorice",
+          "lift": 5.8,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Lollipop Faerie",
+          "lift": 5.8,
+          "freq": 3,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "Cherry Topples",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Lollipop Faerie",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Pixie",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Jelly-ton",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Licorice",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "The Sour Patch Kid",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "The Three Chef-Keteers",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        }
+      ],
+      "players": [
+        {
+          "username": "clandestine07",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "maverick_icewing",
+            "daedalus",
+            "snapping_hydra",
+            "wormscale_tinkerer",
+            "miss_muffet",
+            "cherry_topples",
+            "the_sour_patch_kid",
+            "lollipop_faerie",
+            "mr_fox",
+            "doopity_doo",
+            "miseria"
+          ]
+        },
+        {
+          "username": "Jasperov",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "wormscale_tinkerer",
+            "twilight_sprinkles",
+            "pixie",
+            "cherry_topples",
+            "the_candy_cane_crook",
+            "the_sour_patch_kid",
+            "chubby_cheep",
+            "lollipop_faerie",
+            "jelly_ton",
+            "licorice",
+            "the_three_chef_keteers",
+            "pretty_patissier"
+          ]
+        },
+        {
+          "username": "luckyalien",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "aladdin",
+            "ghoulade_man",
+            "twilight_sprinkles",
+            "pixie",
+            "keeb",
+            "candy_apple_tree",
+            "catatouille",
+            "lollipop_faerie",
+            "jelly_ton",
+            "weensy",
+            "licorice",
+            "the_three_chef_keteers"
+          ]
+        },
+        {
+          "username": "SkyBreaker",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "the_burninator",
+            "chaos",
+            "sir_francis_drake",
+            "wormscale_tinkerer",
+            "gummy_wyrm",
+            "pixie",
+            "frosting_dragon",
+            "cherry_topples",
+            "sunflare_glider",
+            "mr_fox",
+            "miseria"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sweet_tooth",
+      "name": "Sweet Tooth",
+      "n": 4,
+      "signature": [
+        {
+          "card": "Chubby Bunny",
+          "lift": 34.5,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Jumping Jelly Beans",
+          "lift": 17.2,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Cotton Candy Dandy",
+          "lift": 9.9,
+          "freq": 4,
+          "n": 4
+        },
+        {
+          "card": "Lemonhead",
+          "lift": 9.9,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "The Three Chef-Keteers",
+          "lift": 9.4,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "The Sour Patch Kid",
+          "lift": 8.0,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Gingerbread Witch",
+          "lift": 7.4,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Lollipop Faerie",
+          "lift": 5.8,
+          "freq": 3,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "Cotton Candy Dandy",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Gingerbread Witch",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Kool Wip",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Lollipop Faerie",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "The Sour Patch Kid",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "The Three Chef-Keteers",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Cherry Topples",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Chubby Bunny",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Gummy Wyrm",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Lemonhead",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 1,
+          "n": 4,
+          "pct": 25.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Ello",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "viscount_chocolat",
+            "cotton_candy_dandy",
+            "jaws",
+            "kool_wip",
+            "cherry_topples",
+            "the_sour_patch_kid",
+            "lollipop_faerie",
+            "lemonhead",
+            "gingerbread_witch",
+            "licorice",
+            "doopity_doo",
+            "the_three_chef_keteers"
+          ]
+        },
+        {
+          "username": "Godfrey1126",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "cotton_candy_dandy",
+            "twilight_sprinkles",
+            "keeb",
+            "kool_wip",
+            "cherry_topples",
+            "the_candy_cane_crook",
+            "the_sour_patch_kid",
+            "lollipop_faerie",
+            "gingerbread_witch",
+            "chubby_bunny",
+            "jelly_ton",
+            "the_three_chef_keteers"
+          ]
+        },
+        {
+          "username": "GoodDigestion",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "mirror_mage",
+            "wicked_witch",
+            "the_burninator",
+            "cotton_candy_dandy",
+            "gummy_wyrm",
+            "knight_of_the_holy_cane",
+            "frosting_dragon",
+            "weensy",
+            "mr_fox",
+            "miseria",
+            "crystal"
+          ]
+        },
+        {
+          "username": "Melkman",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "cotton_candy_dandy",
+            "gummy_wyrm",
+            "knight_of_the_holy_cane",
+            "jumping_jelly_beans",
+            "kool_wip",
+            "the_sour_patch_kid",
+            "lollipop_faerie",
+            "lemonhead",
+            "gingerbread_witch",
+            "chubby_bunny",
+            "the_three_chef_keteers",
+            "pretty_patissier"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "candy_pandy",
+      "name": "Candy Pandy",
+      "n": 4,
+      "signature": [
+        {
+          "card": "Jaws",
+          "lift": 8.0,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Keeb",
+          "lift": 7.7,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Chubby Cheep",
+          "lift": 6.9,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Doopity Doo",
+          "lift": 6.3,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Candy Claws",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Caramel",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Frosting Dragon",
+          "lift": 5.8,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "The Candy Cane Crook",
+          "lift": 5.8,
+          "freq": 3,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "Lance A Little",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Jaws",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Kool Wip",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "The Candy Cane Crook",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Twilight Sprinkles",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Cherry Topples",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Chubby Cheep",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Doopity Doo",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Frosting Dragon",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Keeb",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Estanislau",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "frosting_dragon",
+            "kool_wip",
+            "cherry_topples",
+            "lance_a_little",
+            "lollipop_faerie",
+            "gingerbread_witch",
+            "rollo",
+            "mr_fox",
+            "doopity_doo",
+            "miseria",
+            "the_butcher",
+            "crystal"
+          ]
+        },
+        {
+          "username": "EziBakeRoflCake",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "keeb",
+            "jaws",
+            "frosting_dragon",
+            "kool_wip",
+            "cherry_topples",
+            "the_candy_cane_crook",
+            "lance_a_little",
+            "rollo",
+            "miseria",
+            "the_butcher"
+          ]
+        },
+        {
+          "username": "Quiddity",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "the_burninator",
+            "sir_francis_drake",
+            "wormscale_tinkerer",
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "jaws",
+            "the_candy_cane_crook",
+            "lance_a_little",
+            "chubby_cheep",
+            "lollipop_faerie",
+            "miseria",
+            "pretty_patissier"
+          ]
+        },
+        {
+          "username": "SirMordred",
+          "archetype": "Cherry Topples",
+          "deck": [
+            "viscount_chocolat",
+            "caramel",
+            "twilight_sprinkles",
+            "keeb",
+            "jaws",
+            "kool_wip",
+            "the_candy_cane_crook",
+            "lance_a_little",
+            "chubby_cheep",
+            "candy_claws",
+            "doopity_doo",
+            "miseria"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "this_little_piggie",
+      "name": "This Little Piggie",
+      "n": 4,
+      "signature": [
+        {
+          "card": "The Rat King",
+          "lift": 11.5,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Moonshadow",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Don Quixote",
+          "lift": 4.9,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Guinevere",
+          "lift": 4.7,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Pisces",
+          "lift": 4.5,
+          "freq": 4,
+          "n": 4
+        },
+        {
+          "card": "Hephaestus",
+          "lift": 4.3,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Sinbad",
+          "lift": 4.3,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Blackbeard",
+          "lift": 3.1,
+          "freq": 1,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "Pisces",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Ace of Hearts",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Smug",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "The Butcher",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Fafner",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "toto",
+            "don_quixote",
+            "ace_of_hearts",
+            "guinevere",
+            "the_burninator",
+            "pisces",
+            "sir_francis_drake",
+            "smug",
+            "wormscale_tinkerer",
+            "rollo",
+            "miseria"
+          ]
+        },
+        {
+          "username": "Mikeyo",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "shanty",
+            "tsarmina_the_tyrant",
+            "innkeeper",
+            "blackbeard",
+            "moonshadow",
+            "pisces",
+            "wink",
+            "sinbad",
+            "the_rat_king",
+            "mr_fox",
+            "the_huntsman"
+          ]
+        },
+        {
+          "username": "RayWanderer",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "ace_of_hearts",
+            "guinevere",
+            "the_burninator",
+            "pisces",
+            "smug",
+            "wormscale_tinkerer",
+            "rollo",
+            "mr_fox",
+            "miseria",
+            "the_butcher",
+            "crystal"
+          ]
+        },
+        {
+          "username": "tretherio",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "wicked_witch",
+            "ace_of_hearts",
+            "guinevere",
+            "hephaestus",
+            "the_burninator",
+            "pisces",
+            "snapping_hydra",
+            "wormscale_tinkerer",
+            "rollo",
+            "mr_fox",
+            "the_butcher"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mira",
+      "name": "Mira",
+      "n": 4,
+      "signature": [
+        {
+          "card": "Fun Gal",
+          "lift": 34.5,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Leapfrog",
+          "lift": 34.5,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Faerie Godfather",
+          "lift": 17.2,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Faerie Queen",
+          "lift": 14.8,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Dastardly Spirit",
+          "lift": 13.8,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Toadie",
+          "lift": 11.5,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Don Quixote",
+          "lift": 9.9,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Rudolph the Red",
+          "lift": 8.6,
+          "freq": 1,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "Shanty",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Faerie Godfather",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Faerie Queen",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Flopsy",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Calypso",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Dastardly Spirit",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Don Quixote",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Fae Familiar",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Friendly Spirit",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Fun Gal",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Leapfrog",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Morgan Le Fae",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        }
+      ],
+      "players": [
+        {
+          "username": "FrankBezos",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "plunder_penny",
+            "shanty",
+            "morgan_le_fae",
+            "calypso",
+            "nightshade",
+            "genie_of_the_lamp",
+            "chaos",
+            "wink",
+            "fae_familiar",
+            "rudolph_the_red",
+            "wormscale_tinkerer",
+            "crystal"
+          ]
+        },
+        {
+          "username": "Serenity",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "plunder_penny",
+            "shanty",
+            "morgan_le_fae",
+            "calypso",
+            "nightshade",
+            "faerie_queen",
+            "ogre_magi",
+            "wink",
+            "fae_familiar",
+            "faerie_godfather",
+            "flopsy",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Spiked",
+          "archetype": "Mech-a-Man",
+          "deck": [
+            "shanty",
+            "toadie",
+            "fun_gal",
+            "don_quixote",
+            "faerie_queen",
+            "sailor_moonshine",
+            "pisces",
+            "faerie_godfather",
+            "flopsy",
+            "leapfrog",
+            "dastardly_spirit",
+            "friendly_spirit"
+          ]
+        },
+        {
+          "username": "trhchris1",
+          "archetype": "Mech-a-Man",
+          "deck": [
+            "shanty",
+            "toadie",
+            "fun_gal",
+            "don_quixote",
+            "faerie_queen",
+            "sailor_moonshine",
+            "pisces",
+            "faerie_godfather",
+            "flopsy",
+            "leapfrog",
+            "dastardly_spirit",
+            "friendly_spirit"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "indiana_clones",
+      "name": "Indiana Clones",
+      "n": 3,
+      "signature": [
+        {
+          "card": "Kid Icarus",
+          "lift": 11.5,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Mysterio, the Great and Powerful",
+          "lift": 11.5,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Scale-a-tor",
+          "lift": 6.6,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Hephaestus",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Sinbad",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Thunder of Dragons",
+          "lift": 5.8,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Guinevere",
+          "lift": 4.2,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Smug",
+          "lift": 4.2,
+          "freq": 2,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Maverick & Icewing",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Ace of Hearts",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Pisces",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Scale-a-tor",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Sir Francis Drake",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Smug",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Thunder of Dragons",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Flopsy",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "a duck",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "maverick_icewing",
+            "ace_of_hearts",
+            "mysterio_the_great_and_powerful",
+            "thunder_of_dragons",
+            "kid_icarus",
+            "sinbad",
+            "pirate_prince",
+            "smug",
+            "wormscale_tinkerer",
+            "rollo",
+            "mr_fox"
+          ]
+        },
+        {
+          "username": "BustopherJones",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "toto",
+            "maverick_icewing",
+            "guinevere",
+            "hephaestus",
+            "scale_a_tor",
+            "the_burninator",
+            "thunder_of_dragons",
+            "pisces",
+            "sir_francis_drake",
+            "flopsy",
+            "wormscale_tinkerer",
+            "mr_fox"
+          ]
+        },
+        {
+          "username": "Evolivolution",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "ace_of_hearts",
+            "guinevere",
+            "scale_a_tor",
+            "pisces",
+            "sir_francis_drake",
+            "smug",
+            "wormscale_tinkerer",
+            "gummy_wyrm",
+            "frosting_dragon"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "silversmith",
+      "name": "Silversmith",
+      "n": 3,
+      "signature": [
+        {
+          "card": "Ogre Magi",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Mortakon",
+          "lift": 6.6,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "The Fates",
+          "lift": 5.1,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Sunflare Glider",
+          "lift": 4.6,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Combustible Dragon",
+          "lift": 4.2,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Smug",
+          "lift": 4.2,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Wicked Witch",
+          "lift": 4.2,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Pirate Prince",
+          "lift": 3.8,
+          "freq": 1,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Maverick & Icewing",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Ace of Hearts",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Mech-a-Man",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Smug",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Calypso",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Chaos",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Combustible Dragon",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "ForKrin",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "mechanical_dragon",
+            "ace_of_hearts",
+            "guinevere",
+            "the_burninator",
+            "wormscale_tinkerer",
+            "rollo",
+            "sunflare_glider",
+            "mr_fox",
+            "miseria",
+            "the_butcher",
+            "crystal"
+          ]
+        },
+        {
+          "username": "jasobaa",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "shanty",
+            "mech_a_man",
+            "maverick_icewing",
+            "calypso",
+            "ogre_magi",
+            "chaos",
+            "the_fates",
+            "pirate_prince",
+            "smug",
+            "flopsy",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "SussySenpai",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "mortakon",
+            "mech_a_man",
+            "maverick_icewing",
+            "wicked_witch",
+            "ace_of_hearts",
+            "combustible_dragon",
+            "the_burninator",
+            "pisces",
+            "smug",
+            "wormscale_tinkerer",
+            "rollo",
+            "mr_fox"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "charlie_pots",
+      "name": "Charlie Pots",
+      "n": 3,
+      "signature": [
+        {
+          "card": "Catatouille",
+          "lift": 15.3,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Miss Muffet",
+          "lift": 13.1,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Fae Familiar",
+          "lift": 10.2,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Pixie",
+          "lift": 8.6,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Daedalus",
+          "lift": 8.4,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Glory Seeker",
+          "lift": 8.4,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "The Three Chef-Keteers",
+          "lift": 8.4,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Jaws",
+          "lift": 7.1,
+          "freq": 2,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Pixie",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Catatouille",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Chaos",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Daedalus",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Fae Familiar",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Glory Seeker",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Jaws",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Miss Muffet",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "The Three Chef-Keteers",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        }
+      ],
+      "players": [
+        {
+          "username": "JoeOnToast",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "glory_seeker",
+            "daedalus",
+            "chaos",
+            "fae_familiar",
+            "wormscale_tinkerer",
+            "miss_muffet",
+            "knight_of_the_holy_cane",
+            "pixie",
+            "jaws",
+            "catatouille",
+            "the_three_chef_keteers"
+          ]
+        },
+        {
+          "username": "Justini12",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "mechanical_dragon",
+            "wormscale_tinkerer",
+            "twilight_sprinkles",
+            "pixie",
+            "keeb",
+            "frosting_dragon",
+            "kool_wip",
+            "the_candy_cane_crook",
+            "lollipop_faerie",
+            "oracle_of_fortunes",
+            "mr_fox",
+            "miseria"
+          ]
+        },
+        {
+          "username": "Tsynapse",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "glory_seeker",
+            "daedalus",
+            "chaos",
+            "fae_familiar",
+            "wormscale_tinkerer",
+            "miss_muffet",
+            "knight_of_the_holy_cane",
+            "pixie",
+            "jaws",
+            "catatouille",
+            "the_three_chef_keteers"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lady_of_the_lake",
+      "name": "Lady of the Lake",
+      "n": 3,
+      "signature": [
+        {
+          "card": "Faerie Queen",
+          "lift": 6.6,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Hephaestus",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Oracle of Fortunes",
+          "lift": 5.8,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Crystal",
+          "lift": 4.8,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Sunflare Glider",
+          "lift": 4.6,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "The Huntsman",
+          "lift": 4.4,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Frosting Dragon",
+          "lift": 3.8,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Weensy",
+          "lift": 3.5,
+          "freq": 1,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Maverick & Icewing",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Lance A Little",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Mechanical Dragon",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Oracle of Fortunes",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "The Huntsman",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Faerie Queen",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "karfast",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "wormscale_tinkerer",
+            "lance_a_little",
+            "rollo",
+            "oracle_of_fortunes",
+            "sunflare_glider",
+            "mr_fox",
+            "miseria",
+            "the_huntsman",
+            "crystal"
+          ]
+        },
+        {
+          "username": "Komodo",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "maverick_icewing",
+            "faerie_queen",
+            "the_burninator",
+            "wormscale_tinkerer",
+            "rollo",
+            "weensy",
+            "mr_fox",
+            "miseria",
+            "the_huntsman",
+            "the_butcher",
+            "crystal"
+          ]
+        },
+        {
+          "username": "Thenian",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "maverick_icewing",
+            "mechanical_dragon",
+            "hephaestus",
+            "sir_francis_drake",
+            "wormscale_tinkerer",
+            "gummy_wyrm",
+            "frosting_dragon",
+            "lance_a_little",
+            "rollo",
+            "oracle_of_fortunes",
+            "mr_fox",
+            "miseria"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zheng_yi_sao",
+      "name": "Zheng Yi Sao",
+      "n": 3,
+      "signature": [
+        {
+          "card": "Weird Beard",
+          "lift": 34.5,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Jelly Roger",
+          "lift": 23.0,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Pirate King",
+          "lift": 17.2,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Sailor Moonshine",
+          "lift": 13.8,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Pirate Prince",
+          "lift": 11.5,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Shanty",
+          "lift": 8.6,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Calypso",
+          "lift": 8.1,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Ogre Magi",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Aladdin",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Calypso",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Jelly Roger",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Mech-a-Man",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Pirate King",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Pirate Prince",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Sailor Moonshine",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Shanty",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Sir Francis Drake",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Weird Beard",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Ace of Hearts",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Innkeeper",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Mikokoloko",
+          "archetype": "Wormscale Tinkerer",
+          "deck": [
+            "aladdin",
+            "shanty",
+            "mech_a_man",
+            "jelly_roger",
+            "calypso",
+            "ace_of_hearts",
+            "sailor_moonshine",
+            "sir_francis_drake",
+            "pirate_king",
+            "pirate_prince",
+            "weird_beard",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "smallchild1",
+          "archetype": "Aladdin",
+          "deck": [
+            "aladdin",
+            "plunder_penny",
+            "shanty",
+            "mech_a_man",
+            "jelly_roger",
+            "calypso",
+            "ogre_magi",
+            "sailor_moonshine",
+            "sir_francis_drake",
+            "pirate_king",
+            "pirate_prince",
+            "weird_beard"
+          ]
+        },
+        {
+          "username": "Sn0_Man",
+          "archetype": "Aladdin",
+          "deck": [
+            "aladdin",
+            "shanty",
+            "mech_a_man",
+            "jelly_roger",
+            "calypso",
+            "innkeeper",
+            "sailor_moonshine",
+            "sinbad",
+            "sir_francis_drake",
+            "pirate_king",
+            "pirate_prince",
+            "weird_beard"
+          ]
+        }
+      ]
+    }
+  ],
+  "top_cards": [
+    {
+      "name": "Wormscale Tinkerer",
+      "freq": 85,
+      "pct": 61.6
+    },
+    {
+      "name": "Maverick & Icewing",
+      "freq": 66,
+      "pct": 47.8
+    },
+    {
+      "name": "Miseria",
+      "freq": 59,
+      "pct": 42.8
+    },
+    {
+      "name": "Mr. Fox",
+      "freq": 59,
+      "pct": 42.8
+    },
+    {
+      "name": "The Burninator",
+      "freq": 53,
+      "pct": 38.4
+    },
+    {
+      "name": "Rollo",
+      "freq": 47,
+      "pct": 34.1
+    },
+    {
+      "name": "Aladdin",
+      "freq": 46,
+      "pct": 33.3
+    },
+    {
+      "name": "Sir Francis Drake",
+      "freq": 40,
+      "pct": 29.0
+    },
+    {
+      "name": "Ace of Hearts",
+      "freq": 37,
+      "pct": 26.8
+    },
+    {
+      "name": "Lance A Little",
+      "freq": 32,
+      "pct": 23.2
+    },
+    {
+      "name": "Pisces",
+      "freq": 31,
+      "pct": 22.5
+    },
+    {
+      "name": "Flopsy",
+      "freq": 29,
+      "pct": 21.0
+    },
+    {
+      "name": "Mechanical Dragon",
+      "freq": 28,
+      "pct": 20.3
+    },
+    {
+      "name": "Chaos",
+      "freq": 26,
+      "pct": 18.8
+    },
+    {
+      "name": "Cherry Topples",
+      "freq": 25,
+      "pct": 18.1
+    },
+    {
+      "name": "Mech-a-Man",
+      "freq": 25,
+      "pct": 18.1
+    },
+    {
+      "name": "The Butcher",
+      "freq": 25,
+      "pct": 18.1
+    },
+    {
+      "name": "Guinevere",
+      "freq": 22,
+      "pct": 15.9
+    },
+    {
+      "name": "Smug",
+      "freq": 22,
+      "pct": 15.9
+    },
+    {
+      "name": "The Huntsman",
+      "freq": 21,
+      "pct": 15.2
+    },
+    {
+      "name": "Crystal",
+      "freq": 19,
+      "pct": 13.8
+    },
+    {
+      "name": "Gummy Wyrm",
+      "freq": 19,
+      "pct": 13.8
+    },
+    {
+      "name": "Kool Wip",
+      "freq": 19,
+      "pct": 13.8
+    },
+    {
+      "name": "Twilight Sprinkles",
+      "freq": 19,
+      "pct": 13.8
+    },
+    {
+      "name": "Wink",
+      "freq": 19,
+      "pct": 13.8
+    },
+    {
+      "name": "Lollipop Faerie",
+      "freq": 18,
+      "pct": 13.0
+    },
+    {
+      "name": "The Candy Cane Crook",
+      "freq": 18,
+      "pct": 13.0
+    },
+    {
+      "name": "Calypso",
+      "freq": 17,
+      "pct": 12.3
+    },
+    {
+      "name": "Knight of the Holy Cane",
+      "freq": 17,
+      "pct": 12.3
+    },
+    {
+      "name": "Mirror Mage",
+      "freq": 16,
+      "pct": 11.6
+    }
+  ],
+  "cluster_map": {
+    "Mech-a-Man": "#6e9ec8",
+    "Cherry Topples": "#e87d9e",
+    "Aladdin": "#9e6ec8",
+    "Wormscale Tinkerer": "#c8a96e",
+    "Wink": "#7a7d8a",
+    "Mirror Mage": "#6ec89e"
+  }
+}
