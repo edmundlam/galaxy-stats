@@ -11073,6 +11073,272 @@
       "pct": 12.1
     }
   ],
+  "top_captains": [
+    {
+      "slug": "legend_of_loxley",
+      "name": "Legend of Loxley",
+      "freq": 23,
+      "pct": 8.4
+    },
+    {
+      "slug": "rumpelstiltskin",
+      "name": "Rumpelstiltskin",
+      "freq": 20,
+      "pct": 7.3
+    },
+    {
+      "slug": "toucan_samuel",
+      "name": "Toucan Samuel",
+      "freq": 11,
+      "pct": 4.0
+    },
+    {
+      "slug": "trash_panda",
+      "name": "Trash Panda",
+      "freq": 10,
+      "pct": 3.7
+    },
+    {
+      "slug": "double_dealer",
+      "name": "Double Dealer",
+      "freq": 10,
+      "pct": 3.7
+    },
+    {
+      "slug": "sweet_tooth",
+      "name": "Sweet Tooth",
+      "freq": 9,
+      "pct": 3.3
+    },
+    {
+      "slug": "tajima_patron_of_sweets",
+      "name": "Tajima, Patron of Sweets",
+      "freq": 9,
+      "pct": 3.3
+    },
+    {
+      "slug": "professor_whos_who",
+      "name": "Professor Who's Who",
+      "freq": 8,
+      "pct": 2.9
+    },
+    {
+      "slug": "charlie_pots",
+      "name": "Charlie Pots",
+      "freq": 7,
+      "pct": 2.6
+    },
+    {
+      "slug": "frowny_the_clown",
+      "name": "Frowny the Clown",
+      "freq": 7,
+      "pct": 2.6
+    },
+    {
+      "slug": "thing_in_the_ice",
+      "name": "Thing in the Ice",
+      "freq": 6,
+      "pct": 2.2
+    },
+    {
+      "slug": "jay_sparrow",
+      "name": "Jay Sparrow",
+      "freq": 6,
+      "pct": 2.2
+    },
+    {
+      "slug": "goat_t",
+      "name": "Goat T",
+      "freq": 6,
+      "pct": 2.2
+    },
+    {
+      "slug": "this_little_piggie",
+      "name": "This Little Piggie",
+      "freq": 6,
+      "pct": 2.2
+    },
+    {
+      "slug": "zagreus",
+      "name": "Zagreus",
+      "freq": 5,
+      "pct": 1.8
+    },
+    {
+      "slug": "princess_animall",
+      "name": "Princess Animall",
+      "freq": 5,
+      "pct": 1.8
+    },
+    {
+      "slug": "faker_the_caker_baker",
+      "name": "Faker, the Caker Baker",
+      "freq": 5,
+      "pct": 1.8
+    },
+    {
+      "slug": "jason_of_the_argonauts",
+      "name": "Jason of the Argonauts",
+      "freq": 5,
+      "pct": 1.8
+    },
+    {
+      "slug": "queen_harpolia",
+      "name": "Queen Harpolia",
+      "freq": 4,
+      "pct": 1.5
+    },
+    {
+      "slug": "gokatoo",
+      "name": "Gokatoo",
+      "freq": 4,
+      "pct": 1.5
+    },
+    {
+      "slug": "dorothy",
+      "name": "Dorothy",
+      "freq": 4,
+      "pct": 1.5
+    },
+    {
+      "slug": "romeo",
+      "name": "Romeo",
+      "freq": 4,
+      "pct": 1.5
+    },
+    {
+      "slug": "the_collector",
+      "name": "The Collector",
+      "freq": 4,
+      "pct": 1.5
+    },
+    {
+      "slug": "nathaniel_drake",
+      "name": "Nathaniel Drake",
+      "freq": 4,
+      "pct": 1.5
+    },
+    {
+      "slug": "mr_lamppost",
+      "name": "Mr. Lamppost",
+      "freq": 4,
+      "pct": 1.5
+    },
+    {
+      "slug": "candy_pandy",
+      "name": "Candy Pandy",
+      "freq": 4,
+      "pct": 1.5
+    },
+    {
+      "slug": "sir_galahad",
+      "name": "Sir Galahad",
+      "freq": 4,
+      "pct": 1.5
+    },
+    {
+      "slug": "wizard_headmaster",
+      "name": "Wizard Headmaster",
+      "freq": 4,
+      "pct": 1.5
+    },
+    {
+      "slug": "gloria_clementine",
+      "name": "Gloria Clementine",
+      "freq": 4,
+      "pct": 1.5
+    },
+    {
+      "slug": "mira",
+      "name": "Mira",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "luna_girl",
+      "name": "Luna Girl",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "king_midas",
+      "name": "King Midas",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "hades",
+      "name": "Hades",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "sorcerous_serena",
+      "name": "Sorcerous Serena",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "the_candyman",
+      "name": "The Candyman",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "lightning_thief",
+      "name": "Lightning Thief",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "loki",
+      "name": "Loki",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "charon",
+      "name": "Charon",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "elec_drake",
+      "name": "Elec-Drake",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "dr_agon",
+      "name": "Dr. Agon",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "witches_iii",
+      "name": "Witches, III",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "geppetto",
+      "name": "Geppetto",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "zheng_yi_sao",
+      "name": "Zheng Yi Sao",
+      "freq": 3,
+      "pct": 1.1
+    },
+    {
+      "slug": "skip_the_time_skipper",
+      "name": "Skip, the Time Skipper",
+      "freq": 3,
+      "pct": 1.1
+    }
+  ],
   "cluster_map": {
     "Treasures": "#c8a96e",
     "Candy": "#e87d9e",

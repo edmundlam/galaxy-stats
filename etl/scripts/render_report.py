@@ -319,7 +319,7 @@ function renderBars() {
 }
 function animateBars() {
   requestAnimationFrame(() => {
-    document.querySelectorAll('.bar-fill').forEach(el => { el.style.width = el.dataset.w + '%'; });
+    document.querySelectorAll('#bar-chart-container .bar-fill').forEach(el => { el.style.width = el.dataset.w + '%'; });
   });
 }
 
@@ -337,6 +337,23 @@ function renderCaptainBars() {
       <div class="bar-track"><div class="bar-fill" style="width:0%" data-w="${cap.freq/max*100}"></div></div>
       <div class="bar-pct">${cap.freq}</div>
     </div>`).join('');
+}
+function animateCaptainBars() {
+  requestAnimationFrame(() => {
+    document.querySelectorAll('#captains-chart-container .bar-fill').forEach(el => { el.style.width = el.dataset.w + '%'; });
+  });
+}
+function setupCaptainObserver() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCaptainBars();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  const container = document.getElementById('captains-chart-container');
+  if (container) observer.observe(container);
 }
 
 // CLUSTERS
@@ -544,6 +561,7 @@ function togglePlayer(id) {
 // INIT
 renderBars();
 renderCaptainBars();
+setupCaptainObserver();
 renderClusters();
 renderCaptains();
 if (DATA.cluster_map) {
