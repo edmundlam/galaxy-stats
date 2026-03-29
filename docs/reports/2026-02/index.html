@@ -158,6 +158,11 @@
   .captain-filter { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:20px; align-items:center; }
   .filter-label { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px;
                  text-transform:uppercase; color:var(--muted); margin-right:2px; }
+  .filter-input { font-family:'IBM Plex Mono',monospace; font-size:10px; padding:5px 10px;
+                  background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                  color:var(--text); min-width:150px; transition:border-color 0.15s; }
+  .filter-input:focus { outline:none; border-color:rgba(200,169,110,0.4); }
+  .filter-input::placeholder { color:var(--muted); opacity:0.5; }
   .filter-btn { background:var(--surface2); border:1px solid var(--border); border-radius:2px;
                 font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:1px;
                 text-transform:uppercase; color:var(--muted); padding:5px 10px; cursor:pointer;
@@ -165,7 +170,7 @@
   .filter-btn:hover { color:var(--text); }
   .filter-btn.active { color:var(--accent); border-color:rgba(200,169,110,0.4);
                       background:rgba(200,169,110,0.08); }
-  .captain-card.hidden { display:none; }
+  .captain-card.hidden, .captain-card.search-hidden { display:none; }
 
   @media(max-width:700px){
     header,nav,main{padding-left:16px;padding-right:16px;}
@@ -411,7 +416,9 @@ function renderArchetypeLegend() {
 function renderCaptainFilter() {
   const c = document.getElementById('captain-filter');
   const archetypes = ['all', ...Object.keys(DATA.cluster_map || {})];
-  c.innerHTML = `<span class="filter-label">Show</span>` +
+  c.innerHTML = `<span class="filter-label">Search</span>
+    <input type="text" id="captain-search" class="filter-input" placeholder="Captain name..." oninput="filterCaptainsByText(this.value)">
+    <span class="filter-label" style="margin-left:12px;">Show</span>` +
     archetypes.map(arch => `
       <button class="filter-btn ${arch === 'all' ? 'active' : ''}"
               onclick="filterCaptains('${arch}', this)">
@@ -429,6 +436,19 @@ function filterCaptains(key, btn) {
     } else {
       const archs = card.dataset.archetypes || '';
       card.classList.toggle('hidden', !archs.includes(key));
+    }
+  });
+}
+
+// Filter captains by text search
+function filterCaptainsByText(searchText) {
+  const query = searchText.toLowerCase().trim();
+  document.querySelectorAll('.captain-card').forEach(card => {
+    const captainName = card.querySelector('.captain-name').textContent.toLowerCase();
+    if (!query || captainName.includes(query)) {
+      card.classList.remove('search-hidden');
+    } else {
+      card.classList.add('search-hidden');
     }
   });
 }
