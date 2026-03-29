@@ -228,15 +228,15 @@ def build_slug_to_archetype_map(card_lookup: dict, archetypes_config: dict) -> d
     return slug_to_archetype
 
 
-def reassign_player_archetypes(captains: list, slug_to_archetype: dict) -> list:
-    """Reassign archetype to each player based on deck composition.
+def translate_deck_slugs(captains: list, slug_to_name: dict) -> list:
+    """Translate deck slugs to card names for all players.
 
     Args:
         captains: List of captain dicts with players
-        slug_to_archetype: Mapping of card slugs to archetype labels
+        slug_to_name: Mapping of card slugs to display names
 
     Returns:
-        Updated captains list with reassigned player archetypes
+        Updated captains list with deck names instead of slugs
     """
     updated_captains = []
     for captain in captains:
@@ -247,12 +247,52 @@ def reassign_player_archetypes(captains: list, slug_to_archetype: dict) -> list:
             updated_player = player.copy()
             deck = player.get("deck", [])
 
-            # Count cards from each archetype in this deck
+            # Translate deck slugs to names
+            deck_names = [slug_to_name.get(card_slug, card_slug) for card_slug in deck]
+            updated_player["deck"] = deck_names
+
+            updated_players.append(updated_player)
+
+        updated_captain["players"] = updated_players
+        updated_captains.append(updated_captain)
+
+    return updated_captains
+
+
+def reassign_player_archetypes(captains: list, slug_to_archetype: dict, slug_to_name: dict) -> list:
+    """Reassign archetype to each player based on deck composition.
+       Also translates deck slugs to card names.
+
+    Args:
+        captains: List of captain dicts with players
+        slug_to_archetype: Mapping of card slugs to archetype labels
+        slug_to_name: Mapping of card slugs to display names
+
+    Returns:
+        Updated captains list with reassigned player archetypes and deck names
+    """
+    updated_captains = []
+    for captain in captains:
+        updated_captain = captain.copy()
+        updated_players = []
+
+        for player in captain.get("players", []):
+            updated_player = player.copy()
+            deck = player.get("deck", [])
+
+            # Translate deck slugs to names and count cards from each archetype
             archetype_counts = {}
+            deck_names = []
             for card_slug in deck:
+                card_name = slug_to_name.get(card_slug, card_slug)
+                deck_names.append(card_name)
+
                 archetype = slug_to_archetype.get(card_slug)
                 if archetype:
                     archetype_counts[archetype] = archetype_counts.get(archetype, 0) + 1
+
+            # Update deck with names instead of slugs
+            updated_player["deck"] = deck_names
 
             # Assign to archetype with most cards (or keep "Unknown" if no matches)
             if archetype_counts:
@@ -317,7 +357,7 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
 
         # Build slug -> archetype mapping for reassigning player archetypes
         slug_to_archetype = build_slug_to_archetype_map(card_lookup, archetypes_config)
-        captains = reassign_player_archetypes(auto_analysis["captains"], slug_to_archetype)
+        captains = reassign_player_archetypes(auto_analysis["captains"], slug_to_archetype, slug_to_name)
 
         # Build finalized analysis
         analysis = {
@@ -346,11 +386,14 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
                 ]
             clusters.append(new_cluster)
 
+        # Translate deck slugs to names
+        captains = translate_deck_slugs(auto_analysis["captains"], slug_to_name)
+
         analysis = {
             "event": auto_analysis["event"],
             "total_players": auto_analysis["total_players"],
             "clusters": clusters,
-            "captains": auto_analysis["captains"],
+            "captains": captains,
             "top_cards": auto_analysis["top_cards"],
             "cluster_map": auto_analysis["cluster_map"],
         }
