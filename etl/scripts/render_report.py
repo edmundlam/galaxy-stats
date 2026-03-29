@@ -155,8 +155,12 @@ def get_html_template() -> str:
   .toggle-btn.active { color:var(--accent); border-bottom-color:var(--accent); }
   .toggle-btn:hover:not(.active) { color:var(--text); }
 
-  .view { display:none; padding:16px 20px; }
+  .view { display:none; padding:16px 20px; max-height:420px; overflow-y:auto; scrollbar-width:thin; scrollbar-color:var(--border) var(--surface); }
   .view.active { display:block; }
+  .view::-webkit-scrollbar { width:6px; }
+  .view::-webkit-scrollbar-track { background:var(--surface); }
+  .view::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
+  .view::-webkit-scrollbar-thumb:hover { background:var(--muted); }
 
   /* Signature (lift) rows */
   .lift-rows { display:flex; flex-direction:column; gap:7px; }
