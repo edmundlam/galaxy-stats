@@ -279,7 +279,12 @@ def get_html_template() -> str:
   <!-- CLUSTERS -->
   <div class="section" id="clusters">
     <div class="section-title">Card Archetypes</div>
-    <div class="section-desc">Cards grouped by co-occurrence frequency using hierarchical clustering. Cluster labels are auto-generated from the most frequent card in each group. Review and adjust cluster definitions for future events as needed.</div>
+    <div class="section-desc">Archetype popularity shows which strategic approaches players brought to the event. Card clusters below show specific cards grouped by co-occurrence frequency.</div>
+    <div class="bar-chart" id="archetypes-chart-container"></div>
+    <div class="note">All archetypes shown by player count.</div>
+
+    <div class="section-title" style="margin-top:48px">Card Clusters</div>
+    <div class="section-desc">Cards grouped by co-occurrence frequency using hierarchical clustering. Review and adjust cluster definitions for future events as needed.</div>
     <div class="clusters-grid" id="clusters-container"></div>
     <div class="note">Cards are grouped based on how often they appear together in winning decks. Cluster labels are derived from data.</div>
   </div>
@@ -304,6 +309,7 @@ function showSection(id, btn) {
   document.getElementById(id).classList.add('active');
   btn.classList.add('active');
   if (id === 'top-cards') animateBars();
+  if (id === 'clusters') setTimeout(animateArchetypeBars, 80);
 }
 
 // BAR CHART
@@ -354,6 +360,27 @@ function setupCaptainObserver() {
   }, { threshold: 0.1 });
   const container = document.getElementById('captains-chart-container');
   if (container) observer.observe(container);
+}
+
+// ARCHETYPE BARS
+function renderArchetypeBars() {
+  const c = document.getElementById('archetypes-chart-container');
+  if (!DATA.top_archetypes || DATA.top_archetypes.length === 0) {
+    c.innerHTML = '<div style="color:var(--muted);font-size:12px;">No archetype data available</div>';
+    return;
+  }
+  const max = DATA.top_archetypes[0].freq;
+  c.innerHTML = DATA.top_archetypes.map(arch => `
+    <div class="bar-row">
+      <div class="bar-name">${arch.name}</div>
+      <div class="bar-track"><div class="bar-fill" style="background:${arch.color};width:0%" data-w="${arch.freq/max*100}"></div></div>
+      <div class="bar-pct">${arch.freq}</div>
+    </div>`).join('');
+}
+function animateArchetypeBars() {
+  requestAnimationFrame(() => {
+    document.querySelectorAll('#archetypes-chart-container .bar-fill').forEach(el => { el.style.width = el.dataset.w + '%'; });
+  });
 }
 
 // CLUSTERS
@@ -562,6 +589,7 @@ function togglePlayer(id) {
 renderBars();
 renderCaptainBars();
 setupCaptainObserver();
+renderArchetypeBars();
 renderClusters();
 renderCaptains();
 if (DATA.cluster_map) {

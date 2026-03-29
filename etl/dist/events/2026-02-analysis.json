@@ -5530,6 +5530,38 @@
       "pct": 2.2
     }
   ],
+  "top_archetypes": [
+    {
+      "name": "Treasures",
+      "freq": 61,
+      "pct": 44.2,
+      "color": "#c8a96e"
+    },
+    {
+      "name": "Candy",
+      "freq": 23,
+      "pct": 16.7,
+      "color": "#e87d9e"
+    },
+    {
+      "name": "Mage",
+      "freq": 9,
+      "pct": 6.5,
+      "color": "#9e6ec8"
+    },
+    {
+      "name": "Pirates",
+      "freq": 6,
+      "pct": 4.3,
+      "color": "#6e9ec8"
+    },
+    {
+      "name": "Fringe",
+      "freq": 2,
+      "pct": 1.4,
+      "color": "#5a5d6a"
+    }
+  ],
   "cluster_map": {
     "Treasures": "#c8a96e",
     "Candy": "#e87d9e",

@@ -18,6 +18,7 @@ Output:
 import argparse
 import json
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 
@@ -359,6 +360,29 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
         slug_to_archetype = build_slug_to_archetype_map(card_lookup, archetypes_config)
         captains = reassign_player_archetypes(auto_analysis["captains"], slug_to_archetype, slug_to_name)
 
+        # Build top archetypes list (by popularity)
+        archetype_counts = defaultdict(int)
+        for captain in captains:
+            for player in captain.get("players", []):
+                archetype = player.get("archetype", "Unknown")
+                archetype_counts[archetype] += 1
+
+        top_archetypes = []
+        total_players = auto_analysis["total_players"]
+        for archetype in sorted(archetype_counts.keys(), key=lambda a: -archetype_counts[a]):
+            count = archetype_counts[archetype]
+            # Find the cluster color for this archetype
+            color = next((c["color"] for c in clusters if c["label"] == archetype), "#7a7d8a")
+
+            top_archetypes.append(
+                {
+                    "name": archetype,
+                    "freq": count,
+                    "pct": round(count / total_players * 100, 1) if total_players > 0 else 0,
+                    "color": color,
+                }
+            )
+
         # Build finalized analysis
         analysis = {
             "event": auto_analysis["event"],
@@ -367,6 +391,7 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
             "captains": captains,
             "top_cards": auto_analysis["top_cards"],
             "top_captains": auto_analysis.get("top_captains", []),
+            "top_archetypes": top_archetypes,
             "cluster_map": cluster_map,
         }
     else:
@@ -390,6 +415,29 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
         # Translate deck slugs to names
         captains = translate_deck_slugs(auto_analysis["captains"], slug_to_name)
 
+        # Build top archetypes list (by popularity)
+        archetype_counts = defaultdict(int)
+        for captain in captains:
+            for player in captain.get("players", []):
+                archetype = player.get("archetype", "Unknown")
+                archetype_counts[archetype] += 1
+
+        top_archetypes = []
+        total_players = auto_analysis["total_players"]
+        for archetype in sorted(archetype_counts.keys(), key=lambda a: -archetype_counts[a]):
+            count = archetype_counts[archetype]
+            # Find the cluster color for this archetype
+            color = next((c["color"] for c in clusters if c["label"] == archetype), "#7a7d8a")
+
+            top_archetypes.append(
+                {
+                    "name": archetype,
+                    "freq": count,
+                    "pct": round(count / total_players * 100, 1) if total_players > 0 else 0,
+                    "color": color,
+                }
+            )
+
         analysis = {
             "event": auto_analysis["event"],
             "total_players": auto_analysis["total_players"],
@@ -397,6 +445,7 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
             "captains": captains,
             "top_cards": auto_analysis["top_cards"],
             "top_captains": auto_analysis.get("top_captains", []),
+            "top_archetypes": top_archetypes,
             "cluster_map": auto_analysis["cluster_map"],
         }
 
