@@ -38,7 +38,8 @@
   .report-card:hover { border-color:var(--accent); transform:translateY(-2px); }
   .report-card.latest::before { content:'LATEST'; position:absolute; top:0; right:0; background:var(--accent); color:var(--bg); font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:2px; padding:4px 10px; border-bottom-left-radius:4px; font-weight:500; }
   .report-card.preliminary::before { content:'PRELIMINARY'; position:absolute; top:0; right:0; background:var(--muted); color:var(--bg); font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:2px; padding:4px 10px; border-bottom-left-radius:4px; font-weight:500; }
-  .report-title { font-family:'Playfair Display',serif; font-size:20px; font-weight:700; margin-bottom:8px; }
+  .report-card.latest.preliminary::before { content:'LATEST \00b7 PRELIMINARY'; background:var(--accent); }
+  .report-title { font-family:'Playfair Display',serif; font-size:20px; font-weight:700; margin-bottom:8px; color:var(--text); }
   .report-date { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:12px; }
   .report-link { display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--accent); text-decoration:none; letter-spacing:1px; transition:color 0.2s; }
   .report-link:hover { color:var(--text); }
@@ -77,14 +78,14 @@
     <div class="section-title">Reports</div>
     <div class="section-desc">Comprehensive analysis of winning decklists from galaxy.fun tournaments</div>
     <div class="report-list">
-      <a href="reports/2026-03/" class="report-card latest">
-        <div class="report-title">February 2026 Gauntlet</div>
-        <div class="report-date">February 2026</div>
-        <span class="report-link">View Report →</span>
-      </a>
-      <a href="reports/2026-03/" class="report-card preliminary">
+      <a href="reports/2026-03/" class="report-card latest preliminary">
         <div class="report-title">March 2026 Gauntlet</div>
         <div class="report-date">March 2026</div>
+        <span class="report-link">View Report →</span>
+      </a>
+      <a href="reports/2026-02/" class="report-card">
+        <div class="report-title">February 2026 Gauntlet</div>
+        <div class="report-date">February 2026</div>
         <span class="report-link">View Report →</span>
       </a>
     </div>
