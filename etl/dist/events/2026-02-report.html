@@ -216,7 +216,7 @@
   <!-- CAPTAINS -->
   <div class="section" id="captains">
     <div class="section-title">Captain Analysis</div>
-    <div class="section-desc">Toggle between <strong>Signature Cards</strong> (lift), <strong>Best 12</strong> (most picked), or <strong>Decklists</strong> — individual player decklists grouped by captain. Cards are color-coded by archetype cluster. Captains with fewer than 5 finishers are flagged; treat their data cautiously.</div>
+    <div class="section-desc">Toggle between <strong>Best 12</strong> (most picked), <strong>Decklists</strong> (individual player decklists grouped by captain), or <strong>Signature Cards</strong> (lift). Cards are color-coded by archetype cluster. Captains with fewer than 5 finishers are flagged; treat their data cautiously.</div>
     <div class="legend" id="archetype-legend"></div>
     <div class="captain-filter" id="captain-filter"></div>
     <div class="captains-grid" id="captains-container"></div>
@@ -376,13 +376,13 @@ function renderCaptains() {
           <div class="captain-n ${warn ? 'warn' : ''}">n=${cap.n}${warn ? ' ⚠' : ''}</div>
         </div>
         <div class="toggle-bar">
-          <button class="toggle-btn active" onclick="switchView('${uid}','sig',this)">Signature</button>
-          <button class="toggle-btn" onclick="switchView('${uid}','best',this)">Best 12</button>
+          <button class="toggle-btn active" onclick="switchView('${uid}','best',this)">Best 12</button>
           <button class="toggle-btn" onclick="switchView('${uid}','deck',this)">Decklists</button>
+          <button class="toggle-btn" onclick="switchView('${uid}','sig',this)">Signature</button>
         </div>
-        <div class="view active" id="${uid}-sig"><div class="lift-rows">${sigRows}</div></div>
-        <div class="view" id="${uid}-best"><div class="best-rows">${bestRows}</div></div>
+        <div class="view active" id="${uid}-best"><div class="best-rows">${bestRows}</div></div>
         <div class="view" id="${uid}-deck">${deckView}</div>
+        <div class="view" id="${uid}-sig"><div class="lift-rows">${sigRows}</div></div>
       </div>`;
   }).join('');
 }
