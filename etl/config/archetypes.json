@@ -1,0 +1,129 @@
+{
+  "archetypes": {
+    "Treasures": {
+      "color": "#c8a96e",
+      "core_threshold": 25,
+      "cards": [
+        "wormscale_tinkerer",
+        "maverick_icewing",
+        "miseria",
+        "mr_fox",
+        "the_burninator",
+        "rollo",
+        "aladdin",
+        "sir_francis_drake",
+        "ace_of_hearts",
+        "lance_a_little",
+        "pisces",
+        "flopsy",
+        "mechanical_dragon",
+        "mech_a_man",
+        "the_butcher",
+        "guinevere",
+        "smug",
+        "the_huntsman",
+        "crystal",
+        "oracle_of_fortunes",
+        "thunder_of_dragons",
+        "scale_a_tor",
+        "weensy",
+        "netherbinder",
+        "combustible_dragon",
+        "beanie_baby",
+        "sunflare_glider",
+        "hephaestus"
+      ]
+    },
+    "Candy": {
+      "color": "#e87d9e",
+      "cards": [
+        "cherry_topples",
+        "gummy_wyrm",
+        "kool_wip",
+        "twilight_sprinkles",
+        "lollipop_faerie",
+        "the_candy_cane_crook",
+        "knight_of_the_holy_cane",
+        "pixie",
+        "cotton_candy_dandy",
+        "gingerbread_witch",
+        "jaws",
+        "the_sour_patch_kid",
+        "frosting_dragon",
+        "licorice",
+        "doopity_doo",
+        "the_three_chef_keteers",
+        "viscount_chocolat",
+        "chubby_cheep",
+        "keeb",
+        "lemonhead",
+        "jelly_ton",
+        "miss_muffet",
+        "candy_claws",
+        "caramel",
+        "candy_apple_tree",
+        "catatouille"
+      ]
+    },
+    "Mage": {
+      "color": "#9e6ec8",
+      "cards": [
+        "chaos",
+        "calypso",
+        "mirror_mage",
+        "nightshade",
+        "plunder_penny",
+        "elm_minster",
+        "fae_familiar",
+        "morgan_le_fae",
+        "the_fates",
+        "prospero",
+        "genie_of_the_lamp",
+        "ogre_magi"
+      ]
+    },
+    "Pirates": {
+      "color": "#6e9ec8",
+      "cards": [
+        "wink",
+        "shanty",
+        "pirate_prince",
+        "blackbeard",
+        "glory_seeker",
+        "innkeeper",
+        "sailor_moonshine",
+        "hercules",
+        "pirate_king",
+        "sinbad",
+        "jelly_roger",
+        "barbosa"
+      ]
+    },
+    "Animals": {
+      "color": "#6ec89e",
+      "cards": [
+        "snapping_hydra",
+        "toto",
+        "tsarmina_the_tyrant",
+        "pretty_patissier",
+        "moonshadow",
+        "frog_prince",
+        "monstro",
+        "pied_piper",
+        "the_giving_tree"
+      ]
+    },
+    "Fringe": {
+      "color": "#5a5d6a",
+      "cards": [
+        "daedalus",
+        "friendly_spirit",
+        "don_quixote",
+        "faerie_queen",
+        "faerie_godfather",
+        "toadie",
+        "dastardly_spirit"
+      ]
+    }
+  }
+}

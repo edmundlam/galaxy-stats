@@ -13,7 +13,7 @@ Input:
     - etl/dist/captains.json - Captain name mappings
 
 Output:
-    - etl/dist/events/<event_id>-analysis.json - Analysis data for report generation
+    - etl/dist/events/<event_id>-auto-analysis.json - Auto-generated analysis (slugs + names)
 """
 
 import argparse
@@ -48,11 +48,11 @@ def load_data(event_id: str, dist_dir: Path) -> tuple[dict, dict, dict]:
     if not captains_path.exists():
         raise FileNotFoundError(f"Captains data not found: {captains_path}")
 
-    with open(event_path, encoding="utf-8") as f:
+    with event_path.open(encoding="utf-8") as f:
         event_data = json.load(f)
-    with open(cards_path, encoding="utf-8") as f:
+    with cards_path.open(encoding="utf-8") as f:
         cards_map = json.load(f)
-    with open(captains_path, encoding="utf-8") as f:
+    with captains_path.open(encoding="utf-8") as f:
         captains_map = json.load(f)
 
     return event_data, cards_map, captains_map
@@ -93,10 +93,7 @@ def build_cooccurrence_matrix(players: list[dict]) -> np.ndarray:
 
     # Convert to distance matrix (inverse of co-occurrence, normalized)
     max_val = cooccur.max()
-    if max_val > 0:
-        distance = max_val - cooccur
-    else:
-        distance = np.ones((n, n))
+    distance = max_val - cooccur if max_val > 0 else np.ones((n, n))
 
     # Set diagonal to 0 (cards are identical to themselves)
     np.fill_diagonal(distance, 0)
@@ -104,12 +101,15 @@ def build_cooccurrence_matrix(players: list[dict]) -> np.ndarray:
     return distance, all_cards, card_idx, matrix
 
 
-def perform_hierarchical_clustering(distance_matrix: np.ndarray, n_clusters: int = 6) -> list[int]:
+def perform_hierarchical_clustering(
+    distance_matrix: np.ndarray, n_clusters: int = 6, linkage_method: str = "ward"
+) -> list[int]:
     """Perform hierarchical clustering on distance matrix.
 
     Args:
         distance_matrix: Square distance matrix
         n_clusters: Number of clusters to create
+        linkage_method: Linkage method for hierarchical clustering
 
     Returns:
         List of cluster assignments (1-indexed)
@@ -117,8 +117,8 @@ def perform_hierarchical_clustering(distance_matrix: np.ndarray, n_clusters: int
     # Convert to condensed distance matrix
     condensed = squareform(distance_matrix, checks=False)
 
-    # Perform hierarchical clustering with Ward's method
-    Z = linkage(condensed, method="ward")
+    # Perform hierarchical clustering with specified method
+    Z = linkage(condensed, method=linkage_method)
 
     # Cut into clusters
     clusters = fcluster(Z, t=n_clusters, criterion="maxclust")
@@ -282,13 +282,14 @@ def calculate_captain_stats(
     return captain_data
 
 
-def analyze_event(event_id: str, dist_dir: Path, n_clusters: int = 6) -> dict:
+def analyze_event(event_id: str, dist_dir: Path, n_clusters: int = 6, linkage_method: str = "ward") -> dict:
     """Perform full event analysis.
 
     Args:
         event_id: Event identifier
         dist_dir: Path to etl/dist directory
         n_clusters: Number of clusters for archetype analysis
+        linkage_method: Linkage method for hierarchical clustering
 
     Returns:
         Analysis data dictionary
@@ -300,13 +301,12 @@ def analyze_event(event_id: str, dist_dir: Path, n_clusters: int = 6) -> dict:
     # Build co-occurrence matrix and get card data
     distance_matrix, all_cards, card_idx, matrix = build_cooccurrence_matrix(players)
     total = len(players)
-    n_cards = len(all_cards)
 
     # Calculate card frequencies
     card_freq = matrix.sum(axis=0)
 
     # Perform clustering
-    cluster_assignments = perform_hierarchical_clustering(distance_matrix, n_clusters)
+    cluster_assignments = perform_hierarchical_clustering(distance_matrix, n_clusters, linkage_method)
 
     # Group cards by cluster
     cluster_groups = defaultdict(list)
@@ -400,6 +400,13 @@ def main() -> int:
     parser.add_argument(
         "--clusters", type=int, default=6, help="Number of clusters for archetype analysis (default: 6)"
     )
+    parser.add_argument(
+        "--linkage",
+        type=str,
+        default="ward",
+        choices=["ward", "complete", "average", "single", "weighted"],
+        help="Linkage method for hierarchical clustering (default: ward)",
+    )
     args = parser.parse_args()
 
     try:
@@ -413,11 +420,11 @@ def main() -> int:
 
         # Perform analysis
         print(f"Analyzing event {args.event_id}...")
-        analysis = analyze_event(args.event_id, dist_dir, n_clusters=args.clusters)
+        analysis = analyze_event(args.event_id, dist_dir, n_clusters=args.clusters, linkage_method=args.linkage)
 
-        # Write analysis JSON
-        output_path = events_dir / f"{args.event_id}-analysis.json"
-        with open(output_path, "w", encoding="utf-8") as f:
+        # Write analysis JSON (auto-analysis for optional overrides)
+        output_path = events_dir / f"{args.event_id}-auto-analysis.json"
+        with output_path.open("w", encoding="utf-8") as f:
             json.dump(analysis, f, indent=2)
 
         print(f"✓ Wrote {output_path}")
@@ -425,6 +432,7 @@ def main() -> int:
         # Log summary
         print("\nAnalysis Summary:")
         print(f"  Total players: {analysis['total_players']}")
+        print(f"  Linkage method: {args.linkage}")
         print(f"  Clusters found: {len(analysis['clusters'])}")
         for cluster in analysis["clusters"]:
             print(f"    - {cluster['label']}: {len(cluster['cards'])} cards")
@@ -435,6 +443,7 @@ def main() -> int:
     except FileNotFoundError as e:
         print(f"Error: {e}", file=sys.stderr)
         print("\nHint: Make sure you've run parse_event.py first to generate the event JSON.", file=sys.stderr)
+        print("After analysis, run finalize_analysis.py to apply archetype overrides.", file=sys.stderr)
         return 1
     except Exception as e:
         print(f"Error analyzing event: {e}", file=sys.stderr)

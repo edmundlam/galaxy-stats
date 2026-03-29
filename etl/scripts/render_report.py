@@ -349,9 +349,24 @@ function renderCaptains() {
   const archColors = {};
   DATA.clusters.forEach(cl => {
     archColors[cl.label] = cl.color;
-    cl.cards.forEach(card => {
-      cardInfo[card.slug] = { name: card.name, color: cl.color };
-    });
+    // Handle both flat structure (cl.cards) and split structure (cl.core/cl.situational)
+    if (cl.core) {
+      // Split structure: core and situational arrays
+      cl.core.forEach(card => {
+        const key = card.slug || card.name;
+        cardInfo[key] = { name: card.name, color: cl.color };
+      });
+      cl.situational.forEach(card => {
+        const key = card.slug || card.name;
+        cardInfo[key] = { name: card.name, color: cl.color };
+      });
+    } else if (cl.cards) {
+      // Flat structure: single cards array
+      cl.cards.forEach(card => {
+        const key = card.slug || card.name;
+        cardInfo[key] = { name: card.name, color: cl.color };
+      });
+    }
   });
 
   c.innerHTML = DATA.captains.map((cap, i) => {
