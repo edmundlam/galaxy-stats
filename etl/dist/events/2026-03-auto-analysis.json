@@ -13,316 +13,379 @@
       "color": "#7a7d8a",
       "cards": [
         {
+          "slug": "pisces",
           "name": "Pisces",
           "freq": 60,
           "pct": 22.0
         },
         {
+          "slug": "the_huntsman",
           "name": "The Huntsman",
           "freq": 31,
           "pct": 11.4
         },
         {
+          "slug": "wink",
           "name": "Wink",
           "freq": 26,
           "pct": 9.5
         },
         {
+          "slug": "toto",
           "name": "Toto",
           "freq": 24,
           "pct": 8.8
         },
         {
+          "slug": "weensy",
           "name": "Weensy",
           "freq": 24,
           "pct": 8.8
         },
         {
+          "slug": "tsarmina_the_tyrant",
           "name": "Tsarmina, the Tyrant",
           "freq": 21,
           "pct": 7.7
         },
         {
+          "slug": "catatouille",
           "name": "Catatouille",
           "freq": 20,
           "pct": 7.3
         },
         {
+          "slug": "faerie_queen",
           "name": "Faerie Queen",
           "freq": 20,
           "pct": 7.3
         },
         {
+          "slug": "chubby_cheep",
           "name": "Chubby Cheep",
           "freq": 18,
           "pct": 6.6
         },
         {
+          "slug": "shanty",
           "name": "Shanty",
           "freq": 18,
           "pct": 6.6
         },
         {
+          "slug": "daedalus",
           "name": "Daedalus",
           "freq": 16,
           "pct": 5.9
         },
         {
+          "slug": "friendly_spirit",
           "name": "Friendly Spirit",
           "freq": 16,
           "pct": 5.9
         },
         {
+          "slug": "innkeeper",
           "name": "Innkeeper",
           "freq": 15,
           "pct": 5.5
         },
         {
+          "slug": "keeb",
           "name": "Keeb",
           "freq": 15,
           "pct": 5.5
         },
         {
+          "slug": "don_quixote",
           "name": "Don Quixote",
           "freq": 14,
           "pct": 5.1
         },
         {
+          "slug": "monstro",
           "name": "Monstro",
           "freq": 14,
           "pct": 5.1
         },
         {
+          "slug": "toadie",
           "name": "Toadie",
           "freq": 14,
           "pct": 5.1
         },
         {
+          "slug": "chubby_bunny",
           "name": "Chubby Bunny",
           "freq": 13,
           "pct": 4.8
         },
         {
+          "slug": "faerie_godfather",
           "name": "Faerie Godfather",
           "freq": 13,
           "pct": 4.8
         },
         {
+          "slug": "ogre_magi",
           "name": "Ogre Magi",
           "freq": 13,
           "pct": 4.8
         },
         {
+          "slug": "candy_apple_tree",
           "name": "Candy Apple Tree",
           "freq": 12,
           "pct": 4.4
         },
         {
+          "slug": "frog_prince",
           "name": "Frog Prince",
           "freq": 12,
           "pct": 4.4
         },
         {
+          "slug": "hercules",
           "name": "Hercules",
           "freq": 12,
           "pct": 4.4
         },
         {
+          "slug": "pied_piper",
           "name": "Pied Piper",
           "freq": 12,
           "pct": 4.4
         },
         {
+          "slug": "pirate_prince",
           "name": "Pirate Prince",
           "freq": 12,
           "pct": 4.4
         },
         {
+          "slug": "sinbad",
           "name": "Sinbad",
           "freq": 12,
           "pct": 4.4
         },
         {
+          "slug": "kid_icarus",
           "name": "Kid Icarus",
           "freq": 11,
           "pct": 4.0
         },
         {
+          "slug": "mysterio_the_great_and_powerful",
           "name": "Mysterio, the Great and Powerful",
           "freq": 11,
           "pct": 4.0
         },
         {
+          "slug": "weird_beard",
           "name": "Weird Beard",
           "freq": 11,
           "pct": 4.0
         },
         {
+          "slug": "anubis",
           "name": "Anubis",
           "freq": 10,
           "pct": 3.7
         },
         {
+          "slug": "blackbeard",
           "name": "Blackbeard",
           "freq": 10,
           "pct": 3.7
         },
         {
+          "slug": "life_saver",
           "name": "Life Saver",
           "freq": 10,
           "pct": 3.7
         },
         {
+          "slug": "sailor_moonshine",
           "name": "Sailor Moonshine",
           "freq": 10,
           "pct": 3.7
         },
         {
+          "slug": "the_fates",
           "name": "The Fates",
           "freq": 10,
           "pct": 3.7
         },
         {
+          "slug": "underdog",
           "name": "Underdog",
           "freq": 10,
           "pct": 3.7
         },
         {
+          "slug": "black_hole",
           "name": "Black Hole",
           "freq": 9,
           "pct": 3.3
         },
         {
+          "slug": "dastardly_spirit",
           "name": "Dastardly Spirit",
           "freq": 9,
           "pct": 3.3
         },
         {
+          "slug": "glory_seeker",
           "name": "Glory Seeker",
           "freq": 9,
           "pct": 3.3
         },
         {
+          "slug": "jelly_roger",
           "name": "Jelly Roger",
           "freq": 9,
           "pct": 3.3
         },
         {
+          "slug": "miss_muffet",
           "name": "Miss Muffet",
           "freq": 9,
           "pct": 3.3
         },
         {
+          "slug": "the_rat_king",
           "name": "The Rat King",
           "freq": 9,
           "pct": 3.3
         },
         {
+          "slug": "charlotte",
           "name": "Charlotte",
           "freq": 8,
           "pct": 2.9
         },
         {
+          "slug": "leapfrog",
           "name": "Leapfrog",
           "freq": 8,
           "pct": 2.9
         },
         {
+          "slug": "pirate_king",
           "name": "Pirate King",
           "freq": 8,
           "pct": 2.9
         },
         {
+          "slug": "prickles",
           "name": "Prickles",
           "freq": 8,
           "pct": 2.9
         },
         {
+          "slug": "barbosa",
           "name": "Barbosa",
           "freq": 7,
           "pct": 2.6
         },
         {
+          "slug": "mimic",
           "name": "Mimic",
           "freq": 7,
           "pct": 2.6
         },
         {
+          "slug": "fun_gal",
           "name": "Fun Gal",
           "freq": 6,
           "pct": 2.2
         },
         {
+          "slug": "jumping_jelly_beans",
           "name": "Jumping Jelly Beans",
           "freq": 6,
           "pct": 2.2
         },
         {
+          "slug": "moppet",
           "name": "Moppet",
           "freq": 6,
           "pct": 2.2
         },
         {
+          "slug": "wormtongue",
           "name": "Wormtongue",
           "freq": 6,
           "pct": 2.2
         },
         {
+          "slug": "caramel",
           "name": "Caramel",
           "freq": 5,
           "pct": 1.8
         },
         {
+          "slug": "ghoulade_man",
           "name": "Ghoulade Man",
           "freq": 5,
           "pct": 1.8
         },
         {
+          "slug": "the_giving_tree",
           "name": "The Giving Tree",
           "freq": 5,
           "pct": 1.8
         },
         {
+          "slug": "mirror_mirror",
           "name": "Mirror Mirror",
           "freq": 4,
           "pct": 1.5
         },
         {
+          "slug": "moonshadow",
           "name": "Moonshadow",
           "freq": 4,
           "pct": 1.5
         },
         {
+          "slug": "sabrina",
           "name": "Sabrina",
           "freq": 4,
           "pct": 1.5
         },
         {
+          "slug": "nutcracker_prince",
           "name": "Nutcracker Prince",
           "freq": 3,
           "pct": 1.1
         },
         {
+          "slug": "mephisto",
           "name": "Mephisto",
           "freq": 2,
           "pct": 0.7
         },
         {
+          "slug": "the_blue_faerie",
           "name": "The Blue Faerie",
           "freq": 2,
           "pct": 0.7
         },
         {
+          "slug": "gulliver",
           "name": "Gulliver",
           "freq": 1,
           "pct": 0.4
         },
         {
+          "slug": "sleeping_giant",
           "name": "Sleeping Giant",
           "freq": 1,
           "pct": 0.4
         },
         {
+          "slug": "uther_pendragon",
           "name": "Uther Pendragon",
           "freq": 1,
           "pct": 0.4
@@ -335,106 +398,127 @@
       "color": "#9e6ec8",
       "cards": [
         {
+          "slug": "kool_wip",
           "name": "Kool Wip",
           "freq": 41,
           "pct": 15.0
         },
         {
+          "slug": "cherry_topples",
           "name": "Cherry Topples",
           "freq": 37,
           "pct": 13.6
         },
         {
+          "slug": "knight_of_the_holy_cane",
           "name": "Knight of the Holy Cane",
           "freq": 34,
           "pct": 12.5
         },
         {
+          "slug": "pixie",
           "name": "Pixie",
           "freq": 34,
           "pct": 12.5
         },
         {
+          "slug": "twilight_sprinkles",
           "name": "Twilight Sprinkles",
           "freq": 34,
           "pct": 12.5
         },
         {
+          "slug": "gummy_wyrm",
           "name": "Gummy Wyrm",
           "freq": 33,
           "pct": 12.1
         },
         {
+          "slug": "lollipop_faerie",
           "name": "Lollipop Faerie",
           "freq": 33,
           "pct": 12.1
         },
         {
+          "slug": "gingerbread_witch",
           "name": "Gingerbread Witch",
           "freq": 29,
           "pct": 10.6
         },
         {
+          "slug": "jaws",
           "name": "Jaws",
           "freq": 28,
           "pct": 10.3
         },
         {
+          "slug": "the_three_chef_keteers",
           "name": "The Three Chef-Keteers",
           "freq": 28,
           "pct": 10.3
         },
         {
+          "slug": "the_sour_patch_kid",
           "name": "The Sour Patch Kid",
           "freq": 27,
           "pct": 9.9
         },
         {
+          "slug": "viscount_chocolat",
           "name": "Viscount Chocolat",
           "freq": 27,
           "pct": 9.9
         },
         {
+          "slug": "cotton_candy_dandy",
           "name": "Cotton Candy Dandy",
           "freq": 24,
           "pct": 8.8
         },
         {
+          "slug": "the_candy_cane_crook",
           "name": "The Candy Cane Crook",
           "freq": 24,
           "pct": 8.8
         },
         {
+          "slug": "jelly_ton",
           "name": "Jelly-ton",
           "freq": 22,
           "pct": 8.1
         },
         {
+          "slug": "pretty_patissier",
           "name": "Pretty Patissier",
           "freq": 21,
           "pct": 7.7
         },
         {
+          "slug": "frosting_dragon",
           "name": "Frosting Dragon",
           "freq": 19,
           "pct": 7.0
         },
         {
+          "slug": "licorice",
           "name": "Licorice",
           "freq": 16,
           "pct": 5.9
         },
         {
+          "slug": "doopity_doo",
           "name": "Doopity Doo",
           "freq": 14,
           "pct": 5.1
         },
         {
+          "slug": "lemonhead",
           "name": "Lemonhead",
           "freq": 14,
           "pct": 5.1
         },
         {
+          "slug": "candy_claws",
           "name": "Candy Claws",
           "freq": 8,
           "pct": 2.9
@@ -447,81 +531,97 @@
       "color": "#e87d9e",
       "cards": [
         {
+          "slug": "wormscale_tinkerer",
           "name": "Wormscale Tinkerer",
           "freq": 177,
           "pct": 64.8
         },
         {
+          "slug": "miseria",
           "name": "Miseria",
           "freq": 133,
           "pct": 48.7
         },
         {
+          "slug": "mr_fox",
           "name": "Mr. Fox",
           "freq": 122,
           "pct": 44.7
         },
         {
+          "slug": "maverick_icewing",
           "name": "Maverick & Icewing",
           "freq": 121,
           "pct": 44.3
         },
         {
+          "slug": "the_burninator",
           "name": "The Burninator",
           "freq": 87,
           "pct": 31.9
         },
         {
+          "slug": "ace_of_hearts",
           "name": "Ace of Hearts",
           "freq": 81,
           "pct": 29.7
         },
         {
+          "slug": "rollo",
           "name": "Rollo",
           "freq": 79,
           "pct": 28.9
         },
         {
+          "slug": "mech_a_man",
           "name": "Mech-a-Man",
           "freq": 55,
           "pct": 20.1
         },
         {
+          "slug": "oracle_of_fortunes",
           "name": "Oracle of Fortunes",
           "freq": 51,
           "pct": 18.7
         },
         {
+          "slug": "lance_a_little",
           "name": "Lance A Little",
           "freq": 48,
           "pct": 17.6
         },
         {
+          "slug": "guinevere",
           "name": "Guinevere",
           "freq": 39,
           "pct": 14.3
         },
         {
+          "slug": "the_butcher",
           "name": "The Butcher",
           "freq": 35,
           "pct": 12.8
         },
         {
+          "slug": "snapping_hydra",
           "name": "Snapping Hydra",
           "freq": 33,
           "pct": 12.1
         },
         {
+          "slug": "wicked_witch",
           "name": "Wicked Witch",
           "freq": 31,
           "pct": 11.4
         },
         {
+          "slug": "crystal",
           "name": "Crystal",
           "freq": 30,
           "pct": 11.0
         },
         {
+          "slug": "mortakon",
           "name": "Mortakon",
           "freq": 27,
           "pct": 9.9
@@ -534,56 +634,67 @@
       "color": "#c8a96e",
       "cards": [
         {
+          "slug": "sir_francis_drake",
           "name": "Sir Francis Drake",
           "freq": 81,
           "pct": 29.7
         },
         {
+          "slug": "aladdin",
           "name": "Aladdin",
           "freq": 63,
           "pct": 23.1
         },
         {
+          "slug": "flopsy",
           "name": "Flopsy",
           "freq": 53,
           "pct": 19.4
         },
         {
+          "slug": "smug",
           "name": "Smug",
           "freq": 49,
           "pct": 17.9
         },
         {
+          "slug": "mechanical_dragon",
           "name": "Mechanical Dragon",
           "freq": 43,
           "pct": 15.8
         },
         {
+          "slug": "combustible_dragon",
           "name": "Combustible Dragon",
           "freq": 39,
           "pct": 14.3
         },
         {
+          "slug": "thunder_of_dragons",
           "name": "Thunder of Dragons",
           "freq": 39,
           "pct": 14.3
         },
         {
+          "slug": "netherbinder",
           "name": "Netherbinder",
           "freq": 38,
           "pct": 13.9
         },
         {
+          "slug": "hephaestus",
           "name": "Hephaestus",
           "freq": 35,
           "pct": 12.8
         },
         {
+          "slug": "sunflare_glider",
           "name": "Sunflare Glider",
           "freq": 31,
           "pct": 11.4
         },
         {
+          "slug": "scale_a_tor",
           "name": "Scale-a-tor",
           "freq": 27,
           "pct": 9.9
@@ -596,56 +707,67 @@
       "color": "#6e9ec8",
       "cards": [
         {
+          "slug": "chaos",
           "name": "Chaos",
           "freq": 41,
           "pct": 15.0
         },
         {
+          "slug": "mirror_mage",
           "name": "Mirror Mage",
           "freq": 34,
           "pct": 12.5
         },
         {
+          "slug": "nightshade",
           "name": "Nightshade",
           "freq": 26,
           "pct": 9.5
         },
         {
+          "slug": "calypso",
           "name": "Calypso",
           "freq": 23,
           "pct": 8.4
         },
         {
+          "slug": "fae_familiar",
           "name": "Fae Familiar",
           "freq": 23,
           "pct": 8.4
         },
         {
+          "slug": "genie_of_the_lamp",
           "name": "Genie of the Lamp",
           "freq": 23,
           "pct": 8.4
         },
         {
+          "slug": "morgan_le_fae",
           "name": "Morgan Le Fae",
           "freq": 23,
           "pct": 8.4
         },
         {
+          "slug": "plunder_penny",
           "name": "Plunder Penny",
           "freq": 22,
           "pct": 8.1
         },
         {
+          "slug": "elm_minster",
           "name": "Elm Minster",
           "freq": 16,
           "pct": 5.9
         },
         {
+          "slug": "prospero",
           "name": "Prospero",
           "freq": 16,
           "pct": 5.9
         },
         {
+          "slug": "rudolph_the_red",
           "name": "Rudolph the Red",
           "freq": 11,
           "pct": 4.0
@@ -658,41 +780,49 @@
       "color": "#6ec89e",
       "cards": [
         {
+          "slug": "beanie_baby",
           "name": "Beanie Baby",
           "freq": 23,
           "pct": 8.4
         },
         {
+          "slug": "barrel_of_monkeys",
           "name": "Barrel of Monkeys",
           "freq": 17,
           "pct": 6.2
         },
         {
+          "slug": "brick_monster",
           "name": "Brick Monster",
           "freq": 10,
           "pct": 3.7
         },
         {
+          "slug": "busted_bot",
           "name": "Busted Bot",
           "freq": 10,
           "pct": 3.7
         },
         {
+          "slug": "chip_on_the_ship",
           "name": "Chip on the Ship",
           "freq": 9,
           "pct": 3.3
         },
         {
+          "slug": "raggedy_ann",
           "name": "Raggedy Ann",
           "freq": 9,
           "pct": 3.3
         },
         {
+          "slug": "space_ranger_woody",
           "name": "Space Ranger Woody",
           "freq": 8,
           "pct": 2.9
         },
         {
+          "slug": "party_pinata",
           "name": "Party Pinata",
           "freq": 7,
           "pct": 2.6
