@@ -27,7 +27,8 @@
   /* HEADER */
   header { padding:48px 40px 36px; border-bottom:1px solid var(--border); position:relative; overflow:hidden; }
   header::before { content:''; position:absolute; top:-60px; right:-60px; width:360px; height:360px; background:radial-gradient(circle, rgba(200,169,110,0.07) 0%, transparent 70%); pointer-events:none; }
-  .event-label { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+  .event-label { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:10px; text-decoration:none; display:inline-block; transition:opacity 0.2s; }
+  .event-label:hover { opacity:0.75; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:3px; }
   h1 { font-family:'Playfair Display',serif; font-size:clamp(28px,5vw,52px); font-weight:900; line-height:1.1; letter-spacing:-1px; }
   .subtitle { margin-top:12px; color:var(--muted); font-size:13px; font-family:'IBM Plex Mono',monospace; }
   .stats-row { display:flex; gap:32px; margin-top:28px; flex-wrap:wrap; }
@@ -173,7 +174,7 @@
 <body>
 
 <header>
-  <div class="event-label">Once Upon A Galaxy · Meta Analysis</div>
+  <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
   <h1>February 2026<br>Gauntlet Report</h1>
   <div class="subtitle">2026-02-20 · 183 champions · 6-win gauntlet finishers</div>
   <div class="stats-row">
