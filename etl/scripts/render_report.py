@@ -246,7 +246,7 @@ def get_html_template() -> str:
     <div class="stat-item"><div class="stat-value">{TOTAL_PLAYERS}</div><div class="stat-label">Players</div></div>
     <div class="stat-item"><div class="stat-value">{TOTAL_CAPTAINS}</div><div class="stat-label">Captains played</div></div>
     <div class="stat-item"><div class="stat-value">{TOTAL_UNIQUE_CARDS}</div><div class="stat-label">Unique cards</div></div>
-    <div class="stat-item"><div class="stat-value">{TOP_CARD_RATE}</div><div class="stat-label">Top card rate</div></div>
+    <div class="stat-item"><div class="stat-value">{MOST_PLAYED_CARD}</div><div class="stat-label">Most-played card</div></div>
   </div>
 </header>
 
@@ -271,7 +271,7 @@ def get_html_template() -> str:
     <div class="section-title">Card Archetypes</div>
     <div class="section-desc">Cards grouped by co-occurrence frequency using hierarchical clustering. Cluster labels are auto-generated from the most frequent card in each group. Review and adjust cluster definitions for future events as needed.</div>
     <div class="clusters-grid" id="clusters-container"></div>
-    <div class="note">Cards are grouped based on how often they appear together in winning decks. Cluster labels are derived from data — you can adjust them by editing the analysis JSON or archetypes config.</div>
+    <div class="note">Cards are grouped based on how often they appear together in winning decks. Cluster labels are derived from data.</div>
   </div>
 
   <!-- CAPTAINS -->
@@ -536,8 +536,8 @@ def calculate_stats(analysis: dict) -> dict:
         elif "core" in cluster and "situational" in cluster:
             unique_cards += len(cluster["core"]) + len(cluster["situational"])
 
-    # Top card rate
-    top_card_rate = f"{top_cards[0]['pct']:.1f}%" if top_cards else "0%"
+    # Most-played card (name + percentage)
+    most_played_card = f"{top_cards[0]['name']} ({top_cards[0]['pct']:.1f}%)" if top_cards else "N/A"
 
     # Get champions from event data
     event = analysis.get("event", {})
@@ -548,7 +548,7 @@ def calculate_stats(analysis: dict) -> dict:
         "total_captains": len(captains),
         "total_champions": total_champions,
         "unique_cards": unique_cards,
-        "top_card_rate": top_card_rate,
+        "most_played_card": most_played_card,
     }
 
 
@@ -585,7 +585,7 @@ def render_report(event_id: str, events_dir: Path) -> str:
         "TOTAL_PLAYERS": stats["total_players"],
         "TOTAL_CAPTAINS": stats["total_captains"],
         "TOTAL_UNIQUE_CARDS": stats["unique_cards"],
-        "TOP_CARD_RATE": stats["top_card_rate"],
+        "MOST_PLAYED_CARD": stats["most_played_card"],
         "DATA_JSON": json.dumps(analysis, separators=(",", ":")),
     }
 
