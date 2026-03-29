@@ -207,6 +207,68 @@ def rebuild_cluster_map(clusters: list) -> dict:
     return {cluster["label"]: cluster["color"] for cluster in clusters}
 
 
+def build_slug_to_archetype_map(card_lookup: dict, archetypes_config: dict) -> dict:
+    """Build card_slug -> archetype_label mapping from config and card lookup.
+
+    Args:
+        card_lookup: Mapping of card slugs to card data (from auto-analysis)
+        archetypes_config: Config dict with archetype definitions using slugs
+
+    Returns:
+        Dictionary mapping card slugs to archetype labels
+    """
+    slug_to_archetype = {}
+
+    for arch_name, arch_config in archetypes_config.get("archetypes", {}).items():
+        for slug in arch_config.get("cards", []):
+            # Only map slugs that exist in this event's data
+            if slug in card_lookup:
+                slug_to_archetype[slug] = arch_name
+
+    return slug_to_archetype
+
+
+def reassign_player_archetypes(captains: list, slug_to_archetype: dict) -> list:
+    """Reassign archetype to each player based on deck composition.
+
+    Args:
+        captains: List of captain dicts with players
+        slug_to_archetype: Mapping of card slugs to archetype labels
+
+    Returns:
+        Updated captains list with reassigned player archetypes
+    """
+    updated_captains = []
+    for captain in captains:
+        updated_captain = captain.copy()
+        updated_players = []
+
+        for player in captain.get("players", []):
+            updated_player = player.copy()
+            deck = player.get("deck", [])
+
+            # Count cards from each archetype in this deck
+            archetype_counts = {}
+            for card_slug in deck:
+                archetype = slug_to_archetype.get(card_slug)
+                if archetype:
+                    archetype_counts[archetype] = archetype_counts.get(archetype, 0) + 1
+
+            # Assign to archetype with most cards (or keep "Unknown" if no matches)
+            if archetype_counts:
+                best_archetype = max(archetype_counts, key=archetype_counts.get)
+                updated_player["archetype"] = best_archetype
+            else:
+                updated_player["archetype"] = "Unknown"
+
+            updated_players.append(updated_player)
+
+        updated_captain["players"] = updated_players
+        updated_captains.append(updated_captain)
+
+    return updated_captains
+
+
 def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | None = None) -> dict:
     """Main function: load auto-analysis, apply config (optional), write analysis.
 
@@ -253,12 +315,16 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
         # Rebuild cluster map
         cluster_map = rebuild_cluster_map(clusters)
 
+        # Build slug -> archetype mapping for reassigning player archetypes
+        slug_to_archetype = build_slug_to_archetype_map(card_lookup, archetypes_config)
+        captains = reassign_player_archetypes(auto_analysis["captains"], slug_to_archetype)
+
         # Build finalized analysis
         analysis = {
             "event": auto_analysis["event"],
             "total_players": auto_analysis["total_players"],
             "clusters": clusters,
-            "captains": auto_analysis["captains"],
+            "captains": captains,
             "top_cards": auto_analysis["top_cards"],
             "cluster_map": cluster_map,
         }

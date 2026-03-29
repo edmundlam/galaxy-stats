@@ -811,7 +811,7 @@
       "players": [
         {
           "username": "!!!",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "mech_a_man",
             "maverick_icewing",
@@ -829,7 +829,7 @@
         },
         {
           "username": "Anton",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "mech_a_man",
@@ -847,7 +847,7 @@
         },
         {
           "username": "Austin",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "plunder_penny",
@@ -865,7 +865,7 @@
         },
         {
           "username": "Channing",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "caramel",
             "twilight_sprinkles",
@@ -883,7 +883,7 @@
         },
         {
           "username": "Gerptcq",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "mech_a_man",
@@ -901,7 +901,7 @@
         },
         {
           "username": "Jubi",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "maverick_icewing",
@@ -919,7 +919,7 @@
         },
         {
           "username": "Thedeeeem",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "guinevere",
@@ -937,7 +937,7 @@
         },
         {
           "username": "ThGreatWar",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "mechanical_dragon",
@@ -1086,7 +1086,7 @@
       "players": [
         {
           "username": "agnosfaith",
-          "archetype": "Aladdin",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "beanie_baby",
@@ -1104,7 +1104,7 @@
         },
         {
           "username": "Anatchi",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "beanie_baby",
@@ -1122,7 +1122,7 @@
         },
         {
           "username": "Chase",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "maverick_icewing",
@@ -1140,7 +1140,7 @@
         },
         {
           "username": "kannami",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "maverick_icewing",
@@ -1158,7 +1158,7 @@
         },
         {
           "username": "SpoootKnight",
-          "archetype": "Aladdin",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "beanie_baby",
@@ -1176,7 +1176,7 @@
         },
         {
           "username": "TarquinTarquin",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "guinevere",
@@ -1194,7 +1194,7 @@
         },
         {
           "username": "WaffleMelons",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "toto",
@@ -1212,7 +1212,7 @@
         },
         {
           "username": "zrandles",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "ace_of_hearts",
@@ -1361,7 +1361,7 @@
       "players": [
         {
           "username": "AOA",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Pirates",
           "deck": [
             "aladdin",
             "plunder_penny",
@@ -1379,7 +1379,7 @@
         },
         {
           "username": "Bleech",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Pirates",
           "deck": [
             "shanty",
             "jelly_roger",
@@ -1397,7 +1397,7 @@
         },
         {
           "username": "May",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "shanty",
             "blackbeard",
@@ -1415,7 +1415,7 @@
         },
         {
           "username": "mbpro",
-          "archetype": "Wink",
+          "archetype": "Pirates",
           "deck": [
             "aladdin",
             "plunder_penny",
@@ -1433,7 +1433,7 @@
         },
         {
           "username": "Napenator",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "viscount_chocolat",
             "gummy_wyrm",
@@ -1451,7 +1451,7 @@
         },
         {
           "username": "PressReset",
-          "archetype": "Aladdin",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "plunder_penny",
@@ -1469,7 +1469,7 @@
         },
         {
           "username": "Revlyn",
-          "archetype": "Aladdin",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "plunder_penny",
@@ -1618,7 +1618,7 @@
       "players": [
         {
           "username": "brizzi10",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "toto",
@@ -1636,7 +1636,7 @@
         },
         {
           "username": "burgundymyr",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "tsarmina_the_tyrant",
@@ -1654,7 +1654,7 @@
         },
         {
           "username": "myrzy",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "mortakon",
             "mech_a_man",
@@ -1672,7 +1672,7 @@
         },
         {
           "username": "NikolaiSW",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "mech_a_man",
             "maverick_icewing",
@@ -1690,7 +1690,7 @@
         },
         {
           "username": "pidancet",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "mechanical_dragon",
@@ -1708,7 +1708,7 @@
         },
         {
           "username": "Scoranio",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "toto",
             "maverick_icewing",
@@ -1726,7 +1726,7 @@
         },
         {
           "username": "YAAAHA",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "mechanical_dragon",
@@ -1875,7 +1875,7 @@
       "players": [
         {
           "username": "Billys",
-          "archetype": "Aladdin",
+          "archetype": "Mage",
           "deck": [
             "nightshade",
             "faerie_queen",
@@ -1893,7 +1893,7 @@
         },
         {
           "username": "hogehoge",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "mortakon",
@@ -1911,7 +1911,7 @@
         },
         {
           "username": "sabataco",
-          "archetype": "Aladdin",
+          "archetype": "Mage",
           "deck": [
             "morgan_le_fae",
             "toadie",
@@ -1929,7 +1929,7 @@
         },
         {
           "username": "Sank",
-          "archetype": "Mirror Mage",
+          "archetype": "Mage",
           "deck": [
             "plunder_penny",
             "morgan_le_fae",
@@ -1947,7 +1947,7 @@
         },
         {
           "username": "Terroking",
-          "archetype": "Aladdin",
+          "archetype": "Mage",
           "deck": [
             "aladdin",
             "morgan_le_fae",
@@ -1965,7 +1965,7 @@
         },
         {
           "username": "zathras",
-          "archetype": "Aladdin",
+          "archetype": "Mage",
           "deck": [
             "aladdin",
             "plunder_penny",
@@ -2114,7 +2114,7 @@
       "players": [
         {
           "username": "Flying Galaxy",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "shanty",
             "nightshade",
@@ -2132,7 +2132,7 @@
         },
         {
           "username": "HollyCreep",
-          "archetype": "Aladdin",
+          "archetype": "Candy",
           "deck": [
             "nightshade",
             "pisces",
@@ -2150,7 +2150,7 @@
         },
         {
           "username": "Nokaut",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "wink",
             "faerie_godfather",
@@ -2168,7 +2168,7 @@
         },
         {
           "username": "RadChad",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "the_burninator",
@@ -2186,7 +2186,7 @@
         },
         {
           "username": "UrBoyJC",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Candy",
           "deck": [
             "pisces",
             "chaos",
@@ -2204,7 +2204,7 @@
         },
         {
           "username": "Vulaas",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "mechanical_dragon",
             "ace_of_hearts",
@@ -2353,7 +2353,7 @@
       "players": [
         {
           "username": "Frozen_Dread",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "toto",
@@ -2371,7 +2371,7 @@
         },
         {
           "username": "Header",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "toto",
             "flopsy",
@@ -2389,7 +2389,7 @@
         },
         {
           "username": "helpmeasap",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "toto",
             "the_burninator",
@@ -2407,7 +2407,7 @@
         },
         {
           "username": "omok23",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "toto",
             "maverick_icewing",
@@ -2425,7 +2425,7 @@
         },
         {
           "username": "viralpanacea",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "toto",
             "maverick_icewing",
@@ -2443,7 +2443,7 @@
         },
         {
           "username": "woodabe",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "ace_of_hearts",
@@ -2592,7 +2592,7 @@
       "players": [
         {
           "username": "Cookar",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "mechanical_dragon",
@@ -2610,7 +2610,7 @@
         },
         {
           "username": "Fouxdufafa",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "mechanical_dragon",
@@ -2628,7 +2628,7 @@
         },
         {
           "username": "Frankquith",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "maverick_icewing",
@@ -2646,7 +2646,7 @@
         },
         {
           "username": "Lunco",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "mechanical_dragon",
@@ -2664,7 +2664,7 @@
         },
         {
           "username": "mudblood",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "mechanical_dragon",
@@ -2813,7 +2813,7 @@
       "players": [
         {
           "username": "IIInfinity",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "smug",
             "wormscale_tinkerer",
@@ -2831,7 +2831,7 @@
         },
         {
           "username": "sacakewalk",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "ace_of_hearts",
@@ -2849,7 +2849,7 @@
         },
         {
           "username": "teyi111",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "ace_of_hearts",
@@ -2867,7 +2867,7 @@
         },
         {
           "username": "TheDarkLink",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "wicked_witch",
@@ -2885,7 +2885,7 @@
         },
         {
           "username": "Varron",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "ace_of_hearts",
             "the_burninator",
@@ -3034,7 +3034,7 @@
       "players": [
         {
           "username": "adu",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "viscount_chocolat",
             "twilight_sprinkles",
@@ -3052,7 +3052,7 @@
         },
         {
           "username": "Longshot27",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Mage",
           "deck": [
             "calypso",
             "genie_of_the_lamp",
@@ -3070,7 +3070,7 @@
         },
         {
           "username": "LordLoss",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "viscount_chocolat",
             "cotton_candy_dandy",
@@ -3088,7 +3088,7 @@
         },
         {
           "username": "LSV",
-          "archetype": "Aladdin",
+          "archetype": "Mage",
           "deck": [
             "morgan_le_fae",
             "calypso",
@@ -3237,7 +3237,7 @@
       "players": [
         {
           "username": "Briguy",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "wormscale_tinkerer",
             "viscount_chocolat",
@@ -3255,7 +3255,7 @@
         },
         {
           "username": "Metteagle",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "viscount_chocolat",
             "gummy_wyrm",
@@ -3273,7 +3273,7 @@
         },
         {
           "username": "rxxi",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "barrel_of_monkeys",
             "knight_of_the_holy_cane",
@@ -3291,7 +3291,7 @@
         },
         {
           "username": "Slimey",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "cotton_candy_dandy",
             "gummy_wyrm",
@@ -3440,7 +3440,7 @@
       "players": [
         {
           "username": "clandestine07",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "maverick_icewing",
@@ -3458,7 +3458,7 @@
         },
         {
           "username": "Jasperov",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "wormscale_tinkerer",
             "twilight_sprinkles",
@@ -3476,7 +3476,7 @@
         },
         {
           "username": "luckyalien",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "aladdin",
             "ghoulade_man",
@@ -3494,7 +3494,7 @@
         },
         {
           "username": "SkyBreaker",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "the_burninator",
@@ -3643,7 +3643,7 @@
       "players": [
         {
           "username": "Ello",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "viscount_chocolat",
             "cotton_candy_dandy",
@@ -3661,7 +3661,7 @@
         },
         {
           "username": "Godfrey1126",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "cotton_candy_dandy",
             "twilight_sprinkles",
@@ -3679,7 +3679,7 @@
         },
         {
           "username": "GoodDigestion",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "mirror_mage",
@@ -3697,7 +3697,7 @@
         },
         {
           "username": "Melkman",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "cotton_candy_dandy",
             "gummy_wyrm",
@@ -3846,7 +3846,7 @@
       "players": [
         {
           "username": "Estanislau",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Candy",
           "deck": [
             "frosting_dragon",
             "kool_wip",
@@ -3864,7 +3864,7 @@
         },
         {
           "username": "EziBakeRoflCake",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Candy",
           "deck": [
             "knight_of_the_holy_cane",
             "twilight_sprinkles",
@@ -3882,7 +3882,7 @@
         },
         {
           "username": "Quiddity",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Candy",
           "deck": [
             "the_burninator",
             "sir_francis_drake",
@@ -3900,7 +3900,7 @@
         },
         {
           "username": "SirMordred",
-          "archetype": "Cherry Topples",
+          "archetype": "Candy",
           "deck": [
             "viscount_chocolat",
             "caramel",
@@ -4049,7 +4049,7 @@
       "players": [
         {
           "username": "Fafner",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "toto",
@@ -4067,7 +4067,7 @@
         },
         {
           "username": "Mikeyo",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Pirates",
           "deck": [
             "aladdin",
             "shanty",
@@ -4085,7 +4085,7 @@
         },
         {
           "username": "RayWanderer",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "ace_of_hearts",
@@ -4103,7 +4103,7 @@
         },
         {
           "username": "tretherio",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "wicked_witch",
@@ -4252,7 +4252,7 @@
       "players": [
         {
           "username": "FrankBezos",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Mage",
           "deck": [
             "plunder_penny",
             "shanty",
@@ -4270,7 +4270,7 @@
         },
         {
           "username": "Serenity",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Mage",
           "deck": [
             "plunder_penny",
             "shanty",
@@ -4288,7 +4288,7 @@
         },
         {
           "username": "Spiked",
-          "archetype": "Mech-a-Man",
+          "archetype": "Fringe",
           "deck": [
             "shanty",
             "toadie",
@@ -4306,7 +4306,7 @@
         },
         {
           "username": "trhchris1",
-          "archetype": "Mech-a-Man",
+          "archetype": "Fringe",
           "deck": [
             "shanty",
             "toadie",
@@ -4455,7 +4455,7 @@
       "players": [
         {
           "username": "a duck",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "maverick_icewing",
@@ -4473,7 +4473,7 @@
         },
         {
           "username": "BustopherJones",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "toto",
             "maverick_icewing",
@@ -4491,7 +4491,7 @@
         },
         {
           "username": "Evolivolution",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "maverick_icewing",
@@ -4640,7 +4640,7 @@
       "players": [
         {
           "username": "ForKrin",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "mechanical_dragon",
@@ -4658,7 +4658,7 @@
         },
         {
           "username": "jasobaa",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "shanty",
@@ -4676,7 +4676,7 @@
         },
         {
           "username": "SussySenpai",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "mortakon",
             "mech_a_man",
@@ -4825,7 +4825,7 @@
       "players": [
         {
           "username": "JoeOnToast",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Candy",
           "deck": [
             "aladdin",
             "glory_seeker",
@@ -4843,7 +4843,7 @@
         },
         {
           "username": "Justini12",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Candy",
           "deck": [
             "mechanical_dragon",
             "wormscale_tinkerer",
@@ -4861,7 +4861,7 @@
         },
         {
           "username": "Tsynapse",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Candy",
           "deck": [
             "aladdin",
             "glory_seeker",
@@ -5010,7 +5010,7 @@
       "players": [
         {
           "username": "karfast",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "maverick_icewing",
@@ -5028,7 +5028,7 @@
         },
         {
           "username": "Komodo",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "maverick_icewing",
@@ -5046,7 +5046,7 @@
         },
         {
           "username": "Thenian",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "maverick_icewing",
             "mechanical_dragon",
@@ -5195,7 +5195,7 @@
       "players": [
         {
           "username": "Mikokoloko",
-          "archetype": "Wormscale Tinkerer",
+          "archetype": "Treasures",
           "deck": [
             "aladdin",
             "shanty",
@@ -5213,7 +5213,7 @@
         },
         {
           "username": "smallchild1",
-          "archetype": "Aladdin",
+          "archetype": "Pirates",
           "deck": [
             "aladdin",
             "plunder_penny",
@@ -5231,7 +5231,7 @@
         },
         {
           "username": "Sn0_Man",
-          "archetype": "Aladdin",
+          "archetype": "Pirates",
           "deck": [
             "aladdin",
             "shanty",
