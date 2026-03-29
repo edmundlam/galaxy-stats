@@ -269,6 +269,11 @@ def get_html_template() -> str:
     <div class="section-desc">How often each card appeared across all {TOTAL_PLAYERS} winning decklists. These are the cards players voluntarily added on top of the shared default set — high playrates signal genuine conviction.</div>
     <div class="bar-chart" id="bar-chart-container"></div>
     <div class="note">Top 30 cards shown by playrate.</div>
+
+    <div class="section-title" style="margin-top:48px">Captain Popularity</div>
+    <div class="section-desc">How often each captain was played across all {TOTAL_PLAYERS} winning decklists. Shows which leaders players chose to pilot through the gauntlet.</div>
+    <div class="bar-chart" id="captains-chart-container"></div>
+    <div class="note">All {TOTAL_CAPTAINS} captains shown by player count.</div>
   </div>
 
   <!-- CLUSTERS -->
@@ -316,6 +321,22 @@ function animateBars() {
   requestAnimationFrame(() => {
     document.querySelectorAll('.bar-fill').forEach(el => { el.style.width = el.dataset.w + '%'; });
   });
+}
+
+// CAPTAIN BARS
+function renderCaptainBars() {
+  const c = document.getElementById('captains-chart-container');
+  if (!DATA.top_captains || DATA.top_captains.length === 0) {
+    c.innerHTML = '<div style="color:var(--muted);font-size:12px;">No captain data available</div>';
+    return;
+  }
+  const max = DATA.top_captains[0].freq;
+  c.innerHTML = DATA.top_captains.map(cap => `
+    <div class="bar-row">
+      <div class="bar-name">${cap.name}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0%" data-w="${cap.freq/max*100}"></div></div>
+      <div class="bar-pct">${cap.freq}</div>
+    </div>`).join('');
 }
 
 // CLUSTERS
@@ -522,6 +543,7 @@ function togglePlayer(id) {
 
 // INIT
 renderBars();
+renderCaptainBars();
 renderClusters();
 renderCaptains();
 if (DATA.cluster_map) {

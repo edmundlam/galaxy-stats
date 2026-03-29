@@ -366,6 +366,7 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
             "clusters": clusters,
             "captains": captains,
             "top_cards": auto_analysis["top_cards"],
+            "top_captains": auto_analysis.get("top_captains", []),
             "cluster_map": cluster_map,
         }
     else:
@@ -395,6 +396,7 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
             "clusters": clusters,
             "captains": captains,
             "top_cards": auto_analysis["top_cards"],
+            "top_captains": auto_analysis.get("top_captains", []),
             "cluster_map": auto_analysis["cluster_map"],
         }
 

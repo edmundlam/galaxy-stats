@@ -5402,6 +5402,134 @@
       "pct": 11.6
     }
   ],
+  "top_captains": [
+    {
+      "slug": "legend_of_loxley",
+      "name": "Legend of Loxley",
+      "freq": 8,
+      "pct": 5.8
+    },
+    {
+      "slug": "trash_panda",
+      "name": "Trash Panda",
+      "freq": 8,
+      "pct": 5.8
+    },
+    {
+      "slug": "jay_sparrow",
+      "name": "Jay Sparrow",
+      "freq": 7,
+      "pct": 5.1
+    },
+    {
+      "slug": "dorothy",
+      "name": "Dorothy",
+      "freq": 7,
+      "pct": 5.1
+    },
+    {
+      "slug": "wizard_headmaster",
+      "name": "Wizard Headmaster",
+      "freq": 6,
+      "pct": 4.3
+    },
+    {
+      "slug": "double_dealer",
+      "name": "Double Dealer",
+      "freq": 6,
+      "pct": 4.3
+    },
+    {
+      "slug": "nathaniel_drake",
+      "name": "Nathaniel Drake",
+      "freq": 6,
+      "pct": 4.3
+    },
+    {
+      "slug": "lightning_thief",
+      "name": "Lightning Thief",
+      "freq": 5,
+      "pct": 3.6
+    },
+    {
+      "slug": "gloria_clementine",
+      "name": "Gloria Clementine",
+      "freq": 5,
+      "pct": 3.6
+    },
+    {
+      "slug": "sorcerous_serena",
+      "name": "Sorcerous Serena",
+      "freq": 4,
+      "pct": 2.9
+    },
+    {
+      "slug": "the_candyman",
+      "name": "The Candyman",
+      "freq": 4,
+      "pct": 2.9
+    },
+    {
+      "slug": "frowny_the_clown",
+      "name": "Frowny the Clown",
+      "freq": 4,
+      "pct": 2.9
+    },
+    {
+      "slug": "sweet_tooth",
+      "name": "Sweet Tooth",
+      "freq": 4,
+      "pct": 2.9
+    },
+    {
+      "slug": "candy_pandy",
+      "name": "Candy Pandy",
+      "freq": 4,
+      "pct": 2.9
+    },
+    {
+      "slug": "this_little_piggie",
+      "name": "This Little Piggie",
+      "freq": 4,
+      "pct": 2.9
+    },
+    {
+      "slug": "mira",
+      "name": "Mira",
+      "freq": 4,
+      "pct": 2.9
+    },
+    {
+      "slug": "indiana_clones",
+      "name": "Indiana Clones",
+      "freq": 3,
+      "pct": 2.2
+    },
+    {
+      "slug": "silversmith",
+      "name": "Silversmith",
+      "freq": 3,
+      "pct": 2.2
+    },
+    {
+      "slug": "charlie_pots",
+      "name": "Charlie Pots",
+      "freq": 3,
+      "pct": 2.2
+    },
+    {
+      "slug": "lady_of_the_lake",
+      "name": "Lady of the Lake",
+      "freq": 3,
+      "pct": 2.2
+    },
+    {
+      "slug": "zheng_yi_sao",
+      "name": "Zheng Yi Sao",
+      "freq": 3,
+      "pct": 2.2
+    }
+  ],
   "cluster_map": {
     "Treasures": "#c8a96e",
     "Candy": "#e87d9e",

@@ -380,6 +380,18 @@ def analyze_event(event_id: str, dist_dir: Path, n_clusters: int = 6, linkage_me
                 {"name": cards_map[card], "freq": freq, "pct": round(freq / total * 100, 1) if total > 0 else 0}
             )
 
+    # Build top captains list (by popularity)
+    top_captains = []
+    for captain in sorted(captain_data, key=lambda c: -c["n"]):
+        top_captains.append(
+            {
+                "slug": captain["slug"],
+                "name": captain["name"],
+                "freq": captain["n"],
+                "pct": round(captain["n"] / total * 100, 1) if total > 0 else 0,
+            }
+        )
+
     # Build output
     output = {
         "event": event_data["event"],
@@ -387,6 +399,7 @@ def analyze_event(event_id: str, dist_dir: Path, n_clusters: int = 6, linkage_me
         "clusters": clusters,
         "captains": captain_data,
         "top_cards": top_cards[:30],  # Top 30 cards
+        "top_captains": top_captains,  # All captains with playrates
         "cluster_map": {cluster["label"]: cluster["color"] for cluster in clusters},
     }
 
