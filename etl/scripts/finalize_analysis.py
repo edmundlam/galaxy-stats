@@ -81,11 +81,11 @@ def build_card_lookup(all_cards: list) -> dict:
 
 
 def split_core_situational(cards: list, threshold: int | None) -> dict:
-    """Split cards into core/situational by frequency threshold.
+    """Split cards into core/situational by count threshold.
 
     Args:
         cards: List of card objects with 'freq' field
-        threshold: Absolute deck count for core split (None = no split)
+        threshold: Number of top cards to include in core (None = no split)
 
     Returns:
         Dict with either 'cards' key (no split) or 'core'/'situational' keys
@@ -93,8 +93,12 @@ def split_core_situational(cards: list, threshold: int | None) -> dict:
     if threshold is None:
         return {"cards": cards}
 
-    core = [c for c in cards if c.get("freq", 0) >= threshold]
-    situational = [c for c in cards if c.get("freq", 0) < threshold]
+    # Sort cards by frequency (descending)
+    sorted_cards = sorted(cards, key=lambda c: c.get("freq", 0), reverse=True)
+
+    # Take top N cards as core, rest as situational
+    core = sorted_cards[:threshold]
+    situational = sorted_cards[threshold:]
 
     return {"core": core, "situational": situational}
 

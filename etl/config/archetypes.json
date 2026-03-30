@@ -2,7 +2,7 @@
   "archetypes": {
     "Treasures": {
       "color": "#c8a96e",
-      "core_threshold": 25,
+      "core_threshold": 12,
       "cards": [
         "wormscale_tinkerer",
         "maverick_icewing",
@@ -36,6 +36,7 @@
     },
     "Candy": {
       "color": "#e87d9e",
+      "core_threshold": 12,
       "cards": [
         "cherry_topples",
         "gummy_wyrm",

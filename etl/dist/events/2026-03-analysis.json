@@ -18,11 +18,6 @@
           "pct": 64.8
         },
         {
-          "name": "Maverick & Icewing",
-          "freq": 121,
-          "pct": 44.3
-        },
-        {
           "name": "Miseria",
           "freq": 133,
           "pct": 48.7
@@ -33,19 +28,14 @@
           "pct": 44.7
         },
         {
+          "name": "Maverick & Icewing",
+          "freq": 121,
+          "pct": 44.3
+        },
+        {
           "name": "The Burninator",
           "freq": 87,
           "pct": 31.9
-        },
-        {
-          "name": "Rollo",
-          "freq": 79,
-          "pct": 28.9
-        },
-        {
-          "name": "Aladdin",
-          "freq": 63,
-          "pct": 23.1
         },
         {
           "name": "Sir Francis Drake",
@@ -58,9 +48,14 @@
           "pct": 29.7
         },
         {
-          "name": "Lance A Little",
-          "freq": 48,
-          "pct": 17.6
+          "name": "Rollo",
+          "freq": 79,
+          "pct": 28.9
+        },
+        {
+          "name": "Aladdin",
+          "freq": 63,
+          "pct": 23.1
         },
         {
           "name": "Pisces",
@@ -68,29 +63,21 @@
           "pct": 22.0
         },
         {
-          "name": "Flopsy",
-          "freq": 53,
-          "pct": 19.4
-        },
-        {
-          "name": "Mechanical Dragon",
-          "freq": 43,
-          "pct": 15.8
-        },
-        {
           "name": "Mech-a-Man",
           "freq": 55,
           "pct": 20.1
         },
         {
-          "name": "The Butcher",
-          "freq": 35,
-          "pct": 12.8
-        },
+          "name": "Flopsy",
+          "freq": 53,
+          "pct": 19.4
+        }
+      ],
+      "situational": [
         {
-          "name": "Guinevere",
-          "freq": 39,
-          "pct": 14.3
+          "name": "Oracle of Fortunes",
+          "freq": 51,
+          "pct": 18.7
         },
         {
           "name": "Smug",
@@ -98,7 +85,52 @@
           "pct": 17.9
         },
         {
+          "name": "Lance A Little",
+          "freq": 48,
+          "pct": 17.6
+        },
+        {
+          "name": "Mechanical Dragon",
+          "freq": 43,
+          "pct": 15.8
+        },
+        {
+          "name": "Guinevere",
+          "freq": 39,
+          "pct": 14.3
+        },
+        {
+          "name": "Thunder of Dragons",
+          "freq": 39,
+          "pct": 14.3
+        },
+        {
+          "name": "Combustible Dragon",
+          "freq": 39,
+          "pct": 14.3
+        },
+        {
+          "name": "Netherbinder",
+          "freq": 38,
+          "pct": 13.9
+        },
+        {
+          "name": "The Butcher",
+          "freq": 35,
+          "pct": 12.8
+        },
+        {
+          "name": "Hephaestus",
+          "freq": 35,
+          "pct": 12.8
+        },
+        {
           "name": "The Huntsman",
+          "freq": 31,
+          "pct": 11.4
+        },
+        {
+          "name": "Sunflare Glider",
           "freq": 31,
           "pct": 11.4
         },
@@ -108,42 +140,10 @@
           "pct": 11.0
         },
         {
-          "name": "Oracle of Fortunes",
-          "freq": 51,
-          "pct": 18.7
-        },
-        {
-          "name": "Thunder of Dragons",
-          "freq": 39,
-          "pct": 14.3
-        },
-        {
           "name": "Scale-a-tor",
           "freq": 27,
           "pct": 9.9
         },
-        {
-          "name": "Netherbinder",
-          "freq": 38,
-          "pct": 13.9
-        },
-        {
-          "name": "Combustible Dragon",
-          "freq": 39,
-          "pct": 14.3
-        },
-        {
-          "name": "Sunflare Glider",
-          "freq": 31,
-          "pct": 11.4
-        },
-        {
-          "name": "Hephaestus",
-          "freq": 35,
-          "pct": 12.8
-        }
-      ],
-      "situational": [
         {
           "name": "Weensy",
           "freq": 24,
@@ -160,36 +160,21 @@
       "id": "candy",
       "label": "Candy",
       "color": "#e87d9e",
-      "cards": [
-        {
-          "name": "Cherry Topples",
-          "freq": 37,
-          "pct": 13.6
-        },
-        {
-          "name": "Gummy Wyrm",
-          "freq": 33,
-          "pct": 12.1
-        },
+      "core": [
         {
           "name": "Kool Wip",
           "freq": 41,
           "pct": 15.0
         },
         {
+          "name": "Cherry Topples",
+          "freq": 37,
+          "pct": 13.6
+        },
+        {
           "name": "Twilight Sprinkles",
           "freq": 34,
           "pct": 12.5
-        },
-        {
-          "name": "Lollipop Faerie",
-          "freq": 33,
-          "pct": 12.1
-        },
-        {
-          "name": "The Candy Cane Crook",
-          "freq": 24,
-          "pct": 8.8
         },
         {
           "name": "Knight of the Holy Cane",
@@ -202,9 +187,14 @@
           "pct": 12.5
         },
         {
-          "name": "Cotton Candy Dandy",
-          "freq": 24,
-          "pct": 8.8
+          "name": "Gummy Wyrm",
+          "freq": 33,
+          "pct": 12.1
+        },
+        {
+          "name": "Lollipop Faerie",
+          "freq": 33,
+          "pct": 12.1
         },
         {
           "name": "Gingerbread Witch",
@@ -217,9 +207,41 @@
           "pct": 10.3
         },
         {
+          "name": "The Three Chef-Keteers",
+          "freq": 28,
+          "pct": 10.3
+        },
+        {
           "name": "The Sour Patch Kid",
           "freq": 27,
           "pct": 9.9
+        },
+        {
+          "name": "Viscount Chocolat",
+          "freq": 27,
+          "pct": 9.9
+        }
+      ],
+      "situational": [
+        {
+          "name": "The Candy Cane Crook",
+          "freq": 24,
+          "pct": 8.8
+        },
+        {
+          "name": "Cotton Candy Dandy",
+          "freq": 24,
+          "pct": 8.8
+        },
+        {
+          "name": "Jelly-ton",
+          "freq": 22,
+          "pct": 8.1
+        },
+        {
+          "name": "Catatouille",
+          "freq": 20,
+          "pct": 7.3
         },
         {
           "name": "Frosting Dragon",
@@ -227,29 +249,14 @@
           "pct": 7.0
         },
         {
-          "name": "Licorice",
-          "freq": 16,
-          "pct": 5.9
-        },
-        {
-          "name": "Doopity Doo",
-          "freq": 14,
-          "pct": 5.1
-        },
-        {
-          "name": "The Three Chef-Keteers",
-          "freq": 28,
-          "pct": 10.3
-        },
-        {
-          "name": "Viscount Chocolat",
-          "freq": 27,
-          "pct": 9.9
-        },
-        {
           "name": "Chubby Cheep",
           "freq": 18,
           "pct": 6.6
+        },
+        {
+          "name": "Licorice",
+          "freq": 16,
+          "pct": 5.9
         },
         {
           "name": "Keeb",
@@ -257,14 +264,19 @@
           "pct": 5.5
         },
         {
+          "name": "Doopity Doo",
+          "freq": 14,
+          "pct": 5.1
+        },
+        {
           "name": "Lemonhead",
           "freq": 14,
           "pct": 5.1
         },
         {
-          "name": "Jelly-ton",
-          "freq": 22,
-          "pct": 8.1
+          "name": "Candy Apple Tree",
+          "freq": 12,
+          "pct": 4.4
         },
         {
           "name": "Miss Muffet",
@@ -280,16 +292,6 @@
           "name": "Caramel",
           "freq": 5,
           "pct": 1.8
-        },
-        {
-          "name": "Candy Apple Tree",
-          "freq": 12,
-          "pct": 4.4
-        },
-        {
-          "name": "Catatouille",
-          "freq": 20,
-          "pct": 7.3
         }
       ]
     },

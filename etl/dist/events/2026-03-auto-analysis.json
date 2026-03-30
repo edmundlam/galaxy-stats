@@ -11460,44 +11460,6 @@
       "pct": 1.1
     }
   ],
-  "top_archetypes": [
-    {
-      "name": "Wormscale Tinkerer",
-      "freq": 196,
-      "pct": 71.8,
-      "color": "#e87d9e"
-    },
-    {
-      "name": "Kool Wip",
-      "freq": 39,
-      "pct": 14.3,
-      "color": "#9e6ec8"
-    },
-    {
-      "name": "Pisces",
-      "freq": 13,
-      "pct": 4.8,
-      "color": "#7a7d8a"
-    },
-    {
-      "name": "Chaos",
-      "freq": 13,
-      "pct": 4.8,
-      "color": "#6e9ec8"
-    },
-    {
-      "name": "Sir Francis Drake",
-      "freq": 10,
-      "pct": 3.7,
-      "color": "#c8a96e"
-    },
-    {
-      "name": "Beanie Baby",
-      "freq": 2,
-      "pct": 0.7,
-      "color": "#6ec89e"
-    }
-  ],
   "cluster_map": {
     "Pisces": "#7a7d8a",
     "Kool Wip": "#9e6ec8",

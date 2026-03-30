@@ -71,7 +71,9 @@
           "name": "Flopsy",
           "freq": 29,
           "pct": 21.0
-        },
+        }
+      ],
+      "situational": [
         {
           "name": "Mechanical Dragon",
           "freq": 28,
@@ -86,9 +88,7 @@
           "name": "The Butcher",
           "freq": 25,
           "pct": 18.1
-        }
-      ],
-      "situational": [
+        },
         {
           "name": "Guinevere",
           "freq": 22,
@@ -160,7 +160,7 @@
       "id": "candy",
       "label": "Candy",
       "color": "#e87d9e",
-      "cards": [
+      "core": [
         {
           "name": "Cherry Topples",
           "freq": 25,
@@ -220,7 +220,9 @@
           "name": "The Sour Patch Kid",
           "freq": 13,
           "pct": 9.4
-        },
+        }
+      ],
+      "situational": [
         {
           "name": "Frosting Dragon",
           "freq": 12,
