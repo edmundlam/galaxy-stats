@@ -1,4 +1,4 @@
-.PHONY: help install report report-auto parse-event analyze-event render-report copy-report update-latest lint format clean etl-finalize etl-finalize-with-overrides
+.PHONY: help install report report-auto parse-event analyze-event render-report copy-report lint format clean etl-finalize etl-finalize-with-overrides
 
 # === Configuration ===
 ETL_DIST = etl/dist/events
@@ -46,15 +46,9 @@ copy-report:		## Copy generated report to docs: make copy-report EVENT_ID=2026-0
 	@cp $(ETL_DIST)/$(EVENT_ID)-report.html $(DOCS_DIR)/reports/$(EVENT_ID)/index.html
 	@echo "Report copied to $(DOCS_DIR)/reports/$(EVENT_ID)/index.html"
 
-update-latest:		## Update docs/index.html to point to latest report: make update-latest EVENT_ID=2026-02
-	@echo "Updating $(DOCS_DIR)/index.html to point to $(EVENT_ID)..."
-	@sed -i '' 's|url=reports/[^/]*|url=reports/$(EVENT_ID)|' $(DOCS_DIR)/index.html
-	@sed -i '' 's|href="reports/[^/]*|href="reports/$(EVENT_ID)|' $(DOCS_DIR)/index.html
-	@echo "Redirect updated to reports/$(EVENT_ID)/"
+report: etl-parse etl-analyze etl-finalize-with-overrides etl-render copy-report		## Full workflow with archetype overrides: parse → analyze → finalize → render → copy (HTML_FILE and EVENT_ID required)
 
-report: etl-parse etl-analyze etl-finalize-with-overrides etl-render copy-report update-latest		## Full workflow with archetype overrides: parse → analyze → finalize → render → copy → update redirect (HTML_FILE and EVENT_ID required)
-
-report-auto: etl-parse etl-analyze etl-finalize etl-render copy-report update-latest		## Full workflow without overrides: parse → analyze → finalize → render → copy → update redirect (HTML_FILE and EVENT_ID required)
+report-auto: etl-parse etl-analyze etl-finalize etl-render copy-report		## Full workflow without overrides: parse → analyze → finalize → render → copy (HTML_FILE and EVENT_ID required)
 
 # === Convenience Commands (aliases) ===
 install: etl-install		## Install dependencies (alias)
