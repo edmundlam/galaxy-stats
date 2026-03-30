@@ -10,6 +10,7 @@ frontend/node_modules/
 etl/.venv/
 etl/uv.lock
 etl/__pycache__/
+etl/.ruff_cache/
 *.pyc
 *.pyo
 

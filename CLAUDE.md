@@ -11,6 +11,8 @@ Galaxy Stats generates standalone HTML reports for "Once Upon a Galaxy" tourname
 
 ## Development Commands
 
+**⚠️ CRITICAL:** Always run Makefile commands from the **repository root**, never from the `etl/` directory. The `etl/` folder has its own Makefile that will redirect you if you forget.
+
 ### Report Generation (via Makefile)
 
 ```bash
