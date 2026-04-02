@@ -161,7 +161,7 @@ def assign_cluster_colors(n: int) -> list[str]:
         "#9e6ec8",  # Purple/Mage
         "#6e9ec8",  # Blue/Pirates
         "#6ec89e",  # Green/Animals
-        "#7a7d8a",  # Gray/Fringe
+        "#7a7d8a",  # Gray/Toys
     ]
 
     # If more clusters than predefined colors, generate variations

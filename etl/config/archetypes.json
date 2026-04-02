@@ -31,7 +31,10 @@
         "combustible_dragon",
         "beanie_baby",
         "sunflare_glider",
-        "hephaestus"
+        "hephaestus",
+        "mimic",
+        "uther_pendragon",
+        "kid_icarus"
       ]
     },
     "Candy": {
@@ -63,7 +66,11 @@
         "candy_claws",
         "caramel",
         "candy_apple_tree",
-        "catatouille"
+        "catatouille",
+        "life_saver",
+        "chubby_bunny",
+        "ghoulade_man",
+        "jumping_jelly_beans"
       ]
     },
     "Mage": {
@@ -80,7 +87,12 @@
         "the_fates",
         "prospero",
         "genie_of_the_lamp",
-        "ogre_magi"
+        "ogre_magi",
+        "wicked_witch",
+        "rudolph_the_red",
+        "moppet",
+        "sabrina",
+        "mysterio_the_great_and_powerful"
       ]
     },
     "Pirates": {
@@ -97,7 +109,9 @@
         "pirate_king",
         "sinbad",
         "jelly_roger",
-        "barbosa"
+        "barbosa",
+        "weird_beard",
+        "the_rat_king"
       ]
     },
     "Animals": {
@@ -111,19 +125,23 @@
         "frog_prince",
         "monstro",
         "pied_piper",
-        "the_giving_tree"
+        "the_giving_tree",
+        "leapfrog",
+        "underdog"
       ]
     },
-    "Fringe": {
+    "Toys": {
       "color": "#5a5d6a",
       "cards": [
-        "daedalus",
-        "friendly_spirit",
-        "don_quixote",
-        "faerie_queen",
-        "faerie_godfather",
-        "toadie",
-        "dastardly_spirit"
+        "barrel_of_monkeys",
+        "nutcracker_prince",
+        "space_ranger_woody",
+        "raggedy_ann",
+        "busted_bot",
+        "brick_monster",
+        "chip_on_the_ship",
+        "party_pinata",
+        "mortakon"
       ]
     }
   }

@@ -113,7 +113,7 @@ Each report is a **single, self-contained HTML file** with:
 
 Report sections:
 - **Top Cards**: Bar chart showing card popularity across all winning decks
-- **Card Archetypes**: Clustered cards (Treasures, Candy, Mage, Pirates, Animals, Fringe)
+- **Card Archetypes**: Clustered cards (Treasures, Candy, Mage, Pirates, Animals, Toys)
 - **Captain Analysis**: Signature cards (lift) and best 12 picks per captain
 
 ## Archetype Configuration
