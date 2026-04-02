@@ -153,6 +153,21 @@
           "name": "Hephaestus",
           "freq": 8,
           "pct": 5.8
+        },
+        {
+          "name": "Mimic",
+          "freq": 4,
+          "pct": 2.9
+        },
+        {
+          "name": "Uther Pendragon",
+          "freq": 4,
+          "pct": 2.9
+        },
+        {
+          "name": "Kid Icarus",
+          "freq": 4,
+          "pct": 2.9
         }
       ]
     },
@@ -292,6 +307,26 @@
           "name": "Catatouille",
           "freq": 6,
           "pct": 4.3
+        },
+        {
+          "name": "Life Saver",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "name": "Chubby Bunny",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "name": "Jumping Jelly Beans",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "name": "Ghoulade Man",
+          "freq": 1,
+          "pct": 0.7
         }
       ]
     },
@@ -359,6 +394,31 @@
           "name": "Ogre Magi",
           "freq": 6,
           "pct": 4.3
+        },
+        {
+          "name": "Wicked Witch",
+          "freq": 11,
+          "pct": 8.0
+        },
+        {
+          "name": "Rudolph the Red",
+          "freq": 4,
+          "pct": 2.9
+        },
+        {
+          "name": "Moppet",
+          "freq": 3,
+          "pct": 2.2
+        },
+        {
+          "name": "Sabrina",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "name": "Mysterio, the Great and Powerful",
+          "freq": 4,
+          "pct": 2.9
         }
       ]
     },
@@ -426,6 +486,16 @@
           "name": "Barbosa",
           "freq": 6,
           "pct": 4.3
+        },
+        {
+          "name": "Weird Beard",
+          "freq": 4,
+          "pct": 2.9
+        },
+        {
+          "name": "The Rat King",
+          "freq": 3,
+          "pct": 2.2
         }
       ]
     },
@@ -478,13 +548,50 @@
           "name": "The Giving Tree",
           "freq": 5,
           "pct": 3.6
+        },
+        {
+          "name": "Leapfrog",
+          "freq": 2,
+          "pct": 1.4
         }
       ]
     },
     {
-      "id": "fringe",
-      "label": "Fringe",
+      "id": "toys",
+      "label": "Toys",
       "color": "#5a5d6a",
+      "cards": [
+        {
+          "name": "Barrel of Monkeys",
+          "freq": 2,
+          "pct": 1.4
+        },
+        {
+          "name": "Nutcracker Prince",
+          "freq": 1,
+          "pct": 0.7
+        },
+        {
+          "name": "Space Ranger Woody",
+          "freq": 1,
+          "pct": 0.7
+        },
+        {
+          "name": "Raggedy Ann",
+          "freq": 1,
+          "pct": 0.7
+        },
+        {
+          "name": "Mortakon",
+          "freq": 7,
+          "pct": 5.1
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "label": "Other",
+      "color": "#7a7d8a",
       "cards": [
         {
           "name": "Daedalus",
@@ -520,56 +627,9 @@
           "name": "Dastardly Spirit",
           "freq": 5,
           "pct": 3.6
-        }
-      ]
-    },
-    {
-      "id": "other",
-      "label": "Other",
-      "color": "#7a7d8a",
-      "cards": [
-        {
-          "name": "Wicked Witch",
-          "freq": 11,
-          "pct": 8.0
-        },
-        {
-          "name": "Mortakon",
-          "freq": 7,
-          "pct": 5.1
         },
         {
           "name": "Charlotte",
-          "freq": 4,
-          "pct": 2.9
-        },
-        {
-          "name": "Kid Icarus",
-          "freq": 4,
-          "pct": 2.9
-        },
-        {
-          "name": "Mimic",
-          "freq": 4,
-          "pct": 2.9
-        },
-        {
-          "name": "Mysterio, the Great and Powerful",
-          "freq": 4,
-          "pct": 2.9
-        },
-        {
-          "name": "Uther Pendragon",
-          "freq": 4,
-          "pct": 2.9
-        },
-        {
-          "name": "Weird Beard",
-          "freq": 4,
-          "pct": 2.9
-        },
-        {
-          "name": "Rudolph the Red",
           "freq": 4,
           "pct": 2.9
         },
@@ -584,29 +644,9 @@
           "pct": 2.2
         },
         {
-          "name": "Moppet",
-          "freq": 3,
-          "pct": 2.2
-        },
-        {
           "name": "Prickles",
           "freq": 3,
           "pct": 2.2
-        },
-        {
-          "name": "The Rat King",
-          "freq": 3,
-          "pct": 2.2
-        },
-        {
-          "name": "Barrel of Monkeys",
-          "freq": 2,
-          "pct": 1.4
-        },
-        {
-          "name": "Chubby Bunny",
-          "freq": 2,
-          "pct": 1.4
         },
         {
           "name": "Fun Gal",
@@ -619,52 +659,12 @@
           "pct": 1.4
         },
         {
-          "name": "Jumping Jelly Beans",
-          "freq": 2,
-          "pct": 1.4
-        },
-        {
-          "name": "Leapfrog",
-          "freq": 2,
-          "pct": 1.4
-        },
-        {
-          "name": "Life Saver",
-          "freq": 2,
-          "pct": 1.4
-        },
-        {
           "name": "Mephisto",
           "freq": 2,
           "pct": 1.4
         },
         {
-          "name": "Sabrina",
-          "freq": 2,
-          "pct": 1.4
-        },
-        {
-          "name": "Ghoulade Man",
-          "freq": 1,
-          "pct": 0.7
-        },
-        {
-          "name": "Nutcracker Prince",
-          "freq": 1,
-          "pct": 0.7
-        },
-        {
-          "name": "Raggedy Ann",
-          "freq": 1,
-          "pct": 0.7
-        },
-        {
           "name": "Sleeping Giant",
-          "freq": 1,
-          "pct": 0.7
-        },
-        {
-          "name": "Space Ranger Woody",
           "freq": 1,
           "pct": 0.7
         },
@@ -4290,7 +4290,7 @@
         },
         {
           "username": "Spiked",
-          "archetype": "Fringe",
+          "archetype": "Pirates",
           "deck": [
             "Shanty",
             "Toadie",
@@ -4308,7 +4308,7 @@
         },
         {
           "username": "trhchris1",
-          "archetype": "Fringe",
+          "archetype": "Pirates",
           "deck": [
             "Shanty",
             "Toadie",
@@ -5197,7 +5197,7 @@
       "players": [
         {
           "username": "Mikokoloko",
-          "archetype": "Treasures",
+          "archetype": "Pirates",
           "deck": [
             "Aladdin",
             "Shanty",
@@ -5535,8 +5535,8 @@
   "top_archetypes": [
     {
       "name": "Treasures",
-      "freq": 61,
-      "pct": 44.2,
+      "freq": 60,
+      "pct": 43.5,
       "color": "#c8a96e"
     },
     {
@@ -5546,22 +5546,16 @@
       "color": "#e87d9e"
     },
     {
+      "name": "Pirates",
+      "freq": 9,
+      "pct": 6.5,
+      "color": "#6e9ec8"
+    },
+    {
       "name": "Mage",
       "freq": 9,
       "pct": 6.5,
       "color": "#9e6ec8"
-    },
-    {
-      "name": "Pirates",
-      "freq": 6,
-      "pct": 4.3,
-      "color": "#6e9ec8"
-    },
-    {
-      "name": "Fringe",
-      "freq": 2,
-      "pct": 1.4,
-      "color": "#5a5d6a"
     }
   ],
   "cluster_map": {
@@ -5570,7 +5564,7 @@
     "Mage": "#9e6ec8",
     "Pirates": "#6e9ec8",
     "Animals": "#6ec89e",
-    "Fringe": "#5a5d6a",
+    "Toys": "#5a5d6a",
     "Other": "#7a7d8a"
   }
 }
