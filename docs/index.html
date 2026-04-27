@@ -14,6 +14,9 @@
     --accent: #c8a96e;
     --text: #e8e4dc;
     --muted: #7a7d8a;
+    --up: #5a9c6e;
+    --down: #e05c5c;
+    --new: #6e8fc8;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { background:var(--bg); color:var(--text); font-family:'IBM Plex Sans',sans-serif; font-weight:300; min-height:100vh; line-height:1.6; }
@@ -26,23 +29,95 @@
   .subtitle { margin-top:12px; color:var(--muted); font-size:13px; font-family:'IBM Plex Mono',monospace; }
 
   /* MAIN */
-  main { padding:40px; max-width:900px; }
+  main { padding:40px; max-width:1000px; }
   .section { margin-bottom:48px; animation:fadeUp 0.35s ease both; }
   @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
   .section-title { font-family:'Playfair Display',serif; font-size:26px; font-weight:700; margin-bottom:16px; color:var(--accent); }
   .section-desc { color:var(--muted); font-size:14px; line-height:1.7; margin-bottom:24px; }
 
-  /* REPORT CARDS */
-  .report-list { display:flex; flex-direction:column; gap:16px; }
-  .report-card { background:var(--surface); border:1px solid var(--border); border-radius:4px; padding:24px; transition:border-color 0.2s, transform 0.2s; position:relative; overflow:hidden; }
-  .report-card:hover { border-color:var(--accent); transform:translateY(-2px); }
-  .report-card.latest::before { content:'LATEST'; position:absolute; top:0; right:0; background:var(--accent); color:var(--bg); font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:2px; padding:4px 10px; border-bottom-left-radius:4px; font-weight:500; }
-  .report-card.preliminary::before { content:'PRELIMINARY'; position:absolute; top:0; right:0; background:var(--muted); color:var(--bg); font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:2px; padding:4px 10px; border-bottom-left-radius:4px; font-weight:500; }
-  .report-card.latest.preliminary::before { content:'LATEST \00b7 PRELIMINARY'; background:var(--accent); }
-  .report-title { font-family:'Playfair Display',serif; font-size:20px; font-weight:700; margin-bottom:8px; color:var(--text); }
-  .report-date { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:12px; }
-  .report-link { display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--accent); text-decoration:none; letter-spacing:1px; transition:color 0.2s; }
-  .report-link:hover { color:var(--text); }
+  /* REPORT TABLE */
+  .report-table { border:1px solid var(--border); border-radius:4px; overflow:hidden; }
+
+  .report-table-header {
+    display:grid;
+    grid-template-columns: 180px 90px 80px 80px 1fr 1fr 60px;
+    padding:10px 20px;
+    background:var(--surface2);
+    border-bottom:1px solid var(--border);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    gap:12px;
+  }
+
+  .report-row {
+    display:grid;
+    grid-template-columns: 180px 90px 80px 80px 1fr 1fr 60px;
+    padding:16px 20px;
+    gap:12px;
+    background:var(--surface);
+    border-bottom:1px solid var(--border);
+    text-decoration:none;
+    color:var(--text);
+    transition:background 0.15s, border-left-color 0.15s;
+    border-left:3px solid transparent;
+    align-items:center;
+    position:relative;
+  }
+  .report-row:last-child { border-bottom:none; }
+  .report-row:hover { background:var(--surface2); border-left-color:var(--accent); }
+  .report-row.latest { border-left-color:var(--accent); }
+
+  .row-event { display:flex; flex-direction:column; gap:2px; }
+  .row-title { font-family:'Playfair Display',serif; font-size:15px; font-weight:700; color:var(--text); line-height:1.2; }
+  .row-date { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); }
+
+  .row-players { display:flex; flex-direction:column; gap:2px; }
+  .row-num { font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; color:var(--accent); line-height:1; }
+  .row-sub { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); }
+
+  .row-stat { display:flex; flex-direction:column; gap:2px; }
+  .row-stat-num { font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; color:var(--text); }
+
+  .row-pick { display:flex; flex-direction:column; gap:3px; }
+  .row-pick-name { font-size:13px; font-weight:400; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .row-pick-meta { display:flex; align-items:center; gap:6px; }
+  .row-pick-pct { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--accent); }
+
+  .delta { font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500; white-space:nowrap; }
+  .delta.up { color:var(--up); }
+  .delta.down { color:var(--down); }
+  .delta.new { color:var(--new); }
+
+  .row-link { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--accent); letter-spacing:1px; text-align:right; transition:color 0.2s; }
+  .report-row:hover .row-link { color:var(--text); }
+
+  .latest-badge {
+    position:absolute;
+    top:0; right:0;
+    background:var(--accent);
+    color:var(--bg);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:9px;
+    letter-spacing:2px;
+    padding:3px 10px;
+    border-bottom-left-radius:4px;
+    font-weight:500;
+  }
+
+  /* DELTA LEGEND */
+  .delta-legend {
+    display:flex;
+    gap:16px;
+    margin-bottom:20px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10px;
+    color:var(--muted);
+    flex-wrap:wrap;
+  }
+  .delta-legend span { display:flex; align-items:center; gap:5px; }
 
   /* LINKS */
   .links-section { display:flex; flex-wrap:wrap; gap:12px; }
@@ -57,11 +132,19 @@
   .footer-content a { color:var(--accent); text-decoration:none; }
   .footer-content a:hover { color:var(--text); }
 
-  @media(max-width:700px){
-    header,main,footer{padding-left:16px;padding-right:16px;}
-    header{padding-top:32px;}
-    .links-section{flex-direction:column;}
-    .link-card{min-width:auto;}
+  @media(max-width:800px){
+    header,main,footer { padding-left:16px; padding-right:16px; }
+    header { padding-top:32px; }
+    .report-table-header { display:none; }
+    .report-row {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
+      gap:8px 16px;
+    }
+    .row-event { grid-column:1 / -1; }
+    .row-link { text-align:left; grid-column:1 / -1; }
+    .links-section { flex-direction:column; }
+    .link-card { min-width:auto; }
   }
 </style>
 </head>
@@ -77,22 +160,128 @@
   <div class="section">
     <div class="section-title">Reports</div>
     <div class="section-desc">Comprehensive analysis of winning decklists from galaxy.fun tournaments</div>
-    <div class="report-list">
-      <a href="reports/2026-04/" class="report-card latest">
-        <div class="report-title">April 2026 Monthly</div>
-        <div class="report-date">April 2026</div>
-        <span class="report-link">View Report →</span>
+
+    <div class="delta-legend">
+      <span><span class="delta up">▲</span> higher than previous month</span>
+      <span><span class="delta down">▼</span> lower than previous month</span>
+      <span><span class="delta new">NEW</span> new to top spot</span>
+    </div>
+
+    <div class="report-table">
+      <div class="report-table-header">
+        <span>Event</span>
+        <span>Players</span>
+        <span>Captains</span>
+        <span>Cards</span>
+        <span>Top card</span>
+        <span>Top captain</span>
+        <span></span>
+      </div>
+
+      <!-- APRIL 2026 — latest, compare to March -->
+      <a href="reports/2026-04/" class="report-row latest">
+        <div class="latest-badge">LATEST</div>
+        <div class="row-event">
+          <span class="row-title">April 2026 Monthly</span>
+          <span class="row-date">2026-04</span>
+        </div>
+        <div class="row-players">
+          <span class="row-num">275</span>
+          <span class="row-sub">players</span>
+        </div>
+        <div class="row-stat">
+          <span class="row-stat-num">42</span>
+          <span class="delta down">▼ 2</span>
+        </div>
+        <div class="row-stat">
+          <span class="row-stat-num">130</span>
+          <span class="row-sub">&mdash;</span>
+        </div>
+        <div class="row-pick">
+          <span class="row-pick-name">Wormscale Tinkerer</span>
+          <div class="row-pick-meta">
+            <span class="row-pick-pct">62.9%</span>
+            <span class="delta down">▼ 1.9</span>
+          </div>
+        </div>
+        <div class="row-pick">
+          <span class="row-pick-name">Rumpelstiltskin</span>
+          <div class="row-pick-meta">
+            <span class="row-pick-pct">9.8%</span>
+            <span class="delta new">NEW</span>
+          </div>
+        </div>
+        <span class="row-link">View →</span>
       </a>
-      <a href="reports/2026-03/" class="report-card">
-        <div class="report-title">March 2026 Gauntlet</div>
-        <div class="report-date">March 2026</div>
-        <span class="report-link">View Report →</span>
+
+      <!-- MARCH 2026 — compare to February -->
+      <a href="reports/2026-03/" class="report-row">
+        <div class="row-event">
+          <span class="row-title">March 2026 Gauntlet</span>
+          <span class="row-date">2026-03</span>
+        </div>
+        <div class="row-players">
+          <span class="row-num">273</span>
+          <span class="row-sub">players</span>
+        </div>
+        <div class="row-stat">
+          <span class="row-stat-num">44</span>
+          <span class="delta up">▲ 23</span>
+        </div>
+        <div class="row-stat">
+          <span class="row-stat-num">130</span>
+          <span class="delta up">▲ 6</span>
+        </div>
+        <div class="row-pick">
+          <span class="row-pick-name">Wormscale Tinkerer</span>
+          <div class="row-pick-meta">
+            <span class="row-pick-pct">64.8%</span>
+            <span class="delta up">▲ 3.2</span>
+          </div>
+        </div>
+        <div class="row-pick">
+          <span class="row-pick-name">Legend of Loxley</span>
+          <div class="row-pick-meta">
+            <span class="row-pick-pct">8.4%</span>
+            <span class="delta up">▲ 2.6</span>
+          </div>
+        </div>
+        <span class="row-link">View →</span>
       </a>
-      <a href="reports/2026-02/" class="report-card">
-        <div class="report-title">February 2026 Gauntlet</div>
-        <div class="report-date">February 2026</div>
-        <span class="report-link">View Report →</span>
+
+      <!-- FEBRUARY 2026 — baseline, no deltas -->
+      <a href="reports/2026-02/" class="report-row">
+        <div class="row-event">
+          <span class="row-title">February 2026 Gauntlet</span>
+          <span class="row-date">2026-02</span>
+        </div>
+        <div class="row-players">
+          <span class="row-num">138</span>
+          <span class="row-sub">players</span>
+        </div>
+        <div class="row-stat">
+          <span class="row-stat-num">21</span>
+          <span class="row-sub">&mdash;</span>
+        </div>
+        <div class="row-stat">
+          <span class="row-stat-num">124</span>
+          <span class="row-sub">&mdash;</span>
+        </div>
+        <div class="row-pick">
+          <span class="row-pick-name">Wormscale Tinkerer</span>
+          <div class="row-pick-meta">
+            <span class="row-pick-pct">61.6%</span>
+          </div>
+        </div>
+        <div class="row-pick">
+          <span class="row-pick-name">Legend of Loxley</span>
+          <div class="row-pick-meta">
+            <span class="row-pick-pct">5.8%</span>
+          </div>
+        </div>
+        <span class="row-link">View →</span>
       </a>
+
     </div>
   </div>
 
