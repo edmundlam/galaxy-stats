@@ -82,10 +82,11 @@ galaxy-stats/
 │   ├── context/                   # Source HTML files from galaxy.fun
 │   └── dist/                      # Intermediate analysis + final report
 │       └── events/
-│           ├── 2026-03.json               # Parsed event data
-│           ├── 2026-03-auto-analysis.json # Auto-generated analysis
-│           ├── 2026-03-analysis.json      # Final analysis (with overrides)
-│           └── 2026-03-report.html        # Final HTML report
+│           └── 2026-03/                   # Event-specific subdirectory
+│               ├── event.json             # Parsed event data
+│               ├── auto-analysis.json     # Auto-generated analysis
+│               ├── analysis.json          # Final analysis (with overrides)
+│               └── report.html            # Final HTML report
 ├── docs/                   # Static HTML reports (served by GitHub Pages)
 │   ├── index.html         # Redirects to latest report
 │   └── reports/
@@ -100,12 +101,12 @@ Event HTML files are processed through a **6-stage ETL pipeline**:
 
 **Stage 1: Parse** (`parse_event.py`)
 - **Input:** Event HTML from galaxy.fun (stored in `etl/context/`)
-- **Output:** `etl/dist/events/<event-id>.json` (raw event data)
+- **Output:** `etl/dist/events/<event-id>/event.json` (raw event data)
 - **What it does:** Extracts players, captains, decks, and card references
 
 **Stage 2: Analyze** (`analyze_event.py`)
-- **Input:** `etl/dist/events/<event-id>.json`
-- **Output:** `etl/dist/events/<event-id>-auto-analysis.json` (with clusters, lift, best12)
+- **Input:** `etl/dist/events/<event-id>/event.json`
+- **Output:** `etl/dist/events/<event-id>/auto-analysis.json` (with clusters, lift, best12)
 - **What it does:**
   - Hierarchical clustering (scipy) to group cards by co-occurrence
   - Lift calculations for captain-card associations
@@ -113,14 +114,14 @@ Event HTML files are processed through a **6-stage ETL pipeline**:
   - Auto-generates cluster labels from most frequent card
 
 **Stage 3: Finalize** (`finalize_analysis.py`)
-- **Input:** `etl/dist/events/<event-id>-auto-analysis.json`
-- **Output:** `etl/dist/events/<event-id>-analysis.json` (with archetype overrides applied)
+- **Input:** `etl/dist/events/<event-id>/auto-analysis.json`
+- **Output:** `etl/dist/events/<event-id>/analysis.json` (with archetype overrides applied)
 - **What it does:** Reassigns player archetypes based on `etl/config/archetypes.json` overrides
 - **Two modes:** `etl-finalize` (no overrides) or `etl-finalize-with-overrides` (uses config)
 
 **Stage 4: Render** (`render_report.py`)
-- **Input:** `etl/dist/events/<event-id>-analysis.json`
-- **Output:** `etl/dist/events/<event-id>-report.html` (standalone HTML)
+- **Input:** `etl/dist/events/<event-id>/analysis.json`
+- **Output:** `etl/dist/events/<event-id>/report.html` (standalone HTML)
 - **What it does:** Generates self-contained HTML with embedded CSS/JS/data
 
 **Stages 5-6: Deploy**
@@ -161,7 +162,7 @@ make etl-analyze EVENT_ID=2026-03
 uv run scripts/analyze_event.py 2026-03
 ```
 Generates: Hierarchical clusters (6 by default), lift analysis, best12 per captain
-Output: `etl/dist/events/<event-id>-auto-analysis.json`
+Output: `etl/dist/events/<event-id>/auto-analysis.json`
 Flags: `--clusters N` to adjust cluster count (default: 6)
 
 **finalize_analysis.py (Stage 3)**
@@ -176,7 +177,7 @@ make etl-finalize EVENT_ID=2026-03
 uv run scripts/finalize_analysis.py 2026-03 --override-config etl/config/archetypes.json
 ```
 Applies archetype overrides from `etl/config/archetypes.json` to player decklists
-Output: `etl/dist/events/<event-id>-analysis.json`
+Output: `etl/dist/events/<event-id>/analysis.json`
 
 **render_report.py (Stage 4)**
 ```bash
@@ -202,7 +203,7 @@ Generates: Standalone HTML report with embedded CSS/JS/data
    - Without overrides (auto-generated): `make report-auto HTML_FILE=context/2026-04.html EVENT_ID=2026-04`
 3. **Verify locally**: Open `docs/reports/2026-04/index.html` in browser
 4. **Review archetype assignments** (optional):
-   - Check auto-generated clusters in `etl/dist/events/2026-04-auto-analysis.json`
+   - Check auto-generated clusters in `etl/dist/events/2026-04/auto-analysis.json`
    - Update `etl/config/archetypes.json` to add overrides
    - Re-run: `make etl-finalize-with-overrides EVENT_ID=2026-04` → `make etl-render EVENT_ID=2026-04` → `make copy-report EVENT_ID=2026-04`
 5. **Commit and push**: GitHub Pages will auto-deploy
@@ -236,11 +237,11 @@ Modifications to report styling should be made in `render_report.py`'s HTML temp
 
 **Issue:** Cluster names don't make sense
 - **Cause:** Auto-generated labels are based on most frequent card in each cluster
-- **Fix:** Manually edit cluster labels in `etl/dist/events/<event-id>-analysis.json` and re-render
+- **Fix:** Manually edit cluster labels in `etl/dist/events/<event-id>/analysis.json` and re-render
 
 **Issue:** Wrong event data showing in report
 - **Cause:** Analysis JSON from previous run
-- **Fix:** Delete `etl/dist/events/<event-id>-analysis.json` and re-run `make etl-analyze`
+- **Fix:** Delete `etl/dist/events/<event-id>/analysis.json` and re-run `make etl-analyze`
 
 **Issue:** Archetype overrides not being applied to player decks
 - **Cause:** Using `make report-auto` or skipping the finalize step

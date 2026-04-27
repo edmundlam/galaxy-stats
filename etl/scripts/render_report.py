@@ -31,7 +31,7 @@ def load_analysis(event_id: str, events_dir: Path) -> dict:
     Returns:
         Analysis data dictionary
     """
-    analysis_path = events_dir / f"{event_id}-analysis.json"
+    analysis_path = events_dir / event_id / "analysis.json"
 
     if not analysis_path.exists():
         raise FileNotFoundError(f"Analysis data not found: {analysis_path}")
@@ -250,8 +250,8 @@ def main() -> int:
         print(f"Rendering report for {args.event_id}...")
         html = render_report(args.event_id, events_dir)
 
-        # Write output
-        output_path = events_dir / f"{args.event_id}-report.html"
+        # Write output to event-specific subdirectory
+        output_path = events_dir / args.event_id / "report.html"
         with output_path.open("w", encoding="utf-8") as f:
             f.write(html)
 

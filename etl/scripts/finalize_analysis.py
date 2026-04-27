@@ -330,7 +330,7 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
         ValueError: If config validation fails
     """
     events_dir = dist_dir / "events"
-    auto_analysis_path = events_dir / f"{event_id}-auto-analysis.json"
+    auto_analysis_path = events_dir / event_id / "auto-analysis.json"
     cards_path = dist_dir / "cards.json"
 
     # Load auto-analysis
@@ -470,8 +470,9 @@ def main() -> int:
         dist_dir = project_root / "etl" / "dist"
         events_dir = dist_dir / "events"
 
-        # Ensure output directory exists
-        events_dir.mkdir(parents=True, exist_ok=True)
+        # Ensure event-specific output directory exists
+        event_dir = events_dir / args.event_id
+        event_dir.mkdir(parents=True, exist_ok=True)
 
         # Finalize analysis
         print(f"Finalizing analysis for {args.event_id}...")
@@ -481,8 +482,8 @@ def main() -> int:
 
         analysis = finalize_analysis(args.event_id, dist_dir, override_path)
 
-        # Write final analysis
-        output_path = events_dir / f"{args.event_id}-analysis.json"
+        # Write final analysis to event-specific subdirectory
+        output_path = events_dir / args.event_id / "analysis.json"
         with output_path.open("w", encoding="utf-8") as f:
             json.dump(analysis, f, indent=2)
 

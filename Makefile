@@ -43,7 +43,7 @@ etl-finalize-with-overrides:		## Finalize with archetype overrides: make etl-fin
 # === Report Commands ===
 copy-report:		## Copy generated report to docs: make copy-report EVENT_ID=2026-02
 	@mkdir -p $(DOCS_DIR)/reports/$(EVENT_ID)
-	@cp $(ETL_DIST)/$(EVENT_ID)-report.html $(DOCS_DIR)/reports/$(EVENT_ID)/index.html
+	@cp $(ETL_DIST)/$(EVENT_ID)/report.html $(DOCS_DIR)/reports/$(EVENT_ID)/index.html
 	@echo "Report copied to $(DOCS_DIR)/reports/$(EVENT_ID)/index.html"
 
 report: etl-parse etl-analyze etl-finalize-with-overrides etl-render copy-report		## Full workflow with archetype overrides: parse → analyze → finalize → render → copy (HTML_FILE and EVENT_ID required)

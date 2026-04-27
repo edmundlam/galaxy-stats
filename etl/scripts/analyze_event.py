@@ -37,7 +37,7 @@ def load_data(event_id: str, dist_dir: Path) -> tuple[dict, dict, dict]:
     Returns:
         Tuple of (event_data, cards_map, captains_map)
     """
-    event_path = dist_dir / "events" / f"{event_id}.json"
+    event_path = dist_dir / "events" / event_id / "event.json"
     cards_path = dist_dir / "cards.json"
     captains_path = dist_dir / "captains.json"
 
@@ -428,15 +428,16 @@ def main() -> int:
         dist_dir = project_root / "etl" / "dist"
         events_dir = dist_dir / "events"
 
-        # Ensure output directory exists
-        events_dir.mkdir(parents=True, exist_ok=True)
+        # Ensure event-specific output directory exists
+        event_dir = events_dir / args.event_id
+        event_dir.mkdir(parents=True, exist_ok=True)
 
         # Perform analysis
         print(f"Analyzing event {args.event_id}...")
         analysis = analyze_event(args.event_id, dist_dir, n_clusters=args.clusters, linkage_method=args.linkage)
 
-        # Write analysis JSON (auto-analysis for optional overrides)
-        output_path = events_dir / f"{args.event_id}-auto-analysis.json"
+        # Write analysis JSON to event-specific subdirectory
+        output_path = events_dir / args.event_id / "auto-analysis.json"
         with output_path.open("w", encoding="utf-8") as f:
             json.dump(analysis, f, indent=2)
 

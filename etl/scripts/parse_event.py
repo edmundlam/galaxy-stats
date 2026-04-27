@@ -177,8 +177,9 @@ def main() -> int:
         events_dir = project_root / "etl" / "dist" / "events"
         data_dir = project_root / "etl" / "dist"
 
-        # Create directories
-        events_dir.mkdir(parents=True, exist_ok=True)
+        # Create event-specific subdirectory
+        event_dir = events_dir / args.event_id
+        event_dir.mkdir(parents=True, exist_ok=True)
         data_dir.mkdir(parents=True, exist_ok=True)
 
         # Load existing cards and captains
@@ -192,8 +193,8 @@ def main() -> int:
         merged_cards, new_cards_count = merge_cards(existing_cards, cards_map)
         merged_captains, new_captains_count = merge_cards(existing_captains, captains_map)
 
-        # Write event JSON
-        event_json_path = events_dir / f"{args.event_id}.json"
+        # Write event JSON to event-specific subdirectory
+        event_json_path = event_dir / "event.json"
         event_json_path.write_text(json.dumps(event_data, indent=2) + "\n", encoding="utf-8")
         print(f"✓ Wrote {event_json_path}")
 
