@@ -35,7 +35,16 @@
   .section-title { font-family:'Playfair Display',serif; font-size:26px; font-weight:700; margin-bottom:16px; color:var(--accent); }
   .section-desc { color:var(--muted); font-size:14px; line-height:1.7; margin-bottom:24px; }
 
-  /* REPORT TABLE */
+  /* DELTA LEGEND */
+  .delta-legend { display:flex; gap:16px; margin-bottom:20px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); flex-wrap:wrap; }
+  .delta-legend span { display:flex; align-items:center; gap:5px; }
+  .delta { font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500; white-space:nowrap; }
+  .delta.up { color:var(--up); }
+  .delta.down { color:var(--down); }
+  .delta.new { color:var(--new); }
+  .row-sub { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); }
+
+  /* ── DESKTOP TABLE ── */
   .report-table { border:1px solid var(--border); border-radius:4px; overflow:hidden; }
 
   .report-table-header {
@@ -73,51 +82,59 @@
   .row-event { display:flex; flex-direction:column; gap:2px; }
   .row-title { font-family:'Playfair Display',serif; font-size:15px; font-weight:700; color:var(--text); line-height:1.2; }
   .row-date { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); }
-
-  .row-players { display:flex; flex-direction:column; gap:2px; }
   .row-num { font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; color:var(--accent); line-height:1; }
-  .row-sub { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); }
-
   .row-stat { display:flex; flex-direction:column; gap:2px; }
   .row-stat-num { font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; color:var(--text); }
-
   .row-pick { display:flex; flex-direction:column; gap:3px; }
   .row-pick-name { font-size:13px; font-weight:400; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .row-pick-meta { display:flex; align-items:center; gap:6px; }
   .row-pick-pct { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--accent); }
-
-  .delta { font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500; white-space:nowrap; }
-  .delta.up { color:var(--up); }
-  .delta.down { color:var(--down); }
-  .delta.new { color:var(--new); }
-
   .row-link { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--accent); letter-spacing:1px; text-align:right; transition:color 0.2s; }
   .report-row:hover .row-link { color:var(--text); }
 
   .latest-badge {
-    position:absolute;
-    top:0; right:0;
-    background:var(--accent);
-    color:var(--bg);
-    font-family:'IBM Plex Mono',monospace;
-    font-size:9px;
-    letter-spacing:2px;
-    padding:3px 10px;
-    border-bottom-left-radius:4px;
-    font-weight:500;
+    position:absolute; top:0; right:0;
+    background:var(--accent); color:var(--bg);
+    font-family:'IBM Plex Mono',monospace; font-size:9px;
+    letter-spacing:2px; padding:3px 10px;
+    border-bottom-left-radius:4px; font-weight:500;
   }
 
-  /* DELTA LEGEND */
-  .delta-legend {
-    display:flex;
-    gap:16px;
-    margin-bottom:20px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:10px;
-    color:var(--muted);
-    flex-wrap:wrap;
+  /* ── MOBILE CARDS — hidden on desktop ── */
+  .report-cards { display:none; flex-direction:column; border:1px solid var(--border); border-radius:4px; overflow:hidden; }
+
+  .report-card-m {
+    display:block;
+    background:var(--surface);
+    border-bottom:1px solid var(--border);
+    border-left:3px solid transparent;
+    padding:16px 14px;
+    text-decoration:none;
+    color:var(--text);
+    position:relative;
+    transition:background 0.15s;
   }
-  .delta-legend span { display:flex; align-items:center; gap:5px; }
+  .report-card-m:last-child { border-bottom:none; }
+  .report-card-m.latest { border-left-color:var(--accent); }
+
+  .card-m-title { font-family:'Playfair Display',serif; font-size:15px; font-weight:700; color:var(--text); line-height:1.2; margin-bottom:2px; }
+  .card-m-date { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); margin-bottom:14px; }
+
+  .card-m-nums { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:14px; }
+  .card-m-num-item { display:flex; flex-direction:column; gap:2px; }
+  .card-m-num-label { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); }
+  .card-m-num-val { font-family:'IBM Plex Mono',monospace; font-size:20px; font-weight:500; line-height:1; }
+  .card-m-num-val.accent { color:var(--accent); }
+  .card-m-num-val.normal { color:var(--text); }
+
+  .card-m-picks { border-top:1px solid var(--border); padding-top:12px; display:flex; flex-direction:column; gap:8px; }
+  .card-m-pick { display:flex; flex-direction:column; gap:2px; }
+  .card-m-pick-header { display:flex; justify-content:space-between; align-items:center; }
+  .card-m-pick-label { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); }
+  .card-m-pick-row { display:flex; justify-content:space-between; align-items:baseline; }
+  .card-m-pick-name { font-size:13px; color:var(--text); }
+  .card-m-pick-pct { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--accent); }
+  .card-m-footer { margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--accent); letter-spacing:1px; }
 
   /* LINKS */
   .links-section { display:flex; flex-wrap:wrap; gap:12px; }
@@ -132,17 +149,12 @@
   .footer-content a { color:var(--accent); text-decoration:none; }
   .footer-content a:hover { color:var(--text); }
 
-  @media(max-width:800px){
+  @media(max-width:760px){
     header,main,footer { padding-left:16px; padding-right:16px; }
     header { padding-top:32px; }
-    .report-table-header { display:none; }
-    .report-row {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto auto;
-      gap:8px 16px;
-    }
-    .row-event { grid-column:1 / -1; }
-    .row-link { text-align:left; grid-column:1 / -1; }
+    main { padding-top:28px; }
+    .report-table { display:none; }
+    .report-cards { display:flex; }
     .links-section { flex-direction:column; }
     .link-card { min-width:auto; }
   }
@@ -167,6 +179,7 @@
       <span><span class="delta new">NEW</span> new to top spot</span>
     </div>
 
+    <!-- DESKTOP TABLE -->
     <div class="report-table">
       <div class="report-table-header">
         <span>Event</span>
@@ -178,16 +191,15 @@
         <span></span>
       </div>
 
-      <!-- APRIL 2026 — latest, compare to March -->
       <a href="reports/2026-04/" class="report-row latest">
         <div class="latest-badge">LATEST</div>
         <div class="row-event">
           <span class="row-title">April 2026 Monthly</span>
           <span class="row-date">2026-04</span>
         </div>
-        <div class="row-players">
-          <span class="row-num">275</span>
-          <span class="row-sub">players</span>
+        <div>
+          <div class="row-num">275</div>
+          <div class="row-sub">players</div>
         </div>
         <div class="row-stat">
           <span class="row-stat-num">42</span>
@@ -214,15 +226,14 @@
         <span class="row-link">View →</span>
       </a>
 
-      <!-- MARCH 2026 — compare to February -->
       <a href="reports/2026-03/" class="report-row">
         <div class="row-event">
           <span class="row-title">March 2026 Gauntlet</span>
           <span class="row-date">2026-03</span>
         </div>
-        <div class="row-players">
-          <span class="row-num">273</span>
-          <span class="row-sub">players</span>
+        <div>
+          <div class="row-num">273</div>
+          <div class="row-sub">players</div>
         </div>
         <div class="row-stat">
           <span class="row-stat-num">44</span>
@@ -249,15 +260,14 @@
         <span class="row-link">View →</span>
       </a>
 
-      <!-- FEBRUARY 2026 — baseline, no deltas -->
       <a href="reports/2026-02/" class="report-row">
         <div class="row-event">
           <span class="row-title">February 2026 Gauntlet</span>
           <span class="row-date">2026-02</span>
         </div>
-        <div class="row-players">
-          <span class="row-num">138</span>
-          <span class="row-sub">players</span>
+        <div>
+          <div class="row-num">138</div>
+          <div class="row-sub">players</div>
         </div>
         <div class="row-stat">
           <span class="row-stat-num">21</span>
@@ -280,6 +290,137 @@
           </div>
         </div>
         <span class="row-link">View →</span>
+      </a>
+    </div>
+
+    <!-- MOBILE CARDS -->
+    <div class="report-cards">
+
+      <a href="reports/2026-04/" class="report-card-m latest">
+        <div class="latest-badge">LATEST</div>
+        <div class="card-m-title">April 2026 Monthly</div>
+        <div class="card-m-date">2026-04</div>
+        <div class="card-m-nums">
+          <div class="card-m-num-item">
+            <span class="card-m-num-label">Players</span>
+            <span class="card-m-num-val accent">275</span>
+          </div>
+          <div class="card-m-num-item">
+            <span class="card-m-num-label">Captains</span>
+            <span class="card-m-num-val normal">42</span>
+            <span class="delta down">▼ 2</span>
+          </div>
+          <div class="card-m-num-item">
+            <span class="card-m-num-label">Cards</span>
+            <span class="card-m-num-val normal">130</span>
+            <span class="row-sub">&mdash;</span>
+          </div>
+        </div>
+        <div class="card-m-picks">
+          <div class="card-m-pick">
+            <div class="card-m-pick-header">
+              <span class="card-m-pick-label">Top card</span>
+            </div>
+            <div class="card-m-pick-row">
+              <span class="card-m-pick-name">Wormscale Tinkerer</span>
+              <span class="card-m-pick-pct">62.9% <span class="delta down">▼ 1.9</span></span>
+            </div>
+          </div>
+          <div class="card-m-pick">
+            <div class="card-m-pick-header">
+              <span class="card-m-pick-label">Top captain</span>
+            </div>
+            <div class="card-m-pick-row">
+              <span class="card-m-pick-name">Rumpelstiltskin</span>
+              <span class="card-m-pick-pct">9.8% <span class="delta new">NEW</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="card-m-footer">View Report →</div>
+      </a>
+
+      <a href="reports/2026-03/" class="report-card-m">
+        <div class="card-m-title">March 2026 Gauntlet</div>
+        <div class="card-m-date">2026-03</div>
+        <div class="card-m-nums">
+          <div class="card-m-num-item">
+            <span class="card-m-num-label">Players</span>
+            <span class="card-m-num-val accent">273</span>
+          </div>
+          <div class="card-m-num-item">
+            <span class="card-m-num-label">Captains</span>
+            <span class="card-m-num-val normal">44</span>
+            <span class="delta up">▲ 23</span>
+          </div>
+          <div class="card-m-num-item">
+            <span class="card-m-num-label">Cards</span>
+            <span class="card-m-num-val normal">130</span>
+            <span class="delta up">▲ 6</span>
+          </div>
+        </div>
+        <div class="card-m-picks">
+          <div class="card-m-pick">
+            <div class="card-m-pick-header">
+              <span class="card-m-pick-label">Top card</span>
+            </div>
+            <div class="card-m-pick-row">
+              <span class="card-m-pick-name">Wormscale Tinkerer</span>
+              <span class="card-m-pick-pct">64.8% <span class="delta up">▲ 3.2</span></span>
+            </div>
+          </div>
+          <div class="card-m-pick">
+            <div class="card-m-pick-header">
+              <span class="card-m-pick-label">Top captain</span>
+            </div>
+            <div class="card-m-pick-row">
+              <span class="card-m-pick-name">Legend of Loxley</span>
+              <span class="card-m-pick-pct">8.4% <span class="delta up">▲ 2.6</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="card-m-footer">View Report →</div>
+      </a>
+
+      <a href="reports/2026-02/" class="report-card-m">
+        <div class="card-m-title">February 2026 Gauntlet</div>
+        <div class="card-m-date">2026-02</div>
+        <div class="card-m-nums">
+          <div class="card-m-num-item">
+            <span class="card-m-num-label">Players</span>
+            <span class="card-m-num-val accent">138</span>
+          </div>
+          <div class="card-m-num-item">
+            <span class="card-m-num-label">Captains</span>
+            <span class="card-m-num-val normal">21</span>
+            <span class="row-sub">&mdash;</span>
+          </div>
+          <div class="card-m-num-item">
+            <span class="card-m-num-label">Cards</span>
+            <span class="card-m-num-val normal">124</span>
+            <span class="row-sub">&mdash;</span>
+          </div>
+        </div>
+        <div class="card-m-picks">
+          <div class="card-m-pick">
+            <div class="card-m-pick-header">
+              <span class="card-m-pick-label">Top card</span>
+            </div>
+            <div class="card-m-pick-row">
+              <span class="card-m-pick-name">Wormscale Tinkerer</span>
+              <span class="card-m-pick-pct">61.6%</span>
+            </div>
+          </div>
+          <div class="card-m-pick">
+            <div class="card-m-pick-header">
+              <span class="card-m-pick-label">Top captain</span>
+            </div>
+            <div class="card-m-pick-row">
+              <span class="card-m-pick-name">Legend of Loxley</span>
+              <span class="card-m-pick-pct">5.8%</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-m-footer">View Report →</div>
       </a>
 
     </div>
