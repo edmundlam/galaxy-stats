@@ -170,3 +170,7 @@
     .captains-grid{grid-template-columns:1fr;}
     .clusters-grid{grid-template-columns:1fr;}
   }
+
+  /* Card links */
+  .card-link { color:inherit; text-decoration:none; border-bottom:1px dotted transparent; transition:border-color 0.15s; }
+  .card-link:hover { border-bottom-color:currentColor; }

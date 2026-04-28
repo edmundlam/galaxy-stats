@@ -133,6 +133,7 @@ def get_html_template() -> str:
 <script src="../../assets/galaxy-report.js?v={ASSET_VERSION}"></script>
 <script>
 const DATA = {DATA_JSON};
+const CARDS = {CARDS_JSON};
 
 // INIT - call render functions with data
 renderBars();
@@ -189,6 +190,24 @@ def calculate_stats(analysis: dict) -> dict:
     }
 
 
+def load_cards(project_root: Path) -> dict:
+    """Load cards JSON file.
+
+    Args:
+        project_root: Path to project root
+
+    Returns:
+        Cards data dictionary (slug -> name mapping)
+    """
+    cards_path = project_root / "etl" / "dist" / "cards.json"
+
+    if not cards_path.exists():
+        return {}
+
+    with cards_path.open(encoding="utf-8") as f:
+        return json.load(f)
+
+
 def render_report(event_id: str, events_dir: Path) -> str:
     """Generate HTML report from analysis data.
 
@@ -201,6 +220,10 @@ def render_report(event_id: str, events_dir: Path) -> str:
     """
     # Load analysis data
     analysis = load_analysis(event_id, events_dir)
+
+    # Load cards data for link generation
+    project_root = Path(__file__).parent.parent.parent
+    cards = load_cards(project_root)
 
     # Calculate stats
     stats = calculate_stats(analysis)
@@ -224,6 +247,7 @@ def render_report(event_id: str, events_dir: Path) -> str:
         "TOTAL_UNIQUE_CARDS": stats["unique_cards"],
         "MOST_PLAYED_CARD": stats["most_played_card"],
         "DATA_JSON": json.dumps(analysis, separators=(",", ":")),
+        "CARDS_JSON": json.dumps(cards, separators=(",", ":")),
         "ASSET_VERSION": ASSET_VERSION,
     }
 

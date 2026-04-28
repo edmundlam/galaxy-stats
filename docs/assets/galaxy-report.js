@@ -7,13 +7,20 @@ function showSection(id, btn) {
   if (id === 'clusters') setTimeout(animateArchetypeBars, 80);
 }
 
+// Card link helper - lookup slug from CARDS map
+function cardLink(name) {
+  const slug = Object.entries(CARDS).find(([_, n]) => n === name)?.[0];
+  if (!slug) return name;
+  return `<a href="https://guide.galaxy.fun/cards/${slug}/" target="_blank" rel="noopener" class="card-link">${name}</a>`;
+}
+
 // BAR CHART
 function renderBars() {
   const c = document.getElementById('bar-chart-container');
   const max = DATA.top_cards[0].pct;
   c.innerHTML = DATA.top_cards.map(card => `
     <div class="bar-row">
-      <div class="bar-name">${card.name}</div>
+      <div class="bar-name">${cardLink(card.name)}</div>
       <div class="bar-track"><div class="bar-fill" style="width:0%" data-w="${card.pct/max*100}"></div></div>
       <div class="bar-pct">${card.pct}%</div>
     </div>`).join('');
@@ -106,7 +113,7 @@ function renderClusters() {
 }
 function pill(card, color, opacity) {
   return `<div class="pill" style="border-color:${color}${Math.round(opacity*99).toString(16).padStart(2,'0')}">
-    <span>${card.name}</span><span class="pill-freq">${card.freq}</span>
+    <span>${cardLink(card.name)}</span><span class="pill-freq">${card.freq}</span>
   </div>`;
 }
 
@@ -152,7 +159,7 @@ function renderCaptains() {
       const cls = tc.lift >= 10 ? 'lift-hi' : tc.lift >= 5 ? 'lift-mid' : 'lift-lo';
       const color = cardInfo[tc.card.replace(/\\s+/g, '_').toLowerCase()]?.color;
       return `<div class="lift-row">
-        <div class="lift-name" style="color:${color || ''}">${tc.card}</div>
+        <div class="lift-name" style="color:${color || ''}">${cardLink(tc.card)}</div>
         <div class="lift-freq">${tc.freq}/${cap.n}</div>
         <div class="lift-badge ${cls}">${tc.lift}×</div>
       </div>`;
@@ -162,7 +169,7 @@ function renderCaptains() {
     const bestRows = cap.best12.map(tc => {
       const color = cardInfo[tc.card.replace(/\\s+/g, '_').toLowerCase()]?.color;
       return `<div class="best-row">
-        <div class="best-name" style="color:${color || ''}">${tc.card}</div>
+        <div class="best-name" style="color:${color || ''}">${cardLink(tc.card)}</div>
         <div class="best-track">
           <div class="best-bar-wrap"><div class="best-bar-fill" style="width:${tc.pct}%"></div></div>
           <div class="best-pct">${tc.pct}%</div>
@@ -186,7 +193,7 @@ function renderCaptains() {
               <div class="deck-pills">
                 ${p.deck.map(cardSlug => {
                   const info = cardInfo[cardSlug] || { name: cardSlug, color: '' };
-                  return `<span class="deck-pill" style="${info.color ? 'color:' + info.color + 'cc;border-color:' + info.color + '30' : ''}">${info.name}</span>`;
+                  return `<span class="deck-pill" style="${info.color ? 'color:' + info.color + 'cc;border-color:' + info.color + '30' : ''}">${cardLink(info.name)}</span>`;
                 }).join('')}
               </div>
             </div>
