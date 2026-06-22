@@ -80,6 +80,11 @@
           "pct": 12.7
         },
         {
+          "name": "Apophis",
+          "freq": 28,
+          "pct": 10.8
+        },
+        {
           "name": "Oracle of Fortunes",
           "freq": 25,
           "pct": 9.6
@@ -98,6 +103,11 @@
           "name": "Mechanical Dragon",
           "freq": 23,
           "pct": 8.8
+        },
+        {
+          "name": "Ptah",
+          "freq": 22,
+          "pct": 8.5
         },
         {
           "name": "Thunder of Dragons",
@@ -121,6 +131,11 @@
         },
         {
           "name": "Combustible Dragon",
+          "freq": 18,
+          "pct": 6.9
+        },
+        {
+          "name": "Wishing Fish",
           "freq": 18,
           "pct": 6.9
         },
@@ -409,6 +424,21 @@
           "name": "Mysterio, the Great and Powerful",
           "freq": 3,
           "pct": 1.2
+        },
+        {
+          "name": "Scale Singers",
+          "freq": 2,
+          "pct": 0.8
+        },
+        {
+          "name": "Kagutsuchi",
+          "freq": 10,
+          "pct": 3.8
+        },
+        {
+          "name": "Halja",
+          "freq": 10,
+          "pct": 3.8
         }
       ]
     },
@@ -478,6 +508,11 @@
           "pct": 0.8
         },
         {
+          "name": "Nutty Pirates",
+          "freq": 10,
+          "pct": 3.8
+        },
+        {
           "name": "Weird Beard",
           "freq": 4,
           "pct": 1.5
@@ -535,6 +570,11 @@
           "pct": 1.5
         },
         {
+          "name": "Al-mi'raj",
+          "freq": 24,
+          "pct": 9.2
+        },
+        {
           "name": "Leapfrog",
           "freq": 11,
           "pct": 4.2
@@ -543,6 +583,21 @@
           "name": "Underdog",
           "freq": 4,
           "pct": 1.5
+        },
+        {
+          "name": "Baron Bok",
+          "freq": 25,
+          "pct": 9.6
+        },
+        {
+          "name": "Bubbles",
+          "freq": 28,
+          "pct": 10.8
+        },
+        {
+          "name": "Fenrir",
+          "freq": 26,
+          "pct": 10.0
         }
       ]
     },
@@ -595,6 +650,43 @@
           "name": "Mortakon",
           "freq": 84,
           "pct": 32.3
+        },
+        {
+          "name": "Whirlidoo",
+          "freq": 2,
+          "pct": 0.8
+        }
+      ]
+    },
+    {
+      "id": "celestials",
+      "label": "Celestials",
+      "color": "#7b9cff",
+      "cards": [
+        {
+          "name": "Anubis",
+          "freq": 19,
+          "pct": 7.3
+        },
+        {
+          "name": "Mischief",
+          "freq": 1,
+          "pct": 0.4
+        },
+        {
+          "name": "Orpheus",
+          "freq": 6,
+          "pct": 2.3
+        },
+        {
+          "name": "Tantalus",
+          "freq": 3,
+          "pct": 1.2
+        },
+        {
+          "name": "Astral Navigator",
+          "freq": 28,
+          "pct": 10.8
         }
       ]
     },
@@ -654,49 +746,9 @@
           "pct": 13.1
         },
         {
-          "name": "Apophis",
-          "freq": 28,
-          "pct": 10.8
-        },
-        {
-          "name": "Astral Navigator",
-          "freq": 28,
-          "pct": 10.8
-        },
-        {
-          "name": "Bubbles",
-          "freq": 28,
-          "pct": 10.8
-        },
-        {
-          "name": "Fenrir",
-          "freq": 26,
-          "pct": 10.0
-        },
-        {
-          "name": "Baron Bok",
-          "freq": 25,
-          "pct": 9.6
-        },
-        {
-          "name": "Al-mi'raj",
-          "freq": 24,
-          "pct": 9.2
-        },
-        {
           "name": "Ditto",
           "freq": 23,
           "pct": 8.8
-        },
-        {
-          "name": "Ptah",
-          "freq": 22,
-          "pct": 8.5
-        },
-        {
-          "name": "Anubis",
-          "freq": 19,
-          "pct": 7.3
         },
         {
           "name": "Old Coyote",
@@ -705,11 +757,6 @@
         },
         {
           "name": "Faerie Queen",
-          "freq": 18,
-          "pct": 6.9
-        },
-        {
-          "name": "Wishing Fish",
           "freq": 18,
           "pct": 6.9
         },
@@ -725,21 +772,6 @@
         },
         {
           "name": "Friendly Spirit",
-          "freq": 10,
-          "pct": 3.8
-        },
-        {
-          "name": "Kagutsuchi",
-          "freq": 10,
-          "pct": 3.8
-        },
-        {
-          "name": "Halja",
-          "freq": 10,
-          "pct": 3.8
-        },
-        {
-          "name": "Nutty Pirates",
           "freq": 10,
           "pct": 3.8
         },
@@ -769,11 +801,6 @@
           "pct": 2.7
         },
         {
-          "name": "Orpheus",
-          "freq": 6,
-          "pct": 2.3
-        },
-        {
           "name": "Yggdrasil Sapling",
           "freq": 5,
           "pct": 1.9
@@ -785,11 +812,6 @@
         },
         {
           "name": "Black Hole",
-          "freq": 3,
-          "pct": 1.2
-        },
-        {
-          "name": "Tantalus",
           "freq": 3,
           "pct": 1.2
         },
@@ -814,27 +836,12 @@
           "pct": 0.8
         },
         {
-          "name": "Scale Singers",
-          "freq": 2,
-          "pct": 0.8
-        },
-        {
-          "name": "Whirlidoo",
-          "freq": 2,
-          "pct": 0.8
-        },
-        {
           "name": "Charlotte",
           "freq": 1,
           "pct": 0.4
         },
         {
           "name": "Mephisto",
-          "freq": 1,
-          "pct": 0.4
-        },
-        {
-          "name": "Mischief",
           "freq": 1,
           "pct": 0.4
         },
@@ -1050,7 +1057,7 @@
         },
         {
           "username": "dokeshi",
-          "archetype": "Treasures",
+          "archetype": "Celestials",
           "deck": [
             "Mortakon",
             "Anubis",
@@ -1847,7 +1854,7 @@
         },
         {
           "username": "Mr. Balls",
-          "archetype": "Treasures",
+          "archetype": "Mage",
           "deck": [
             "Mortakon",
             "Wicked Witch",
@@ -2266,7 +2273,7 @@
         },
         {
           "username": "Decree",
-          "archetype": "Animals",
+          "archetype": "Treasures",
           "deck": [
             "Leapfrog",
             "Mr. Fox",
@@ -2356,7 +2363,7 @@
         },
         {
           "username": "skeea",
-          "archetype": "Treasures",
+          "archetype": "Animals",
           "deck": [
             "Faerie Queen",
             "The Huntsman",
@@ -2649,7 +2656,7 @@
         },
         {
           "username": "Jalavier",
-          "archetype": "Mage",
+          "archetype": "Treasures",
           "deck": [
             "Morgan Le Fae",
             "Nightshade",
@@ -2757,7 +2764,7 @@
         },
         {
           "username": "Toucan Samuel",
-          "archetype": "Treasures",
+          "archetype": "Mage",
           "deck": [
             "Plunder Penny",
             "Mech-a-Man",
@@ -2996,7 +3003,7 @@
         },
         {
           "username": "JordanTheJew",
-          "archetype": "Unknown",
+          "archetype": "Animals",
           "deck": [
             "Yggdrasil Sapling",
             "Bubbles",
@@ -3050,7 +3057,7 @@
         },
         {
           "username": "Tasia",
-          "archetype": "Unknown",
+          "archetype": "Treasures",
           "deck": [
             "Bubbles",
             "Ditto",
@@ -3546,7 +3553,7 @@
       "players": [
         {
           "username": "Fabwizard",
-          "archetype": "Unknown",
+          "archetype": "Animals",
           "deck": [
             "Bubbles",
             "Fenrir",
@@ -3582,7 +3589,7 @@
         },
         {
           "username": "frufernaut",
-          "archetype": "Unknown",
+          "archetype": "Animals",
           "deck": [
             "Bubbles",
             "Fenrir",
@@ -3600,7 +3607,7 @@
         },
         {
           "username": "Jebas",
-          "archetype": "Unknown",
+          "archetype": "Animals",
           "deck": [
             "Astral Navigator",
             "Bubbles",
@@ -3618,7 +3625,7 @@
         },
         {
           "username": "SeveralKittens",
-          "archetype": "Unknown",
+          "archetype": "Animals",
           "deck": [
             "Bubbles",
             "Fenrir",
@@ -3636,7 +3643,7 @@
         },
         {
           "username": "Spymk",
-          "archetype": "Unknown",
+          "archetype": "Animals",
           "deck": [
             "Bubbles",
             "Fenrir",
@@ -3654,7 +3661,7 @@
         },
         {
           "username": "Swiss Sneeze",
-          "archetype": "Unknown",
+          "archetype": "Animals",
           "deck": [
             "Bubbles",
             "Fenrir",
@@ -4132,7 +4139,7 @@
         },
         {
           "username": "Iceblue 0",
-          "archetype": "Unknown",
+          "archetype": "Celestials",
           "deck": [
             "Yggdrasil Sapling",
             "Astral Navigator",
@@ -8614,8 +8621,8 @@
   "top_archetypes": [
     {
       "name": "Treasures",
-      "freq": 132,
-      "pct": 50.8,
+      "freq": 131,
+      "pct": 50.4,
       "color": "#c8a96e"
     },
     {
@@ -8625,28 +8632,28 @@
       "color": "#e87d9e"
     },
     {
-      "name": "Mage",
-      "freq": 9,
-      "pct": 3.5,
-      "color": "#9e6ec8"
-    },
-    {
-      "name": "Unknown",
-      "freq": 9,
-      "pct": 3.5,
-      "color": "#7a7d8a"
-    },
-    {
       "name": "Animals",
-      "freq": 6,
-      "pct": 2.3,
+      "freq": 13,
+      "pct": 5.0,
       "color": "#6ec89e"
+    },
+    {
+      "name": "Mage",
+      "freq": 10,
+      "pct": 3.8,
+      "color": "#9e6ec8"
     },
     {
       "name": "Pirates",
       "freq": 4,
       "pct": 1.5,
       "color": "#6e9ec8"
+    },
+    {
+      "name": "Celestials",
+      "freq": 2,
+      "pct": 0.8,
+      "color": "#7b9cff"
     },
     {
       "name": "Toys",
@@ -8662,6 +8669,7 @@
     "Pirates": "#6e9ec8",
     "Animals": "#6ec89e",
     "Toys": "#5a5d6a",
+    "Celestials": "#7b9cff",
     "Other": "#7a7d8a"
   }
 }
