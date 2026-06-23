@@ -37,7 +37,9 @@
         "ptah",
         "kid_icarus",
         "wishing_fish",
-        "apophis"
+        "apophis",
+        "crab_dragoon",
+        "ditto"
       ]
     },
     "Candy": {
@@ -98,7 +100,8 @@
         "mysterio_the_great_and_powerful",
         "scale_singers",
         "kagutsuchi",
-        "halja"
+        "halja",
+        "medea_in_a_tavern"
       ]
     },
     "Pirates": {
@@ -138,7 +141,9 @@
         "underdog",
         "baron_bok",
         "bubbles",
-        "fenrir"
+        "fenrir",
+        "old_coyote",
+        "nemean_lion"
       ]
     },
     "Toys": {
@@ -156,14 +161,33 @@
         "whirlidoo"
       ]
     },
-    "Celestials": {
+    "Boons": {
       "color": "#7b9cff",
       "cards": [
         "anubis",
         "mischief",
         "orpheus",
         "tantalus",
-        "astral_navigator"
+        "astral_navigator",
+        "sigrun_valkyrie_queen",
+        "young_hercules",
+        "fortune_teller",
+        "perseus",
+        "the_raven",
+        "orion_the_hunter"
+      ]
+    },
+    "Fae": {
+      "color": "#d87dce",
+      "cards": [
+        "charlotte",
+        "destiny",
+        "faerie_godfather",
+        "faerie_queen",
+        "fun_gal",
+        "prickles",
+        "the_blue_faerie",
+        "toadie"
       ]
     }
   }

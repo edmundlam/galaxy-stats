@@ -614,14 +614,26 @@
       ]
     },
     {
-      "id": "other",
-      "label": "Other",
-      "color": "#7a7d8a",
+      "id": "boons",
+      "label": "Boons",
+      "color": "#7b9cff",
       "cards": [
         {
-          "name": "Faerie Queen",
-          "freq": 18,
-          "pct": 6.5
+          "name": "Anubis",
+          "freq": 6,
+          "pct": 2.2
+        }
+      ]
+    },
+    {
+      "id": "fae",
+      "label": "Fae",
+      "color": "#d87dce",
+      "cards": [
+        {
+          "name": "Charlotte",
+          "freq": 2,
+          "pct": 0.7
         },
         {
           "name": "Faerie Godfather",
@@ -629,14 +641,41 @@
           "pct": 4.4
         },
         {
-          "name": "Friendly Spirit",
-          "freq": 12,
-          "pct": 4.4
+          "name": "Faerie Queen",
+          "freq": 18,
+          "pct": 6.5
         },
         {
           "name": "Fun Gal",
           "freq": 11,
           "pct": 4.0
+        },
+        {
+          "name": "Prickles",
+          "freq": 6,
+          "pct": 2.2
+        },
+        {
+          "name": "The Blue Faerie",
+          "freq": 6,
+          "pct": 2.2
+        },
+        {
+          "name": "Toadie",
+          "freq": 7,
+          "pct": 2.5
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "label": "Other",
+      "color": "#7a7d8a",
+      "cards": [
+        {
+          "name": "Friendly Spirit",
+          "freq": 12,
+          "pct": 4.4
         },
         {
           "name": "Daedalus",
@@ -654,29 +693,9 @@
           "pct": 2.5
         },
         {
-          "name": "Toadie",
-          "freq": 7,
-          "pct": 2.5
-        },
-        {
           "name": "Wormtongue",
           "freq": 7,
           "pct": 2.5
-        },
-        {
-          "name": "Anubis",
-          "freq": 6,
-          "pct": 2.2
-        },
-        {
-          "name": "Prickles",
-          "freq": 6,
-          "pct": 2.2
-        },
-        {
-          "name": "The Blue Faerie",
-          "freq": 6,
-          "pct": 2.2
         },
         {
           "name": "Mephisto",
@@ -692,11 +711,6 @@
           "name": "Black Hole",
           "freq": 4,
           "pct": 1.5
-        },
-        {
-          "name": "Charlotte",
-          "freq": 2,
-          "pct": 0.7
         },
         {
           "name": "Sleeping Giant",
@@ -3051,7 +3065,7 @@
         },
         {
           "username": "Xifos",
-          "archetype": "Treasures",
+          "archetype": "Fae",
           "deck": [
             "Shanty",
             "Fun Gal",
@@ -3087,7 +3101,7 @@
         },
         {
           "username": "YugiMoto",
-          "archetype": "Mage",
+          "archetype": "Fae",
           "deck": [
             "Plunder Penny",
             "Prickles",
@@ -7317,7 +7331,7 @@
       "players": [
         {
           "username": "ameya",
-          "archetype": "Treasures",
+          "archetype": "Fae",
           "deck": [
             "Prickles",
             "Shanty",
@@ -10998,8 +11012,8 @@
   "top_archetypes": [
     {
       "name": "Treasures",
-      "freq": 150,
-      "pct": 54.5,
+      "freq": 148,
+      "pct": 53.8,
       "color": "#c8a96e"
     },
     {
@@ -11010,8 +11024,8 @@
     },
     {
       "name": "Mage",
-      "freq": 13,
-      "pct": 4.7,
+      "freq": 12,
+      "pct": 4.4,
       "color": "#9e6ec8"
     },
     {
@@ -11031,6 +11045,12 @@
       "freq": 4,
       "pct": 1.5,
       "color": "#5a5d6a"
+    },
+    {
+      "name": "Fae",
+      "freq": 3,
+      "pct": 1.1,
+      "color": "#d87dce"
     }
   ],
   "cluster_map": {
@@ -11040,6 +11060,8 @@
     "Pirates": "#6e9ec8",
     "Animals": "#6ec89e",
     "Toys": "#5a5d6a",
+    "Boons": "#7b9cff",
+    "Fae": "#d87dce",
     "Other": "#7a7d8a"
   }
 }
