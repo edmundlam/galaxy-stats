@@ -1,0 +1,8616 @@
+{
+  "event": {
+    "id": "2026-06",
+    "name": "June Monthly",
+    "date": "2026-06-19",
+    "total_champions": 260
+  },
+  "total_players": 232,
+  "clusters": [
+    {
+      "id": "cluster_6",
+      "label": "Mirror Mage",
+      "color": "#7a7d8a",
+      "cards": [
+        {
+          "slug": "mirror_mage",
+          "name": "Mirror Mage",
+          "freq": 27,
+          "pct": 11.6
+        },
+        {
+          "slug": "aladdin",
+          "name": "Aladdin",
+          "freq": 26,
+          "pct": 11.2
+        },
+        {
+          "slug": "ace_of_hearts",
+          "name": "Ace of Hearts",
+          "freq": 22,
+          "pct": 9.5
+        },
+        {
+          "slug": "mechanical_dragon",
+          "name": "Mechanical Dragon",
+          "freq": 22,
+          "pct": 9.5
+        },
+        {
+          "slug": "sir_francis_drake",
+          "name": "Sir Francis Drake",
+          "freq": 21,
+          "pct": 9.1
+        },
+        {
+          "slug": "tsarmina_the_tyrant",
+          "name": "Tsarmina, the Tyrant",
+          "freq": 20,
+          "pct": 8.6
+        },
+        {
+          "slug": "blackbeard",
+          "name": "Blackbeard",
+          "freq": 18,
+          "pct": 7.8
+        },
+        {
+          "slug": "hercules",
+          "name": "Hercules",
+          "freq": 18,
+          "pct": 7.8
+        },
+        {
+          "slug": "snapping_hydra",
+          "name": "Snapping Hydra",
+          "freq": 16,
+          "pct": 6.9
+        },
+        {
+          "slug": "flopsy",
+          "name": "Flopsy",
+          "freq": 15,
+          "pct": 6.5
+        },
+        {
+          "slug": "monstro",
+          "name": "Monstro",
+          "freq": 15,
+          "pct": 6.5
+        },
+        {
+          "slug": "pisces",
+          "name": "Pisces",
+          "freq": 15,
+          "pct": 6.5
+        },
+        {
+          "slug": "sunflare_glider",
+          "name": "Sunflare Glider",
+          "freq": 15,
+          "pct": 6.5
+        },
+        {
+          "slug": "thunder_of_dragons",
+          "name": "Thunder of Dragons",
+          "freq": 15,
+          "pct": 6.5
+        },
+        {
+          "slug": "beanie_baby",
+          "name": "Beanie Baby",
+          "freq": 12,
+          "pct": 5.2
+        },
+        {
+          "slug": "combustible_dragon",
+          "name": "Combustible Dragon",
+          "freq": 12,
+          "pct": 5.2
+        },
+        {
+          "slug": "leapfrog",
+          "name": "Leapfrog",
+          "freq": 10,
+          "pct": 4.3
+        },
+        {
+          "slug": "scale_a_tor",
+          "name": "Scale-a-tor",
+          "freq": 10,
+          "pct": 4.3
+        },
+        {
+          "slug": "the_three_chef_keteers",
+          "name": "The Three Chef-Keteers",
+          "freq": 10,
+          "pct": 4.3
+        },
+        {
+          "slug": "wicked_witch",
+          "name": "Wicked Witch",
+          "freq": 10,
+          "pct": 4.3
+        },
+        {
+          "slug": "anubis",
+          "name": "Anubis",
+          "freq": 9,
+          "pct": 3.9
+        },
+        {
+          "slug": "friendly_spirit",
+          "name": "Friendly Spirit",
+          "freq": 9,
+          "pct": 3.9
+        },
+        {
+          "slug": "innkeeper",
+          "name": "Innkeeper",
+          "freq": 9,
+          "pct": 3.9
+        },
+        {
+          "slug": "kid_icarus",
+          "name": "Kid Icarus",
+          "freq": 9,
+          "pct": 3.9
+        },
+        {
+          "slug": "pirate_prince",
+          "name": "Pirate Prince",
+          "freq": 9,
+          "pct": 3.9
+        },
+        {
+          "slug": "faerie_queen",
+          "name": "Faerie Queen",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "frog_prince",
+          "name": "Frog Prince",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "glory_seeker",
+          "name": "Glory Seeker",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "mimic",
+          "name": "Mimic",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "pied_piper",
+          "name": "Pied Piper",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "pretty_patissier",
+          "name": "Pretty Patissier",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "ptah",
+          "name": "Ptah",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "the_fates",
+          "name": "The Fates",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "wink",
+          "name": "Wink",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "barrel_of_monkeys",
+          "name": "Barrel of Monkeys",
+          "freq": 7,
+          "pct": 3.0
+        },
+        {
+          "slug": "don_quixote",
+          "name": "Don Quixote",
+          "freq": 7,
+          "pct": 3.0
+        },
+        {
+          "slug": "shanty",
+          "name": "Shanty",
+          "freq": 7,
+          "pct": 3.0
+        },
+        {
+          "slug": "underdog",
+          "name": "Underdog",
+          "freq": 7,
+          "pct": 3.0
+        },
+        {
+          "slug": "black_hole",
+          "name": "Black Hole",
+          "freq": 6,
+          "pct": 2.6
+        },
+        {
+          "slug": "dastardly_spirit",
+          "name": "Dastardly Spirit",
+          "freq": 6,
+          "pct": 2.6
+        },
+        {
+          "slug": "doopity_doo",
+          "name": "Doopity Doo",
+          "freq": 6,
+          "pct": 2.6
+        },
+        {
+          "slug": "fun_gal",
+          "name": "Fun Gal",
+          "freq": 6,
+          "pct": 2.6
+        },
+        {
+          "slug": "hephaestus",
+          "name": "Hephaestus",
+          "freq": 6,
+          "pct": 2.6
+        },
+        {
+          "slug": "sailor_moonshine",
+          "name": "Sailor Moonshine",
+          "freq": 6,
+          "pct": 2.6
+        },
+        {
+          "slug": "toadie",
+          "name": "Toadie",
+          "freq": 6,
+          "pct": 2.6
+        },
+        {
+          "slug": "busted_bot",
+          "name": "Busted Bot",
+          "freq": 5,
+          "pct": 2.2
+        },
+        {
+          "slug": "faerie_godfather",
+          "name": "Faerie Godfather",
+          "freq": 5,
+          "pct": 2.2
+        },
+        {
+          "slug": "frosting_dragon",
+          "name": "Frosting Dragon",
+          "freq": 5,
+          "pct": 2.2
+        },
+        {
+          "slug": "nutcracker_prince",
+          "name": "Nutcracker Prince",
+          "freq": 5,
+          "pct": 2.2
+        },
+        {
+          "slug": "the_blue_faerie",
+          "name": "The Blue Faerie",
+          "freq": 5,
+          "pct": 2.2
+        },
+        {
+          "slug": "the_butcher",
+          "name": "The Butcher",
+          "freq": 5,
+          "pct": 2.2
+        },
+        {
+          "slug": "the_giving_tree",
+          "name": "The Giving Tree",
+          "freq": 5,
+          "pct": 2.2
+        },
+        {
+          "slug": "chubby_bunny",
+          "name": "Chubby Bunny",
+          "freq": 4,
+          "pct": 1.7
+        },
+        {
+          "slug": "daedalus",
+          "name": "Daedalus",
+          "freq": 4,
+          "pct": 1.7
+        },
+        {
+          "slug": "jelly_roger",
+          "name": "Jelly Roger",
+          "freq": 4,
+          "pct": 1.7
+        },
+        {
+          "slug": "life_saver",
+          "name": "Life Saver",
+          "freq": 4,
+          "pct": 1.7
+        },
+        {
+          "slug": "nutty_pirates",
+          "name": "Nutty Pirates",
+          "freq": 4,
+          "pct": 1.7
+        },
+        {
+          "slug": "ogre_magi",
+          "name": "Ogre Magi",
+          "freq": 4,
+          "pct": 1.7
+        },
+        {
+          "slug": "orpheus",
+          "name": "Orpheus",
+          "freq": 4,
+          "pct": 1.7
+        },
+        {
+          "slug": "pirate_king",
+          "name": "Pirate King",
+          "freq": 4,
+          "pct": 1.7
+        },
+        {
+          "slug": "raggedy_ann",
+          "name": "Raggedy Ann",
+          "freq": 4,
+          "pct": 1.7
+        },
+        {
+          "slug": "sinbad",
+          "name": "Sinbad",
+          "freq": 4,
+          "pct": 1.7
+        },
+        {
+          "slug": "whirlidoo",
+          "name": "Whirlidoo",
+          "freq": 4,
+          "pct": 1.7
+        },
+        {
+          "slug": "barbosa",
+          "name": "Barbosa",
+          "freq": 3,
+          "pct": 1.3
+        },
+        {
+          "slug": "brick_monster",
+          "name": "Brick Monster",
+          "freq": 3,
+          "pct": 1.3
+        },
+        {
+          "slug": "caramel",
+          "name": "Caramel",
+          "freq": 3,
+          "pct": 1.3
+        },
+        {
+          "slug": "charlotte",
+          "name": "Charlotte",
+          "freq": 3,
+          "pct": 1.3
+        },
+        {
+          "slug": "jumping_jelly_beans",
+          "name": "Jumping Jelly Beans",
+          "freq": 3,
+          "pct": 1.3
+        },
+        {
+          "slug": "moppet",
+          "name": "Moppet",
+          "freq": 3,
+          "pct": 1.3
+        },
+        {
+          "slug": "space_ranger_woody",
+          "name": "Space Ranger Woody",
+          "freq": 3,
+          "pct": 1.3
+        },
+        {
+          "slug": "the_rat_king",
+          "name": "The Rat King",
+          "freq": 3,
+          "pct": 1.3
+        },
+        {
+          "slug": "chip_on_the_ship",
+          "name": "Chip on the Ship",
+          "freq": 2,
+          "pct": 0.9
+        },
+        {
+          "slug": "gulliver",
+          "name": "Gulliver",
+          "freq": 2,
+          "pct": 0.9
+        },
+        {
+          "slug": "mirror_mirror",
+          "name": "Mirror Mirror",
+          "freq": 2,
+          "pct": 0.9
+        },
+        {
+          "slug": "mischief",
+          "name": "Mischief",
+          "freq": 2,
+          "pct": 0.9
+        },
+        {
+          "slug": "miss_muffet",
+          "name": "Miss Muffet",
+          "freq": 2,
+          "pct": 0.9
+        },
+        {
+          "slug": "mysterio_the_great_and_powerful",
+          "name": "Mysterio, the Great and Powerful",
+          "freq": 2,
+          "pct": 0.9
+        },
+        {
+          "slug": "prickles",
+          "name": "Prickles",
+          "freq": 2,
+          "pct": 0.9
+        },
+        {
+          "slug": "sabrina",
+          "name": "Sabrina",
+          "freq": 2,
+          "pct": 0.9
+        },
+        {
+          "slug": "weird_beard",
+          "name": "Weird Beard",
+          "freq": 2,
+          "pct": 0.9
+        },
+        {
+          "slug": "wormtongue",
+          "name": "Wormtongue",
+          "freq": 2,
+          "pct": 0.9
+        },
+        {
+          "slug": "mephisto",
+          "name": "Mephisto",
+          "freq": 1,
+          "pct": 0.4
+        },
+        {
+          "slug": "moonshadow",
+          "name": "Moonshadow",
+          "freq": 1,
+          "pct": 0.4
+        },
+        {
+          "slug": "party_pinata",
+          "name": "Party Pinata",
+          "freq": 1,
+          "pct": 0.4
+        },
+        {
+          "slug": "sleeping_giant",
+          "name": "Sleeping Giant",
+          "freq": 1,
+          "pct": 0.4
+        },
+        {
+          "slug": "sugar_rush",
+          "name": "Sugar Rush",
+          "freq": 1,
+          "pct": 0.4
+        },
+        {
+          "slug": "uther_pendragon",
+          "name": "Uther Pendragon",
+          "freq": 1,
+          "pct": 0.4
+        }
+      ]
+    },
+    {
+      "id": "cluster_3",
+      "label": "Gummy Wyrm",
+      "color": "#9e6ec8",
+      "cards": [
+        {
+          "slug": "gummy_wyrm",
+          "name": "Gummy Wyrm",
+          "freq": 24,
+          "pct": 10.3
+        },
+        {
+          "slug": "lollipop_faerie",
+          "name": "Lollipop Faerie",
+          "freq": 24,
+          "pct": 10.3
+        },
+        {
+          "slug": "twilight_sprinkles",
+          "name": "Twilight Sprinkles",
+          "freq": 24,
+          "pct": 10.3
+        },
+        {
+          "slug": "cotton_candy_dandy",
+          "name": "Cotton Candy Dandy",
+          "freq": 23,
+          "pct": 9.9
+        },
+        {
+          "slug": "gingerbread_witch",
+          "name": "Gingerbread Witch",
+          "freq": 23,
+          "pct": 9.9
+        },
+        {
+          "slug": "kool_wip",
+          "name": "Kool Wip",
+          "freq": 22,
+          "pct": 9.5
+        },
+        {
+          "slug": "jaws",
+          "name": "Jaws",
+          "freq": 21,
+          "pct": 9.1
+        },
+        {
+          "slug": "knight_of_the_holy_cane",
+          "name": "Knight of the Holy Cane",
+          "freq": 20,
+          "pct": 8.6
+        },
+        {
+          "slug": "the_candy_cane_crook",
+          "name": "The Candy Cane Crook",
+          "freq": 20,
+          "pct": 8.6
+        },
+        {
+          "slug": "cherry_topples",
+          "name": "Cherry Topples",
+          "freq": 18,
+          "pct": 7.8
+        },
+        {
+          "slug": "viscount_chocolat",
+          "name": "Viscount Chocolat",
+          "freq": 17,
+          "pct": 7.3
+        },
+        {
+          "slug": "jelly_ton",
+          "name": "Jelly-ton",
+          "freq": 16,
+          "pct": 6.9
+        },
+        {
+          "slug": "pixie",
+          "name": "Pixie",
+          "freq": 16,
+          "pct": 6.9
+        },
+        {
+          "slug": "the_sour_patch_kid",
+          "name": "The Sour Patch Kid",
+          "freq": 15,
+          "pct": 6.5
+        },
+        {
+          "slug": "catatouille",
+          "name": "Catatouille",
+          "freq": 11,
+          "pct": 4.7
+        },
+        {
+          "slug": "candy_claws",
+          "name": "Candy Claws",
+          "freq": 10,
+          "pct": 4.3
+        },
+        {
+          "slug": "chubby_cheep",
+          "name": "Chubby Cheep",
+          "freq": 10,
+          "pct": 4.3
+        },
+        {
+          "slug": "keeb",
+          "name": "Keeb",
+          "freq": 9,
+          "pct": 3.9
+        },
+        {
+          "slug": "lemonhead",
+          "name": "Lemonhead",
+          "freq": 9,
+          "pct": 3.9
+        },
+        {
+          "slug": "candy_apple_tree",
+          "name": "Candy Apple Tree",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "licorice",
+          "name": "Licorice",
+          "freq": 8,
+          "pct": 3.4
+        }
+      ]
+    },
+    {
+      "id": "cluster_4",
+      "label": "Astral Navigator",
+      "color": "#6e9ec8",
+      "cards": [
+        {
+          "slug": "astral_navigator",
+          "name": "Astral Navigator",
+          "freq": 31,
+          "pct": 13.4
+        },
+        {
+          "slug": "crab_dragoon",
+          "name": "Crab Dragoon",
+          "freq": 30,
+          "pct": 12.9
+        },
+        {
+          "slug": "baron_bok",
+          "name": "Baron Bok",
+          "freq": 29,
+          "pct": 12.5
+        },
+        {
+          "slug": "apophis",
+          "name": "Apophis",
+          "freq": 27,
+          "pct": 11.6
+        },
+        {
+          "slug": "bubbles",
+          "name": "Bubbles",
+          "freq": 21,
+          "pct": 9.1
+        },
+        {
+          "slug": "the_raven",
+          "name": "The Raven",
+          "freq": 21,
+          "pct": 9.1
+        },
+        {
+          "slug": "al_miraj",
+          "name": "Al-mi'raj",
+          "freq": 14,
+          "pct": 6.0
+        },
+        {
+          "slug": "fenrir",
+          "name": "Fenrir",
+          "freq": 14,
+          "pct": 6.0
+        },
+        {
+          "slug": "ditto",
+          "name": "Ditto",
+          "freq": 13,
+          "pct": 5.6
+        },
+        {
+          "slug": "halja",
+          "name": "Halja",
+          "freq": 11,
+          "pct": 4.7
+        },
+        {
+          "slug": "nemean_lion",
+          "name": "Nemean Lion",
+          "freq": 10,
+          "pct": 4.3
+        },
+        {
+          "slug": "weensy",
+          "name": "Weensy",
+          "freq": 10,
+          "pct": 4.3
+        },
+        {
+          "slug": "kagutsuchi",
+          "name": "Kagutsuchi",
+          "freq": 9,
+          "pct": 3.9
+        },
+        {
+          "slug": "tantalus",
+          "name": "Tantalus",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "wishing_fish",
+          "name": "Wishing Fish",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "scale_singers",
+          "name": "Scale Singers",
+          "freq": 7,
+          "pct": 3.0
+        },
+        {
+          "slug": "old_coyote",
+          "name": "Old Coyote",
+          "freq": 6,
+          "pct": 2.6
+        },
+        {
+          "slug": "yggdrasil_sapling",
+          "name": "Yggdrasil Sapling",
+          "freq": 3,
+          "pct": 1.3
+        }
+      ]
+    },
+    {
+      "id": "cluster_2",
+      "label": "Miseria",
+      "color": "#e87d9e",
+      "cards": [
+        {
+          "slug": "miseria",
+          "name": "Miseria",
+          "freq": 120,
+          "pct": 51.7
+        },
+        {
+          "slug": "destiny",
+          "name": "Destiny",
+          "freq": 98,
+          "pct": 42.2
+        },
+        {
+          "slug": "guinevere",
+          "name": "Guinevere",
+          "freq": 96,
+          "pct": 41.4
+        },
+        {
+          "slug": "young_hercules",
+          "name": "Young Hercules",
+          "freq": 85,
+          "pct": 36.6
+        },
+        {
+          "slug": "maverick_icewing",
+          "name": "Maverick & Icewing",
+          "freq": 84,
+          "pct": 36.2
+        },
+        {
+          "slug": "mortakon",
+          "name": "Mortakon",
+          "freq": 76,
+          "pct": 32.8
+        },
+        {
+          "slug": "the_burninator",
+          "name": "The Burninator",
+          "freq": 74,
+          "pct": 31.9
+        },
+        {
+          "slug": "fortune_teller",
+          "name": "Fortune Teller",
+          "freq": 68,
+          "pct": 29.3
+        },
+        {
+          "slug": "sigrun_valkyrie_queen",
+          "name": "Sigrun, Valkyrie Queen",
+          "freq": 66,
+          "pct": 28.4
+        },
+        {
+          "slug": "crystal",
+          "name": "Crystal",
+          "freq": 65,
+          "pct": 28.0
+        },
+        {
+          "slug": "eros",
+          "name": "Eros",
+          "freq": 46,
+          "pct": 19.8
+        },
+        {
+          "slug": "perseus",
+          "name": "Perseus",
+          "freq": 44,
+          "pct": 19.0
+        },
+        {
+          "slug": "orion_the_hunter",
+          "name": "Orion, the Hunter",
+          "freq": 41,
+          "pct": 17.7
+        },
+        {
+          "slug": "medea_in_a_tavern",
+          "name": "Medea in a Tavern",
+          "freq": 24,
+          "pct": 10.3
+        }
+      ]
+    },
+    {
+      "id": "cluster_5",
+      "label": "Mech-a-Man",
+      "color": "#6ec89e",
+      "cards": [
+        {
+          "slug": "mech_a_man",
+          "name": "Mech-a-Man",
+          "freq": 35,
+          "pct": 15.1
+        },
+        {
+          "slug": "chaos",
+          "name": "Chaos",
+          "freq": 19,
+          "pct": 8.2
+        },
+        {
+          "slug": "nightshade",
+          "name": "Nightshade",
+          "freq": 18,
+          "pct": 7.8
+        },
+        {
+          "slug": "morgan_le_fae",
+          "name": "Morgan Le Fae",
+          "freq": 16,
+          "pct": 6.9
+        },
+        {
+          "slug": "calypso",
+          "name": "Calypso",
+          "freq": 13,
+          "pct": 5.6
+        },
+        {
+          "slug": "plunder_penny",
+          "name": "Plunder Penny",
+          "freq": 12,
+          "pct": 5.2
+        },
+        {
+          "slug": "elm_minster",
+          "name": "Elm Minster",
+          "freq": 10,
+          "pct": 4.3
+        },
+        {
+          "slug": "rudolph_the_red",
+          "name": "Rudolph the Red",
+          "freq": 9,
+          "pct": 3.9
+        },
+        {
+          "slug": "prospero",
+          "name": "Prospero",
+          "freq": 8,
+          "pct": 3.4
+        },
+        {
+          "slug": "fae_familiar",
+          "name": "Fae Familiar",
+          "freq": 7,
+          "pct": 3.0
+        },
+        {
+          "slug": "genie_of_the_lamp",
+          "name": "Genie of the Lamp",
+          "freq": 5,
+          "pct": 2.2
+        }
+      ]
+    },
+    {
+      "id": "cluster_1",
+      "label": "Lance A Little",
+      "color": "#c8a96e",
+      "cards": [
+        {
+          "slug": "lance_a_little",
+          "name": "Lance A Little",
+          "freq": 65,
+          "pct": 28.0
+        },
+        {
+          "slug": "wormscale_tinkerer",
+          "name": "Wormscale Tinkerer",
+          "freq": 61,
+          "pct": 26.3
+        },
+        {
+          "slug": "mr_fox",
+          "name": "Mr. Fox",
+          "freq": 51,
+          "pct": 22.0
+        },
+        {
+          "slug": "the_huntsman",
+          "name": "The Huntsman",
+          "freq": 48,
+          "pct": 20.7
+        },
+        {
+          "slug": "rollo",
+          "name": "Rollo",
+          "freq": 43,
+          "pct": 18.5
+        },
+        {
+          "slug": "toto",
+          "name": "Toto",
+          "freq": 25,
+          "pct": 10.8
+        },
+        {
+          "slug": "oracle_of_fortunes",
+          "name": "Oracle of Fortunes",
+          "freq": 24,
+          "pct": 10.3
+        },
+        {
+          "slug": "smug",
+          "name": "Smug",
+          "freq": 23,
+          "pct": 9.9
+        },
+        {
+          "slug": "netherbinder",
+          "name": "Netherbinder",
+          "freq": 21,
+          "pct": 9.1
+        },
+        {
+          "slug": "nuada_radiant_king",
+          "name": "Nuada, Radiant King",
+          "freq": 19,
+          "pct": 8.2
+        }
+      ]
+    }
+  ],
+  "captains": [
+    {
+      "slug": "dinonysus",
+      "name": "Dinonysus",
+      "n": 17,
+      "signature": [
+        {
+          "card": "Nuada, Radiant King",
+          "lift": 7.2,
+          "freq": 10,
+          "n": 17
+        },
+        {
+          "card": "Toto",
+          "lift": 5.5,
+          "freq": 10,
+          "n": 17
+        },
+        {
+          "card": "Mirror Mage",
+          "lift": 4.5,
+          "freq": 9,
+          "n": 17
+        },
+        {
+          "card": "The Huntsman",
+          "lift": 3.7,
+          "freq": 13,
+          "n": 17
+        },
+        {
+          "card": "Sigrun, Valkyrie Queen",
+          "lift": 3.1,
+          "freq": 15,
+          "n": 17
+        },
+        {
+          "card": "Eros",
+          "lift": 3.0,
+          "freq": 10,
+          "n": 17
+        },
+        {
+          "card": "Lance A Little",
+          "lift": 2.9,
+          "freq": 14,
+          "n": 17
+        },
+        {
+          "card": "Mortakon",
+          "lift": 2.5,
+          "freq": 14,
+          "n": 17
+        }
+      ],
+      "best12": [
+        {
+          "card": "Guinevere",
+          "freq": 17,
+          "n": 17,
+          "pct": 100.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 16,
+          "n": 17,
+          "pct": 94.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 15,
+          "n": 17,
+          "pct": 88.0
+        },
+        {
+          "card": "Sigrun, Valkyrie Queen",
+          "freq": 15,
+          "n": 17,
+          "pct": 88.0
+        },
+        {
+          "card": "Young Hercules",
+          "freq": 15,
+          "n": 17,
+          "pct": 88.0
+        },
+        {
+          "card": "Lance A Little",
+          "freq": 14,
+          "n": 17,
+          "pct": 82.0
+        },
+        {
+          "card": "Mortakon",
+          "freq": 14,
+          "n": 17,
+          "pct": 82.0
+        },
+        {
+          "card": "The Huntsman",
+          "freq": 13,
+          "n": 17,
+          "pct": 76.0
+        },
+        {
+          "card": "Eros",
+          "freq": 10,
+          "n": 17,
+          "pct": 59.0
+        },
+        {
+          "card": "Nuada, Radiant King",
+          "freq": 10,
+          "n": 17,
+          "pct": 59.0
+        },
+        {
+          "card": "Toto",
+          "freq": 10,
+          "n": 17,
+          "pct": 59.0
+        },
+        {
+          "card": "Mirror Mage",
+          "freq": 9,
+          "n": 17,
+          "pct": 53.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Asekelo",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "young_hercules",
+            "destiny",
+            "maverick_icewing",
+            "mirror_mage",
+            "the_huntsman",
+            "mortakon",
+            "eros",
+            "sigrun_valkyrie_queen",
+            "nuada_radiant_king",
+            "guinevere"
+          ]
+        },
+        {
+          "username": "Ashmer",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "destiny",
+            "fortune_teller",
+            "nuada_radiant_king",
+            "the_huntsman",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "rollo",
+            "guinevere",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "BeakerDan",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "the_raven",
+            "toto",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "maverick_icewing",
+            "mortakon",
+            "mirror_mage",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "bourdi",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "destiny",
+            "nuada_radiant_king",
+            "the_huntsman",
+            "young_hercules",
+            "maverick_icewing",
+            "orion_the_hunter",
+            "mirror_mage",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Froglodyte",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "crystal",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "greys",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "eros",
+            "medea_in_a_tavern",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Imbadatnames",
+          "archetype": "Miseria",
+          "deck": [
+            "the_raven",
+            "destiny",
+            "the_huntsman",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "mirror_mage",
+            "guinevere",
+            "perseus",
+            "ptah",
+            "sigrun_valkyrie_queen",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "jimbo_x",
+          "archetype": "Miseria",
+          "deck": [
+            "ace_of_hearts",
+            "destiny",
+            "fortune_teller",
+            "the_huntsman",
+            "young_hercules",
+            "baron_bok",
+            "maverick_icewing",
+            "mortakon",
+            "mr_fox",
+            "mirror_mage",
+            "guinevere",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Kvkriemhild",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "miseria",
+            "the_huntsman",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "netherbinder",
+            "rollo",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "NoggleQueen",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "young_hercules",
+            "destiny",
+            "maverick_icewing",
+            "mirror_mage",
+            "the_huntsman",
+            "mortakon",
+            "eros",
+            "sigrun_valkyrie_queen",
+            "nuada_radiant_king",
+            "guinevere"
+          ]
+        },
+        {
+          "username": "Pip",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "destiny",
+            "miseria",
+            "nuada_radiant_king",
+            "the_huntsman",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "tsarmina_the_tyrant",
+            "eros",
+            "guinevere"
+          ]
+        },
+        {
+          "username": "RiKindred",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "baron_bok",
+            "mortakon",
+            "astral_navigator",
+            "crystal",
+            "eros",
+            "guinevere",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Senta",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "young_hercules",
+            "destiny",
+            "maverick_icewing",
+            "mirror_mage",
+            "the_huntsman",
+            "mortakon",
+            "eros",
+            "sigrun_valkyrie_queen",
+            "nuada_radiant_king",
+            "guinevere"
+          ]
+        },
+        {
+          "username": "SFussion",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "miseria",
+            "nuada_radiant_king",
+            "the_huntsman",
+            "young_hercules",
+            "crystal",
+            "eros",
+            "medea_in_a_tavern",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Simbven",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "young_hercules",
+            "destiny",
+            "maverick_icewing",
+            "mirror_mage",
+            "the_huntsman",
+            "mortakon",
+            "eros",
+            "sigrun_valkyrie_queen",
+            "nuada_radiant_king",
+            "guinevere"
+          ]
+        },
+        {
+          "username": "WeBeWmd",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "destiny",
+            "nuada_radiant_king",
+            "the_huntsman",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "eros",
+            "mirror_mage",
+            "guinevere",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Wee",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "fortune_teller",
+            "nuada_radiant_king",
+            "the_huntsman",
+            "maverick_icewing",
+            "eros",
+            "kagutsuchi",
+            "guinevere",
+            "monstro",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "anagolay",
+      "name": "Anagolay",
+      "n": 13,
+      "signature": [
+        {
+          "card": "Ptah",
+          "lift": 6.7,
+          "freq": 3,
+          "n": 13
+        },
+        {
+          "card": "Old Coyote",
+          "lift": 5.9,
+          "freq": 2,
+          "n": 13
+        },
+        {
+          "card": "Scale Singers",
+          "lift": 5.1,
+          "freq": 2,
+          "n": 13
+        },
+        {
+          "card": "Whirlidoo",
+          "lift": 4.5,
+          "freq": 1,
+          "n": 13
+        },
+        {
+          "card": "Ditto",
+          "lift": 4.1,
+          "freq": 3,
+          "n": 13
+        },
+        {
+          "card": "The Blue Faerie",
+          "lift": 3.6,
+          "freq": 1,
+          "n": 13
+        },
+        {
+          "card": "Combustible Dragon",
+          "lift": 3.0,
+          "freq": 2,
+          "n": 13
+        },
+        {
+          "card": "Crab Dragoon",
+          "lift": 3.0,
+          "freq": 5,
+          "n": 13
+        }
+      ],
+      "best12": [
+        {
+          "card": "Miseria",
+          "freq": 13,
+          "n": 13,
+          "pct": 100.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 12,
+          "n": 13,
+          "pct": 92.0
+        },
+        {
+          "card": "Mortakon",
+          "freq": 11,
+          "n": 13,
+          "pct": 85.0
+        },
+        {
+          "card": "Sigrun, Valkyrie Queen",
+          "freq": 10,
+          "n": 13,
+          "pct": 77.0
+        },
+        {
+          "card": "Fortune Teller",
+          "freq": 9,
+          "n": 13,
+          "pct": 69.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 8,
+          "n": 13,
+          "pct": 62.0
+        },
+        {
+          "card": "Young Hercules",
+          "freq": 7,
+          "n": 13,
+          "pct": 54.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 6,
+          "n": 13,
+          "pct": 46.0
+        },
+        {
+          "card": "Crab Dragoon",
+          "freq": 5,
+          "n": 13,
+          "pct": 38.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 5,
+          "n": 13,
+          "pct": 38.0
+        },
+        {
+          "card": "Eros",
+          "freq": 5,
+          "n": 13,
+          "pct": 38.0
+        },
+        {
+          "card": "Orion, the Hunter",
+          "freq": 5,
+          "n": 13,
+          "pct": 38.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Applechips",
+          "archetype": "Miseria",
+          "deck": [
+            "ace_of_hearts",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "combustible_dragon",
+            "maverick_icewing",
+            "mortakon",
+            "crystal",
+            "medea_in_a_tavern",
+            "guinevere",
+            "perseus"
+          ]
+        },
+        {
+          "username": "AsuiKitsune",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "mech_a_man",
+            "miseria",
+            "young_hercules",
+            "mortakon",
+            "mr_fox",
+            "orion_the_hunter",
+            "eros",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Brudda",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "combustible_dragon",
+            "maverick_icewing",
+            "mortakon",
+            "crystal",
+            "eros",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Chzmeplz",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "fortune_teller",
+            "miseria",
+            "old_coyote",
+            "whirlidoo",
+            "scale_singers",
+            "astral_navigator",
+            "apophis",
+            "crab_dragoon",
+            "hercules",
+            "nemean_lion",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "DapperCat",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "destiny",
+            "fortune_teller",
+            "mech_a_man",
+            "miseria",
+            "young_hercules",
+            "mortakon",
+            "orion_the_hunter",
+            "eros",
+            "medea_in_a_tavern",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "eccelleente",
+          "archetype": "Miseria",
+          "deck": [
+            "glory_seeker",
+            "lance_a_little",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "baron_bok",
+            "mortakon",
+            "astral_navigator",
+            "crystal",
+            "guinevere",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "FlyingSushi",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "mech_a_man",
+            "miseria",
+            "baron_bok",
+            "mortakon",
+            "mr_fox",
+            "orion_the_hunter",
+            "astral_navigator",
+            "eros",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "the_blue_faerie"
+          ]
+        },
+        {
+          "username": "hitmep",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "mech_a_man",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "rollo",
+            "crystal",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Magic",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "nuada_radiant_king",
+            "maverick_icewing",
+            "mortakon",
+            "ditto",
+            "fenrir",
+            "crab_dragoon",
+            "guinevere",
+            "ptah",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Metteagle",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "miseria",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "mr_fox",
+            "netherbinder",
+            "ditto",
+            "smug",
+            "crab_dragoon",
+            "ptah",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "OrigamiOrAGamer",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "mortakon",
+            "orion_the_hunter",
+            "crystal",
+            "medea_in_a_tavern",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "syntaxProper",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "miseria",
+            "nuada_radiant_king",
+            "old_coyote",
+            "the_huntsman",
+            "maverick_icewing",
+            "mortakon",
+            "orion_the_hunter",
+            "scale_singers",
+            "eros",
+            "crab_dragoon",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "TheSucker",
+          "archetype": "Miseria",
+          "deck": [
+            "miseria",
+            "the_huntsman",
+            "mortakon",
+            "al_miraj",
+            "bubbles",
+            "destiny",
+            "wishing_fish",
+            "fenrir",
+            "ditto",
+            "crab_dragoon",
+            "ptah",
+            "sigrun_valkyrie_queen"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "baba_yaga",
+      "name": "Baba Yaga",
+      "n": 12,
+      "signature": [
+        {
+          "card": "Pied Piper",
+          "lift": 4.8,
+          "freq": 2,
+          "n": 12
+        },
+        {
+          "card": "Tsarmina, the Tyrant",
+          "lift": 4.8,
+          "freq": 5,
+          "n": 12
+        },
+        {
+          "card": "Innkeeper",
+          "lift": 4.3,
+          "freq": 2,
+          "n": 12
+        },
+        {
+          "card": "Kagutsuchi",
+          "lift": 4.3,
+          "freq": 2,
+          "n": 12
+        },
+        {
+          "card": "Baron Bok",
+          "lift": 3.3,
+          "freq": 5,
+          "n": 12
+        },
+        {
+          "card": "Crystal",
+          "lift": 3.3,
+          "freq": 11,
+          "n": 12
+        },
+        {
+          "card": "Blackbeard",
+          "lift": 3.2,
+          "freq": 3,
+          "n": 12
+        },
+        {
+          "card": "Astral Navigator",
+          "lift": 3.1,
+          "freq": 5,
+          "n": 12
+        }
+      ],
+      "best12": [
+        {
+          "card": "Guinevere",
+          "freq": 12,
+          "n": 12,
+          "pct": 100.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 12,
+          "n": 12,
+          "pct": 100.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 11,
+          "n": 12,
+          "pct": 92.0
+        },
+        {
+          "card": "Lance A Little",
+          "freq": 10,
+          "n": 12,
+          "pct": 83.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 7,
+          "n": 12,
+          "pct": 58.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 6,
+          "n": 12,
+          "pct": 50.0
+        },
+        {
+          "card": "Astral Navigator",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Baron Bok",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Mortakon",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Sigrun, Valkyrie Queen",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Tsarmina, the Tyrant",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        }
+      ],
+      "players": [
+        {
+          "username": "BeKindUnwind",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "miseria",
+            "baron_bok",
+            "maverick_icewing",
+            "mortakon",
+            "rollo",
+            "astral_navigator",
+            "kagutsuchi",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "BlightSteelDemon",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "miseria",
+            "young_hercules",
+            "baron_bok",
+            "astral_navigator",
+            "crystal",
+            "kagutsuchi",
+            "crab_dragoon",
+            "guinevere",
+            "oracle_of_fortunes",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Justini12",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "miseria",
+            "nuada_radiant_king",
+            "netherbinder",
+            "rollo",
+            "tsarmina_the_tyrant",
+            "crystal",
+            "eros",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "kuroakuma",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "miseria",
+            "young_hercules",
+            "baron_bok",
+            "maverick_icewing",
+            "mortakon",
+            "astral_navigator",
+            "crystal",
+            "guinevere",
+            "perseus",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Perisensi",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "miseria",
+            "the_huntsman",
+            "netherbinder",
+            "orion_the_hunter",
+            "tsarmina_the_tyrant",
+            "crystal",
+            "apophis",
+            "blackbeard",
+            "guinevere",
+            "monstro",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "perrythepig",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "astral_navigator",
+            "crystal",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Professor Haywire",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "rollo",
+            "crystal",
+            "guinevere",
+            "perseus",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Ryohten",
+          "archetype": "Miseria",
+          "deck": [
+            "toto",
+            "destiny",
+            "miseria",
+            "baron_bok",
+            "combustible_dragon",
+            "maverick_icewing",
+            "mortakon",
+            "astral_navigator",
+            "crystal",
+            "eros",
+            "guinevere",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Serp",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "miseria",
+            "the_huntsman",
+            "baron_bok",
+            "mr_fox",
+            "tsarmina_the_tyrant",
+            "crystal",
+            "innkeeper",
+            "blackbeard",
+            "guinevere",
+            "hercules",
+            "monstro"
+          ]
+        },
+        {
+          "username": "SkyBreaker",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "miseria",
+            "young_hercules",
+            "candy_apple_tree",
+            "rollo",
+            "crystal",
+            "knight_of_the_holy_cane",
+            "guinevere",
+            "gummy_wyrm",
+            "perseus",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "SoftServeIceCream",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "pied_piper",
+            "miseria",
+            "the_huntsman",
+            "mr_fox",
+            "netherbinder",
+            "tsarmina_the_tyrant",
+            "crystal",
+            "innkeeper",
+            "blackbeard",
+            "guinevere",
+            "hercules"
+          ]
+        },
+        {
+          "username": "tima",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "pied_piper",
+            "miseria",
+            "sunflare_glider",
+            "tsarmina_the_tyrant",
+            "crystal",
+            "medea_in_a_tavern",
+            "smug",
+            "guinevere",
+            "oracle_of_fortunes",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nemesis",
+      "name": "Nemesis",
+      "n": 12,
+      "signature": [
+        {
+          "card": "Halja",
+          "lift": 10.5,
+          "freq": 6,
+          "n": 12
+        },
+        {
+          "card": "Nemean Lion",
+          "lift": 9.7,
+          "freq": 5,
+          "n": 12
+        },
+        {
+          "card": "Wormtongue",
+          "lift": 9.7,
+          "freq": 1,
+          "n": 12
+        },
+        {
+          "card": "Scale Singers",
+          "lift": 8.3,
+          "freq": 3,
+          "n": 12
+        },
+        {
+          "card": "Weensy",
+          "lift": 7.7,
+          "freq": 4,
+          "n": 12
+        },
+        {
+          "card": "Al-mi'raj",
+          "lift": 6.9,
+          "freq": 5,
+          "n": 12
+        },
+        {
+          "card": "Yggdrasil Sapling",
+          "lift": 6.4,
+          "freq": 1,
+          "n": 12
+        },
+        {
+          "card": "Morgan Le Fae",
+          "lift": 4.8,
+          "freq": 4,
+          "n": 12
+        }
+      ],
+      "best12": [
+        {
+          "card": "Fortune Teller",
+          "freq": 9,
+          "n": 12,
+          "pct": 75.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 6,
+          "n": 12,
+          "pct": 50.0
+        },
+        {
+          "card": "Halja",
+          "freq": 6,
+          "n": 12,
+          "pct": 50.0
+        },
+        {
+          "card": "Al-mi'raj",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Crab Dragoon",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Nemean Lion",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Orion, the Hunter",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Perseus",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Sigrun, Valkyrie Queen",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 5,
+          "n": 12,
+          "pct": 42.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Furavara",
+          "archetype": "Miseria",
+          "deck": [
+            "the_raven",
+            "fortune_teller",
+            "maverick_icewing",
+            "scale_singers",
+            "sunflare_glider",
+            "weensy",
+            "ditto",
+            "medea_in_a_tavern",
+            "mirror_mage",
+            "crab_dragoon",
+            "halja",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Gooner",
+          "archetype": "Astral Navigator",
+          "deck": [
+            "wormtongue",
+            "fortune_teller",
+            "morgan_le_fae",
+            "old_coyote",
+            "baron_bok",
+            "scale_singers",
+            "weensy",
+            "astral_navigator",
+            "ditto",
+            "crab_dragoon",
+            "halja",
+            "nemean_lion"
+          ]
+        },
+        {
+          "username": "LiteralWizard",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "fortune_teller",
+            "orion_the_hunter",
+            "medea_in_a_tavern",
+            "yggdrasil_sapling",
+            "apophis",
+            "crab_dragoon",
+            "halja",
+            "oracle_of_fortunes",
+            "perseus",
+            "ptah",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Magus of the Moon",
+          "archetype": "Miseria",
+          "deck": [
+            "al_miraj",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "mortakon",
+            "nightshade",
+            "pisces",
+            "smug",
+            "snapping_hydra",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "myrzy",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "miseria",
+            "the_huntsman",
+            "young_hercules",
+            "nightshade",
+            "orion_the_hunter",
+            "medea_in_a_tavern",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Pericles",
+          "archetype": "Miseria",
+          "deck": [
+            "al_miraj",
+            "lance_a_little",
+            "destiny",
+            "fortune_teller",
+            "the_huntsman",
+            "orion_the_hunter",
+            "apophis",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Reydau",
+          "archetype": "Miseria",
+          "deck": [
+            "al_miraj",
+            "fortune_teller",
+            "miseria",
+            "nuada_radiant_king",
+            "baron_bok",
+            "eros",
+            "kagutsuchi",
+            "smug",
+            "apophis",
+            "crab_dragoon",
+            "hercules",
+            "nemean_lion"
+          ]
+        },
+        {
+          "username": "StcStackmaster",
+          "archetype": "Astral Navigator",
+          "deck": [
+            "al_miraj",
+            "the_raven",
+            "fortune_teller",
+            "morgan_le_fae",
+            "whirlidoo",
+            "scale_singers",
+            "weensy",
+            "astral_navigator",
+            "ditto",
+            "nemean_lion",
+            "crab_dragoon",
+            "halja"
+          ]
+        },
+        {
+          "username": "Surely",
+          "archetype": "Lance A Little",
+          "deck": [
+            "aladdin",
+            "the_raven",
+            "morgan_le_fae",
+            "wink",
+            "jaws",
+            "mr_fox",
+            "nightshade",
+            "twilight_sprinkles",
+            "viscount_chocolat",
+            "hercules",
+            "nemean_lion",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Throbbin Wood",
+          "archetype": "Miseria",
+          "deck": [
+            "al_miraj",
+            "the_raven",
+            "fortune_teller",
+            "morgan_le_fae",
+            "young_hercules",
+            "orion_the_hunter",
+            "tantalus",
+            "weensy",
+            "guinevere",
+            "halja",
+            "nemean_lion",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "wejami",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "mechanical_dragon",
+            "orion_the_hunter",
+            "medea_in_a_tavern",
+            "guinevere",
+            "halja",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "WOOB",
+          "archetype": "Miseria",
+          "deck": [
+            "plunder_penny",
+            "destiny",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "crystal",
+            "snapping_hydra",
+            "wicked_witch",
+            "guinevere",
+            "perseus",
+            "the_burninator"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mercury",
+      "name": "Mercury",
+      "n": 10,
+      "signature": [
+        {
+          "card": "Sugar Rush",
+          "lift": 23.2,
+          "freq": 1,
+          "n": 10
+        },
+        {
+          "card": "Yggdrasil Sapling",
+          "lift": 15.5,
+          "freq": 2,
+          "n": 10
+        },
+        {
+          "card": "Tantalus",
+          "lift": 8.7,
+          "freq": 3,
+          "n": 10
+        },
+        {
+          "card": "Ditto",
+          "lift": 7.1,
+          "freq": 4,
+          "n": 10
+        },
+        {
+          "card": "Orpheus",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 10
+        },
+        {
+          "card": "Wishing Fish",
+          "lift": 5.8,
+          "freq": 2,
+          "n": 10
+        },
+        {
+          "card": "Perseus",
+          "lift": 5.3,
+          "freq": 10,
+          "n": 10
+        },
+        {
+          "card": "Kagutsuchi",
+          "lift": 5.2,
+          "freq": 2,
+          "n": 10
+        }
+      ],
+      "best12": [
+        {
+          "card": "Perseus",
+          "freq": 10,
+          "n": 10,
+          "pct": 100.0
+        },
+        {
+          "card": "Young Hercules",
+          "freq": 10,
+          "n": 10,
+          "pct": 100.0
+        },
+        {
+          "card": "Eros",
+          "freq": 6,
+          "n": 10,
+          "pct": 60.0
+        },
+        {
+          "card": "Fortune Teller",
+          "freq": 6,
+          "n": 10,
+          "pct": 60.0
+        },
+        {
+          "card": "Orion, the Hunter",
+          "freq": 6,
+          "n": 10,
+          "pct": 60.0
+        },
+        {
+          "card": "Crab Dragoon",
+          "freq": 5,
+          "n": 10,
+          "pct": 50.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 5,
+          "n": 10,
+          "pct": 50.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 5,
+          "n": 10,
+          "pct": 50.0
+        },
+        {
+          "card": "Medea in a Tavern",
+          "freq": 5,
+          "n": 10,
+          "pct": 50.0
+        },
+        {
+          "card": "Sigrun, Valkyrie Queen",
+          "freq": 5,
+          "n": 10,
+          "pct": 50.0
+        },
+        {
+          "card": "Bubbles",
+          "freq": 4,
+          "n": 10,
+          "pct": 40.0
+        },
+        {
+          "card": "Ditto",
+          "freq": 4,
+          "n": 10,
+          "pct": 40.0
+        }
+      ],
+      "players": [
+        {
+          "username": "aaaaaaaaaaaaaaaaa",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "mech_a_man",
+            "young_hercules",
+            "mortakon",
+            "orion_the_hunter",
+            "crystal",
+            "medea_in_a_tavern",
+            "snapping_hydra",
+            "crab_dragoon",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Affix",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "miseria",
+            "young_hercules",
+            "baron_bok",
+            "mortakon",
+            "orion_the_hunter",
+            "astral_navigator",
+            "eros",
+            "wicked_witch",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "CapuletKiller",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "the_raven",
+            "young_hercules",
+            "fortune_teller",
+            "wishing_fish",
+            "tantalus",
+            "kagutsuchi",
+            "ditto",
+            "yggdrasil_sapling",
+            "perseus",
+            "nemean_lion",
+            "crab_dragoon"
+          ]
+        },
+        {
+          "username": "CardWalker",
+          "archetype": "Miseria",
+          "deck": [
+            "friendly_spirit",
+            "glory_seeker",
+            "destiny",
+            "miseria",
+            "the_huntsman",
+            "young_hercules",
+            "mortakon",
+            "orion_the_hunter",
+            "eros",
+            "guinevere",
+            "hercules",
+            "perseus"
+          ]
+        },
+        {
+          "username": "igobypenn",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "the_raven",
+            "young_hercules",
+            "fortune_teller",
+            "wishing_fish",
+            "tantalus",
+            "kagutsuchi",
+            "ditto",
+            "yggdrasil_sapling",
+            "perseus",
+            "nemean_lion",
+            "crab_dragoon"
+          ]
+        },
+        {
+          "username": "Lombi",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "miseria",
+            "young_hercules",
+            "baron_bok",
+            "astral_navigator",
+            "eros",
+            "medea_in_a_tavern",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Loose Cannon",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "the_raven",
+            "fortune_teller",
+            "sugar_rush",
+            "young_hercules",
+            "orion_the_hunter",
+            "orpheus",
+            "tantalus",
+            "medea_in_a_tavern",
+            "apophis",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Muxi",
+          "archetype": "Miseria",
+          "deck": [
+            "the_raven",
+            "fortune_teller",
+            "young_hercules",
+            "combustible_dragon",
+            "mechanical_dragon",
+            "ditto",
+            "eros",
+            "medea_in_a_tavern",
+            "crab_dragoon",
+            "perseus",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Poomermon",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "mortakon",
+            "orion_the_hunter",
+            "eros",
+            "medea_in_a_tavern",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "rij9889",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "fortune_teller",
+            "young_hercules",
+            "mr_fox",
+            "orion_the_hunter",
+            "ditto",
+            "eros",
+            "fenrir",
+            "apophis",
+            "crab_dragoon",
+            "perseus",
+            "the_burninator"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "iron_monkey",
+      "name": "Iron Monkey",
+      "n": 7,
+      "signature": [
+        {
+          "card": "Chip on the Ship",
+          "lift": 16.6,
+          "freq": 1,
+          "n": 7
+        },
+        {
+          "card": "Mysterio, the Great and Powerful",
+          "lift": 16.6,
+          "freq": 1,
+          "n": 7
+        },
+        {
+          "card": "Orpheus",
+          "lift": 16.6,
+          "freq": 2,
+          "n": 7
+        },
+        {
+          "card": "Fenrir",
+          "lift": 9.5,
+          "freq": 4,
+          "n": 7
+        },
+        {
+          "card": "Ptah",
+          "lift": 8.3,
+          "freq": 2,
+          "n": 7
+        },
+        {
+          "card": "Whirlidoo",
+          "lift": 8.3,
+          "freq": 1,
+          "n": 7
+        },
+        {
+          "card": "Bubbles",
+          "lift": 6.3,
+          "freq": 4,
+          "n": 7
+        },
+        {
+          "card": "The Raven",
+          "lift": 6.3,
+          "freq": 4,
+          "n": 7
+        }
+      ],
+      "best12": [
+        {
+          "card": "Fortune Teller",
+          "freq": 7,
+          "n": 7,
+          "pct": 100.0
+        },
+        {
+          "card": "Apophis",
+          "freq": 5,
+          "n": 7,
+          "pct": 71.0
+        },
+        {
+          "card": "Orion, the Hunter",
+          "freq": 5,
+          "n": 7,
+          "pct": 71.0
+        },
+        {
+          "card": "Young Hercules",
+          "freq": 5,
+          "n": 7,
+          "pct": 71.0
+        },
+        {
+          "card": "Bubbles",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Fenrir",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Medea in a Tavern",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "The Raven",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Sigrun, Valkyrie Queen",
+          "freq": 3,
+          "n": 7,
+          "pct": 43.0
+        },
+        {
+          "card": "Cotton Candy Dandy",
+          "freq": 2,
+          "n": 7,
+          "pct": 29.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 2,
+          "n": 7,
+          "pct": 29.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 2,
+          "n": 7,
+          "pct": 29.0
+        }
+      ],
+      "players": [
+        {
+          "username": "AdequateFinch",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "mech_a_man",
+            "young_hercules",
+            "baron_bok",
+            "maverick_icewing",
+            "crystal",
+            "eros",
+            "barrel_of_monkeys",
+            "chip_on_the_ship",
+            "guinevere",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Elagabalus",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "the_raven",
+            "fortune_teller",
+            "whirlidoo",
+            "young_hercules",
+            "mimic",
+            "orion_the_hunter",
+            "mysterio_the_great_and_powerful",
+            "smug",
+            "apophis",
+            "flopsy",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Gricha",
+          "archetype": "Miseria",
+          "deck": [
+            "candy_claws",
+            "destiny",
+            "fortune_teller",
+            "cherry_topples",
+            "kool_wip",
+            "mortakon",
+            "nightshade",
+            "pixie",
+            "chubby_cheep",
+            "cotton_candy_dandy",
+            "jelly_ton",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Holland",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "the_raven",
+            "fortune_teller",
+            "nuada_radiant_king",
+            "young_hercules",
+            "orion_the_hunter",
+            "orpheus",
+            "fenrir",
+            "medea_in_a_tavern",
+            "apophis",
+            "cotton_candy_dandy",
+            "halja"
+          ]
+        },
+        {
+          "username": "Lilgoblin",
+          "archetype": "Miseria",
+          "deck": [
+            "the_raven",
+            "bubbles",
+            "young_hercules",
+            "fortune_teller",
+            "orpheus",
+            "perseus",
+            "fenrir",
+            "orion_the_hunter",
+            "medea_in_a_tavern",
+            "sigrun_valkyrie_queen",
+            "apophis",
+            "ptah"
+          ]
+        },
+        {
+          "username": "NFNDave",
+          "archetype": "Miseria",
+          "deck": [
+            "al_miraj",
+            "the_raven",
+            "fortune_teller",
+            "young_hercules",
+            "maverick_icewing",
+            "orion_the_hunter",
+            "fenrir",
+            "medea_in_a_tavern",
+            "apophis",
+            "perseus",
+            "ptah",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "VelvetDevil",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "fortune_teller",
+            "nuada_radiant_king",
+            "old_coyote",
+            "mr_fox",
+            "orion_the_hunter",
+            "astral_navigator",
+            "fenrir",
+            "medea_in_a_tavern",
+            "apophis",
+            "crab_dragoon",
+            "the_burninator"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "faker_the_caker_baker",
+      "name": "Faker, the Caker Baker",
+      "n": 7,
+      "signature": [
+        {
+          "card": "Licorice",
+          "lift": 16.6,
+          "freq": 4,
+          "n": 7
+        },
+        {
+          "card": "Lemonhead",
+          "lift": 14.7,
+          "freq": 4,
+          "n": 7
+        },
+        {
+          "card": "The Three Chef-Keteers",
+          "lift": 13.3,
+          "freq": 4,
+          "n": 7
+        },
+        {
+          "card": "The Sour Patch Kid",
+          "lift": 11.0,
+          "freq": 5,
+          "n": 7
+        },
+        {
+          "card": "Lollipop Faerie",
+          "lift": 9.7,
+          "freq": 7,
+          "n": 7
+        },
+        {
+          "card": "Gingerbread Witch",
+          "lift": 8.6,
+          "freq": 6,
+          "n": 7
+        },
+        {
+          "card": "Candy Apple Tree",
+          "lift": 8.3,
+          "freq": 2,
+          "n": 7
+        },
+        {
+          "card": "Chubby Bunny",
+          "lift": 8.3,
+          "freq": 1,
+          "n": 7
+        }
+      ],
+      "best12": [
+        {
+          "card": "Lollipop Faerie",
+          "freq": 7,
+          "n": 7,
+          "pct": 100.0
+        },
+        {
+          "card": "Gingerbread Witch",
+          "freq": 6,
+          "n": 7,
+          "pct": 86.0
+        },
+        {
+          "card": "Gummy Wyrm",
+          "freq": 6,
+          "n": 7,
+          "pct": 86.0
+        },
+        {
+          "card": "Jaws",
+          "freq": 5,
+          "n": 7,
+          "pct": 71.0
+        },
+        {
+          "card": "The Sour Patch Kid",
+          "freq": 5,
+          "n": 7,
+          "pct": 71.0
+        },
+        {
+          "card": "Kool Wip",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Lemonhead",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Licorice",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "The Three Chef-Keteers",
+          "freq": 4,
+          "n": 7,
+          "pct": 57.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 3,
+          "n": 7,
+          "pct": 43.0
+        },
+        {
+          "card": "Pixie",
+          "freq": 3,
+          "n": 7,
+          "pct": 43.0
+        },
+        {
+          "card": "The Candy Cane Crook",
+          "freq": 3,
+          "n": 7,
+          "pct": 43.0
+        }
+      ],
+      "players": [
+        {
+          "username": "cheqio",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "lollipop_faerie",
+            "gingerbread_witch",
+            "the_sour_patch_kid",
+            "catatouille",
+            "lemonhead",
+            "candy_apple_tree",
+            "kool_wip",
+            "jaws",
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "gummy_wyrm",
+            "licorice"
+          ]
+        },
+        {
+          "username": "Estanislau",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "gingerbread_witch",
+            "lollipop_faerie",
+            "the_candy_cane_crook",
+            "kool_wip",
+            "life_saver",
+            "the_three_chef_keteers",
+            "keeb",
+            "pixie",
+            "viscount_chocolat",
+            "cotton_candy_dandy",
+            "jelly_ton",
+            "licorice"
+          ]
+        },
+        {
+          "username": "Original Name",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "lollipop_faerie",
+            "gingerbread_witch",
+            "the_sour_patch_kid",
+            "catatouille",
+            "lemonhead",
+            "candy_apple_tree",
+            "kool_wip",
+            "jaws",
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "gummy_wyrm",
+            "licorice"
+          ]
+        },
+        {
+          "username": "Sein",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "gingerbread_witch",
+            "lollipop_faerie",
+            "miseria",
+            "the_candy_cane_crook",
+            "the_huntsman",
+            "the_sour_patch_kid",
+            "frosting_dragon",
+            "mr_fox",
+            "pixie",
+            "viscount_chocolat",
+            "gummy_wyrm",
+            "jelly_ton"
+          ]
+        },
+        {
+          "username": "Slegac",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "gingerbread_witch",
+            "lollipop_faerie",
+            "lemonhead",
+            "cherry_topples",
+            "jaws",
+            "kool_wip",
+            "the_three_chef_keteers",
+            "chubby_bunny",
+            "doopity_doo",
+            "twilight_sprinkles",
+            "cotton_candy_dandy",
+            "gummy_wyrm"
+          ]
+        },
+        {
+          "username": "Tangster",
+          "archetype": "Miseria",
+          "deck": [
+            "lollipop_faerie",
+            "lemonhead",
+            "miseria",
+            "the_sour_patch_kid",
+            "jaws",
+            "the_three_chef_keteers",
+            "sir_francis_drake",
+            "gummy_wyrm",
+            "licorice",
+            "scale_a_tor",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "ThePowaThatB",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "gingerbread_witch",
+            "lollipop_faerie",
+            "miseria",
+            "the_candy_cane_crook",
+            "the_sour_patch_kid",
+            "cherry_topples",
+            "jaws",
+            "mr_fox",
+            "the_three_chef_keteers",
+            "pixie",
+            "viscount_chocolat",
+            "gummy_wyrm"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "dorothy",
+      "name": "Dorothy",
+      "n": 6,
+      "signature": [
+        {
+          "card": "Mischief",
+          "lift": 19.3,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Nutcracker Prince",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Black Hole",
+          "lift": 6.4,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Barrel of Monkeys",
+          "lift": 5.5,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Thunder of Dragons",
+          "lift": 5.2,
+          "freq": 2,
+          "n": 6
+        },
+        {
+          "card": "Candy Apple Tree",
+          "lift": 4.8,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Snapping Hydra",
+          "lift": 4.8,
+          "freq": 2,
+          "n": 6
+        },
+        {
+          "card": "Wink",
+          "lift": 4.8,
+          "freq": 1,
+          "n": 6
+        }
+      ],
+      "best12": [
+        {
+          "card": "Guinevere",
+          "freq": 5,
+          "n": 6,
+          "pct": 83.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 5,
+          "n": 6,
+          "pct": 83.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 5,
+          "n": 6,
+          "pct": 83.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Lance A Little",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Toto",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Young Hercules",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Mortakon",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        },
+        {
+          "card": "Netherbinder",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Adamwasmo1",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "the_raven",
+            "toto",
+            "miseria",
+            "young_hercules",
+            "candy_apple_tree",
+            "jaws",
+            "maverick_icewing",
+            "rollo",
+            "crystal",
+            "guinevere",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Blast0is3",
+          "archetype": "Miseria",
+          "deck": [
+            "aladdin",
+            "lance_a_little",
+            "toto",
+            "miseria",
+            "maverick_icewing",
+            "mr_fox",
+            "netherbinder",
+            "black_hole",
+            "thunder_of_dragons",
+            "crab_dragoon",
+            "flopsy",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "frosty",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "destiny",
+            "miseria",
+            "the_huntsman",
+            "young_hercules",
+            "maverick_icewing",
+            "orion_the_hunter",
+            "rollo",
+            "crystal",
+            "guinevere",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "may451",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "miseria",
+            "young_hercules",
+            "baron_bok",
+            "mortakon",
+            "astral_navigator",
+            "crystal",
+            "eros",
+            "anubis",
+            "barrel_of_monkeys",
+            "guinevere",
+            "mischief"
+          ]
+        },
+        {
+          "username": "Mlordx",
+          "archetype": "Miseria",
+          "deck": [
+            "ace_of_hearts",
+            "destiny",
+            "miseria",
+            "the_huntsman",
+            "maverick_icewing",
+            "mortakon",
+            "mr_fox",
+            "netherbinder",
+            "rollo",
+            "crystal",
+            "snapping_hydra",
+            "guinevere"
+          ]
+        },
+        {
+          "username": "Zal",
+          "archetype": "Miseria",
+          "deck": [
+            "mech_a_man",
+            "nutcracker_prince",
+            "wink",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "sunflare_glider",
+            "mirror_mage",
+            "pisces",
+            "snapping_hydra",
+            "thunder_of_dragons",
+            "guinevere",
+            "wormscale_tinkerer"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "goat_t",
+      "name": "Goat T",
+      "n": 6,
+      "signature": [
+        {
+          "card": "Black Hole",
+          "lift": 6.4,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Don Quixote",
+          "lift": 5.5,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Ace of Hearts",
+          "lift": 5.3,
+          "freq": 3,
+          "n": 6
+        },
+        {
+          "card": "Wicked Witch",
+          "lift": 3.9,
+          "freq": 1,
+          "n": 6
+        },
+        {
+          "card": "Bubbles",
+          "lift": 3.7,
+          "freq": 2,
+          "n": 6
+        },
+        {
+          "card": "Netherbinder",
+          "lift": 3.7,
+          "freq": 2,
+          "n": 6
+        },
+        {
+          "card": "Sir Francis Drake",
+          "lift": 3.7,
+          "freq": 2,
+          "n": 6
+        },
+        {
+          "card": "Oracle of Fortunes",
+          "lift": 3.2,
+          "freq": 2,
+          "n": 6
+        }
+      ],
+      "best12": [
+        {
+          "card": "Crystal",
+          "freq": 5,
+          "n": 6,
+          "pct": 83.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 5,
+          "n": 6,
+          "pct": 83.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 5,
+          "n": 6,
+          "pct": 83.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Mortakon",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Ace of Hearts",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Bubbles",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        },
+        {
+          "card": "Lance A Little",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        },
+        {
+          "card": "Netherbinder",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "camroz",
+          "archetype": "Lance A Little",
+          "deck": [
+            "lance_a_little",
+            "miseria",
+            "morgan_le_fae",
+            "the_huntsman",
+            "don_quixote",
+            "mr_fox",
+            "netherbinder",
+            "rollo",
+            "crystal",
+            "sir_francis_drake",
+            "hercules",
+            "oracle_of_fortunes"
+          ]
+        },
+        {
+          "username": "dob",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "ace_of_hearts",
+            "destiny",
+            "fortune_teller",
+            "mech_a_man",
+            "miseria",
+            "mortakon",
+            "crystal",
+            "snapping_hydra",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "EgaL",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "ace_of_hearts",
+            "destiny",
+            "miseria",
+            "the_huntsman",
+            "mortakon",
+            "netherbinder",
+            "orion_the_hunter",
+            "crystal",
+            "guinevere",
+            "perseus",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Katsuu",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "ace_of_hearts",
+            "destiny",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "crystal",
+            "eros",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "pezyo",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "miseria",
+            "young_hercules",
+            "baron_bok",
+            "maverick_icewing",
+            "mortakon",
+            "mr_fox",
+            "astral_navigator",
+            "crystal",
+            "guinevere",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "travelprep",
+          "archetype": "Lance A Little",
+          "deck": [
+            "maverick_icewing",
+            "mr_fox",
+            "rollo",
+            "black_hole",
+            "sir_francis_drake",
+            "smug",
+            "wicked_witch",
+            "apophis",
+            "flopsy",
+            "oracle_of_fortunes",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "rumpelstiltskin",
+      "name": "Rumpelstiltskin",
+      "n": 6,
+      "signature": [
+        {
+          "card": "Nutcracker Prince",
+          "lift": 15.5,
+          "freq": 2,
+          "n": 6
+        },
+        {
+          "card": "Don Quixote",
+          "lift": 11.0,
+          "freq": 2,
+          "n": 6
+        },
+        {
+          "card": "Ace of Hearts",
+          "lift": 10.5,
+          "freq": 6,
+          "n": 6
+        },
+        {
+          "card": "Sunflare Glider",
+          "lift": 10.3,
+          "freq": 4,
+          "n": 6
+        },
+        {
+          "card": "Thunder of Dragons",
+          "lift": 10.3,
+          "freq": 4,
+          "n": 6
+        },
+        {
+          "card": "Glory Seeker",
+          "lift": 9.7,
+          "freq": 2,
+          "n": 6
+        },
+        {
+          "card": "Mimic",
+          "lift": 9.7,
+          "freq": 2,
+          "n": 6
+        },
+        {
+          "card": "Whirlidoo",
+          "lift": 9.7,
+          "freq": 1,
+          "n": 6
+        }
+      ],
+      "best12": [
+        {
+          "card": "Ace of Hearts",
+          "freq": 6,
+          "n": 6,
+          "pct": 100.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 6,
+          "n": 6,
+          "pct": 100.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Sunflare Glider",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Thunder of Dragons",
+          "freq": 4,
+          "n": 6,
+          "pct": 67.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Sir Francis Drake",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 3,
+          "n": 6,
+          "pct": 50.0
+        },
+        {
+          "card": "Combustible Dragon",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 2,
+          "n": 6,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Doherty98",
+          "archetype": "Lance A Little",
+          "deck": [
+            "friendly_spirit",
+            "glory_seeker",
+            "ace_of_hearts",
+            "nutcracker_prince",
+            "mimic",
+            "mr_fox",
+            "don_quixote",
+            "thunder_of_dragons",
+            "sir_francis_drake",
+            "scale_a_tor",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "dtrooper",
+          "archetype": "Miseria",
+          "deck": [
+            "underdog",
+            "ace_of_hearts",
+            "destiny",
+            "miseria",
+            "whirlidoo",
+            "young_hercules",
+            "combustible_dragon",
+            "maverick_icewing",
+            "sunflare_glider",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "kannami",
+          "archetype": "Miseria",
+          "deck": [
+            "ace_of_hearts",
+            "miseria",
+            "combustible_dragon",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "netherbinder",
+            "sunflare_glider",
+            "ditto",
+            "smug",
+            "thunder_of_dragons",
+            "crab_dragoon",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "pingus",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "ace_of_hearts",
+            "miseria",
+            "young_hercules",
+            "mr_fox",
+            "sunflare_glider",
+            "crystal",
+            "sir_francis_drake",
+            "thunder_of_dragons",
+            "apophis",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "sapro",
+          "archetype": "Miseria",
+          "deck": [
+            "beanie_baby",
+            "ace_of_hearts",
+            "destiny",
+            "miseria",
+            "maverick_icewing",
+            "sunflare_glider",
+            "crystal",
+            "ditto",
+            "eros",
+            "flopsy",
+            "oracle_of_fortunes",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Whiskeyman12",
+          "archetype": "Lance A Little",
+          "deck": [
+            "friendly_spirit",
+            "glory_seeker",
+            "ace_of_hearts",
+            "nutcracker_prince",
+            "mimic",
+            "mr_fox",
+            "don_quixote",
+            "thunder_of_dragons",
+            "sir_francis_drake",
+            "scale_a_tor",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "galileo_galilei",
+      "name": "Galileo Galilei",
+      "n": 5,
+      "signature": [
+        {
+          "card": "Wishing Fish",
+          "lift": 17.4,
+          "freq": 3,
+          "n": 5
+        },
+        {
+          "card": "Black Hole",
+          "lift": 15.5,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Hephaestus",
+          "lift": 15.5,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Sunflare Glider",
+          "lift": 12.4,
+          "freq": 4,
+          "n": 5
+        },
+        {
+          "card": "Tantalus",
+          "lift": 11.6,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Astral Navigator",
+          "lift": 7.5,
+          "freq": 5,
+          "n": 5
+        },
+        {
+          "card": "Baron Bok",
+          "lift": 6.4,
+          "freq": 4,
+          "n": 5
+        },
+        {
+          "card": "Pisces",
+          "lift": 6.2,
+          "freq": 2,
+          "n": 5
+        }
+      ],
+      "best12": [
+        {
+          "card": "Astral Navigator",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "Lance A Little",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "Sigrun, Valkyrie Queen",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "Baron Bok",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "Eros",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "Sunflare Glider",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "Apophis",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Wishing Fish",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Black Hole",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Aerores",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "the_raven",
+            "bubbles",
+            "destiny",
+            "young_hercules",
+            "wishing_fish",
+            "baron_bok",
+            "black_hole",
+            "astral_navigator",
+            "apophis",
+            "sigrun_valkyrie_queen",
+            "guinevere"
+          ]
+        },
+        {
+          "username": "Beachy",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "miseria",
+            "orion_the_hunter",
+            "sunflare_glider",
+            "tantalus",
+            "wishing_fish",
+            "astral_navigator",
+            "eros",
+            "pisces",
+            "apophis",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "Cactuspuppy",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "miseria",
+            "young_hercules",
+            "baron_bok",
+            "sunflare_glider",
+            "astral_navigator",
+            "eros",
+            "guinevere",
+            "hephaestus",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "crazycatz",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "miseria",
+            "baron_bok",
+            "mechanical_dragon",
+            "sunflare_glider",
+            "astral_navigator",
+            "black_hole",
+            "eros",
+            "pisces",
+            "sigrun_valkyrie_queen",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Mrk_ling",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "miseria",
+            "baron_bok",
+            "sunflare_glider",
+            "tantalus",
+            "wishing_fish",
+            "astral_navigator",
+            "eros",
+            "apophis",
+            "hephaestus",
+            "sigrun_valkyrie_queen"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "legend_of_loxley",
+      "name": "Legend of Loxley",
+      "n": 5,
+      "signature": [
+        {
+          "card": "Barbosa",
+          "lift": 15.5,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Sailor Moonshine",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Thunder of Dragons",
+          "lift": 6.2,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Friendly Spirit",
+          "lift": 5.2,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Pirate Prince",
+          "lift": 5.2,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Crab Dragoon",
+          "lift": 4.6,
+          "freq": 3,
+          "n": 5
+        },
+        {
+          "card": "Mechanical Dragon",
+          "lift": 4.2,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Combustible Dragon",
+          "lift": 3.9,
+          "freq": 1,
+          "n": 5
+        }
+      ],
+      "best12": [
+        {
+          "card": "Maverick & Icewing",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "Crab Dragoon",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Eros",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Fortune Teller",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Lance A Little",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Mechanical Dragon",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        }
+      ],
+      "players": [
+        {
+          "username": "bearly",
+          "archetype": "Miseria",
+          "deck": [
+            "friendly_spirit",
+            "lance_a_little",
+            "chaos",
+            "destiny",
+            "miseria",
+            "combustible_dragon",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "crystal",
+            "crab_dragoon",
+            "guinevere",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Code",
+          "archetype": "Lance A Little",
+          "deck": [
+            "aladdin",
+            "barbosa",
+            "sailor_moonshine",
+            "mech_a_man",
+            "tsarmina_the_tyrant",
+            "maverick_icewing",
+            "rollo",
+            "thunder_of_dragons",
+            "mirror_mage",
+            "wormscale_tinkerer",
+            "oracle_of_fortunes",
+            "pirate_prince"
+          ]
+        },
+        {
+          "username": "JADELEMENTAL",
+          "archetype": "Miseria",
+          "deck": [
+            "miseria",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "mr_fox",
+            "netherbinder",
+            "rollo",
+            "ditto",
+            "thunder_of_dragons",
+            "crab_dragoon",
+            "guinevere",
+            "oracle_of_fortunes",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "NeonKnight",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "the_huntsman",
+            "baron_bok",
+            "mortakon",
+            "astral_navigator",
+            "crystal",
+            "eros",
+            "crab_dragoon",
+            "guinevere"
+          ]
+        },
+        {
+          "username": "RockofAegis",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "rollo",
+            "sunflare_glider",
+            "crystal",
+            "eros",
+            "perseus",
+            "sigrun_valkyrie_queen",
+            "wormscale_tinkerer"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nathaniel_drake",
+      "name": "Nathaniel Drake",
+      "n": 5,
+      "signature": [
+        {
+          "card": "Pretty Patissier",
+          "lift": 11.6,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "The Butcher",
+          "lift": 9.3,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Weensy",
+          "lift": 9.3,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Faerie Queen",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Toto",
+          "lift": 5.6,
+          "freq": 3,
+          "n": 5
+        },
+        {
+          "card": "Friendly Spirit",
+          "lift": 5.2,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Scale-a-tor",
+          "lift": 4.6,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Jaws",
+          "lift": 4.4,
+          "freq": 2,
+          "n": 5
+        }
+      ],
+      "best12": [
+        {
+          "card": "Lance A Little",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 5,
+          "n": 5,
+          "pct": 100.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Toto",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Jaws",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Mortakon",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Pretty Patissier",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Couldbeglorious",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "the_raven",
+            "destiny",
+            "miseria",
+            "the_huntsman",
+            "young_hercules",
+            "mortakon",
+            "mr_fox",
+            "orion_the_hunter",
+            "eros",
+            "guinevere",
+            "perseus"
+          ]
+        },
+        {
+          "username": "cuteson",
+          "archetype": "Lance A Little",
+          "deck": [
+            "friendly_spirit",
+            "lance_a_little",
+            "toto",
+            "miseria",
+            "mr_fox",
+            "netherbinder",
+            "rollo",
+            "weensy",
+            "sir_francis_drake",
+            "crab_dragoon",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Gorik",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "miseria",
+            "maverick_icewing",
+            "mortakon",
+            "rollo",
+            "the_butcher",
+            "crystal",
+            "faerie_queen",
+            "guinevere",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "jazzyjrw",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "miseria",
+            "pretty_patissier",
+            "young_hercules",
+            "jaws",
+            "weensy",
+            "crystal",
+            "oracle_of_fortunes",
+            "scale_a_tor",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Rondondo",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "toto",
+            "miseria",
+            "pretty_patissier",
+            "the_huntsman",
+            "jaws",
+            "tsarmina_the_tyrant",
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "guinevere",
+            "monstro",
+            "wormscale_tinkerer"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "trash_panda",
+      "name": "Trash Panda",
+      "n": 5,
+      "signature": [
+        {
+          "card": "Uther Pendragon",
+          "lift": 46.4,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Gulliver",
+          "lift": 23.2,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Weird Beard",
+          "lift": 23.2,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "The Rat King",
+          "lift": 15.5,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Jelly Roger",
+          "lift": 11.6,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Pirate King",
+          "lift": 11.6,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Black Hole",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Sailor Moonshine",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 5
+        }
+      ],
+      "best12": [
+        {
+          "card": "Crystal",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Fortune Teller",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Mech-a-Man",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Mortakon",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Young Hercules",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Cr3nshun",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "crystal",
+            "eros",
+            "anubis",
+            "guinevere",
+            "perseus",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Kraelh",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "gingerbread_witch",
+            "catatouille",
+            "miseria",
+            "sunflare_glider",
+            "netherbinder",
+            "rollo",
+            "gulliver",
+            "uther_pendragon",
+            "crystal",
+            "gummy_wyrm",
+            "oracle_of_fortunes"
+          ]
+        },
+        {
+          "username": "merigoldie",
+          "archetype": "Mirror Mage",
+          "deck": [
+            "toto",
+            "aladdin",
+            "sailor_moonshine",
+            "mech_a_man",
+            "mimic",
+            "jelly_roger",
+            "calypso",
+            "sir_francis_drake",
+            "the_rat_king",
+            "pirate_king",
+            "weird_beard",
+            "pirate_prince"
+          ]
+        },
+        {
+          "username": "mgallop",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "mr_fox",
+            "rollo",
+            "crystal",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "PregnableCastle",
+          "archetype": "Mirror Mage",
+          "deck": [
+            "scale_a_tor",
+            "aladdin",
+            "beanie_baby",
+            "frog_prince",
+            "morgan_le_fae",
+            "flopsy",
+            "mech_a_man",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "black_hole",
+            "thunder_of_dragons",
+            "wormscale_tinkerer"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "yakety_yak_yak",
+      "name": "Yakety Yak Yak",
+      "n": 5,
+      "signature": [
+        {
+          "card": "The Butcher",
+          "lift": 9.3,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Old Coyote",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Fae Familiar",
+          "lift": 6.6,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Fenrir",
+          "lift": 6.6,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Scale Singers",
+          "lift": 6.6,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Glory Seeker",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Wishing Fish",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Baron Bok",
+          "lift": 4.8,
+          "freq": 3,
+          "n": 5
+        }
+      ],
+      "best12": [
+        {
+          "card": "Fortune Teller",
+          "freq": 4,
+          "n": 5,
+          "pct": 80.0
+        },
+        {
+          "card": "Baron Bok",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Eros",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Mortakon",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Sigrun, Valkyrie Queen",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Young Hercules",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Apophis",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Astral Navigator",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Crab Dragoon",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Esty",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "baron_bok",
+            "mortakon",
+            "mr_fox",
+            "astral_navigator",
+            "eros",
+            "guinevere",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "istarios",
+          "archetype": "Miseria",
+          "deck": [
+            "fae_familiar",
+            "fortune_teller",
+            "nuada_radiant_king",
+            "baron_bok",
+            "scale_singers",
+            "eros",
+            "fenrir",
+            "mirror_mage",
+            "smug",
+            "apophis",
+            "crab_dragoon",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Jampot",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "mech_a_man",
+            "miseria",
+            "young_hercules",
+            "mortakon",
+            "mr_fox",
+            "rollo",
+            "the_butcher",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "TedTedTed",
+          "archetype": "Astral Navigator",
+          "deck": [
+            "al_miraj",
+            "the_raven",
+            "old_coyote",
+            "baron_bok",
+            "mr_fox",
+            "wishing_fish",
+            "astral_navigator",
+            "fenrir",
+            "leapfrog",
+            "apophis",
+            "crab_dragoon",
+            "nemean_lion"
+          ]
+        },
+        {
+          "username": "Wiskhey",
+          "archetype": "Miseria",
+          "deck": [
+            "glory_seeker",
+            "destiny",
+            "fortune_teller",
+            "the_huntsman",
+            "young_hercules",
+            "mortakon",
+            "orion_the_hunter",
+            "eros",
+            "guinevere",
+            "hercules",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "toucan_samuel",
+      "name": "Toucan Samuel",
+      "n": 5,
+      "signature": [
+        {
+          "card": "Jumping Jelly Beans",
+          "lift": 30.9,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Doopity Doo",
+          "lift": 15.5,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Life Saver",
+          "lift": 11.6,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "The Butcher",
+          "lift": 9.3,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Dastardly Spirit",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Jelly-ton",
+          "lift": 5.8,
+          "freq": 2,
+          "n": 5
+        },
+        {
+          "card": "Friendly Spirit",
+          "lift": 5.2,
+          "freq": 1,
+          "n": 5
+        },
+        {
+          "card": "Lemonhead",
+          "lift": 5.2,
+          "freq": 1,
+          "n": 5
+        }
+      ],
+      "best12": [
+        {
+          "card": "Miseria",
+          "freq": 3,
+          "n": 5,
+          "pct": 60.0
+        },
+        {
+          "card": "Cotton Candy Dandy",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Doopity Doo",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Gingerbread Witch",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Jelly-ton",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Jumping Jelly Beans",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Lance A Little",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Lollipop Faerie",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        },
+        {
+          "card": "The Huntsman",
+          "freq": 2,
+          "n": 5,
+          "pct": 40.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Frog In A Hat",
+          "archetype": "Miseria",
+          "deck": [
+            "al_miraj",
+            "aladdin",
+            "lance_a_little",
+            "miseria",
+            "the_huntsman",
+            "young_hercules",
+            "mr_fox",
+            "rollo",
+            "sunflare_glider",
+            "crystal",
+            "apophis",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "McBain",
+          "archetype": "Lance A Little",
+          "deck": [
+            "dastardly_spirit",
+            "friendly_spirit",
+            "lance_a_little",
+            "miseria",
+            "the_huntsman",
+            "the_butcher",
+            "weensy",
+            "smug",
+            "blackbeard",
+            "oracle_of_fortunes",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "omok23",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "baron_bok",
+            "maverick_icewing",
+            "mr_fox",
+            "netherbinder",
+            "crystal",
+            "crab_dragoon",
+            "guinevere",
+            "perseus"
+          ]
+        },
+        {
+          "username": "Taiyoken",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "gingerbread_witch",
+            "lollipop_faerie",
+            "the_candy_cane_crook",
+            "cherry_topples",
+            "jumping_jelly_beans",
+            "kool_wip",
+            "doopity_doo",
+            "pixie",
+            "viscount_chocolat",
+            "cotton_candy_dandy",
+            "gummy_wyrm",
+            "jelly_ton"
+          ]
+        },
+        {
+          "username": "Zoga",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "lollipop_faerie",
+            "gingerbread_witch",
+            "catatouille",
+            "lemonhead",
+            "jumping_jelly_beans",
+            "life_saver",
+            "doopity_doo",
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "chubby_cheep",
+            "cotton_candy_dandy",
+            "jelly_ton"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "elec_drake",
+      "name": "Elec-Drake",
+      "n": 4,
+      "signature": [
+        {
+          "card": "Prickles",
+          "lift": 29.0,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Shanty",
+          "lift": 8.3,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Anubis",
+          "lift": 6.4,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Kid Icarus",
+          "lift": 6.4,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Scale-a-tor",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Wicked Witch",
+          "lift": 5.8,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Mechanical Dragon",
+          "lift": 5.3,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Combustible Dragon",
+          "lift": 4.8,
+          "freq": 1,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "Destiny",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Lance A Little",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Mortakon",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Young Hercules",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Fortune Teller",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Mechanical Dragon",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Astrid The Cat",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "mortakon",
+            "astral_navigator",
+            "crystal",
+            "eros",
+            "wicked_witch",
+            "anubis",
+            "guinevere"
+          ]
+        },
+        {
+          "username": "Nicopootato",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "mech_a_man",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "mortakon",
+            "rollo",
+            "guinevere",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "TessIsSilly",
+          "archetype": "Miseria",
+          "deck": [
+            "aladdin",
+            "prickles",
+            "toto",
+            "kid_icarus",
+            "shanty",
+            "combustible_dragon",
+            "maverick_icewing",
+            "smug",
+            "thunder_of_dragons",
+            "scale_a_tor",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Xzenith",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "mortakon",
+            "crystal",
+            "guinevere",
+            "oracle_of_fortunes",
+            "the_burninator"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "candy_pandy",
+      "name": "Candy Pandy",
+      "n": 4,
+      "signature": [
+        {
+          "card": "Chubby Cheep",
+          "lift": 23.2,
+          "freq": 4,
+          "n": 4
+        },
+        {
+          "card": "Keeb",
+          "lift": 19.3,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Candy Claws",
+          "lift": 17.4,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Jaws",
+          "lift": 11.0,
+          "freq": 4,
+          "n": 4
+        },
+        {
+          "card": "Gingerbread Witch",
+          "lift": 10.1,
+          "freq": 4,
+          "n": 4
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "lift": 8.7,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "The Candy Cane Crook",
+          "lift": 8.7,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Oracle of Fortunes",
+          "lift": 7.2,
+          "freq": 3,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "Chubby Cheep",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Gingerbread Witch",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Jaws",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Lance A Little",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Candy Claws",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Keeb",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Oracle of Fortunes",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "The Candy Cane Crook",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Twilight Sprinkles",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Binger",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "gingerbread_witch",
+            "lance_a_little",
+            "chaos",
+            "miseria",
+            "the_sour_patch_kid",
+            "cherry_topples",
+            "jaws",
+            "kool_wip",
+            "pixie",
+            "viscount_chocolat",
+            "chubby_cheep",
+            "cotton_candy_dandy"
+          ]
+        },
+        {
+          "username": "Lobsterbush",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "lance_a_little",
+            "gingerbread_witch",
+            "candy_claws",
+            "the_candy_cane_crook",
+            "miseria",
+            "keeb",
+            "rollo",
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "oracle_of_fortunes",
+            "chubby_cheep",
+            "jaws"
+          ]
+        },
+        {
+          "username": "Plytren",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "lance_a_little",
+            "gingerbread_witch",
+            "candy_claws",
+            "the_candy_cane_crook",
+            "miseria",
+            "keeb",
+            "rollo",
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "oracle_of_fortunes",
+            "chubby_cheep",
+            "jaws"
+          ]
+        },
+        {
+          "username": "Wallmapit",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "lance_a_little",
+            "gingerbread_witch",
+            "candy_claws",
+            "the_candy_cane_crook",
+            "miseria",
+            "keeb",
+            "rollo",
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "oracle_of_fortunes",
+            "chubby_cheep",
+            "jaws"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "con_artist",
+      "name": "Con Artist",
+      "n": 4,
+      "signature": [
+        {
+          "card": "Ogre Magi",
+          "lift": 14.5,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Aladdin",
+          "lift": 8.9,
+          "freq": 4,
+          "n": 4
+        },
+        {
+          "card": "Prospero",
+          "lift": 7.2,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Friendly Spirit",
+          "lift": 6.4,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Kid Icarus",
+          "lift": 6.4,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Tsarmina, the Tyrant",
+          "lift": 5.8,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Rollo",
+          "lift": 4.0,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Monstro",
+          "lift": 3.9,
+          "freq": 1,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "Aladdin",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 4,
+          "n": 4,
+          "pct": 100.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Sigrun, Valkyrie Queen",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "The Huntsman",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Tsarmina, the Tyrant",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Bleech",
+          "archetype": "Miseria",
+          "deck": [
+            "aladdin",
+            "destiny",
+            "mech_a_man",
+            "miseria",
+            "young_hercules",
+            "maverick_icewing",
+            "mortakon",
+            "rollo",
+            "crystal",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "MrDrSirDrPickles",
+          "archetype": "Miseria",
+          "deck": [
+            "aladdin",
+            "friendly_spirit",
+            "miseria",
+            "the_huntsman",
+            "young_hercules",
+            "maverick_icewing",
+            "mr_fox",
+            "crystal",
+            "apophis",
+            "guinevere",
+            "sigrun_valkyrie_queen",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "NewSet",
+          "archetype": "Miseria",
+          "deck": [
+            "aladdin",
+            "destiny",
+            "miseria",
+            "the_huntsman",
+            "maverick_icewing",
+            "mr_fox",
+            "rollo",
+            "tsarmina_the_tyrant",
+            "sir_francis_drake",
+            "crab_dragoon",
+            "guinevere",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Yikerz",
+          "archetype": "Miseria",
+          "deck": [
+            "toto",
+            "aladdin",
+            "kid_icarus",
+            "chaos",
+            "tsarmina_the_tyrant",
+            "maverick_icewing",
+            "rollo",
+            "mirror_mage",
+            "ogre_magi",
+            "monstro",
+            "guinevere",
+            "prospero"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tajima_patron_of_sweets",
+      "name": "Tajima, Patron of Sweets",
+      "n": 4,
+      "signature": [
+        {
+          "card": "Caramel",
+          "lift": 19.3,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Frosting Dragon",
+          "lift": 11.6,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Monstro",
+          "lift": 11.6,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "The Three Chef-Keteers",
+          "lift": 11.6,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Pixie",
+          "lift": 10.9,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "lift": 8.7,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "The Candy Cane Crook",
+          "lift": 8.7,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Jaws",
+          "lift": 8.3,
+          "freq": 3,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "Gummy Wyrm",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Jaws",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Kool Wip",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Monstro",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Pixie",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "The Candy Cane Crook",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "The Sour Patch Kid",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "The Three Chef-Keteers",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Twilight Sprinkles",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Bulo",
+          "archetype": "Miseria",
+          "deck": [
+            "miseria",
+            "the_candy_cane_crook",
+            "frosting_dragon",
+            "jaws",
+            "kool_wip",
+            "mr_fox",
+            "rollo",
+            "the_three_chef_keteers",
+            "knight_of_the_holy_cane",
+            "guinevere",
+            "gummy_wyrm",
+            "monstro"
+          ]
+        },
+        {
+          "username": "Neffari",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "lollipop_faerie",
+            "the_candy_cane_crook",
+            "the_sour_patch_kid",
+            "cherry_topples",
+            "kool_wip",
+            "mr_fox",
+            "knight_of_the_holy_cane",
+            "pixie",
+            "viscount_chocolat",
+            "gummy_wyrm",
+            "oracle_of_fortunes",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "ThePizzapotamus",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "candy_claws",
+            "pretty_patissier",
+            "the_sour_patch_kid",
+            "jaws",
+            "caramel",
+            "leapfrog",
+            "pixie",
+            "twilight_sprinkles",
+            "viscount_chocolat",
+            "gummy_wyrm",
+            "jelly_ton",
+            "monstro"
+          ]
+        },
+        {
+          "username": "TheRandomOne",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "catatouille",
+            "miseria",
+            "the_candy_cane_crook",
+            "jaws",
+            "kool_wip",
+            "the_three_chef_keteers",
+            "keeb",
+            "knight_of_the_holy_cane",
+            "pixie",
+            "twilight_sprinkles",
+            "chubby_cheep",
+            "monstro"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "itty_aerie",
+      "name": "Itty Aerie",
+      "n": 4,
+      "signature": [
+        {
+          "card": "Gulliver",
+          "lift": 29.0,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Busted Bot",
+          "lift": 23.2,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Space Ranger Woody",
+          "lift": 19.3,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Raggedy Ann",
+          "lift": 14.5,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Lemonhead",
+          "lift": 12.9,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Jelly-ton",
+          "lift": 10.9,
+          "freq": 3,
+          "n": 4
+        },
+        {
+          "card": "Candy Apple Tree",
+          "lift": 7.2,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Blackbeard",
+          "lift": 6.4,
+          "freq": 2,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "Jelly-ton",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Mech-a-Man",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Mortakon",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Blackbeard",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Busted Bot",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Cotton Candy Dandy",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Hercules",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Lemonhead",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Lollipop Faerie",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Sir Francis Drake",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "The Candy Cane Crook",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        }
+      ],
+      "players": [
+        {
+          "username": "drumstep",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "mech_a_man",
+            "miseria",
+            "the_huntsman",
+            "young_hercules",
+            "gulliver",
+            "mortakon",
+            "netherbinder",
+            "orion_the_hunter",
+            "eros",
+            "perseus",
+            "sigrun_valkyrie_queen"
+          ]
+        },
+        {
+          "username": "hiroprotagonist",
+          "archetype": "Miseria",
+          "deck": [
+            "busted_bot",
+            "mech_a_man",
+            "space_ranger_woody",
+            "mortakon",
+            "mr_fox",
+            "raggedy_ann",
+            "innkeeper",
+            "sir_francis_drake",
+            "blackbeard",
+            "hercules",
+            "jelly_ton",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "JimTheEternal",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "busted_bot",
+            "lollipop_faerie",
+            "lemonhead",
+            "mech_a_man",
+            "the_candy_cane_crook",
+            "mortakon",
+            "mr_fox",
+            "sir_francis_drake",
+            "blackbeard",
+            "cotton_candy_dandy",
+            "hercules",
+            "jelly_ton"
+          ]
+        },
+        {
+          "username": "ONLYWIN",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "lollipop_faerie",
+            "gingerbread_witch",
+            "catatouille",
+            "lemonhead",
+            "the_candy_cane_crook",
+            "candy_apple_tree",
+            "kool_wip",
+            "the_three_chef_keteers",
+            "knight_of_the_holy_cane",
+            "keeb",
+            "cotton_candy_dandy",
+            "jelly_ton"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "luna_girl",
+      "name": "Luna Girl",
+      "n": 4,
+      "signature": [
+        {
+          "card": "Daedalus",
+          "lift": 29.0,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Caramel",
+          "lift": 19.3,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Jumping Jelly Beans",
+          "lift": 19.3,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Ogre Magi",
+          "lift": 14.5,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "Pied Piper",
+          "lift": 14.5,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Innkeeper",
+          "lift": 12.9,
+          "freq": 2,
+          "n": 4
+        },
+        {
+          "card": "Nutcracker Prince",
+          "lift": 11.6,
+          "freq": 1,
+          "n": 4
+        },
+        {
+          "card": "The Blue Faerie",
+          "lift": 11.6,
+          "freq": 1,
+          "n": 4
+        }
+      ],
+      "best12": [
+        {
+          "card": "Maverick & Icewing",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Tsarmina, the Tyrant",
+          "freq": 3,
+          "n": 4,
+          "pct": 75.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Daedalus",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Innkeeper",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Lollipop Faerie",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Monstro",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Pied Piper",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Smug",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 2,
+          "n": 4,
+          "pct": 50.0
+        },
+        {
+          "card": "Ace of Hearts",
+          "freq": 1,
+          "n": 4,
+          "pct": 25.0
+        }
+      ],
+      "players": [
+        {
+          "username": "greatlostnovel",
+          "archetype": "Mirror Mage",
+          "deck": [
+            "pied_piper",
+            "aladdin",
+            "ace_of_hearts",
+            "nutcracker_prince",
+            "mimic",
+            "tsarmina_the_tyrant",
+            "maverick_icewing",
+            "innkeeper",
+            "ogre_magi",
+            "monstro",
+            "daedalus",
+            "elm_minster"
+          ]
+        },
+        {
+          "username": "haze1988",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "lollipop_faerie",
+            "gingerbread_witch",
+            "catatouille",
+            "the_candy_cane_crook",
+            "candy_apple_tree",
+            "jumping_jelly_beans",
+            "caramel",
+            "pixie",
+            "the_blue_faerie",
+            "jelly_ton",
+            "cherry_topples",
+            "chaos"
+          ]
+        },
+        {
+          "username": "Nannet",
+          "archetype": "Lance A Little",
+          "deck": [
+            "aladdin",
+            "lance_a_little",
+            "pied_piper",
+            "maverick_icewing",
+            "mr_fox",
+            "tsarmina_the_tyrant",
+            "innkeeper",
+            "leapfrog",
+            "smug",
+            "daedalus",
+            "monstro",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "PlasticPotato",
+          "archetype": "Lance A Little",
+          "deck": [
+            "lollipop_faerie",
+            "wink",
+            "jaws",
+            "maverick_icewing",
+            "mr_fox",
+            "rollo",
+            "tsarmina_the_tyrant",
+            "crystal",
+            "smug",
+            "twilight_sprinkles",
+            "licorice",
+            "wormscale_tinkerer"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "jay_sparrow",
+      "name": "Jay Sparrow",
+      "n": 3,
+      "signature": [
+        {
+          "card": "Shanty",
+          "lift": 22.1,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Jelly Roger",
+          "lift": 19.3,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Plunder Penny",
+          "lift": 19.3,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Wink",
+          "lift": 19.3,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Innkeeper",
+          "lift": 17.2,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Blackbeard",
+          "lift": 12.9,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Hercules",
+          "lift": 12.9,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Sailor Moonshine",
+          "lift": 12.9,
+          "freq": 1,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Blackbeard",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Hercules",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Plunder Penny",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Sir Francis Drake",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Innkeeper",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Shanty",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Wink",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Apophis",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Calypso",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Don Quixote",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "adargod14",
+          "archetype": "Mirror Mage",
+          "deck": [
+            "plunder_penny",
+            "mech_a_man",
+            "shanty",
+            "wink",
+            "calypso",
+            "jelly_roger",
+            "mechanical_dragon",
+            "innkeeper",
+            "sir_francis_drake",
+            "blackbeard",
+            "hercules",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "doonboggle",
+          "archetype": "Lance A Little",
+          "deck": [
+            "plunder_penny",
+            "toto",
+            "shanty",
+            "the_huntsman",
+            "wink",
+            "mr_fox",
+            "orion_the_hunter",
+            "sir_francis_drake",
+            "snapping_hydra",
+            "apophis",
+            "blackbeard",
+            "hercules"
+          ]
+        },
+        {
+          "username": "MinnWild",
+          "archetype": "Mirror Mage",
+          "deck": [
+            "aladdin",
+            "plunder_penny",
+            "miseria",
+            "sailor_moonshine",
+            "don_quixote",
+            "mr_fox",
+            "tsarmina_the_tyrant",
+            "innkeeper",
+            "sir_francis_drake",
+            "blackbeard",
+            "hercules",
+            "pirate_prince"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gloria_clementine",
+      "name": "Gloria Clementine",
+      "n": 3,
+      "signature": [
+        {
+          "card": "Mischief",
+          "lift": 38.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Miss Muffet",
+          "lift": 38.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Barbosa",
+          "lift": 25.8,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Black Hole",
+          "lift": 12.9,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Dastardly Spirit",
+          "lift": 12.9,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Anubis",
+          "lift": 8.6,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Weensy",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Wicked Witch",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Ace of Hearts",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Smug",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Anubis",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Barbosa",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Black Hole",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Calypso",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Chaos",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "applesteak",
+          "archetype": "Lance A Little",
+          "deck": [
+            "barbosa",
+            "dastardly_spirit",
+            "ace_of_hearts",
+            "chaos",
+            "morgan_le_fae",
+            "calypso",
+            "weensy",
+            "sir_francis_drake",
+            "smug",
+            "miss_muffet",
+            "oracle_of_fortunes",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "CunningWish",
+          "archetype": "Miseria",
+          "deck": [
+            "lance_a_little",
+            "ace_of_hearts",
+            "destiny",
+            "miseria",
+            "the_huntsman",
+            "mr_fox",
+            "crystal",
+            "smug",
+            "crab_dragoon",
+            "guinevere",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "yujinskii",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "young_hercules",
+            "mortakon",
+            "rollo",
+            "black_hole",
+            "crystal",
+            "wicked_witch",
+            "anubis",
+            "guinevere",
+            "mischief"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ammit",
+      "name": "Ammit",
+      "n": 3,
+      "signature": [
+        {
+          "card": "Nutty Pirates",
+          "lift": 58.0,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Dastardly Spirit",
+          "lift": 38.7,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Toadie",
+          "lift": 38.7,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Halja",
+          "lift": 21.1,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Calypso",
+          "lift": 17.8,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Fenrir",
+          "lift": 16.6,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Blackbeard",
+          "lift": 12.9,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Nightshade",
+          "lift": 12.9,
+          "freq": 3,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Apophis",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Blackbeard",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Calypso",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Chaos",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Dastardly Spirit",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Fenrir",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Halja",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Mech-a-Man",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Nightshade",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Nutty Pirates",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Orion, the Hunter",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Toadie",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Blendycoffee",
+          "archetype": "Mech-a-Man",
+          "deck": [
+            "dastardly_spirit",
+            "nutty_pirates",
+            "toadie",
+            "chaos",
+            "nightshade",
+            "calypso",
+            "mech_a_man",
+            "fenrir",
+            "orion_the_hunter",
+            "apophis",
+            "halja",
+            "blackbeard"
+          ]
+        },
+        {
+          "username": "Jamby",
+          "archetype": "Mech-a-Man",
+          "deck": [
+            "dastardly_spirit",
+            "nutty_pirates",
+            "chaos",
+            "mech_a_man",
+            "toadie",
+            "calypso",
+            "nightshade",
+            "orion_the_hunter",
+            "fenrir",
+            "apophis",
+            "blackbeard",
+            "halja"
+          ]
+        },
+        {
+          "username": "monicaMillions",
+          "archetype": "Mech-a-Man",
+          "deck": [
+            "dastardly_spirit",
+            "nutty_pirates",
+            "toadie",
+            "chaos",
+            "nightshade",
+            "calypso",
+            "mech_a_man",
+            "fenrir",
+            "orion_the_hunter",
+            "apophis",
+            "halja",
+            "blackbeard"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "professor_whos_who",
+      "name": "Professor Who's Who",
+      "n": 3,
+      "signature": [
+        {
+          "card": "Mysterio, the Great and Powerful",
+          "lift": 38.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Rudolph the Red",
+          "lift": 17.2,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Shanty",
+          "lift": 11.0,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Anubis",
+          "lift": 8.6,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Elm Minster",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Wicked Witch",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Plunder Penny",
+          "lift": 6.4,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Monstro",
+          "lift": 5.2,
+          "freq": 1,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Destiny",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Guinevere",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Mortakon",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Rudolph the Red",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Ace of Hearts",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Anubis",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Bubbles",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Elm Minster",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Collecter",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "mech_a_man",
+            "miseria",
+            "the_huntsman",
+            "mortakon",
+            "orion_the_hunter",
+            "rollo",
+            "crystal",
+            "snapping_hydra",
+            "guinevere",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Hikikomori",
+          "archetype": "Miseria",
+          "deck": [
+            "bubbles",
+            "ace_of_hearts",
+            "destiny",
+            "miseria",
+            "maverick_icewing",
+            "mortakon",
+            "rollo",
+            "mirror_mage",
+            "rudolph_the_red",
+            "wicked_witch",
+            "anubis",
+            "guinevere"
+          ]
+        },
+        {
+          "username": "PedFrenner",
+          "archetype": "Mirror Mage",
+          "deck": [
+            "aladdin",
+            "plunder_penny",
+            "shanty",
+            "the_sour_patch_kid",
+            "nightshade",
+            "mysterio_the_great_and_powerful",
+            "rudolph_the_red",
+            "sir_francis_drake",
+            "twilight_sprinkles",
+            "elm_minster",
+            "monstro",
+            "wormscale_tinkerer"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lucky_leprechaun",
+      "name": "Lucky Leprechaun",
+      "n": 3,
+      "signature": [
+        {
+          "card": "Frosting Dragon",
+          "lift": 15.5,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Pixie",
+          "lift": 14.5,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Cotton Candy Dandy",
+          "lift": 10.1,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Cherry Topples",
+          "lift": 8.6,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Candy Claws",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Chubby Cheep",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "lift": 7.7,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "The Candy Cane Crook",
+          "lift": 7.7,
+          "freq": 2,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Cotton Candy Dandy",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Pixie",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Cherry Topples",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Gingerbread Witch",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Gummy Wyrm",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Kool Wip",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Lollipop Faerie",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Netherbinder",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "The Candy Cane Crook",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Astral Navigator",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Doppler",
+          "archetype": "Miseria",
+          "deck": [
+            "lollipop_faerie",
+            "miseria",
+            "the_candy_cane_crook",
+            "cherry_topples",
+            "kool_wip",
+            "netherbinder",
+            "knight_of_the_holy_cane",
+            "pixie",
+            "cotton_candy_dandy",
+            "gummy_wyrm",
+            "oracle_of_fortunes",
+            "the_burninator"
+          ]
+        },
+        {
+          "username": "Mr. Xzavy",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "lollipop_faerie",
+            "gingerbread_witch",
+            "catatouille",
+            "candy_claws",
+            "the_candy_cane_crook",
+            "cherry_topples",
+            "kool_wip",
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "pixie",
+            "chubby_cheep",
+            "cotton_candy_dandy"
+          ]
+        },
+        {
+          "username": "Nim",
+          "archetype": "Miseria",
+          "deck": [
+            "gingerbread_witch",
+            "lance_a_little",
+            "destiny",
+            "miseria",
+            "frosting_dragon",
+            "jaws",
+            "netherbinder",
+            "astral_navigator",
+            "pixie",
+            "thunder_of_dragons",
+            "cotton_candy_dandy",
+            "gummy_wyrm"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vena_cava",
+      "name": "Vena Cava",
+      "n": 3,
+      "signature": [
+        {
+          "card": "The Giving Tree",
+          "lift": 46.4,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Fun Gal",
+          "lift": 38.7,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Faerie Queen",
+          "lift": 29.0,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Charlotte",
+          "lift": 25.8,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Fae Familiar",
+          "lift": 22.1,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Underdog",
+          "lift": 22.1,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Faerie Godfather",
+          "lift": 15.5,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "The Blue Faerie",
+          "lift": 15.5,
+          "freq": 1,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Faerie Queen",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Fun Gal",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "The Giving Tree",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Fae Familiar",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Mech-a-Man",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Morgan Le Fae",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Nightshade",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Pisces",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Underdog",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Al-mi'raj",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Barrel of Monkeys",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Bubbles",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "DragoMastro",
+          "archetype": "Mech-a-Man",
+          "deck": [
+            "lollipop_faerie",
+            "underdog",
+            "candy_claws",
+            "fae_familiar",
+            "mech_a_man",
+            "morgan_le_fae",
+            "cherry_topples",
+            "fun_gal",
+            "nightshade",
+            "the_giving_tree",
+            "pisces",
+            "faerie_queen"
+          ]
+        },
+        {
+          "username": "GeneralChemist",
+          "archetype": "Mech-a-Man",
+          "deck": [
+            "pied_piper",
+            "underdog",
+            "fae_familiar",
+            "morgan_le_fae",
+            "mech_a_man",
+            "fun_gal",
+            "nightshade",
+            "the_giving_tree",
+            "pisces",
+            "charlotte",
+            "faerie_godfather",
+            "faerie_queen"
+          ]
+        },
+        {
+          "username": "XenoGemini",
+          "archetype": "Miseria",
+          "deck": [
+            "al_miraj",
+            "bubbles",
+            "destiny",
+            "miseria",
+            "fun_gal",
+            "mortakon",
+            "the_giving_tree",
+            "eros",
+            "barrel_of_monkeys",
+            "faerie_queen",
+            "the_blue_faerie",
+            "wormscale_tinkerer"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lady_of_the_lake",
+      "name": "Lady of the Lake",
+      "n": 3,
+      "signature": [
+        {
+          "card": "The Blue Faerie",
+          "lift": 15.5,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "The Butcher",
+          "lift": 15.5,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Beanie Baby",
+          "lift": 12.9,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Wicked Witch",
+          "lift": 7.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Mechanical Dragon",
+          "lift": 7.0,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Oracle of Fortunes",
+          "lift": 6.4,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Rollo",
+          "lift": 5.4,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Pisces",
+          "lift": 5.2,
+          "freq": 1,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Maverick & Icewing",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Mr. Fox",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Rollo",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Beanie Baby",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Mechanical Dragon",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Oracle of Fortunes",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Aladdin",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Destiny",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "NoLucksGiven",
+          "archetype": "Miseria",
+          "deck": [
+            "aladdin",
+            "beanie_baby",
+            "miseria",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "mr_fox",
+            "rollo",
+            "pisces",
+            "oracle_of_fortunes",
+            "the_blue_faerie",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "SymbioticSweater",
+          "archetype": "Miseria",
+          "deck": [
+            "beanie_baby",
+            "miseria",
+            "the_huntsman",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "mr_fox",
+            "rollo",
+            "crystal",
+            "smug",
+            "oracle_of_fortunes",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "Zeryph",
+          "archetype": "Miseria",
+          "deck": [
+            "destiny",
+            "fortune_teller",
+            "miseria",
+            "maverick_icewing",
+            "mr_fox",
+            "rollo",
+            "the_butcher",
+            "crystal",
+            "wicked_witch",
+            "guinevere",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sugar_pops",
+      "name": "Sugar Pops",
+      "n": 3,
+      "signature": [
+        {
+          "card": "Chubby Bunny",
+          "lift": 38.7,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Pretty Patissier",
+          "lift": 29.0,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Moppet",
+          "lift": 25.8,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Candy Apple Tree",
+          "lift": 9.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Gummy Wyrm",
+          "lift": 9.7,
+          "freq": 3,
+          "n": 3
+        },
+        {
+          "card": "Jelly-ton",
+          "lift": 9.7,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Licorice",
+          "lift": 9.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Cherry Topples",
+          "lift": 8.6,
+          "freq": 2,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Gummy Wyrm",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Pretty Patissier",
+          "freq": 3,
+          "n": 3,
+          "pct": 100.0
+        },
+        {
+          "card": "Cherry Topples",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Chubby Bunny",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Gingerbread Witch",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Jelly-ton",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Knight of the Holy Cane",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Kool Wip",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Lollipop Faerie",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Miseria",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Twilight Sprinkles",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Al-mi'raj",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Prolamer",
+          "archetype": "Miseria",
+          "deck": [
+            "lollipop_faerie",
+            "candy_claws",
+            "miseria",
+            "pretty_patissier",
+            "young_hercules",
+            "jaws",
+            "orion_the_hunter",
+            "chubby_bunny",
+            "viscount_chocolat",
+            "apophis",
+            "gummy_wyrm",
+            "jelly_ton"
+          ]
+        },
+        {
+          "username": "SoIMBAGallade",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "al_miraj",
+            "gingerbread_witch",
+            "lollipop_faerie",
+            "pretty_patissier",
+            "candy_apple_tree",
+            "cherry_topples",
+            "kool_wip",
+            "the_three_chef_keteers",
+            "chubby_bunny",
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "gummy_wyrm"
+          ]
+        },
+        {
+          "username": "Wurtil1",
+          "archetype": "Gummy Wyrm",
+          "deck": [
+            "gingerbread_witch",
+            "catatouille",
+            "miseria",
+            "pretty_patissier",
+            "cherry_topples",
+            "kool_wip",
+            "moppet",
+            "knight_of_the_holy_cane",
+            "twilight_sprinkles",
+            "gummy_wyrm",
+            "jelly_ton",
+            "licorice"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "thing_in_the_ice",
+      "name": "Thing in the Ice",
+      "n": 3,
+      "signature": [
+        {
+          "card": "Scale-a-tor",
+          "lift": 15.5,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Combustible Dragon",
+          "lift": 12.9,
+          "freq": 2,
+          "n": 3
+        },
+        {
+          "card": "Hephaestus",
+          "lift": 12.9,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Toadie",
+          "lift": 12.9,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Scale Singers",
+          "lift": 11.0,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Prospero",
+          "lift": 9.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "The Fates",
+          "lift": 9.7,
+          "freq": 1,
+          "n": 3
+        },
+        {
+          "card": "Wink",
+          "lift": 9.7,
+          "freq": 1,
+          "n": 3
+        }
+      ],
+      "best12": [
+        {
+          "card": "Aladdin",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Combustible Dragon",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Maverick & Icewing",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Scale-a-tor",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "The Burninator",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Wormscale Tinkerer",
+          "freq": 2,
+          "n": 3,
+          "pct": 67.0
+        },
+        {
+          "card": "Beanie Baby",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Chaos",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Crystal",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Elm Minster",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Flopsy",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        },
+        {
+          "card": "Fortune Teller",
+          "freq": 1,
+          "n": 3,
+          "pct": 33.0
+        }
+      ],
+      "players": [
+        {
+          "username": "Valiant",
+          "archetype": "Miseria",
+          "deck": [
+            "aladdin",
+            "beanie_baby",
+            "kid_icarus",
+            "wink",
+            "combustible_dragon",
+            "maverick_icewing",
+            "mr_fox",
+            "smug",
+            "hephaestus",
+            "scale_a_tor",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        },
+        {
+          "username": "WannaPo",
+          "archetype": "Miseria",
+          "deck": [
+            "chaos",
+            "weensy",
+            "nightshade",
+            "the_fates",
+            "crystal",
+            "fortune_teller",
+            "scale_singers",
+            "kagutsuchi",
+            "medea_in_a_tavern",
+            "halja",
+            "prospero",
+            "elm_minster"
+          ]
+        },
+        {
+          "username": "WrennSolomon",
+          "archetype": "Miseria",
+          "deck": [
+            "aladdin",
+            "toto",
+            "toadie",
+            "combustible_dragon",
+            "maverick_icewing",
+            "mechanical_dragon",
+            "mirror_mage",
+            "sir_francis_drake",
+            "flopsy",
+            "scale_a_tor",
+            "the_burninator",
+            "wormscale_tinkerer"
+          ]
+        }
+      ]
+    }
+  ],
+  "top_cards": [
+    {
+      "name": "Miseria",
+      "freq": 120,
+      "pct": 51.7
+    },
+    {
+      "name": "Destiny",
+      "freq": 98,
+      "pct": 42.2
+    },
+    {
+      "name": "Guinevere",
+      "freq": 96,
+      "pct": 41.4
+    },
+    {
+      "name": "Young Hercules",
+      "freq": 85,
+      "pct": 36.6
+    },
+    {
+      "name": "Maverick & Icewing",
+      "freq": 84,
+      "pct": 36.2
+    },
+    {
+      "name": "Mortakon",
+      "freq": 76,
+      "pct": 32.8
+    },
+    {
+      "name": "The Burninator",
+      "freq": 74,
+      "pct": 31.9
+    },
+    {
+      "name": "Fortune Teller",
+      "freq": 68,
+      "pct": 29.3
+    },
+    {
+      "name": "Sigrun, Valkyrie Queen",
+      "freq": 66,
+      "pct": 28.4
+    },
+    {
+      "name": "Crystal",
+      "freq": 65,
+      "pct": 28.0
+    },
+    {
+      "name": "Lance A Little",
+      "freq": 65,
+      "pct": 28.0
+    },
+    {
+      "name": "Wormscale Tinkerer",
+      "freq": 61,
+      "pct": 26.3
+    },
+    {
+      "name": "Mr. Fox",
+      "freq": 51,
+      "pct": 22.0
+    },
+    {
+      "name": "The Huntsman",
+      "freq": 48,
+      "pct": 20.7
+    },
+    {
+      "name": "Eros",
+      "freq": 46,
+      "pct": 19.8
+    },
+    {
+      "name": "Perseus",
+      "freq": 44,
+      "pct": 19.0
+    },
+    {
+      "name": "Rollo",
+      "freq": 43,
+      "pct": 18.5
+    },
+    {
+      "name": "Orion, the Hunter",
+      "freq": 41,
+      "pct": 17.7
+    },
+    {
+      "name": "Mech-a-Man",
+      "freq": 35,
+      "pct": 15.1
+    },
+    {
+      "name": "Astral Navigator",
+      "freq": 31,
+      "pct": 13.4
+    },
+    {
+      "name": "Crab Dragoon",
+      "freq": 30,
+      "pct": 12.9
+    },
+    {
+      "name": "Baron Bok",
+      "freq": 29,
+      "pct": 12.5
+    },
+    {
+      "name": "Apophis",
+      "freq": 27,
+      "pct": 11.6
+    },
+    {
+      "name": "Mirror Mage",
+      "freq": 27,
+      "pct": 11.6
+    },
+    {
+      "name": "Aladdin",
+      "freq": 26,
+      "pct": 11.2
+    },
+    {
+      "name": "Toto",
+      "freq": 25,
+      "pct": 10.8
+    },
+    {
+      "name": "Gummy Wyrm",
+      "freq": 24,
+      "pct": 10.3
+    },
+    {
+      "name": "Lollipop Faerie",
+      "freq": 24,
+      "pct": 10.3
+    },
+    {
+      "name": "Medea in a Tavern",
+      "freq": 24,
+      "pct": 10.3
+    },
+    {
+      "name": "Oracle of Fortunes",
+      "freq": 24,
+      "pct": 10.3
+    }
+  ],
+  "top_captains": [
+    {
+      "slug": "dinonysus",
+      "name": "Dinonysus",
+      "freq": 17,
+      "pct": 7.3
+    },
+    {
+      "slug": "anagolay",
+      "name": "Anagolay",
+      "freq": 13,
+      "pct": 5.6
+    },
+    {
+      "slug": "baba_yaga",
+      "name": "Baba Yaga",
+      "freq": 12,
+      "pct": 5.2
+    },
+    {
+      "slug": "nemesis",
+      "name": "Nemesis",
+      "freq": 12,
+      "pct": 5.2
+    },
+    {
+      "slug": "mercury",
+      "name": "Mercury",
+      "freq": 10,
+      "pct": 4.3
+    },
+    {
+      "slug": "iron_monkey",
+      "name": "Iron Monkey",
+      "freq": 7,
+      "pct": 3.0
+    },
+    {
+      "slug": "faker_the_caker_baker",
+      "name": "Faker, the Caker Baker",
+      "freq": 7,
+      "pct": 3.0
+    },
+    {
+      "slug": "dorothy",
+      "name": "Dorothy",
+      "freq": 6,
+      "pct": 2.6
+    },
+    {
+      "slug": "goat_t",
+      "name": "Goat T",
+      "freq": 6,
+      "pct": 2.6
+    },
+    {
+      "slug": "rumpelstiltskin",
+      "name": "Rumpelstiltskin",
+      "freq": 6,
+      "pct": 2.6
+    },
+    {
+      "slug": "galileo_galilei",
+      "name": "Galileo Galilei",
+      "freq": 5,
+      "pct": 2.2
+    },
+    {
+      "slug": "legend_of_loxley",
+      "name": "Legend of Loxley",
+      "freq": 5,
+      "pct": 2.2
+    },
+    {
+      "slug": "nathaniel_drake",
+      "name": "Nathaniel Drake",
+      "freq": 5,
+      "pct": 2.2
+    },
+    {
+      "slug": "trash_panda",
+      "name": "Trash Panda",
+      "freq": 5,
+      "pct": 2.2
+    },
+    {
+      "slug": "yakety_yak_yak",
+      "name": "Yakety Yak Yak",
+      "freq": 5,
+      "pct": 2.2
+    },
+    {
+      "slug": "toucan_samuel",
+      "name": "Toucan Samuel",
+      "freq": 5,
+      "pct": 2.2
+    },
+    {
+      "slug": "elec_drake",
+      "name": "Elec-Drake",
+      "freq": 4,
+      "pct": 1.7
+    },
+    {
+      "slug": "candy_pandy",
+      "name": "Candy Pandy",
+      "freq": 4,
+      "pct": 1.7
+    },
+    {
+      "slug": "con_artist",
+      "name": "Con Artist",
+      "freq": 4,
+      "pct": 1.7
+    },
+    {
+      "slug": "tajima_patron_of_sweets",
+      "name": "Tajima, Patron of Sweets",
+      "freq": 4,
+      "pct": 1.7
+    },
+    {
+      "slug": "itty_aerie",
+      "name": "Itty Aerie",
+      "freq": 4,
+      "pct": 1.7
+    },
+    {
+      "slug": "luna_girl",
+      "name": "Luna Girl",
+      "freq": 4,
+      "pct": 1.7
+    },
+    {
+      "slug": "jay_sparrow",
+      "name": "Jay Sparrow",
+      "freq": 3,
+      "pct": 1.3
+    },
+    {
+      "slug": "gloria_clementine",
+      "name": "Gloria Clementine",
+      "freq": 3,
+      "pct": 1.3
+    },
+    {
+      "slug": "ammit",
+      "name": "Ammit",
+      "freq": 3,
+      "pct": 1.3
+    },
+    {
+      "slug": "professor_whos_who",
+      "name": "Professor Who's Who",
+      "freq": 3,
+      "pct": 1.3
+    },
+    {
+      "slug": "lucky_leprechaun",
+      "name": "Lucky Leprechaun",
+      "freq": 3,
+      "pct": 1.3
+    },
+    {
+      "slug": "vena_cava",
+      "name": "Vena Cava",
+      "freq": 3,
+      "pct": 1.3
+    },
+    {
+      "slug": "lady_of_the_lake",
+      "name": "Lady of the Lake",
+      "freq": 3,
+      "pct": 1.3
+    },
+    {
+      "slug": "sugar_pops",
+      "name": "Sugar Pops",
+      "freq": 3,
+      "pct": 1.3
+    },
+    {
+      "slug": "thing_in_the_ice",
+      "name": "Thing in the Ice",
+      "freq": 3,
+      "pct": 1.3
+    }
+  ],
+  "cluster_map": {
+    "Mirror Mage": "#7a7d8a",
+    "Gummy Wyrm": "#9e6ec8",
+    "Astral Navigator": "#6e9ec8",
+    "Miseria": "#e87d9e",
+    "Mech-a-Man": "#6ec89e",
+    "Lance A Little": "#c8a96e"
+  }
+}
