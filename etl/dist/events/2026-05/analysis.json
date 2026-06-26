@@ -351,14 +351,14 @@
       "color": "#9e6ec8",
       "cards": [
         {
+          "name": "Medea in a Tavern",
+          "freq": 34,
+          "pct": 13.1
+        },
+        {
           "name": "Chaos",
           "freq": 21,
           "pct": 8.1
-        },
-        {
-          "name": "Calypso",
-          "freq": 6,
-          "pct": 2.3
         },
         {
           "name": "Mirror Mage",
@@ -366,49 +366,14 @@
           "pct": 7.3
         },
         {
-          "name": "Nightshade",
-          "freq": 16,
-          "pct": 6.2
-        },
-        {
           "name": "Plunder Penny",
           "freq": 17,
           "pct": 6.5
         },
         {
-          "name": "Elm Minster",
-          "freq": 5,
-          "pct": 1.9
-        },
-        {
-          "name": "Fae Familiar",
-          "freq": 10,
-          "pct": 3.8
-        },
-        {
-          "name": "Morgan Le Fae",
-          "freq": 9,
-          "pct": 3.5
-        },
-        {
-          "name": "The Fates",
-          "freq": 6,
-          "pct": 2.3
-        },
-        {
-          "name": "Prospero",
-          "freq": 4,
-          "pct": 1.5
-        },
-        {
-          "name": "Genie of the Lamp",
-          "freq": 6,
-          "pct": 2.3
-        },
-        {
-          "name": "Ogre Magi",
-          "freq": 3,
-          "pct": 1.2
+          "name": "Nightshade",
+          "freq": 16,
+          "pct": 6.2
         },
         {
           "name": "Wicked Witch",
@@ -416,29 +381,9 @@
           "pct": 4.2
         },
         {
-          "name": "Rudolph the Red",
-          "freq": 6,
-          "pct": 2.3
-        },
-        {
-          "name": "Moppet",
-          "freq": 3,
-          "pct": 1.2
-        },
-        {
-          "name": "Sabrina",
-          "freq": 2,
-          "pct": 0.8
-        },
-        {
-          "name": "Mysterio, the Great and Powerful",
-          "freq": 3,
-          "pct": 1.2
-        },
-        {
-          "name": "Scale Singers",
-          "freq": 2,
-          "pct": 0.8
+          "name": "Fae Familiar",
+          "freq": 10,
+          "pct": 3.8
         },
         {
           "name": "Kagutsuchi",
@@ -451,9 +396,64 @@
           "pct": 3.8
         },
         {
-          "name": "Medea in a Tavern",
-          "freq": 34,
-          "pct": 13.1
+          "name": "Morgan Le Fae",
+          "freq": 9,
+          "pct": 3.5
+        },
+        {
+          "name": "Calypso",
+          "freq": 6,
+          "pct": 2.3
+        },
+        {
+          "name": "The Fates",
+          "freq": 6,
+          "pct": 2.3
+        },
+        {
+          "name": "Genie of the Lamp",
+          "freq": 6,
+          "pct": 2.3
+        },
+        {
+          "name": "Rudolph the Red",
+          "freq": 6,
+          "pct": 2.3
+        },
+        {
+          "name": "Elm Minster",
+          "freq": 5,
+          "pct": 1.9
+        },
+        {
+          "name": "Prospero",
+          "freq": 4,
+          "pct": 1.5
+        },
+        {
+          "name": "Ogre Magi",
+          "freq": 3,
+          "pct": 1.2
+        },
+        {
+          "name": "Moppet",
+          "freq": 3,
+          "pct": 1.2
+        },
+        {
+          "name": "Mysterio, the Great and Powerful",
+          "freq": 3,
+          "pct": 1.2
+        },
+        {
+          "name": "Sabrina",
+          "freq": 2,
+          "pct": 0.8
+        },
+        {
+          "name": "Scale Singers",
+          "freq": 2,
+          "pct": 0.8
         }
       ]
     },
@@ -463,9 +463,24 @@
       "color": "#6e9ec8",
       "cards": [
         {
+          "name": "Blackbeard",
+          "freq": 17,
+          "pct": 6.5
+        },
+        {
           "name": "Wink",
           "freq": 13,
           "pct": 5.0
+        },
+        {
+          "name": "Glory Seeker",
+          "freq": 13,
+          "pct": 5.0
+        },
+        {
+          "name": "Nutty Pirates",
+          "freq": 10,
+          "pct": 3.8
         },
         {
           "name": "Shanty",
@@ -478,24 +493,9 @@
           "pct": 3.5
         },
         {
-          "name": "Blackbeard",
-          "freq": 17,
-          "pct": 6.5
-        },
-        {
-          "name": "Glory Seeker",
-          "freq": 13,
-          "pct": 5.0
-        },
-        {
           "name": "Innkeeper",
           "freq": 9,
           "pct": 3.5
-        },
-        {
-          "name": "Sailor Moonshine",
-          "freq": 3,
-          "pct": 1.2
         },
         {
           "name": "Hercules",
@@ -503,14 +503,24 @@
           "pct": 3.1
         },
         {
-          "name": "Pirate King",
+          "name": "The Rat King",
+          "freq": 6,
+          "pct": 2.3
+        },
+        {
+          "name": "Weird Beard",
+          "freq": 4,
+          "pct": 1.5
+        },
+        {
+          "name": "Sailor Moonshine",
           "freq": 3,
           "pct": 1.2
         },
         {
-          "name": "Sinbad",
-          "freq": 1,
-          "pct": 0.4
+          "name": "Pirate King",
+          "freq": 3,
+          "pct": 1.2
         },
         {
           "name": "Jelly Roger",
@@ -523,19 +533,9 @@
           "pct": 0.8
         },
         {
-          "name": "Nutty Pirates",
-          "freq": 10,
-          "pct": 3.8
-        },
-        {
-          "name": "Weird Beard",
-          "freq": 4,
-          "pct": 1.5
-        },
-        {
-          "name": "The Rat King",
-          "freq": 6,
-          "pct": 2.3
+          "name": "Sinbad",
+          "freq": 1,
+          "pct": 0.4
         }
       ]
     },
@@ -545,9 +545,34 @@
       "color": "#6ec89e",
       "cards": [
         {
+          "name": "Bubbles",
+          "freq": 28,
+          "pct": 10.8
+        },
+        {
           "name": "Snapping Hydra",
           "freq": 27,
           "pct": 10.4
+        },
+        {
+          "name": "Fenrir",
+          "freq": 26,
+          "pct": 10.0
+        },
+        {
+          "name": "Baron Bok",
+          "freq": 25,
+          "pct": 9.6
+        },
+        {
+          "name": "Al-mi'raj",
+          "freq": 24,
+          "pct": 9.2
+        },
+        {
+          "name": "Old Coyote",
+          "freq": 19,
+          "pct": 7.3
         },
         {
           "name": "Toto",
@@ -555,14 +580,29 @@
           "pct": 6.5
         },
         {
-          "name": "Tsarmina, the Tyrant",
-          "freq": 8,
-          "pct": 3.1
+          "name": "Nemean Lion",
+          "freq": 15,
+          "pct": 5.8
         },
         {
           "name": "Pretty Patissier",
           "freq": 13,
           "pct": 5.0
+        },
+        {
+          "name": "Leapfrog",
+          "freq": 11,
+          "pct": 4.2
+        },
+        {
+          "name": "Monstro",
+          "freq": 10,
+          "pct": 3.8
+        },
+        {
+          "name": "Tsarmina, the Tyrant",
+          "freq": 8,
+          "pct": 3.1
         },
         {
           "name": "Moonshadow",
@@ -575,54 +615,14 @@
           "pct": 1.5
         },
         {
-          "name": "Monstro",
-          "freq": 10,
-          "pct": 3.8
-        },
-        {
           "name": "Pied Piper",
           "freq": 4,
           "pct": 1.5
         },
         {
-          "name": "Al-mi'raj",
-          "freq": 24,
-          "pct": 9.2
-        },
-        {
-          "name": "Leapfrog",
-          "freq": 11,
-          "pct": 4.2
-        },
-        {
           "name": "Underdog",
           "freq": 4,
           "pct": 1.5
-        },
-        {
-          "name": "Baron Bok",
-          "freq": 25,
-          "pct": 9.6
-        },
-        {
-          "name": "Bubbles",
-          "freq": 28,
-          "pct": 10.8
-        },
-        {
-          "name": "Fenrir",
-          "freq": 26,
-          "pct": 10.0
-        },
-        {
-          "name": "Old Coyote",
-          "freq": 19,
-          "pct": 7.3
-        },
-        {
-          "name": "Nemean Lion",
-          "freq": 15,
-          "pct": 5.8
         }
       ]
     },
@@ -631,6 +631,11 @@
       "label": "Toys",
       "color": "#5a5d6a",
       "cards": [
+        {
+          "name": "Mortakon",
+          "freq": 84,
+          "pct": 32.3
+        },
         {
           "name": "Barrel of Monkeys",
           "freq": 6,
@@ -647,19 +652,9 @@
           "pct": 1.9
         },
         {
-          "name": "Raggedy Ann",
-          "freq": 4,
-          "pct": 1.5
-        },
-        {
           "name": "Busted Bot",
           "freq": 5,
           "pct": 1.9
-        },
-        {
-          "name": "Brick Monster",
-          "freq": 4,
-          "pct": 1.5
         },
         {
           "name": "Chip on the Ship",
@@ -667,14 +662,19 @@
           "pct": 1.9
         },
         {
+          "name": "Raggedy Ann",
+          "freq": 4,
+          "pct": 1.5
+        },
+        {
+          "name": "Brick Monster",
+          "freq": 4,
+          "pct": 1.5
+        },
+        {
           "name": "Party Pinata",
           "freq": 3,
           "pct": 1.2
-        },
-        {
-          "name": "Mortakon",
-          "freq": 84,
-          "pct": 32.3
         },
         {
           "name": "Whirlidoo",
@@ -689,39 +689,14 @@
       "color": "#7b9cff",
       "cards": [
         {
-          "name": "Anubis",
-          "freq": 19,
-          "pct": 7.3
-        },
-        {
-          "name": "Mischief",
-          "freq": 1,
-          "pct": 0.4
-        },
-        {
-          "name": "Orpheus",
-          "freq": 6,
-          "pct": 2.3
-        },
-        {
-          "name": "Tantalus",
-          "freq": 3,
-          "pct": 1.2
-        },
-        {
-          "name": "Astral Navigator",
-          "freq": 28,
-          "pct": 10.8
+          "name": "Young Hercules",
+          "freq": 81,
+          "pct": 31.2
         },
         {
           "name": "Sigrun, Valkyrie Queen",
           "freq": 73,
           "pct": 28.1
-        },
-        {
-          "name": "Young Hercules",
-          "freq": 81,
-          "pct": 31.2
         },
         {
           "name": "Fortune Teller",
@@ -734,14 +709,39 @@
           "pct": 21.5
         },
         {
+          "name": "Orion, the Hunter",
+          "freq": 53,
+          "pct": 20.4
+        },
+        {
           "name": "The Raven",
           "freq": 34,
           "pct": 13.1
         },
         {
-          "name": "Orion, the Hunter",
-          "freq": 53,
-          "pct": 20.4
+          "name": "Astral Navigator",
+          "freq": 28,
+          "pct": 10.8
+        },
+        {
+          "name": "Anubis",
+          "freq": 19,
+          "pct": 7.3
+        },
+        {
+          "name": "Orpheus",
+          "freq": 6,
+          "pct": 2.3
+        },
+        {
+          "name": "Tantalus",
+          "freq": 3,
+          "pct": 1.2
+        },
+        {
+          "name": "Mischief",
+          "freq": 1,
+          "pct": 0.4
         }
       ]
     },
@@ -751,19 +751,9 @@
       "color": "#d87dce",
       "cards": [
         {
-          "name": "Charlotte",
-          "freq": 1,
-          "pct": 0.4
-        },
-        {
           "name": "Destiny",
           "freq": 95,
           "pct": 36.5
-        },
-        {
-          "name": "Faerie Godfather",
-          "freq": 9,
-          "pct": 3.5
         },
         {
           "name": "Faerie Queen",
@@ -771,14 +761,19 @@
           "pct": 6.9
         },
         {
+          "name": "Faerie Godfather",
+          "freq": 9,
+          "pct": 3.5
+        },
+        {
+          "name": "Toadie",
+          "freq": 8,
+          "pct": 3.1
+        },
+        {
           "name": "Fun Gal",
           "freq": 4,
           "pct": 1.5
-        },
-        {
-          "name": "Prickles",
-          "freq": 2,
-          "pct": 0.8
         },
         {
           "name": "The Blue Faerie",
@@ -786,9 +781,14 @@
           "pct": 1.2
         },
         {
-          "name": "Toadie",
-          "freq": 8,
-          "pct": 3.1
+          "name": "Prickles",
+          "freq": 2,
+          "pct": 0.8
+        },
+        {
+          "name": "Charlotte",
+          "freq": 1,
+          "pct": 0.4
         }
       ]
     },

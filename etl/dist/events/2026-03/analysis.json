@@ -341,14 +341,14 @@
           "pct": 15.0
         },
         {
-          "name": "Calypso",
-          "freq": 23,
-          "pct": 8.4
-        },
-        {
           "name": "Mirror Mage",
           "freq": 34,
           "pct": 12.5
+        },
+        {
+          "name": "Wicked Witch",
+          "freq": 31,
+          "pct": 11.4
         },
         {
           "name": "Nightshade",
@@ -356,14 +356,9 @@
           "pct": 9.5
         },
         {
-          "name": "Plunder Penny",
-          "freq": 22,
-          "pct": 8.1
-        },
-        {
-          "name": "Elm Minster",
-          "freq": 16,
-          "pct": 5.9
+          "name": "Calypso",
+          "freq": 23,
+          "pct": 8.4
         },
         {
           "name": "Fae Familiar",
@@ -376,9 +371,19 @@
           "pct": 8.4
         },
         {
-          "name": "The Fates",
-          "freq": 10,
-          "pct": 3.7
+          "name": "Genie of the Lamp",
+          "freq": 23,
+          "pct": 8.4
+        },
+        {
+          "name": "Plunder Penny",
+          "freq": 22,
+          "pct": 8.1
+        },
+        {
+          "name": "Elm Minster",
+          "freq": 16,
+          "pct": 5.9
         },
         {
           "name": "Prospero",
@@ -386,24 +391,24 @@
           "pct": 5.9
         },
         {
-          "name": "Genie of the Lamp",
-          "freq": 23,
-          "pct": 8.4
-        },
-        {
           "name": "Ogre Magi",
           "freq": 13,
           "pct": 4.8
         },
         {
-          "name": "Wicked Witch",
-          "freq": 31,
-          "pct": 11.4
-        },
-        {
           "name": "Rudolph the Red",
           "freq": 11,
           "pct": 4.0
+        },
+        {
+          "name": "Mysterio, the Great and Powerful",
+          "freq": 11,
+          "pct": 4.0
+        },
+        {
+          "name": "The Fates",
+          "freq": 10,
+          "pct": 3.7
         },
         {
           "name": "Moppet",
@@ -414,11 +419,6 @@
           "name": "Sabrina",
           "freq": 4,
           "pct": 1.5
-        },
-        {
-          "name": "Mysterio, the Great and Powerful",
-          "freq": 11,
-          "pct": 4.0
         }
       ]
     },
@@ -438,12 +438,37 @@
           "pct": 6.6
         },
         {
+          "name": "Innkeeper",
+          "freq": 15,
+          "pct": 5.5
+        },
+        {
           "name": "Pirate Prince",
           "freq": 12,
           "pct": 4.4
         },
         {
+          "name": "Hercules",
+          "freq": 12,
+          "pct": 4.4
+        },
+        {
+          "name": "Sinbad",
+          "freq": 12,
+          "pct": 4.4
+        },
+        {
+          "name": "Weird Beard",
+          "freq": 11,
+          "pct": 4.0
+        },
+        {
           "name": "Blackbeard",
+          "freq": 10,
+          "pct": 3.7
+        },
+        {
+          "name": "Sailor Moonshine",
           "freq": 10,
           "pct": 3.7
         },
@@ -453,19 +478,14 @@
           "pct": 3.3
         },
         {
-          "name": "Innkeeper",
-          "freq": 15,
-          "pct": 5.5
+          "name": "Jelly Roger",
+          "freq": 9,
+          "pct": 3.3
         },
         {
-          "name": "Sailor Moonshine",
-          "freq": 10,
-          "pct": 3.7
-        },
-        {
-          "name": "Hercules",
-          "freq": 12,
-          "pct": 4.4
+          "name": "The Rat King",
+          "freq": 9,
+          "pct": 3.3
         },
         {
           "name": "Pirate King",
@@ -473,29 +493,9 @@
           "pct": 2.9
         },
         {
-          "name": "Sinbad",
-          "freq": 12,
-          "pct": 4.4
-        },
-        {
-          "name": "Jelly Roger",
-          "freq": 9,
-          "pct": 3.3
-        },
-        {
           "name": "Barbosa",
           "freq": 7,
           "pct": 2.6
-        },
-        {
-          "name": "Weird Beard",
-          "freq": 11,
-          "pct": 4.0
-        },
-        {
-          "name": "The Rat King",
-          "freq": 9,
-          "pct": 3.3
         }
       ]
     },
@@ -525,9 +525,9 @@
           "pct": 7.7
         },
         {
-          "name": "Moonshadow",
-          "freq": 4,
-          "pct": 1.5
+          "name": "Monstro",
+          "freq": 14,
+          "pct": 5.1
         },
         {
           "name": "Frog Prince",
@@ -535,19 +535,14 @@
           "pct": 4.4
         },
         {
-          "name": "Monstro",
-          "freq": 14,
-          "pct": 5.1
-        },
-        {
           "name": "Pied Piper",
           "freq": 12,
           "pct": 4.4
         },
         {
-          "name": "The Giving Tree",
-          "freq": 5,
-          "pct": 1.8
+          "name": "Underdog",
+          "freq": 10,
+          "pct": 3.7
         },
         {
           "name": "Leapfrog",
@@ -555,9 +550,14 @@
           "pct": 2.9
         },
         {
-          "name": "Underdog",
-          "freq": 10,
-          "pct": 3.7
+          "name": "The Giving Tree",
+          "freq": 5,
+          "pct": 1.8
+        },
+        {
+          "name": "Moonshadow",
+          "freq": 4,
+          "pct": 1.5
         }
       ]
     },
@@ -567,24 +567,14 @@
       "color": "#5a5d6a",
       "cards": [
         {
+          "name": "Mortakon",
+          "freq": 27,
+          "pct": 9.9
+        },
+        {
           "name": "Barrel of Monkeys",
           "freq": 17,
           "pct": 6.2
-        },
-        {
-          "name": "Nutcracker Prince",
-          "freq": 3,
-          "pct": 1.1
-        },
-        {
-          "name": "Space Ranger Woody",
-          "freq": 8,
-          "pct": 2.9
-        },
-        {
-          "name": "Raggedy Ann",
-          "freq": 9,
-          "pct": 3.3
         },
         {
           "name": "Busted Bot",
@@ -597,9 +587,19 @@
           "pct": 3.7
         },
         {
+          "name": "Raggedy Ann",
+          "freq": 9,
+          "pct": 3.3
+        },
+        {
           "name": "Chip on the Ship",
           "freq": 9,
           "pct": 3.3
+        },
+        {
+          "name": "Space Ranger Woody",
+          "freq": 8,
+          "pct": 2.9
         },
         {
           "name": "Party Pinata",
@@ -607,36 +607,33 @@
           "pct": 2.6
         },
         {
-          "name": "Mortakon",
-          "freq": 27,
-          "pct": 9.9
+          "name": "Nutcracker Prince",
+          "freq": 3,
+          "pct": 1.1
         }
       ]
     },
     {
-      "id": "other",
-      "label": "Other",
-      "color": "#7a7d8a",
+      "id": "boons",
+      "label": "Boons",
+      "color": "#7b9cff",
+      "cards": [
+        {
+          "name": "Anubis",
+          "freq": 10,
+          "pct": 3.7
+        }
+      ]
+    },
+    {
+      "id": "fae",
+      "label": "Fae",
+      "color": "#d87dce",
       "cards": [
         {
           "name": "Faerie Queen",
           "freq": 20,
           "pct": 7.3
-        },
-        {
-          "name": "Daedalus",
-          "freq": 16,
-          "pct": 5.9
-        },
-        {
-          "name": "Friendly Spirit",
-          "freq": 16,
-          "pct": 5.9
-        },
-        {
-          "name": "Don Quixote",
-          "freq": 14,
-          "pct": 5.1
         },
         {
           "name": "Toadie",
@@ -647,21 +644,6 @@
           "name": "Faerie Godfather",
           "freq": 13,
           "pct": 4.8
-        },
-        {
-          "name": "Anubis",
-          "freq": 10,
-          "pct": 3.7
-        },
-        {
-          "name": "Black Hole",
-          "freq": 9,
-          "pct": 3.3
-        },
-        {
-          "name": "Dastardly Spirit",
-          "freq": 9,
-          "pct": 3.3
         },
         {
           "name": "Charlotte",
@@ -679,6 +661,43 @@
           "pct": 2.2
         },
         {
+          "name": "The Blue Faerie",
+          "freq": 2,
+          "pct": 0.7
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "label": "Other",
+      "color": "#7a7d8a",
+      "cards": [
+        {
+          "name": "Daedalus",
+          "freq": 16,
+          "pct": 5.9
+        },
+        {
+          "name": "Friendly Spirit",
+          "freq": 16,
+          "pct": 5.9
+        },
+        {
+          "name": "Don Quixote",
+          "freq": 14,
+          "pct": 5.1
+        },
+        {
+          "name": "Black Hole",
+          "freq": 9,
+          "pct": 3.3
+        },
+        {
+          "name": "Dastardly Spirit",
+          "freq": 9,
+          "pct": 3.3
+        },
+        {
           "name": "Wormtongue",
           "freq": 6,
           "pct": 2.2
@@ -690,11 +709,6 @@
         },
         {
           "name": "Mephisto",
-          "freq": 2,
-          "pct": 0.7
-        },
-        {
-          "name": "The Blue Faerie",
           "freq": 2,
           "pct": 0.7
         },
@@ -2537,7 +2551,7 @@
         },
         {
           "username": "DerrickHenry",
-          "archetype": "Treasures",
+          "archetype": "Fae",
           "deck": [
             "Aladdin",
             "Prickles",
@@ -4295,7 +4309,7 @@
         },
         {
           "username": "Tauretavarea",
-          "archetype": "Mage",
+          "archetype": "Fae",
           "deck": [
             "Prickles",
             "Shanty",
@@ -5012,7 +5026,7 @@
         },
         {
           "username": "Tegid",
-          "archetype": "Pirates",
+          "archetype": "Fae",
           "deck": [
             "Prickles",
             "Shanty",
@@ -8278,7 +8292,7 @@
       "players": [
         {
           "username": "Adamwasmo1",
-          "archetype": "Pirates",
+          "archetype": "Fae",
           "deck": [
             "Shanty",
             "Toadie",
@@ -8463,7 +8477,7 @@
       "players": [
         {
           "username": "Aetheris",
-          "archetype": "Treasures",
+          "archetype": "Fae",
           "deck": [
             "Aladdin",
             "Plunder Penny",
@@ -11344,8 +11358,8 @@
   "top_archetypes": [
     {
       "name": "Treasures",
-      "freq": 151,
-      "pct": 55.3,
+      "freq": 149,
+      "pct": 54.6,
       "color": "#c8a96e"
     },
     {
@@ -11356,14 +11370,14 @@
     },
     {
       "name": "Mage",
-      "freq": 19,
-      "pct": 7.0,
+      "freq": 18,
+      "pct": 6.6,
       "color": "#9e6ec8"
     },
     {
       "name": "Pirates",
-      "freq": 12,
-      "pct": 4.4,
+      "freq": 10,
+      "pct": 3.7,
       "color": "#6e9ec8"
     },
     {
@@ -11371,6 +11385,12 @@
       "freq": 8,
       "pct": 2.9,
       "color": "#5a5d6a"
+    },
+    {
+      "name": "Fae",
+      "freq": 5,
+      "pct": 1.8,
+      "color": "#d87dce"
     },
     {
       "name": "Animals",
@@ -11386,6 +11406,8 @@
     "Pirates": "#6e9ec8",
     "Animals": "#6ec89e",
     "Toys": "#5a5d6a",
+    "Boons": "#7b9cff",
+    "Fae": "#d87dce",
     "Other": "#7a7d8a"
   }
 }

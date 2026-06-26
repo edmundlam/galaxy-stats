@@ -90,11 +90,11 @@ def split_core_situational(cards: list, threshold: int | None) -> dict:
     Returns:
         Dict with either 'cards' key (no split) or 'core'/'situational' keys
     """
-    if threshold is None:
-        return {"cards": cards}
-
-    # Sort cards by frequency (descending)
+    # Sort cards by frequency (descending) - always sort for consistent ordering
     sorted_cards = sorted(cards, key=lambda c: c.get("freq", 0), reverse=True)
+
+    if threshold is None:
+        return {"cards": sorted_cards}
 
     # Take top N cards as core, rest as situational
     core = sorted_cards[:threshold]
@@ -152,6 +152,9 @@ def assign_cards_to_archetypes(card_lookup: dict, archetypes_config: dict, slug_
                 del card_data["slug"]
             cards.append(card_data)
             assigned_slugs.add(slug)
+
+        # Sort cards by frequency (descending) for consistent ordering in both paths
+        cards.sort(key=lambda c: -c.get("freq", 0))
 
         # Split into core/situational if threshold specified
         if core_threshold is not None:
