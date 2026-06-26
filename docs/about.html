@@ -91,14 +91,14 @@
     <div class="card">
       <div class="card-title">Data Collection</div>
       <div class="card-content">
-        We parse tournament results from galaxy.fun, extracting winning decks, captains, and card compositions. No personal data is collected — only aggregate deck statistics.
+        We parse public tournament results from galaxy.fun, extracting usernames, captains, and winning deck compositions. Only aggregate statistics are analyzed — individual player data is used solely for decklist and captain analysis.
       </div>
     </div>
 
     <div class="card">
-      <div class="card-title">Card Clustering</div>
+      <div class="card-title">Card Archetypes</div>
       <div class="card-content">
-        Cards are grouped by how frequently they appear together in winning decks. We use <strong>hierarchical clustering</strong> to find natural groupings — if Gold and Gems appear together often, they form a "Treasure" cluster. Each cluster represents a playstyle archetype (Treasures, Candy, Mage, Pirates, Animals, etc.).
+        Archetypes are manually curated based on co-occurrence patterns — cards that frequently appear together in winning decks are grouped into strategic archetypes (Treasures, Candy, Mage, Pirates, Animals, Toys, Boons, Fae). While <strong>hierarchical clustering</strong> helps identify natural groupings, the final classifications are human-defined to reflect meaningful playstyle patterns.
       </div>
     </div>
 
@@ -135,9 +135,6 @@
       <div class="tech-item"><strong>SciPy</strong> — Hierarchical clustering</div>
       <div class="tech-item"><strong>Python</strong> — ETL pipeline</div>
       <div class="tech-item"><strong>GitHub Pages</strong> — Static hosting</div>
-    </div>
-    <div class="card-content" style="margin-top:16px;">
-      Reports are standalone HTML files with embedded CSS, JavaScript, and data. No external dependencies, no tracking, works offline.
     </div>
   </div>
 
