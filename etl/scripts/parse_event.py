@@ -61,16 +61,6 @@ def parse_event(html_file_path: str, event_id: str) -> tuple[dict, dict, dict, i
     if time_tag and time_tag.get("datetime"):
         event_date = time_tag["datetime"].split("T")[0]
 
-    # Extract total champions from prose paragraph
-    total_champions = 0
-    for p in soup.find_all("p"):
-        text = p.get_text()
-        if "players were crowned" in text:
-            match = re.search(r"(\d+)\s+players were crowned", text)
-            if match:
-                total_champions = int(match.group(1))
-            break
-
     # Extract player data
     players = []
     cards_map: dict[str, str] = {}
@@ -119,7 +109,7 @@ def parse_event(html_file_path: str, event_id: str) -> tuple[dict, dict, dict, i
             "id": event_id,
             "name": event_name,
             "date": event_date,
-            "total_champions": total_champions,
+            "total_champions": len(players),
         },
         "players": players,
     }
