@@ -347,6 +347,11 @@
           "name": "Ghoulade Man",
           "freq": 1,
           "pct": 0.5
+        },
+        {
+          "name": "Sugar Rush",
+          "freq": 1,
+          "pct": 0.5
         }
       ]
     },
@@ -849,11 +854,6 @@
         },
         {
           "name": "Mephisto",
-          "freq": 1,
-          "pct": 0.5
-        },
-        {
-          "name": "Sugar Rush",
           "freq": 1,
           "pct": 0.5
         },
