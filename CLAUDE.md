@@ -9,6 +9,8 @@ Galaxy Stats generates standalone HTML reports for "Once Upon a Galaxy" tourname
 - **Static HTML**: Self-contained reports with embedded CSS/JS (no build step required)
 - **GitHub Pages**: Serves the `docs/` folder directly
 
+**Deployed site:** https://edmundlam.github.io/galaxy-stats
+
 ## Development Commands
 
 **⚠️ CRITICAL:** Always run Makefile commands from the **repository root**, never from the `etl/` directory. The `etl/` folder has its own Makefile that will redirect you if you forget.
