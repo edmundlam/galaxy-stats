@@ -190,6 +190,20 @@ Project-specific skills are in `.claude/skills/`:
 
 See `.claude/reference/troubleshooting.md` for common issues and fixes.
 
+## Agent skills
+
+### Issue tracker
+
+Issues and specs live as GitHub issues (using `gh` CLI). See `.claude/reference/issue-tracker.md`.
+
+### Triage labels
+
+Uses the five canonical triage roles: needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix. See `.claude/reference/triage-labels.md`.
+
+### Domain docs
+
+Single-context repo with `CONTEXT.md` and `docs/adr/` at the root. See `.claude/reference/domain.md`.
+
 
 ## Important Reminders:
 
