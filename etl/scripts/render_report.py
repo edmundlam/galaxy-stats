@@ -67,7 +67,10 @@ def get_html_template() -> str:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Once Upon A Galaxy — {EVENT_NAME} Meta Analysis</title>
+<title>OUAG {EVENT_TYPE} Meta Report {EVENT_ID} — {TOP_CARD_NAME} & {TOP_CAPTAIN} | Galaxy Stats</title>
+<meta name="description" content="OUAG {EVENT_TYPE} {EVENT_ID} results: {TOTAL_PLAYERS} players, top card {TOP_CARD_NAME} at {TOP_CARD_PCT}, top captain {TOP_CAPTAIN}. Tournament meta analysis with card popularity, captain synergies, and deck archetypes.">
+<link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/reports/{EVENT_ID}/">
+<meta name="robots" content="index, follow">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/galaxy-report.css?v={ASSET_VERSION}">
 <script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="a1be0c78-139e-413a-bb3c-e28b3b9dbe5c"></script>
@@ -153,6 +156,36 @@ setTimeout(animateBars, 80);
 </html>"""
 
 
+def extract_top_captain(captains: list) -> str:
+    """Extract the top captain name by player count.
+
+    Args:
+        captains: List of captain dictionaries
+
+    Returns:
+        Top captain name or "N/A"
+    """
+    if not captains:
+        return "N/A"
+    # Sort by player count (n) descending and get the first one
+    top_captain = max(captains, key=lambda c: c.get("n", 0))
+    return top_captain.get("name", "N/A")
+
+
+def extract_event_type(event_name: str) -> str:
+    """Extract event type from event name.
+
+    Args:
+        event_name: Event name (e.g., "March Monthly", "April 2026 Gauntlet")
+
+    Returns:
+        Event type (e.g., "Monthly", "Gauntlet")
+    """
+    # The event type is typically the last word
+    parts = event_name.split()
+    return parts[-1] if parts else "Tournament"
+
+
 def calculate_stats(analysis: dict) -> dict:
     """Calculate additional stats for the header.
 
@@ -182,12 +215,23 @@ def calculate_stats(analysis: dict) -> dict:
     event = analysis.get("event", {})
     total_champions = event.get("total_champions", total_players)
 
+    # SEO data
+    top_card_name = top_cards[0]["name"] if top_cards else "N/A"
+    top_card_pct = f"{top_cards[0]['pct']:.1f}%" if top_cards else "0%"
+    top_captain = extract_top_captain(captains)
+    event_type = extract_event_type(event.get("name", ""))
+
     return {
         "total_players": total_players,
         "total_captains": len(captains),
         "total_champions": total_champions,
         "unique_cards": unique_cards,
         "most_played_card": most_played_card,
+        # SEO data
+        "top_card_name": top_card_name,
+        "top_card_pct": top_card_pct,
+        "top_captain": top_captain,
+        "event_type": event_type,
     }
 
 
@@ -239,6 +283,7 @@ def render_report(event_id: str, events_dir: Path) -> str:
 
     # Build template placeholders
     template_vars = {
+        "EVENT_ID": event_id,
         "EVENT_NAME": event_name,
         "MONTH_YEAR": month_year,
         "EVENT_DATE": event_date,
@@ -247,6 +292,12 @@ def render_report(event_id: str, events_dir: Path) -> str:
         "TOTAL_CAPTAINS": stats["total_captains"],
         "TOTAL_UNIQUE_CARDS": stats["unique_cards"],
         "MOST_PLAYED_CARD": stats["most_played_card"],
+        # SEO variables
+        "TOP_CARD_NAME": stats["top_card_name"],
+        "TOP_CARD_PCT": stats["top_card_pct"],
+        "TOP_CAPTAIN": stats["top_captain"],
+        "EVENT_TYPE": stats["event_type"],
+        # Data
         "DATA_JSON": json.dumps(analysis, separators=(",", ":")),
         "CARDS_JSON": json.dumps(cards, separators=(",", ":")),
         "ASSET_VERSION": ASSET_VERSION,
