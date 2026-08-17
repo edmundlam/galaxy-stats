@@ -67,6 +67,15 @@ uv add <package>           # Runtime dependency
 uv add <package> --dev     # Development dependency
 ```
 
+## SEO
+
+Reports include automated SEO features:
+- **`robots.txt`**: Allows all crawlers + references sitemap
+- **`sitemap.xml`**: Auto-generated via `make generate-sitemap`
+- **Meta tags**: Unique titles, descriptions, canonical links in each report
+
+The sitemap is automatically updated during `make report` and `make report-auto`.
+
 ## Architecture
 
 ### Directory Structure
@@ -145,57 +154,7 @@ Each report is a single, self-contained HTML file with:
 
 ### ETL Scripts Details
 
-**parse_event.py (Stage 1)**
-```bash
-# From repo root
-make etl-parse HTML_FILE=context/2026-03.html EVENT_ID=2026-03
-
-# Or from etl/ directory
-uv run scripts/parse_event.py context/2026-03.html 2026-03
-```
-Extracts: Event metadata, players, captains, decks, card references
-
-**analyze_event.py (Stage 2)**
-```bash
-# From repo root
-make etl-analyze EVENT_ID=2026-03
-
-# Or from etl/ directory
-uv run scripts/analyze_event.py 2026-03
-```
-Generates: Hierarchical clusters (6 by default), lift analysis, best12 per captain
-Output: `etl/dist/events/<event-id>/auto-analysis.json`
-Flags: `--clusters N` to adjust cluster count (default: 6)
-
-**finalize_analysis.py (Stage 3)**
-```bash
-# From repo root
-make etl-finalize-with-overrides EVENT_ID=2026-03
-
-# Or without overrides
-make etl-finalize EVENT_ID=2026-03
-
-# Or from etl/ directory
-uv run scripts/finalize_analysis.py 2026-03 --override-config etl/config/archetypes.json
-```
-Applies archetype overrides from `etl/config/archetypes.json` to player decklists
-Output: `etl/dist/events/<event-id>/analysis.json`
-
-**render_report.py (Stage 4)**
-```bash
-# From repo root
-make etl-render EVENT_ID=2026-03
-
-# Or from etl/ directory
-uv run scripts/render_report.py 2026-03
-```
-Generates: Standalone HTML report with embedded CSS/JS/data
-
-**Important:** Archetype overrides are applied in Stage 3 (Finalize). To adjust cluster assignments:
-1. Edit `etl/config/archetypes.json` to add/modify card → archetype mappings
-2. Re-run finalize: `make etl-finalize-with-overrides EVENT_ID=<event-id>`
-3. Re-run render: `make etl-render EVENT_ID=<event-id>`
-4. Re-copy: `make copy-report EVENT_ID=<event-id>`
+See `.claude/reference/etl-scripts.md` for detailed script usage, flags, and adjusting archetype assignments.
 
 ## Adding New Reports
 
@@ -222,32 +181,14 @@ Reports use a consistent dark theme:
 
 Modifications to report styling should be made in `render_report.py`'s HTML template.
 
+## Skills
+
+Project-specific skills are in `.claude/skills/`:
+- `reddit-post` — Generate tournament meta posts for Reddit from analysis JSON
+
 ## Troubleshooting
 
-**Issue:** Report renders with no CSS/styling
-- **Cause:** Template has double braces `{{` instead of single `{`
-- **Fix:** Check `render_report.py` template uses single braces for CSS/JS
-- **Verification:** View page source and check `<style>` section has valid CSS
-
-**Issue:** "File not found" error when parsing
-- **Cause:** Incorrect HTML path (Makefile runs from `etl/` directory)
-- **Fix:** Use `HTML_FILE=context/2026-03.html` NOT `HTML_FILE=etl/context/2026-03.html`
-
-**Issue:** Placeholders like `{EVENT_NAME}` not replaced in output
-- **Cause:** The `.replace()` line in `render_report.py` has wrong brace escaping
-- **Fix:** Should be `f"{{{key}}}"` (triple braces) NOT `f"{{key}}"` (double)
-
-**Issue:** Cluster names don't make sense
-- **Cause:** Auto-generated labels are based on most frequent card in each cluster
-- **Fix:** Manually edit cluster labels in `etl/dist/events/<event-id>/analysis.json` and re-render
-
-**Issue:** Wrong event data showing in report
-- **Cause:** Analysis JSON from previous run
-- **Fix:** Delete `etl/dist/events/<event-id>/analysis.json` and re-run `make etl-analyze`
-
-**Issue:** Archetype overrides not being applied to player decks
-- **Cause:** Using `make report-auto` or skipping the finalize step
-- **Fix:** Use `make etl-finalize-with-overrides EVENT_ID=<event-id>` to apply config
+See `.claude/reference/troubleshooting.md` for common issues and fixes.
 
 
 ## Important Reminders:
