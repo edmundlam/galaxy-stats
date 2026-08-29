@@ -1,4 +1,4 @@
-.PHONY: help install report report-auto parse-event analyze-event render-report copy-report generate-sitemap lint format clean etl-finalize etl-finalize-with-overrides
+.PHONY: help install report report-auto parse-event analyze-event render-report copy-report generate-sitemap lint format clean etl-finalize etl-finalize-with-overrides captains etl-render-captains
 
 # === Configuration ===
 ETL_DIST = etl/dist/events
@@ -52,6 +52,12 @@ generate-sitemap:		## Generate sitemap.xml for SEO
 report: etl-parse etl-analyze etl-finalize-with-overrides etl-render copy-report generate-sitemap		## Full workflow with archetype overrides: parse → analyze → finalize → render → copy → sitemap (HTML_FILE and EVENT_ID required)
 
 report-auto: etl-parse etl-analyze etl-finalize etl-render copy-report generate-sitemap		## Full workflow without overrides: parse → analyze → finalize → render → copy → sitemap (HTML_FILE and EVENT_ID required)
+
+# === Captain Pages ===
+etl-render-captains:		## Render captain pages from all events
+	cd etl && uv run scripts/render_captains.py
+
+captains: etl-render-captains generate-sitemap		## Generate all captain pages + sitemap (standalone; not part of report)
 
 # === Convenience Commands (aliases) ===
 install: etl-install		## Install dependencies (alias)
