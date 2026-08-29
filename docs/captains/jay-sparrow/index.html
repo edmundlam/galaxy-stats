@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jay Sparrow — Captain Stats | Galaxy Stats</title>
+<meta name="description" content="Jay Sparrow captain statistics across Once Upon a Galaxy monthly tournaments: 28 winning decks across 7 months, with best 12 cards and full decklists.">
+<link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/jay-sparrow/">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=1">
+<style>
+  main { max-width: 1100px; }
+  .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
+  .data-table th { text-align:left; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+                   color:var(--muted); padding:8px 10px; border-bottom:2px solid var(--border);
+                   cursor:pointer; user-select:none; white-space:nowrap; }
+  .data-table th:hover { color:var(--text); }
+  .data-table th.no-sort { cursor:default; }
+  .data-table th.no-sort:hover { color:var(--muted); }
+  .data-table td { padding:7px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .data-table tbody tr:hover { background:var(--surface); }
+  .data-table td.num, .data-table th.num { text-align:right; }
+  .month-chip { display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace;
+                font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted);
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:5px 10px; cursor:pointer; transition:all 0.15s; }
+  .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
+                                   background:rgba(200,169,110,0.08); }
+  .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  details.raw-json { margin-top:40px; border:1px solid var(--border); border-radius:4px;
+                     background:var(--surface); }
+  details.raw-json summary { cursor:pointer; padding:12px 16px; font-family:'IBM Plex Mono',monospace;
+                             font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+  details.raw-json summary:hover { color:var(--text); }
+  details.raw-json pre { padding:0 16px 16px; font-size:10px; line-height:1.7; color:var(--muted);
+                         overflow-x:auto; }
+  .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
+                padding:12px 16px; border-left:2px solid var(--border); }
+</style>
+</head>
+<body>
+<header>
+  <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+  <h1>Jay Sparrow</h1>
+  <div class="subtitle">Captain stats · <a href="../" style="color:var(--accent)">all captains</a></div>
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-value">28</div><div class="stat-label">Winning decks</div></div>
+    <div class="stat-item"><div class="stat-value">7</div><div class="stat-label">Months</div></div>
+  </div>
+</header>
+
+<main>
+  <div class="section active">
+    <div class="section-title">Best 12</div>
+    <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
+      below. Check or uncheck months to see how the picks shift.</div>
+    <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-02">2026-02</label><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-04">2026-04</label><label class="month-chip"><input type="checkbox" checked data-month="2026-05">2026-05</label><label class="month-chip"><input type="checkbox" checked data-month="2026-06">2026-06</label><label class="month-chip"><input type="checkbox" checked data-month="2026-07">2026-07</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
+    <table class="data-table" id="best12-table">
+      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="section-title" style="margin-top:48px">Decklists</div>
+    <div class="section-desc">Every winning deck across all months.</div>
+    <div class="captain-filter">
+      <input id="deck-filter" class="filter-input" type="text" placeholder="Filter by player, archetype, month, or card…">
+    </div>
+    <table class="data-table" id="deck-table">
+      <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
+        <th data-sort="archetype">Archetype</th><th class="no-sort">Deck</th></tr></thead>
+      <tbody>
+        <tr><td data-v="2026-02">2026-02</td><td>AOA</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Shanty</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Calypso</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-02">2026-02</td><td>Bleech</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Shanty</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Pisces</span><span class="deck-pill">Wink</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-02">2026-02</td><td>May</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Shanty</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Wink</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-02">2026-02</td><td>mbpro</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Shanty</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Calypso</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Wink</span><span class="deck-pill">Sir Francis Drake</span></div></td></tr>
+        <tr><td data-v="2026-02">2026-02</td><td>Napenator</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Viscount Chocolat</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">Candy Claws</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Licorice</span><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Barbosa</span></div></td></tr>
+        <tr><td data-v="2026-02">2026-02</td><td>PressReset</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wink</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Flopsy</span></div></td></tr>
+        <tr><td data-v="2026-02">2026-02</td><td>Revlyn</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Shanty</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Calypso</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Pirate Prince</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Barbosa</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>cole  palmer</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Shanty</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Pirate Prince</span><span class="deck-pill">The Rat King</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>jojojajo1</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Shanty</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">Licorice</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>rubben</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Shanty</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Wink</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Mr. Fox</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Santtu2x</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Shanty</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">The Rat King</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Seireitei</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Shanty</span><span class="deck-pill">Tsarmina, the Tyrant</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Wink</span><span class="deck-pill">Rollo</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">The Butcher</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>SlipperyCoast58326</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Tsarmina, the Tyrant</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Anubis</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Wink</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">The Butcher</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>DanDestructor</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Shanty</span><span class="deck-pill">Morgan Le Fae</span><span class="deck-pill">Tsarmina, the Tyrant</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Smug</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">The Rat King</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>EatYoVeggies2</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Shanty</span><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Tsarmina, the Tyrant</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Wink</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Maris</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Shanty</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Calypso</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Wink</span><span class="deck-pill">Sir Francis Drake</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Silu</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Shanty</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Calypso</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Wink</span><span class="deck-pill">Sir Francis Drake</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>SpaceshipDriver</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Tsarmina, the Tyrant</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Pirate King</span><span class="deck-pill">Weird Beard</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">Candy Claws</span><span class="deck-pill">Licorice</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>tima</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Calypso</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Pisces</span><span class="deck-pill">Wink</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">The Rat King</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Mr. Fox</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>laziejim</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Shanty</span><span class="deck-pill">Tsarmina, the Tyrant</span><span class="deck-pill">Calypso</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">The Rat King</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>Nanonox</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Shanty</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Tsarmina, the Tyrant</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>Sn0_Man</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Shanty</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Wink</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Pirate Prince</span><span class="deck-pill">The Rat King</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>adargod14</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Shanty</span><span class="deck-pill">Wink</span><span class="deck-pill">Calypso</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>doonboggle</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Toto</span><span class="deck-pill">Shanty</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Wink</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Apophis</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>MinnWild</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Tsarmina, the Tyrant</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Pirate Prince</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>GoodDigestion</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Destiny</span><span class="deck-pill">Shanty</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Wink</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Eros</span><span class="deck-pill">Apophis</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Promil</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Shanty</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Wink</span><span class="deck-pill">Destiny</span><span class="deck-pill">Jelly Roger</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Eros</span><span class="deck-pill">Apophis</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Sayaa</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Sailor Moonshine</span><span class="deck-pill">Shanty</span><span class="deck-pill">Wink</span><span class="deck-pill">Calypso</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">The Burninator</span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <details class="raw-json"><summary>Raw JSON</summary><pre>{
+  &quot;slug&quot;: &quot;jay-sparrow&quot;,
+  &quot;name&quot;: &quot;Jay Sparrow&quot;,
+  &quot;months&quot;: [
+    {
+      &quot;id&quot;: &quot;2026-02&quot;,
+      &quot;date&quot;: &quot;2026-02-20&quot;,
+      &quot;event&quot;: &quot;February Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;AOA&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Plunder Penny&quot;,
+            &quot;Shanty&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Calypso&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Bleech&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Shanty&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Pisces&quot;,
+            &quot;Wink&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;The Huntsman&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;May&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Shanty&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Wink&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Friendly Spirit&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;mbpro&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Plunder Penny&quot;,
+            &quot;Shanty&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Calypso&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Wink&quot;,
+            &quot;Sir Francis Drake&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Napenator&quot;,
+          &quot;archetype&quot;: &quot;Candy&quot;,
+          &quot;deck&quot;: [
+            &quot;Viscount Chocolat&quot;,
+            &quot;Gummy Wyrm&quot;,
+            &quot;Twilight Sprinkles&quot;,
+            &quot;The Candy Cane Crook&quot;,
+            &quot;Candy Claws&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Licorice&quot;,
+            &quot;Friendly Spirit&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Barbosa&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;PressReset&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Plunder Penny&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Wicked Witch&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wink&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Snapping Hydra&quot;,
+            &quot;Flopsy&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Revlyn&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Plunder Penny&quot;,
+            &quot;Shanty&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Calypso&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Pirate Prince&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Barbosa&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-03&quot;,
+      &quot;date&quot;: &quot;2026-03-20&quot;,
+      &quot;event&quot;: &quot;March Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;cole  palmer&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Plunder Penny&quot;,
+            &quot;Shanty&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Pirate Prince&quot;,
+            &quot;The Rat King&quot;,
+            &quot;The Huntsman&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;jojojajo1&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Shanty&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Twilight Sprinkles&quot;,
+            &quot;The Candy Cane Crook&quot;,
+            &quot;Licorice&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;The Huntsman&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;rubben&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Plunder Penny&quot;,
+            &quot;Shanty&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Wink&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Mr. Fox&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Santtu2x&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Shanty&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;The Rat King&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;The Huntsman&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Seireitei&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Shanty&quot;,
+            &quot;Tsarmina, the Tyrant&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Wink&quot;,
+            &quot;Rollo&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;The Butcher&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;SlipperyCoast58326&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Jelly Roger&quot;,
+            &quot;Tsarmina, the Tyrant&quot;,
+            &quot;Wicked Witch&quot;,
+            &quot;Anubis&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Wink&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;The Butcher&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-04&quot;,
+      &quot;date&quot;: &quot;2026-04-17&quot;,
+      &quot;event&quot;: &quot;April Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;DanDestructor&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Shanty&quot;,
+            &quot;Morgan Le Fae&quot;,
+            &quot;Tsarmina, the Tyrant&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Smug&quot;,
+            &quot;Snapping Hydra&quot;,
+            &quot;The Rat King&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;EatYoVeggies2&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Shanty&quot;,
+            &quot;Nutcracker Prince&quot;,
+            &quot;Tsarmina, the Tyrant&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Wink&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Maris&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Plunder Penny&quot;,
+            &quot;Shanty&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Calypso&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Wink&quot;,
+            &quot;Sir Francis Drake&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Silu&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Plunder Penny&quot;,
+            &quot;Shanty&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Calypso&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Wink&quot;,
+            &quot;Sir Francis Drake&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;SpaceshipDriver&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Tsarmina, the Tyrant&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Pirate King&quot;,
+            &quot;Weird Beard&quot;,
+            &quot;Twilight Sprinkles&quot;,
+            &quot;The Candy Cane Crook&quot;,
+            &quot;Candy Claws&quot;,
+            &quot;Licorice&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;The Huntsman&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;tima&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Plunder Penny&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Calypso&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;Pisces&quot;,
+            &quot;Wink&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;The Rat King&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Mr. Fox&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-05&quot;,
+      &quot;date&quot;: &quot;2026-05-22&quot;,
+      &quot;event&quot;: &quot;May Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;laziejim&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Plunder Penny&quot;,
+            &quot;Shanty&quot;,
+            &quot;Tsarmina, the Tyrant&quot;,
+            &quot;Calypso&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;The Rat King&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Nanonox&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Shanty&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Tsarmina, the Tyrant&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Friendly Spirit&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Sn0_Man&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Plunder Penny&quot;,
+            &quot;Shanty&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;Wink&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Pirate Prince&quot;,
+            &quot;The Rat King&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;The Huntsman&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-06&quot;,
+      &quot;date&quot;: &quot;2026-06-19&quot;,
+      &quot;event&quot;: &quot;June Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;adargod14&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Plunder Penny&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Shanty&quot;,
+            &quot;Wink&quot;,
+            &quot;Calypso&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;doonboggle&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Plunder Penny&quot;,
+            &quot;Toto&quot;,
+            &quot;Shanty&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Wink&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Snapping Hydra&quot;,
+            &quot;Apophis&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;MinnWild&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Plunder Penny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Tsarmina, the Tyrant&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;Pirate Prince&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-07&quot;,
+      &quot;date&quot;: &quot;2026-07-17&quot;,
+      &quot;event&quot;: &quot;July Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;GoodDigestion&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Glory Seeker&quot;,
+            &quot;Destiny&quot;,
+            &quot;Shanty&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Wink&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Eros&quot;,
+            &quot;Apophis&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-08&quot;,
+      &quot;date&quot;: &quot;2026-08-21&quot;,
+      &quot;event&quot;: &quot;August Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;Promil&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Glory Seeker&quot;,
+            &quot;Shanty&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Wink&quot;,
+            &quot;Destiny&quot;,
+            &quot;Jelly Roger&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Eros&quot;,
+            &quot;Apophis&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Sayaa&quot;,
+          &quot;archetype&quot;: &quot;Pirates&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Plunder Penny&quot;,
+            &quot;Sailor Moonshine&quot;,
+            &quot;Shanty&quot;,
+            &quot;Wink&quot;,
+            &quot;Calypso&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Innkeeper&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Blackbeard&quot;,
+            &quot;Hercules&quot;,
+            &quot;The Burninator&quot;
+          ]
+        }
+      ]
+    }
+  ]
+}</pre></details>
+</main>
+<script type="application/json" id="captain-data">{"slug": "jay-sparrow", "name": "Jay Sparrow", "months": [{"id": "2026-02", "date": "2026-02-20", "event": "February Monthly", "players": [{"username": "AOA", "archetype": "Pirates", "deck": ["Aladdin", "Plunder Penny", "Shanty", "Jelly Roger", "Calypso", "Innkeeper", "Blackbeard", "Hercules", "The Burninator", "Sailor Moonshine", "Sir Francis Drake", "Wormscale Tinkerer"]}, {"username": "Bleech", "archetype": "Pirates", "deck": ["Shanty", "Jelly Roger", "Innkeeper", "Blackbeard", "Hercules", "Glory Seeker", "Pisces", "Wink", "Sir Francis Drake", "Wormscale Tinkerer", "Mr. Fox", "The Huntsman"]}, {"username": "May", "archetype": "Treasures", "deck": ["Shanty", "Blackbeard", "Hercules", "Ace of Hearts", "Glory Seeker", "Wink", "Sir Francis Drake", "Wormscale Tinkerer", "Friendly Spirit", "Mr. Fox", "Miseria", "The Huntsman"]}, {"username": "mbpro", "archetype": "Pirates", "deck": ["Aladdin", "Plunder Penny", "Shanty", "Jelly Roger", "Calypso", "Innkeeper", "Blackbeard", "Hercules", "The Burninator", "Sailor Moonshine", "Wink", "Sir Francis Drake"]}, {"username": "Napenator", "archetype": "Candy", "deck": ["Viscount Chocolat", "Gummy Wyrm", "Twilight Sprinkles", "The Candy Cane Crook", "Candy Claws", "Netherbinder", "Sunflare Glider", "Licorice", "Friendly Spirit", "Mr. Fox", "The Huntsman", "Barbosa"]}, {"username": "PressReset", "archetype": "Treasures", "deck": ["Aladdin", "Plunder Penny", "Innkeeper", "Wicked Witch", "Blackbeard", "Hercules", "The Burninator", "Wink", "Sir Francis Drake", "Smug", "Snapping Hydra", "Flopsy"]}, {"username": "Revlyn", "archetype": "Treasures", "deck": ["Aladdin", "Plunder Penny", "Shanty", "Mech-a-Man", "Calypso", "Innkeeper", "Blackbeard", "Sir Francis Drake", "Pirate Prince", "Mr. Fox", "The Huntsman", "Barbosa"]}]}, {"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "cole  palmer", "archetype": "Pirates", "deck": ["Aladdin", "Plunder Penny", "Shanty", "Mech-a-Man", "Jelly Roger", "Innkeeper", "Blackbeard", "Sailor Moonshine", "Sir Francis Drake", "Pirate Prince", "The Rat King", "The Huntsman"]}, {"username": "jojojajo1", "archetype": "Pirates", "deck": ["Shanty", "Jelly Roger", "Innkeeper", "Blackbeard", "Hercules", "Sailor Moonshine", "Sir Francis Drake", "Twilight Sprinkles", "The Candy Cane Crook", "Licorice", "Mr. Fox", "The Huntsman"]}, {"username": "rubben", "archetype": "Pirates", "deck": ["Plunder Penny", "Shanty", "Jelly Roger", "Innkeeper", "Blackbeard", "Hercules", "The Burninator", "Sailor Moonshine", "Wink", "Sir Francis Drake", "Wormscale Tinkerer", "Mr. Fox"]}, {"username": "Santtu2x", "archetype": "Pirates", "deck": ["Shanty", "Mech-a-Man", "Jelly Roger", "Innkeeper", "Blackbeard", "Hercules", "The Burninator", "Sailor Moonshine", "Sir Francis Drake", "The Rat King", "Mr. Fox", "The Huntsman"]}, {"username": "Seireitei", "archetype": "Treasures", "deck": ["Shanty", "Tsarmina, the Tyrant", "Don Quixote", "Blackbeard", "Hercules", "Ace of Hearts", "Wink", "Rollo", "Mr. Fox", "Miseria", "The Huntsman", "The Butcher"]}, {"username": "SlipperyCoast58326", "archetype": "Treasures", "deck": ["Jelly Roger", "Tsarmina, the Tyrant", "Wicked Witch", "Anubis", "Blackbeard", "Hercules", "Ace of Hearts", "Wink", "Wormscale Tinkerer", "Miseria", "The Huntsman", "The Butcher"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "DanDestructor", "archetype": "Pirates", "deck": ["Aladdin", "Shanty", "Morgan Le Fae", "Tsarmina, the Tyrant", "Innkeeper", "Blackbeard", "Hercules", "Sailor Moonshine", "Smug", "Snapping Hydra", "The Rat King", "Wormscale Tinkerer"]}, {"username": "EatYoVeggies2", "archetype": "Pirates", "deck": ["Aladdin", "Shanty", "Nutcracker Prince", "Tsarmina, the Tyrant", "Innkeeper", "Blackbeard", "Hercules", "The Burninator", "Sailor Moonshine", "Wink", "Sir Francis Drake", "Wormscale Tinkerer"]}, {"username": "Maris", "archetype": "Pirates", "deck": ["Aladdin", "Plunder Penny", "Shanty", "Jelly Roger", "Calypso", "Innkeeper", "Blackbeard", "Hercules", "The Burninator", "Sailor Moonshine", "Wink", "Sir Francis Drake"]}, {"username": "Silu", "archetype": "Pirates", "deck": ["Aladdin", "Plunder Penny", "Shanty", "Jelly Roger", "Calypso", "Innkeeper", "Blackbeard", "Hercules", "The Burninator", "Sailor Moonshine", "Wink", "Sir Francis Drake"]}, {"username": "SpaceshipDriver", "archetype": "Pirates", "deck": ["Tsarmina, the Tyrant", "Blackbeard", "Hercules", "Sir Francis Drake", "Pirate King", "Weird Beard", "Twilight Sprinkles", "The Candy Cane Crook", "Candy Claws", "Licorice", "Mr. Fox", "The Huntsman"]}, {"username": "tima", "archetype": "Treasures", "deck": ["Plunder Penny", "Mech-a-Man", "Calypso", "Innkeeper", "Blackbeard", "Hercules", "Pisces", "Wink", "Sir Francis Drake", "The Rat King", "Wormscale Tinkerer", "Mr. Fox"]}]}, {"id": "2026-05", "date": "2026-05-22", "event": "May Monthly", "players": [{"username": "laziejim", "archetype": "Pirates", "deck": ["Aladdin", "Plunder Penny", "Shanty", "Tsarmina, the Tyrant", "Calypso", "Don Quixote", "Innkeeper", "Blackbeard", "Hercules", "Sailor Moonshine", "Sir Francis Drake", "The Rat King"]}, {"username": "Nanonox", "archetype": "Pirates", "deck": ["Shanty", "Jelly Roger", "Tsarmina, the Tyrant", "Blackbeard", "Hercules", "Ace of Hearts", "Glory Seeker", "Sir Francis Drake", "Friendly Spirit", "Mr. Fox", "Miseria", "The Huntsman"]}, {"username": "Sn0_Man", "archetype": "Pirates", "deck": ["Plunder Penny", "Shanty", "Jelly Roger", "Innkeeper", "Blackbeard", "Hercules", "Wink", "Sir Francis Drake", "Pirate Prince", "The Rat King", "Mr. Fox", "The Huntsman"]}]}, {"id": "2026-06", "date": "2026-06-19", "event": "June Monthly", "players": [{"username": "adargod14", "archetype": "Pirates", "deck": ["Plunder Penny", "Mech-a-Man", "Shanty", "Wink", "Calypso", "Jelly Roger", "Mechanical Dragon", "Innkeeper", "Sir Francis Drake", "Blackbeard", "Hercules", "The Burninator"]}, {"username": "doonboggle", "archetype": "Pirates", "deck": ["Plunder Penny", "Toto", "Shanty", "The Huntsman", "Wink", "Mr. Fox", "Orion, the Hunter", "Sir Francis Drake", "Snapping Hydra", "Apophis", "Blackbeard", "Hercules"]}, {"username": "MinnWild", "archetype": "Pirates", "deck": ["Aladdin", "Plunder Penny", "Miseria", "Sailor Moonshine", "Don Quixote", "Mr. Fox", "Tsarmina, the Tyrant", "Innkeeper", "Sir Francis Drake", "Blackbeard", "Hercules", "Pirate Prince"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "GoodDigestion", "archetype": "Pirates", "deck": ["Glory Seeker", "Destiny", "Shanty", "The Huntsman", "Wink", "Jelly Roger", "Mr. Fox", "Orion, the Hunter", "Eros", "Apophis", "Blackbeard", "Hercules"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Promil", "archetype": "Pirates", "deck": ["Glory Seeker", "Shanty", "The Huntsman", "Wink", "Destiny", "Jelly Roger", "Mr. Fox", "Orion, the Hunter", "Eros", "Apophis", "Blackbeard", "Hercules"]}, {"username": "Sayaa", "archetype": "Pirates", "deck": ["Aladdin", "Plunder Penny", "Sailor Moonshine", "Shanty", "Wink", "Calypso", "Orion, the Hunter", "Innkeeper", "Sir Francis Drake", "Blackbeard", "Hercules", "The Burninator"]}]}]}</script>
+<script>
+const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
+function best12(decks) {
+  const counts = {};
+  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
+  return Object.entries(counts)
+    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
+    .slice(0, 12);
+}
+function renderBest12() {
+  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
+    .map(cb => cb.dataset.month);
+  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
+  const tbody = document.querySelector('#best12-table tbody');
+  tbody.innerHTML = '';
+  best12(decks).forEach(([card, freq]) => {
+    const tr = document.createElement('tr');
+    const tdCard = document.createElement('td');
+    tdCard.textContent = card;
+    const tdFreq = document.createElement('td');
+    tdFreq.className = 'num';
+    tdFreq.textContent = freq;
+    const tdPct = document.createElement('td');
+    tdPct.className = 'num';
+    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
+    tr.append(tdCard, tdFreq, tdPct);
+    tbody.appendChild(tr);
+  });
+  document.querySelector('#best12-count').textContent = decks.length;
+}
+renderBest12();
+document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderBest12));
+
+function sortTable(th) {
+  const table = th.closest('table'), tbody = table.querySelector('tbody');
+  const idx = Array.from(th.parentNode.children).indexOf(th);
+  const dir = th.dataset.dir === 'asc' ? -1 : 1;
+  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
+  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
+  const rows = Array.from(tbody.rows);
+  rows.sort((a, b) => {
+    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
+    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
+    const an = parseFloat(av), bn = parseFloat(bv);
+    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
+      ? an - bn : av.localeCompare(bv);
+    return cmp * dir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+document.querySelectorAll('th[data-sort]').forEach(th =>
+  th.addEventListener('click', () => sortTable(th)));
+const deckFilter = document.getElementById('deck-filter');
+if (deckFilter) {
+  deckFilter.addEventListener('input', () => {
+    const q = deckFilter.value.toLowerCase();
+    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
+      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
+</script>
+</body>
+</html>

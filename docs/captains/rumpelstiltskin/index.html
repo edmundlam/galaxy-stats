@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rumpelstiltskin — Captain Stats | Galaxy Stats</title>
+<meta name="description" content="Rumpelstiltskin captain statistics across Once Upon a Galaxy monthly tournaments: 76 winning decks across 6 months, with best 12 cards and full decklists.">
+<link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/rumpelstiltskin/">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=1">
+<style>
+  main { max-width: 1100px; }
+  .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
+  .data-table th { text-align:left; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+                   color:var(--muted); padding:8px 10px; border-bottom:2px solid var(--border);
+                   cursor:pointer; user-select:none; white-space:nowrap; }
+  .data-table th:hover { color:var(--text); }
+  .data-table th.no-sort { cursor:default; }
+  .data-table th.no-sort:hover { color:var(--muted); }
+  .data-table td { padding:7px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .data-table tbody tr:hover { background:var(--surface); }
+  .data-table td.num, .data-table th.num { text-align:right; }
+  .month-chip { display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace;
+                font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted);
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:5px 10px; cursor:pointer; transition:all 0.15s; }
+  .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
+                                   background:rgba(200,169,110,0.08); }
+  .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  details.raw-json { margin-top:40px; border:1px solid var(--border); border-radius:4px;
+                     background:var(--surface); }
+  details.raw-json summary { cursor:pointer; padding:12px 16px; font-family:'IBM Plex Mono',monospace;
+                             font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+  details.raw-json summary:hover { color:var(--text); }
+  details.raw-json pre { padding:0 16px 16px; font-size:10px; line-height:1.7; color:var(--muted);
+                         overflow-x:auto; }
+  .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
+                padding:12px 16px; border-left:2px solid var(--border); }
+</style>
+</head>
+<body>
+<header>
+  <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+  <h1>Rumpelstiltskin</h1>
+  <div class="subtitle">Captain stats · <a href="../" style="color:var(--accent)">all captains</a></div>
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-value">76</div><div class="stat-label">Winning decks</div></div>
+    <div class="stat-item"><div class="stat-value">6</div><div class="stat-label">Months</div></div>
+  </div>
+</header>
+
+<main>
+  <div class="section active">
+    <div class="section-title">Best 12</div>
+    <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
+      below. Check or uncheck months to see how the picks shift.</div>
+    <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-04">2026-04</label><label class="month-chip"><input type="checkbox" checked data-month="2026-05">2026-05</label><label class="month-chip"><input type="checkbox" checked data-month="2026-06">2026-06</label><label class="month-chip"><input type="checkbox" checked data-month="2026-07">2026-07</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
+    <table class="data-table" id="best12-table">
+      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="section-title" style="margin-top:48px">Decklists</div>
+    <div class="section-desc">Every winning deck across all months.</div>
+    <div class="captain-filter">
+      <input id="deck-filter" class="filter-input" type="text" placeholder="Filter by player, archetype, month, or card…">
+    </div>
+    <table class="data-table" id="deck-table">
+      <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
+        <th data-sort="archetype">Archetype</th><th class="no-sort">Deck</th></tr></thead>
+      <tbody>
+        <tr><td data-v="2026-03">2026-03</td><td>AJENTxSPACELY</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Bulo</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Don Quixote</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Mr. Fox</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Cerealbobman</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Mimic</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Pisces</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Cheezy</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>clone103</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Mysterio, the Great and Powerful</span><span class="deck-pill">Underdog</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Dogslaya</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">Underdog</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Dragalar</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>FishingEnjoyer</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Froglodyte</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Underdog</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Geromini</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>GoodDigestion</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Underdog</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Intangir</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>MechanicalRunner97</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Mehlo</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Nrausch1</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Underdog</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Frosting Dragon</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>OptimistPrime42</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>pomme verte</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>tretherio</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>WickedFridge</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Xanics</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>A-Bar</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>BDD</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Pixie</span><span class="deck-pill">Frosting Dragon</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Chubby Cheep</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>BeKindUnwind</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Smug</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Viscount Chocolat</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Frosting Dragon</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Bobini</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Brutalbadger</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Kid Icarus</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Cherry Topples</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>ChillJams</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">Mysterio, the Great and Powerful</span><span class="deck-pill">Underdog</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Crowzone</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>dred</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Chip on the Ship</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Frosting Dragon</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Elessar51</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>faf</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Geromini</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Goonietai</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>HugeMage90725</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Jampot</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Mysterio, the Great and Powerful</span><span class="deck-pill">Underdog</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>mycotic</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Mysterio, the Great and Powerful</span><span class="deck-pill">Underdog</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>perrythepig</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Mysterio, the Great and Powerful</span><span class="deck-pill">Underdog</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>pg8</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mimic</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>rofevar</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">Underdog</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Pirate Prince</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Mr. Fox</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Seireitei</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Underdog</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Pisces</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>SeveroQuo</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Pisces</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">Crystal</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Sooty</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Nightshade</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Mirror Mirror</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Dastardly Spirit</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>td_</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Frosting Dragon</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Friendly Spirit</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>tODDlife</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Mimic</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Friendly Spirit</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>turbomoose9</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>XenoAquarius</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Mysterio, the Great and Powerful</span><span class="deck-pill">Underdog</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>YawgmothsBargainStore</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>yliajo</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>Agamemnon</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Mimic</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>ArkatGbaji</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>hogehoge</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mimic</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Pisces</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Miseria</span><span class="deck-pill">Nuada, Radiant King</span><span class="deck-pill">Orion, the Hunter</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>ktsbb</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Smug</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span><span class="deck-pill">Crystal</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>Muxi</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>Ravenous Reptar</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>SilverRadin</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Mimic</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Mr. Fox</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>SmilingCoyote</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Mimic</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Mr. Fox</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>Th3Admiral</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Life Saver</span><span class="deck-pill">Frosting Dragon</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Jelly-ton</span><span class="deck-pill">Doopity Doo</span><span class="deck-pill">Crystal</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>Thekorn</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Knight of the Holy Cane</span><span class="deck-pill">The Sour Patch Kid</span><span class="deck-pill">Chubby Cheep</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>Doherty98</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Mimic</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>dtrooper</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Underdog</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Whirlidoo</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>kannami</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Miseria</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Ditto</span><span class="deck-pill">Smug</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Crab Dragoon</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>pingus</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Crystal</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Apophis</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>sapro</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Beanie Baby</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Crystal</span><span class="deck-pill">Ditto</span><span class="deck-pill">Eros</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>Whiskeyman12</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Mimic</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>BigggJ</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Miseria</span><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>BlankDriver</td><td>Boons</td><td><div class="deck-pills"><span class="deck-pill">Busted Bot</span><span class="deck-pill">Dastardly Spirit</span><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">The Raven</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Leapfrog</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Crab Dragoon</span><span class="deck-pill">Perseus</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Lakshmi</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Miseria</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Smug</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>May</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Underdog</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Rollo</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Tarn</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">Jaws</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Tsarmina, the Tyrant</span><span class="deck-pill">Crystal</span><span class="deck-pill">Leapfrog</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Crab Dragoon</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>ashnb</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Mimic</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Bale</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Shanty</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Weensy</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Champ</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Miseria</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Anubis</span><span class="deck-pill">Crab Dragoon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Dysalt</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Dastardly Spirit</span><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Miseria</span><span class="deck-pill">Destiny</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Janny</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Underdog</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Miseria</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Party Pinata</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Brick Monster</span><span class="deck-pill">Chip on the Ship</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>MAWRAT</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Ditto</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Crab Dragoon</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>pulak</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Underdog</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Ditto</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Zoro__________</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Nutcracker Prince</span><span class="deck-pill">Mimic</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <details class="raw-json"><summary>Raw JSON</summary><pre>{
+  &quot;slug&quot;: &quot;rumpelstiltskin&quot;,
+  &quot;name&quot;: &quot;Rumpelstiltskin&quot;,
+  &quot;months&quot;: [
+    {
+      &quot;id&quot;: &quot;2026-03&quot;,
+      &quot;date&quot;: &quot;2026-03-20&quot;,
+      &quot;event&quot;: &quot;March Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;AJENTxSPACELY&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Mr. Fox&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Bulo&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Don Quixote&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Mr. Fox&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Cerealbobman&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mechanical Dragon&quot;,
+            &quot;Mimic&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Pisces&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Cheezy&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;clone103&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Mysterio, the Great and Powerful&quot;,
+            &quot;Underdog&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Dogslaya&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;Underdog&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Dragalar&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Nutcracker Prince&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Mr. Fox&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;FishingEnjoyer&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Froglodyte&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Underdog&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Geromini&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;GoodDigestion&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Wicked Witch&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Underdog&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Intangir&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mechanical Dragon&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Snapping Hydra&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;MechanicalRunner97&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Mehlo&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Mr. Fox&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Nrausch1&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Underdog&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Gummy Wyrm&quot;,
+            &quot;Frosting Dragon&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;OptimistPrime42&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;pomme verte&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mech-a-Man&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;tretherio&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Mr. Fox&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;WickedFridge&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Xanics&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Gummy Wyrm&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-04&quot;,
+      &quot;date&quot;: &quot;2026-04-17&quot;,
+      &quot;event&quot;: &quot;April Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;A-Bar&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;BDD&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Gummy Wyrm&quot;,
+            &quot;Pixie&quot;,
+            &quot;Frosting Dragon&quot;,
+            &quot;Lance A Little&quot;,
+            &quot;Chubby Cheep&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;BeKindUnwind&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mechanical Dragon&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Smug&quot;,
+            &quot;Snapping Hydra&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Viscount Chocolat&quot;,
+            &quot;Gummy Wyrm&quot;,
+            &quot;Frosting Dragon&quot;,
+            &quot;The Candy Cane Crook&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Bobini&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Brutalbadger&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Kid Icarus&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Cherry Topples&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;ChillJams&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Ace of Hearts&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;Mysterio, the Great and Powerful&quot;,
+            &quot;Underdog&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Crowzone&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;dred&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mech-a-Man&quot;,
+            &quot;Chip on the Ship&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Frosting Dragon&quot;,
+            &quot;Lollipop Faerie&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Elessar51&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;faf&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Nutcracker Prince&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Geromini&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Goonietai&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;HugeMage90725&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Jampot&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Mysterio, the Great and Powerful&quot;,
+            &quot;Underdog&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;mycotic&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Mysterio, the Great and Powerful&quot;,
+            &quot;Underdog&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;perrythepig&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Mysterio, the Great and Powerful&quot;,
+            &quot;Underdog&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;pg8&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mimic&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Mr. Fox&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;rofevar&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;Underdog&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Pirate Prince&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Mr. Fox&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Seireitei&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Underdog&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Pisces&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;SeveroQuo&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mech-a-Man&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Pisces&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Lance A Little&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;,
+            &quot;Crystal&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Sooty&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Nightshade&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Mirror Mirror&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Dastardly Spirit&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;td_&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mech-a-Man&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Gummy Wyrm&quot;,
+            &quot;Frosting Dragon&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Friendly Spirit&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;tODDlife&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Nutcracker Prince&quot;,
+            &quot;Mimic&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Friendly Spirit&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;turbomoose9&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;XenoAquarius&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Mysterio, the Great and Powerful&quot;,
+            &quot;Underdog&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;YawgmothsBargainStore&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;yliajo&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-05&quot;,
+      &quot;date&quot;: &quot;2026-05-22&quot;,
+      &quot;event&quot;: &quot;May Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;Agamemnon&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Nutcracker Prince&quot;,
+            &quot;Mimic&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Friendly Spirit&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;The Huntsman&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;ArkatGbaji&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;hogehoge&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mimic&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Pisces&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Miseria&quot;,
+            &quot;Nuada, Radiant King&quot;,
+            &quot;Orion, the Hunter&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;ktsbb&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Smug&quot;,
+            &quot;Snapping Hydra&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Gummy Wyrm&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;,
+            &quot;Crystal&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Muxi&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Ace of Hearts&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Ravenous Reptar&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Toto&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Smug&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;SilverRadin&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Nutcracker Prince&quot;,
+            &quot;Mimic&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Friendly Spirit&quot;,
+            &quot;Mr. Fox&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;SmilingCoyote&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Nutcracker Prince&quot;,
+            &quot;Mimic&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Friendly Spirit&quot;,
+            &quot;Mr. Fox&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Th3Admiral&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Ace of Hearts&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Gummy Wyrm&quot;,
+            &quot;Twilight Sprinkles&quot;,
+            &quot;Life Saver&quot;,
+            &quot;Frosting Dragon&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Jelly-ton&quot;,
+            &quot;Doopity Doo&quot;,
+            &quot;Crystal&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Thekorn&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Ace of Hearts&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Knight of the Holy Cane&quot;,
+            &quot;The Sour Patch Kid&quot;,
+            &quot;Chubby Cheep&quot;,
+            &quot;Lollipop Faerie&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-06&quot;,
+      &quot;date&quot;: &quot;2026-06-19&quot;,
+      &quot;event&quot;: &quot;June Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;Doherty98&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Friendly Spirit&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Nutcracker Prince&quot;,
+            &quot;Mimic&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;dtrooper&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Underdog&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Whirlidoo&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;kannami&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Ace of Hearts&quot;,
+            &quot;Miseria&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Ditto&quot;,
+            &quot;Smug&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Crab Dragoon&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;pingus&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Crystal&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Apophis&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;sapro&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Beanie Baby&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Crystal&quot;,
+            &quot;Ditto&quot;,
+            &quot;Eros&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Whiskeyman12&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Friendly Spirit&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Nutcracker Prince&quot;,
+            &quot;Mimic&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-07&quot;,
+      &quot;date&quot;: &quot;2026-07-17&quot;,
+      &quot;event&quot;: &quot;July Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;BigggJ&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Friendly Spirit&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Miseria&quot;,
+            &quot;Nutcracker Prince&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;BlankDriver&quot;,
+          &quot;archetype&quot;: &quot;Boons&quot;,
+          &quot;deck&quot;: [
+            &quot;Busted Bot&quot;,
+            &quot;Dastardly Spirit&quot;,
+            &quot;Friendly Spirit&quot;,
+            &quot;The Raven&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Nutcracker Prince&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Leapfrog&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Crab Dragoon&quot;,
+            &quot;Perseus&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Lakshmi&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Ace of Hearts&quot;,
+            &quot;Miseria&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Smug&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;May&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Underdog&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Rollo&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Tarn&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;Jaws&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Tsarmina, the Tyrant&quot;,
+            &quot;Crystal&quot;,
+            &quot;Leapfrog&quot;,
+            &quot;Twilight Sprinkles&quot;,
+            &quot;Crab Dragoon&quot;,
+            &quot;Gummy Wyrm&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-08&quot;,
+      &quot;date&quot;: &quot;2026-08-21&quot;,
+      &quot;event&quot;: &quot;August Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;ashnb&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Friendly Spirit&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Nutcracker Prince&quot;,
+            &quot;Mimic&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Bale&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Ace of Hearts&quot;,
+            &quot;Shanty&quot;,
+            &quot;The Candy Cane Crook&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Weensy&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Champ&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Ace of Hearts&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Miseria&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Wicked Witch&quot;,
+            &quot;Anubis&quot;,
+            &quot;Crab Dragoon&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Dysalt&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Dastardly Spirit&quot;,
+            &quot;Friendly Spirit&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Miseria&quot;,
+            &quot;Destiny&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Janny&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Friendly Spirit&quot;,
+            &quot;Underdog&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Miseria&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Party Pinata&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Brick Monster&quot;,
+            &quot;Chip on the Ship&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;MAWRAT&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Fortune Teller&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Ditto&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Crab Dragoon&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;pulak&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Underdog&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Ditto&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Zoro__________&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Friendly Spirit&quot;,
+            &quot;Glory Seeker&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Nutcracker Prince&quot;,
+            &quot;Mimic&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        }
+      ]
+    }
+  ]
+}</pre></details>
+</main>
+<script type="application/json" id="captain-data">{"slug": "rumpelstiltskin", "name": "Rumpelstiltskin", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "AJENTxSPACELY", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "The Burninator", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Mr. Fox"]}, {"username": "Bulo", "archetype": "Treasures", "deck": ["Don Quixote", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Scale-a-tor", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Flopsy", "Wormscale Tinkerer", "Mr. Fox"]}, {"username": "Cerealbobman", "archetype": "Treasures", "deck": ["Mechanical Dragon", "Mimic", "Combustible Dragon", "Hephaestus", "The Burninator", "Pisces", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Miseria"]}, {"username": "Cheezy", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "clone103", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Mysterio, the Great and Powerful", "Underdog", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Wormscale Tinkerer", "Sunflare Glider", "Miseria"]}, {"username": "Dogslaya", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Scale-a-tor", "Underdog", "The Burninator", "Thunder of Dragons", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Miseria"]}, {"username": "Dragalar", "archetype": "Treasures", "deck": ["Nutcracker Prince", "Ace of Hearts", "Hephaestus", "Scale-a-tor", "The Burninator", "Sir Francis Drake", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Mr. Fox"]}, {"username": "FishingEnjoyer", "archetype": "Treasures", "deck": ["Ace of Hearts", "Combustible Dragon", "Hephaestus", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Miseria"]}, {"username": "Froglodyte", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Underdog", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Netherbinder", "Miseria"]}, {"username": "Geromini", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "GoodDigestion", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Wicked Witch", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Underdog", "The Burninator", "Thunder of Dragons", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Miseria"]}, {"username": "Intangir", "archetype": "Treasures", "deck": ["Mechanical Dragon", "Combustible Dragon", "Hephaestus", "Scale-a-tor", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Sunflare Glider"]}, {"username": "MechanicalRunner97", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "Mehlo", "archetype": "Treasures", "deck": ["Aladdin", "Mechanical Dragon", "Don Quixote", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "The Burninator", "Smug", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Mr. Fox"]}, {"username": "Nrausch1", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Underdog", "The Burninator", "Thunder of Dragons", "Wormscale Tinkerer", "Gummy Wyrm", "Frosting Dragon", "Sunflare Glider", "Miseria"]}, {"username": "OptimistPrime42", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "pomme verte", "archetype": "Treasures", "deck": ["Mech-a-Man", "Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "The Burninator", "Thunder of Dragons", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Mr. Fox", "Miseria"]}, {"username": "tretherio", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Mr. Fox"]}, {"username": "WickedFridge", "archetype": "Treasures", "deck": ["Aladdin", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Sunflare Glider", "Mr. Fox", "Miseria"]}, {"username": "Xanics", "archetype": "Treasures", "deck": ["Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "The Burninator", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Gummy Wyrm", "Oracle of Fortunes", "Sunflare Glider", "Mr. Fox", "Miseria"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "A-Bar", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "BDD", "archetype": "Treasures", "deck": ["Hephaestus", "The Burninator", "Flopsy", "Wormscale Tinkerer", "Gummy Wyrm", "Pixie", "Frosting Dragon", "Lance A Little", "Chubby Cheep", "Oracle of Fortunes", "Sunflare Glider", "Miseria"]}, {"username": "BeKindUnwind", "archetype": "Treasures", "deck": ["Mechanical Dragon", "Combustible Dragon", "The Burninator", "Smug", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Viscount Chocolat", "Gummy Wyrm", "Frosting Dragon", "The Candy Cane Crook", "Miseria"]}, {"username": "Bobini", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "Brutalbadger", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mechanical Dragon", "Combustible Dragon", "Thunder of Dragons", "Kid Icarus", "Sir Francis Drake", "Smug", "Flopsy", "Wormscale Tinkerer", "Cherry Topples", "Oracle of Fortunes", "Miseria"]}, {"username": "ChillJams", "archetype": "Treasures", "deck": ["Ace of Hearts", "Hephaestus", "Scale-a-tor", "Mysterio, the Great and Powerful", "Underdog", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Sunflare Glider", "Miseria"]}, {"username": "Crowzone", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mechanical Dragon", "Combustible Dragon", "Hephaestus", "Scale-a-tor", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "dred", "archetype": "Treasures", "deck": ["Mech-a-Man", "Chip on the Ship", "Combustible Dragon", "Hephaestus", "Sir Francis Drake", "Flopsy", "Wormscale Tinkerer", "Frosting Dragon", "Lollipop Faerie", "Oracle of Fortunes", "Sunflare Glider", "Miseria"]}, {"username": "Elessar51", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "faf", "archetype": "Treasures", "deck": ["Nutcracker Prince", "Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "The Burninator", "Thunder of Dragons", "Flopsy", "Wormscale Tinkerer", "Sunflare Glider", "Mr. Fox", "Miseria"]}, {"username": "Geromini", "archetype": "Treasures", "deck": ["Mechanical Dragon", "Ace of Hearts", "Glory Seeker", "Combustible Dragon", "Hephaestus", "Scale-a-tor", "The Burninator", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder"]}, {"username": "Goonietai", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "HugeMage90725", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "Jampot", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Mysterio, the Great and Powerful", "Underdog", "The Burninator", "Thunder of Dragons", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Miseria"]}, {"username": "mycotic", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Mysterio, the Great and Powerful", "Underdog", "The Burninator", "Thunder of Dragons", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Miseria"]}, {"username": "perrythepig", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Mysterio, the Great and Powerful", "Underdog", "The Burninator", "Thunder of Dragons", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Miseria"]}, {"username": "pg8", "archetype": "Treasures", "deck": ["Mimic", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Scale-a-tor", "The Burninator", "Thunder of Dragons", "Smug", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Mr. Fox"]}, {"username": "rofevar", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Scale-a-tor", "Underdog", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Pirate Prince", "Smug", "Wormscale Tinkerer", "Mr. Fox"]}, {"username": "Seireitei", "archetype": "Treasures", "deck": ["Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Underdog", "The Burninator", "Thunder of Dragons", "Pisces", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Miseria"]}, {"username": "SeveroQuo", "archetype": "Treasures", "deck": ["Mech-a-Man", "Maverick & Icewing", "Mechanical Dragon", "The Burninator", "Pisces", "Flopsy", "Wormscale Tinkerer", "Lance A Little", "Sunflare Glider", "Mr. Fox", "Miseria", "Crystal"]}, {"username": "Sooty", "archetype": "Treasures", "deck": ["Nightshade", "Ace of Hearts", "Combustible Dragon", "Mirror Mirror", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Dastardly Spirit"]}, {"username": "td_", "archetype": "Treasures", "deck": ["Mech-a-Man", "Ace of Hearts", "Glory Seeker", "Combustible Dragon", "The Burninator", "Smug", "Wormscale Tinkerer", "Gummy Wyrm", "Frosting Dragon", "Netherbinder", "Sunflare Glider", "Friendly Spirit"]}, {"username": "tODDlife", "archetype": "Treasures", "deck": ["Nutcracker Prince", "Mimic", "Ace of Hearts", "Glory Seeker", "Combustible Dragon", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Flopsy", "Wormscale Tinkerer", "Sunflare Glider", "Friendly Spirit"]}, {"username": "turbomoose9", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "XenoAquarius", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Mysterio, the Great and Powerful", "Underdog", "The Burninator", "Thunder of Dragons", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Miseria"]}, {"username": "YawgmothsBargainStore", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "yliajo", "archetype": "Treasures", "deck": ["Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Scale-a-tor", "The Burninator", "Sir Francis Drake", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}]}, {"id": "2026-05", "date": "2026-05-22", "event": "May Monthly", "players": [{"username": "Agamemnon", "archetype": "Treasures", "deck": ["Nutcracker Prince", "Mimic", "Ace of Hearts", "Glory Seeker", "Scale-a-tor", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Wormscale Tinkerer", "Friendly Spirit", "Mr. Fox", "The Huntsman"]}, {"username": "ArkatGbaji", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "hogehoge", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mimic", "Ace of Hearts", "Glory Seeker", "Combustible Dragon", "Hephaestus", "The Burninator", "Pisces", "Wormscale Tinkerer", "Miseria", "Nuada, Radiant King", "Orion, the Hunter"]}, {"username": "ktsbb", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "The Burninator", "Smug", "Snapping Hydra", "Wormscale Tinkerer", "Gummy Wyrm", "Sunflare Glider", "Miseria", "Crystal"]}, {"username": "Muxi", "archetype": "Treasures", "deck": ["Ace of Hearts", "Glory Seeker", "Combustible Dragon", "Hephaestus", "Scale-a-tor", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Sunflare Glider", "Miseria"]}, {"username": "Ravenous Reptar", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Hephaestus", "Thunder of Dragons", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider"]}, {"username": "SilverRadin", "archetype": "Treasures", "deck": ["Nutcracker Prince", "Mimic", "Don Quixote", "Ace of Hearts", "Glory Seeker", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Wormscale Tinkerer", "Sunflare Glider", "Friendly Spirit", "Mr. Fox"]}, {"username": "SmilingCoyote", "archetype": "Treasures", "deck": ["Nutcracker Prince", "Mimic", "Don Quixote", "Ace of Hearts", "Glory Seeker", "Scale-a-tor", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Wormscale Tinkerer", "Friendly Spirit", "Mr. Fox"]}, {"username": "Th3Admiral", "archetype": "Treasures", "deck": ["Ace of Hearts", "The Burninator", "Thunder of Dragons", "Wormscale Tinkerer", "Gummy Wyrm", "Twilight Sprinkles", "Life Saver", "Frosting Dragon", "Netherbinder", "Jelly-ton", "Doopity Doo", "Crystal"]}, {"username": "Thekorn", "archetype": "Treasures", "deck": ["Ace of Hearts", "Scale-a-tor", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Wormscale Tinkerer", "Knight of the Holy Cane", "The Sour Patch Kid", "Chubby Cheep", "Lollipop Faerie", "Mr. Fox", "Miseria"]}]}, {"id": "2026-06", "date": "2026-06-19", "event": "June Monthly", "players": [{"username": "Doherty98", "archetype": "Treasures", "deck": ["Friendly Spirit", "Glory Seeker", "Ace of Hearts", "Nutcracker Prince", "Mimic", "Mr. Fox", "Don Quixote", "Thunder of Dragons", "Sir Francis Drake", "Scale-a-tor", "The Burninator", "Wormscale Tinkerer"]}, {"username": "dtrooper", "archetype": "Treasures", "deck": ["Underdog", "Ace of Hearts", "Destiny", "Miseria", "Whirlidoo", "Young Hercules", "Combustible Dragon", "Maverick & Icewing", "Sunflare Glider", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "kannami", "archetype": "Treasures", "deck": ["Ace of Hearts", "Miseria", "Combustible Dragon", "Maverick & Icewing", "Mechanical Dragon", "Netherbinder", "Sunflare Glider", "Ditto", "Smug", "Thunder of Dragons", "Crab Dragoon", "The Burninator"]}, {"username": "pingus", "archetype": "Treasures", "deck": ["Lance A Little", "Ace of Hearts", "Miseria", "Young Hercules", "Mr. Fox", "Sunflare Glider", "Crystal", "Sir Francis Drake", "Thunder of Dragons", "Apophis", "The Burninator", "Wormscale Tinkerer"]}, {"username": "sapro", "archetype": "Treasures", "deck": ["Beanie Baby", "Ace of Hearts", "Destiny", "Miseria", "Maverick & Icewing", "Sunflare Glider", "Crystal", "Ditto", "Eros", "Flopsy", "Oracle of Fortunes", "The Burninator"]}, {"username": "Whiskeyman12", "archetype": "Treasures", "deck": ["Friendly Spirit", "Glory Seeker", "Ace of Hearts", "Nutcracker Prince", "Mimic", "Mr. Fox", "Don Quixote", "Thunder of Dragons", "Sir Francis Drake", "Scale-a-tor", "The Burninator", "Wormscale Tinkerer"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "BigggJ", "archetype": "Treasures", "deck": ["Friendly Spirit", "Glory Seeker", "Ace of Hearts", "Miseria", "Nutcracker Prince", "Mr. Fox", "Netherbinder", "Sir Francis Drake", "Thunder of Dragons", "Scale-a-tor", "The Burninator", "Wormscale Tinkerer"]}, {"username": "BlankDriver", "archetype": "Boons", "deck": ["Busted Bot", "Dastardly Spirit", "Friendly Spirit", "The Raven", "Ace of Hearts", "Nutcracker Prince", "Young Hercules", "Baron Bok", "Leapfrog", "Sir Francis Drake", "Crab Dragoon", "Perseus"]}, {"username": "Lakshmi", "archetype": "Treasures", "deck": ["Ace of Hearts", "Miseria", "Baron Bok", "Combustible Dragon", "Netherbinder", "Sunflare Glider", "Astral Navigator", "Smug", "Thunder of Dragons", "Hephaestus", "The Burninator", "Wormscale Tinkerer"]}, {"username": "May", "archetype": "Treasures", "deck": ["Underdog", "Ace of Hearts", "Destiny", "Miseria", "Young Hercules", "Maverick & Icewing", "Rollo", "Sunflare Glider", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator", "Wormscale Tinkerer"]}, {"username": "Tarn", "archetype": "Treasures", "deck": ["Lance A Little", "Miseria", "Jaws", "Mr. Fox", "Tsarmina, the Tyrant", "Crystal", "Leapfrog", "Twilight Sprinkles", "Crab Dragoon", "Gummy Wyrm", "Sigrun, Valkyrie Queen", "Wormscale Tinkerer"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "ashnb", "archetype": "Treasures", "deck": ["Friendly Spirit", "Glory Seeker", "Ace of Hearts", "Nutcracker Prince", "Mimic", "Mr. Fox", "Don Quixote", "Thunder of Dragons", "Sir Francis Drake", "Scale-a-tor", "The Burninator", "Wormscale Tinkerer"]}, {"username": "Bale", "archetype": "Treasures", "deck": ["Ace of Hearts", "Shanty", "The Candy Cane Crook", "The Huntsman", "Don Quixote", "Mr. Fox", "Weensy", "Sir Francis Drake", "Thunder of Dragons", "Scale-a-tor", "The Burninator", "Wormscale Tinkerer"]}, {"username": "Champ", "archetype": "Treasures", "deck": ["Ace of Hearts", "Mech-a-Man", "Miseria", "Mr. Fox", "Netherbinder", "Sunflare Glider", "Thunder of Dragons", "Wicked Witch", "Anubis", "Crab Dragoon", "Hephaestus", "The Burninator"]}, {"username": "Dysalt", "archetype": "Treasures", "deck": ["Dastardly Spirit", "Friendly Spirit", "Ace of Hearts", "Miseria", "Destiny", "Sir Francis Drake", "Thunder of Dragons", "Guinevere", "Scale-a-tor", "Sigrun, Valkyrie Queen", "The Burninator", "Wormscale Tinkerer"]}, {"username": "Janny", "archetype": "Treasures", "deck": ["Friendly Spirit", "Underdog", "Ace of Hearts", "Mech-a-Man", "Miseria", "Mr. Fox", "Party Pinata", "Sunflare Glider", "Brick Monster", "Chip on the Ship", "The Burninator", "Wormscale Tinkerer"]}, {"username": "MAWRAT", "archetype": "Treasures", "deck": ["Fortune Teller", "Combustible Dragon", "Netherbinder", "Astral Navigator", "Ditto", "Sir Francis Drake", "Thunder of Dragons", "Crab Dragoon", "Oracle of Fortunes", "Scale-a-tor", "The Burninator", "Wormscale Tinkerer"]}, {"username": "pulak", "archetype": "Treasures", "deck": ["Underdog", "Ace of Hearts", "Destiny", "Miseria", "Combustible Dragon", "Maverick & Icewing", "Netherbinder", "Sunflare Glider", "Ditto", "Thunder of Dragons", "Hephaestus", "The Burninator"]}, {"username": "Zoro__________", "archetype": "Treasures", "deck": ["Friendly Spirit", "Glory Seeker", "Ace of Hearts", "Nutcracker Prince", "Mimic", "Mr. Fox", "Don Quixote", "Thunder of Dragons", "Sir Francis Drake", "Scale-a-tor", "The Burninator", "Wormscale Tinkerer"]}]}]}</script>
+<script>
+const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
+function best12(decks) {
+  const counts = {};
+  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
+  return Object.entries(counts)
+    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
+    .slice(0, 12);
+}
+function renderBest12() {
+  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
+    .map(cb => cb.dataset.month);
+  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
+  const tbody = document.querySelector('#best12-table tbody');
+  tbody.innerHTML = '';
+  best12(decks).forEach(([card, freq]) => {
+    const tr = document.createElement('tr');
+    const tdCard = document.createElement('td');
+    tdCard.textContent = card;
+    const tdFreq = document.createElement('td');
+    tdFreq.className = 'num';
+    tdFreq.textContent = freq;
+    const tdPct = document.createElement('td');
+    tdPct.className = 'num';
+    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
+    tr.append(tdCard, tdFreq, tdPct);
+    tbody.appendChild(tr);
+  });
+  document.querySelector('#best12-count').textContent = decks.length;
+}
+renderBest12();
+document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderBest12));
+
+function sortTable(th) {
+  const table = th.closest('table'), tbody = table.querySelector('tbody');
+  const idx = Array.from(th.parentNode.children).indexOf(th);
+  const dir = th.dataset.dir === 'asc' ? -1 : 1;
+  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
+  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
+  const rows = Array.from(tbody.rows);
+  rows.sort((a, b) => {
+    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
+    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
+    const an = parseFloat(av), bn = parseFloat(bv);
+    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
+      ? an - bn : av.localeCompare(bv);
+    return cmp * dir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+document.querySelectorAll('th[data-sort]').forEach(th =>
+  th.addEventListener('click', () => sortTable(th)));
+const deckFilter = document.getElementById('deck-filter');
+if (deckFilter) {
+  deckFilter.addEventListener('input', () => {
+    const q = deckFilter.value.toLowerCase();
+    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
+      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
+</script>
+</body>
+</html>

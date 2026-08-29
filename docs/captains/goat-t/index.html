@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goat T — Captain Stats | Galaxy Stats</title>
+<meta name="description" content="Goat T captain statistics across Once Upon a Galaxy monthly tournaments: 31 winning decks across 5 months, with best 12 cards and full decklists.">
+<link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/goat-t/">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=1">
+<style>
+  main { max-width: 1100px; }
+  .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
+  .data-table th { text-align:left; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+                   color:var(--muted); padding:8px 10px; border-bottom:2px solid var(--border);
+                   cursor:pointer; user-select:none; white-space:nowrap; }
+  .data-table th:hover { color:var(--text); }
+  .data-table th.no-sort { cursor:default; }
+  .data-table th.no-sort:hover { color:var(--muted); }
+  .data-table td { padding:7px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .data-table tbody tr:hover { background:var(--surface); }
+  .data-table td.num, .data-table th.num { text-align:right; }
+  .month-chip { display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace;
+                font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted);
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:5px 10px; cursor:pointer; transition:all 0.15s; }
+  .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
+                                   background:rgba(200,169,110,0.08); }
+  .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  details.raw-json { margin-top:40px; border:1px solid var(--border); border-radius:4px;
+                     background:var(--surface); }
+  details.raw-json summary { cursor:pointer; padding:12px 16px; font-family:'IBM Plex Mono',monospace;
+                             font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+  details.raw-json summary:hover { color:var(--text); }
+  details.raw-json pre { padding:0 16px 16px; font-size:10px; line-height:1.7; color:var(--muted);
+                         overflow-x:auto; }
+  .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
+                padding:12px 16px; border-left:2px solid var(--border); }
+</style>
+</head>
+<body>
+<header>
+  <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+  <h1>Goat T</h1>
+  <div class="subtitle">Captain stats · <a href="../" style="color:var(--accent)">all captains</a></div>
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-value">31</div><div class="stat-label">Winning decks</div></div>
+    <div class="stat-item"><div class="stat-value">5</div><div class="stat-label">Months</div></div>
+  </div>
+</header>
+
+<main>
+  <div class="section active">
+    <div class="section-title">Best 12</div>
+    <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
+      below. Check or uncheck months to see how the picks shift.</div>
+    <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-05">2026-05</label><label class="month-chip"><input type="checkbox" checked data-month="2026-06">2026-06</label><label class="month-chip"><input type="checkbox" checked data-month="2026-07">2026-07</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
+    <table class="data-table" id="best12-table">
+      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="section-title" style="margin-top:48px">Decklists</div>
+    <div class="section-desc">Every winning deck across all months.</div>
+    <div class="captain-filter">
+      <input id="deck-filter" class="filter-input" type="text" placeholder="Filter by player, archetype, month, or card…">
+    </div>
+    <table class="data-table" id="deck-table">
+      <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
+        <th data-sort="archetype">Archetype</th><th class="no-sort">Deck</th></tr></thead>
+      <tbody>
+        <tr><td data-v="2026-03">2026-03</td><td>Donald Duck</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Viscount Chocolat</span><span class="deck-pill">Miss Muffet</span><span class="deck-pill">Life Saver</span><span class="deck-pill">Candy Apple Tree</span><span class="deck-pill">Chubby Bunny</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Weensy</span><span class="deck-pill">Licorice</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>mason_rb</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Rollo</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Pastafarianx</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mirror Mage</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Life Saver</span><span class="deck-pill">Frosting Dragon</span><span class="deck-pill">Catatouille</span><span class="deck-pill">Rollo</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Butcher</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Plytren</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Viscount Chocolat</span><span class="deck-pill">Miss Muffet</span><span class="deck-pill">Life Saver</span><span class="deck-pill">Candy Apple Tree</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">Candy Claws</span><span class="deck-pill">Chubby Bunny</span><span class="deck-pill">Jelly-ton</span><span class="deck-pill">Weensy</span><span class="deck-pill">Licorice</span><span class="deck-pill">Dastardly Spirit</span><span class="deck-pill">Barbosa</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Reithe</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Frog Prince</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Kid Icarus</span><span class="deck-pill">Wink</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>TurquoiseLink</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mortakon</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Faerie Queen</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Pisces</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Rollo</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Butcher</span><span class="deck-pill">Crystal</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>Armadi</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mortakon</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Guinevere</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Smug</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Rollo</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Orion, the Hunter</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>BustopherJones</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Viscount Chocolat</span><span class="deck-pill">Keeb</span><span class="deck-pill">Cherry Topples</span><span class="deck-pill">The Sour Patch Kid</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Chubby Cheep</span><span class="deck-pill">Rollo</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">Crystal</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>ChewTerr</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Prickles</span><span class="deck-pill">Mirror Mage</span><span class="deck-pill">Hercules</span><span class="deck-pill">Viscount Chocolat</span><span class="deck-pill">Cotton Candy Dandy</span><span class="deck-pill">Pixie</span><span class="deck-pill">Keeb</span><span class="deck-pill">Kool Wip</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>draconian</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Viscount Chocolat</span><span class="deck-pill">Miss Muffet</span><span class="deck-pill">Life Saver</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">Leapfrog</span><span class="deck-pill">Chubby Bunny</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Jelly-ton</span><span class="deck-pill">Weensy</span><span class="deck-pill">Licorice</span><span class="deck-pill">Dastardly Spirit</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>OrigamiOrAGamer</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Viscount Chocolat</span><span class="deck-pill">Cotton Candy Dandy</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Knight of the Holy Cane</span><span class="deck-pill">Frosting Dragon</span><span class="deck-pill">Kool Wip</span><span class="deck-pill">Cherry Topples</span><span class="deck-pill">The Sour Patch Kid</span><span class="deck-pill">Jelly-ton</span><span class="deck-pill">Miseria</span><span class="deck-pill">Crystal</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>Produkt</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Leapfrog</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-05">2026-05</td><td>Voxerole</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Viscount Chocolat</span><span class="deck-pill">Caramel</span><span class="deck-pill">Pixie</span><span class="deck-pill">Kool Wip</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Candy Claws</span><span class="deck-pill">Jelly-ton</span><span class="deck-pill">Licorice</span><span class="deck-pill">Barbosa</span><span class="deck-pill">The Three Chef-Keteers</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>camroz</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">Morgan Le Fae</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Rollo</span><span class="deck-pill">Crystal</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Hercules</span><span class="deck-pill">Oracle of Fortunes</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>dob</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Bubbles</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Destiny</span><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Miseria</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Crystal</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>EgaL</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Crystal</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Perseus</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>Katsuu</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Bubbles</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Crystal</span><span class="deck-pill">Eros</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>pezyo</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Crystal</span><span class="deck-pill">Guinevere</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>travelprep</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Rollo</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Apophis</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>doonboggle</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Bubbles</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">Nuada, Radiant King</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Crystal</span><span class="deck-pill">Mirror Mage</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Perseus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Harganok</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Rollo</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Leapfrog</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Daedalus</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Haumph</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Rollo</span><span class="deck-pill">Mirror Mage</span><span class="deck-pill">Smug</span><span class="deck-pill">Guinevere</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>ima</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Destiny</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Miseria</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Rollo</span><span class="deck-pill">Crystal</span><span class="deck-pill">Smug</span><span class="deck-pill">Monstro</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Mordoream</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Destiny</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Crystal</span><span class="deck-pill">Faerie Queen</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>pandafarmer</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Catatouille</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Jaws</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Crystal</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Perseus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Prackalakin</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Destiny</span><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Rollo</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Crystal</span><span class="deck-pill">Eros</span><span class="deck-pill">Guinevere</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>shkuk</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Gingerbread Witch</span><span class="deck-pill">Catatouille</span><span class="deck-pill">Miseria</span><span class="deck-pill">Pretty Patissier</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">Candy Apple Tree</span><span class="deck-pill">Jaws</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Viscount Chocolat</span><span class="deck-pill">Cotton Candy Dandy</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Licorice</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>CunningWish</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Destiny</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Rollo</span><span class="deck-pill">Mirror Mage</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>illmater</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Nuada, Radiant King</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Destiny</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Knight of the Holy Cane</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Licorice</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>tretherio</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Bubbles</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Destiny</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Rollo</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Perseus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Uli</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Miseria</span><span class="deck-pill">Jaws</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Mysterio, the Great and Powerful</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <details class="raw-json"><summary>Raw JSON</summary><pre>{
+  &quot;slug&quot;: &quot;goat-t&quot;,
+  &quot;name&quot;: &quot;Goat T&quot;,
+  &quot;months&quot;: [
+    {
+      &quot;id&quot;: &quot;2026-03&quot;,
+      &quot;date&quot;: &quot;2026-03-20&quot;,
+      &quot;event&quot;: &quot;March Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;Donald Duck&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Viscount Chocolat&quot;,
+            &quot;Miss Muffet&quot;,
+            &quot;Life Saver&quot;,
+            &quot;Candy Apple Tree&quot;,
+            &quot;Chubby Bunny&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Weensy&quot;,
+            &quot;Licorice&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;mason_rb&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Snapping Hydra&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Lance A Little&quot;,
+            &quot;Rollo&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Pastafarianx&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mirror Mage&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Gummy Wyrm&quot;,
+            &quot;Life Saver&quot;,
+            &quot;Frosting Dragon&quot;,
+            &quot;Catatouille&quot;,
+            &quot;Rollo&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Butcher&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Plytren&quot;,
+          &quot;archetype&quot;: &quot;Candy&quot;,
+          &quot;deck&quot;: [
+            &quot;Viscount Chocolat&quot;,
+            &quot;Miss Muffet&quot;,
+            &quot;Life Saver&quot;,
+            &quot;Candy Apple Tree&quot;,
+            &quot;The Candy Cane Crook&quot;,
+            &quot;Candy Claws&quot;,
+            &quot;Chubby Bunny&quot;,
+            &quot;Jelly-ton&quot;,
+            &quot;Weensy&quot;,
+            &quot;Licorice&quot;,
+            &quot;Dastardly Spirit&quot;,
+            &quot;Barbosa&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Reithe&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Frog Prince&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Kid Icarus&quot;,
+            &quot;Wink&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;TurquoiseLink&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mortakon&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Faerie Queen&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Pisces&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Rollo&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Butcher&quot;,
+            &quot;Crystal&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-05&quot;,
+      &quot;date&quot;: &quot;2026-05-22&quot;,
+      &quot;event&quot;: &quot;May Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;Armadi&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Mortakon&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Guinevere&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Smug&quot;,
+            &quot;Snapping Hydra&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Rollo&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Orion, the Hunter&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;BustopherJones&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Viscount Chocolat&quot;,
+            &quot;Keeb&quot;,
+            &quot;Cherry Topples&quot;,
+            &quot;The Sour Patch Kid&quot;,
+            &quot;Lance A Little&quot;,
+            &quot;Chubby Cheep&quot;,
+            &quot;Rollo&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;,
+            &quot;Crystal&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;ChewTerr&quot;,
+          &quot;archetype&quot;: &quot;Candy&quot;,
+          &quot;deck&quot;: [
+            &quot;Prickles&quot;,
+            &quot;Mirror Mage&quot;,
+            &quot;Hercules&quot;,
+            &quot;Viscount Chocolat&quot;,
+            &quot;Cotton Candy Dandy&quot;,
+            &quot;Pixie&quot;,
+            &quot;Keeb&quot;,
+            &quot;Kool Wip&quot;,
+            &quot;Lance A Little&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;draconian&quot;,
+          &quot;archetype&quot;: &quot;Candy&quot;,
+          &quot;deck&quot;: [
+            &quot;Viscount Chocolat&quot;,
+            &quot;Miss Muffet&quot;,
+            &quot;Life Saver&quot;,
+            &quot;The Candy Cane Crook&quot;,
+            &quot;Leapfrog&quot;,
+            &quot;Chubby Bunny&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Jelly-ton&quot;,
+            &quot;Weensy&quot;,
+            &quot;Licorice&quot;,
+            &quot;Dastardly Spirit&quot;,
+            &quot;The Huntsman&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;OrigamiOrAGamer&quot;,
+          &quot;archetype&quot;: &quot;Candy&quot;,
+          &quot;deck&quot;: [
+            &quot;Mech-a-Man&quot;,
+            &quot;Viscount Chocolat&quot;,
+            &quot;Cotton Candy Dandy&quot;,
+            &quot;Gummy Wyrm&quot;,
+            &quot;Knight of the Holy Cane&quot;,
+            &quot;Frosting Dragon&quot;,
+            &quot;Kool Wip&quot;,
+            &quot;Cherry Topples&quot;,
+            &quot;The Sour Patch Kid&quot;,
+            &quot;Jelly-ton&quot;,
+            &quot;Miseria&quot;,
+            &quot;Crystal&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Produkt&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Scale-a-tor&quot;,
+            &quot;Thunder of Dragons&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Wormscale Tinkerer&quot;,
+            &quot;Lance A Little&quot;,
+            &quot;Leapfrog&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Friendly Spirit&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Voxerole&quot;,
+          &quot;archetype&quot;: &quot;Candy&quot;,
+          &quot;deck&quot;: [
+            &quot;Viscount Chocolat&quot;,
+            &quot;Caramel&quot;,
+            &quot;Pixie&quot;,
+            &quot;Kool Wip&quot;,
+            &quot;The Candy Cane Crook&quot;,
+            &quot;Lance A Little&quot;,
+            &quot;Lollipop Faerie&quot;,
+            &quot;Candy Claws&quot;,
+            &quot;Jelly-ton&quot;,
+            &quot;Licorice&quot;,
+            &quot;Barbosa&quot;,
+            &quot;The Three Chef-Keteers&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-06&quot;,
+      &quot;date&quot;: &quot;2026-06-19&quot;,
+      &quot;event&quot;: &quot;June Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;camroz&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;Morgan Le Fae&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Don Quixote&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Rollo&quot;,
+            &quot;Crystal&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Hercules&quot;,
+            &quot;Oracle of Fortunes&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;dob&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Bubbles&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Destiny&quot;,
+            &quot;Fortune Teller&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Miseria&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Crystal&quot;,
+            &quot;Snapping Hydra&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;EgaL&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Netherbinder&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Crystal&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Perseus&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Katsuu&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Bubbles&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Crystal&quot;,
+            &quot;Eros&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;pezyo&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Crystal&quot;,
+            &quot;Guinevere&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;travelprep&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Rollo&quot;,
+            &quot;Black Hole&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Smug&quot;,
+            &quot;Wicked Witch&quot;,
+            &quot;Apophis&quot;,
+            &quot;Flopsy&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-07&quot;,
+      &quot;date&quot;: &quot;2026-07-17&quot;,
+      &quot;event&quot;: &quot;July Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;doonboggle&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Bubbles&quot;,
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;Nuada, Radiant King&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Crystal&quot;,
+            &quot;Mirror Mage&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Perseus&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Harganok&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Rollo&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Leapfrog&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Daedalus&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Haumph&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Rollo&quot;,
+            &quot;Mirror Mage&quot;,
+            &quot;Smug&quot;,
+            &quot;Guinevere&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;ima&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Ace of Hearts&quot;,
+            &quot;Destiny&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Miseria&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Rollo&quot;,
+            &quot;Crystal&quot;,
+            &quot;Smug&quot;,
+            &quot;Monstro&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Mordoream&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Glory Seeker&quot;,
+            &quot;Lance A Little&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Destiny&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Crystal&quot;,
+            &quot;Faerie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;pandafarmer&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Catatouille&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Jaws&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Crystal&quot;,
+            &quot;Twilight Sprinkles&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Perseus&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Prackalakin&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Destiny&quot;,
+            &quot;Fortune Teller&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Rollo&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Crystal&quot;,
+            &quot;Eros&quot;,
+            &quot;Guinevere&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;shkuk&quot;,
+          &quot;archetype&quot;: &quot;Candy&quot;,
+          &quot;deck&quot;: [
+            &quot;Gingerbread Witch&quot;,
+            &quot;Catatouille&quot;,
+            &quot;Miseria&quot;,
+            &quot;Pretty Patissier&quot;,
+            &quot;The Candy Cane Crook&quot;,
+            &quot;Candy Apple Tree&quot;,
+            &quot;Jaws&quot;,
+            &quot;Twilight Sprinkles&quot;,
+            &quot;Viscount Chocolat&quot;,
+            &quot;Cotton Candy Dandy&quot;,
+            &quot;Gummy Wyrm&quot;,
+            &quot;Licorice&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-08&quot;,
+      &quot;date&quot;: &quot;2026-08-21&quot;,
+      &quot;event&quot;: &quot;August Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;CunningWish&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Destiny&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Rollo&quot;,
+            &quot;Mirror Mage&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;illmater&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Fortune Teller&quot;,
+            &quot;Nuada, Radiant King&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Destiny&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Knight of the Holy Cane&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Licorice&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;tretherio&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Bubbles&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Mech-a-Man&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Destiny&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Rollo&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Perseus&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Uli&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Ace of Hearts&quot;,
+            &quot;Miseria&quot;,
+            &quot;Jaws&quot;,
+            &quot;Maverick &amp; Icewing&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Mysterio, the Great and Powerful&quot;,
+            &quot;Sir Francis Drake&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Scale-a-tor&quot;,
+            &quot;The Burninator&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        }
+      ]
+    }
+  ]
+}</pre></details>
+</main>
+<script type="application/json" id="captain-data">{"slug": "goat-t", "name": "Goat T", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "Donald Duck", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mechanical Dragon", "Wormscale Tinkerer", "Viscount Chocolat", "Miss Muffet", "Life Saver", "Candy Apple Tree", "Chubby Bunny", "Oracle of Fortunes", "Weensy", "Licorice", "Miseria"]}, {"username": "mason_rb", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mechanical Dragon", "The Burninator", "Sir Francis Drake", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Lance A Little", "Rollo", "Oracle of Fortunes", "Mr. Fox", "Miseria"]}, {"username": "Pastafarianx", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mirror Mage", "Ace of Hearts", "The Burninator", "Gummy Wyrm", "Life Saver", "Frosting Dragon", "Catatouille", "Rollo", "Oracle of Fortunes", "Miseria", "The Butcher"]}, {"username": "Plytren", "archetype": "Candy", "deck": ["Viscount Chocolat", "Miss Muffet", "Life Saver", "Candy Apple Tree", "The Candy Cane Crook", "Candy Claws", "Chubby Bunny", "Jelly-ton", "Weensy", "Licorice", "Dastardly Spirit", "Barbosa"]}, {"username": "Reithe", "archetype": "Treasures", "deck": ["Aladdin", "Frog Prince", "Don Quixote", "Kid Icarus", "Wink", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Oracle of Fortunes", "Mr. Fox", "Miseria", "The Huntsman"]}, {"username": "TurquoiseLink", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Faerie Queen", "Ace of Hearts", "Pisces", "Wormscale Tinkerer", "Rollo", "Mr. Fox", "Miseria", "The Butcher", "Crystal"]}]}, {"id": "2026-05", "date": "2026-05-22", "event": "May Monthly", "players": [{"username": "Armadi", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Guinevere", "The Burninator", "Smug", "Snapping Hydra", "Wormscale Tinkerer", "Rollo", "Miseria", "The Huntsman", "Orion, the Hunter"]}, {"username": "BustopherJones", "archetype": "Treasures", "deck": ["Wormscale Tinkerer", "Viscount Chocolat", "Keeb", "Cherry Topples", "The Sour Patch Kid", "Lance A Little", "Chubby Cheep", "Rollo", "Oracle of Fortunes", "Mr. Fox", "Miseria", "Crystal"]}, {"username": "ChewTerr", "archetype": "Candy", "deck": ["Prickles", "Mirror Mage", "Hercules", "Viscount Chocolat", "Cotton Candy Dandy", "Pixie", "Keeb", "Kool Wip", "Lance A Little", "Oracle of Fortunes", "Mr. Fox", "Miseria"]}, {"username": "draconian", "archetype": "Candy", "deck": ["Viscount Chocolat", "Miss Muffet", "Life Saver", "The Candy Cane Crook", "Leapfrog", "Chubby Bunny", "Netherbinder", "Jelly-ton", "Weensy", "Licorice", "Dastardly Spirit", "The Huntsman"]}, {"username": "OrigamiOrAGamer", "archetype": "Candy", "deck": ["Mech-a-Man", "Viscount Chocolat", "Cotton Candy Dandy", "Gummy Wyrm", "Knight of the Holy Cane", "Frosting Dragon", "Kool Wip", "Cherry Topples", "The Sour Patch Kid", "Jelly-ton", "Miseria", "Crystal"]}, {"username": "Produkt", "archetype": "Treasures", "deck": ["Scale-a-tor", "Thunder of Dragons", "Sir Francis Drake", "Wormscale Tinkerer", "Lance A Little", "Leapfrog", "Netherbinder", "Sunflare Glider", "Friendly Spirit", "Mr. Fox", "Miseria", "The Huntsman"]}, {"username": "Voxerole", "archetype": "Candy", "deck": ["Viscount Chocolat", "Caramel", "Pixie", "Kool Wip", "The Candy Cane Crook", "Lance A Little", "Lollipop Faerie", "Candy Claws", "Jelly-ton", "Licorice", "Barbosa", "The Three Chef-Keteers"]}]}, {"id": "2026-06", "date": "2026-06-19", "event": "June Monthly", "players": [{"username": "camroz", "archetype": "Treasures", "deck": ["Lance A Little", "Miseria", "Morgan Le Fae", "The Huntsman", "Don Quixote", "Mr. Fox", "Netherbinder", "Rollo", "Crystal", "Sir Francis Drake", "Hercules", "Oracle of Fortunes"]}, {"username": "dob", "archetype": "Treasures", "deck": ["Bubbles", "Ace of Hearts", "Destiny", "Fortune Teller", "Mech-a-Man", "Miseria", "Mortakon", "Crystal", "Snapping Hydra", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "EgaL", "archetype": "Treasures", "deck": ["Lance A Little", "Ace of Hearts", "Destiny", "Miseria", "The Huntsman", "Mortakon", "Netherbinder", "Orion, the Hunter", "Crystal", "Guinevere", "Perseus", "The Burninator"]}, {"username": "Katsuu", "archetype": "Treasures", "deck": ["Bubbles", "Ace of Hearts", "Destiny", "Miseria", "Young Hercules", "Maverick & Icewing", "Mortakon", "Crystal", "Eros", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "pezyo", "archetype": "Treasures", "deck": ["Destiny", "Miseria", "Young Hercules", "Baron Bok", "Maverick & Icewing", "Mortakon", "Mr. Fox", "Astral Navigator", "Crystal", "Guinevere", "The Burninator", "Wormscale Tinkerer"]}, {"username": "travelprep", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mr. Fox", "Rollo", "Black Hole", "Sir Francis Drake", "Smug", "Wicked Witch", "Apophis", "Flopsy", "Oracle of Fortunes", "The Burninator", "Wormscale Tinkerer"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "doonboggle", "archetype": "Treasures", "deck": ["Bubbles", "Lance A Little", "Miseria", "Nuada, Radiant King", "The Huntsman", "Young Hercules", "Orion, the Hunter", "Crystal", "Mirror Mage", "Guinevere", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "Harganok", "archetype": "Treasures", "deck": ["Lance A Little", "Miseria", "The Huntsman", "Mr. Fox", "Rollo", "Sunflare Glider", "Leapfrog", "Sir Francis Drake", "Daedalus", "Oracle of Fortunes", "The Burninator", "Wormscale Tinkerer"]}, {"username": "Haumph", "archetype": "Treasures", "deck": ["Destiny", "Miseria", "The Huntsman", "Young Hercules", "Maverick & Icewing", "Mr. Fox", "Rollo", "Mirror Mage", "Smug", "Guinevere", "The Burninator", "Wormscale Tinkerer"]}, {"username": "ima", "archetype": "Treasures", "deck": ["Ace of Hearts", "Destiny", "Mech-a-Man", "Miseria", "Mortakon", "Mr. Fox", "Rollo", "Crystal", "Smug", "Monstro", "Oracle of Fortunes", "Wormscale Tinkerer"]}, {"username": "Mordoream", "archetype": "Treasures", "deck": ["Glory Seeker", "Lance A Little", "Ace of Hearts", "Destiny", "Mech-a-Man", "Miseria", "The Huntsman", "Young Hercules", "Maverick & Icewing", "Mortakon", "Crystal", "Faerie Queen"]}, {"username": "pandafarmer", "archetype": "Treasures", "deck": ["Catatouille", "The Huntsman", "Young Hercules", "Jaws", "Mr. Fox", "Sunflare Glider", "Crystal", "Twilight Sprinkles", "Guinevere", "Perseus", "Sigrun, Valkyrie Queen", "Wormscale Tinkerer"]}, {"username": "Prackalakin", "archetype": "Treasures", "deck": ["Destiny", "Fortune Teller", "Miseria", "The Huntsman", "Young Hercules", "Baron Bok", "Rollo", "Astral Navigator", "Crystal", "Eros", "Guinevere", "The Burninator"]}, {"username": "shkuk", "archetype": "Candy", "deck": ["Gingerbread Witch", "Catatouille", "Miseria", "Pretty Patissier", "The Candy Cane Crook", "Candy Apple Tree", "Jaws", "Twilight Sprinkles", "Viscount Chocolat", "Cotton Candy Dandy", "Gummy Wyrm", "Licorice"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "CunningWish", "archetype": "Treasures", "deck": ["Lance A Little", "Miseria", "The Huntsman", "Destiny", "Mortakon", "Mr. Fox", "Rollo", "Mirror Mage", "Guinevere", "Scale-a-tor", "Sigrun, Valkyrie Queen", "Wormscale Tinkerer"]}, {"username": "illmater", "archetype": "Treasures", "deck": ["Lance A Little", "Fortune Teller", "Nuada, Radiant King", "The Huntsman", "Destiny", "Mortakon", "Orion, the Hunter", "Knight of the Holy Cane", "Guinevere", "Licorice", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "tretherio", "archetype": "Treasures", "deck": ["Bubbles", "Ace of Hearts", "Mech-a-Man", "Miseria", "Young Hercules", "Destiny", "Mortakon", "Rollo", "Guinevere", "Perseus", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "Uli", "archetype": "Treasures", "deck": ["Aladdin", "Ace of Hearts", "Miseria", "Jaws", "Maverick & Icewing", "Mechanical Dragon", "Mysterio, the Great and Powerful", "Sir Francis Drake", "Oracle of Fortunes", "Scale-a-tor", "The Burninator", "Wormscale Tinkerer"]}]}]}</script>
+<script>
+const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
+function best12(decks) {
+  const counts = {};
+  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
+  return Object.entries(counts)
+    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
+    .slice(0, 12);
+}
+function renderBest12() {
+  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
+    .map(cb => cb.dataset.month);
+  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
+  const tbody = document.querySelector('#best12-table tbody');
+  tbody.innerHTML = '';
+  best12(decks).forEach(([card, freq]) => {
+    const tr = document.createElement('tr');
+    const tdCard = document.createElement('td');
+    tdCard.textContent = card;
+    const tdFreq = document.createElement('td');
+    tdFreq.className = 'num';
+    tdFreq.textContent = freq;
+    const tdPct = document.createElement('td');
+    tdPct.className = 'num';
+    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
+    tr.append(tdCard, tdFreq, tdPct);
+    tbody.appendChild(tr);
+  });
+  document.querySelector('#best12-count').textContent = decks.length;
+}
+renderBest12();
+document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderBest12));
+
+function sortTable(th) {
+  const table = th.closest('table'), tbody = table.querySelector('tbody');
+  const idx = Array.from(th.parentNode.children).indexOf(th);
+  const dir = th.dataset.dir === 'asc' ? -1 : 1;
+  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
+  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
+  const rows = Array.from(tbody.rows);
+  rows.sort((a, b) => {
+    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
+    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
+    const an = parseFloat(av), bn = parseFloat(bv);
+    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
+      ? an - bn : av.localeCompare(bv);
+    return cmp * dir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+document.querySelectorAll('th[data-sort]').forEach(th =>
+  th.addEventListener('click', () => sortTable(th)));
+const deckFilter = document.getElementById('deck-filter');
+if (deckFilter) {
+  deckFilter.addEventListener('input', () => {
+    const q = deckFilter.value.toLowerCase();
+    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
+      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galileo Galilei — Captain Stats | Galaxy Stats</title>
+<meta name="description" content="Galileo Galilei captain statistics across Once Upon a Galaxy monthly tournaments: 28 winning decks across 3 months, with best 12 cards and full decklists.">
+<link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/galileo-galilei/">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=1">
+<style>
+  main { max-width: 1100px; }
+  .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
+  .data-table th { text-align:left; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+                   color:var(--muted); padding:8px 10px; border-bottom:2px solid var(--border);
+                   cursor:pointer; user-select:none; white-space:nowrap; }
+  .data-table th:hover { color:var(--text); }
+  .data-table th.no-sort { cursor:default; }
+  .data-table th.no-sort:hover { color:var(--muted); }
+  .data-table td { padding:7px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .data-table tbody tr:hover { background:var(--surface); }
+  .data-table td.num, .data-table th.num { text-align:right; }
+  .month-chip { display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace;
+                font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted);
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:5px 10px; cursor:pointer; transition:all 0.15s; }
+  .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
+                                   background:rgba(200,169,110,0.08); }
+  .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  details.raw-json { margin-top:40px; border:1px solid var(--border); border-radius:4px;
+                     background:var(--surface); }
+  details.raw-json summary { cursor:pointer; padding:12px 16px; font-family:'IBM Plex Mono',monospace;
+                             font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+  details.raw-json summary:hover { color:var(--text); }
+  details.raw-json pre { padding:0 16px 16px; font-size:10px; line-height:1.7; color:var(--muted);
+                         overflow-x:auto; }
+  .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
+                padding:12px 16px; border-left:2px solid var(--border); }
+</style>
+</head>
+<body>
+<header>
+  <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+  <h1>Galileo Galilei</h1>
+  <div class="subtitle">Captain stats · <a href="../" style="color:var(--accent)">all captains</a></div>
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-value">28</div><div class="stat-label">Winning decks</div></div>
+    <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Months</div></div>
+  </div>
+</header>
+
+<main>
+  <div class="section active">
+    <div class="section-title">Best 12</div>
+    <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
+      below. Check or uncheck months to see how the picks shift.</div>
+    <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-06">2026-06</label><label class="month-chip"><input type="checkbox" checked data-month="2026-07">2026-07</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
+    <table class="data-table" id="best12-table">
+      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="section-title" style="margin-top:48px">Decklists</div>
+    <div class="section-desc">Every winning deck across all months.</div>
+    <div class="captain-filter">
+      <input id="deck-filter" class="filter-input" type="text" placeholder="Filter by player, archetype, month, or card…">
+    </div>
+    <table class="data-table" id="deck-table">
+      <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
+        <th data-sort="archetype">Archetype</th><th class="no-sort">Deck</th></tr></thead>
+      <tbody>
+        <tr><td data-v="2026-06">2026-06</td><td>Aerores</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">The Raven</span><span class="deck-pill">Bubbles</span><span class="deck-pill">Destiny</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Apophis</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">Guinevere</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>Beachy</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Toto</span><span class="deck-pill">Miseria</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Pisces</span><span class="deck-pill">Apophis</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>Cactuspuppy</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>crazycatz</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Eros</span><span class="deck-pill">Pisces</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>Mrk_ling</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Apophis</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Chilichibi</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Eros</span><span class="deck-pill">Pisces</span><span class="deck-pill">Apophis</span><span class="deck-pill">Ptah</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>dtrooper</td><td>Boons</td><td><div class="deck-pills"><span class="deck-pill">Destiny</span><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Crystal</span><span class="deck-pill">Anubis</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Grgapm</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Apophis</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Katsuu</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Crystal</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Kvkriemhild</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Apophis</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Neonemi</td><td>Boons</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">The Raven</span><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Apophis</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Nokiou</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Toto</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Apophis</span><span class="deck-pill">Hephaestus</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>synfist</td><td>Boons</td><td><div class="deck-pills"><span class="deck-pill">Miseria</span><span class="deck-pill">Sugar Rush</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Anubis</span><span class="deck-pill">Apophis</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>XenoGemini</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Bubbles</span><span class="deck-pill">Destiny</span><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Eros</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>adub</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Eros</span><span class="deck-pill">Apophis</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Capt Jack</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">The Raven</span><span class="deck-pill">Bubbles</span><span class="deck-pill">Destiny</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Apophis</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">Guinevere</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Caraway</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Toto</span><span class="deck-pill">Aladdin</span><span class="deck-pill">Miseria</span><span class="deck-pill">Chaos</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Pisces</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Eros</span><span class="deck-pill">Apophis</span><span class="deck-pill">Astral Navigator</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Danb1563</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Miseria</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Pisces</span><span class="deck-pill">Apophis</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>godus</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Anubis</span><span class="deck-pill">Apophis</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Mischief</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>igglypuff</td><td>Boons</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Anubis</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Mischief</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Ilyon</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Toto</span><span class="deck-pill">Miseria</span><span class="deck-pill">Sugar Rush</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Apophis</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>kurisu</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Miseria</span><span class="deck-pill">Destiny</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Apophis</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>leonidas4922</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Apophis</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Moo</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">Sugar Rush</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Destiny</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Apophis</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>NgNavi</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Destiny</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Pisces</span><span class="deck-pill">Apophis</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>SouprizeAttack</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">The Raven</span><span class="deck-pill">Bubbles</span><span class="deck-pill">Destiny</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Apophis</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">Guinevere</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Volkin</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Destiny</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Eros</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Xavin</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Miseria</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Destiny</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Eros</span><span class="deck-pill">Apophis</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <details class="raw-json"><summary>Raw JSON</summary><pre>{
+  &quot;slug&quot;: &quot;galileo-galilei&quot;,
+  &quot;name&quot;: &quot;Galileo Galilei&quot;,
+  &quot;months&quot;: [
+    {
+      &quot;id&quot;: &quot;2026-06&quot;,
+      &quot;date&quot;: &quot;2026-06-19&quot;,
+      &quot;event&quot;: &quot;June Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;Aerores&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;The Raven&quot;,
+            &quot;Bubbles&quot;,
+            &quot;Destiny&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Black Hole&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Apophis&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;Guinevere&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Beachy&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Toto&quot;,
+            &quot;Miseria&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Tantalus&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Pisces&quot;,
+            &quot;Apophis&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Cactuspuppy&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;crazycatz&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Mechanical Dragon&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Black Hole&quot;,
+            &quot;Eros&quot;,
+            &quot;Pisces&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Mrk_ling&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Tantalus&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Apophis&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-07&quot;,
+      &quot;date&quot;: &quot;2026-07-17&quot;,
+      &quot;event&quot;: &quot;July Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;Chilichibi&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Tantalus&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Eros&quot;,
+            &quot;Pisces&quot;,
+            &quot;Apophis&quot;,
+            &quot;Ptah&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;Wormscale Tinkerer&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;dtrooper&quot;,
+          &quot;archetype&quot;: &quot;Boons&quot;,
+          &quot;deck&quot;: [
+            &quot;Destiny&quot;,
+            &quot;Fortune Teller&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Crystal&quot;,
+            &quot;Anubis&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Grgapm&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Apophis&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Katsuu&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Crystal&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;The Burninator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Kvkriemhild&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Apophis&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Neonemi&quot;,
+          &quot;archetype&quot;: &quot;Boons&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;The Raven&quot;,
+            &quot;Destiny&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Apophis&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Nokiou&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Toto&quot;,
+            &quot;Miseria&quot;,
+            &quot;The Huntsman&quot;,
+            &quot;Combustible Dragon&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Tantalus&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Apophis&quot;,
+            &quot;Hephaestus&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;synfist&quot;,
+          &quot;archetype&quot;: &quot;Boons&quot;,
+          &quot;deck&quot;: [
+            &quot;Miseria&quot;,
+            &quot;Sugar Rush&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Tantalus&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Anubis&quot;,
+            &quot;Apophis&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;XenoGemini&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Bubbles&quot;,
+            &quot;Destiny&quot;,
+            &quot;Fortune Teller&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Eros&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;The Burninator&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2026-08&quot;,
+      &quot;date&quot;: &quot;2026-08-21&quot;,
+      &quot;event&quot;: &quot;August Monthly&quot;,
+      &quot;players&quot;: [
+        {
+          &quot;username&quot;: &quot;adub&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Black Hole&quot;,
+            &quot;Eros&quot;,
+            &quot;Apophis&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Capt Jack&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;The Raven&quot;,
+            &quot;Bubbles&quot;,
+            &quot;Destiny&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Black Hole&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Apophis&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;Guinevere&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Caraway&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Toto&quot;,
+            &quot;Aladdin&quot;,
+            &quot;Miseria&quot;,
+            &quot;Chaos&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Pisces&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Tantalus&quot;,
+            &quot;Eros&quot;,
+            &quot;Apophis&quot;,
+            &quot;Astral Navigator&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Danb1563&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Miseria&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Mr. Fox&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Tantalus&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Pisces&quot;,
+            &quot;Apophis&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;godus&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Anubis&quot;,
+            &quot;Apophis&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Mischief&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;igglypuff&quot;,
+          &quot;archetype&quot;: &quot;Boons&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Tantalus&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Black Hole&quot;,
+            &quot;Wicked Witch&quot;,
+            &quot;Anubis&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Mischief&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Ilyon&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Toto&quot;,
+            &quot;Miseria&quot;,
+            &quot;Sugar Rush&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Tantalus&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Apophis&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;kurisu&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Fortune Teller&quot;,
+            &quot;Miseria&quot;,
+            &quot;Destiny&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Tantalus&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Apophis&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Oracle of Fortunes&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;leonidas4922&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Aladdin&quot;,
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Black Hole&quot;,
+            &quot;Apophis&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Moo&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;Sugar Rush&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Destiny&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Tantalus&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Apophis&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;NgNavi&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Destiny&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Pisces&quot;,
+            &quot;Apophis&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;SouprizeAttack&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;The Raven&quot;,
+            &quot;Bubbles&quot;,
+            &quot;Destiny&quot;,
+            &quot;Young Hercules&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Black Hole&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Apophis&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;,
+            &quot;Guinevere&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Volkin&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Destiny&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Wishing Fish&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Black Hole&quot;,
+            &quot;Eros&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Hephaestus&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        },
+        {
+          &quot;username&quot;: &quot;Xavin&quot;,
+          &quot;archetype&quot;: &quot;Treasures&quot;,
+          &quot;deck&quot;: [
+            &quot;Lance A Little&quot;,
+            &quot;Miseria&quot;,
+            &quot;Baron Bok&quot;,
+            &quot;Destiny&quot;,
+            &quot;Mortakon&quot;,
+            &quot;Orion, the Hunter&quot;,
+            &quot;Sunflare Glider&quot;,
+            &quot;Astral Navigator&quot;,
+            &quot;Eros&quot;,
+            &quot;Apophis&quot;,
+            &quot;Guinevere&quot;,
+            &quot;Sigrun, Valkyrie Queen&quot;
+          ]
+        }
+      ]
+    }
+  ]
+}</pre></details>
+</main>
+<script type="application/json" id="captain-data">{"slug": "galileo-galilei", "name": "Galileo Galilei", "months": [{"id": "2026-06", "date": "2026-06-19", "event": "June Monthly", "players": [{"username": "Aerores", "archetype": "Treasures", "deck": ["Lance A Little", "The Raven", "Bubbles", "Destiny", "Young Hercules", "Wishing Fish", "Baron Bok", "Black Hole", "Astral Navigator", "Apophis", "Sigrun, Valkyrie Queen", "Guinevere"]}, {"username": "Beachy", "archetype": "Treasures", "deck": ["Lance A Little", "Toto", "Miseria", "Orion, the Hunter", "Sunflare Glider", "Tantalus", "Wishing Fish", "Astral Navigator", "Eros", "Pisces", "Apophis", "Sigrun, Valkyrie Queen"]}, {"username": "Cactuspuppy", "archetype": "Treasures", "deck": ["Lance A Little", "Destiny", "Miseria", "Young Hercules", "Baron Bok", "Sunflare Glider", "Astral Navigator", "Eros", "Guinevere", "Hephaestus", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "crazycatz", "archetype": "Treasures", "deck": ["Lance A Little", "Destiny", "Miseria", "Baron Bok", "Mechanical Dragon", "Sunflare Glider", "Astral Navigator", "Black Hole", "Eros", "Pisces", "Sigrun, Valkyrie Queen", "Wormscale Tinkerer"]}, {"username": "Mrk_ling", "archetype": "Treasures", "deck": ["Lance A Little", "Destiny", "Miseria", "Baron Bok", "Sunflare Glider", "Tantalus", "Wishing Fish", "Astral Navigator", "Eros", "Apophis", "Hephaestus", "Sigrun, Valkyrie Queen"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Chilichibi", "archetype": "Treasures", "deck": ["Miseria", "Young Hercules", "Orion, the Hunter", "Sunflare Glider", "Tantalus", "Wishing Fish", "Eros", "Pisces", "Apophis", "Ptah", "Sigrun, Valkyrie Queen", "Wormscale Tinkerer"]}, {"username": "dtrooper", "archetype": "Boons", "deck": ["Destiny", "Fortune Teller", "Miseria", "Young Hercules", "Baron Bok", "Mortakon", "Mr. Fox", "Astral Navigator", "Crystal", "Anubis", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "Grgapm", "archetype": "Treasures", "deck": ["Destiny", "Miseria", "Young Hercules", "Baron Bok", "Mortakon", "Orion, the Hunter", "Sunflare Glider", "Wishing Fish", "Astral Navigator", "Eros", "Apophis", "Sigrun, Valkyrie Queen"]}, {"username": "Katsuu", "archetype": "Treasures", "deck": ["Lance A Little", "Destiny", "Miseria", "Young Hercules", "Baron Bok", "Mortakon", "Sunflare Glider", "Astral Navigator", "Crystal", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "Kvkriemhild", "archetype": "Treasures", "deck": ["Lance A Little", "Destiny", "Miseria", "Young Hercules", "Baron Bok", "Orion, the Hunter", "Sunflare Glider", "Astral Navigator", "Eros", "Apophis", "Guinevere", "Sigrun, Valkyrie Queen"]}, {"username": "Neonemi", "archetype": "Boons", "deck": ["Lance A Little", "The Raven", "Destiny", "Miseria", "Young Hercules", "Baron Bok", "Orion, the Hunter", "Sunflare Glider", "Astral Navigator", "Eros", "Apophis", "Sigrun, Valkyrie Queen"]}, {"username": "Nokiou", "archetype": "Treasures", "deck": ["Toto", "Miseria", "The Huntsman", "Combustible Dragon", "Mr. Fox", "Sunflare Glider", "Tantalus", "Wishing Fish", "Astral Navigator", "Eros", "Apophis", "Hephaestus"]}, {"username": "synfist", "archetype": "Boons", "deck": ["Miseria", "Sugar Rush", "Young Hercules", "Baron Bok", "Orion, the Hunter", "Sunflare Glider", "Tantalus", "Wishing Fish", "Astral Navigator", "Eros", "Anubis", "Apophis"]}, {"username": "XenoGemini", "archetype": "Treasures", "deck": ["Bubbles", "Destiny", "Fortune Teller", "Miseria", "Young Hercules", "Mortakon", "Sunflare Glider", "Wishing Fish", "Eros", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "adub", "archetype": "Treasures", "deck": ["Aladdin", "Lance A Little", "Miseria", "Baron Bok", "Orion, the Hunter", "Sunflare Glider", "Astral Navigator", "Black Hole", "Eros", "Apophis", "Hephaestus", "Sigrun, Valkyrie Queen"]}, {"username": "Capt Jack", "archetype": "Treasures", "deck": ["Lance A Little", "The Raven", "Bubbles", "Destiny", "Young Hercules", "Wishing Fish", "Baron Bok", "Black Hole", "Astral Navigator", "Apophis", "Sigrun, Valkyrie Queen", "Guinevere"]}, {"username": "Caraway", "archetype": "Treasures", "deck": ["Toto", "Aladdin", "Miseria", "Chaos", "Sunflare Glider", "Pisces", "Hephaestus", "Wishing Fish", "Tantalus", "Eros", "Apophis", "Astral Navigator"]}, {"username": "Danb1563", "archetype": "Treasures", "deck": ["Miseria", "Baron Bok", "Mr. Fox", "Sunflare Glider", "Tantalus", "Astral Navigator", "Eros", "Pisces", "Apophis", "Guinevere", "Hephaestus", "Sigrun, Valkyrie Queen"]}, {"username": "godus", "archetype": "Treasures", "deck": ["Lance A Little", "Miseria", "Baron Bok", "Orion, the Hunter", "Sunflare Glider", "Astral Navigator", "Eros", "Anubis", "Apophis", "Guinevere", "Mischief", "Sigrun, Valkyrie Queen"]}, {"username": "igglypuff", "archetype": "Boons", "deck": ["Lance A Little", "Miseria", "Baron Bok", "Orion, the Hunter", "Tantalus", "Astral Navigator", "Black Hole", "Wicked Witch", "Anubis", "Hephaestus", "Mischief", "Sigrun, Valkyrie Queen"]}, {"username": "Ilyon", "archetype": "Treasures", "deck": ["Toto", "Miseria", "Sugar Rush", "Baron Bok", "Sunflare Glider", "Tantalus", "Wishing Fish", "Astral Navigator", "Eros", "Apophis", "Oracle of Fortunes", "Sigrun, Valkyrie Queen"]}, {"username": "kurisu", "archetype": "Treasures", "deck": ["Lance A Little", "Fortune Teller", "Miseria", "Destiny", "Orion, the Hunter", "Sunflare Glider", "Tantalus", "Astral Navigator", "Apophis", "Guinevere", "Oracle of Fortunes", "Sigrun, Valkyrie Queen"]}, {"username": "leonidas4922", "archetype": "Treasures", "deck": ["Aladdin", "Lance A Little", "Miseria", "Young Hercules", "Sunflare Glider", "Wishing Fish", "Astral Navigator", "Black Hole", "Apophis", "Guinevere", "Hephaestus", "Sigrun, Valkyrie Queen"]}, {"username": "Moo", "archetype": "Treasures", "deck": ["Lance A Little", "Miseria", "Sugar Rush", "Baron Bok", "Destiny", "Orion, the Hunter", "Tantalus", "Astral Navigator", "Eros", "Apophis", "Hephaestus", "Sigrun, Valkyrie Queen"]}, {"username": "NgNavi", "archetype": "Treasures", "deck": ["Lance A Little", "Miseria", "Baron Bok", "Destiny", "Sunflare Glider", "Wishing Fish", "Astral Navigator", "Pisces", "Apophis", "Guinevere", "Hephaestus", "Sigrun, Valkyrie Queen"]}, {"username": "SouprizeAttack", "archetype": "Treasures", "deck": ["Lance A Little", "The Raven", "Bubbles", "Destiny", "Young Hercules", "Wishing Fish", "Baron Bok", "Black Hole", "Astral Navigator", "Apophis", "Sigrun, Valkyrie Queen", "Guinevere"]}, {"username": "Volkin", "archetype": "Treasures", "deck": ["Lance A Little", "Miseria", "Baron Bok", "Destiny", "Sunflare Glider", "Wishing Fish", "Astral Navigator", "Black Hole", "Eros", "Guinevere", "Hephaestus", "Sigrun, Valkyrie Queen"]}, {"username": "Xavin", "archetype": "Treasures", "deck": ["Lance A Little", "Miseria", "Baron Bok", "Destiny", "Mortakon", "Orion, the Hunter", "Sunflare Glider", "Astral Navigator", "Eros", "Apophis", "Guinevere", "Sigrun, Valkyrie Queen"]}]}]}</script>
+<script>
+const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
+function best12(decks) {
+  const counts = {};
+  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
+  return Object.entries(counts)
+    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
+    .slice(0, 12);
+}
+function renderBest12() {
+  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
+    .map(cb => cb.dataset.month);
+  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
+  const tbody = document.querySelector('#best12-table tbody');
+  tbody.innerHTML = '';
+  best12(decks).forEach(([card, freq]) => {
+    const tr = document.createElement('tr');
+    const tdCard = document.createElement('td');
+    tdCard.textContent = card;
+    const tdFreq = document.createElement('td');
+    tdFreq.className = 'num';
+    tdFreq.textContent = freq;
+    const tdPct = document.createElement('td');
+    tdPct.className = 'num';
+    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
+    tr.append(tdCard, tdFreq, tdPct);
+    tbody.appendChild(tr);
+  });
+  document.querySelector('#best12-count').textContent = decks.length;
+}
+renderBest12();
+document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderBest12));
+
+function sortTable(th) {
+  const table = th.closest('table'), tbody = table.querySelector('tbody');
+  const idx = Array.from(th.parentNode.children).indexOf(th);
+  const dir = th.dataset.dir === 'asc' ? -1 : 1;
+  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
+  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
+  const rows = Array.from(tbody.rows);
+  rows.sort((a, b) => {
+    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
+    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
+    const an = parseFloat(av), bn = parseFloat(bv);
+    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
+      ? an - bn : av.localeCompare(bv);
+    return cmp * dir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+document.querySelectorAll('th[data-sort]').forEach(th =>
+  th.addEventListener('click', () => sortTable(th)));
+const deckFilter = document.getElementById('deck-filter');
+if (deckFilter) {
+  deckFilter.addEventListener('input', () => {
+    const q = deckFilter.value.toLowerCase();
+    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
+      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
+</script>
+</body>
+</html>
