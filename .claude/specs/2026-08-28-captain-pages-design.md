@@ -7,8 +7,9 @@
 
 One static HTML page per captain, aggregating that captain's data across all monthly
 tournament reports. Slug = `etl/dist/captains.json` key with underscores replaced by
-dashes. This is the "for now" version: each page embeds the captain's full JSON and
-renders two sortable/filterable tables. A refinement pass will iterate on presentation.
+dashes. This is the "for now" version: each page embeds the captain's raw deck data
+per month and renders two sortable/filterable tables. A refinement pass will iterate
+on presentation.
 
 ## Goals
 
@@ -21,7 +22,8 @@ renders two sortable/filterable tables. A refinement pass will iterate on presen
 ## Non-goals (deferred to refinement pass)
 
 - Links from monthly reports or the main page to captain pages.
-- Dedicated signature/lift UI (data is embedded, shown only in the raw JSON block).
+- Signature/lift UI — and the signature data itself (see `context/TODO.md` for the
+  future approach).
 - Any per-captain narrative content or images.
 
 ## Data model
@@ -38,9 +40,6 @@ plus `etl/dist/captains.json` and builds, per captain:
       "id": "2026-08",
       "date": "2026-08-21",
       "event": "August Monthly",
-      "n": 14,
-      "signature": [{ "card": "...", "lift": 13.1, "freq": 2, "n": 14 }],
-      "best12": [{ "card": "...", "freq": 14, "n": 14, "pct": 100.0 }],
       "players": [{ "username": "adub", "archetype": "Treasures", "deck": ["...", "..."] }]
     }
   ]
@@ -50,8 +49,11 @@ plus `etl/dist/captains.json` and builds, per captain:
 - `months` sorted chronologically ascending by `id`.
 - `date` is the real event date from `analysis.json`'s `event.date` (no first-of-month
   normalization needed).
-- `signature`, `best12`, `players` are copied as-is from the event's `analysis.json`.
-  Deck card values there are already display names — no `cards.json` lookup needed.
+- Only `players` (decks) are copied from the event's `analysis.json`. Derived per-month
+  fields are NOT embedded: `best12` is recomputed client-side from decks, and
+  `signature` (lift) is excluded entirely — it needs event-wide base rates and is
+  deferred to a future pass (see `context/TODO.md`). Deck card values in
+  `analysis.json` are already display names — no `cards.json` lookup needed.
 - If an analysis slug is missing from `captains.json`, still generate a page with
   `name` falling back to the slug (same fallback as `analyze_event.py`).
 
@@ -80,7 +82,7 @@ Content, in order:
    Sortable columns; single text filter box matching player, archetype, month, or any
    card name.
 5. **Raw JSON** — collapsed `<details>` block containing the full pretty-printed
-   captain JSON.
+   page payload (captain + months + decks as defined above).
 
 Empty state: header renders with "No winning decks recorded yet." and no tables.
 
@@ -116,6 +118,7 @@ decks descending initially. Same theme; canonical
 | `etl/tests/test_render_captains.py` | New — unit tests |
 | `etl/scripts/generate_sitemap.py` | Include captains URLs |
 | `Makefile` | Add `captains` target |
+| `context/TODO.md` | New — deferred signature/lift approach (no code) |
 | `docs/captains/**` | Generated, committed |
 
 ## Testing (TDD)
@@ -125,8 +128,7 @@ pytest (`etl/tests/`, framework already configured). Tests for:
 1. **Slug conversion** — `galileo_galilei` → `galileo-galilei`; every current
    `captains.json` key round-trips to a filesystem-safe slug.
 2. **Aggregation** — grouping across multiple events; month ordering ascending;
-   per-month fields (`n`, `signature`, `best12`, `players`) pass through unchanged;
-   captain with no events yields empty `months`.
+   `players` pass through unchanged; captain with no events yields empty `months`.
 3. **Best 12 parity** — a Python mirror of the client-side algorithm (count → sort
    desc → top 12) reproduces `analyze_event.py`'s `best12` for a real single-month
    fixture, pinning the contract the JS must match.
