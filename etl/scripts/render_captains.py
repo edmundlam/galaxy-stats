@@ -43,13 +43,8 @@ EXTRA_CSS = """
   .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
                                    background:rgba(200,169,110,0.08); }
   .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
-  details.raw-json { margin-top:40px; border:1px solid var(--border); border-radius:4px;
-                     background:var(--surface); }
-  details.raw-json summary { cursor:pointer; padding:12px 16px; font-family:'IBM Plex Mono',monospace;
-                             font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
-  details.raw-json summary:hover { color:var(--text); }
-  details.raw-json pre { padding:0 16px 16px; font-size:10px; line-height:1.7; color:var(--muted);
-                         overflow-x:auto; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
 """
@@ -298,7 +293,6 @@ def render_captain_page(captain: dict, base_url: str) -> str:
     months = captain["months"]
     total_decks = sum(len(m["players"]) for m in months)
     payload = serialize_payload(captain)
-    raw_json = escape(json.dumps(captain, indent=2))
     canonical = f"{base_url}/captains/{slug}/"
     description = (
         f"{name} captain statistics across Once Upon a Galaxy monthly tournaments: "
@@ -307,12 +301,11 @@ def render_captain_page(captain: dict, base_url: str) -> str:
     head = _head(f"{name} — Captain Stats | Galaxy Stats", description, canonical, "../../")
 
     if total_decks == 0:
-        body = f"""
+        body = """
 <main>
   <div class="section active">
     <div class="empty-note">No winning decks recorded yet.</div>
   </div>
-  <details class="raw-json"><summary>Raw JSON</summary><pre>{raw_json}</pre></details>
 </main>"""
         script = ""
     else:
@@ -343,7 +336,6 @@ def render_captain_page(captain: dict, base_url: str) -> str:
       </tbody>
     </table>
   </div>
-  <details class="raw-json"><summary>Raw JSON</summary><pre>{raw_json}</pre></details>
 </main>"""
         script = (
             "<script>"
@@ -362,7 +354,7 @@ def render_captain_page(captain: dict, base_url: str) -> str:
 <header>
   <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
   <h1>{escape(name)}</h1>
-  <div class="subtitle">Captain stats · <a href="../" style="color:var(--accent)">all captains</a></div>
+  <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
   <div class="stats-row">
     <div class="stat-item"><div class="stat-value">{total_decks}</div><div class="stat-label">Winning decks</div></div>
     <div class="stat-item"><div class="stat-value">{len(months)}</div><div class="stat-label">Months</div></div>

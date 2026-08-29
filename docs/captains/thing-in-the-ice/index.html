@@ -28,13 +28,8 @@
   .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
                                    background:rgba(200,169,110,0.08); }
   .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
-  details.raw-json { margin-top:40px; border:1px solid var(--border); border-radius:4px;
-                     background:var(--surface); }
-  details.raw-json summary { cursor:pointer; padding:12px 16px; font-family:'IBM Plex Mono',monospace;
-                             font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
-  details.raw-json summary:hover { color:var(--text); }
-  details.raw-json pre { padding:0 16px 16px; font-size:10px; line-height:1.7; color:var(--muted);
-                         overflow-x:auto; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
 </style>
@@ -43,7 +38,7 @@
 <header>
   <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
   <h1>Thing in the Ice</h1>
-  <div class="subtitle">Captain stats · <a href="../" style="color:var(--accent)">all captains</a></div>
+  <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
   <div class="stats-row">
     <div class="stat-item"><div class="stat-value">12</div><div class="stat-label">Winning decks</div></div>
     <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Months</div></div>
@@ -65,7 +60,8 @@
     <div class="section-title" style="margin-top:48px">Decklists</div>
     <div class="section-desc">Every winning deck across all months.</div>
     <div class="captain-filter">
-      <input id="deck-filter" class="filter-input" type="text" placeholder="Filter by player, archetype, month, or card…">
+      <input id="deck-filter" class="filter-input" type="text"
+        placeholder="Filter by player, archetype, month, or card…">
     </div>
     <table class="data-table" id="deck-table">
       <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
@@ -86,249 +82,6 @@
       </tbody>
     </table>
   </div>
-  <details class="raw-json"><summary>Raw JSON</summary><pre>{
-  &quot;slug&quot;: &quot;thing-in-the-ice&quot;,
-  &quot;name&quot;: &quot;Thing in the Ice&quot;,
-  &quot;months&quot;: [
-    {
-      &quot;id&quot;: &quot;2026-03&quot;,
-      &quot;date&quot;: &quot;2026-03-20&quot;,
-      &quot;event&quot;: &quot;March Monthly&quot;,
-      &quot;players&quot;: [
-        {
-          &quot;username&quot;: &quot;Altong&quot;,
-          &quot;archetype&quot;: &quot;Toys&quot;,
-          &quot;deck&quot;: [
-            &quot;Beanie Baby&quot;,
-            &quot;Busted Bot&quot;,
-            &quot;Mortakon&quot;,
-            &quot;Barrel of Monkeys&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;Innkeeper&quot;,
-            &quot;Brick Monster&quot;,
-            &quot;Chip on the Ship&quot;,
-            &quot;Ace of Hearts&quot;,
-            &quot;Raggedy Ann&quot;,
-            &quot;Party Pinata&quot;,
-            &quot;Space Ranger Woody&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;Doppler&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Maverick &amp; Icewing&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;The Burninator&quot;,
-            &quot;Wormscale Tinkerer&quot;,
-            &quot;Lance A Little&quot;,
-            &quot;Netherbinder&quot;,
-            &quot;Rollo&quot;,
-            &quot;Oracle of Fortunes&quot;,
-            &quot;Mr. Fox&quot;,
-            &quot;Miseria&quot;,
-            &quot;The Huntsman&quot;,
-            &quot;Crystal&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;french vanilla creature&quot;,
-          &quot;archetype&quot;: &quot;Toys&quot;,
-          &quot;deck&quot;: [
-            &quot;Busted Bot&quot;,
-            &quot;Mortakon&quot;,
-            &quot;Nutcracker Prince&quot;,
-            &quot;Barrel of Monkeys&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;Innkeeper&quot;,
-            &quot;Brick Monster&quot;,
-            &quot;Chip on the Ship&quot;,
-            &quot;Raggedy Ann&quot;,
-            &quot;Party Pinata&quot;,
-            &quot;Sir Francis Drake&quot;,
-            &quot;Wormscale Tinkerer&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;Raeeee&quot;,
-          &quot;archetype&quot;: &quot;Toys&quot;,
-          &quot;deck&quot;: [
-            &quot;Beanie Baby&quot;,
-            &quot;Busted Bot&quot;,
-            &quot;Mortakon&quot;,
-            &quot;Barrel of Monkeys&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;Innkeeper&quot;,
-            &quot;Brick Monster&quot;,
-            &quot;Chip on the Ship&quot;,
-            &quot;Ace of Hearts&quot;,
-            &quot;Raggedy Ann&quot;,
-            &quot;Party Pinata&quot;,
-            &quot;Space Ranger Woody&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;RedJabka&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Aladdin&quot;,
-            &quot;Mech-a-Man&quot;,
-            &quot;Maverick &amp; Icewing&quot;,
-            &quot;Mechanical Dragon&quot;,
-            &quot;Tsarmina, the Tyrant&quot;,
-            &quot;Ace of Hearts&quot;,
-            &quot;The Burninator&quot;,
-            &quot;Thunder of Dragons&quot;,
-            &quot;Sir Francis Drake&quot;,
-            &quot;Wormscale Tinkerer&quot;,
-            &quot;Oracle of Fortunes&quot;,
-            &quot;Mr. Fox&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;Tauretavarea&quot;,
-          &quot;archetype&quot;: &quot;Fae&quot;,
-          &quot;deck&quot;: [
-            &quot;Prickles&quot;,
-            &quot;Shanty&quot;,
-            &quot;Morgan Le Fae&quot;,
-            &quot;Toadie&quot;,
-            &quot;Nightshade&quot;,
-            &quot;Charlotte&quot;,
-            &quot;Wink&quot;,
-            &quot;Fae Familiar&quot;,
-            &quot;Wormscale Tinkerer&quot;,
-            &quot;Pixie&quot;,
-            &quot;Keeb&quot;,
-            &quot;Lollipop Faerie&quot;
-          ]
-        }
-      ]
-    },
-    {
-      &quot;id&quot;: &quot;2026-05&quot;,
-      &quot;date&quot;: &quot;2026-05-22&quot;,
-      &quot;event&quot;: &quot;May Monthly&quot;,
-      &quot;players&quot;: [
-        {
-          &quot;username&quot;: &quot;Atraxis&quot;,
-          &quot;archetype&quot;: &quot;Candy&quot;,
-          &quot;deck&quot;: [
-            &quot;Toto&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;Innkeeper&quot;,
-            &quot;Ace of Hearts&quot;,
-            &quot;Chaos&quot;,
-            &quot;Wink&quot;,
-            &quot;Wormscale Tinkerer&quot;,
-            &quot;Gummy Wyrm&quot;,
-            &quot;Pixie&quot;,
-            &quot;Cherry Topples&quot;,
-            &quot;Lollipop Faerie&quot;,
-            &quot;Oracle of Fortunes&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;Gonnzo&quot;,
-          &quot;archetype&quot;: &quot;Toys&quot;,
-          &quot;deck&quot;: [
-            &quot;Beanie Baby&quot;,
-            &quot;Busted Bot&quot;,
-            &quot;Mortakon&quot;,
-            &quot;Barrel of Monkeys&quot;,
-            &quot;Brick Monster&quot;,
-            &quot;Chip on the Ship&quot;,
-            &quot;Raggedy Ann&quot;,
-            &quot;Mysterio, the Great and Powerful&quot;,
-            &quot;Party Pinata&quot;,
-            &quot;Space Ranger Woody&quot;,
-            &quot;The Fates&quot;,
-            &quot;Mr. Fox&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;NickNPrince&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Mortakon&quot;,
-            &quot;Mech-a-Man&quot;,
-            &quot;Brick Monster&quot;,
-            &quot;Anubis&quot;,
-            &quot;Ace of Hearts&quot;,
-            &quot;Guinevere&quot;,
-            &quot;The Burninator&quot;,
-            &quot;Miseria&quot;,
-            &quot;Kagutsuchi&quot;,
-            &quot;Destiny&quot;,
-            &quot;Young Hercules&quot;,
-            &quot;Fortune Teller&quot;
-          ]
-        }
-      ]
-    },
-    {
-      &quot;id&quot;: &quot;2026-06&quot;,
-      &quot;date&quot;: &quot;2026-06-19&quot;,
-      &quot;event&quot;: &quot;June Monthly&quot;,
-      &quot;players&quot;: [
-        {
-          &quot;username&quot;: &quot;Valiant&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Aladdin&quot;,
-            &quot;Beanie Baby&quot;,
-            &quot;Kid Icarus&quot;,
-            &quot;Wink&quot;,
-            &quot;Combustible Dragon&quot;,
-            &quot;Maverick &amp; Icewing&quot;,
-            &quot;Mr. Fox&quot;,
-            &quot;Smug&quot;,
-            &quot;Hephaestus&quot;,
-            &quot;Scale-a-tor&quot;,
-            &quot;The Burninator&quot;,
-            &quot;Wormscale Tinkerer&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;WannaPo&quot;,
-          &quot;archetype&quot;: &quot;Mage&quot;,
-          &quot;deck&quot;: [
-            &quot;Chaos&quot;,
-            &quot;Weensy&quot;,
-            &quot;Nightshade&quot;,
-            &quot;The Fates&quot;,
-            &quot;Crystal&quot;,
-            &quot;Fortune Teller&quot;,
-            &quot;Scale Singers&quot;,
-            &quot;Kagutsuchi&quot;,
-            &quot;Medea in a Tavern&quot;,
-            &quot;Halja&quot;,
-            &quot;Prospero&quot;,
-            &quot;Elm Minster&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;WrennSolomon&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Aladdin&quot;,
-            &quot;Toto&quot;,
-            &quot;Toadie&quot;,
-            &quot;Combustible Dragon&quot;,
-            &quot;Maverick &amp; Icewing&quot;,
-            &quot;Mechanical Dragon&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;Sir Francis Drake&quot;,
-            &quot;Flopsy&quot;,
-            &quot;Scale-a-tor&quot;,
-            &quot;The Burninator&quot;,
-            &quot;Wormscale Tinkerer&quot;
-          ]
-        }
-      ]
-    }
-  ]
-}</pre></details>
 </main>
 <script type="application/json" id="captain-data">{"slug": "thing-in-the-ice", "name": "Thing in the Ice", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "Altong", "archetype": "Toys", "deck": ["Beanie Baby", "Busted Bot", "Mortakon", "Barrel of Monkeys", "Mirror Mage", "Innkeeper", "Brick Monster", "Chip on the Ship", "Ace of Hearts", "Raggedy Ann", "Party Pinata", "Space Ranger Woody"]}, {"username": "Doppler", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mirror Mage", "The Burninator", "Wormscale Tinkerer", "Lance A Little", "Netherbinder", "Rollo", "Oracle of Fortunes", "Mr. Fox", "Miseria", "The Huntsman", "Crystal"]}, {"username": "french vanilla creature", "archetype": "Toys", "deck": ["Busted Bot", "Mortakon", "Nutcracker Prince", "Barrel of Monkeys", "Mirror Mage", "Innkeeper", "Brick Monster", "Chip on the Ship", "Raggedy Ann", "Party Pinata", "Sir Francis Drake", "Wormscale Tinkerer"]}, {"username": "Raeeee", "archetype": "Toys", "deck": ["Beanie Baby", "Busted Bot", "Mortakon", "Barrel of Monkeys", "Mirror Mage", "Innkeeper", "Brick Monster", "Chip on the Ship", "Ace of Hearts", "Raggedy Ann", "Party Pinata", "Space Ranger Woody"]}, {"username": "RedJabka", "archetype": "Treasures", "deck": ["Aladdin", "Mech-a-Man", "Maverick & Icewing", "Mechanical Dragon", "Tsarmina, the Tyrant", "Ace of Hearts", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "Wormscale Tinkerer", "Oracle of Fortunes", "Mr. Fox"]}, {"username": "Tauretavarea", "archetype": "Fae", "deck": ["Prickles", "Shanty", "Morgan Le Fae", "Toadie", "Nightshade", "Charlotte", "Wink", "Fae Familiar", "Wormscale Tinkerer", "Pixie", "Keeb", "Lollipop Faerie"]}]}, {"id": "2026-05", "date": "2026-05-22", "event": "May Monthly", "players": [{"username": "Atraxis", "archetype": "Candy", "deck": ["Toto", "Mirror Mage", "Innkeeper", "Ace of Hearts", "Chaos", "Wink", "Wormscale Tinkerer", "Gummy Wyrm", "Pixie", "Cherry Topples", "Lollipop Faerie", "Oracle of Fortunes"]}, {"username": "Gonnzo", "archetype": "Toys", "deck": ["Beanie Baby", "Busted Bot", "Mortakon", "Barrel of Monkeys", "Brick Monster", "Chip on the Ship", "Raggedy Ann", "Mysterio, the Great and Powerful", "Party Pinata", "Space Ranger Woody", "The Fates", "Mr. Fox"]}, {"username": "NickNPrince", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Brick Monster", "Anubis", "Ace of Hearts", "Guinevere", "The Burninator", "Miseria", "Kagutsuchi", "Destiny", "Young Hercules", "Fortune Teller"]}]}, {"id": "2026-06", "date": "2026-06-19", "event": "June Monthly", "players": [{"username": "Valiant", "archetype": "Treasures", "deck": ["Aladdin", "Beanie Baby", "Kid Icarus", "Wink", "Combustible Dragon", "Maverick & Icewing", "Mr. Fox", "Smug", "Hephaestus", "Scale-a-tor", "The Burninator", "Wormscale Tinkerer"]}, {"username": "WannaPo", "archetype": "Mage", "deck": ["Chaos", "Weensy", "Nightshade", "The Fates", "Crystal", "Fortune Teller", "Scale Singers", "Kagutsuchi", "Medea in a Tavern", "Halja", "Prospero", "Elm Minster"]}, {"username": "WrennSolomon", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Toadie", "Combustible Dragon", "Maverick & Icewing", "Mechanical Dragon", "Mirror Mage", "Sir Francis Drake", "Flopsy", "Scale-a-tor", "The Burninator", "Wormscale Tinkerer"]}]}]}</script>
 <script>

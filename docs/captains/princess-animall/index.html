@@ -28,13 +28,8 @@
   .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
                                    background:rgba(200,169,110,0.08); }
   .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
-  details.raw-json { margin-top:40px; border:1px solid var(--border); border-radius:4px;
-                     background:var(--surface); }
-  details.raw-json summary { cursor:pointer; padding:12px 16px; font-family:'IBM Plex Mono',monospace;
-                             font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
-  details.raw-json summary:hover { color:var(--text); }
-  details.raw-json pre { padding:0 16px 16px; font-size:10px; line-height:1.7; color:var(--muted);
-                         overflow-x:auto; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
 </style>
@@ -43,7 +38,7 @@
 <header>
   <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
   <h1>Princess Animall</h1>
-  <div class="subtitle">Captain stats · <a href="../" style="color:var(--accent)">all captains</a></div>
+  <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
   <div class="stats-row">
     <div class="stat-item"><div class="stat-value">10</div><div class="stat-label">Winning decks</div></div>
     <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Months</div></div>
@@ -65,7 +60,8 @@
     <div class="section-title" style="margin-top:48px">Decklists</div>
     <div class="section-desc">Every winning deck across all months.</div>
     <div class="captain-filter">
-      <input id="deck-filter" class="filter-input" type="text" placeholder="Filter by player, archetype, month, or card…">
+      <input id="deck-filter" class="filter-input" type="text"
+        placeholder="Filter by player, archetype, month, or card…">
     </div>
     <table class="data-table" id="deck-table">
       <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
@@ -84,213 +80,6 @@
       </tbody>
     </table>
   </div>
-  <details class="raw-json"><summary>Raw JSON</summary><pre>{
-  &quot;slug&quot;: &quot;princess-animall&quot;,
-  &quot;name&quot;: &quot;Princess Animall&quot;,
-  &quot;months&quot;: [
-    {
-      &quot;id&quot;: &quot;2026-03&quot;,
-      &quot;date&quot;: &quot;2026-03-20&quot;,
-      &quot;event&quot;: &quot;March Monthly&quot;,
-      &quot;players&quot;: [
-        {
-          &quot;username&quot;: &quot;DilligentBat50&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Faerie Queen&quot;,
-            &quot;Ace of Hearts&quot;,
-            &quot;Mysterio, the Great and Powerful&quot;,
-            &quot;The Burninator&quot;,
-            &quot;Pisces&quot;,
-            &quot;Monstro&quot;,
-            &quot;Pirate King&quot;,
-            &quot;Prospero&quot;,
-            &quot;Smug&quot;,
-            &quot;Wormscale Tinkerer&quot;,
-            &quot;Mr. Fox&quot;,
-            &quot;Miseria&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;ESP&quot;,
-          &quot;archetype&quot;: &quot;Pirates&quot;,
-          &quot;deck&quot;: [
-            &quot;Shanty&quot;,
-            &quot;Faerie Queen&quot;,
-            &quot;Blackbeard&quot;,
-            &quot;Pisces&quot;,
-            &quot;Wink&quot;,
-            &quot;Monstro&quot;,
-            &quot;Pirate King&quot;,
-            &quot;Pirate Prince&quot;,
-            &quot;Prospero&quot;,
-            &quot;Weird Beard&quot;,
-            &quot;Mr. Fox&quot;,
-            &quot;The Huntsman&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;InLeo&quot;,
-          &quot;archetype&quot;: &quot;Animals&quot;,
-          &quot;deck&quot;: [
-            &quot;Frog Prince&quot;,
-            &quot;Toto&quot;,
-            &quot;Morgan Le Fae&quot;,
-            &quot;Mimic&quot;,
-            &quot;Tsarmina, the Tyrant&quot;,
-            &quot;Faerie Queen&quot;,
-            &quot;Charlotte&quot;,
-            &quot;Pied Piper&quot;,
-            &quot;Pisces&quot;,
-            &quot;Wink&quot;,
-            &quot;Monstro&quot;,
-            &quot;Flopsy&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;Ren&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Tsarmina, the Tyrant&quot;,
-            &quot;Faerie Queen&quot;,
-            &quot;Elm Minster&quot;,
-            &quot;Pisces&quot;,
-            &quot;Wink&quot;,
-            &quot;Fae Familiar&quot;,
-            &quot;Monstro&quot;,
-            &quot;Wormscale Tinkerer&quot;,
-            &quot;Lance A Little&quot;,
-            &quot;Dastardly Spirit&quot;,
-            &quot;Friendly Spirit&quot;,
-            &quot;Mr. Fox&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;target1138&quot;,
-          &quot;archetype&quot;: &quot;Animals&quot;,
-          &quot;deck&quot;: [
-            &quot;Frog Prince&quot;,
-            &quot;Toto&quot;,
-            &quot;Morgan Le Fae&quot;,
-            &quot;Mimic&quot;,
-            &quot;Tsarmina, the Tyrant&quot;,
-            &quot;Faerie Queen&quot;,
-            &quot;Brick Monster&quot;,
-            &quot;Pied Piper&quot;,
-            &quot;Pisces&quot;,
-            &quot;Wink&quot;,
-            &quot;Monstro&quot;,
-            &quot;Pirate King&quot;
-          ]
-        }
-      ]
-    },
-    {
-      &quot;id&quot;: &quot;2026-04&quot;,
-      &quot;date&quot;: &quot;2026-04-17&quot;,
-      &quot;event&quot;: &quot;April Monthly&quot;,
-      &quot;players&quot;: [
-        {
-          &quot;username&quot;: &quot;Justini12&quot;,
-          &quot;archetype&quot;: &quot;Pirates&quot;,
-          &quot;deck&quot;: [
-            &quot;Shanty&quot;,
-            &quot;Tsarmina, the Tyrant&quot;,
-            &quot;Faerie Queen&quot;,
-            &quot;Mephisto&quot;,
-            &quot;Pisces&quot;,
-            &quot;Wink&quot;,
-            &quot;Monstro&quot;,
-            &quot;Pirate King&quot;,
-            &quot;Prospero&quot;,
-            &quot;Snapping Hydra&quot;,
-            &quot;Flopsy&quot;,
-            &quot;Wormscale Tinkerer&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;LoneGoat&quot;,
-          &quot;archetype&quot;: &quot;Animals&quot;,
-          &quot;deck&quot;: [
-            &quot;Beanie Baby&quot;,
-            &quot;Tsarmina, the Tyrant&quot;,
-            &quot;Faerie Queen&quot;,
-            &quot;Party Pinata&quot;,
-            &quot;Pied Piper&quot;,
-            &quot;Pisces&quot;,
-            &quot;Wink&quot;,
-            &quot;Monstro&quot;,
-            &quot;Pirate Prince&quot;,
-            &quot;Snapping Hydra&quot;,
-            &quot;Flopsy&quot;,
-            &quot;Weird Beard&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;Magus of the Moon&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Mortakon&quot;,
-            &quot;Mech-a-Man&quot;,
-            &quot;Maverick &amp; Icewing&quot;,
-            &quot;Tsarmina, the Tyrant&quot;,
-            &quot;Black Hole&quot;,
-            &quot;Faerie Queen&quot;,
-            &quot;Wicked Witch&quot;,
-            &quot;Anubis&quot;,
-            &quot;Pisces&quot;,
-            &quot;Wink&quot;,
-            &quot;Monstro&quot;,
-            &quot;Wormscale Tinkerer&quot;
-          ]
-        }
-      ]
-    },
-    {
-      &quot;id&quot;: &quot;2026-07&quot;,
-      &quot;date&quot;: &quot;2026-07-17&quot;,
-      &quot;event&quot;: &quot;July Monthly&quot;,
-      &quot;players&quot;: [
-        {
-          &quot;username&quot;: &quot;Idos&quot;,
-          &quot;archetype&quot;: &quot;Animals&quot;,
-          &quot;deck&quot;: [
-            &quot;Beanie Baby&quot;,
-            &quot;Pied Piper&quot;,
-            &quot;Underdog&quot;,
-            &quot;Mech-a-Man&quot;,
-            &quot;Wink&quot;,
-            &quot;Don Quixote&quot;,
-            &quot;Tsarmina, the Tyrant&quot;,
-            &quot;Pisces&quot;,
-            &quot;Snapping Hydra&quot;,
-            &quot;Pirate King&quot;,
-            &quot;Pirate Prince&quot;,
-            &quot;Weird Beard&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;JZestrac&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Destiny&quot;,
-            &quot;Mortakon&quot;,
-            &quot;Crystal&quot;,
-            &quot;Pisces&quot;,
-            &quot;Twilight Sprinkles&quot;,
-            &quot;Crab Dragoon&quot;,
-            &quot;Guinevere&quot;,
-            &quot;Miss Muffet&quot;,
-            &quot;Monstro&quot;,
-            &quot;Pirate King&quot;,
-            &quot;Prospero&quot;,
-            &quot;Weird Beard&quot;
-          ]
-        }
-      ]
-    }
-  ]
-}</pre></details>
 </main>
 <script type="application/json" id="captain-data">{"slug": "princess-animall", "name": "Princess Animall", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "DilligentBat50", "archetype": "Treasures", "deck": ["Faerie Queen", "Ace of Hearts", "Mysterio, the Great and Powerful", "The Burninator", "Pisces", "Monstro", "Pirate King", "Prospero", "Smug", "Wormscale Tinkerer", "Mr. Fox", "Miseria"]}, {"username": "ESP", "archetype": "Pirates", "deck": ["Shanty", "Faerie Queen", "Blackbeard", "Pisces", "Wink", "Monstro", "Pirate King", "Pirate Prince", "Prospero", "Weird Beard", "Mr. Fox", "The Huntsman"]}, {"username": "InLeo", "archetype": "Animals", "deck": ["Frog Prince", "Toto", "Morgan Le Fae", "Mimic", "Tsarmina, the Tyrant", "Faerie Queen", "Charlotte", "Pied Piper", "Pisces", "Wink", "Monstro", "Flopsy"]}, {"username": "Ren", "archetype": "Treasures", "deck": ["Tsarmina, the Tyrant", "Faerie Queen", "Elm Minster", "Pisces", "Wink", "Fae Familiar", "Monstro", "Wormscale Tinkerer", "Lance A Little", "Dastardly Spirit", "Friendly Spirit", "Mr. Fox"]}, {"username": "target1138", "archetype": "Animals", "deck": ["Frog Prince", "Toto", "Morgan Le Fae", "Mimic", "Tsarmina, the Tyrant", "Faerie Queen", "Brick Monster", "Pied Piper", "Pisces", "Wink", "Monstro", "Pirate King"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Justini12", "archetype": "Pirates", "deck": ["Shanty", "Tsarmina, the Tyrant", "Faerie Queen", "Mephisto", "Pisces", "Wink", "Monstro", "Pirate King", "Prospero", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer"]}, {"username": "LoneGoat", "archetype": "Animals", "deck": ["Beanie Baby", "Tsarmina, the Tyrant", "Faerie Queen", "Party Pinata", "Pied Piper", "Pisces", "Wink", "Monstro", "Pirate Prince", "Snapping Hydra", "Flopsy", "Weird Beard"]}, {"username": "Magus of the Moon", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Tsarmina, the Tyrant", "Black Hole", "Faerie Queen", "Wicked Witch", "Anubis", "Pisces", "Wink", "Monstro", "Wormscale Tinkerer"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Idos", "archetype": "Animals", "deck": ["Beanie Baby", "Pied Piper", "Underdog", "Mech-a-Man", "Wink", "Don Quixote", "Tsarmina, the Tyrant", "Pisces", "Snapping Hydra", "Pirate King", "Pirate Prince", "Weird Beard"]}, {"username": "JZestrac", "archetype": "Treasures", "deck": ["Destiny", "Mortakon", "Crystal", "Pisces", "Twilight Sprinkles", "Crab Dragoon", "Guinevere", "Miss Muffet", "Monstro", "Pirate King", "Prospero", "Weird Beard"]}]}]}</script>
 <script>

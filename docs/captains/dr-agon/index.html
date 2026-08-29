@@ -28,13 +28,8 @@
   .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
                                    background:rgba(200,169,110,0.08); }
   .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
-  details.raw-json { margin-top:40px; border:1px solid var(--border); border-radius:4px;
-                     background:var(--surface); }
-  details.raw-json summary { cursor:pointer; padding:12px 16px; font-family:'IBM Plex Mono',monospace;
-                             font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
-  details.raw-json summary:hover { color:var(--text); }
-  details.raw-json pre { padding:0 16px 16px; font-size:10px; line-height:1.7; color:var(--muted);
-                         overflow-x:auto; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
 </style>
@@ -43,7 +38,7 @@
 <header>
   <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
   <h1>Dr. Agon</h1>
-  <div class="subtitle">Captain stats · <a href="../" style="color:var(--accent)">all captains</a></div>
+  <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
   <div class="stats-row">
     <div class="stat-item"><div class="stat-value">6</div><div class="stat-label">Winning decks</div></div>
     <div class="stat-item"><div class="stat-value">2</div><div class="stat-label">Months</div></div>
@@ -65,7 +60,8 @@
     <div class="section-title" style="margin-top:48px">Decklists</div>
     <div class="section-desc">Every winning deck across all months.</div>
     <div class="captain-filter">
-      <input id="deck-filter" class="filter-input" type="text" placeholder="Filter by player, archetype, month, or card…">
+      <input id="deck-filter" class="filter-input" type="text"
+        placeholder="Filter by player, archetype, month, or card…">
     </div>
     <table class="data-table" id="deck-table">
       <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
@@ -80,134 +76,6 @@
       </tbody>
     </table>
   </div>
-  <details class="raw-json"><summary>Raw JSON</summary><pre>{
-  &quot;slug&quot;: &quot;dr-agon&quot;,
-  &quot;name&quot;: &quot;Dr. Agon&quot;,
-  &quot;months&quot;: [
-    {
-      &quot;id&quot;: &quot;2026-03&quot;,
-      &quot;date&quot;: &quot;2026-03-20&quot;,
-      &quot;event&quot;: &quot;March Monthly&quot;,
-      &quot;players&quot;: [
-        {
-          &quot;username&quot;: &quot;Farec&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Aladdin&quot;,
-            &quot;Plunder Penny&quot;,
-            &quot;Maverick &amp; Icewing&quot;,
-            &quot;Genie of the Lamp&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;Ace of Hearts&quot;,
-            &quot;Hephaestus&quot;,
-            &quot;Scale-a-tor&quot;,
-            &quot;Kid Icarus&quot;,
-            &quot;Moppet&quot;,
-            &quot;Prospero&quot;,
-            &quot;Mr. Fox&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;Jino&quot;,
-          &quot;archetype&quot;: &quot;Mage&quot;,
-          &quot;deck&quot;: [
-            &quot;Morgan Le Fae&quot;,
-            &quot;Calypso&quot;,
-            &quot;Genie of the Lamp&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;Ogre Magi&quot;,
-            &quot;Chaos&quot;,
-            &quot;Moppet&quot;,
-            &quot;The Fates&quot;,
-            &quot;Twilight Sprinkles&quot;,
-            &quot;Pixie&quot;,
-            &quot;Kool Wip&quot;,
-            &quot;Lollipop Faerie&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;Mike Honcho&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Aladdin&quot;,
-            &quot;Plunder Penny&quot;,
-            &quot;Maverick &amp; Icewing&quot;,
-            &quot;Genie of the Lamp&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;Ace of Hearts&quot;,
-            &quot;Hephaestus&quot;,
-            &quot;Scale-a-tor&quot;,
-            &quot;The Burninator&quot;,
-            &quot;Kid Icarus&quot;,
-            &quot;Moppet&quot;,
-            &quot;Flopsy&quot;
-          ]
-        }
-      ]
-    },
-    {
-      &quot;id&quot;: &quot;2026-08&quot;,
-      &quot;date&quot;: &quot;2026-08-21&quot;,
-      &quot;event&quot;: &quot;August Monthly&quot;,
-      &quot;players&quot;: [
-        {
-          &quot;username&quot;: &quot;Abello&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Hephaestus&quot;,
-            &quot;Aladdin&quot;,
-            &quot;Plunder Penny&quot;,
-            &quot;Frog Prince&quot;,
-            &quot;Kid Icarus&quot;,
-            &quot;Prospero&quot;,
-            &quot;Ace of Hearts&quot;,
-            &quot;Maverick &amp; Icewing&quot;,
-            &quot;Moppet&quot;,
-            &quot;Genie of the Lamp&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;Scale-a-tor&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;AtlasMessiah&quot;,
-          &quot;archetype&quot;: &quot;Mage&quot;,
-          &quot;deck&quot;: [
-            &quot;The Fates&quot;,
-            &quot;Chaos&quot;,
-            &quot;Miseria&quot;,
-            &quot;Baron Bok&quot;,
-            &quot;Cherry Topples&quot;,
-            &quot;Mr. Fox&quot;,
-            &quot;Weensy&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;Wicked Witch&quot;,
-            &quot;Crab Dragoon&quot;,
-            &quot;Prospero&quot;,
-            &quot;The Burninator&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;juannacho&quot;,
-          &quot;archetype&quot;: &quot;Mage&quot;,
-          &quot;deck&quot;: [
-            &quot;Aladdin&quot;,
-            &quot;Plunder Penny&quot;,
-            &quot;The Fates&quot;,
-            &quot;Maverick &amp; Icewing&quot;,
-            &quot;Moppet&quot;,
-            &quot;Genie of the Lamp&quot;,
-            &quot;Kagutsuchi&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;Mysterio, the Great and Powerful&quot;,
-            &quot;Smug&quot;,
-            &quot;Hephaestus&quot;,
-            &quot;Prospero&quot;
-          ]
-        }
-      ]
-    }
-  ]
-}</pre></details>
 </main>
 <script type="application/json" id="captain-data">{"slug": "dr-agon", "name": "Dr. Agon", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "Farec", "archetype": "Treasures", "deck": ["Aladdin", "Plunder Penny", "Maverick & Icewing", "Genie of the Lamp", "Mirror Mage", "Ace of Hearts", "Hephaestus", "Scale-a-tor", "Kid Icarus", "Moppet", "Prospero", "Mr. Fox"]}, {"username": "Jino", "archetype": "Mage", "deck": ["Morgan Le Fae", "Calypso", "Genie of the Lamp", "Mirror Mage", "Ogre Magi", "Chaos", "Moppet", "The Fates", "Twilight Sprinkles", "Pixie", "Kool Wip", "Lollipop Faerie"]}, {"username": "Mike Honcho", "archetype": "Treasures", "deck": ["Aladdin", "Plunder Penny", "Maverick & Icewing", "Genie of the Lamp", "Mirror Mage", "Ace of Hearts", "Hephaestus", "Scale-a-tor", "The Burninator", "Kid Icarus", "Moppet", "Flopsy"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Abello", "archetype": "Treasures", "deck": ["Hephaestus", "Aladdin", "Plunder Penny", "Frog Prince", "Kid Icarus", "Prospero", "Ace of Hearts", "Maverick & Icewing", "Moppet", "Genie of the Lamp", "Mirror Mage", "Scale-a-tor"]}, {"username": "AtlasMessiah", "archetype": "Mage", "deck": ["The Fates", "Chaos", "Miseria", "Baron Bok", "Cherry Topples", "Mr. Fox", "Weensy", "Mirror Mage", "Wicked Witch", "Crab Dragoon", "Prospero", "The Burninator"]}, {"username": "juannacho", "archetype": "Mage", "deck": ["Aladdin", "Plunder Penny", "The Fates", "Maverick & Icewing", "Moppet", "Genie of the Lamp", "Kagutsuchi", "Mirror Mage", "Mysterio, the Great and Powerful", "Smug", "Hephaestus", "Prospero"]}]}]}</script>
 <script>

@@ -175,6 +175,23 @@ def test_captain_page_empty_state(events_dir, captains_file):
     extract_payload(html)
 
 
+def test_captain_page_has_no_raw_json_section(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    for captain in (caps["galileo-galilei"], caps["loki"]):
+        html = render_captain_page(captain, "https://example.com")
+        assert "Raw JSON" not in html
+        assert "<details" not in html
+
+
+def test_pages_style_anchor_links_with_accent(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    for html in (
+        render_index_page(caps, "https://example.com"),
+        render_captain_page(caps["galileo-galilei"], "https://example.com"),
+    ):
+        assert "a { color:var(--accent)" in html
+
+
 def test_index_links_every_captain(events_dir, captains_file):
     caps = aggregate_captains(events_dir, captains_file)
     html = render_index_page(caps, "https://example.com/galaxy-stats")

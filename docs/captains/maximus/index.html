@@ -28,13 +28,8 @@
   .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
                                    background:rgba(200,169,110,0.08); }
   .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
-  details.raw-json { margin-top:40px; border:1px solid var(--border); border-radius:4px;
-                     background:var(--surface); }
-  details.raw-json summary { cursor:pointer; padding:12px 16px; font-family:'IBM Plex Mono',monospace;
-                             font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
-  details.raw-json summary:hover { color:var(--text); }
-  details.raw-json pre { padding:0 16px 16px; font-size:10px; line-height:1.7; color:var(--muted);
-                         overflow-x:auto; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
 </style>
@@ -43,7 +38,7 @@
 <header>
   <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
   <h1>Maximus</h1>
-  <div class="subtitle">Captain stats · <a href="../" style="color:var(--accent)">all captains</a></div>
+  <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
   <div class="stats-row">
     <div class="stat-item"><div class="stat-value">5</div><div class="stat-label">Winning decks</div></div>
     <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Months</div></div>
@@ -65,7 +60,8 @@
     <div class="section-title" style="margin-top:48px">Decklists</div>
     <div class="section-desc">Every winning deck across all months.</div>
     <div class="captain-filter">
-      <input id="deck-filter" class="filter-input" type="text" placeholder="Filter by player, archetype, month, or card…">
+      <input id="deck-filter" class="filter-input" type="text"
+        placeholder="Filter by player, archetype, month, or card…">
     </div>
     <table class="data-table" id="deck-table">
       <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
@@ -79,123 +75,6 @@
       </tbody>
     </table>
   </div>
-  <details class="raw-json"><summary>Raw JSON</summary><pre>{
-  &quot;slug&quot;: &quot;maximus&quot;,
-  &quot;name&quot;: &quot;Maximus&quot;,
-  &quot;months&quot;: [
-    {
-      &quot;id&quot;: &quot;2026-04&quot;,
-      &quot;date&quot;: &quot;2026-04-17&quot;,
-      &quot;event&quot;: &quot;April Monthly&quot;,
-      &quot;players&quot;: [
-        {
-          &quot;username&quot;: &quot;Danvari&quot;,
-          &quot;archetype&quot;: &quot;Mage&quot;,
-          &quot;deck&quot;: [
-            &quot;Morgan Le Fae&quot;,
-            &quot;Calypso&quot;,
-            &quot;Mirror Mage&quot;,
-            &quot;Ogre Magi&quot;,
-            &quot;Elm Minster&quot;,
-            &quot;Mirror Mirror&quot;,
-            &quot;Mysterio, the Great and Powerful&quot;,
-            &quot;Wormtongue&quot;,
-            &quot;Sabrina&quot;,
-            &quot;Chaos&quot;,
-            &quot;Fae Familiar&quot;,
-            &quot;Prospero&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;SymbioticSweater&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Beanie Baby&quot;,
-            &quot;Mech-a-Man&quot;,
-            &quot;Maverick &amp; Icewing&quot;,
-            &quot;Ace of Hearts&quot;,
-            &quot;Thunder of Dragons&quot;,
-            &quot;Chaos&quot;,
-            &quot;Smug&quot;,
-            &quot;Snapping Hydra&quot;,
-            &quot;Flopsy&quot;,
-            &quot;Wormscale Tinkerer&quot;,
-            &quot;Rollo&quot;,
-            &quot;Oracle of Fortunes&quot;
-          ]
-        },
-        {
-          &quot;username&quot;: &quot;unwantedcow64&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Beanie Baby&quot;,
-            &quot;Maverick &amp; Icewing&quot;,
-            &quot;Mechanical Dragon&quot;,
-            &quot;Underdog&quot;,
-            &quot;The Burninator&quot;,
-            &quot;Pisces&quot;,
-            &quot;Wink&quot;,
-            &quot;The Fates&quot;,
-            &quot;Snapping Hydra&quot;,
-            &quot;Flopsy&quot;,
-            &quot;Wormscale Tinkerer&quot;,
-            &quot;Gummy Wyrm&quot;
-          ]
-        }
-      ]
-    },
-    {
-      &quot;id&quot;: &quot;2026-07&quot;,
-      &quot;date&quot;: &quot;2026-07-17&quot;,
-      &quot;event&quot;: &quot;July Monthly&quot;,
-      &quot;players&quot;: [
-        {
-          &quot;username&quot;: &quot;Nesbah&quot;,
-          &quot;archetype&quot;: &quot;Treasures&quot;,
-          &quot;deck&quot;: [
-            &quot;Ace of Hearts&quot;,
-            &quot;Chaos&quot;,
-            &quot;Maverick &amp; Icewing&quot;,
-            &quot;Mr. Fox&quot;,
-            &quot;Sinbad&quot;,
-            &quot;Snapping Hydra&quot;,
-            &quot;Viscount Chocolat&quot;,
-            &quot;Wicked Witch&quot;,
-            &quot;Crab Dragoon&quot;,
-            &quot;Flopsy&quot;,
-            &quot;Hercules&quot;,
-            &quot;Monstro&quot;
-          ]
-        }
-      ]
-    },
-    {
-      &quot;id&quot;: &quot;2026-08&quot;,
-      &quot;date&quot;: &quot;2026-08-21&quot;,
-      &quot;event&quot;: &quot;August Monthly&quot;,
-      &quot;players&quot;: [
-        {
-          &quot;username&quot;: &quot;Cara.&quot;,
-          &quot;archetype&quot;: &quot;Animals&quot;,
-          &quot;deck&quot;: [
-            &quot;Monstro&quot;,
-            &quot;Pied Piper&quot;,
-            &quot;Beanie Baby&quot;,
-            &quot;Frog Prince&quot;,
-            &quot;Toadie&quot;,
-            &quot;Guinevere&quot;,
-            &quot;Ace of Hearts&quot;,
-            &quot;Tsarmina, the Tyrant&quot;,
-            &quot;Sinbad&quot;,
-            &quot;Charlotte&quot;,
-            &quot;Snapping Hydra&quot;,
-            &quot;The Rat King&quot;
-          ]
-        }
-      ]
-    }
-  ]
-}</pre></details>
 </main>
 <script type="application/json" id="captain-data">{"slug": "maximus", "name": "Maximus", "months": [{"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Danvari", "archetype": "Mage", "deck": ["Morgan Le Fae", "Calypso", "Mirror Mage", "Ogre Magi", "Elm Minster", "Mirror Mirror", "Mysterio, the Great and Powerful", "Wormtongue", "Sabrina", "Chaos", "Fae Familiar", "Prospero"]}, {"username": "SymbioticSweater", "archetype": "Treasures", "deck": ["Beanie Baby", "Mech-a-Man", "Maverick & Icewing", "Ace of Hearts", "Thunder of Dragons", "Chaos", "Smug", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Rollo", "Oracle of Fortunes"]}, {"username": "unwantedcow64", "archetype": "Treasures", "deck": ["Beanie Baby", "Maverick & Icewing", "Mechanical Dragon", "Underdog", "The Burninator", "Pisces", "Wink", "The Fates", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Gummy Wyrm"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Nesbah", "archetype": "Treasures", "deck": ["Ace of Hearts", "Chaos", "Maverick & Icewing", "Mr. Fox", "Sinbad", "Snapping Hydra", "Viscount Chocolat", "Wicked Witch", "Crab Dragoon", "Flopsy", "Hercules", "Monstro"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Cara.", "archetype": "Animals", "deck": ["Monstro", "Pied Piper", "Beanie Baby", "Frog Prince", "Toadie", "Guinevere", "Ace of Hearts", "Tsarmina, the Tyrant", "Sinbad", "Charlotte", "Snapping Hydra", "The Rat King"]}]}]}</script>
 <script>
