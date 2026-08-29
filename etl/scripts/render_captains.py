@@ -118,6 +118,48 @@ function renderBest12() {
 """
 
 
+# Client JS for the index page: rebuild the captain table from the checked month
+# chips. Rows with no decks in the selection are hidden unless every month is
+# checked (which restores the full all-time view, matching the static fallback).
+INDEX_JS = """
+const INDEX = JSON.parse(document.getElementById('captains-data').textContent);
+function renderIndex() {
+  const boxes = Array.from(document.querySelectorAll('#month-filter input'));
+  const checked = boxes.filter(cb => cb.checked).map(cb => cb.dataset.month);
+  const allChecked = checked.length === boxes.length;
+  const rows = INDEX
+    .map(c => {
+      const ms = c.months.filter(m => checked.includes(m.id));
+      return {
+        name: c.name, slug: c.slug,
+        months: ms.filter(m => m.decks > 0).length,
+        decks: ms.reduce((sum, m) => sum + m.decks, 0),
+      };
+    })
+    .sort((a, b) => b.decks - a.decks || a.name.localeCompare(b.name))
+    .filter(r => allChecked || r.decks > 0);
+  const tbody = document.querySelector('#index-table tbody');
+  tbody.innerHTML = '';
+  rows.forEach(r => {
+    const tr = document.createElement('tr');
+    const name = document.createElement('td');
+    const a = document.createElement('a');
+    a.href = r.slug + '/';
+    a.textContent = r.name;
+    name.appendChild(a);
+    const months = document.createElement('td');
+    months.className = 'num';
+    months.textContent = r.months;
+    const decks = document.createElement('td');
+    decks.className = 'num';
+    decks.textContent = r.decks;
+    tr.append(name, months, decks);
+    tbody.appendChild(tr);
+  });
+}
+"""
+
+
 def slug_to_dash(slug: str) -> str:
     """Convert a captain key to a URL slug (underscores become dashes).
 
@@ -217,6 +259,25 @@ def serialize_payload(payload: dict) -> str:
     return json.dumps(payload).replace("</", "<\\/")
 
 
+def index_payload(captains: dict[str, dict]) -> list[dict]:
+    """Reduce aggregated captains to the compact shape the index page needs.
+
+    Args:
+        captains: Aggregated captains dict from aggregate_captains
+
+    Returns:
+        List of {slug, name, months: [{id, decks}]} sorted by slug (decklists omitted)
+    """
+    return [
+        {
+            "slug": c["slug"],
+            "name": c["name"],
+            "months": [{"id": m["id"], "decks": len(m["players"])} for m in c["months"]],
+        }
+        for c in sorted(captains.values(), key=lambda c: c["slug"])
+    ]
+
+
 def _head(title: str, description: str, canonical: str, asset_prefix: str) -> str:
     """Shared document head for captain pages.
 
@@ -263,19 +324,20 @@ def _deck_rows(captain: dict) -> str:
     return "\n        ".join(rows)
 
 
-def _month_chips(captain: dict) -> str:
-    """Render month selector chips (all checked) for the Best 12 table.
+def _month_chips(month_ids: list[str], checked: set[str] | None = None) -> str:
+    """Render month selector chips.
 
     Args:
-        captain: Aggregated captain dict
+        month_ids: Month ids in display order
+        checked: Month ids to check (None = all checked)
 
     Returns:
         HTML string of label elements
     """
     return "".join(
-        f'<label class="month-chip"><input type="checkbox" checked data-month="{escape(m["id"])}">'
-        f"{escape(m['id'])}</label>"
-        for m in captain["months"]
+        f'<label class="month-chip"><input type="checkbox"{" checked" if checked is None or m in checked else ""}'
+        f' data-month="{escape(m)}">{escape(m)}</label>'
+        for m in month_ids
     )
 
 
@@ -316,7 +378,7 @@ def render_captain_page(captain: dict, base_url: str) -> str:
     <div class="section-title">Best 12</div>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
-    <div class="captain-filter" id="month-filter">{_month_chips(captain)}</div>
+    <div class="captain-filter" id="month-filter">{_month_chips([m["id"] for m in captain["months"]])}</div>
     <table class="data-table" id="best12-table">
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
         <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
@@ -397,6 +459,9 @@ def render_index_page(captains: dict[str, dict], base_url: str) -> str:
         f'<td class="num">{sum(len(m["players"]) for m in c["months"])}</td></tr>'
         for c in ranked
     )
+    month_ids = sorted({m["id"] for c in captains.values() for m in c["months"]})
+    chips = _month_chips(month_ids, checked=set(month_ids[-2:]))
+    payload = serialize_payload(index_payload(captains))
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -410,7 +475,9 @@ def render_index_page(captains: dict[str, dict], base_url: str) -> str:
 </header>
 <main>
   <div class="section active">
-    <table class="data-table">
+    <div class="section-desc">Deck counts for the checked months; uncheck months to narrow the field.</div>
+    <div class="captain-filter" id="month-filter">{chips}</div>
+    <table class="data-table" id="index-table">
       <thead><tr><th data-sort="captain">Captain</th><th class="num" data-sort="months">Months</th>
         <th class="num" data-sort="decks">Winning decks</th></tr></thead>
       <tbody>
@@ -419,7 +486,10 @@ def render_index_page(captains: dict[str, dict], base_url: str) -> str:
     </table>
   </div>
 </main>
-<script>{TABLE_JS}</script>
+<script type="application/json" id="captains-data">{payload}</script>
+<script>{INDEX_JS}renderIndex();
+document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderIndex));
+{TABLE_JS}</script>
 </body>
 </html>"""
 

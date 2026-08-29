@@ -199,3 +199,77 @@ def test_index_links_every_captain(events_dir, captains_file):
     assert '<a href="loki/">Loki</a>' in html
     assert '<a href="mystery-captain/">mystery_captain</a>' in html
     assert '<link rel="canonical" href="https://example.com/galaxy-stats/captains/">' in html
+
+
+@pytest.fixture()
+def three_events_dir(tmp_path):
+    """Three events so "last two months" is distinguishable from "all"."""
+    decks = {
+        "2026-01": [{"slug": "alpha", "players": [{"username": "u1", "archetype": "X", "deck": ["C"]}]}],
+        "2026-02": [{"slug": "alpha", "players": [{"username": "u2", "archetype": "X", "deck": ["C"]}]}],
+        "2026-03": [
+            {"slug": "alpha", "players": [{"username": "u3", "archetype": "X", "deck": ["C"]}]},
+            {"slug": "beta", "players": [{"username": "u4", "archetype": "X", "deck": ["C"]}]},
+        ],
+    }
+    for event_id, captains in decks.items():
+        event_dir = tmp_path / event_id
+        event_dir.mkdir()
+        (event_dir / "analysis.json").write_text(
+            json.dumps({"event": {"id": event_id, "name": event_id, "date": event_id}, "captains": captains})
+        )
+    return tmp_path
+
+
+def extract_index_payload(html: str) -> list[dict]:
+    m = re.search(r'<script type="application/json" id="captains-data">(.*?)</script>', html, re.DOTALL)
+    assert m, "captains-data payload not found"
+    return json.loads(m.group(1))
+
+
+def month_chip_state(html: str) -> tuple[set[str], set[str]]:
+    """Return (all chip months, checked chip months) from an index page."""
+    return (
+        set(re.findall(r'data-month="([^"]+)"', html)),
+        set(re.findall(r'checked data-month="([^"]+)"', html)),
+    )
+
+
+def test_index_embeds_compact_payload_with_monthly_deck_counts(three_events_dir, captains_file):
+    caps = aggregate_captains(three_events_dir, captains_file)
+    html = render_index_page(caps, "https://example.com")
+    by_slug = {c["slug"]: c for c in extract_index_payload(html)}
+    assert by_slug["alpha"]["months"] == [
+        {"id": "2026-01", "decks": 1},
+        {"id": "2026-02", "decks": 1},
+        {"id": "2026-03", "decks": 1},
+    ]
+    assert by_slug["beta"]["months"] == [{"id": "2026-03", "decks": 1}]
+    assert "username" not in html, "decklist/player data must not leak onto the index page"
+
+
+def test_index_payload_includes_zero_deck_captains(three_events_dir, captains_file):
+    caps = aggregate_captains(three_events_dir, captains_file)
+    by_slug = {c["slug"]: c for c in extract_index_payload(render_index_page(caps, "https://example.com"))}
+    assert by_slug["loki"]["months"] == []
+
+
+def test_index_chips_default_to_last_two_months(three_events_dir, captains_file):
+    caps = aggregate_captains(three_events_dir, captains_file)
+    html = render_index_page(caps, "https://example.com")
+    all_months, checked = month_chip_state(html)
+    assert all_months == {"2026-01", "2026-02", "2026-03"}
+    assert checked == {"2026-02", "2026-03"}
+
+
+def test_index_table_is_js_rerenderable(three_events_dir, captains_file):
+    caps = aggregate_captains(three_events_dir, captains_file)
+    html = render_index_page(caps, "https://example.com")
+    assert 'id="index-table"' in html
+    assert "renderIndex" in html
+
+
+def test_captain_page_chips_stay_all_checked(events_dir, captains_file):
+    html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
+    all_months, checked = month_chip_state(html)
+    assert all_months == checked == {"2026-01", "2026-02"}
