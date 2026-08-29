@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Itty Aerie — Captain Stats | Galaxy Stats</title>
+<meta name="description" content="Itty Aerie captain statistics across Once Upon a Galaxy monthly tournaments: 12 winning decks across 3 months, with best 12 cards and full decklists.">
+<link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/itty-aerie/">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=1">
+<style>
+  main { max-width: 1100px; }
+  .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
+  .data-table th { text-align:left; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+                   color:var(--muted); padding:8px 10px; border-bottom:2px solid var(--border);
+                   cursor:pointer; user-select:none; white-space:nowrap; }
+  .data-table th:hover { color:var(--text); }
+  .data-table th.no-sort { cursor:default; }
+  .data-table th.no-sort:hover { color:var(--muted); }
+  .data-table td { padding:7px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .data-table tbody tr:hover { background:var(--surface); }
+  .data-table td.num, .data-table th.num { text-align:right; }
+  .month-chip { display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace;
+                font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted);
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:5px 10px; cursor:pointer; transition:all 0.15s; }
+  .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
+                                   background:rgba(200,169,110,0.08); }
+  .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
+  .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
+                padding:12px 16px; border-left:2px solid var(--border); }
+</style>
+</head>
+<body>
+<header>
+  <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+  <h1>Itty Aerie</h1>
+  <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-value">12</div><div class="stat-label">Winning decks</div></div>
+    <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Months</div></div>
+  </div>
+</header>
+
+<main>
+  <div class="section active">
+    <div class="section-title">Best 12</div>
+    <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
+      below. Check or uncheck months to see how the picks shift.</div>
+    <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-06">2026-06</label><label class="month-chip"><input type="checkbox" checked data-month="2026-07">2026-07</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
+    <table class="data-table" id="best12-table">
+      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="section-title" style="margin-top:48px">Decklists</div>
+    <div class="section-desc">Every winning deck across all months.</div>
+    <div class="captain-filter">
+      <input id="deck-filter" class="filter-input" type="text"
+        placeholder="Filter by player, archetype, month, or card…">
+    </div>
+    <table class="data-table" id="deck-table">
+      <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
+        <th data-sort="archetype">Archetype</th><th class="no-sort">Deck</th></tr></thead>
+      <tbody>
+        <tr><td data-v="2026-06">2026-06</td><td>drumstep</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Destiny</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Gulliver</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Eros</span><span class="deck-pill">Perseus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>hiroprotagonist</td><td>Toys</td><td><div class="deck-pills"><span class="deck-pill">Busted Bot</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Space Ranger Woody</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Raggedy Ann</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span><span class="deck-pill">Jelly-ton</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>JimTheEternal</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Busted Bot</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Lemonhead</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Cotton Candy Dandy</span><span class="deck-pill">Hercules</span><span class="deck-pill">Jelly-ton</span></div></td></tr>
+        <tr><td data-v="2026-06">2026-06</td><td>ONLYWIN</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Gingerbread Witch</span><span class="deck-pill">Catatouille</span><span class="deck-pill">Lemonhead</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">Candy Apple Tree</span><span class="deck-pill">Kool Wip</span><span class="deck-pill">The Three Chef-Keteers</span><span class="deck-pill">Knight of the Holy Cane</span><span class="deck-pill">Keeb</span><span class="deck-pill">Cotton Candy Dandy</span><span class="deck-pill">Jelly-ton</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Champ</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Dastardly Spirit</span><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Gulliver</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Rollo</span><span class="deck-pill">Smug</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Crab Dragoon</span><span class="deck-pill">Hercules</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Diceratops</td><td>Toys</td><td><div class="deck-pills"><span class="deck-pill">Busted Bot</span><span class="deck-pill">Beanie Baby</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Space Ranger Woody</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Raggedy Ann</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Ogre Magi</span><span class="deck-pill">Hercules</span><span class="deck-pill">Blackbeard</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>illmater</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Destiny</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Candy Apple Tree</span><span class="deck-pill">Cherry Topples</span><span class="deck-pill">Kool Wip</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Knight of the Holy Cane</span><span class="deck-pill">Hercules</span><span class="deck-pill">Pirate King</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Melavaris</td><td>Toys</td><td><div class="deck-pills"><span class="deck-pill">Busted Bot</span><span class="deck-pill">Beanie Baby</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Space Ranger Woody</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Raggedy Ann</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Ogre Magi</span><span class="deck-pill">Hercules</span><span class="deck-pill">Blackbeard</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Nech</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Beanie Baby</span><span class="deck-pill">Busted Bot</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Space Ranger Woody</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Raggedy Ann</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Ogre Magi</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Hercules</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>vlouchk</td><td>Toys</td><td><div class="deck-pills"><span class="deck-pill">Busted Bot</span><span class="deck-pill">Beanie Baby</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Space Ranger Woody</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Raggedy Ann</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Ogre Magi</span><span class="deck-pill">Hercules</span><span class="deck-pill">Blackbeard</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Guzzlord</td><td>Toys</td><td><div class="deck-pills"><span class="deck-pill">Busted Bot</span><span class="deck-pill">Beanie Baby</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Space Ranger Woody</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Raggedy Ann</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Ogre Magi</span><span class="deck-pill">Hercules</span><span class="deck-pill">Blackbeard</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>hyst</td><td>Toys</td><td><div class="deck-pills"><span class="deck-pill">Busted Bot</span><span class="deck-pill">Beanie Baby</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Space Ranger Woody</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Raggedy Ann</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Ogre Magi</span><span class="deck-pill">Hercules</span><span class="deck-pill">Blackbeard</span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<script type="application/json" id="captain-data">{"slug": "itty-aerie", "name": "Itty Aerie", "months": [{"id": "2026-06", "date": "2026-06-19", "event": "June Monthly", "players": [{"username": "drumstep", "archetype": "Treasures", "deck": ["Destiny", "Mech-a-Man", "Miseria", "The Huntsman", "Young Hercules", "Gulliver", "Mortakon", "Netherbinder", "Orion, the Hunter", "Eros", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "hiroprotagonist", "archetype": "Toys", "deck": ["Busted Bot", "Mech-a-Man", "Space Ranger Woody", "Mortakon", "Mr. Fox", "Raggedy Ann", "Innkeeper", "Sir Francis Drake", "Blackbeard", "Hercules", "Jelly-ton", "The Burninator"]}, {"username": "JimTheEternal", "archetype": "Candy", "deck": ["Busted Bot", "Lollipop Faerie", "Lemonhead", "Mech-a-Man", "The Candy Cane Crook", "Mortakon", "Mr. Fox", "Sir Francis Drake", "Blackbeard", "Cotton Candy Dandy", "Hercules", "Jelly-ton"]}, {"username": "ONLYWIN", "archetype": "Candy", "deck": ["Lollipop Faerie", "Gingerbread Witch", "Catatouille", "Lemonhead", "The Candy Cane Crook", "Candy Apple Tree", "Kool Wip", "The Three Chef-Keteers", "Knight of the Holy Cane", "Keeb", "Cotton Candy Dandy", "Jelly-ton"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Champ", "archetype": "Treasures", "deck": ["Dastardly Spirit", "Friendly Spirit", "Mech-a-Man", "The Huntsman", "Gulliver", "Netherbinder", "Rollo", "Smug", "Blackbeard", "Crab Dragoon", "Hercules", "The Burninator"]}, {"username": "Diceratops", "archetype": "Toys", "deck": ["Busted Bot", "Beanie Baby", "Mech-a-Man", "Space Ranger Woody", "Mr. Fox", "Mortakon", "Raggedy Ann", "Innkeeper", "Sir Francis Drake", "Ogre Magi", "Hercules", "Blackbeard"]}, {"username": "illmater", "archetype": "Candy", "deck": ["Lance A Little", "Destiny", "The Candy Cane Crook", "The Huntsman", "Candy Apple Tree", "Cherry Topples", "Kool Wip", "Astral Navigator", "Knight of the Holy Cane", "Hercules", "Pirate King", "Sigrun, Valkyrie Queen"]}, {"username": "Melavaris", "archetype": "Toys", "deck": ["Busted Bot", "Beanie Baby", "Mech-a-Man", "Space Ranger Woody", "Mr. Fox", "Mortakon", "Raggedy Ann", "Innkeeper", "Sir Francis Drake", "Ogre Magi", "Hercules", "Blackbeard"]}, {"username": "Nech", "archetype": "Treasures", "deck": ["Beanie Baby", "Busted Bot", "Mech-a-Man", "Space Ranger Woody", "Mortakon", "Mr. Fox", "Raggedy Ann", "Innkeeper", "Ogre Magi", "Sir Francis Drake", "Blackbeard", "Hercules"]}, {"username": "vlouchk", "archetype": "Toys", "deck": ["Busted Bot", "Beanie Baby", "Mech-a-Man", "Space Ranger Woody", "Mr. Fox", "Mortakon", "Raggedy Ann", "Innkeeper", "Sir Francis Drake", "Ogre Magi", "Hercules", "Blackbeard"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Guzzlord", "archetype": "Toys", "deck": ["Busted Bot", "Beanie Baby", "Mech-a-Man", "Space Ranger Woody", "Mr. Fox", "Mortakon", "Raggedy Ann", "Innkeeper", "Sir Francis Drake", "Ogre Magi", "Hercules", "Blackbeard"]}, {"username": "hyst", "archetype": "Toys", "deck": ["Busted Bot", "Beanie Baby", "Mech-a-Man", "Space Ranger Woody", "Mr. Fox", "Mortakon", "Raggedy Ann", "Innkeeper", "Sir Francis Drake", "Ogre Magi", "Hercules", "Blackbeard"]}]}]}</script>
+<script>
+const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
+function best12(decks) {
+  const counts = {};
+  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
+  return Object.entries(counts)
+    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
+    .slice(0, 12);
+}
+function renderBest12() {
+  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
+    .map(cb => cb.dataset.month);
+  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
+  const tbody = document.querySelector('#best12-table tbody');
+  tbody.innerHTML = '';
+  best12(decks).forEach(([card, freq]) => {
+    const tr = document.createElement('tr');
+    const tdCard = document.createElement('td');
+    tdCard.textContent = card;
+    const tdFreq = document.createElement('td');
+    tdFreq.className = 'num';
+    tdFreq.textContent = freq;
+    const tdPct = document.createElement('td');
+    tdPct.className = 'num';
+    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
+    tr.append(tdCard, tdFreq, tdPct);
+    tbody.appendChild(tr);
+  });
+  document.querySelector('#best12-count').textContent = decks.length;
+}
+renderBest12();
+document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderBest12));
+
+function sortTable(th) {
+  const table = th.closest('table'), tbody = table.querySelector('tbody');
+  const idx = Array.from(th.parentNode.children).indexOf(th);
+  const dir = th.dataset.dir === 'asc' ? -1 : 1;
+  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
+  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
+  const rows = Array.from(tbody.rows);
+  rows.sort((a, b) => {
+    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
+    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
+    const an = parseFloat(av), bn = parseFloat(bv);
+    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
+      ? an - bn : av.localeCompare(bv);
+    return cmp * dir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+document.querySelectorAll('th[data-sort]').forEach(th =>
+  th.addEventListener('click', () => sortTable(th)));
+const deckFilter = document.getElementById('deck-filter');
+if (deckFilter) {
+  deckFilter.addEventListener('input', () => {
+    const q = deckFilter.value.toLowerCase();
+    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
+      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
+</script>
+</body>
+</html>

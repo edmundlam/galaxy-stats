@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Little Piggie — Captain Stats | Galaxy Stats</title>
+<meta name="description" content="This Little Piggie captain statistics across Once Upon a Galaxy monthly tournaments: 18 winning decks across 5 months, with best 12 cards and full decklists.">
+<link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/this-little-piggie/">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=1">
+<style>
+  main { max-width: 1100px; }
+  .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
+  .data-table th { text-align:left; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+                   color:var(--muted); padding:8px 10px; border-bottom:2px solid var(--border);
+                   cursor:pointer; user-select:none; white-space:nowrap; }
+  .data-table th:hover { color:var(--text); }
+  .data-table th.no-sort { cursor:default; }
+  .data-table th.no-sort:hover { color:var(--muted); }
+  .data-table td { padding:7px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .data-table tbody tr:hover { background:var(--surface); }
+  .data-table td.num, .data-table th.num { text-align:right; }
+  .month-chip { display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace;
+                font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted);
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:5px 10px; cursor:pointer; transition:all 0.15s; }
+  .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
+                                   background:rgba(200,169,110,0.08); }
+  .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
+  .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
+                padding:12px 16px; border-left:2px solid var(--border); }
+</style>
+</head>
+<body>
+<header>
+  <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+  <h1>This Little Piggie</h1>
+  <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-value">18</div><div class="stat-label">Winning decks</div></div>
+    <div class="stat-item"><div class="stat-value">5</div><div class="stat-label">Months</div></div>
+  </div>
+</header>
+
+<main>
+  <div class="section active">
+    <div class="section-title">Best 12</div>
+    <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
+      below. Check or uncheck months to see how the picks shift.</div>
+    <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-02">2026-02</label><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-04">2026-04</label><label class="month-chip"><input type="checkbox" checked data-month="2026-07">2026-07</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
+    <table class="data-table" id="best12-table">
+      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="section-title" style="margin-top:48px">Decklists</div>
+    <div class="section-desc">Every winning deck across all months.</div>
+    <div class="captain-filter">
+      <input id="deck-filter" class="filter-input" type="text"
+        placeholder="Filter by player, archetype, month, or card…">
+    </div>
+    <table class="data-table" id="deck-table">
+      <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
+        <th data-sort="archetype">Archetype</th><th class="no-sort">Deck</th></tr></thead>
+      <tbody>
+        <tr><td data-v="2026-02">2026-02</td><td>Fafner</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Toto</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Guinevere</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Pisces</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Rollo</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-02">2026-02</td><td>Mikeyo</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Shanty</span><span class="deck-pill">Tsarmina, the Tyrant</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Blackbeard</span><span class="deck-pill">Moonshadow</span><span class="deck-pill">Pisces</span><span class="deck-pill">Wink</span><span class="deck-pill">Sinbad</span><span class="deck-pill">The Rat King</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">The Huntsman</span></div></td></tr>
+        <tr><td data-v="2026-02">2026-02</td><td>RayWanderer</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Guinevere</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Pisces</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Rollo</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Butcher</span><span class="deck-pill">Crystal</span></div></td></tr>
+        <tr><td data-v="2026-02">2026-02</td><td>tretherio</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Pisces</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Rollo</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">The Butcher</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>EasyE</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Prickles</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Nightshade</span><span class="deck-pill">Pisces</span><span class="deck-pill">Wink</span><span class="deck-pill">Fae Familiar</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">The Fates</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Mr. Fox</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Feetlicker47</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Guinevere</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Pisces</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Rollo</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Butcher</span><span class="deck-pill">Crystal</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Mordobuus</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Plunder Penny</span><span class="deck-pill">Toadie</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Innkeeper</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Viscount Chocolat</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">The Sour Patch Kid</span><span class="deck-pill">Licorice</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Nick32681</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Toadie</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Fun Gal</span><span class="deck-pill">Nightshade</span><span class="deck-pill">Genie of the Lamp</span><span class="deck-pill">Pisces</span><span class="deck-pill">Faerie Godfather</span><span class="deck-pill">Smug</span><span class="deck-pill">Cotton Candy Dandy</span><span class="deck-pill">Kool Wip</span><span class="deck-pill">Rollo</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>prototype00</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Beanie Baby</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Moonshadow</span><span class="deck-pill">Scale-a-tor</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Oracle of Fortunes</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Tegid</td><td>Fae</td><td><div class="deck-pills"><span class="deck-pill">Prickles</span><span class="deck-pill">Shanty</span><span class="deck-pill">Toadie</span><span class="deck-pill">Fun Gal</span><span class="deck-pill">Nightshade</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Faerie Queen</span><span class="deck-pill">Mirror Mirror</span><span class="deck-pill">Moonshadow</span><span class="deck-pill">Pisces</span><span class="deck-pill">Wink</span><span class="deck-pill">Faerie Godfather</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>ameya</td><td>Fae</td><td><div class="deck-pills"><span class="deck-pill">Prickles</span><span class="deck-pill">Shanty</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Fun Gal</span><span class="deck-pill">Nightshade</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Faerie Queen</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Moonshadow</span><span class="deck-pill">Pisces</span><span class="deck-pill">Wink</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>ima</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Guinevere</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Pisces</span><span class="deck-pill">Chaos</span><span class="deck-pill">Sinbad</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Rollo</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Butcher</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Motigg</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Ace of Hearts</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Mephisto</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Pisces</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">The Butcher</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Ryohten</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Toadie</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mechanical Dragon</span><span class="deck-pill">Fun Gal</span><span class="deck-pill">Faerie Queen</span><span class="deck-pill">Mysterio, the Great and Powerful</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Thunder of Dragons</span><span class="deck-pill">Pisces</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Cankerpus</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Wormtongue</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Don Quixote</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Rollo</span><span class="deck-pill">The Butcher</span><span class="deck-pill">Tsarmina, the Tyrant</span><span class="deck-pill">Weensy</span><span class="deck-pill">Pisces</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>CptChrispy</td><td>Boons</td><td><div class="deck-pills"><span class="deck-pill">Destiny</span><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Crystal</span><span class="deck-pill">Eros</span><span class="deck-pill">Guinevere</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>pavlov</td><td>Pirates</td><td><div class="deck-pills"><span class="deck-pill">Friendly Spirit</span><span class="deck-pill">Glory Seeker</span><span class="deck-pill">Wink</span><span class="deck-pill">Sinbad</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Eros</span><span class="deck-pill">Pisces</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Uther Pendragon</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Anubis</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Vani</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Fae Familiar</span><span class="deck-pill">Morgan Le Fae</span><span class="deck-pill">Wink</span><span class="deck-pill">Cherry Topples</span><span class="deck-pill">Fun Gal</span><span class="deck-pill">Nightshade</span><span class="deck-pill">Caramel</span><span class="deck-pill">Pisces</span><span class="deck-pill">Cotton Candy Dandy</span><span class="deck-pill">Faerie Godfather</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<script type="application/json" id="captain-data">{"slug": "this-little-piggie", "name": "This Little Piggie", "months": [{"id": "2026-02", "date": "2026-02-20", "event": "February Monthly", "players": [{"username": "Fafner", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Don Quixote", "Ace of Hearts", "Guinevere", "The Burninator", "Pisces", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Rollo", "Miseria"]}, {"username": "Mikeyo", "archetype": "Pirates", "deck": ["Aladdin", "Shanty", "Tsarmina, the Tyrant", "Innkeeper", "Blackbeard", "Moonshadow", "Pisces", "Wink", "Sinbad", "The Rat King", "Mr. Fox", "The Huntsman"]}, {"username": "RayWanderer", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Guinevere", "The Burninator", "Pisces", "Smug", "Wormscale Tinkerer", "Rollo", "Mr. Fox", "Miseria", "The Butcher", "Crystal"]}, {"username": "tretherio", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Wicked Witch", "Ace of Hearts", "Guinevere", "Hephaestus", "The Burninator", "Pisces", "Snapping Hydra", "Wormscale Tinkerer", "Rollo", "Mr. Fox", "The Butcher"]}]}, {"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "EasyE", "archetype": "Treasures", "deck": ["Prickles", "Mechanical Dragon", "Nightshade", "Pisces", "Wink", "Fae Familiar", "Sir Francis Drake", "The Fates", "Flopsy", "Wormscale Tinkerer", "Twilight Sprinkles", "Mr. Fox"]}, {"username": "Feetlicker47", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Wicked Witch", "Ace of Hearts", "Guinevere", "The Burninator", "Pisces", "Wormscale Tinkerer", "Rollo", "Mr. Fox", "Miseria", "The Butcher", "Crystal"]}, {"username": "Mordobuus", "archetype": "Candy", "deck": ["Plunder Penny", "Toadie", "Mechanical Dragon", "Innkeeper", "Glory Seeker", "Combustible Dragon", "Wormscale Tinkerer", "Viscount Chocolat", "Twilight Sprinkles", "The Candy Cane Crook", "The Sour Patch Kid", "Licorice"]}, {"username": "Nick32681", "archetype": "Treasures", "deck": ["Toadie", "Maverick & Icewing", "Mechanical Dragon", "Fun Gal", "Nightshade", "Genie of the Lamp", "Pisces", "Faerie Godfather", "Smug", "Cotton Candy Dandy", "Kool Wip", "Rollo"]}, {"username": "prototype00", "archetype": "Treasures", "deck": ["Beanie Baby", "Maverick & Icewing", "Mechanical Dragon", "Combustible Dragon", "Moonshadow", "Scale-a-tor", "The Burninator", "Sir Francis Drake", "Smug", "Flopsy", "Wormscale Tinkerer", "Oracle of Fortunes"]}, {"username": "Tegid", "archetype": "Fae", "deck": ["Prickles", "Shanty", "Toadie", "Fun Gal", "Nightshade", "Black Hole", "Faerie Queen", "Mirror Mirror", "Moonshadow", "Pisces", "Wink", "Faerie Godfather"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "ameya", "archetype": "Fae", "deck": ["Prickles", "Shanty", "Mechanical Dragon", "Fun Gal", "Nightshade", "Black Hole", "Faerie Queen", "Wicked Witch", "Moonshadow", "Pisces", "Wink", "Wormscale Tinkerer"]}, {"username": "ima", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Guinevere", "The Burninator", "Pisces", "Chaos", "Sinbad", "Sir Francis Drake", "Wormscale Tinkerer", "Rollo", "Mr. Fox", "Miseria", "The Butcher"]}, {"username": "Motigg", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mechanical Dragon", "Ace of Hearts", "Combustible Dragon", "Mephisto", "The Burninator", "Pisces", "Flopsy", "Wormscale Tinkerer", "Sunflare Glider", "Mr. Fox", "The Butcher"]}, {"username": "Ryohten", "archetype": "Treasures", "deck": ["Toadie", "Maverick & Icewing", "Mechanical Dragon", "Fun Gal", "Faerie Queen", "Mysterio, the Great and Powerful", "The Burninator", "Thunder of Dragons", "Pisces", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Cankerpus", "archetype": "Treasures", "deck": ["Wormtongue", "Miseria", "The Huntsman", "Don Quixote", "Maverick & Icewing", "Mr. Fox", "Rollo", "The Butcher", "Tsarmina, the Tyrant", "Weensy", "Pisces", "Wormscale Tinkerer"]}, {"username": "CptChrispy", "archetype": "Boons", "deck": ["Destiny", "Fortune Teller", "Miseria", "The Huntsman", "Young Hercules", "Baron Bok", "Mortakon", "Orion, the Hunter", "Astral Navigator", "Crystal", "Eros", "Guinevere"]}, {"username": "pavlov", "archetype": "Pirates", "deck": ["Friendly Spirit", "Glory Seeker", "Wink", "Sinbad", "Black Hole", "Eros", "Pisces", "Snapping Hydra", "Uther Pendragon", "Wicked Witch", "Anubis", "Wormscale Tinkerer"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Vani", "archetype": "Candy", "deck": ["Lollipop Faerie", "Fae Familiar", "Morgan Le Fae", "Wink", "Cherry Topples", "Fun Gal", "Nightshade", "Caramel", "Pisces", "Cotton Candy Dandy", "Faerie Godfather", "Wormscale Tinkerer"]}]}]}</script>
+<script>
+const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
+function best12(decks) {
+  const counts = {};
+  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
+  return Object.entries(counts)
+    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
+    .slice(0, 12);
+}
+function renderBest12() {
+  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
+    .map(cb => cb.dataset.month);
+  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
+  const tbody = document.querySelector('#best12-table tbody');
+  tbody.innerHTML = '';
+  best12(decks).forEach(([card, freq]) => {
+    const tr = document.createElement('tr');
+    const tdCard = document.createElement('td');
+    tdCard.textContent = card;
+    const tdFreq = document.createElement('td');
+    tdFreq.className = 'num';
+    tdFreq.textContent = freq;
+    const tdPct = document.createElement('td');
+    tdPct.className = 'num';
+    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
+    tr.append(tdCard, tdFreq, tdPct);
+    tbody.appendChild(tr);
+  });
+  document.querySelector('#best12-count').textContent = decks.length;
+}
+renderBest12();
+document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderBest12));
+
+function sortTable(th) {
+  const table = th.closest('table'), tbody = table.querySelector('tbody');
+  const idx = Array.from(th.parentNode.children).indexOf(th);
+  const dir = th.dataset.dir === 'asc' ? -1 : 1;
+  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
+  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
+  const rows = Array.from(tbody.rows);
+  rows.sort((a, b) => {
+    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
+    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
+    const an = parseFloat(av), bn = parseFloat(bv);
+    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
+      ? an - bn : av.localeCompare(bv);
+    return cmp * dir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+document.querySelectorAll('th[data-sort]').forEach(th =>
+  th.addEventListener('click', () => sortTable(th)));
+const deckFilter = document.getElementById('deck-filter');
+if (deckFilter) {
+  deckFilter.addEventListener('input', () => {
+    const q = deckFilter.value.toLowerCase();
+    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
+      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
+</script>
+</body>
+</html>

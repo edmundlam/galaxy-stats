@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frowny the Clown — Captain Stats | Galaxy Stats</title>
+<meta name="description" content="Frowny the Clown captain statistics across Once Upon a Galaxy monthly tournaments: 20 winning decks across 5 months, with best 12 cards and full decklists.">
+<link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/frowny-the-clown/">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=1">
+<style>
+  main { max-width: 1100px; }
+  .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
+  .data-table th { text-align:left; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+                   color:var(--muted); padding:8px 10px; border-bottom:2px solid var(--border);
+                   cursor:pointer; user-select:none; white-space:nowrap; }
+  .data-table th:hover { color:var(--text); }
+  .data-table th.no-sort { cursor:default; }
+  .data-table th.no-sort:hover { color:var(--muted); }
+  .data-table td { padding:7px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .data-table tbody tr:hover { background:var(--surface); }
+  .data-table td.num, .data-table th.num { text-align:right; }
+  .month-chip { display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace;
+                font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted);
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:5px 10px; cursor:pointer; transition:all 0.15s; }
+  .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
+                                   background:rgba(200,169,110,0.08); }
+  .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
+  .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
+                padding:12px 16px; border-left:2px solid var(--border); }
+</style>
+</head>
+<body>
+<header>
+  <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+  <h1>Frowny the Clown</h1>
+  <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-value">20</div><div class="stat-label">Winning decks</div></div>
+    <div class="stat-item"><div class="stat-value">5</div><div class="stat-label">Months</div></div>
+  </div>
+</header>
+
+<main>
+  <div class="section active">
+    <div class="section-title">Best 12</div>
+    <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
+      below. Check or uncheck months to see how the picks shift.</div>
+    <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-02">2026-02</label><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-04">2026-04</label><label class="month-chip"><input type="checkbox" checked data-month="2026-07">2026-07</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
+    <table class="data-table" id="best12-table">
+      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="section-title" style="margin-top:48px">Decklists</div>
+    <div class="section-desc">Every winning deck across all months.</div>
+    <div class="captain-filter">
+      <input id="deck-filter" class="filter-input" type="text"
+        placeholder="Filter by player, archetype, month, or card…">
+    </div>
+    <table class="data-table" id="deck-table">
+      <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
+        <th data-sort="archetype">Archetype</th><th class="no-sort">Deck</th></tr></thead>
+      <tbody>
+        <tr><td data-v="2026-02">2026-02</td><td>clandestine07</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Daedalus</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Miss Muffet</span><span class="deck-pill">Cherry Topples</span><span class="deck-pill">The Sour Patch Kid</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Doopity Doo</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-02">2026-02</td><td>Jasperov</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Pixie</span><span class="deck-pill">Cherry Topples</span><span class="deck-pill">The Candy Cane Crook</span><span class="deck-pill">The Sour Patch Kid</span><span class="deck-pill">Chubby Cheep</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Jelly-ton</span><span class="deck-pill">Licorice</span><span class="deck-pill">The Three Chef-Keteers</span><span class="deck-pill">Pretty Patissier</span></div></td></tr>
+        <tr><td data-v="2026-02">2026-02</td><td>luckyalien</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Ghoulade Man</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Pixie</span><span class="deck-pill">Keeb</span><span class="deck-pill">Candy Apple Tree</span><span class="deck-pill">Catatouille</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Jelly-ton</span><span class="deck-pill">Weensy</span><span class="deck-pill">Licorice</span><span class="deck-pill">The Three Chef-Keteers</span></div></td></tr>
+        <tr><td data-v="2026-02">2026-02</td><td>SkyBreaker</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Chaos</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Pixie</span><span class="deck-pill">Frosting Dragon</span><span class="deck-pill">Cherry Topples</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>AnomanderRake</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Black Hole</span><span class="deck-pill">Hercules</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Leapfrog</span><span class="deck-pill">Rollo</span><span class="deck-pill">Weensy</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Danb1563</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Sir Francis Drake</span><span class="deck-pill">Smug</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Rollo</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">The Butcher</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>EpicHippo</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Chaos</span><span class="deck-pill">Cotton Candy Dandy</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Caramel</span><span class="deck-pill">Keeb</span><span class="deck-pill">Kool Wip</span><span class="deck-pill">Catatouille</span><span class="deck-pill">Chubby Cheep</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Gingerbread Witch</span><span class="deck-pill">Pretty Patissier</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Neomikin</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Ghoulade Man</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Pixie</span><span class="deck-pill">Keeb</span><span class="deck-pill">Candy Apple Tree</span><span class="deck-pill">Catatouille</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Jelly-ton</span><span class="deck-pill">Weensy</span><span class="deck-pill">Licorice</span><span class="deck-pill">The Three Chef-Keteers</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>thedjangler</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Pixie</span><span class="deck-pill">Keeb</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Jelly-ton</span><span class="deck-pill">Weensy</span><span class="deck-pill">Licorice</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Three Chef-Keteers</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Whitefalcon9</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Chaos</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Leapfrog</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Butcher</span></div></td></tr>
+        <tr><td data-v="2026-03">2026-03</td><td>Zapgaze</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Ghoulade Man</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Pixie</span><span class="deck-pill">Keeb</span><span class="deck-pill">Candy Apple Tree</span><span class="deck-pill">Catatouille</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Jelly-ton</span><span class="deck-pill">Weensy</span><span class="deck-pill">Licorice</span><span class="deck-pill">The Three Chef-Keteers</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>adrianc</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Busted Bot</span><span class="deck-pill">Cotton Candy Dandy</span><span class="deck-pill">Pixie</span><span class="deck-pill">Life Saver</span><span class="deck-pill">Keeb</span><span class="deck-pill">Kool Wip</span><span class="deck-pill">Catatouille</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Lemonhead</span><span class="deck-pill">Doopity Doo</span><span class="deck-pill">The Three Chef-Keteers</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>Mormegil</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Snapping Hydra</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Rollo</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Miseria</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Crystal</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>SpecificCrown</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Cotton Candy Dandy</span><span class="deck-pill">Ghoulade Man</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Pixie</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Jelly-ton</span><span class="deck-pill">Sleeping Giant</span><span class="deck-pill">Weensy</span><span class="deck-pill">The Huntsman</span><span class="deck-pill">Crystal</span><span class="deck-pill">The Three Chef-Keteers</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>whiten01se</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Gummy Wyrm</span><span class="deck-pill">Knight of the Holy Cane</span><span class="deck-pill">Caramel</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Pixie</span><span class="deck-pill">Frosting Dragon</span><span class="deck-pill">Cherry Topples</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Rollo</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-04">2026-04</td><td>XenoGemini</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Combustible Dragon</span><span class="deck-pill">Hephaestus</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Chaos</span><span class="deck-pill">Wormscale Tinkerer</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Rollo</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Miseria</span></div></td></tr>
+        <tr><td data-v="2026-07">2026-07</td><td>Barbekyou</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Catatouille</span><span class="deck-pill">Pretty Patissier</span><span class="deck-pill">Candy Apple Tree</span><span class="deck-pill">The Three Chef-Keteers</span><span class="deck-pill">Weensy</span><span class="deck-pill">Ghoulade Man</span><span class="deck-pill">Keeb</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Cotton Candy Dandy</span><span class="deck-pill">Licorice</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Haumph</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Destiny</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Netherbinder</span><span class="deck-pill">Rollo</span><span class="deck-pill">Mirror Mage</span><span class="deck-pill">Smug</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span><span class="deck-pill">Wormscale Tinkerer</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>Redoubler</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Bubbles</span><span class="deck-pill">Lance A Little</span><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Destiny</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mr. Fox</span><span class="deck-pill">Sunflare Glider</span><span class="deck-pill">Medea in a Tavern</span><span class="deck-pill">Mirror Mage</span><span class="deck-pill">Oracle of Fortunes</span><span class="deck-pill">Ptah</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-08">2026-08</td><td>theguyman</td><td>Candy</td><td><div class="deck-pills"><span class="deck-pill">Aladdin</span><span class="deck-pill">Lollipop Faerie</span><span class="deck-pill">Catatouille</span><span class="deck-pill">Weensy</span><span class="deck-pill">Candy Apple Tree</span><span class="deck-pill">The Three Chef-Keteers</span><span class="deck-pill">Keeb</span><span class="deck-pill">Ghoulade Man</span><span class="deck-pill">Pixie</span><span class="deck-pill">Twilight Sprinkles</span><span class="deck-pill">Licorice</span><span class="deck-pill">Jelly-ton</span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<script type="application/json" id="captain-data">{"slug": "frowny-the-clown", "name": "Frowny the Clown", "months": [{"id": "2026-02", "date": "2026-02-20", "event": "February Monthly", "players": [{"username": "clandestine07", "archetype": "Treasures", "deck": ["Aladdin", "Maverick & Icewing", "Daedalus", "Snapping Hydra", "Wormscale Tinkerer", "Miss Muffet", "Cherry Topples", "The Sour Patch Kid", "Lollipop Faerie", "Mr. Fox", "Doopity Doo", "Miseria"]}, {"username": "Jasperov", "archetype": "Candy", "deck": ["Wormscale Tinkerer", "Twilight Sprinkles", "Pixie", "Cherry Topples", "The Candy Cane Crook", "The Sour Patch Kid", "Chubby Cheep", "Lollipop Faerie", "Jelly-ton", "Licorice", "The Three Chef-Keteers", "Pretty Patissier"]}, {"username": "luckyalien", "archetype": "Candy", "deck": ["Aladdin", "Ghoulade Man", "Twilight Sprinkles", "Pixie", "Keeb", "Candy Apple Tree", "Catatouille", "Lollipop Faerie", "Jelly-ton", "Weensy", "Licorice", "The Three Chef-Keteers"]}, {"username": "SkyBreaker", "archetype": "Treasures", "deck": ["Maverick & Icewing", "The Burninator", "Chaos", "Sir Francis Drake", "Wormscale Tinkerer", "Gummy Wyrm", "Pixie", "Frosting Dragon", "Cherry Topples", "Sunflare Glider", "Mr. Fox", "Miseria"]}]}, {"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "AnomanderRake", "archetype": "Treasures", "deck": ["Aladdin", "Mech-a-Man", "Black Hole", "Hercules", "Sir Francis Drake", "Wormscale Tinkerer", "Gummy Wyrm", "Leapfrog", "Rollo", "Weensy", "Mr. Fox", "Miseria"]}, {"username": "Danb1563", "archetype": "Treasures", "deck": ["Mech-a-Man", "Wicked Witch", "Guinevere", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Lance A Little", "Rollo", "Mr. Fox", "Miseria", "The Huntsman", "The Butcher"]}, {"username": "EpicHippo", "archetype": "Candy", "deck": ["Maverick & Icewing", "Chaos", "Cotton Candy Dandy", "Gummy Wyrm", "Caramel", "Keeb", "Kool Wip", "Catatouille", "Chubby Cheep", "Lollipop Faerie", "Gingerbread Witch", "Pretty Patissier"]}, {"username": "Neomikin", "archetype": "Candy", "deck": ["Aladdin", "Ghoulade Man", "Twilight Sprinkles", "Pixie", "Keeb", "Candy Apple Tree", "Catatouille", "Lollipop Faerie", "Jelly-ton", "Weensy", "Licorice", "The Three Chef-Keteers"]}, {"username": "thedjangler", "archetype": "Candy", "deck": ["Aladdin", "Wormscale Tinkerer", "Twilight Sprinkles", "Pixie", "Keeb", "Lance A Little", "Lollipop Faerie", "Jelly-ton", "Weensy", "Licorice", "Miseria", "The Three Chef-Keteers"]}, {"username": "Whitefalcon9", "archetype": "Treasures", "deck": ["Maverick & Icewing", "The Burninator", "Chaos", "Snapping Hydra", "Wormscale Tinkerer", "Lance A Little", "Leapfrog", "Oracle of Fortunes", "Sunflare Glider", "Mr. Fox", "Miseria", "The Butcher"]}, {"username": "Zapgaze", "archetype": "Candy", "deck": ["Aladdin", "Ghoulade Man", "Twilight Sprinkles", "Pixie", "Keeb", "Candy Apple Tree", "Catatouille", "Lollipop Faerie", "Jelly-ton", "Weensy", "Licorice", "The Three Chef-Keteers"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "adrianc", "archetype": "Candy", "deck": ["Aladdin", "Busted Bot", "Cotton Candy Dandy", "Pixie", "Life Saver", "Keeb", "Kool Wip", "Catatouille", "Lollipop Faerie", "Lemonhead", "Doopity Doo", "The Three Chef-Keteers"]}, {"username": "Mormegil", "archetype": "Treasures", "deck": ["Aladdin", "Mortakon", "Mech-a-Man", "Snapping Hydra", "Wormscale Tinkerer", "Lance A Little", "Netherbinder", "Rollo", "Oracle of Fortunes", "Miseria", "The Huntsman", "Crystal"]}, {"username": "SpecificCrown", "archetype": "Candy", "deck": ["Aladdin", "Cotton Candy Dandy", "Ghoulade Man", "Twilight Sprinkles", "Pixie", "Lollipop Faerie", "Jelly-ton", "Sleeping Giant", "Weensy", "The Huntsman", "Crystal", "The Three Chef-Keteers"]}, {"username": "whiten01se", "archetype": "Candy", "deck": ["Wormscale Tinkerer", "Gummy Wyrm", "Knight of the Holy Cane", "Caramel", "Twilight Sprinkles", "Pixie", "Frosting Dragon", "Cherry Topples", "Lance A Little", "Rollo", "Mr. Fox", "Miseria"]}, {"username": "XenoGemini", "archetype": "Treasures", "deck": ["Mech-a-Man", "Maverick & Icewing", "Wicked Witch", "Combustible Dragon", "Hephaestus", "The Burninator", "Chaos", "Wormscale Tinkerer", "Netherbinder", "Rollo", "Mr. Fox", "Miseria"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Barbekyou", "archetype": "Candy", "deck": ["Aladdin", "Catatouille", "Pretty Patissier", "Candy Apple Tree", "The Three Chef-Keteers", "Weensy", "Ghoulade Man", "Keeb", "Twilight Sprinkles", "Cotton Candy Dandy", "Licorice", "The Burninator"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Haumph", "archetype": "Treasures", "deck": ["Destiny", "Miseria", "Young Hercules", "Maverick & Icewing", "Mr. Fox", "Netherbinder", "Rollo", "Mirror Mage", "Smug", "Sigrun, Valkyrie Queen", "The Burninator", "Wormscale Tinkerer"]}, {"username": "Redoubler", "archetype": "Treasures", "deck": ["Bubbles", "Lance A Little", "Fortune Teller", "Destiny", "Maverick & Icewing", "Mr. Fox", "Sunflare Glider", "Medea in a Tavern", "Mirror Mage", "Oracle of Fortunes", "Ptah", "The Burninator"]}, {"username": "theguyman", "archetype": "Candy", "deck": ["Aladdin", "Lollipop Faerie", "Catatouille", "Weensy", "Candy Apple Tree", "The Three Chef-Keteers", "Keeb", "Ghoulade Man", "Pixie", "Twilight Sprinkles", "Licorice", "Jelly-ton"]}]}]}</script>
+<script>
+const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
+function best12(decks) {
+  const counts = {};
+  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
+  return Object.entries(counts)
+    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
+    .slice(0, 12);
+}
+function renderBest12() {
+  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
+    .map(cb => cb.dataset.month);
+  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
+  const tbody = document.querySelector('#best12-table tbody');
+  tbody.innerHTML = '';
+  best12(decks).forEach(([card, freq]) => {
+    const tr = document.createElement('tr');
+    const tdCard = document.createElement('td');
+    tdCard.textContent = card;
+    const tdFreq = document.createElement('td');
+    tdFreq.className = 'num';
+    tdFreq.textContent = freq;
+    const tdPct = document.createElement('td');
+    tdPct.className = 'num';
+    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
+    tr.append(tdCard, tdFreq, tdPct);
+    tbody.appendChild(tr);
+  });
+  document.querySelector('#best12-count').textContent = decks.length;
+}
+renderBest12();
+document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderBest12));
+
+function sortTable(th) {
+  const table = th.closest('table'), tbody = table.querySelector('tbody');
+  const idx = Array.from(th.parentNode.children).indexOf(th);
+  const dir = th.dataset.dir === 'asc' ? -1 : 1;
+  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
+  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
+  const rows = Array.from(tbody.rows);
+  rows.sort((a, b) => {
+    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
+    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
+    const an = parseFloat(av), bn = parseFloat(bv);
+    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
+      ? an - bn : av.localeCompare(bv);
+    return cmp * dir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+document.querySelectorAll('th[data-sort]').forEach(th =>
+  th.addEventListener('click', () => sortTable(th)));
+const deckFilter = document.getElementById('deck-filter');
+if (deckFilter) {
+  deckFilter.addEventListener('input', () => {
+    const q = deckFilter.value.toLowerCase();
+    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
+      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
+</script>
+</body>
+</html>

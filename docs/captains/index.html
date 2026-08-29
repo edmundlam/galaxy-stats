@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUAG Captains — All Captain Stats | Galaxy Stats</title>
+<meta name="description" content="All Once Upon a Galaxy captains with monthly tournament statistics: winning deck counts, best 12 cards, and full decklists per captain.">
+<link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/galaxy-report.css?v=1">
+<style>
+  main { max-width: 1100px; }
+  .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
+  .data-table th { text-align:left; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+                   color:var(--muted); padding:8px 10px; border-bottom:2px solid var(--border);
+                   cursor:pointer; user-select:none; white-space:nowrap; }
+  .data-table th:hover { color:var(--text); }
+  .data-table th.no-sort { cursor:default; }
+  .data-table th.no-sort:hover { color:var(--muted); }
+  .data-table td { padding:7px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .data-table tbody tr:hover { background:var(--surface); }
+  .data-table td.num, .data-table th.num { text-align:right; }
+  .month-chip { display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace;
+                font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted);
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:5px 10px; cursor:pointer; transition:all 0.15s; }
+  .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
+                                   background:rgba(200,169,110,0.08); }
+  .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
+  .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
+                padding:12px 16px; border-left:2px solid var(--border); }
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+  <h1>Captains</h1>
+  <div class="subtitle">93 captains · click a column to sort</div>
+</header>
+<main>
+  <div class="section active">
+    <table class="data-table">
+      <thead><tr><th data-sort="captain">Captain</th><th class="num" data-sort="months">Months</th>
+        <th class="num" data-sort="decks">Winning decks</th></tr></thead>
+      <tbody>
+        <tr><td><a href="rumpelstiltskin/">Rumpelstiltskin</a></td><td class="num">6</td><td class="num">76</td></tr>
+        <tr><td><a href="anagolay/">Anagolay</a></td><td class="num">4</td><td class="num">69</td></tr>
+        <tr><td><a href="dinonysus/">Dinonysus</a></td><td class="num">4</td><td class="num">62</td></tr>
+        <tr><td><a href="legend-of-loxley/">Legend of Loxley</a></td><td class="num">7</td><td class="num">58</td></tr>
+        <tr><td><a href="nemesis/">Nemesis</a></td><td class="num">4</td><td class="num">46</td></tr>
+        <tr><td><a href="trash-panda/">Trash Panda</a></td><td class="num">7</td><td class="num">43</td></tr>
+        <tr><td><a href="baba-yaga/">Baba Yaga</a></td><td class="num">3</td><td class="num">39</td></tr>
+        <tr><td><a href="candy-pandy/">Candy Pandy</a></td><td class="num">7</td><td class="num">35</td></tr>
+        <tr><td><a href="double-dealer/">Double Dealer</a></td><td class="num">6</td><td class="num">33</td></tr>
+        <tr><td><a href="sweet-tooth/">Sweet Tooth</a></td><td class="num">6</td><td class="num">33</td></tr>
+        <tr><td><a href="faker-the-caker-baker/">Faker, the Caker Baker</a></td><td class="num">6</td><td class="num">32</td></tr>
+        <tr><td><a href="toucan-samuel/">Toucan Samuel</a></td><td class="num">6</td><td class="num">32</td></tr>
+        <tr><td><a href="goat-t/">Goat T</a></td><td class="num">5</td><td class="num">31</td></tr>
+        <tr><td><a href="galileo-galilei/">Galileo Galilei</a></td><td class="num">3</td><td class="num">28</td></tr>
+        <tr><td><a href="jay-sparrow/">Jay Sparrow</a></td><td class="num">7</td><td class="num">28</td></tr>
+        <tr><td><a href="mira/">Mira</a></td><td class="num">6</td><td class="num">28</td></tr>
+        <tr><td><a href="nathaniel-drake/">Nathaniel Drake</a></td><td class="num">6</td><td class="num">28</td></tr>
+        <tr><td><a href="yakety-yak-yak/">Yakety Yak Yak</a></td><td class="num">4</td><td class="num">28</td></tr>
+        <tr><td><a href="dorothy/">Dorothy</a></td><td class="num">6</td><td class="num">27</td></tr>
+        <tr><td><a href="mercury/">Mercury</a></td><td class="num">4</td><td class="num">26</td></tr>
+        <tr><td><a href="tajima-patron-of-sweets/">Tajima, Patron of Sweets</a></td><td class="num">6</td><td class="num">26</td></tr>
+        <tr><td><a href="charlie-pots/">Charlie Pots</a></td><td class="num">6</td><td class="num">25</td></tr>
+        <tr><td><a href="professor-whos-who/">Professor Who&#x27;s Who</a></td><td class="num">5</td><td class="num">21</td></tr>
+        <tr><td><a href="frowny-the-clown/">Frowny the Clown</a></td><td class="num">5</td><td class="num">20</td></tr>
+        <tr><td><a href="gloria-clementine/">Gloria Clementine</a></td><td class="num">6</td><td class="num">20</td></tr>
+        <tr><td><a href="iron-monkey/">Iron Monkey</a></td><td class="num">4</td><td class="num">20</td></tr>
+        <tr><td><a href="sorcerous-serena/">Sorcerous Serena</a></td><td class="num">5</td><td class="num">18</td></tr>
+        <tr><td><a href="this-little-piggie/">This Little Piggie</a></td><td class="num">5</td><td class="num">18</td></tr>
+        <tr><td><a href="zagreus/">Zagreus</a></td><td class="num">4</td><td class="num">18</td></tr>
+        <tr><td><a href="elec-drake/">Elec-Drake</a></td><td class="num">5</td><td class="num">17</td></tr>
+        <tr><td><a href="lightning-thief/">Lightning Thief</a></td><td class="num">5</td><td class="num">17</td></tr>
+        <tr><td><a href="luna-girl/">Luna Girl</a></td><td class="num">5</td><td class="num">16</td></tr>
+        <tr><td><a href="queen-harpolia/">Queen Harpolia</a></td><td class="num">5</td><td class="num">16</td></tr>
+        <tr><td><a href="the-collector/">The Collector</a></td><td class="num">5</td><td class="num">16</td></tr>
+        <tr><td><a href="wizard-headmaster/">Wizard Headmaster</a></td><td class="num">5</td><td class="num">16</td></tr>
+        <tr><td><a href="lady-of-the-lake/">Lady of the Lake</a></td><td class="num">5</td><td class="num">15</td></tr>
+        <tr><td><a href="lucky-leprechaun/">Lucky Leprechaun</a></td><td class="num">5</td><td class="num">15</td></tr>
+        <tr><td><a href="jason-of-the-argonauts/">Jason of the Argonauts</a></td><td class="num">5</td><td class="num">14</td></tr>
+        <tr><td><a href="the-candyman/">The Candyman</a></td><td class="num">4</td><td class="num">14</td></tr>
+        <tr><td><a href="king-midas/">King Midas</a></td><td class="num">4</td><td class="num">13</td></tr>
+        <tr><td><a href="indiana-clones/">Indiana Clones</a></td><td class="num">4</td><td class="num">12</td></tr>
+        <tr><td><a href="itty-aerie/">Itty Aerie</a></td><td class="num">3</td><td class="num">12</td></tr>
+        <tr><td><a href="thing-in-the-ice/">Thing in the Ice</a></td><td class="num">3</td><td class="num">12</td></tr>
+        <tr><td><a href="romeo/">Romeo</a></td><td class="num">3</td><td class="num">11</td></tr>
+        <tr><td><a href="con-artist/">Con Artist</a></td><td class="num">2</td><td class="num">10</td></tr>
+        <tr><td><a href="geppetto/">Geppetto</a></td><td class="num">4</td><td class="num">10</td></tr>
+        <tr><td><a href="princess-animall/">Princess Animall</a></td><td class="num">3</td><td class="num">10</td></tr>
+        <tr><td><a href="ammit/">Ammit</a></td><td class="num">4</td><td class="num">9</td></tr>
+        <tr><td><a href="styx/">Styx</a></td><td class="num">2</td><td class="num">9</td></tr>
+        <tr><td><a href="silversmith/">Silversmith</a></td><td class="num">4</td><td class="num">8</td></tr>
+        <tr><td><a href="sir-galahad/">Sir Galahad</a></td><td class="num">3</td><td class="num">8</td></tr>
+        <tr><td><a href="quetzalcoatl/">Quetzalcoatl</a></td><td class="num">1</td><td class="num">7</td></tr>
+        <tr><td><a href="the-beanstalk/">The Beanstalk</a></td><td class="num">2</td><td class="num">7</td></tr>
+        <tr><td><a href="dr-agon/">Dr. Agon</a></td><td class="num">2</td><td class="num">6</td></tr>
+        <tr><td><a href="roulette/">Roulette</a></td><td class="num">2</td><td class="num">6</td></tr>
+        <tr><td><a href="sensei/">Sensei</a></td><td class="num">3</td><td class="num">6</td></tr>
+        <tr><td><a href="sugar-pops/">Sugar Pops</a></td><td class="num">3</td><td class="num">6</td></tr>
+        <tr><td><a href="thanatos/">Thanatos</a></td><td class="num">2</td><td class="num">6</td></tr>
+        <tr><td><a href="witches-iii/">Witches, III</a></td><td class="num">2</td><td class="num">6</td></tr>
+        <tr><td><a href="zheng-yi-sao/">Zheng Yi Sao</a></td><td class="num">2</td><td class="num">6</td></tr>
+        <tr><td><a href="dungeon-master/">Dungeon Master</a></td><td class="num">2</td><td class="num">5</td></tr>
+        <tr><td><a href="gokatoo/">Gokatoo</a></td><td class="num">2</td><td class="num">5</td></tr>
+        <tr><td><a href="maximus/">Maximus</a></td><td class="num">3</td><td class="num">5</td></tr>
+        <tr><td><a href="mr-lamppost/">Mr. Lamppost</a></td><td class="num">2</td><td class="num">5</td></tr>
+        <tr><td><a href="charon/">Charon</a></td><td class="num">2</td><td class="num">4</td></tr>
+        <tr><td><a href="cupcup/">Cupcup</a></td><td class="num">2</td><td class="num">4</td></tr>
+        <tr><td><a href="hannibal/">Hannibal</a></td><td class="num">2</td><td class="num">4</td></tr>
+        <tr><td><a href="skip-the-time-skipper/">Skip, the Time Skipper</a></td><td class="num">2</td><td class="num">4</td></tr>
+        <tr><td><a href="vena-cava/">Vena Cava</a></td><td class="num">2</td><td class="num">4</td></tr>
+        <tr><td><a href="artemis/">Artemis</a></td><td class="num">2</td><td class="num">3</td></tr>
+        <tr><td><a href="hades/">Hades</a></td><td class="num">1</td><td class="num">3</td></tr>
+        <tr><td><a href="loki/">Loki</a></td><td class="num">1</td><td class="num">3</td></tr>
+        <tr><td><a href="preeminent-prodigy/">Preeminent Prodigy</a></td><td class="num">2</td><td class="num">3</td></tr>
+        <tr><td><a href="hecate/">Hecate</a></td><td class="num">2</td><td class="num">2</td></tr>
+        <tr><td><a href="melody/">Melody</a></td><td class="num">2</td><td class="num">2</td></tr>
+        <tr><td><a href="sapphire/">Sapphire</a></td><td class="num">1</td><td class="num">2</td></tr>
+        <tr><td><a href="spider-queen/">Spider Queen</a></td><td class="num">1</td><td class="num">2</td></tr>
+        <tr><td><a href="boy-who-cried-werewolf/">Boy who Cried Werewolf</a></td><td class="num">1</td><td class="num">1</td></tr>
+        <tr><td><a href="chuk-e/">CHUK-E</a></td><td class="num">1</td><td class="num">1</td></tr>
+        <tr><td><a href="catkiss-everburn/">Catkiss Everburn</a></td><td class="num">1</td><td class="num">1</td></tr>
+        <tr><td><a href="chief-evil-officer/">Chief Evil Officer</a></td><td class="num">1</td><td class="num">1</td></tr>
+        <tr><td><a href="dragonmother/">Dragonmother</a></td><td class="num">1</td><td class="num">1</td></tr>
+        <tr><td><a href="merryweather/">Merryweather</a></td><td class="num">1</td><td class="num">1</td></tr>
+        <tr><td><a href="mount-mimic/">Mount Mimic</a></td><td class="num">1</td><td class="num">1</td></tr>
+        <tr><td><a href="wayfinder/">Wayfinder</a></td><td class="num">1</td><td class="num">1</td></tr>
+        <tr><td><a href="athena/">Athena</a></td><td class="num">0</td><td class="num">0</td></tr>
+        <tr><td><a href="baldr/">Baldr</a></td><td class="num">0</td><td class="num">0</td></tr>
+        <tr><td><a href="king-arthur/">King Arthur</a></td><td class="num">0</td><td class="num">0</td></tr>
+        <tr><td><a href="lil-genie/">Lil&#x27; Genie</a></td><td class="num">0</td><td class="num">0</td></tr>
+        <tr><td><a href="merrily/">Merrily</a></td><td class="num">0</td><td class="num">0</td></tr>
+        <tr><td><a href="old-macdonald/">Old MacDonald</a></td><td class="num">0</td><td class="num">0</td></tr>
+        <tr><td><a href="omniverse-omnivore/">Omniverse Omnivore</a></td><td class="num">0</td><td class="num">0</td></tr>
+        <tr><td><a href="we-are-blorg/">We Are Blorg</a></td><td class="num">0</td><td class="num">0</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<script>
+function sortTable(th) {
+  const table = th.closest('table'), tbody = table.querySelector('tbody');
+  const idx = Array.from(th.parentNode.children).indexOf(th);
+  const dir = th.dataset.dir === 'asc' ? -1 : 1;
+  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
+  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
+  const rows = Array.from(tbody.rows);
+  rows.sort((a, b) => {
+    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
+    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
+    const an = parseFloat(av), bn = parseFloat(bv);
+    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
+      ? an - bn : av.localeCompare(bv);
+    return cmp * dir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+document.querySelectorAll('th[data-sort]').forEach(th =>
+  th.addEventListener('click', () => sortTable(th)));
+const deckFilter = document.getElementById('deck-filter');
+if (deckFilter) {
+  deckFilter.addEventListener('input', () => {
+    const q = deckFilter.value.toLowerCase();
+    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
+      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
+</script>
+</body>
+</html>

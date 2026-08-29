@@ -54,6 +54,33 @@ def find_reports(docs_dir: Path) -> list[tuple[str, str]]:
     return reports
 
 
+def find_captains(docs_dir: Path) -> list[tuple[str, str]]:
+    """Find the captains index and all per-captain pages in docs/captains.
+
+    Args:
+        docs_dir: Path to docs directory
+
+    Returns:
+        List of (url_path, lastmod) tuples
+    """
+    captains_dir = docs_dir / "captains"
+    if not captains_dir.exists():
+        return []
+
+    pages = []
+    index_file = captains_dir / "index.html"
+    if index_file.exists():
+        pages.append(("/captains/", get_lastmod(index_file)))
+
+    for captain_dir in sorted(captains_dir.iterdir()):
+        if captain_dir.is_dir():
+            index_file = captain_dir / "index.html"
+            if index_file.exists():
+                pages.append((f"/captains/{captain_dir.name}/", get_lastmod(index_file)))
+
+    return pages
+
+
 def generate_sitemap(docs_dir: Path, base_url: str) -> str:
     """Generate sitemap XML content.
 
@@ -68,8 +95,9 @@ def generate_sitemap(docs_dir: Path, base_url: str) -> str:
     root_index = docs_dir / "index.html"
     root_lastmod = get_lastmod(root_index) if root_index.exists() else ""
 
-    # Find all event reports
+    # Find all event reports and captain pages
     reports = find_reports(docs_dir)
+    captains = find_captains(docs_dir)
 
     # Build XML
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
@@ -84,6 +112,13 @@ def generate_sitemap(docs_dir: Path, base_url: str) -> str:
 
     # Event reports
     for url_path, lastmod in reports:
+        lines.append("  <url>")
+        lines.append(f"    <loc>{base_url}{url_path}</loc>")
+        lines.append(f"    <lastmod>{lastmod}</lastmod>")
+        lines.append("  </url>")
+
+    # Captain pages
+    for url_path, lastmod in captains:
         lines.append("  <url>")
         lines.append(f"    <loc>{base_url}{url_path}</loc>")
         lines.append(f"    <lastmod>{lastmod}</lastmod>")
@@ -132,9 +167,13 @@ def main() -> int:
 
         # Log summary
         report_count = len(find_reports(docs_dir))
+        captain_count = len(find_captains(docs_dir))
         print("\nSitemap Stats:")
         print(f"  Base URL: {args.base_url}")
-        print(f"  Total URLs: {report_count + 1} (root + {report_count} reports)")
+        print(
+            f"  Total URLs: {report_count + captain_count + 1} "
+            f"(root + {report_count} reports + {captain_count} captains)"
+        )
 
         return 0
 
