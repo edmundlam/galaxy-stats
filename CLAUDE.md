@@ -210,3 +210,4 @@ Single-context repo with `CONTEXT.md` and `docs/adr/` at the root. See `.claude/
 - When running Makefile commands, ensure you are in the root directory of the repository (not inside `etl/`) to avoid path issues.
 - When updating python files, remember to run `make lint` and `make format` to maintain code quality and consistency.
 - ALWAYS use the `AskUserQuestion` tool when asking questions to the user.
+- Do not commit unless asked to by the user.
