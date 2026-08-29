@@ -29,6 +29,7 @@ indent-width = 4
 
 [tool.ruff.lint.per-file-ignores]
 "scripts/render_report.py" = ["E501"]
+"scripts/render_captains.py" = ["E501"]
 
 [tool.ruff.lint]
 select = [
