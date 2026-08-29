@@ -232,11 +232,6 @@ def calculate_captain_stats(
     captain_data = []
     for captain_slug, player_indices in cap_players.items():
         n_players = len(player_indices)
-
-        # Skip captains with very few players (less than 3 for meaningful stats)
-        if n_players < 3:
-            continue
-
         cap_matrix = matrix[player_indices]
         cap_freq_arr = cap_matrix.sum(axis=0)
         cap_rate = cap_freq_arr / n_players
