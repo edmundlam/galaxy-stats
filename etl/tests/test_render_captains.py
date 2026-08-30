@@ -273,3 +273,16 @@ def test_captain_page_chips_stay_all_checked(events_dir, captains_file):
     html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
     all_months, checked = month_chip_state(html)
     assert all_months == checked == {"2026-01", "2026-02"}
+
+
+def test_captain_page_month_cells_link_to_reports(events_dir, captains_file):
+    html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
+    for month in ("2026-01", "2026-02"):
+        assert f'<td data-v="{month}"><a href="../../reports/{month}/">{month}</a></td>' in html
+
+
+def test_captain_page_month_cells_stay_plain_when_report_missing(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com", report_ids={"2026-01"})
+    assert '<td data-v="2026-01"><a href="../../reports/2026-01/">2026-01</a></td>' in html
+    assert '<td data-v="2026-02">2026-02</td>' in html

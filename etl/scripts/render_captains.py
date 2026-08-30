@@ -17,7 +17,7 @@ from html import escape
 from pathlib import Path
 
 BASE_URL = "https://edmundlam.github.io/galaxy-stats"
-ASSET_VERSION = "1"
+ASSET_VERSION = "2"
 FONTS_HREF = (
     "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900"
     "&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
@@ -302,21 +302,30 @@ def _head(title: str, description: str, canonical: str, asset_prefix: str) -> st
 <script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="a1be0c78-139e-413a-bb3c-e28b3b9dbe5c"></script>"""
 
 
-def _deck_rows(captain: dict) -> str:
+def _deck_rows(captain: dict, report_ids: set[str] | None = None) -> str:
     """Render static decklist table rows for every winning deck.
+
+    Month cells link to the event report; months without a published report
+    stay plain text (all months link when report_ids is None).
 
     Args:
         captain: Aggregated captain dict
+        report_ids: Event ids with a published report, or None for all
 
     Returns:
         HTML string of <tr> elements
     """
     rows = []
     for month in captain["months"]:
+        month_id = escape(month["id"])
+        if report_ids is None or month["id"] in report_ids:
+            month_html = f'<a href="../../reports/{month_id}/">{month_id}</a>'
+        else:
+            month_html = month_id
         for player in month["players"]:
             pills = "".join(f'<span class="deck-pill">{escape(card)}</span>' for card in player["deck"])
             rows.append(
-                f'<tr><td data-v="{escape(month["id"])}">{escape(month["id"])}</td>'
+                f'<tr><td data-v="{month_id}">{month_html}</td>'
                 f"<td>{escape(player['username'])}</td>"
                 f"<td>{escape(player['archetype'])}</td>"
                 f'<td><div class="deck-pills">{pills}</div></td></tr>'
@@ -341,12 +350,14 @@ def _month_chips(month_ids: list[str], checked: set[str] | None = None) -> str:
     )
 
 
-def render_captain_page(captain: dict, base_url: str) -> str:
+def render_captain_page(captain: dict, base_url: str, report_ids: set[str] | None = None) -> str:
     """Render one captain page.
 
     Args:
         captain: Aggregated captain dict from aggregate_captains
         base_url: Site base URL for canonical/meta
+        report_ids: Event ids with a published report (month cells link
+            only to those); None links every month
 
     Returns:
         Self-contained HTML page string
@@ -395,7 +406,7 @@ def render_captain_page(captain: dict, base_url: str) -> str:
       <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
         <th data-sort="archetype">Archetype</th><th class="no-sort">Deck</th></tr></thead>
       <tbody>
-        {_deck_rows(captain)}
+        {_deck_rows(captain, report_ids)}
       </tbody>
     </table>
   </div>
@@ -509,6 +520,8 @@ def main() -> int:
     docs_dir = Path(args.docs_dir) if args.docs_dir else script_dir.parent.parent / "docs"
 
     captains = aggregate_captains(dist_dir / "events", dist_dir / "captains.json")
+    reports_dir = docs_dir / "reports"
+    report_ids = {p.parent.name for p in reports_dir.glob("*/index.html")} if reports_dir.exists() else set()
 
     captains_root = docs_dir / "captains"
     captains_root.mkdir(parents=True, exist_ok=True)
@@ -518,7 +531,9 @@ def main() -> int:
     for captain in captains.values():
         captain_dir = captains_root / captain["slug"]
         captain_dir.mkdir(exist_ok=True)
-        (captain_dir / "index.html").write_text(render_captain_page(captain, args.base_url), encoding="utf-8")
+        (captain_dir / "index.html").write_text(
+            render_captain_page(captain, args.base_url, report_ids), encoding="utf-8"
+        )
 
     with_decks = sum(1 for c in captains.values() if any(m["players"] for m in c["months"]))
     print(f"✓ Wrote {index_path}")

@@ -18,7 +18,7 @@ from datetime import datetime
 from pathlib import Path
 
 # Asset version for cache busting - increment when CSS/JS changes
-ASSET_VERSION = "1"
+ASSET_VERSION = "2"
 
 
 def load_analysis(event_id: str, events_dir: Path) -> dict:
@@ -105,7 +105,7 @@ def get_html_template() -> str:
     <div class="note">Top 30 cards shown by playrate.</div>
 
     <div class="section-title" style="margin-top:48px">Captain Popularity</div>
-    <div class="section-desc">How often each captain was played across all {TOTAL_PLAYERS} winning decklists. Shows which leaders players chose to pilot through the gauntlet.</div>
+    <div class="section-desc">How often each captain was played across all {TOTAL_PLAYERS} winning decklists. Shows which leaders players chose to pilot through the gauntlet. <a href="../../captains/">View captain stats across all months →</a></div>
     <div class="bar-chart" id="captains-chart-container"></div>
     <div class="note">All {TOTAL_CAPTAINS} captains shown by player count.</div>
   </div>
@@ -126,7 +126,7 @@ def get_html_template() -> str:
   <!-- CAPTAINS -->
   <div class="section" id="captains">
     <div class="section-title">Captain Analysis</div>
-    <div class="section-desc">Toggle between <strong>Best 12</strong> (most picked), <strong>Decklists</strong> (individual player decklists grouped by captain), or <strong>Signature Cards</strong> (lift). Cards are color-coded by archetype cluster. Captains with fewer than 5 finishers are flagged; treat their data cautiously.</div>
+    <div class="section-desc">Toggle between <strong>Best 12</strong> (most picked), <strong>Decklists</strong> (individual player decklists grouped by captain), or <strong>Signature Cards</strong> (lift). Cards are color-coded by archetype cluster. Captains with fewer than 5 finishers are flagged; treat their data cautiously. Clicking a captain's name opens their full stats across all months — or view the <a href="../../captains/">captains index</a>.</div>
     <div class="legend" id="archetype-legend"></div>
     <div class="captain-filter" id="captain-filter"></div>
     <div class="captains-grid" id="captains-container"></div>
