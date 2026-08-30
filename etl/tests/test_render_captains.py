@@ -7,6 +7,7 @@ from pathlib import Path
 import pytest
 
 from scripts.render_captains import (
+    ASSET_VERSION,
     aggregate_captains,
     compute_best12,
     render_captain_page,
@@ -266,7 +267,22 @@ def test_index_table_is_js_rerenderable(three_events_dir, captains_file):
     caps = aggregate_captains(three_events_dir, captains_file)
     html = render_index_page(caps, "https://example.com")
     assert 'id="index-table"' in html
-    assert "renderIndex" in html
+    assert f'<script src="../assets/captains.js?v={ASSET_VERSION}"></script>' in html
+
+
+def test_pages_use_shared_captains_js(events_dir, captains_file):
+    """JS lives in docs/assets/captains.js; only the JSON payload stays inline."""
+    caps = aggregate_captains(events_dir, captains_file)
+    index = render_index_page(caps, "https://example.com")
+    page = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    empty = render_captain_page(caps["loki"], "https://example.com")
+    assert f'<script src="../assets/captains.js?v={ASSET_VERSION}"></script>' in index
+    assert f'<script src="../../assets/captains.js?v={ASSET_VERSION}"></script>' in page
+    for html in (index, page):
+        assert "function sortTable" not in html
+        assert "function renderBest12" not in html
+        assert "function renderIndex" not in html
+    assert "captains.js" not in empty, "empty-state pages embed no JS"
 
 
 def test_captain_page_chips_stay_all_checked(events_dir, captains_file):

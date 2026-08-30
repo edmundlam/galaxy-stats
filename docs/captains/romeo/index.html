@@ -84,67 +84,6 @@
   </div>
 </main>
 <script type="application/json" id="captain-data">{"slug": "romeo", "name": "Romeo", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "clemfandango!!", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Innkeeper", "Daedalus", "Thunder of Dragons", "Wormscale Tinkerer", "Gummy Wyrm", "Pixie", "Lance A Little", "Netherbinder", "Oracle of Fortunes", "Doopity Doo", "Miseria"]}, {"username": "DrBadExample", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mirror Mage", "Hephaestus", "Flopsy", "Lance A Little", "Netherbinder", "Rollo", "Oracle of Fortunes", "Sunflare Glider", "Mr. Fox", "Miseria", "Crystal"]}, {"username": "Fouxdufafa", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Wormscale Tinkerer", "Netherbinder", "Rollo", "Oracle of Fortunes", "Friendly Spirit", "Mr. Fox", "Miseria", "The Butcher", "Crystal"]}, {"username": "Pneumatometry", "archetype": "Treasures", "deck": ["Toto", "Mortakon", "Maverick & Icewing", "Mirror Mage", "Hercules", "Knight of the Holy Cane", "Lance A Little", "Netherbinder", "Rollo", "Oracle of Fortunes", "Weensy", "Miseria"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Cjswoosh23", "archetype": "Treasures", "deck": ["Toto", "Maverick & Icewing", "Mirror Mage", "Elm Minster", "Guinevere", "Wormscale Tinkerer", "Jaws", "Catatouille", "Lance A Little", "Miseria", "The Huntsman", "Crystal"]}, {"username": "Danb1563", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mirror Mage", "Ace of Hearts", "The Burninator", "Wormscale Tinkerer", "Netherbinder", "Rollo", "Mr. Fox", "Miseria", "The Huntsman", "The Butcher", "Crystal"]}, {"username": "Elagabalus", "archetype": "Treasures", "deck": ["Toto", "Mortakon", "Mech-a-Man", "Maverick & Icewing", "Mirror Mage", "Brick Monster", "Wormscale Tinkerer", "Lance A Little", "Netherbinder", "Miseria", "The Huntsman", "Crystal"]}, {"username": "Milyrena", "archetype": "Treasures", "deck": ["Aladdin", "Toto", "Miss Muffet", "Knight of the Holy Cane", "Jaws", "Candy Apple Tree", "The Candy Cane Crook", "Lance A Little", "Netherbinder", "Rollo", "Oracle of Fortunes", "Crystal"]}, {"username": "Miol29", "archetype": "Treasures", "deck": ["Toto", "Maverick & Icewing", "Mirror Mage", "Guinevere", "Chaos", "Knight of the Holy Cane", "Cherry Topples", "Catatouille", "Lance A Little", "Oracle of Fortunes", "Weensy", "Miseria"]}, {"username": "NoTworthy", "archetype": "Treasures", "deck": ["Aladdin", "Maverick & Icewing", "Tsarmina, the Tyrant", "Mirror Mage", "Wormscale Tinkerer", "Netherbinder", "Rollo", "Weensy", "Uther Pendragon", "Miseria", "The Huntsman", "Crystal"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "EggLich", "archetype": "Treasures", "deck": ["Lance A Little", "Toto", "Catatouille", "Miseria", "Rollo", "Weensy", "Crystal", "Knight of the Holy Cane", "Mirror Mage", "Cotton Candy Dandy", "Flopsy", "Prospero"]}]}]}</script>
-<script>
-const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
-function best12(decks) {
-  const counts = {};
-  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
-  return Object.entries(counts)
-    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
-    .slice(0, 12);
-}
-function renderBest12() {
-  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
-    .map(cb => cb.dataset.month);
-  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
-  const tbody = document.querySelector('#best12-table tbody');
-  tbody.innerHTML = '';
-  best12(decks).forEach(([card, freq]) => {
-    const tr = document.createElement('tr');
-    const tdCard = document.createElement('td');
-    tdCard.textContent = card;
-    const tdFreq = document.createElement('td');
-    tdFreq.className = 'num';
-    tdFreq.textContent = freq;
-    const tdPct = document.createElement('td');
-    tdPct.className = 'num';
-    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
-    tr.append(tdCard, tdFreq, tdPct);
-    tbody.appendChild(tr);
-  });
-  document.querySelector('#best12-count').textContent = decks.length;
-}
-renderBest12();
-document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderBest12));
-
-function sortTable(th) {
-  const table = th.closest('table'), tbody = table.querySelector('tbody');
-  const idx = Array.from(th.parentNode.children).indexOf(th);
-  const dir = th.dataset.dir === 'asc' ? -1 : 1;
-  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
-  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
-  const rows = Array.from(tbody.rows);
-  rows.sort((a, b) => {
-    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
-    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
-    const an = parseFloat(av), bn = parseFloat(bv);
-    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
-      ? an - bn : av.localeCompare(bv);
-    return cmp * dir;
-  });
-  rows.forEach(r => tbody.appendChild(r));
-}
-document.querySelectorAll('th[data-sort]').forEach(th =>
-  th.addEventListener('click', () => sortTable(th)));
-const deckFilter = document.getElementById('deck-filter');
-if (deckFilter) {
-  deckFilter.addEventListener('input', () => {
-    const q = deckFilter.value.toLowerCase();
-    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
-      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
-    });
-  });
-}
-</script>
+<script src="../../assets/captains.js?v=2"></script>
 </body>
 </html>

@@ -83,67 +83,6 @@
   </div>
 </main>
 <script type="application/json" id="captain-data">{"slug": "geppetto", "name": "Geppetto", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "JimDMTG", "archetype": "Toys", "deck": ["Beanie Baby", "Busted Bot", "Mortakon", "Mech-a-Man", "Barrel of Monkeys", "Black Hole", "Brick Monster", "Chip on the Ship", "Charlotte", "Raggedy Ann", "Party Pinata", "Space Ranger Woody"]}, {"username": "Kezzig", "archetype": "Toys", "deck": ["Beanie Baby", "Busted Bot", "Mortakon", "Mech-a-Man", "Barrel of Monkeys", "Black Hole", "Brick Monster", "Chip on the Ship", "Charlotte", "Raggedy Ann", "Party Pinata", "Space Ranger Woody"]}, {"username": "Zoltraax", "archetype": "Toys", "deck": ["Beanie Baby", "Busted Bot", "Mortakon", "Mech-a-Man", "Barrel of Monkeys", "Brick Monster", "Chip on the Ship", "Charlotte", "Raggedy Ann", "Party Pinata", "Space Ranger Woody", "Wormscale Tinkerer"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Arromir", "archetype": "Toys", "deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Mechanical Dragon", "Barrel of Monkeys", "Brick Monster", "Chip on the Ship", "Raggedy Ann", "The Burninator", "Party Pinata", "Pisces", "Wormscale Tinkerer"]}, {"username": "Cryder", "archetype": "Toys", "deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Barrel of Monkeys", "Brick Monster", "Chip on the Ship", "Raggedy Ann", "Party Pinata", "Space Ranger Woody", "Keeb", "Miseria", "The Blue Faerie"]}, {"username": "emggg11", "archetype": "Toys", "deck": ["Beanie Baby", "Busted Bot", "Mortakon", "Mech-a-Man", "Barrel of Monkeys", "Brick Monster", "Chip on the Ship", "Ace of Hearts", "Raggedy Ann", "Party Pinata", "Space Ranger Woody", "Keeb"]}, {"username": "MikeC!", "archetype": "Toys", "deck": ["Aladdin", "Busted Bot", "Mortakon", "Mech-a-Man", "Barrel of Monkeys", "Brick Monster", "Chip on the Ship", "Raggedy Ann", "Party Pinata", "Space Ranger Woody", "Chaos", "Keeb"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Chakragod", "archetype": "Toys", "deck": ["Beanie Baby", "Busted Bot", "Mech-a-Man", "Nutcracker Prince", "Space Ranger Woody", "Mortakon", "Party Pinata", "Raggedy Ann", "Wicked Witch", "Barrel of Monkeys", "Brick Monster", "Chip on the Ship"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Skiffer", "archetype": "Toys", "deck": ["Busted Bot", "Mech-a-Man", "Raggedy Ann", "Space Ranger Woody", "Baron Bok", "Mortakon", "Party Pinata", "Kagutsuchi", "Anubis", "Barrel of Monkeys", "Brick Monster", "Chip on the Ship"]}, {"username": "walker", "archetype": "Toys", "deck": ["Busted Bot", "Mech-a-Man", "Nuada, Radiant King", "Raggedy Ann", "Space Ranger Woody", "Maverick & Icewing", "Mechanical Dragon", "Mortakon", "Rollo", "Kagutsuchi", "Barrel of Monkeys", "Chip on the Ship"]}]}]}</script>
-<script>
-const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
-function best12(decks) {
-  const counts = {};
-  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
-  return Object.entries(counts)
-    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
-    .slice(0, 12);
-}
-function renderBest12() {
-  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
-    .map(cb => cb.dataset.month);
-  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
-  const tbody = document.querySelector('#best12-table tbody');
-  tbody.innerHTML = '';
-  best12(decks).forEach(([card, freq]) => {
-    const tr = document.createElement('tr');
-    const tdCard = document.createElement('td');
-    tdCard.textContent = card;
-    const tdFreq = document.createElement('td');
-    tdFreq.className = 'num';
-    tdFreq.textContent = freq;
-    const tdPct = document.createElement('td');
-    tdPct.className = 'num';
-    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
-    tr.append(tdCard, tdFreq, tdPct);
-    tbody.appendChild(tr);
-  });
-  document.querySelector('#best12-count').textContent = decks.length;
-}
-renderBest12();
-document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderBest12));
-
-function sortTable(th) {
-  const table = th.closest('table'), tbody = table.querySelector('tbody');
-  const idx = Array.from(th.parentNode.children).indexOf(th);
-  const dir = th.dataset.dir === 'asc' ? -1 : 1;
-  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
-  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
-  const rows = Array.from(tbody.rows);
-  rows.sort((a, b) => {
-    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
-    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
-    const an = parseFloat(av), bn = parseFloat(bv);
-    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
-      ? an - bn : av.localeCompare(bv);
-    return cmp * dir;
-  });
-  rows.forEach(r => tbody.appendChild(r));
-}
-document.querySelectorAll('th[data-sort]').forEach(th =>
-  th.addEventListener('click', () => sortTable(th)));
-const deckFilter = document.getElementById('deck-filter');
-if (deckFilter) {
-  deckFilter.addEventListener('input', () => {
-    const q = deckFilter.value.toLowerCase();
-    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
-      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
-    });
-  });
-}
-</script>
+<script src="../../assets/captains.js?v=2"></script>
 </body>
 </html>

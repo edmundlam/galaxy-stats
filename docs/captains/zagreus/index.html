@@ -91,67 +91,6 @@
   </div>
 </main>
 <script type="application/json" id="captain-data">{"slug": "zagreus", "name": "Zagreus", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "Brudda", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Wicked Witch", "Ace of Hearts", "The Burninator", "Pisces", "Snapping Hydra", "Wormscale Tinkerer", "Rollo", "Mr. Fox", "Miseria", "The Huntsman", "The Butcher"]}, {"username": "Giromancer", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Tsarmina, the Tyrant", "Hephaestus", "The Burninator", "Thunder of Dragons", "Sir Francis Drake", "The Fates", "Smug", "Snapping Hydra", "Wormscale Tinkerer", "Miseria", "The Huntsman"]}, {"username": "headdeskdev", "archetype": "Treasures", "deck": ["Busted Bot", "Toto", "Toadie", "Maverick & Icewing", "Don Quixote", "Ace of Hearts", "Sir Francis Drake", "Smug", "Flopsy", "Wormscale Tinkerer", "Mr. Fox", "Miseria"]}, {"username": "jazzyjrw", "archetype": "Treasures", "deck": ["Aladdin", "Maverick & Icewing", "Ace of Hearts", "Hephaestus", "Scale-a-tor", "Mysterio, the Great and Powerful", "The Burninator", "Kid Icarus", "Sir Francis Drake", "Flopsy", "Wormscale Tinkerer", "Mr. Fox"]}, {"username": "Zazacon", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Faerie Queen", "Ace of Hearts", "Guinevere", "Scale-a-tor", "The Burninator", "Pisces", "Wink", "Sir Francis Drake", "Wormscale Tinkerer", "Rollo", "Mr. Fox"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Arcaeus", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Mechanical Dragon", "Wicked Witch", "Ace of Hearts", "The Burninator", "Thunder of Dragons", "Pisces", "Flopsy", "Wormscale Tinkerer", "Mr. Fox"]}, {"username": "Crosstiger", "archetype": "Treasures", "deck": ["Toto", "Maverick & Icewing", "Ace of Hearts", "Combustible Dragon", "Scale-a-tor", "The Burninator", "Thunder of Dragons", "Pisces", "Smug", "Wormscale Tinkerer", "Mr. Fox", "Miseria"]}, {"username": "Doppler", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mechanical Dragon", "Mirror Mage", "Elm Minster", "Wormscale Tinkerer", "Lance A Little", "Rollo", "Oracle of Fortunes", "Mr. Fox", "Miseria", "The Huntsman", "Crystal"]}, {"username": "HgSpartan98", "archetype": "Treasures", "deck": ["Aladdin", "Mechanical Dragon", "Combustible Dragon", "The Burninator", "Pisces", "Wink", "Sinbad", "Flopsy", "Wormscale Tinkerer", "Sunflare Glider", "Friendly Spirit", "Miseria"]}, {"username": "Icarus84", "archetype": "Treasures", "deck": ["Aladdin", "Mech-a-Man", "Maverick & Icewing", "The Burninator", "Thunder of Dragons", "Pisces", "Smug", "Flopsy", "Wormscale Tinkerer", "Netherbinder", "Mr. Fox", "Miseria"]}, {"username": "KisaQT", "archetype": "Treasures", "deck": ["Aladdin", "Mechanical Dragon", "Fun Gal", "Don Quixote", "Ace of Hearts", "Glory Seeker", "Daedalus", "Thunder of Dragons", "Space Ranger Woody", "Pisces", "Wink", "Wormscale Tinkerer"]}, {"username": "Mlordx", "archetype": "Treasures", "deck": ["Aladdin", "Mech-a-Man", "Wicked Witch", "Ace of Hearts", "Combustible Dragon", "The Burninator", "Thunder of Dragons", "Chaos", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Mr. Fox"]}, {"username": "Sk  Wampa", "archetype": "Treasures", "deck": ["Beanie Baby", "Mech-a-Man", "Don Quixote", "Elm Minster", "Ace of Hearts", "Daedalus", "Raggedy Ann", "Underdog", "Thunder of Dragons", "Space Ranger Woody", "Sir Francis Drake", "Flopsy"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "belcheck", "archetype": "Pirates", "deck": ["The Fates", "Glory Seeker", "Aladdin", "Sailor Moonshine", "Mech-a-Man", "Jelly Roger", "Sinbad", "Innkeeper", "Sir Francis Drake", "Pirate King", "Weird Beard", "Pirate Prince"]}, {"username": "Couldbeglorious", "archetype": "Treasures", "deck": ["Lance A Little", "Destiny", "Fortune Teller", "Miseria", "Young Hercules", "Baron Bok", "Maverick & Icewing", "Mortakon", "Astral Navigator", "Crystal", "Eros", "Guinevere"]}, {"username": "pcardoso", "archetype": "Treasures", "deck": ["Glory Seeker", "Aladdin", "Mech-a-Man", "Space Ranger Woody", "Ace of Hearts", "Don Quixote", "Raggedy Ann", "Thunder of Dragons", "Sir Francis Drake", "Flopsy", "Daedalus", "Elm Minster"]}, {"username": "thnt", "archetype": "Treasures", "deck": ["Ace of Hearts", "Mr. Fox", "The Three Chef-Keteers", "Mysterio, the Great and Powerful", "Sir Francis Drake", "Smug", "Viscount Chocolat", "Daedalus", "Licorice", "The Burninator", "The Rat King", "Wormscale Tinkerer"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "shortelf", "archetype": "Toys", "deck": ["Fortune Teller", "Mech-a-Man", "Destiny", "Mortakon", "Orion, the Hunter", "Barrel of Monkeys", "Brick Monster", "Chip on the Ship", "Pirate King", "Pirate Prince", "Sigrun, Valkyrie Queen", "Weird Beard"]}]}]}</script>
-<script>
-const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
-function best12(decks) {
-  const counts = {};
-  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
-  return Object.entries(counts)
-    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
-    .slice(0, 12);
-}
-function renderBest12() {
-  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
-    .map(cb => cb.dataset.month);
-  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
-  const tbody = document.querySelector('#best12-table tbody');
-  tbody.innerHTML = '';
-  best12(decks).forEach(([card, freq]) => {
-    const tr = document.createElement('tr');
-    const tdCard = document.createElement('td');
-    tdCard.textContent = card;
-    const tdFreq = document.createElement('td');
-    tdFreq.className = 'num';
-    tdFreq.textContent = freq;
-    const tdPct = document.createElement('td');
-    tdPct.className = 'num';
-    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
-    tr.append(tdCard, tdFreq, tdPct);
-    tbody.appendChild(tr);
-  });
-  document.querySelector('#best12-count').textContent = decks.length;
-}
-renderBest12();
-document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderBest12));
-
-function sortTable(th) {
-  const table = th.closest('table'), tbody = table.querySelector('tbody');
-  const idx = Array.from(th.parentNode.children).indexOf(th);
-  const dir = th.dataset.dir === 'asc' ? -1 : 1;
-  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
-  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
-  const rows = Array.from(tbody.rows);
-  rows.sort((a, b) => {
-    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
-    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
-    const an = parseFloat(av), bn = parseFloat(bv);
-    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
-      ? an - bn : av.localeCompare(bv);
-    return cmp * dir;
-  });
-  rows.forEach(r => tbody.appendChild(r));
-}
-document.querySelectorAll('th[data-sort]').forEach(th =>
-  th.addEventListener('click', () => sortTable(th)));
-const deckFilter = document.getElementById('deck-filter');
-if (deckFilter) {
-  deckFilter.addEventListener('input', () => {
-    const q = deckFilter.value.toLowerCase();
-    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
-      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
-    });
-  });
-}
-</script>
+<script src="../../assets/captains.js?v=2"></script>
 </body>
 </html>

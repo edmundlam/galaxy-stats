@@ -85,67 +85,6 @@
   </div>
 </main>
 <script type="application/json" id="captain-data">{"slug": "indiana-clones", "name": "Indiana Clones", "months": [{"id": "2026-02", "date": "2026-02-20", "event": "February Monthly", "players": [{"username": "a duck", "archetype": "Treasures", "deck": ["Aladdin", "Maverick & Icewing", "Ace of Hearts", "Mysterio, the Great and Powerful", "Thunder of Dragons", "Kid Icarus", "Sinbad", "Pirate Prince", "Smug", "Wormscale Tinkerer", "Rollo", "Mr. Fox"]}, {"username": "BustopherJones", "archetype": "Treasures", "deck": ["Toto", "Maverick & Icewing", "Guinevere", "Hephaestus", "Scale-a-tor", "The Burninator", "Thunder of Dragons", "Pisces", "Sir Francis Drake", "Flopsy", "Wormscale Tinkerer", "Mr. Fox"]}, {"username": "Evolivolution", "archetype": "Treasures", "deck": ["Aladdin", "Maverick & Icewing", "Mechanical Dragon", "Ace of Hearts", "Guinevere", "Scale-a-tor", "Pisces", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Gummy Wyrm", "Frosting Dragon"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "evilkachu", "archetype": "Treasures", "deck": ["Aladdin", "Mech-a-Man", "Maverick & Icewing", "Mechanical Dragon", "Ace of Hearts", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Rollo", "Oracle of Fortunes", "Mr. Fox"]}, {"username": "Nanonox", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Hephaestus", "Underdog", "The Burninator", "Sir Francis Drake", "Smug", "Snapping Hydra", "Wormscale Tinkerer", "Netherbinder", "Sunflare Glider", "Mr. Fox", "Miseria"]}, {"username": "Pinparsley12", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mirror Mage", "The Burninator", "Thunder of Dragons", "Pisces", "Sinbad", "Sir Francis Drake", "Smug", "Flopsy", "Wormscale Tinkerer", "The Candy Cane Crook", "Mr. Fox"]}, {"username": "Switch", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Underdog", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Wormscale Tinkerer", "Netherbinder", "Rollo", "Oracle of Fortunes", "Mr. Fox", "Miseria"]}, {"username": "Tortious", "archetype": "Treasures", "deck": ["Aladdin", "Maverick & Icewing", "The Fates", "Smug", "Wormscale Tinkerer", "Jaws", "Cherry Topples", "Candy Apple Tree", "Lance A Little", "Miseria", "The Huntsman", "Pretty Patissier"]}, {"username": "V1CTOR_", "archetype": "Treasures", "deck": ["Aladdin", "Maverick & Icewing", "Mirror Mage", "Blackbeard", "Hercules", "Ace of Hearts", "Sailor Moonshine", "Sinbad", "Sir Francis Drake", "The Fates", "Snapping Hydra", "Mr. Fox"]}, {"username": "xristos5454", "archetype": "Treasures", "deck": ["Miss Muffet", "Knight of the Holy Cane", "Lance A Little", "Netherbinder", "Rollo", "Oracle of Fortunes", "Friendly Spirit", "Uther Pendragon", "Mr. Fox", "Miseria", "The Huntsman", "Crystal"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "sacakewalk", "archetype": "Treasures", "deck": ["Underdog", "Ace of Hearts", "Destiny", "Mech-a-Man", "Miseria", "The Huntsman", "Young Hercules", "Mortakon", "Mr. Fox", "Orion, the Hunter", "Guinevere", "The Burninator"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "JesusIsReal", "archetype": "Candy", "deck": ["Lance A Little", "Miseria", "Wink", "Cherry Topples", "Frosting Dragon", "Kool Wip", "Life Saver", "Caramel", "Snapping Hydra", "Gummy Wyrm", "Jelly-ton", "Wormscale Tinkerer"]}]}]}</script>
-<script>
-const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
-function best12(decks) {
-  const counts = {};
-  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
-  return Object.entries(counts)
-    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
-    .slice(0, 12);
-}
-function renderBest12() {
-  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
-    .map(cb => cb.dataset.month);
-  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
-  const tbody = document.querySelector('#best12-table tbody');
-  tbody.innerHTML = '';
-  best12(decks).forEach(([card, freq]) => {
-    const tr = document.createElement('tr');
-    const tdCard = document.createElement('td');
-    tdCard.textContent = card;
-    const tdFreq = document.createElement('td');
-    tdFreq.className = 'num';
-    tdFreq.textContent = freq;
-    const tdPct = document.createElement('td');
-    tdPct.className = 'num';
-    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
-    tr.append(tdCard, tdFreq, tdPct);
-    tbody.appendChild(tr);
-  });
-  document.querySelector('#best12-count').textContent = decks.length;
-}
-renderBest12();
-document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderBest12));
-
-function sortTable(th) {
-  const table = th.closest('table'), tbody = table.querySelector('tbody');
-  const idx = Array.from(th.parentNode.children).indexOf(th);
-  const dir = th.dataset.dir === 'asc' ? -1 : 1;
-  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
-  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
-  const rows = Array.from(tbody.rows);
-  rows.sort((a, b) => {
-    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
-    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
-    const an = parseFloat(av), bn = parseFloat(bv);
-    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
-      ? an - bn : av.localeCompare(bv);
-    return cmp * dir;
-  });
-  rows.forEach(r => tbody.appendChild(r));
-}
-document.querySelectorAll('th[data-sort]').forEach(th =>
-  th.addEventListener('click', () => sortTable(th)));
-const deckFilter = document.getElementById('deck-filter');
-if (deckFilter) {
-  deckFilter.addEventListener('input', () => {
-    const q = deckFilter.value.toLowerCase();
-    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
-      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
-    });
-  });
-}
-</script>
+<script src="../../assets/captains.js?v=2"></script>
 </body>
 </html>

@@ -23,6 +23,9 @@ FONTS_HREF = (
     "&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
 )
 
+# Client JS (sorting, filtering, month-filter re-renders) lives in the shared
+# docs/assets/captains.js; pages embed only their JSON data payload.
+
 # Extra CSS on top of the shared report stylesheet: tables and month chips.
 EXTRA_CSS = """
   main { max-width: 1100px; }
@@ -47,116 +50,6 @@ EXTRA_CSS = """
   a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
-"""
-
-# Shared client JS: sortable table headers ([data-sort] cells, numeric via td.num)
-# and deck-list filtering (#deck-filter hides rows whose text doesn't match).
-TABLE_JS = """
-function sortTable(th) {
-  const table = th.closest('table'), tbody = table.querySelector('tbody');
-  const idx = Array.from(th.parentNode.children).indexOf(th);
-  const dir = th.dataset.dir === 'asc' ? -1 : 1;
-  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
-  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
-  const rows = Array.from(tbody.rows);
-  rows.sort((a, b) => {
-    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
-    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
-    const an = parseFloat(av), bn = parseFloat(bv);
-    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\\d.]/.test(av) && /^[-\\d.]/.test(bv))
-      ? an - bn : av.localeCompare(bv);
-    return cmp * dir;
-  });
-  rows.forEach(r => tbody.appendChild(r));
-}
-document.querySelectorAll('th[data-sort]').forEach(th =>
-  th.addEventListener('click', () => sortTable(th)));
-const deckFilter = document.getElementById('deck-filter');
-if (deckFilter) {
-  deckFilter.addEventListener('input', () => {
-    const q = deckFilter.value.toLowerCase();
-    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
-      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
-    });
-  });
-}
-"""
-
-# Client JS for the Best 12 table: recompute from raw decks of the checked months.
-# Mirrors etl/scripts/analyze_event.py calculate_captain_stats: presence-count per
-# card, sort by freq desc with alphabetical tie-break, take top 12.
-BEST12_JS = """
-const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
-function best12(decks) {
-  const counts = {};
-  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
-  return Object.entries(counts)
-    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
-    .slice(0, 12);
-}
-function renderBest12() {
-  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
-    .map(cb => cb.dataset.month);
-  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
-  const tbody = document.querySelector('#best12-table tbody');
-  tbody.innerHTML = '';
-  best12(decks).forEach(([card, freq]) => {
-    const tr = document.createElement('tr');
-    const tdCard = document.createElement('td');
-    tdCard.textContent = card;
-    const tdFreq = document.createElement('td');
-    tdFreq.className = 'num';
-    tdFreq.textContent = freq;
-    const tdPct = document.createElement('td');
-    tdPct.className = 'num';
-    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
-    tr.append(tdCard, tdFreq, tdPct);
-    tbody.appendChild(tr);
-  });
-  document.querySelector('#best12-count').textContent = decks.length;
-}
-"""
-
-
-# Client JS for the index page: rebuild the captain table from the checked month
-# chips. Rows with no decks in the selection are hidden unless every month is
-# checked (which restores the full all-time view, matching the static fallback).
-INDEX_JS = """
-const INDEX = JSON.parse(document.getElementById('captains-data').textContent);
-function renderIndex() {
-  const boxes = Array.from(document.querySelectorAll('#month-filter input'));
-  const checked = boxes.filter(cb => cb.checked).map(cb => cb.dataset.month);
-  const allChecked = checked.length === boxes.length;
-  const rows = INDEX
-    .map(c => {
-      const ms = c.months.filter(m => checked.includes(m.id));
-      return {
-        name: c.name, slug: c.slug,
-        months: ms.filter(m => m.decks > 0).length,
-        decks: ms.reduce((sum, m) => sum + m.decks, 0),
-      };
-    })
-    .sort((a, b) => b.decks - a.decks || a.name.localeCompare(b.name))
-    .filter(r => allChecked || r.decks > 0);
-  const tbody = document.querySelector('#index-table tbody');
-  tbody.innerHTML = '';
-  rows.forEach(r => {
-    const tr = document.createElement('tr');
-    const name = document.createElement('td');
-    const a = document.createElement('a');
-    a.href = r.slug + '/';
-    a.textContent = r.name;
-    name.appendChild(a);
-    const months = document.createElement('td');
-    months.className = 'num';
-    months.textContent = r.months;
-    const decks = document.createElement('td');
-    decks.className = 'num';
-    decks.textContent = r.decks;
-    tr.append(name, months, decks);
-    tbody.appendChild(tr);
-  });
-}
 """
 
 
@@ -411,13 +304,7 @@ def render_captain_page(captain: dict, base_url: str, report_ids: set[str] | Non
     </table>
   </div>
 </main>"""
-        script = (
-            "<script>"
-            f"{BEST12_JS}renderBest12();\n"
-            "document.querySelectorAll('#month-filter input')"
-            ".forEach(cb => cb.addEventListener('change', renderBest12));\n"
-            f"{TABLE_JS}</script>"
-        )
+        script = f'<script src="../../assets/captains.js?v={ASSET_VERSION}"></script>'
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -498,9 +385,7 @@ def render_index_page(captains: dict[str, dict], base_url: str) -> str:
   </div>
 </main>
 <script type="application/json" id="captains-data">{payload}</script>
-<script>{INDEX_JS}renderIndex();
-document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderIndex));
-{TABLE_JS}</script>
+<script src="../assets/captains.js?v={ASSET_VERSION}"></script>
 </body>
 </html>"""
 

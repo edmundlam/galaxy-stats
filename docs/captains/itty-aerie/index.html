@@ -85,67 +85,6 @@
   </div>
 </main>
 <script type="application/json" id="captain-data">{"slug": "itty-aerie", "name": "Itty Aerie", "months": [{"id": "2026-06", "date": "2026-06-19", "event": "June Monthly", "players": [{"username": "drumstep", "archetype": "Treasures", "deck": ["Destiny", "Mech-a-Man", "Miseria", "The Huntsman", "Young Hercules", "Gulliver", "Mortakon", "Netherbinder", "Orion, the Hunter", "Eros", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "hiroprotagonist", "archetype": "Toys", "deck": ["Busted Bot", "Mech-a-Man", "Space Ranger Woody", "Mortakon", "Mr. Fox", "Raggedy Ann", "Innkeeper", "Sir Francis Drake", "Blackbeard", "Hercules", "Jelly-ton", "The Burninator"]}, {"username": "JimTheEternal", "archetype": "Candy", "deck": ["Busted Bot", "Lollipop Faerie", "Lemonhead", "Mech-a-Man", "The Candy Cane Crook", "Mortakon", "Mr. Fox", "Sir Francis Drake", "Blackbeard", "Cotton Candy Dandy", "Hercules", "Jelly-ton"]}, {"username": "ONLYWIN", "archetype": "Candy", "deck": ["Lollipop Faerie", "Gingerbread Witch", "Catatouille", "Lemonhead", "The Candy Cane Crook", "Candy Apple Tree", "Kool Wip", "The Three Chef-Keteers", "Knight of the Holy Cane", "Keeb", "Cotton Candy Dandy", "Jelly-ton"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Champ", "archetype": "Treasures", "deck": ["Dastardly Spirit", "Friendly Spirit", "Mech-a-Man", "The Huntsman", "Gulliver", "Netherbinder", "Rollo", "Smug", "Blackbeard", "Crab Dragoon", "Hercules", "The Burninator"]}, {"username": "Diceratops", "archetype": "Toys", "deck": ["Busted Bot", "Beanie Baby", "Mech-a-Man", "Space Ranger Woody", "Mr. Fox", "Mortakon", "Raggedy Ann", "Innkeeper", "Sir Francis Drake", "Ogre Magi", "Hercules", "Blackbeard"]}, {"username": "illmater", "archetype": "Candy", "deck": ["Lance A Little", "Destiny", "The Candy Cane Crook", "The Huntsman", "Candy Apple Tree", "Cherry Topples", "Kool Wip", "Astral Navigator", "Knight of the Holy Cane", "Hercules", "Pirate King", "Sigrun, Valkyrie Queen"]}, {"username": "Melavaris", "archetype": "Toys", "deck": ["Busted Bot", "Beanie Baby", "Mech-a-Man", "Space Ranger Woody", "Mr. Fox", "Mortakon", "Raggedy Ann", "Innkeeper", "Sir Francis Drake", "Ogre Magi", "Hercules", "Blackbeard"]}, {"username": "Nech", "archetype": "Treasures", "deck": ["Beanie Baby", "Busted Bot", "Mech-a-Man", "Space Ranger Woody", "Mortakon", "Mr. Fox", "Raggedy Ann", "Innkeeper", "Ogre Magi", "Sir Francis Drake", "Blackbeard", "Hercules"]}, {"username": "vlouchk", "archetype": "Toys", "deck": ["Busted Bot", "Beanie Baby", "Mech-a-Man", "Space Ranger Woody", "Mr. Fox", "Mortakon", "Raggedy Ann", "Innkeeper", "Sir Francis Drake", "Ogre Magi", "Hercules", "Blackbeard"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Guzzlord", "archetype": "Toys", "deck": ["Busted Bot", "Beanie Baby", "Mech-a-Man", "Space Ranger Woody", "Mr. Fox", "Mortakon", "Raggedy Ann", "Innkeeper", "Sir Francis Drake", "Ogre Magi", "Hercules", "Blackbeard"]}, {"username": "hyst", "archetype": "Toys", "deck": ["Busted Bot", "Beanie Baby", "Mech-a-Man", "Space Ranger Woody", "Mr. Fox", "Mortakon", "Raggedy Ann", "Innkeeper", "Sir Francis Drake", "Ogre Magi", "Hercules", "Blackbeard"]}]}]}</script>
-<script>
-const CAPTAIN = JSON.parse(document.getElementById('captain-data').textContent);
-function best12(decks) {
-  const counts = {};
-  decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
-  return Object.entries(counts)
-    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
-    .slice(0, 12);
-}
-function renderBest12() {
-  const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
-    .map(cb => cb.dataset.month);
-  const decks = CAPTAIN.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
-  const tbody = document.querySelector('#best12-table tbody');
-  tbody.innerHTML = '';
-  best12(decks).forEach(([card, freq]) => {
-    const tr = document.createElement('tr');
-    const tdCard = document.createElement('td');
-    tdCard.textContent = card;
-    const tdFreq = document.createElement('td');
-    tdFreq.className = 'num';
-    tdFreq.textContent = freq;
-    const tdPct = document.createElement('td');
-    tdPct.className = 'num';
-    tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
-    tr.append(tdCard, tdFreq, tdPct);
-    tbody.appendChild(tr);
-  });
-  document.querySelector('#best12-count').textContent = decks.length;
-}
-renderBest12();
-document.querySelectorAll('#month-filter input').forEach(cb => cb.addEventListener('change', renderBest12));
-
-function sortTable(th) {
-  const table = th.closest('table'), tbody = table.querySelector('tbody');
-  const idx = Array.from(th.parentNode.children).indexOf(th);
-  const dir = th.dataset.dir === 'asc' ? -1 : 1;
-  table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
-  th.dataset.dir = dir === 1 ? 'asc' : 'desc';
-  const rows = Array.from(tbody.rows);
-  rows.sort((a, b) => {
-    const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
-    const bv = b.cells[idx].dataset.v ?? b.cells[idx].textContent.trim();
-    const an = parseFloat(av), bn = parseFloat(bv);
-    const cmp = (!isNaN(an) && !isNaN(bn) && /^[-\d.]/.test(av) && /^[-\d.]/.test(bv))
-      ? an - bn : av.localeCompare(bv);
-    return cmp * dir;
-  });
-  rows.forEach(r => tbody.appendChild(r));
-}
-document.querySelectorAll('th[data-sort]').forEach(th =>
-  th.addEventListener('click', () => sortTable(th)));
-const deckFilter = document.getElementById('deck-filter');
-if (deckFilter) {
-  deckFilter.addEventListener('input', () => {
-    const q = deckFilter.value.toLowerCase();
-    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
-      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
-    });
-  });
-}
-</script>
+<script src="../../assets/captains.js?v=2"></script>
 </body>
 </html>
