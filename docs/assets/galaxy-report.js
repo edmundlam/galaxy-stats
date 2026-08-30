@@ -32,6 +32,14 @@ function animateBars() {
 }
 
 // CAPTAIN BARS
+function captainHref(slug) {
+  return `../../captains/${slug.replace(/_/g, '-')}/`;
+}
+function captainLink(cap) {
+  return cap.slug
+    ? `<a href="${captainHref(cap.slug)}" class="card-link">${cap.name}</a>`
+    : cap.name;
+}
 function renderCaptainBars() {
   const c = document.getElementById('captains-chart-container');
   if (!DATA.top_captains || DATA.top_captains.length === 0) {
@@ -41,7 +49,7 @@ function renderCaptainBars() {
   const max = DATA.top_captains[0].freq;
   c.innerHTML = DATA.top_captains.map(cap => `
     <div class="bar-row">
-      <div class="bar-name">${cap.name}</div>
+      <div class="bar-name">${captainLink(cap)}</div>
       <div class="bar-track"><div class="bar-fill" style="width:0%" data-w="${cap.freq/max*100}"></div></div>
       <div class="bar-pct">${cap.freq}</div>
     </div>`).join('');
@@ -205,7 +213,7 @@ function renderCaptains() {
     return `
       <div class="captain-card" data-archetypes="${archetypesPresent}">
         <div class="captain-header">
-          <div class="captain-name">${cap.name}</div>
+          <div class="captain-name">${captainLink(cap)}</div>
           <div class="captain-n ${warn ? 'warn' : ''}">n=${cap.n}${warn ? ' ⚠' : ''}</div>
         </div>
         <div class="toggle-bar">
