@@ -118,7 +118,7 @@ uv run scripts/render_captains.py
 
 **Generates:**
 - `docs/captains/index.html` — all-captains table (months/winning decks), month filter chips defaulting to the last 2 months
-- `docs/captains/<slug>/index.html` — one page per captain: Best 12 table (recomputed client-side from checked months) and full decklists
+- `docs/captains/<slug>/index.html` — one page per captain: Best Cards table (recomputed client-side from checked months; "Show 12 more" extends past the top 12, `ASSET_VERSION` in `render_captains.py` cache-busts `docs/assets/captains.js`) and full decklists
 
 **Behavior notes:**
 - Every captain in `captains.json` gets a page, even with no winning decks (empty state)

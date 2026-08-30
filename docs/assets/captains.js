@@ -33,24 +33,27 @@ if (deckFilter) {
   });
 }
 
-// Best 12 table: recompute from raw decks of the checked months.
+// Best Cards table: recompute from raw decks of the checked months.
 // Mirrors etl/scripts/analyze_event.py calculate_captain_stats: presence-count per
-// card, sort by freq desc with alphabetical tie-break, take top 12.
+// card, sort by freq desc with alphabetical tie-break. Returns the full ranking;
+// renderBest12() shows the top best12Limit (12 by default, "Show 12 more" extends).
 function best12(decks) {
   const counts = {};
   decks.forEach(deck => new Set(deck).forEach(card => counts[card] = (counts[card] || 0) + 1));
   return Object.entries(counts)
-    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
-    .slice(0, 12);
+    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1));
 }
+let best12Limit = 12;
 function renderBest12() {
   const captain = JSON.parse(document.getElementById('captain-data').textContent);
   const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
     .map(cb => cb.dataset.month);
   const decks = captain.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
+  const ranked = best12(decks);
+  const shown = ranked.slice(0, best12Limit);
   const tbody = document.querySelector('#best12-table tbody');
   tbody.innerHTML = '';
-  best12(decks).forEach(([card, freq]) => {
+  shown.forEach(([card, freq]) => {
     const tr = document.createElement('tr');
     const tdCard = document.createElement('td');
     tdCard.textContent = card;
@@ -64,6 +67,12 @@ function renderBest12() {
     tbody.appendChild(tr);
   });
   document.querySelector('#best12-count').textContent = decks.length;
+  const more = document.getElementById('best12-more');
+  if (more) {
+    const remaining = ranked.length - shown.length;
+    more.style.display = remaining > 0 ? '' : 'none';
+    if (remaining > 0) more.textContent = `Show ${Math.min(12, remaining)} more`;
+  }
 }
 
 // Captains index: rebuild the captain table from the checked month chips.
@@ -109,7 +118,9 @@ function renderIndex() {
 if (document.getElementById('captain-data')) {
   renderBest12();
   document.querySelectorAll('#month-filter input')
-    .forEach(cb => cb.addEventListener('change', renderBest12));
+    .forEach(cb => cb.addEventListener('change', () => { best12Limit = 12; renderBest12(); }));
+  document.getElementById('best12-more')
+    ?.addEventListener('click', () => { best12Limit += 12; renderBest12(); });
 }
 if (document.getElementById('captains-data')) {
   renderIndex();

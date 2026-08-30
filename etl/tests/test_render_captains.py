@@ -176,6 +176,16 @@ def test_captain_page_empty_state(events_dir, captains_file):
     extract_payload(html)
 
 
+def test_captain_page_has_show_more_button(events_dir, captains_file):
+    """Data pages ship the Best Cards show-more button; empty pages ship nothing."""
+    caps = aggregate_captains(events_dir, captains_file)
+    page = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    empty = render_captain_page(caps["loki"], "https://example.com")
+    assert '<button type="button" id="best12-more" class="more-btn">Show 12 more</button>' in page
+    assert "Best Cards" in page
+    assert "best12-more" not in empty
+
+
 def test_captain_page_has_no_raw_json_section(events_dir, captains_file):
     caps = aggregate_captains(events_dir, captains_file)
     for captain in (caps["galileo-galilei"], caps["loki"]):

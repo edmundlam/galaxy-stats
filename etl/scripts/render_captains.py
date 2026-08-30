@@ -17,7 +17,7 @@ from html import escape
 from pathlib import Path
 
 BASE_URL = "https://edmundlam.github.io/galaxy-stats"
-ASSET_VERSION = "2"
+ASSET_VERSION = "3"
 FONTS_HREF = (
     "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900"
     "&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
@@ -46,6 +46,10 @@ EXTRA_CSS = """
   .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
                                    background:rgba(200,169,110,0.08); }
   .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  .more-btn { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+              color:var(--muted); background:none; border:1px solid var(--border); border-radius:2px;
+              padding:8px 14px; margin-top:12px; cursor:pointer; transition:all 0.15s; }
+  .more-btn:hover { color:var(--accent); border-color:rgba(200,169,110,0.4); }
   a { color:var(--accent); text-decoration:none; }
   a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
@@ -279,7 +283,7 @@ def render_captain_page(captain: dict, base_url: str, report_ids: set[str] | Non
         body = f"""
 <main>
   <div class="section active">
-    <div class="section-title">Best 12</div>
+    <div class="section-title">Best Cards</div>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
     <div class="captain-filter" id="month-filter">{_month_chips([m["id"] for m in captain["months"]])}</div>
@@ -288,6 +292,7 @@ def render_captain_page(captain: dict, base_url: str, report_ids: set[str] | Non
         <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
       <tbody></tbody>
     </table>
+    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
 
     <div class="section-title" style="margin-top:48px">Decklists</div>
     <div class="section-desc">Every winning deck across all months.</div>

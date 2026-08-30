@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/dr-agon/">
 <meta name="robots" content="index, follow">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=2">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=3">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
@@ -28,6 +28,10 @@
   .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
                                    background:rgba(200,169,110,0.08); }
   .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  .more-btn { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+              color:var(--muted); background:none; border:1px solid var(--border); border-radius:2px;
+              padding:8px 14px; margin-top:12px; cursor:pointer; transition:all 0.15s; }
+  .more-btn:hover { color:var(--accent); border-color:rgba(200,169,110,0.4); }
   a { color:var(--accent); text-decoration:none; }
   a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
@@ -48,7 +52,7 @@
 
 <main>
   <div class="section active">
-    <div class="section-title">Best 12</div>
+    <div class="section-title">Best Cards</div>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
@@ -57,6 +61,7 @@
         <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
       <tbody></tbody>
     </table>
+    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
 
     <div class="section-title" style="margin-top:48px">Decklists</div>
     <div class="section-desc">Every winning deck across all months.</div>
@@ -79,6 +84,6 @@
   </div>
 </main>
 <script type="application/json" id="captain-data">{"slug": "dr-agon", "name": "Dr. Agon", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "Farec", "archetype": "Treasures", "deck": ["Aladdin", "Plunder Penny", "Maverick & Icewing", "Genie of the Lamp", "Mirror Mage", "Ace of Hearts", "Hephaestus", "Scale-a-tor", "Kid Icarus", "Moppet", "Prospero", "Mr. Fox"]}, {"username": "Jino", "archetype": "Mage", "deck": ["Morgan Le Fae", "Calypso", "Genie of the Lamp", "Mirror Mage", "Ogre Magi", "Chaos", "Moppet", "The Fates", "Twilight Sprinkles", "Pixie", "Kool Wip", "Lollipop Faerie"]}, {"username": "Mike Honcho", "archetype": "Treasures", "deck": ["Aladdin", "Plunder Penny", "Maverick & Icewing", "Genie of the Lamp", "Mirror Mage", "Ace of Hearts", "Hephaestus", "Scale-a-tor", "The Burninator", "Kid Icarus", "Moppet", "Flopsy"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Abello", "archetype": "Treasures", "deck": ["Hephaestus", "Aladdin", "Plunder Penny", "Frog Prince", "Kid Icarus", "Prospero", "Ace of Hearts", "Maverick & Icewing", "Moppet", "Genie of the Lamp", "Mirror Mage", "Scale-a-tor"]}, {"username": "AtlasMessiah", "archetype": "Mage", "deck": ["The Fates", "Chaos", "Miseria", "Baron Bok", "Cherry Topples", "Mr. Fox", "Weensy", "Mirror Mage", "Wicked Witch", "Crab Dragoon", "Prospero", "The Burninator"]}, {"username": "juannacho", "archetype": "Mage", "deck": ["Aladdin", "Plunder Penny", "The Fates", "Maverick & Icewing", "Moppet", "Genie of the Lamp", "Kagutsuchi", "Mirror Mage", "Mysterio, the Great and Powerful", "Smug", "Hephaestus", "Prospero"]}]}]}</script>
-<script src="../../assets/captains.js?v=2"></script>
+<script src="../../assets/captains.js?v=3"></script>
 </body>
 </html>

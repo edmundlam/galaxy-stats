@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/jason-of-the-argonauts/">
 <meta name="robots" content="index, follow">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=2">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=3">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
@@ -28,6 +28,10 @@
   .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
                                    background:rgba(200,169,110,0.08); }
   .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  .more-btn { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+              color:var(--muted); background:none; border:1px solid var(--border); border-radius:2px;
+              padding:8px 14px; margin-top:12px; cursor:pointer; transition:all 0.15s; }
+  .more-btn:hover { color:var(--accent); border-color:rgba(200,169,110,0.4); }
   a { color:var(--accent); text-decoration:none; }
   a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
@@ -48,7 +52,7 @@
 
 <main>
   <div class="section active">
-    <div class="section-title">Best 12</div>
+    <div class="section-title">Best Cards</div>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-04">2026-04</label><label class="month-chip"><input type="checkbox" checked data-month="2026-05">2026-05</label><label class="month-chip"><input type="checkbox" checked data-month="2026-07">2026-07</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
@@ -57,6 +61,7 @@
         <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
       <tbody></tbody>
     </table>
+    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
 
     <div class="section-title" style="margin-top:48px">Decklists</div>
     <div class="section-desc">Every winning deck across all months.</div>
@@ -87,6 +92,6 @@
   </div>
 </main>
 <script type="application/json" id="captain-data">{"slug": "jason-of-the-argonauts", "name": "Jason of the Argonauts", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "Kabuki87", "archetype": "Treasures", "deck": ["Mimic", "Faerie Queen", "Genie of the Lamp", "Mirror Mirror", "Moonshadow", "Underdog", "Pisces", "Chaos", "Fae Familiar", "Faerie Godfather", "Flopsy", "Licorice"]}, {"username": "MrGreeyne", "archetype": "Treasures", "deck": ["Frog Prince", "Prickles", "Mimic", "Fun Gal", "Ace of Hearts", "Mirror Mirror", "Moonshadow", "Pisces", "Chaos", "Faerie Godfather", "Flopsy", "Wormscale Tinkerer"]}, {"username": "Mulleceps", "archetype": "Candy", "deck": ["Mirror Mage", "Wormscale Tinkerer", "Viscount Chocolat", "Knight of the Holy Cane", "Keeb", "Lollipop Faerie", "Gingerbread Witch", "Oracle of Fortunes", "Licorice", "Mr. Fox", "Miseria", "The Huntsman"]}, {"username": "pavlov", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Barrel of Monkeys", "Black Hole", "Wicked Witch", "Anubis", "Pisces", "Wink", "Snapping Hydra", "Wormscale Tinkerer", "Friendly Spirit", "Miseria"]}, {"username": "SAsc4rs", "archetype": "Treasures", "deck": ["Shanty", "Morgan Le Fae", "Mephisto", "Pisces", "Wink", "Fae Familiar", "Sinbad", "The Fates", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Miseria"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "hitmep", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Ace of Hearts", "Guinevere", "The Burninator", "Pisces", "Snapping Hydra", "Wormscale Tinkerer", "Lance A Little", "Rollo", "Mr. Fox", "Miseria", "Crystal"]}, {"username": "Victorlbg", "archetype": "Treasures", "deck": ["Plunder Penny", "Nightshade", "Mysterio, the Great and Powerful", "The Burninator", "Pisces", "Sir Francis Drake", "Faerie Godfather", "Smug", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Oracle of Fortunes"]}, {"username": "Zephyr Dragon Lord", "archetype": "Treasures", "deck": ["Nightshade", "Faerie Queen", "Genie of the Lamp", "Pisces", "Chaos", "Wink", "The Fates", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Rollo", "Mr. Fox"]}]}, {"id": "2026-05", "date": "2026-05-22", "event": "May Monthly", "players": [{"username": "dirichlet", "archetype": "Mage", "deck": ["Frog Prince", "Fun Gal", "Nightshade", "Faerie Queen", "Genie of the Lamp", "Moonshadow", "Underdog", "Pisces", "Chaos", "Fae Familiar", "Faerie Godfather", "Rudolph the Red"]}, {"username": "GoldGarden", "archetype": "Animals", "deck": ["Frog Prince", "Mimic", "Fun Gal", "Faerie Queen", "Genie of the Lamp", "Mirror Mirror", "Moonshadow", "Underdog", "Pisces", "Chaos", "Fae Familiar", "Faerie Godfather"]}, {"username": "Lombi", "archetype": "Treasures", "deck": ["Aladdin", "Beanie Baby", "Mech-a-Man", "Maverick & Icewing", "Mechanical Dragon", "Mirror Mage", "Combustible Dragon", "Guinevere", "Sir Francis Drake", "Mr. Fox", "Eros", "Young Hercules"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "may451", "archetype": "Boons", "deck": ["Destiny", "Miseria", "Young Hercules", "Baron Bok", "Mortakon", "Astral Navigator", "Crystal", "Eros", "Kagutsuchi", "Anubis", "Guinevere", "Mischief"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Faile", "archetype": "Treasures", "deck": ["Aladdin", "Dastardly Spirit", "Friendly Spirit", "Ace of Hearts", "Miseria", "The Huntsman", "Combustible Dragon", "Sir Francis Drake", "Smug", "Flopsy", "The Burninator", "Wormscale Tinkerer"]}, {"username": "UncleSweetshare", "archetype": "Treasures", "deck": ["Busted Bot", "Lance A Little", "Toto", "Mech-a-Man", "Raggedy Ann", "Jaws", "Mortakon", "Netherbinder", "Tsarmina, the Tyrant", "Mirror Mage", "Faerie Queen", "Scale-a-tor"]}]}]}</script>
-<script src="../../assets/captains.js?v=2"></script>
+<script src="../../assets/captains.js?v=3"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/sir-galahad/">
 <meta name="robots" content="index, follow">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=2">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=3">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
@@ -28,6 +28,10 @@
   .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
                                    background:rgba(200,169,110,0.08); }
   .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  .more-btn { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+              color:var(--muted); background:none; border:1px solid var(--border); border-radius:2px;
+              padding:8px 14px; margin-top:12px; cursor:pointer; transition:all 0.15s; }
+  .more-btn:hover { color:var(--accent); border-color:rgba(200,169,110,0.4); }
   a { color:var(--accent); text-decoration:none; }
   a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
@@ -48,7 +52,7 @@
 
 <main>
   <div class="section active">
-    <div class="section-title">Best 12</div>
+    <div class="section-title">Best Cards</div>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-04">2026-04</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
@@ -57,6 +61,7 @@
         <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
       <tbody></tbody>
     </table>
+    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
 
     <div class="section-title" style="margin-top:48px">Decklists</div>
     <div class="section-desc">Every winning deck across all months.</div>
@@ -81,6 +86,6 @@
   </div>
 </main>
 <script type="application/json" id="captain-data">{"slug": "sir-galahad", "name": "Sir Galahad", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "ElmerKS", "archetype": "Treasures", "deck": ["Beanie Baby", "Prickles", "Mech-a-Man", "Mechanical Dragon", "Brick Monster", "Wicked Witch", "Ace of Hearts", "Raggedy Ann", "Thunder of Dragons", "Space Ranger Woody", "Smug", "Wormscale Tinkerer"]}, {"username": "Ivach", "archetype": "Treasures", "deck": ["Aladdin", "Prickles", "Mech-a-Man", "Ace of Hearts", "Hephaestus", "The Burninator", "Thunder of Dragons", "Space Ranger Woody", "Smug", "Wormscale Tinkerer", "Rollo", "Mr. Fox"]}, {"username": "Peppr", "archetype": "Treasures", "deck": ["Beanie Baby", "Maverick & Icewing", "Mechanical Dragon", "Scale-a-tor", "Mysterio, the Great and Powerful", "The Burninator", "Thunder of Dragons", "The Fates", "Smug", "Snapping Hydra", "Wormscale Tinkerer", "Netherbinder"]}, {"username": "ZLegacy", "archetype": "Mage", "deck": ["Plunder Penny", "Morgan Le Fae", "Calypso", "Nightshade", "Ogre Magi", "Wicked Witch", "Elm Minster", "Glory Seeker", "Sabrina", "Chaos", "Fae Familiar", "Prospero"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Komodo", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Wicked Witch", "Ace of Hearts", "Guinevere", "The Burninator", "Pisces", "Smug", "Wormscale Tinkerer", "Rollo", "Mr. Fox"]}, {"username": "Player1234", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Wicked Witch", "The Burninator", "Pisces", "Wink", "Smug", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Miseria"]}, {"username": "r3as0n", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Mechanical Dragon", "Mirror Mage", "Wicked Witch", "Ace of Hearts", "Guinevere", "Hephaestus", "The Burninator", "Smug", "Wormscale Tinkerer"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "prototype00", "archetype": "Treasures", "deck": ["Combustible Dragon", "Maverick & Icewing", "Mechanical Dragon", "Mr. Fox", "Ditto", "Sir Francis Drake", "Thunder of Dragons", "Crab Dragoon", "Hephaestus", "Scale-a-tor", "The Burninator", "Wormscale Tinkerer"]}]}]}</script>
-<script src="../../assets/captains.js?v=2"></script>
+<script src="../../assets/captains.js?v=3"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/iron-monkey/">
 <meta name="robots" content="index, follow">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=2">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=3">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
@@ -28,6 +28,10 @@
   .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
                                    background:rgba(200,169,110,0.08); }
   .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  .more-btn { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase;
+              color:var(--muted); background:none; border:1px solid var(--border); border-radius:2px;
+              padding:8px 14px; margin-top:12px; cursor:pointer; transition:all 0.15s; }
+  .more-btn:hover { color:var(--accent); border-color:rgba(200,169,110,0.4); }
   a { color:var(--accent); text-decoration:none; }
   a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
@@ -48,7 +52,7 @@
 
 <main>
   <div class="section active">
-    <div class="section-title">Best 12</div>
+    <div class="section-title">Best Cards</div>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-05">2026-05</label><label class="month-chip"><input type="checkbox" checked data-month="2026-06">2026-06</label><label class="month-chip"><input type="checkbox" checked data-month="2026-07">2026-07</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
@@ -57,6 +61,7 @@
         <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
       <tbody></tbody>
     </table>
+    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
 
     <div class="section-title" style="margin-top:48px">Decklists</div>
     <div class="section-desc">Every winning deck across all months.</div>
@@ -93,6 +98,6 @@
   </div>
 </main>
 <script type="application/json" id="captain-data">{"slug": "iron-monkey", "name": "Iron Monkey", "months": [{"id": "2026-05", "date": "2026-05-22", "event": "May Monthly", "players": [{"username": "Fabwizard", "archetype": "Boons", "deck": ["Bubbles", "Fenrir", "Ptah", "Apophis", "Orion, the Hunter", "Orpheus", "Sigrun, Valkyrie Queen", "The Raven", "Young Hercules", "Fortune Teller", "Medea in a Tavern", "Perseus"]}, {"username": "Froglodyte", "archetype": "Boons", "deck": ["Mech-a-Man", "The Burninator", "Bubbles", "Baron Bok", "Destiny", "Orion, the Hunter", "Sigrun, Valkyrie Queen", "The Raven", "Young Hercules", "Fortune Teller", "Medea in a Tavern", "Perseus"]}, {"username": "frufernaut", "archetype": "Boons", "deck": ["Bubbles", "Fenrir", "Ptah", "Apophis", "Orion, the Hunter", "Orpheus", "Sigrun, Valkyrie Queen", "The Raven", "Young Hercules", "Fortune Teller", "Medea in a Tavern", "Perseus"]}, {"username": "Jebas", "archetype": "Boons", "deck": ["Astral Navigator", "Bubbles", "Fenrir", "Nuada, Radiant King", "Eros", "Ptah", "Baron Bok", "Crab Dragoon", "Destiny", "Sigrun, Valkyrie Queen", "Fortune Teller", "Medea in a Tavern"]}, {"username": "SeveralKittens", "archetype": "Boons", "deck": ["Bubbles", "Fenrir", "Ptah", "Apophis", "Orion, the Hunter", "Orpheus", "Sigrun, Valkyrie Queen", "The Raven", "Young Hercules", "Fortune Teller", "Medea in a Tavern", "Perseus"]}, {"username": "Spymk", "archetype": "Boons", "deck": ["Bubbles", "Fenrir", "Ptah", "Apophis", "Orion, the Hunter", "Orpheus", "Sigrun, Valkyrie Queen", "The Raven", "Young Hercules", "Fortune Teller", "Medea in a Tavern", "Perseus"]}, {"username": "Swiss Sneeze", "archetype": "Boons", "deck": ["Bubbles", "Fenrir", "Ptah", "Apophis", "Orion, the Hunter", "Orpheus", "Sigrun, Valkyrie Queen", "The Raven", "Young Hercules", "Fortune Teller", "Medea in a Tavern", "Perseus"]}, {"username": "XenoGemini", "archetype": "Treasures", "deck": ["Mortakon", "Wicked Witch", "Anubis", "Ace of Hearts", "Mysterio, the Great and Powerful", "Mr. Fox", "Miseria", "Astral Navigator", "Nuada, Radiant King", "Eros", "Baron Bok", "Destiny"]}]}, {"id": "2026-06", "date": "2026-06-19", "event": "June Monthly", "players": [{"username": "AdequateFinch", "archetype": "Treasures", "deck": ["Destiny", "Fortune Teller", "Mech-a-Man", "Young Hercules", "Baron Bok", "Maverick & Icewing", "Crystal", "Eros", "Barrel of Monkeys", "Chip on the Ship", "Guinevere", "Wormscale Tinkerer"]}, {"username": "Elagabalus", "archetype": "Treasures", "deck": ["Bubbles", "The Raven", "Fortune Teller", "Whirlidoo", "Young Hercules", "Mimic", "Orion, the Hunter", "Mysterio, the Great and Powerful", "Smug", "Apophis", "Flopsy", "Wormscale Tinkerer"]}, {"username": "Gricha", "archetype": "Candy", "deck": ["Candy Claws", "Destiny", "Fortune Teller", "Cherry Topples", "Kool Wip", "Mortakon", "Nightshade", "Pixie", "Chubby Cheep", "Cotton Candy Dandy", "Jelly-ton", "Sigrun, Valkyrie Queen"]}, {"username": "Holland", "archetype": "Boons", "deck": ["Bubbles", "The Raven", "Fortune Teller", "Nuada, Radiant King", "Young Hercules", "Orion, the Hunter", "Orpheus", "Fenrir", "Medea in a Tavern", "Apophis", "Cotton Candy Dandy", "Halja"]}, {"username": "Lilgoblin", "archetype": "Boons", "deck": ["The Raven", "Bubbles", "Young Hercules", "Fortune Teller", "Orpheus", "Perseus", "Fenrir", "Orion, the Hunter", "Medea in a Tavern", "Sigrun, Valkyrie Queen", "Apophis", "Ptah"]}, {"username": "NFNDave", "archetype": "Boons", "deck": ["Al-mi'raj", "The Raven", "Fortune Teller", "Young Hercules", "Maverick & Icewing", "Orion, the Hunter", "Fenrir", "Medea in a Tavern", "Apophis", "Perseus", "Ptah", "Sigrun, Valkyrie Queen"]}, {"username": "VelvetDevil", "archetype": "Treasures", "deck": ["Bubbles", "Fortune Teller", "Nuada, Radiant King", "Old Coyote", "Mr. Fox", "Orion, the Hunter", "Astral Navigator", "Fenrir", "Medea in a Tavern", "Apophis", "Crab Dragoon", "The Burninator"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "freyer", "archetype": "Boons", "deck": ["Bubbles", "Fortune Teller", "Nuada, Radiant King", "Young Hercules", "Baron Bok", "Orion, the Hunter", "Astral Navigator", "Eros", "Kagutsuchi", "Crab Dragoon", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "Jeremiad", "archetype": "Treasures", "deck": ["Bubbles", "Destiny", "Fortune Teller", "Mech-a-Man", "The Huntsman", "Young Hercules", "Maverick & Icewing", "Orion, the Hunter", "Apophis", "Blackbeard", "Guinevere", "Perseus"]}, {"username": "Typhonix", "archetype": "Boons", "deck": ["The Raven", "Bubbles", "Young Hercules", "Fortune Teller", "Orpheus", "Perseus", "Fenrir", "Orion, the Hunter", "Medea in a Tavern", "Sigrun, Valkyrie Queen", "Apophis", "Ptah"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "lIlIlIl", "archetype": "Animals", "deck": ["Bubbles", "Ace of Hearts", "Nuada, Radiant King", "Baron Bok", "Mr. Fox", "Orion, the Hunter", "Astral Navigator", "Fenrir", "Pixie", "Snapping Hydra", "Apophis", "Nemean Lion"]}, {"username": "Zzyx", "archetype": "Toys", "deck": ["Mech-a-Man", "Raggedy Ann", "Baron Bok", "Destiny", "Mortakon", "Mr. Fox", "Astral Navigator", "Black Hole", "Anubis", "Barrel of Monkeys", "Chip on the Ship", "Guinevere"]}]}]}</script>
-<script src="../../assets/captains.js?v=2"></script>
+<script src="../../assets/captains.js?v=3"></script>
 </body>
 </html>
