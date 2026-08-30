@@ -99,6 +99,34 @@ uv run scripts/render_report.py 2026-03
 
 ---
 
+## render_captains.py (standalone)
+
+**Purpose:** Generate per-captain stats pages aggregating winning decks across all events
+
+```bash
+# From repo root (renders pages + regenerates sitemap)
+make captains
+
+# Render only, no sitemap
+make etl-render-captains
+
+# From etl/ directory
+uv run scripts/render_captains.py
+```
+
+**Reads:** every `etl/dist/events/*/analysis.json` + `etl/dist/captains.json` (captain name map)
+
+**Generates:**
+- `docs/captains/index.html` — all-captains table (months/winning decks), month filter chips defaulting to the last 2 months
+- `docs/captains/<slug>/index.html` — one page per captain: Best 12 table (recomputed client-side from checked months) and full decklists
+
+**Behavior notes:**
+- Every captain in `captains.json` gets a page, even with no winning decks (empty state)
+- Decklist month cells link to `../../reports/<event-id>/` only when that report exists in `docs/reports/`
+- Not part of the 6-stage report pipeline — run `make captains` after adding or re-rendering reports
+
+---
+
 ## Adjusting Archetype Assignments
 
 To modify cluster assignments after analysis:

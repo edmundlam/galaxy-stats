@@ -35,6 +35,18 @@ make update-latest EVENT_ID=2026-03
 
 **Important:** Use `HTML_FILE=context/2026-03.html` (relative to etl/ directory), NOT `etl/context/2026-03.html`
 
+### Captain Pages (via Makefile)
+
+```bash
+# Regenerate all captain pages + sitemap (standalone; not part of make report)
+make captains
+
+# Render captain pages only (no sitemap)
+make etl-render-captains
+```
+
+Captain pages aggregate winning decks across **all** events from `etl/dist/events/*/analysis.json` into `docs/captains/index.html` plus one `docs/captains/<slug>/index.html` per captain. Run `make captains` after any report change so the new month appears.
+
 ### Python Tooling (via Makefile)
 
 ```bash
@@ -99,7 +111,12 @@ galaxy-stats/
 │               ├── analysis.json          # Final analysis (with overrides)
 │               └── report.html            # Final HTML report
 ├── docs/                   # Static HTML reports (served by GitHub Pages)
-│   ├── index.html         # Redirects to latest report
+│   ├── index.html         # Landing page: reports table + quick links
+│   ├── about.html         # Methodology/technical details
+│   ├── assets/            # Shared CSS/JS for reports + captain pages
+│   ├── captains/          # Per-captain stats across all events
+│   │   ├── index.html     # All-captains index with month filter
+│   │   └── <slug>/index.html
 │   └── reports/
 │       └── 2026-03/
 │           └── index.html
@@ -167,7 +184,8 @@ See `.claude/reference/etl-scripts.md` for detailed script usage, flags, and adj
    - Check auto-generated clusters in `etl/dist/events/2026-04/auto-analysis.json`
    - Update `etl/config/archetypes.json` to add overrides
    - Re-run: `make etl-finalize-with-overrides EVENT_ID=2026-04` → `make etl-render EVENT_ID=2026-04` → `make copy-report EVENT_ID=2026-04`
-5. **Commit and push**: GitHub Pages will auto-deploy
+5. **Regenerate captain pages**: `make captains` — `make report` does not refresh them, so the new month won't appear on captain pages without this. Month rows there link to the new report only once it's published in `docs/reports/`.
+6. **Commit and push**: GitHub Pages will auto-deploy
 
 The root `docs/index.html` will automatically redirect to your new report.
 
