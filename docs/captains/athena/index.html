@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Athena — Captain Stats | Galaxy Stats</title>
-<meta name="description" content="Athena captain statistics across Once Upon a Galaxy monthly tournaments: 0 winning decks across 0 months, with best 12 cards and full decklists.">
+<meta name="description" content="Athena captain statistics across Once Upon a Galaxy monthly tournaments: 1 winning decks across 1 months, with best 12 cards and full decklists.">
 <link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/athena/">
 <meta name="robots" content="index, follow">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -45,17 +45,40 @@
   <h1>Athena</h1>
   <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
   <div class="stats-row">
-    <div class="stat-item"><div class="stat-value">0</div><div class="stat-label">Winning decks</div></div>
-    <div class="stat-item"><div class="stat-value">0</div><div class="stat-label">Months</div></div>
+    <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">Winning decks</div></div>
+    <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">Months</div></div>
   </div>
 </header>
 
 <main>
   <div class="section active">
-    <div class="empty-note">No winning decks recorded yet.</div>
+    <div class="section-title">Best Cards</div>
+    <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
+      below. Check or uncheck months to see how the picks shift.</div>
+    <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-09">2026-09</label></div>
+    <table class="data-table" id="best12-table">
+      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
+
+    <div class="section-title" style="margin-top:48px">Decklists</div>
+    <div class="section-desc">Every winning deck across all months.</div>
+    <div class="captain-filter">
+      <input id="deck-filter" class="filter-input" type="text"
+        placeholder="Filter by player, archetype, month, or card…">
+    </div>
+    <table class="data-table" id="deck-table">
+      <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
+        <th data-sort="archetype">Archetype</th><th class="no-sort">Deck</th></tr></thead>
+      <tbody>
+        <tr><td data-v="2026-09"><a href="../../reports/2026-09/">2026-09</a></td><td>Astrid The Cat</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Lance A Little</span><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Mech-a-Man</span><span class="deck-pill">Miseria</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Baron Bok</span><span class="deck-pill">Destiny</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Astral Navigator</span><span class="deck-pill">Wicked Witch</span><span class="deck-pill">Anubis</span><span class="deck-pill">Guinevere</span></div></td></tr>
+      </tbody>
+    </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "athena", "name": "Athena", "months": []}</script>
-
+<script type="application/json" id="captain-data">{"slug": "athena", "name": "Athena", "months": [{"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Astrid The Cat", "archetype": "Treasures", "deck": ["Lance A Little", "Fortune Teller", "Mech-a-Man", "Miseria", "Young Hercules", "Baron Bok", "Destiny", "Mortakon", "Astral Navigator", "Wicked Witch", "Anubis", "Guinevere"]}]}]}</script>
+<script src="../../assets/captains.js?v=3"></script>
 </body>
 </html>

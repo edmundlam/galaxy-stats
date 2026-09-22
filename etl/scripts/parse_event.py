@@ -96,6 +96,11 @@ def parse_event(html_file_path: str, event_id: str) -> tuple[dict, dict, dict, i
                         deck_cards.append(card_slug)
                         cards_map[card_slug] = card_name
 
+        # Skip entries with no captain and no cards ("deck info missing" on
+        # galaxy.fun) — they would create a phantom empty captain downstream.
+        if not captain_slug and not deck_cards:
+            continue
+
         players.append(
             {
                 "username": username,

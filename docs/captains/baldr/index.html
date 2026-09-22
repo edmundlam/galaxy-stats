@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Baldr — Captain Stats | Galaxy Stats</title>
-<meta name="description" content="Baldr captain statistics across Once Upon a Galaxy monthly tournaments: 0 winning decks across 0 months, with best 12 cards and full decklists.">
+<meta name="description" content="Baldr captain statistics across Once Upon a Galaxy monthly tournaments: 4 winning decks across 1 months, with best 12 cards and full decklists.">
 <link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/captains/baldr/">
 <meta name="robots" content="index, follow">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -45,17 +45,43 @@
   <h1>Baldr</h1>
   <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
   <div class="stats-row">
-    <div class="stat-item"><div class="stat-value">0</div><div class="stat-label">Winning decks</div></div>
-    <div class="stat-item"><div class="stat-value">0</div><div class="stat-label">Months</div></div>
+    <div class="stat-item"><div class="stat-value">4</div><div class="stat-label">Winning decks</div></div>
+    <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">Months</div></div>
   </div>
 </header>
 
 <main>
   <div class="section active">
-    <div class="empty-note">No winning decks recorded yet.</div>
+    <div class="section-title">Best Cards</div>
+    <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
+      below. Check or uncheck months to see how the picks shift.</div>
+    <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-09">2026-09</label></div>
+    <table class="data-table" id="best12-table">
+      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
+
+    <div class="section-title" style="margin-top:48px">Decklists</div>
+    <div class="section-desc">Every winning deck across all months.</div>
+    <div class="captain-filter">
+      <input id="deck-filter" class="filter-input" type="text"
+        placeholder="Filter by player, archetype, month, or card…">
+    </div>
+    <table class="data-table" id="deck-table">
+      <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
+        <th data-sort="archetype">Archetype</th><th class="no-sort">Deck</th></tr></thead>
+      <tbody>
+        <tr><td data-v="2026-09"><a href="../../reports/2026-09/">2026-09</a></td><td>Cynic</td><td>Treasures</td><td><div class="deck-pills"><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Miseria</span><span class="deck-pill">Nuada, Radiant King</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Destiny</span><span class="deck-pill">Maverick &amp; Icewing</span><span class="deck-pill">Mortakon</span><span class="deck-pill">Smug</span><span class="deck-pill">Guinevere</span><span class="deck-pill">Perseus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">The Burninator</span></div></td></tr>
+        <tr><td data-v="2026-09"><a href="../../reports/2026-09/">2026-09</a></td><td>Gukov</td><td>Boons</td><td><div class="deck-pills"><span class="deck-pill">Bubbles</span><span class="deck-pill">The Raven</span><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Fenrir</span><span class="deck-pill">Medea in a Tavern</span><span class="deck-pill">Yggdrasil Sapling</span><span class="deck-pill">Apophis</span><span class="deck-pill">Perseus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-09"><a href="../../reports/2026-09/">2026-09</a></td><td>phoenicksgames</td><td>Boons</td><td><div class="deck-pills"><span class="deck-pill">The Raven</span><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Rollo</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Fenrir</span><span class="deck-pill">Medea in a Tavern</span><span class="deck-pill">Flopsy</span><span class="deck-pill">Perseus</span><span class="deck-pill">Sigrun, Valkyrie Queen</span></div></td></tr>
+        <tr><td data-v="2026-09"><a href="../../reports/2026-09/">2026-09</a></td><td>WingSteel</td><td>Boons</td><td><div class="deck-pills"><span class="deck-pill">The Raven</span><span class="deck-pill">Bubbles</span><span class="deck-pill">Young Hercules</span><span class="deck-pill">Fortune Teller</span><span class="deck-pill">Wishing Fish</span><span class="deck-pill">Tantalus</span><span class="deck-pill">Fenrir</span><span class="deck-pill">Orion, the Hunter</span><span class="deck-pill">Medea in a Tavern</span><span class="deck-pill">Sigrun, Valkyrie Queen</span><span class="deck-pill">Apophis</span><span class="deck-pill">Perseus</span></div></td></tr>
+      </tbody>
+    </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "baldr", "name": "Baldr", "months": []}</script>
-
+<script type="application/json" id="captain-data">{"slug": "baldr", "name": "Baldr", "months": [{"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Cynic", "archetype": "Treasures", "deck": ["Fortune Teller", "Miseria", "Nuada, Radiant King", "Young Hercules", "Destiny", "Maverick & Icewing", "Mortakon", "Smug", "Guinevere", "Perseus", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "Gukov", "archetype": "Boons", "deck": ["Bubbles", "The Raven", "Fortune Teller", "Young Hercules", "Orion, the Hunter", "Tantalus", "Fenrir", "Medea in a Tavern", "Yggdrasil Sapling", "Apophis", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "phoenicksgames", "archetype": "Boons", "deck": ["The Raven", "Fortune Teller", "Young Hercules", "Orion, the Hunter", "Rollo", "Tantalus", "Wishing Fish", "Fenrir", "Medea in a Tavern", "Flopsy", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "WingSteel", "archetype": "Boons", "deck": ["The Raven", "Bubbles", "Young Hercules", "Fortune Teller", "Wishing Fish", "Tantalus", "Fenrir", "Orion, the Hunter", "Medea in a Tavern", "Sigrun, Valkyrie Queen", "Apophis", "Perseus"]}]}]}</script>
+<script src="../../assets/captains.js?v=3"></script>
 </body>
 </html>

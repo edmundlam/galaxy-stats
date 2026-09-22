@@ -47,3 +47,6 @@ pnpm-debug.log*
 
 # Claude Code worktrees
 .claude/worktrees/
+
+# Playwright MCP session artifacts
+.playwright-mcp/
