@@ -196,7 +196,7 @@ def _head(title: str, description: str, canonical: str, asset_prefix: str) -> st
 <link href="{FONTS_HREF}" rel="stylesheet">
 <link rel="stylesheet" href="{asset_prefix}assets/galaxy-report.css?v={ASSET_VERSION}">
 <style>{EXTRA_CSS}</style>
-<script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="a1be0c78-139e-413a-bb3c-e28b3b9dbe5c"></script>"""
+<script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="9d92bc0f-3019-480b-b295-2e79921d2792" data-domains="www.galaxy-stats.com"></script>"""
 
 
 def _deck_rows(captain: dict, report_ids: set[str] | None = None) -> str:

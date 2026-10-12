@@ -73,7 +73,7 @@ def get_html_template() -> str:
 <meta name="robots" content="index, follow">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/galaxy-report.css?v={ASSET_VERSION}">
-<script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="a1be0c78-139e-413a-bb3c-e28b3b9dbe5c"></script>
+<script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="9d92bc0f-3019-480b-b295-2e79921d2792" data-domains="www.galaxy-stats.com"></script>
 </head>
 <body>
 
