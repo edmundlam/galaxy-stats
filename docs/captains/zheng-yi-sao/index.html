@@ -36,19 +36,25 @@
   a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
+  .header-cols { display:flex; align-items:center; gap:32px; }
+  .captain-portrait { width:130px; height:auto; flex:none;
+                      filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
 </style>
 <script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="9d92bc0f-3019-480b-b295-2e79921d2792" data-domains="www.galaxy-stats.com"></script>
 </head>
 <body>
-<header>
-  <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
-  <h1>Zheng Yi Sao</h1>
-  <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
-  <div class="stats-row">
-    <div class="stat-item"><div class="stat-value">7</div><div class="stat-label">Winning decks</div></div>
-    <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Months</div></div>
-  </div>
-</header>
+<header><div class="header-cols">
+    <div>
+    <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+    <h1>Zheng Yi Sao</h1>
+    <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+    <div class="stats-row">
+      <div class="stat-item"><div class="stat-value">7</div><div class="stat-label">Winning decks</div></div>
+      <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Months</div></div>
+    </div>
+    </div>
+    <img class="captain-portrait" src="../../assets/captains-img/zheng_yi_sao__300.webp" alt="Zheng Yi Sao captain card art" width="130" loading="eager">
+  </div></header>
 
 <main>
   <div class="section active">

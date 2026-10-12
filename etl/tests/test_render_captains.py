@@ -176,6 +176,24 @@ def test_captain_page_empty_state(events_dir, captains_file):
     extract_payload(html)
 
 
+def test_captain_page_with_image_uses_two_column_header(events_dir, captains_file):
+    """Portrait pages wrap the header in .header-cols and point at the shared image."""
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com", image="galileo-galilei__300.webp")
+    assert '<div class="header-cols">' in html
+    assert 'src="../../assets/captains-img/galileo-galilei__300.webp"' in html
+    assert 'class="captain-portrait"' in html
+
+
+def test_captain_page_without_image_keeps_flat_header(events_dir, captains_file):
+    """No image → no portrait markup and no header-cols wrapper."""
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com", image=None)
+    assert '<img class="captain-portrait"' not in html
+    assert '<div class="header-cols">' not in html
+    assert "<h1>Galileo Galilei</h1>" in html
+
+
 def test_captain_page_has_show_more_button(events_dir, captains_file):
     """Data pages ship the Best Cards show-more button; empty pages ship nothing."""
     caps = aggregate_captains(events_dir, captains_file)

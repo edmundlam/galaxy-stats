@@ -54,6 +54,9 @@ EXTRA_CSS = """
   a:hover { text-decoration:underline; text-underline-offset:3px; }
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
+  .header-cols { display:flex; align-items:center; gap:32px; }
+  .captain-portrait { width:130px; height:auto; flex:none;
+                      filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
 """
 
 
@@ -247,7 +250,9 @@ def _month_chips(month_ids: list[str], checked: set[str] | None = None) -> str:
     )
 
 
-def render_captain_page(captain: dict, base_url: str, report_ids: set[str] | None = None) -> str:
+def render_captain_page(
+    captain: dict, base_url: str, report_ids: set[str] | None = None, image: str | None = None
+) -> str:
     """Render one captain page.
 
     Args:
@@ -255,6 +260,8 @@ def render_captain_page(captain: dict, base_url: str, report_ids: set[str] | Non
         base_url: Site base URL for canonical/meta
         report_ids: Event ids with a published report (month cells link
             only to those); None links every month
+        image: Filename in docs/assets/captains-img for the header portrait,
+            or None to render the flat header
 
     Returns:
         Self-contained HTML page string
@@ -270,6 +277,27 @@ def render_captain_page(captain: dict, base_url: str, report_ids: set[str] | Non
         f"{total_decks} winning decks across {len(months)} months, with best 12 cards and full decklists."
     )
     head = _head(f"{name} — Captain Stats | Galaxy Stats", description, canonical, "../../")
+
+    header_body = f"""
+    <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+    <h1>{escape(name)}</h1>
+    <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+    <div class="stats-row">
+      <div class="stat-item"><div class="stat-value">{total_decks}</div><div class="stat-label">Winning decks</div></div>
+      <div class="stat-item"><div class="stat-value">{len(months)}</div><div class="stat-label">Months</div></div>
+    </div>"""
+    if image:
+        portrait = (
+            f'<img class="captain-portrait" src="../../assets/captains-img/{escape(image)}"'
+            f' alt="{escape(name)} captain card art" width="130" loading="eager">'
+        )
+        header = f"""<div class="header-cols">
+    <div>{header_body}
+    </div>
+    {portrait}
+  </div>"""
+    else:
+        header = header_body
 
     if total_decks == 0:
         body = """
@@ -317,15 +345,7 @@ def render_captain_page(captain: dict, base_url: str, report_ids: set[str] | Non
 {head}
 </head>
 <body>
-<header>
-  <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
-  <h1>{escape(name)}</h1>
-  <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
-  <div class="stats-row">
-    <div class="stat-item"><div class="stat-value">{total_decks}</div><div class="stat-label">Winning decks</div></div>
-    <div class="stat-item"><div class="stat-value">{len(months)}</div><div class="stat-label">Months</div></div>
-  </div>
-</header>
+<header>{header}</header>
 {body}
 <script type="application/json" id="captain-data">{payload}</script>
 {script}
@@ -418,11 +438,14 @@ def main() -> int:
     index_path = captains_root / "index.html"
     index_path.write_text(render_index_page(captains, args.base_url), encoding="utf-8")
 
+    images_dir = docs_dir / "assets" / "captains-img"
     for captain in captains.values():
         captain_dir = captains_root / captain["slug"]
         captain_dir.mkdir(exist_ok=True)
+        image = f"{captain['slug'].replace('-', '_')}__300.webp"
         (captain_dir / "index.html").write_text(
-            render_captain_page(captain, args.base_url, report_ids), encoding="utf-8"
+            render_captain_page(captain, args.base_url, report_ids, image if (images_dir / image).exists() else None),
+            encoding="utf-8",
         )
 
     with_decks = sum(1 for c in captains.values() if any(m["players"] for m in c["months"]))
