@@ -69,7 +69,7 @@ def get_html_template() -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OUAG {EVENT_TYPE} Meta Report {EVENT_ID} — {TOP_CARD_NAME} & {TOP_CAPTAIN} | Galaxy Stats</title>
 <meta name="description" content="OUAG {EVENT_TYPE} {EVENT_ID} results: {TOTAL_PLAYERS} players, top card {TOP_CARD_NAME} at {TOP_CARD_PCT}, top captain {TOP_CAPTAIN}. Tournament meta analysis with card popularity, captain synergies, and deck archetypes.">
-<link rel="canonical" href="https://edmundlam.github.io/galaxy-stats/reports/{EVENT_ID}/">
+<link rel="canonical" href="https://www.galaxy-stats.com/reports/{EVENT_ID}/">
 <meta name="robots" content="index, follow">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/galaxy-report.css?v={ASSET_VERSION}">

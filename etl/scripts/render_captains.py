@@ -16,7 +16,7 @@ import sys
 from html import escape
 from pathlib import Path
 
-BASE_URL = "https://edmundlam.github.io/galaxy-stats"
+BASE_URL = "https://www.galaxy-stats.com"
 ASSET_VERSION = "3"
 FONTS_HREF = (
     "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900"

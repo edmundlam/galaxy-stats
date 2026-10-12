@@ -134,8 +134,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Generate sitemap.xml for GitHub Pages")
     parser.add_argument(
         "--base-url",
-        default="https://edmundlam.github.io/galaxy-stats",
-        help="Base URL for the site (default: https://edmundlam.github.io/galaxy-stats)",
+        default="https://www.galaxy-stats.com",
+        help="Base URL for the site (default: https://www.galaxy-stats.com)",
     )
     parser.add_argument(
         "--docs-dir", default=None, help="Path to docs directory (default: ./../docs from script location)"

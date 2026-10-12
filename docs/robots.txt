@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://edmundlam.github.io/galaxy-stats/sitemap.xml
+Sitemap: https://www.galaxy-stats.com/sitemap.xml
