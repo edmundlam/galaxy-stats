@@ -278,8 +278,9 @@ def render_captain_page(
     )
     head = _head(f"{name} — Captain Stats | Galaxy Stats", description, canonical, "../../")
 
-    header_body = f"""
-    <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+    header_body = """
+    <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>"""
+    title_cols = f"""
     <h1>{escape(name)}</h1>
     <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
     <div class="stats-row">
@@ -291,13 +292,14 @@ def render_captain_page(
             f'<img class="captain-portrait" src="../../assets/captains-img/{escape(image)}"'
             f' alt="{escape(name)} captain card art" width="130" loading="eager">'
         )
-        header = f"""<div class="header-cols">
-    <div>{header_body}
+        header = f"""{header_body}
+  <div class="header-cols">
+    <div>{title_cols}
     </div>
     {portrait}
   </div>"""
     else:
-        header = header_body
+        header = header_body + title_cols
 
     if total_decks == 0:
         body = """
