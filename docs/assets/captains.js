@@ -1,6 +1,15 @@
 // Shared JS for the captains pages (docs/captains/index.html + docs/captains/<slug>/index.html).
 // Pages embed their data as <script type="application/json" id="captain-data|captains-data">.
 
+// Umami custom events (never throws; silent when the script is blocked).
+// captain is only present on per-captain pages, absent on the captains index.
+const CAP = document.getElementById('captain-data')
+  ? JSON.parse(document.getElementById('captain-data').textContent).name
+  : undefined;
+function trackEvt(name, props) {
+  window.umami?.track(name, { ...(CAP && { captain: CAP }), ...props });
+}
+
 // Sortable table headers ([data-sort] cells, numeric via td.num)
 function sortTable(th) {
   const table = th.closest('table'), tbody = table.querySelector('tbody');
@@ -8,6 +17,8 @@ function sortTable(th) {
   const dir = th.dataset.dir === 'asc' ? -1 : 1;
   table.querySelectorAll('th').forEach(h => h.removeAttribute('data-dir'));
   th.dataset.dir = dir === 1 ? 'asc' : 'desc';
+  trackEvt('table-sort', { table: table.id || 'captains',
+                           column: th.dataset.sort, dir: th.dataset.dir });
   const rows = Array.from(tbody.rows);
   rows.sort((a, b) => {
     const av = a.cells[idx].dataset.v ?? a.cells[idx].textContent.trim();
@@ -23,9 +34,11 @@ document.querySelectorAll('th[data-sort]').forEach(th =>
   th.addEventListener('click', () => sortTable(th)));
 
 // Deck-list filtering (#deck-filter hides rows whose text doesn't match)
+let deckFilterTracked = false;
 const deckFilter = document.getElementById('deck-filter');
 if (deckFilter) {
   deckFilter.addEventListener('input', () => {
+    if (!deckFilterTracked) { deckFilterTracked = true; trackEvt('deck-filter'); }
     const q = deckFilter.value.toLowerCase();
     document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
       tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
@@ -118,12 +131,22 @@ function renderIndex() {
 if (document.getElementById('captain-data')) {
   renderBest12();
   document.querySelectorAll('#month-filter input')
-    .forEach(cb => cb.addEventListener('change', () => { best12Limit = 12; renderBest12(); }));
+    .forEach(cb => cb.addEventListener('change', () => {
+      best12Limit = 12; renderBest12();
+      trackEvt('month-filter', { months: Array.from(
+        document.querySelectorAll('#month-filter input:checked'))
+        .map(cb => cb.dataset.month).join(',') });
+    }));
   document.getElementById('best12-more')
-    ?.addEventListener('click', () => { best12Limit += 12; renderBest12(); });
+    ?.addEventListener('click', () => { best12Limit += 12; renderBest12();
+      trackEvt('best12-more', { shown: best12Limit }); });
 }
 if (document.getElementById('captains-data')) {
   renderIndex();
   document.querySelectorAll('#month-filter input')
-    .forEach(cb => cb.addEventListener('change', renderIndex));
+    .forEach(cb => cb.addEventListener('change', () => { renderIndex();
+      trackEvt('month-filter', { months: Array.from(
+        document.querySelectorAll('#month-filter input:checked'))
+        .map(cb => cb.dataset.month).join(',') });
+    }));
 }

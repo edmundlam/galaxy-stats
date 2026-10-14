@@ -17,7 +17,7 @@ from html import escape
 from pathlib import Path
 
 BASE_URL = "https://www.galaxy-stats.com"
-ASSET_VERSION = "3"
+ASSET_VERSION = "4"
 FONTS_HREF = (
     "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900"
     "&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap"

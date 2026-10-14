@@ -1,8 +1,14 @@
+// Umami custom events (never throws; silent when the script is blocked)
+function trackEvt(name, props) {
+  window.umami?.track(name, { report: DATA.event.id, ...props });
+}
+
 function showSection(id, btn) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   btn.classList.add('active');
+  trackEvt('section-view', { section: id });
   if (id === 'top-cards') animateBars();
   if (id === 'clusters') setTimeout(animateArchetypeBars, 80);
 }
@@ -230,6 +236,8 @@ function renderCaptains() {
 
 function switchView(uid, view, btn) {
   const card = btn.closest('.captain-card');
+  trackEvt('captain-view', {
+    captain: card.querySelector('.captain-name').textContent.trim(), view });
   card.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
   card.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   btn.classList.add('active');
@@ -264,6 +272,7 @@ function renderCaptainFilter() {
 
 // Filter captains by archetype
 function filterCaptains(key, btn) {
+  trackEvt('captain-filter', { archetype: key });
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.captain-card').forEach(card => {
@@ -293,4 +302,16 @@ function filterCaptainsByText(searchText) {
 function togglePlayer(id) {
   const row = document.getElementById(id);
   row.classList.toggle('open');
+  if (row.classList.contains('open')) {
+    const card = row.closest('.captain-card');
+    trackEvt('decklist-open', {
+      captain: card.querySelector('.captain-name').textContent.trim(),
+      archetype: row.dataset.archetypes });
+  }
 }
+
+// Card lookups open guide.galaxy.fun in a new tab; one delegated listener covers all
+document.addEventListener('click', e => {
+  const a = e.target.closest('a.card-link[target=_blank]');
+  if (a) trackEvt('card-lookup', { card: a.textContent.trim() });
+});

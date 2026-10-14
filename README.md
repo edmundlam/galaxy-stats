@@ -116,6 +116,23 @@ Report sections:
 - **Card Archetypes**: Clustered cards (Treasures, Candy, Mage, Pirates, Animals, Toys)
 - **Captain Analysis**: Signature cards (lift) and best 12 picks per captain
 
+## Analytics Events
+
+Custom Umami events (self-hosted Umami records pageviews automatically). Naming convention: short, lowercase, kebab-case; never send usernames or search text. Smoke test: `node etl/tests/test_tracking_smoke.mjs`.
+
+| Event | Where | Properties |
+|---|---|---|
+| `section-view` | report tabs | `report`, `section` |
+| `captain-view` | report captain view toggle | `report`, `captain`, `view` |
+| `decklist-open` | report decklist expand | `report`, `captain`, `archetype` |
+| `captain-filter` | report archetype filter | `report`, `archetype` |
+| `card-lookup` | report card link to guide.galaxy.fun | `report`, `card` |
+| `month-filter` | captains index + captain page month chips | `captain` (page only), `months` |
+| `best12-more` | captain page "show more" | `captain`, `shown` |
+| `table-sort` | captain page table headers | `captain` (page only), `table`, `column`, `dir` |
+| `deck-filter` | captain page deck search (once per load) | `captain` (page only) |
+| `outbound-click` | GitHub link on landing/about pages | `destination` |
+
 ## Archetype Configuration
 
 The `etl/config/archetypes.json` file defines **archetype overrides** that map card slugs to specific archetypes. This is useful when:
