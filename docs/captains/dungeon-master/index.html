@@ -37,6 +37,10 @@
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
   .header-cols { display:flex; align-items:center; gap:32px; }
+  .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
+                color:var(--accent); margin-top:10px; max-width:60ch; }
+  .rules-line::before { content:"“"; }
+  .rules-line::after { content:"”"; }
   .captain-portrait { width:130px; height:auto; flex:none;
                       filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
 </style>
@@ -48,7 +52,8 @@
   <div class="header-cols">
     <div>
     <h1>Dungeon Master</h1>
-    <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+    <div class="subtitle">Captain stats · <a href="../">all captains</a> · <a href="https://guide.galaxy.fun/cards/dungeon_master/" target="_blank" rel="noopener">Galaxy Guide ↗</a></div>
+    <div class="rules-line">Treasures you discover from Heroes and Villains are one rarity higher.<br>Your first shop each turn always has a Hero or a Villain in it.</div>
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">6</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Months</div></div>
@@ -90,7 +95,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "dungeon-master", "name": "Dungeon Master", "months": [{"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Flyboy", "archetype": "Treasures", "deck": ["Combustible Dragon", "Hephaestus", "The Burninator", "Fae Familiar", "Sir Francis Drake", "Smug", "The Rat King", "Flopsy", "Wormscale Tinkerer", "Viscount Chocolat", "Kool Wip", "Netherbinder"]}, {"username": "SoftSpot", "archetype": "Pirates", "deck": ["Toto", "Shanty", "Wicked Witch", "Glory Seeker", "Raggedy Ann", "Pisces", "Wink", "Moppet", "Sir Francis Drake", "Pirate King", "Pirate Prince", "Rollo"]}, {"username": "Thorfred", "archetype": "Treasures", "deck": ["Mech-a-Man", "Mimic", "Ace of Hearts", "Glory Seeker", "Combustible Dragon", "Daedalus", "Wormtongue", "Pisces", "Wink", "Pirate King", "Pirate Prince", "Smug"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "MasterPlum", "archetype": "Treasures", "deck": ["Aladdin", "Glory Seeker", "Toto", "Ace of Hearts", "Kid Icarus", "Mech-a-Man", "Nutcracker Prince", "Smug", "Wicked Witch", "Daedalus", "Guinevere", "Hercules"]}, {"username": "Zeptic", "archetype": "Treasures", "deck": ["Daedalus", "Glory Seeker", "Wormtongue", "Wink", "Mech-a-Man", "Pirate King", "Ace of Hearts", "Mimic", "Combustible Dragon", "Pisces", "Smug", "Pirate Prince"]}]}, {"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Jasperov", "archetype": "Boons", "deck": ["Fortune Teller", "The Huntsman", "Young Hercules", "Baron Bok", "Destiny", "Mortakon", "Mr. Fox", "Orion, the Hunter", "Astral Navigator", "Guinevere", "Perseus", "Sigrun, Valkyrie Queen"]}]}]}</script>
+<script type="application/json" id="captain-data">{"slug": "dungeon-master", "name": "Dungeon Master", "months": [{"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Flyboy", "archetype": "Treasures", "deck": ["Combustible Dragon", "Hephaestus", "The Burninator", "Fae Familiar", "Sir Francis Drake", "Smug", "The Rat King", "Flopsy", "Wormscale Tinkerer", "Viscount Chocolat", "Kool Wip", "Netherbinder"]}, {"username": "SoftSpot", "archetype": "Pirates", "deck": ["Toto", "Shanty", "Wicked Witch", "Glory Seeker", "Raggedy Ann", "Pisces", "Wink", "Moppet", "Sir Francis Drake", "Pirate King", "Pirate Prince", "Rollo"]}, {"username": "Thorfred", "archetype": "Treasures", "deck": ["Mech-a-Man", "Mimic", "Ace of Hearts", "Glory Seeker", "Combustible Dragon", "Daedalus", "Wormtongue", "Pisces", "Wink", "Pirate King", "Pirate Prince", "Smug"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "MasterPlum", "archetype": "Treasures", "deck": ["Aladdin", "Glory Seeker", "Toto", "Ace of Hearts", "Kid Icarus", "Mech-a-Man", "Nutcracker Prince", "Smug", "Wicked Witch", "Daedalus", "Guinevere", "Hercules"]}, {"username": "Zeptic", "archetype": "Treasures", "deck": ["Daedalus", "Glory Seeker", "Wormtongue", "Wink", "Mech-a-Man", "Pirate King", "Ace of Hearts", "Mimic", "Combustible Dragon", "Pisces", "Smug", "Pirate Prince"]}]}, {"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Jasperov", "archetype": "Boons", "deck": ["Fortune Teller", "The Huntsman", "Young Hercules", "Baron Bok", "Destiny", "Mortakon", "Mr. Fox", "Orion, the Hunter", "Astral Navigator", "Guinevere", "Perseus", "Sigrun, Valkyrie Queen"]}]}], "rules": "Treasures you discover from Heroes and Villains are one rarity higher.\nYour first shop each turn always has a Hero or a Villain in it."}</script>
 <script src="../../assets/captains.js?v=4"></script>
 </body>
 </html>

@@ -37,6 +37,10 @@
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
   .header-cols { display:flex; align-items:center; gap:32px; }
+  .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
+                color:var(--accent); margin-top:10px; max-width:60ch; }
+  .rules-line::before { content:"“"; }
+  .rules-line::after { content:"”"; }
   .captain-portrait { width:130px; height:auto; flex:none;
                       filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
 </style>
@@ -48,7 +52,8 @@
   <div class="header-cols">
     <div>
     <h1>Charon</h1>
-    <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+    <div class="subtitle">Captain stats · <a href="../">all captains</a> · <a href="https://guide.galaxy.fun/cards/charon/" target="_blank" rel="noopener">Galaxy Guide ↗</a></div>
+    <div class="rules-line">Your first character has &quot;Farewell — +1/+1.&quot;<br>When you replace a Golden character, improve this by +5/+5 and get a bonus shop.</div>
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">4</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">2</div><div class="stat-label">Months</div></div>
@@ -88,7 +93,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "charon", "name": "Charon", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "Dakaniel", "archetype": "Toys", "deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Barrel of Monkeys", "Brick Monster", "Chip on the Ship", "Daedalus", "Raggedy Ann", "Party Pinata", "Sinbad", "Wormscale Tinkerer", "Lance A Little"]}, {"username": "icybergz", "archetype": "Toys", "deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Barrel of Monkeys", "Chip on the Ship", "Hercules", "Space Ranger Woody", "Chaos", "Sir Francis Drake", "Cherry Topples", "The Sour Patch Kid", "Gingerbread Witch"]}, {"username": "Player1234", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Wicked Witch", "The Burninator", "Pisces", "Wink", "Smug", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Miseria"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "AgraZero", "archetype": "Treasures", "deck": ["Ace of Hearts", "Destiny", "Fortune Teller", "Mech-a-Man", "Miseria", "Young Hercules", "Mortakon", "The Butcher", "Crystal", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}]}]}</script>
+<script type="application/json" id="captain-data">{"slug": "charon", "name": "Charon", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "Dakaniel", "archetype": "Toys", "deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Barrel of Monkeys", "Brick Monster", "Chip on the Ship", "Daedalus", "Raggedy Ann", "Party Pinata", "Sinbad", "Wormscale Tinkerer", "Lance A Little"]}, {"username": "icybergz", "archetype": "Toys", "deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Barrel of Monkeys", "Chip on the Ship", "Hercules", "Space Ranger Woody", "Chaos", "Sir Francis Drake", "Cherry Topples", "The Sour Patch Kid", "Gingerbread Witch"]}, {"username": "Player1234", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Wicked Witch", "The Burninator", "Pisces", "Wink", "Smug", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Miseria"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "AgraZero", "archetype": "Treasures", "deck": ["Ace of Hearts", "Destiny", "Fortune Teller", "Mech-a-Man", "Miseria", "Young Hercules", "Mortakon", "The Butcher", "Crystal", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}]}], "rules": "Your first character has \"Farewell \u2014 +1/+1.\"\nWhen you replace a Golden character, improve this by +5/+5 and get a bonus shop."}</script>
 <script src="../../assets/captains.js?v=4"></script>
 </body>
 </html>

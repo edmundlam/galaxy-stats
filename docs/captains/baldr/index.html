@@ -37,6 +37,10 @@
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
   .header-cols { display:flex; align-items:center; gap:32px; }
+  .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
+                color:var(--accent); margin-top:10px; max-width:60ch; }
+  .rules-line::before { content:"“"; }
+  .rules-line::after { content:"”"; }
   .captain-portrait { width:130px; height:auto; flex:none;
                       filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
 </style>
@@ -48,7 +52,8 @@
   <div class="header-cols">
     <div>
     <h1>Baldr</h1>
-    <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+    <div class="subtitle">Captain stats · <a href="../">all captains</a> · <a href="https://guide.galaxy.fun/cards/baldr/" target="_blank" rel="noopener">Galaxy Guide ↗</a></div>
+    <div class="rules-line">You start with 4 Hearts.</div>
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">4</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">Months</div></div>
@@ -88,7 +93,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "baldr", "name": "Baldr", "months": [{"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Cynic", "archetype": "Treasures", "deck": ["Fortune Teller", "Miseria", "Nuada, Radiant King", "Young Hercules", "Destiny", "Maverick & Icewing", "Mortakon", "Smug", "Guinevere", "Perseus", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "Gukov", "archetype": "Boons", "deck": ["Bubbles", "The Raven", "Fortune Teller", "Young Hercules", "Orion, the Hunter", "Tantalus", "Fenrir", "Medea in a Tavern", "Yggdrasil Sapling", "Apophis", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "phoenicksgames", "archetype": "Boons", "deck": ["The Raven", "Fortune Teller", "Young Hercules", "Orion, the Hunter", "Rollo", "Tantalus", "Wishing Fish", "Fenrir", "Medea in a Tavern", "Flopsy", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "WingSteel", "archetype": "Boons", "deck": ["The Raven", "Bubbles", "Young Hercules", "Fortune Teller", "Wishing Fish", "Tantalus", "Fenrir", "Orion, the Hunter", "Medea in a Tavern", "Sigrun, Valkyrie Queen", "Apophis", "Perseus"]}]}]}</script>
+<script type="application/json" id="captain-data">{"slug": "baldr", "name": "Baldr", "months": [{"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Cynic", "archetype": "Treasures", "deck": ["Fortune Teller", "Miseria", "Nuada, Radiant King", "Young Hercules", "Destiny", "Maverick & Icewing", "Mortakon", "Smug", "Guinevere", "Perseus", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "Gukov", "archetype": "Boons", "deck": ["Bubbles", "The Raven", "Fortune Teller", "Young Hercules", "Orion, the Hunter", "Tantalus", "Fenrir", "Medea in a Tavern", "Yggdrasil Sapling", "Apophis", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "phoenicksgames", "archetype": "Boons", "deck": ["The Raven", "Fortune Teller", "Young Hercules", "Orion, the Hunter", "Rollo", "Tantalus", "Wishing Fish", "Fenrir", "Medea in a Tavern", "Flopsy", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "WingSteel", "archetype": "Boons", "deck": ["The Raven", "Bubbles", "Young Hercules", "Fortune Teller", "Wishing Fish", "Tantalus", "Fenrir", "Orion, the Hunter", "Medea in a Tavern", "Sigrun, Valkyrie Queen", "Apophis", "Perseus"]}]}], "rules": "You start with 4 Hearts."}</script>
 <script src="../../assets/captains.js?v=4"></script>
 </body>
 </html>

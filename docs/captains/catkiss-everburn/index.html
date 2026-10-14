@@ -37,6 +37,10 @@
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
   .header-cols { display:flex; align-items:center; gap:32px; }
+  .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
+                color:var(--accent); margin-top:10px; max-width:60ch; }
+  .rules-line::before { content:"“"; }
+  .rules-line::after { content:"”"; }
   .captain-portrait { width:130px; height:auto; flex:none;
                       filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
 </style>
@@ -48,7 +52,8 @@
   <div class="header-cols">
     <div>
     <h1>Catkiss Everburn</h1>
-    <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+    <div class="subtitle">Captain stats · <a href="../">all captains</a> · <a href="https://guide.galaxy.fun/cards/catkiss_everburn/" target="_blank" rel="noopener">Galaxy Guide ↗</a></div>
+    <div class="rules-line">Your first character has ranged.</div>
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">2</div><div class="stat-label">Months</div></div>
@@ -87,7 +92,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "catkiss-everburn", "name": "Catkiss Everburn", "months": [{"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Zaximus", "archetype": "Boons", "deck": ["The Raven", "Al-mi'raj", "Nutty Pirates", "Nuada, Radiant King", "Young Hercules", "Orpheus", "Tantalus", "Orion, the Hunter", "Medea in a Tavern", "Nemean Lion", "Sigrun, Valkyrie Queen", "Perseus"]}]}, {"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Blastingcap0", "archetype": "Treasures", "deck": ["Fortune Teller", "Nuada, Radiant King", "Young Hercules", "Baron Bok", "Destiny", "Maverick & Icewing", "Mr. Fox", "Rollo", "Tsarmina, the Tyrant", "Eros", "Guinevere", "Sigrun, Valkyrie Queen"]}, {"username": "Spuz", "archetype": "Boons", "deck": ["Nutty Pirates", "The Raven", "Nuada, Radiant King", "Young Hercules", "Orion, the Hunter", "Orpheus", "Tantalus", "Eros", "Medea in a Tavern", "Nemean Lion", "Perseus", "Sigrun, Valkyrie Queen"]}]}]}</script>
+<script type="application/json" id="captain-data">{"slug": "catkiss-everburn", "name": "Catkiss Everburn", "months": [{"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Zaximus", "archetype": "Boons", "deck": ["The Raven", "Al-mi'raj", "Nutty Pirates", "Nuada, Radiant King", "Young Hercules", "Orpheus", "Tantalus", "Orion, the Hunter", "Medea in a Tavern", "Nemean Lion", "Sigrun, Valkyrie Queen", "Perseus"]}]}, {"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Blastingcap0", "archetype": "Treasures", "deck": ["Fortune Teller", "Nuada, Radiant King", "Young Hercules", "Baron Bok", "Destiny", "Maverick & Icewing", "Mr. Fox", "Rollo", "Tsarmina, the Tyrant", "Eros", "Guinevere", "Sigrun, Valkyrie Queen"]}, {"username": "Spuz", "archetype": "Boons", "deck": ["Nutty Pirates", "The Raven", "Nuada, Radiant King", "Young Hercules", "Orion, the Hunter", "Orpheus", "Tantalus", "Eros", "Medea in a Tavern", "Nemean Lion", "Perseus", "Sigrun, Valkyrie Queen"]}]}], "rules": "Your first character has ranged."}</script>
 <script src="../../assets/captains.js?v=4"></script>
 </body>
 </html>

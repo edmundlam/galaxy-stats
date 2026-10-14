@@ -37,6 +37,10 @@
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
   .header-cols { display:flex; align-items:center; gap:32px; }
+  .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
+                color:var(--accent); margin-top:10px; max-width:60ch; }
+  .rules-line::before { content:"“"; }
+  .rules-line::after { content:"”"; }
   .captain-portrait { width:130px; height:auto; flex:none;
                       filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
 </style>
@@ -48,7 +52,8 @@
   <div class="header-cols">
     <div>
     <h1>Maximus</h1>
-    <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+    <div class="subtitle">Captain stats · <a href="../">all captains</a> · <a href="https://guide.galaxy.fun/cards/maximus/" target="_blank" rel="noopener">Galaxy Guide ↗</a></div>
+    <div class="rules-line">After you KO 15 enemies get a random Silver Rare character. After 40, get a random Golden Legendary character.</div>
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">6</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">4</div><div class="stat-label">Months</div></div>
@@ -90,7 +95,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "maximus", "name": "Maximus", "months": [{"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Danvari", "archetype": "Mage", "deck": ["Morgan Le Fae", "Calypso", "Mirror Mage", "Ogre Magi", "Elm Minster", "Mirror Mirror", "Mysterio, the Great and Powerful", "Wormtongue", "Sabrina", "Chaos", "Fae Familiar", "Prospero"]}, {"username": "SymbioticSweater", "archetype": "Treasures", "deck": ["Beanie Baby", "Mech-a-Man", "Maverick & Icewing", "Ace of Hearts", "Thunder of Dragons", "Chaos", "Smug", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Rollo", "Oracle of Fortunes"]}, {"username": "unwantedcow64", "archetype": "Treasures", "deck": ["Beanie Baby", "Maverick & Icewing", "Mechanical Dragon", "Underdog", "The Burninator", "Pisces", "Wink", "The Fates", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Gummy Wyrm"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Nesbah", "archetype": "Treasures", "deck": ["Ace of Hearts", "Chaos", "Maverick & Icewing", "Mr. Fox", "Sinbad", "Snapping Hydra", "Viscount Chocolat", "Wicked Witch", "Crab Dragoon", "Flopsy", "Hercules", "Monstro"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Cara.", "archetype": "Animals", "deck": ["Monstro", "Pied Piper", "Beanie Baby", "Frog Prince", "Toadie", "Guinevere", "Ace of Hearts", "Tsarmina, the Tyrant", "Sinbad", "Charlotte", "Snapping Hydra", "The Rat King"]}]}, {"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "BeakerDan", "archetype": "Treasures", "deck": ["The Fates", "Mech-a-Man", "Baron Bok", "Combustible Dragon", "Destiny", "Mechanical Dragon", "Mortakon", "Astral Navigator", "Eros", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}]}]}</script>
+<script type="application/json" id="captain-data">{"slug": "maximus", "name": "Maximus", "months": [{"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Danvari", "archetype": "Mage", "deck": ["Morgan Le Fae", "Calypso", "Mirror Mage", "Ogre Magi", "Elm Minster", "Mirror Mirror", "Mysterio, the Great and Powerful", "Wormtongue", "Sabrina", "Chaos", "Fae Familiar", "Prospero"]}, {"username": "SymbioticSweater", "archetype": "Treasures", "deck": ["Beanie Baby", "Mech-a-Man", "Maverick & Icewing", "Ace of Hearts", "Thunder of Dragons", "Chaos", "Smug", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Rollo", "Oracle of Fortunes"]}, {"username": "unwantedcow64", "archetype": "Treasures", "deck": ["Beanie Baby", "Maverick & Icewing", "Mechanical Dragon", "Underdog", "The Burninator", "Pisces", "Wink", "The Fates", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Gummy Wyrm"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Nesbah", "archetype": "Treasures", "deck": ["Ace of Hearts", "Chaos", "Maverick & Icewing", "Mr. Fox", "Sinbad", "Snapping Hydra", "Viscount Chocolat", "Wicked Witch", "Crab Dragoon", "Flopsy", "Hercules", "Monstro"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Cara.", "archetype": "Animals", "deck": ["Monstro", "Pied Piper", "Beanie Baby", "Frog Prince", "Toadie", "Guinevere", "Ace of Hearts", "Tsarmina, the Tyrant", "Sinbad", "Charlotte", "Snapping Hydra", "The Rat King"]}]}, {"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "BeakerDan", "archetype": "Treasures", "deck": ["The Fates", "Mech-a-Man", "Baron Bok", "Combustible Dragon", "Destiny", "Mechanical Dragon", "Mortakon", "Astral Navigator", "Eros", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}]}], "rules": "After you KO 15 enemies get a random Silver Rare character. After 40, get a random Golden Legendary character."}</script>
 <script src="../../assets/captains.js?v=4"></script>
 </body>
 </html>

@@ -55,6 +55,10 @@ EXTRA_CSS = """
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
   .header-cols { display:flex; align-items:center; gap:32px; }
+  .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
+                color:var(--accent); margin-top:10px; max-width:60ch; }
+  .rules-line::before { content:"“"; }
+  .rules-line::after { content:"”"; }
   .captain-portrait { width:130px; height:auto; flex:none;
                       filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
 """
@@ -108,7 +112,7 @@ def load_analyses(events_dir: Path) -> list[dict]:
     return [json.loads(p.read_text(encoding="utf-8")) for p in sorted(events_dir.glob("*/analysis.json"))]
 
 
-def aggregate_captains(events_dir: Path, captains_file: Path) -> dict[str, dict]:
+def aggregate_captains(events_dir: Path, captains_file: Path, rules_file: Path | None = None) -> dict[str, dict]:
     """Aggregate per-captain deck data across all events.
 
     Every captain in captains.json gets an entry (with empty months if no
@@ -118,17 +122,22 @@ def aggregate_captains(events_dir: Path, captains_file: Path) -> dict[str, dict]
     Args:
         events_dir: Path to etl/dist/events
         captains_file: Path to etl/dist/captains.json
+        rules_file: Optional path to etl/dist/captain_rules.json; when given,
+            entries gain a "rules" key with the captain's rules text
 
     Returns:
-        Dict keyed by dashed slug: {slug, name, months: [{id, date, event, players}]}
+        Dict keyed by dashed slug: {slug, name, months: [{id, date, event, players}], rules?}
     """
     captains_map = json.loads(captains_file.read_text(encoding="utf-8")) if captains_file.exists() else {}
+    rules_map = json.loads(rules_file.read_text(encoding="utf-8")) if rules_file and rules_file.exists() else {}
     captains: dict[str, dict] = {}
 
     def entry(slug: str) -> dict:
         dashed = slug_to_dash(slug)
         if dashed not in captains:
             captains[dashed] = {"slug": dashed, "name": captains_map.get(slug, slug), "months": []}
+            if slug in rules_map:
+                captains[dashed]["rules"] = rules_map[slug]
         return captains[dashed]
 
     for slug in captains_map:
@@ -280,9 +289,16 @@ def render_captain_page(
 
     header_body = """
     <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>"""
+    rules = captain.get("rules")
+    guide_link = (
+        f' · <a href="https://guide.galaxy.fun/cards/{slug.replace("-", "_")}/" target="_blank" rel="noopener">Galaxy Guide ↗</a>'
+        if rules
+        else ""
+    )
+    rules_line = f'\n    <div class="rules-line">{escape(rules).replace("\n", "<br>")}</div>' if rules else ""
     title_cols = f"""
     <h1>{escape(name)}</h1>
-    <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+    <div class="subtitle">Captain stats · <a href="../">all captains</a>{guide_link}</div>{rules_line}
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">{total_decks}</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">{len(months)}</div><div class="stat-label">Months</div></div>
@@ -431,7 +447,9 @@ def main() -> int:
     dist_dir = Path(args.dist_dir) if args.dist_dir else script_dir.parent / "dist"
     docs_dir = Path(args.docs_dir) if args.docs_dir else script_dir.parent.parent / "docs"
 
-    captains = aggregate_captains(dist_dir / "events", dist_dir / "captains.json")
+    captains = aggregate_captains(
+        dist_dir / "events", dist_dir / "captains.json", rules_file=dist_dir / "captain_rules.json"
+    )
     reports_dir = docs_dir / "reports"
     report_ids = {p.parent.name for p in reports_dir.glob("*/index.html")} if reports_dir.exists() else set()
 

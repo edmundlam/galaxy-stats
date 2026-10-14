@@ -330,3 +330,43 @@ def test_captain_page_month_cells_stay_plain_when_report_missing(events_dir, cap
     html = render_captain_page(caps["galileo-galilei"], "https://example.com", report_ids={"2026-01"})
     assert '<td data-v="2026-01"><a href="../../reports/2026-01/">2026-01</a></td>' in html
     assert '<td data-v="2026-02">2026-02</td>' in html
+
+
+@pytest.fixture()
+def rules_file(tmp_path):
+    p = tmp_path / "captain_rules.json"
+    p.write_text(json.dumps({"galileo_galilei": "Stars align.\nTwice."}))
+    return p
+
+
+def test_aggregation_attaches_rules_text(events_dir, captains_file, rules_file):
+    caps = aggregate_captains(events_dir, captains_file, rules_file=rules_file)
+    assert caps["galileo-galilei"]["rules"] == "Stars align.\nTwice."
+    assert "rules" not in caps["loki"]
+
+
+def test_captain_page_renders_rules_line_in_header(events_dir, captains_file, rules_file):
+    html = render_captain_page(
+        aggregate_captains(events_dir, captains_file, rules_file=rules_file)["galileo-galilei"], "https://example.com"
+    )
+    assert 'class="rules-line"' in html
+    assert "Stars align.<br>Twice." in html
+    assert 'href="https://guide.galaxy.fun/cards/galileo_galilei/"' in html
+
+
+def test_captain_page_without_rules_omits_line_and_guide_link(events_dir, captains_file, rules_file):
+    html = render_captain_page(
+        aggregate_captains(events_dir, captains_file, rules_file=rules_file)["loki"], "https://example.com"
+    )
+    assert 'class="rules-line"' not in html
+    assert "guide.galaxy.fun" not in html
+
+
+def test_captain_page_escapes_rules_text(events_dir, captains_file, tmp_path):
+    rules = tmp_path / "captain_rules.json"
+    rules.write_text(json.dumps({"galileo_galilei": "KO'd <strong>captains</strong>"}))
+    html = render_captain_page(
+        aggregate_captains(events_dir, captains_file, rules_file=rules)["galileo-galilei"], "https://example.com"
+    )
+    assert "<strong>" not in html.split("rules-line")[1].split("</div>")[0]
+    assert "&lt;strong&gt;" in html

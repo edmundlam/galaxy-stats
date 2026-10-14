@@ -37,6 +37,10 @@
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
   .header-cols { display:flex; align-items:center; gap:32px; }
+  .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
+                color:var(--accent); margin-top:10px; max-width:60ch; }
+  .rules-line::before { content:"“"; }
+  .rules-line::after { content:"”"; }
   .captain-portrait { width:130px; height:auto; flex:none;
                       filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
 </style>
@@ -48,7 +52,8 @@
   <div class="header-cols">
     <div>
     <h1>Loki</h1>
-    <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+    <div class="subtitle">Captain stats · <a href="../">all captains</a> · <a href="https://guide.galaxy.fun/cards/loki/" target="_blank" rel="noopener">Galaxy Guide ↗</a></div>
+    <div class="rules-line">When you cast a spell directly on a character, cast it again on another random character.</div>
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">Months</div></div>
@@ -87,7 +92,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "loki", "name": "Loki", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "d3f3at42", "archetype": "Treasures", "deck": ["Calypso", "Mirror Mage", "Wicked Witch", "The Burninator", "Pisces", "Flopsy", "Wormscale Tinkerer", "Gingerbread Witch", "Rollo", "Mr. Fox", "Miseria", "The Butcher"]}, {"username": "Jungite", "archetype": "Mage", "deck": ["Morgan Le Fae", "Calypso", "Nightshade", "Genie of the Lamp", "Mirror Mage", "Ogre Magi", "Elm Minster", "Chaos", "Moppet", "Faerie Godfather", "Prospero", "Rudolph the Red"]}, {"username": "Ronnie_David", "archetype": "Mage", "deck": ["Aladdin", "Plunder Penny", "Maverick & Icewing", "Nightshade", "Genie of the Lamp", "Mirror Mage", "Elm Minster", "Chaos", "Moppet", "Fae Familiar", "Prospero", "Rudolph the Red"]}]}]}</script>
+<script type="application/json" id="captain-data">{"slug": "loki", "name": "Loki", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "d3f3at42", "archetype": "Treasures", "deck": ["Calypso", "Mirror Mage", "Wicked Witch", "The Burninator", "Pisces", "Flopsy", "Wormscale Tinkerer", "Gingerbread Witch", "Rollo", "Mr. Fox", "Miseria", "The Butcher"]}, {"username": "Jungite", "archetype": "Mage", "deck": ["Morgan Le Fae", "Calypso", "Nightshade", "Genie of the Lamp", "Mirror Mage", "Ogre Magi", "Elm Minster", "Chaos", "Moppet", "Faerie Godfather", "Prospero", "Rudolph the Red"]}, {"username": "Ronnie_David", "archetype": "Mage", "deck": ["Aladdin", "Plunder Penny", "Maverick & Icewing", "Nightshade", "Genie of the Lamp", "Mirror Mage", "Elm Minster", "Chaos", "Moppet", "Fae Familiar", "Prospero", "Rudolph the Red"]}]}], "rules": "When you cast a spell directly on a character, cast it again on another random character."}</script>
 <script src="../../assets/captains.js?v=4"></script>
 </body>
 </html>

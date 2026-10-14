@@ -37,6 +37,10 @@
   .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
                 padding:12px 16px; border-left:2px solid var(--border); }
   .header-cols { display:flex; align-items:center; gap:32px; }
+  .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
+                color:var(--accent); margin-top:10px; max-width:60ch; }
+  .rules-line::before { content:"“"; }
+  .rules-line::after { content:"”"; }
   .captain-portrait { width:130px; height:auto; flex:none;
                       filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
 </style>
@@ -48,7 +52,8 @@
   <div class="header-cols">
     <div>
     <h1>Sensei</h1>
-    <div class="subtitle">Captain stats · <a href="../">all captains</a></div>
+    <div class="subtitle">Captain stats · <a href="../">all captains</a> · <a href="https://guide.galaxy.fun/cards/sensei/" target="_blank" rel="noopener">Galaxy Guide ↗</a></div>
+    <div class="rules-line">Each fight, your lowest attack character(s) get +1 Attack. Then improve this ability by +1 Attack.</div>
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">6</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Months</div></div>
@@ -90,7 +95,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "sensei", "name": "Sensei", "months": [{"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Astrid The Cat", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Wicked Witch", "Anubis", "Ace of Hearts", "Guinevere", "Mysterio, the Great and Powerful", "Snapping Hydra", "Wormscale Tinkerer", "Rollo", "Mr. Fox", "Miseria", "The Huntsman"]}, {"username": "blacklotus", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Don Quixote", "Wicked Witch", "Ace of Hearts", "Scale-a-tor", "The Burninator", "Wink", "Wormscale Tinkerer", "Lance A Little", "Leapfrog", "Rollo", "Miseria"]}, {"username": "kurisu", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Ace of Hearts", "The Burninator", "Snapping Hydra", "Wormscale Tinkerer", "Rollo", "Oracle of Fortunes", "Mr. Fox", "Miseria", "The Butcher"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Cynic", "archetype": "Treasures", "deck": ["Destiny", "Fortune Teller", "Miseria", "Young Hercules", "Maverick & Icewing", "Mortakon", "Rollo", "Crystal", "Smug", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Bestie", "archetype": "Candy", "deck": ["Gingerbread Witch", "Lollipop Faerie", "The Candy Cane Crook", "The Sour Patch Kid", "Cherry Topples", "Kool Wip", "The Three Chef-Keteers", "Doopity Doo", "Pixie", "Viscount Chocolat", "Cotton Candy Dandy", "Licorice"]}, {"username": "Gricha", "archetype": "Treasures", "deck": ["Lance A Little", "Mech-a-Man", "Miseria", "Maverick & Icewing", "Mechanical Dragon", "Mortakon", "Mr. Fox", "Raggedy Ann", "Sir Francis Drake", "Snapping Hydra", "Blackbeard", "Miss Muffet"]}]}]}</script>
+<script type="application/json" id="captain-data">{"slug": "sensei", "name": "Sensei", "months": [{"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Astrid The Cat", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Wicked Witch", "Anubis", "Ace of Hearts", "Guinevere", "Mysterio, the Great and Powerful", "Snapping Hydra", "Wormscale Tinkerer", "Rollo", "Mr. Fox", "Miseria", "The Huntsman"]}, {"username": "blacklotus", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Don Quixote", "Wicked Witch", "Ace of Hearts", "Scale-a-tor", "The Burninator", "Wink", "Wormscale Tinkerer", "Lance A Little", "Leapfrog", "Rollo", "Miseria"]}, {"username": "kurisu", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Ace of Hearts", "The Burninator", "Snapping Hydra", "Wormscale Tinkerer", "Rollo", "Oracle of Fortunes", "Mr. Fox", "Miseria", "The Butcher"]}]}, {"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Cynic", "archetype": "Treasures", "deck": ["Destiny", "Fortune Teller", "Miseria", "Young Hercules", "Maverick & Icewing", "Mortakon", "Rollo", "Crystal", "Smug", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Bestie", "archetype": "Candy", "deck": ["Gingerbread Witch", "Lollipop Faerie", "The Candy Cane Crook", "The Sour Patch Kid", "Cherry Topples", "Kool Wip", "The Three Chef-Keteers", "Doopity Doo", "Pixie", "Viscount Chocolat", "Cotton Candy Dandy", "Licorice"]}, {"username": "Gricha", "archetype": "Treasures", "deck": ["Lance A Little", "Mech-a-Man", "Miseria", "Maverick & Icewing", "Mechanical Dragon", "Mortakon", "Mr. Fox", "Raggedy Ann", "Sir Francis Drake", "Snapping Hydra", "Blackbeard", "Miss Muffet"]}]}], "rules": "Each fight, your lowest attack character(s) get +1 Attack. Then improve this ability by +1 Attack."}</script>
 <script src="../../assets/captains.js?v=4"></script>
 </body>
 </html>

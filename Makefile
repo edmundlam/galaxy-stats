@@ -1,4 +1,4 @@
-.PHONY: help install report report-auto parse-event analyze-event render-report copy-report generate-sitemap lint format clean etl-finalize etl-finalize-with-overrides captains etl-render-captains
+.PHONY: help install report report-auto parse-event analyze-event render-report copy-report generate-sitemap lint format clean etl-finalize etl-finalize-with-overrides captains etl-render-captains etl-scrape-captain-rules
 
 # === Configuration ===
 ETL_DIST = etl/dist/events
@@ -58,6 +58,9 @@ etl-render-captains:		## Render captain pages from all events
 	cd etl && uv run scripts/render_captains.py
 
 captains: etl-render-captains generate-sitemap		## Generate all captain pages + sitemap (standalone; not part of report)
+
+etl-scrape-captain-rules:		## Scrape captain rules text from guide.galaxy.fun into etl/dist/captain_rules.json (one-time / on new captains)
+	cd etl && uv run scripts/scrape_captain_rules.py
 
 # === Convenience Commands (aliases) ===
 install: etl-install		## Install dependencies (alias)
