@@ -17,7 +17,7 @@ from html import escape
 from pathlib import Path
 
 BASE_URL = "https://www.galaxy-stats.com"
-ASSET_VERSION = "4"
+ASSET_VERSION = "5"
 FONTS_HREF = (
     "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900"
     "&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
@@ -220,15 +220,17 @@ def _head(title: str, description: str, canonical: str, asset_prefix: str, og_im
 <script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="9d92bc0f-3019-480b-b295-2e79921d2792" data-domains="www.galaxy-stats.com"></script>"""
 
 
-def _deck_rows(captain: dict, report_ids: set[str] | None = None) -> str:
+def _deck_rows(captain: dict, report_ids: set[str] | None = None, card_slugs: dict[str, str] | None = None) -> str:
     """Render static decklist table rows for every winning deck.
 
     Month cells link to the event report; months without a published report
-    stay plain text (all months link when report_ids is None).
+    stay plain text (all months link when report_ids is None). Card pills link
+    to guide.galaxy.fun when the card's slug is known, staying plain otherwise.
 
     Args:
         captain: Aggregated captain dict
         report_ids: Event ids with a published report, or None for all
+        card_slugs: Card display name -> guide slug map, or None for plain pills
 
     Returns:
         HTML string of <tr> elements
@@ -241,7 +243,7 @@ def _deck_rows(captain: dict, report_ids: set[str] | None = None) -> str:
         else:
             month_html = month_id
         for player in month["players"]:
-            pills = "".join(f'<span class="deck-pill">{escape(card)}</span>' for card in player["deck"])
+            pills = "".join(_card_pill(card, card_slugs) for card in player["deck"])
             rows.append(
                 f'<tr><td data-v="{month_id}">{month_html}</td>'
                 f"<td>{escape(player['username'])}</td>"
@@ -249,6 +251,15 @@ def _deck_rows(captain: dict, report_ids: set[str] | None = None) -> str:
                 f'<td><div class="deck-pills">{pills}</div></td></tr>'
             )
     return "\n        ".join(rows)
+
+
+def _card_pill(card: str, card_slugs: dict[str, str] | None) -> str:
+    """Render one card as a guide link when its slug is known, else a plain pill."""
+    name = escape(card)
+    slug = card_slugs.get(card) if card_slugs else None
+    if slug:
+        return f'<a class="deck-pill" href="https://guide.galaxy.fun/cards/{escape(slug)}/" target="_blank" rel="noopener">{name}</a>'
+    return f'<span class="deck-pill">{name}</span>'
 
 
 def _month_chips(month_ids: list[str], checked: set[str] | None = None) -> str:
@@ -269,7 +280,11 @@ def _month_chips(month_ids: list[str], checked: set[str] | None = None) -> str:
 
 
 def render_captain_page(
-    captain: dict, base_url: str, report_ids: set[str] | None = None, image: str | None = None
+    captain: dict,
+    base_url: str,
+    report_ids: set[str] | None = None,
+    image: str | None = None,
+    card_slugs: dict[str, str] | None = None,
 ) -> str:
     """Render one captain page.
 
@@ -280,6 +295,8 @@ def render_captain_page(
             only to those); None links every month
         image: Filename in docs/assets/captains-img for the header portrait,
             or None to render the flat header
+        card_slugs: Card display name -> guide slug map for deck pills,
+            or None for plain pills
 
     Returns:
         Self-contained HTML page string
@@ -365,7 +382,7 @@ def render_captain_page(
       <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
         <th data-sort="archetype">Archetype</th><th class="no-sort">Deck</th></tr></thead>
       <tbody>
-        {_deck_rows(captain, report_ids)}
+        {_deck_rows(captain, report_ids, card_slugs)}
       </tbody>
     </table>
   </div>
@@ -465,6 +482,11 @@ def main() -> int:
     captains = aggregate_captains(
         dist_dir / "events", dist_dir / "captains.json", rules_file=dist_dir / "captain_rules.json"
     )
+    cards_file = dist_dir / "cards.json"
+    card_slugs = {}
+    if cards_file.exists():
+        cards_map = json.loads(cards_file.read_text(encoding="utf-8"))
+        card_slugs = {name: slug for slug, name in cards_map.items()}
     reports_dir = docs_dir / "reports"
     report_ids = {p.parent.name for p in reports_dir.glob("*/index.html")} if reports_dir.exists() else set()
 
@@ -479,7 +501,13 @@ def main() -> int:
         captain_dir.mkdir(exist_ok=True)
         image = f"{captain['slug'].replace('-', '_')}__300.webp"
         (captain_dir / "index.html").write_text(
-            render_captain_page(captain, args.base_url, report_ids, image if (images_dir / image).exists() else None),
+            render_captain_page(
+                captain,
+                args.base_url,
+                report_ids,
+                image if (images_dir / image).exists() else None,
+                card_slugs,
+            ),
             encoding="utf-8",
         )
 

@@ -437,6 +437,28 @@ def test_portrait_reserves_layout_space(events_dir, captains_file):
     assert "aspect-ratio:300/453" in html, "all portraits are 300x453; reserving the ratio avoids layout shift"
 
 
+def test_deck_pills_link_to_card_guide_when_slug_known(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com", card_slugs={"Card A": "card_a"})
+    assert (
+        '<a class="deck-pill" href="https://guide.galaxy.fun/cards/card_a/" target="_blank" rel="noopener">Card A</a>'
+        in html
+    )
+
+
+def test_deck_pills_stay_plain_when_slug_unknown(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com", card_slugs={"Card A": "card_a"})
+    assert '<span class="deck-pill">Card B</span>' in html
+
+
+def test_deck_pills_plain_without_slug_map(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    assert '<span class="deck-pill">Card A</span>' in html
+    assert "guide.galaxy.fun" not in html
+
+
 def test_captain_page_escapes_rules_text(events_dir, captains_file, tmp_path):
     rules = tmp_path / "captain_rules.json"
     rules.write_text(json.dumps({"galileo_galilei": "KO'd <strong>captains</strong>"}))

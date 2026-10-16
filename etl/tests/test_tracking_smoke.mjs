@@ -131,7 +131,14 @@ function docStub(overrides = {}) {
   assert.strictEqual(deckCalls.length, 1);
   assert.strictEqual(deckCalls[0][1].captain, 'Hannibal');
   assert.strictEqual(Object.keys(deckCalls[0][1]).join(','), 'captain');
-  console.log('captains.js: 4 events OK');
+
+  // deck-pill click fires card-lookup; non-pill clicks stay silent
+  const pill = el({ textContent: 'Kraken ' });
+  doc.listeners.click[0]({ target: { closest: (sel) => sel === 'a.deck-pill[target=_blank]' ? pill : null } });
+  same(calls.at(-1), ['card-lookup', { captain: 'Hannibal', card: 'Kraken' }]);
+  doc.listeners.click[0]({ target: { closest: () => null } });
+  assert.strictEqual(calls.filter(([name]) => name === 'card-lookup').length, 1);
+  console.log('captains.js: 5 events OK');
 }
 
 console.log('all tracking smoke tests passed');

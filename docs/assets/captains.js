@@ -150,3 +150,9 @@ if (document.getElementById('captains-data')) {
         .map(cb => cb.dataset.month).join(',') });
     }));
 }
+
+// Deck-pill card lookups open guide.galaxy.fun; one delegated listener covers all rows
+document.addEventListener('click', e => {
+  const a = e.target.closest('a.deck-pill[target=_blank]');
+  if (a) trackEvt('card-lookup', { card: a.textContent.trim() });
+});
