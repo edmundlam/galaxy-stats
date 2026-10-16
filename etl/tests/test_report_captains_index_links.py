@@ -26,3 +26,9 @@ def test_captain_popularity_links_captains_index():
     desc = top[top.index("Captain Popularity") : top.index("captains-chart-container")]
     assert 'href="../../captains/"' in desc
     assert "all months" in desc
+
+
+def test_header_link_uses_canonical_home_url():
+    """Header back-link points at / (../../) rather than ../../index.html."""
+    assert '<a href="../../" class="event-label">' in get_html_template()
+    assert 'href="../../index.html"' not in get_html_template()

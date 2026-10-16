@@ -78,7 +78,7 @@ def get_html_template() -> str:
 <body>
 
 <header>
-  <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+  <a href="../../" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
   <h1>{MONTH_YEAR}<br>Gauntlet Report</h1>
   <div class="subtitle">{EVENT_DATE} · {TOTAL_CHAMPIONS} champions</div>
   <div class="stats-row">
