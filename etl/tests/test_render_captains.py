@@ -362,6 +362,81 @@ def test_captain_page_without_rules_omits_line_and_guide_link(events_dir, captai
     assert "guide.galaxy.fun" not in html
 
 
+def test_captain_page_title_includes_game_name(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    assert "<title>Galileo Galilei Deck Stats &amp; Best Cards | Once Upon a Galaxy</title>" in html
+
+
+def test_index_page_title_includes_game_name(events_dir, captains_file):
+    html = render_index_page(aggregate_captains(events_dir, captains_file), "https://example.com")
+    assert "<title>Captains Deck Stats | Once Upon a Galaxy</title>" in html
+
+
+def test_captain_page_has_open_graph_and_twitter_tags(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com", image="galileo_galilei__300.webp")
+    assert '<meta property="og:type" content="website">' in html
+    assert '<meta property="og:site_name" content="Galaxy Stats">' in html
+    assert (
+        '<meta property="og:title" content="Galileo Galilei Deck Stats &amp; Best Cards | Once Upon a Galaxy">' in html
+    )
+    assert '<meta property="og:url" content="https://example.com/captains/galileo-galilei/">' in html
+    assert (
+        '<meta property="og:image" content="https://example.com/assets/captains-img/galileo_galilei__300.webp">' in html
+    )
+    assert '<meta name="twitter:card" content="summary">' in html
+
+
+def test_captain_page_og_description_matches_meta_description(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    m = re.search(r'<meta name="description" content="([^"]+)">', html)
+    assert m
+    assert f'<meta property="og:description" content="{m.group(1)}">' in html
+
+
+def test_captain_page_without_image_omits_og_image(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com", image=None)
+    assert "og:image" not in html
+
+
+def test_index_page_has_open_graph_tags(events_dir, captains_file):
+    html = render_index_page(aggregate_captains(events_dir, captains_file), "https://example.com")
+    assert '<meta property="og:type" content="website">' in html
+    assert '<meta property="og:site_name" content="Galaxy Stats">' in html
+    assert '<meta property="og:title" content="Captains Deck Stats | Once Upon a Galaxy">' in html
+    assert '<meta property="og:url" content="https://example.com/captains/">' in html
+    assert "og:image" not in html
+
+
+def test_section_titles_are_h2(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    assert '<h2 class="section-title">Best Cards</h2>' in html
+    assert "Decklists</h2>" in html
+    assert '<div class="section-title">' not in html
+    assert "h2.section-title" in html, "h2 default margins must be reset so the look is unchanged"
+
+
+def test_header_links_use_canonical_directory_urls(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    page = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    index = render_index_page(caps, "https://example.com")
+    assert '<a href="../../" class="event-label">' in page
+    assert '<a href="../" class="event-label">' in index
+    for html in (page, index):
+        assert 'href="../index.html"' not in html
+        assert 'href="../../index.html"' not in html
+
+
+def test_portrait_reserves_layout_space(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com", image="galileo_galilei__300.webp")
+    assert "aspect-ratio:300/453" in html, "all portraits are 300x453; reserving the ratio avoids layout shift"
+
+
 def test_captain_page_escapes_rules_text(events_dir, captains_file, tmp_path):
     rules = tmp_path / "captain_rules.json"
     rules.write_text(json.dumps({"galileo_galilei": "KO'd <strong>captains</strong>"}))

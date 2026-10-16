@@ -59,8 +59,9 @@ EXTRA_CSS = """
                 color:var(--accent); margin-top:10px; max-width:60ch; }
   .rules-line::before { content:"“"; }
   .rules-line::after { content:"”"; }
-  .captain-portrait { width:130px; height:auto; flex:none;
+  .captain-portrait { width:130px; height:auto; flex:none; aspect-ratio:300/453;
                       filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
+  h2.section-title { margin-top:0; }
 """
 
 
@@ -187,24 +188,32 @@ def index_payload(captains: dict[str, dict]) -> list[dict]:
     ]
 
 
-def _head(title: str, description: str, canonical: str, asset_prefix: str) -> str:
+def _head(title: str, description: str, canonical: str, asset_prefix: str, og_image: str | None = None) -> str:
     """Shared document head for captain pages.
 
     Args:
-        title: Page title
-        description: Meta description
-        canonical: Canonical URL
+        title: Page title (also used as og:title)
+        description: Meta description (also used as og:description)
+        canonical: Canonical URL (also used as og:url)
         asset_prefix: Relative prefix to docs/assets ("../" or "../../")
+        og_image: Absolute URL for the social share image, or None for none
 
     Returns:
         HTML head string
     """
+    og_image_tag = f'\n<meta property="og:image" content="{escape(og_image)}">' if og_image else ""
     return f"""<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{escape(title)}</title>
 <meta name="description" content="{escape(description)}">
 <link rel="canonical" href="{escape(canonical)}">
 <meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Galaxy Stats">
+<meta property="og:title" content="{escape(title)}">
+<meta property="og:description" content="{escape(description)}">
+<meta property="og:url" content="{escape(canonical)}">{og_image_tag}
+<meta name="twitter:card" content="summary">
 <link href="{FONTS_HREF}" rel="stylesheet">
 <link rel="stylesheet" href="{asset_prefix}assets/galaxy-report.css?v={ASSET_VERSION}">
 <style>{EXTRA_CSS}</style>
@@ -285,10 +294,16 @@ def render_captain_page(
         f"{name} captain statistics across Once Upon a Galaxy monthly tournaments: "
         f"{total_decks} winning decks across {len(months)} months, with best 12 cards and full decklists."
     )
-    head = _head(f"{name} — Captain Stats | Galaxy Stats", description, canonical, "../../")
+    head = _head(
+        f"{name} Deck Stats & Best Cards | Once Upon a Galaxy",
+        description,
+        canonical,
+        "../../",
+        og_image=f"{base_url}/assets/captains-img/{image}" if image else None,
+    )
 
     header_body = """
-    <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>"""
+    <a href="../../" class="event-label">Once Upon A Galaxy · Meta Analysis</a>"""
     rules = captain.get("rules")
     guide_link = (
         f' · <a href="https://guide.galaxy.fun/cards/{slug.replace("-", "_")}/" target="_blank" rel="noopener">Galaxy Guide ↗</a>'
@@ -329,7 +344,7 @@ def render_captain_page(
         body = f"""
 <main>
   <div class="section active">
-    <div class="section-title">Best Cards</div>
+    <h2 class="section-title">Best Cards</h2>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
     <div class="captain-filter" id="month-filter">{_month_chips([m["id"] for m in captain["months"]])}</div>
@@ -340,7 +355,7 @@ def render_captain_page(
     </table>
     <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
 
-    <div class="section-title" style="margin-top:48px">Decklists</div>
+    <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Every winning deck across all months.</div>
     <div class="captain-filter">
       <input id="deck-filter" class="filter-input" type="text"
@@ -383,7 +398,7 @@ def render_index_page(captains: dict[str, dict], base_url: str) -> str:
     """
     canonical = f"{base_url}/captains/"
     head = _head(
-        "OUAG Captains — All Captain Stats | Galaxy Stats",
+        "Captains Deck Stats | Once Upon a Galaxy",
         "All Once Upon a Galaxy captains with monthly tournament statistics: winning deck counts, "
         "best 12 cards, and full decklists per captain.",
         canonical,
@@ -410,7 +425,7 @@ def render_index_page(captains: dict[str, dict], base_url: str) -> str:
 </head>
 <body>
 <header>
-  <a href="../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+  <a href="../" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
   <h1>Captains</h1>
   <div class="subtitle">{len(captains)} captains · click a column to sort</div>
 </header>

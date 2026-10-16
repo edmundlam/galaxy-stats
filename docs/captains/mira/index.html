@@ -3,10 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mira — Captain Stats | Galaxy Stats</title>
+<title>Mira Deck Stats &amp; Best Cards | Once Upon a Galaxy</title>
 <meta name="description" content="Mira captain statistics across Once Upon a Galaxy monthly tournaments: 30 winning decks across 7 months, with best 12 cards and full decklists.">
 <link rel="canonical" href="https://www.galaxy-stats.com/captains/mira/">
 <meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Galaxy Stats">
+<meta property="og:title" content="Mira Deck Stats &amp; Best Cards | Once Upon a Galaxy">
+<meta property="og:description" content="Mira captain statistics across Once Upon a Galaxy monthly tournaments: 30 winning decks across 7 months, with best 12 cards and full decklists.">
+<meta property="og:url" content="https://www.galaxy-stats.com/captains/mira/">
+<meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/mira__300.webp">
+<meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/galaxy-report.css?v=4">
 <style>
@@ -41,14 +48,15 @@
                 color:var(--accent); margin-top:10px; max-width:60ch; }
   .rules-line::before { content:"“"; }
   .rules-line::after { content:"”"; }
-  .captain-portrait { width:130px; height:auto; flex:none;
+  .captain-portrait { width:130px; height:auto; flex:none; aspect-ratio:300/453;
                       filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
+  h2.section-title { margin-top:0; }
 </style>
 <script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="9d92bc0f-3019-480b-b295-2e79921d2792" data-domains="www.galaxy-stats.com"></script>
 </head>
 <body>
 <header>
-    <a href="../../index.html" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+    <a href="../../" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
   <div class="header-cols">
     <div>
     <h1>Mira</h1>
@@ -64,7 +72,7 @@
 
 <main>
   <div class="section active">
-    <div class="section-title">Best Cards</div>
+    <h2 class="section-title">Best Cards</h2>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-02">2026-02</label><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-04">2026-04</label><label class="month-chip"><input type="checkbox" checked data-month="2026-05">2026-05</label><label class="month-chip"><input type="checkbox" checked data-month="2026-07">2026-07</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label><label class="month-chip"><input type="checkbox" checked data-month="2026-09">2026-09</label></div>
@@ -75,7 +83,7 @@
     </table>
     <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
 
-    <div class="section-title" style="margin-top:48px">Decklists</div>
+    <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Every winning deck across all months.</div>
     <div class="captain-filter">
       <input id="deck-filter" class="filter-input" type="text"
