@@ -10,7 +10,12 @@ JS = REPO / "docs" / "assets" / "galaxy-report.js"
 
 DOM_STUB = """
 let captured;
-const document = { getElementById: () => ({ set innerHTML(v) { captured = v; } }) };
+const listeners = {};
+const document = {
+  // galaxy-report.js registers a delegated click listener at load time
+  addEventListener(type, fn) { (listeners[type] ??= []).push(fn); },
+  getElementById: () => ({ set innerHTML(v) { captured = v; } }),
+};
 """
 
 
