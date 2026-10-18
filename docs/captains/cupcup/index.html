@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/cupcup__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=5">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=6">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
@@ -78,10 +78,23 @@
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-04">2026-04</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label><label class="month-chip"><input type="checkbox" checked data-month="2026-09">2026-09</label></div>
     <table class="data-table" id="best12-table">
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
-        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
-      <tbody></tbody>
+        <th class="num no-sort">% of <span id="best12-count">5</span> decks</th></tr></thead>
+      <tbody>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/kool_wip/" target="_blank" rel="noopener">Kool Wip</a></td><td class="num">5</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/lollipop_faerie/" target="_blank" rel="noopener">Lollipop Faerie</a></td><td class="num">5</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/cherry_topples/" target="_blank" rel="noopener">Cherry Topples</a></td><td class="num">4</td><td class="num">80%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/gingerbread_witch/" target="_blank" rel="noopener">Gingerbread Witch</a></td><td class="num">4</td><td class="num">80%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/jelly_ton/" target="_blank" rel="noopener">Jelly-ton</a></td><td class="num">4</td><td class="num">80%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/lemonhead/" target="_blank" rel="noopener">Lemonhead</a></td><td class="num">4</td><td class="num">80%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/the_sour_patch_kid/" target="_blank" rel="noopener">The Sour Patch Kid</a></td><td class="num">4</td><td class="num">80%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/viscount_chocolat/" target="_blank" rel="noopener">Viscount Chocolat</a></td><td class="num">4</td><td class="num">80%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/chubby_cheep/" target="_blank" rel="noopener">Chubby Cheep</a></td><td class="num">3</td><td class="num">60%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/pretty_patissier/" target="_blank" rel="noopener">Pretty Patissier</a></td><td class="num">3</td><td class="num">60%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/ghoulade_man/" target="_blank" rel="noopener">Ghoulade Man</a></td><td class="num">2</td><td class="num">40%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/jumping_jelly_beans/" target="_blank" rel="noopener">Jumping Jelly Beans</a></td><td class="num">2</td><td class="num">40%</td></tr>
+      </tbody>
     </table>
-    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
+    <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Every winning deck across all months.</div>
@@ -102,7 +115,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "cupcup", "name": "Cupcup", "months": [{"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Scotty", "archetype": "Candy", "deck": ["Viscount Chocolat", "Ghoulade Man", "Jumping Jelly Beans", "Kool Wip", "Cherry Topples", "The Sour Patch Kid", "Chubby Cheep", "Lollipop Faerie", "Lemonhead", "Gingerbread Witch", "Jelly-ton", "Pretty Patissier"]}, {"username": "Violent Turtle", "archetype": "Candy", "deck": ["Viscount Chocolat", "Ghoulade Man", "Jumping Jelly Beans", "Kool Wip", "Cherry Topples", "The Sour Patch Kid", "Chubby Cheep", "Lollipop Faerie", "Lemonhead", "Gingerbread Witch", "Jelly-ton", "Pretty Patissier"]}, {"username": "YouTimesTwo", "archetype": "Candy", "deck": ["Viscount Chocolat", "Kool Wip", "Cherry Topples", "The Sour Patch Kid", "Lollipop Faerie", "Lemonhead", "Gingerbread Witch", "Chubby Bunny", "Netherbinder", "Jelly-ton", "The Butcher", "Pretty Patissier"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "level", "archetype": "Candy", "deck": ["Gingerbread Witch", "Lollipop Faerie", "The Candy Cane Crook", "The Sour Patch Kid", "Cherry Topples", "Jaws", "Kool Wip", "Pixie", "Twilight Sprinkles", "Viscount Chocolat", "Chubby Cheep", "Jelly-ton"]}]}, {"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Epeley", "archetype": "Candy", "deck": ["Lollipop Faerie", "Lemonhead", "The Candy Cane Crook", "Candy Apple Tree", "Kool Wip", "Doopity Doo", "Keeb", "Knight of the Holy Cane", "Pixie", "Twilight Sprinkles", "Cotton Candy Dandy", "Licorice"]}]}], "rules": "Your Silver Candy Characters have Supersweet +2. Golden ones have Supersweet +3."}</script>
-<script src="../../assets/captains.js?v=5"></script>
+<script type="application/json" id="captain-data">{"slug": "cupcup", "name": "Cupcup", "months": [{"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "Scotty", "archetype": "Candy", "deck": ["Viscount Chocolat", "Ghoulade Man", "Jumping Jelly Beans", "Kool Wip", "Cherry Topples", "The Sour Patch Kid", "Chubby Cheep", "Lollipop Faerie", "Lemonhead", "Gingerbread Witch", "Jelly-ton", "Pretty Patissier"]}, {"username": "Violent Turtle", "archetype": "Candy", "deck": ["Viscount Chocolat", "Ghoulade Man", "Jumping Jelly Beans", "Kool Wip", "Cherry Topples", "The Sour Patch Kid", "Chubby Cheep", "Lollipop Faerie", "Lemonhead", "Gingerbread Witch", "Jelly-ton", "Pretty Patissier"]}, {"username": "YouTimesTwo", "archetype": "Candy", "deck": ["Viscount Chocolat", "Kool Wip", "Cherry Topples", "The Sour Patch Kid", "Lollipop Faerie", "Lemonhead", "Gingerbread Witch", "Chubby Bunny", "Netherbinder", "Jelly-ton", "The Butcher", "Pretty Patissier"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "level", "archetype": "Candy", "deck": ["Gingerbread Witch", "Lollipop Faerie", "The Candy Cane Crook", "The Sour Patch Kid", "Cherry Topples", "Jaws", "Kool Wip", "Pixie", "Twilight Sprinkles", "Viscount Chocolat", "Chubby Cheep", "Jelly-ton"]}]}, {"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Epeley", "archetype": "Candy", "deck": ["Lollipop Faerie", "Lemonhead", "The Candy Cane Crook", "Candy Apple Tree", "Kool Wip", "Doopity Doo", "Keeb", "Knight of the Holy Cane", "Pixie", "Twilight Sprinkles", "Cotton Candy Dandy", "Licorice"]}]}], "rules": "Your Silver Candy Characters have Supersweet +2. Golden ones have Supersweet +3.", "cardSlugs": {"Candy Apple Tree": "candy_apple_tree", "Cherry Topples": "cherry_topples", "Chubby Bunny": "chubby_bunny", "Chubby Cheep": "chubby_cheep", "Cotton Candy Dandy": "cotton_candy_dandy", "Doopity Doo": "doopity_doo", "Ghoulade Man": "ghoulade_man", "Gingerbread Witch": "gingerbread_witch", "Jaws": "jaws", "Jelly-ton": "jelly_ton", "Jumping Jelly Beans": "jumping_jelly_beans", "Keeb": "keeb", "Knight of the Holy Cane": "knight_of_the_holy_cane", "Kool Wip": "kool_wip", "Lemonhead": "lemonhead", "Licorice": "licorice", "Lollipop Faerie": "lollipop_faerie", "Netherbinder": "netherbinder", "Pixie": "pixie", "Pretty Patissier": "pretty_patissier", "The Butcher": "the_butcher", "The Candy Cane Crook": "the_candy_cane_crook", "The Sour Patch Kid": "the_sour_patch_kid", "Twilight Sprinkles": "twilight_sprinkles", "Viscount Chocolat": "viscount_chocolat"}}</script>
+<script src="../../assets/captains.js?v=6"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@ from html import escape
 from pathlib import Path
 
 BASE_URL = "https://www.galaxy-stats.com"
-ASSET_VERSION = "5"
+ASSET_VERSION = "6"
 FONTS_HREF = (
     "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900"
     "&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
@@ -81,14 +81,16 @@ def compute_best12(decks: list[list[str]]) -> list[dict]:
     """Compute best 12 cards from raw decks — Python mirror of the client JS.
 
     Counts deck presence per card, sorts by freq desc with alphabetical
-    tie-break, takes top 12. Must match analyze_event.py's best12 for a
-    single month (pinned by tests/test_render_captains.py).
+    tie-break, takes top 12. Ranking matches analyze_event.py's best12 for a
+    single month (pinned by tests/test_render_captains.py); pct is half-up to
+    match captains.js Math.round, deliberately differing from analyze_event's
+    banker's round (deferred — context/agent-notes/2026-10-17-prerender-best12.md).
 
     Args:
         decks: List of decks, each a list of card display names
 
     Returns:
-        List of {card, freq, n, pct} dicts (n = deck count, pct = 0 decimals)
+        List of {card, freq, n, pct} dicts (n = deck count, pct = half-up integer)
     """
     counts: dict[str, int] = {}
     for deck in decks:
@@ -96,7 +98,16 @@ def compute_best12(decks: list[list[str]]) -> list[dict]:
             counts[card] = counts.get(card, 0) + 1
     n = len(decks)
     ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))[:12]
-    return [{"card": card, "freq": freq, "n": n, "pct": round(freq / n * 100, 0)} for card, freq in ranked]
+    return [{"card": card, "freq": freq, "n": n, "pct": _pct(freq, n)} for card, freq in ranked]
+
+
+def _pct(freq: int, n: int) -> int:
+    """Percent as integer, rounded half-up to match the JS Math.round in captains.js.
+
+    Python's round() uses banker's rounding (2.5 -> 2, JS says 3), which would
+    make the prerendered Best Cards table jump when JS re-renders it.
+    """
+    return int(freq / n * 100 + 0.5)
 
 
 def load_analyses(events_dir: Path) -> list[dict]:
@@ -305,7 +316,13 @@ def render_captain_page(
     slug = captain["slug"]
     months = captain["months"]
     total_decks = sum(len(m["players"]) for m in months)
-    payload = serialize_payload(captain)
+    all_decks = [p["deck"] for m in months for p in m["players"]]
+    slugs = card_slugs or {}
+    # cardSlugs rides in the payload so JS re-renders keep the guide links;
+    # filtered to this captain's cards to avoid embedding the full card map.
+    payload = serialize_payload(
+        {**captain, "cardSlugs": {c: slugs[c] for c in sorted({card for d in all_decks for card in d}) if c in slugs}}
+    )
     canonical = f"{base_url}/captains/{slug}/"
     description = (
         f"{name} captain statistics across Once Upon a Galaxy monthly tournaments: "
@@ -358,6 +375,12 @@ def render_captain_page(
 </main>"""
         script = ""
     else:
+        best12_rows = "\n        ".join(
+            f"<tr><td>{_card_pill(r['card'], card_slugs)}</td>"
+            f'<td class="num">{r["freq"]}</td>'
+            f'<td class="num">{r["pct"]}%</td></tr>'
+            for r in compute_best12(all_decks)
+        )
         body = f"""
 <main>
   <div class="section active">
@@ -367,10 +390,12 @@ def render_captain_page(
     <div class="captain-filter" id="month-filter">{_month_chips([m["id"] for m in captain["months"]])}</div>
     <table class="data-table" id="best12-table">
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
-        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
-      <tbody></tbody>
+        <th class="num no-sort">% of <span id="best12-count">{total_decks}</span> decks</th></tr></thead>
+      <tbody>
+        {best12_rows}
+      </tbody>
     </table>
-    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
+    <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Every winning deck across all months.</div>

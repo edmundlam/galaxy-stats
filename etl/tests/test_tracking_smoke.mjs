@@ -139,6 +139,61 @@ function docStub(overrides = {}) {
   doc.listeners.click[0]({ target: { closest: () => null } });
   assert.strictEqual(calls.filter(([name]) => name === 'card-lookup').length, 1);
   console.log('captains.js: 5 events OK');
+
+  // prerendered Best Cards rows: init keeps the static tbody and only reveals the more button
+  {
+    const preTbody = el({ rows: [el(), el()] });
+    const preMore = el();
+    const preInputs = [recording(el({ dataset: { month: '2026-05' }, checked: true }))];
+    const preDoc = docStub({
+      getElementById: (id) => id === 'captain-data'
+        ? { textContent: JSON.stringify({ name: 'Hannibal', months: [
+            { id: '2026-05', players: Array.from({ length: 13 }, (_, i) => ({ deck: [`Card ${i}`] })) }] }) }
+        : id === 'best12-more' ? preMore : null,
+      querySelector: (sel) => sel === '#best12-table tbody' ? preTbody : el(),
+      querySelectorAll: (sel) => sel === '#month-filter input' ? preInputs
+        : sel === '#month-filter input:checked' ? preInputs.filter(cb => cb.checked) : [],
+    });
+    load(CAPTAINS_JS, preDoc);
+    assert.strictEqual(preTbody.innerHTML, undefined, 'prerendered rows must not be rebuilt on load');
+    assert.strictEqual(preMore.hidden, false, '13 ranked cards > 12 shown: button revealed');
+    assert.strictEqual(preMore.textContent, 'Show 1 more');
+    console.log('captains.js: prerendered best12 init OK');
+  }
+
+  // JS re-render styles every card as a .deck-pill, with or without a guide
+  // slug (parity with the prerendered rows from render_captains.py _card_pill)
+  {
+    const built = [];
+    const node = (tag) => {
+      const n = { tag, children: [], dataset: {}, className: '', textContent: '' };
+      n.appendChild = (c) => { n.children.push(c); return c; };
+      n.append = (...cs) => n.children.push(...cs);
+      built.push(n);
+      return n;
+    };
+    const inputs = [recording(el({ dataset: { month: '2026-05' }, checked: true }))];
+    const doc = docStub({
+      createElement: node,
+      getElementById: (id) => id === 'captain-data'
+        ? { textContent: JSON.stringify({ name: 'Hannibal',
+            cardSlugs: { 'Known Card': 'known_card' },
+            months: [{ id: '2026-05', players: [{ deck: ['Known Card', 'Mystery Card'] }] }] }) }
+        : null,
+      querySelector: (sel) => sel === '#best12-table tbody' ? el() : el(),
+      querySelectorAll: (sel) => sel === '#month-filter input' ? inputs
+        : sel === '#month-filter input:checked' ? inputs.filter(cb => cb.checked) : [],
+    });
+    load(CAPTAINS_JS, doc);
+    const pills = built.filter(n => n.className === 'deck-pill');
+    const link = pills.find(n => n.tag === 'a');
+    assert.strictEqual(link.textContent, 'Known Card');
+    assert.strictEqual(link.href, 'https://guide.galaxy.fun/cards/known_card/');
+    assert.strictEqual(link.target, '_blank');
+    assert.strictEqual(pills.find(n => n.tag === 'span')?.textContent, 'Mystery Card',
+      'cards without a slug must still render as span.deck-pill');
+    console.log('captains.js: re-render pill parity OK');
+  }
 }
 
 console.log('all tracking smoke tests passed');

@@ -2,6 +2,7 @@
 
 import json
 import re
+from html import escape
 from pathlib import Path
 
 import pytest
@@ -199,7 +200,7 @@ def test_captain_page_has_show_more_button(events_dir, captains_file):
     caps = aggregate_captains(events_dir, captains_file)
     page = render_captain_page(caps["galileo-galilei"], "https://example.com")
     empty = render_captain_page(caps["loki"], "https://example.com")
-    assert '<button type="button" id="best12-more" class="more-btn">Show 12 more</button>' in page
+    assert '<button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>' in page
     assert "Best Cards" in page
     assert "best12-more" not in empty
 
@@ -467,3 +468,93 @@ def test_captain_page_escapes_rules_text(events_dir, captains_file, tmp_path):
     )
     assert "<strong>" not in html.split("rules-line")[1].split("</div>")[0]
     assert "&lt;strong&gt;" in html
+
+
+def best12_tbody(html: str) -> str:
+    """Return the inner HTML of the Best Cards table tbody."""
+    m = re.search(r'id="best12-table".*?<tbody>(.*?)</tbody>', html, re.DOTALL)
+    assert m, "best12 tbody not found"
+    return m.group(1)
+
+
+def forty_deck_captain() -> dict:
+    """One 40-deck month: 'Solo' in a single deck, 'Workhorse' in the other 39."""
+    players = [{"username": "solo", "archetype": "a", "deck": ["Solo"]}]
+    players += [{"username": f"u{i}", "archetype": "a", "deck": ["Workhorse"]} for i in range(39)]
+    return {"slug": "x", "name": "X", "months": [{"id": "2026-01", "date": "d", "event": "E", "players": players}]}
+
+
+def test_best12_pct_rounds_half_up_like_js():
+    """JS uses Math.round (half-up); Python round() is banker's — 2.5% must render as 3."""
+    by_card = {r["card"]: r for r in compute_best12([["A"]] + [["B"] for _ in range(39)])}
+    assert by_card["A"]["pct"] == 3
+    assert by_card["B"]["pct"] == 98
+
+
+def test_captain_page_best12_pct_renders_half_up():
+    html = render_captain_page(forty_deck_captain(), "https://example.com")
+    rows = best12_tbody(html)
+    assert '<td class="num">3%</td>' in rows, "1 of 40 decks = 2.5%: half-up says 3, banker's says 2"
+    assert '<td class="num">98%</td>' in rows
+
+
+def test_captain_page_prerenders_twelve_best12_rows():
+    captain = {
+        "slug": "x",
+        "name": "X",
+        "months": [
+            {
+                "id": "2026-01",
+                "date": "d",
+                "event": "E",
+                "players": [{"username": f"u{i}", "archetype": "a", "deck": [f"Card {i}"]} for i in range(13)],
+            }
+        ],
+    }
+    assert best12_tbody(render_captain_page(captain, "https://example.com")).count("<tr>") == 12
+
+
+def test_captain_page_best12_first_row_matches_compute_best12(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    captain = caps["galileo-galilei"]
+    decks = [p["deck"] for m in captain["months"] for p in m["players"]]
+    top = compute_best12(decks)[0]
+    first = re.search(r"<tr>(.*?)</tr>", best12_tbody(render_captain_page(captain, "https://example.com")), re.DOTALL)
+    assert first
+    assert escape(top["card"]) in first.group(1)
+    assert f'<td class="num">{top["freq"]}</td>' in first.group(1)
+    assert f'<td class="num">{top["pct"]}%</td>' in first.group(1)
+
+
+def test_captain_page_best12_count_shows_total_decks(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    assert '<span id="best12-count">3</span>' in html
+
+
+def test_best12_card_cells_link_to_guide_when_slug_known(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com", card_slugs={"Card A": "card_a"})
+    rows = best12_tbody(html)
+    assert (
+        '<a class="deck-pill" href="https://guide.galaxy.fun/cards/card_a/" target="_blank" rel="noopener">Card A</a>'
+        in rows
+    )
+    assert '<span class="deck-pill">Card B</span>' in rows
+
+
+def test_best12_card_cells_plain_without_slug_map(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    rows = best12_tbody(render_captain_page(caps["galileo-galilei"], "https://example.com"))
+    assert '<span class="deck-pill">Card A</span>' in rows
+    assert "guide.galaxy.fun" not in rows
+
+
+def test_captain_page_payload_card_slugs_cover_only_deck_cards(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(
+        caps["galileo-galilei"],
+        "https://example.com",
+        card_slugs={"Card A": "card_a", "Card F": "card_f", "Unrelated": "unrelated"},
+    )
+    assert extract_payload(html)["cardSlugs"] == {"Card A": "card_a", "Card F": "card_f"}

@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/catkiss_everburn__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=5">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=6">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
@@ -78,10 +78,23 @@
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label><label class="month-chip"><input type="checkbox" checked data-month="2026-09">2026-09</label></div>
     <table class="data-table" id="best12-table">
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
-        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
-      <tbody></tbody>
+        <th class="num no-sort">% of <span id="best12-count">3</span> decks</th></tr></thead>
+      <tbody>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/nuada_radiant_king/" target="_blank" rel="noopener">Nuada, Radiant King</a></td><td class="num">3</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/sigrun_valkyrie_queen/" target="_blank" rel="noopener">Sigrun, Valkyrie Queen</a></td><td class="num">3</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/young_hercules/" target="_blank" rel="noopener">Young Hercules</a></td><td class="num">3</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/eros/" target="_blank" rel="noopener">Eros</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/medea_in_a_tavern/" target="_blank" rel="noopener">Medea in a Tavern</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/nemean_lion/" target="_blank" rel="noopener">Nemean Lion</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/nutty_pirates/" target="_blank" rel="noopener">Nutty Pirates</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/orion_the_hunter/" target="_blank" rel="noopener">Orion, the Hunter</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/orpheus/" target="_blank" rel="noopener">Orpheus</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/perseus/" target="_blank" rel="noopener">Perseus</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/tantalus/" target="_blank" rel="noopener">Tantalus</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/the_raven/" target="_blank" rel="noopener">The Raven</a></td><td class="num">2</td><td class="num">67%</td></tr>
+      </tbody>
     </table>
-    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
+    <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Every winning deck across all months.</div>
@@ -100,7 +113,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "catkiss-everburn", "name": "Catkiss Everburn", "months": [{"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Zaximus", "archetype": "Boons", "deck": ["The Raven", "Al-mi'raj", "Nutty Pirates", "Nuada, Radiant King", "Young Hercules", "Orpheus", "Tantalus", "Orion, the Hunter", "Medea in a Tavern", "Nemean Lion", "Sigrun, Valkyrie Queen", "Perseus"]}]}, {"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Blastingcap0", "archetype": "Treasures", "deck": ["Fortune Teller", "Nuada, Radiant King", "Young Hercules", "Baron Bok", "Destiny", "Maverick & Icewing", "Mr. Fox", "Rollo", "Tsarmina, the Tyrant", "Eros", "Guinevere", "Sigrun, Valkyrie Queen"]}, {"username": "Spuz", "archetype": "Boons", "deck": ["Nutty Pirates", "The Raven", "Nuada, Radiant King", "Young Hercules", "Orion, the Hunter", "Orpheus", "Tantalus", "Eros", "Medea in a Tavern", "Nemean Lion", "Perseus", "Sigrun, Valkyrie Queen"]}]}], "rules": "Your first character has ranged."}</script>
-<script src="../../assets/captains.js?v=5"></script>
+<script type="application/json" id="captain-data">{"slug": "catkiss-everburn", "name": "Catkiss Everburn", "months": [{"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Zaximus", "archetype": "Boons", "deck": ["The Raven", "Al-mi'raj", "Nutty Pirates", "Nuada, Radiant King", "Young Hercules", "Orpheus", "Tantalus", "Orion, the Hunter", "Medea in a Tavern", "Nemean Lion", "Sigrun, Valkyrie Queen", "Perseus"]}]}, {"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Blastingcap0", "archetype": "Treasures", "deck": ["Fortune Teller", "Nuada, Radiant King", "Young Hercules", "Baron Bok", "Destiny", "Maverick & Icewing", "Mr. Fox", "Rollo", "Tsarmina, the Tyrant", "Eros", "Guinevere", "Sigrun, Valkyrie Queen"]}, {"username": "Spuz", "archetype": "Boons", "deck": ["Nutty Pirates", "The Raven", "Nuada, Radiant King", "Young Hercules", "Orion, the Hunter", "Orpheus", "Tantalus", "Eros", "Medea in a Tavern", "Nemean Lion", "Perseus", "Sigrun, Valkyrie Queen"]}]}], "rules": "Your first character has ranged.", "cardSlugs": {"Al-mi'raj": "al_miraj", "Baron Bok": "baron_bok", "Destiny": "destiny", "Eros": "eros", "Fortune Teller": "fortune_teller", "Guinevere": "guinevere", "Maverick & Icewing": "maverick_icewing", "Medea in a Tavern": "medea_in_a_tavern", "Mr. Fox": "mr_fox", "Nemean Lion": "nemean_lion", "Nuada, Radiant King": "nuada_radiant_king", "Nutty Pirates": "nutty_pirates", "Orion, the Hunter": "orion_the_hunter", "Orpheus": "orpheus", "Perseus": "perseus", "Rollo": "rollo", "Sigrun, Valkyrie Queen": "sigrun_valkyrie_queen", "Tantalus": "tantalus", "The Raven": "the_raven", "Tsarmina, the Tyrant": "tsarmina_the_tyrant", "Young Hercules": "young_hercules"}}</script>
+<script src="../../assets/captains.js?v=6"></script>
 </body>
 </html>

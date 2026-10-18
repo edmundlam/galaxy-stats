@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/baldr__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=5">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=6">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
@@ -78,10 +78,23 @@
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-09">2026-09</label></div>
     <table class="data-table" id="best12-table">
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
-        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
-      <tbody></tbody>
+        <th class="num no-sort">% of <span id="best12-count">4</span> decks</th></tr></thead>
+      <tbody>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/fortune_teller/" target="_blank" rel="noopener">Fortune Teller</a></td><td class="num">4</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/perseus/" target="_blank" rel="noopener">Perseus</a></td><td class="num">4</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/sigrun_valkyrie_queen/" target="_blank" rel="noopener">Sigrun, Valkyrie Queen</a></td><td class="num">4</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/young_hercules/" target="_blank" rel="noopener">Young Hercules</a></td><td class="num">4</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/fenrir/" target="_blank" rel="noopener">Fenrir</a></td><td class="num">3</td><td class="num">75%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/medea_in_a_tavern/" target="_blank" rel="noopener">Medea in a Tavern</a></td><td class="num">3</td><td class="num">75%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/orion_the_hunter/" target="_blank" rel="noopener">Orion, the Hunter</a></td><td class="num">3</td><td class="num">75%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/tantalus/" target="_blank" rel="noopener">Tantalus</a></td><td class="num">3</td><td class="num">75%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/the_raven/" target="_blank" rel="noopener">The Raven</a></td><td class="num">3</td><td class="num">75%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/apophis/" target="_blank" rel="noopener">Apophis</a></td><td class="num">2</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/bubbles/" target="_blank" rel="noopener">Bubbles</a></td><td class="num">2</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/wishing_fish/" target="_blank" rel="noopener">Wishing Fish</a></td><td class="num">2</td><td class="num">50%</td></tr>
+      </tbody>
     </table>
-    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
+    <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Every winning deck across all months.</div>
@@ -101,7 +114,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "baldr", "name": "Baldr", "months": [{"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Cynic", "archetype": "Treasures", "deck": ["Fortune Teller", "Miseria", "Nuada, Radiant King", "Young Hercules", "Destiny", "Maverick & Icewing", "Mortakon", "Smug", "Guinevere", "Perseus", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "Gukov", "archetype": "Boons", "deck": ["Bubbles", "The Raven", "Fortune Teller", "Young Hercules", "Orion, the Hunter", "Tantalus", "Fenrir", "Medea in a Tavern", "Yggdrasil Sapling", "Apophis", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "phoenicksgames", "archetype": "Boons", "deck": ["The Raven", "Fortune Teller", "Young Hercules", "Orion, the Hunter", "Rollo", "Tantalus", "Wishing Fish", "Fenrir", "Medea in a Tavern", "Flopsy", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "WingSteel", "archetype": "Boons", "deck": ["The Raven", "Bubbles", "Young Hercules", "Fortune Teller", "Wishing Fish", "Tantalus", "Fenrir", "Orion, the Hunter", "Medea in a Tavern", "Sigrun, Valkyrie Queen", "Apophis", "Perseus"]}]}], "rules": "You start with 4 Hearts."}</script>
-<script src="../../assets/captains.js?v=5"></script>
+<script type="application/json" id="captain-data">{"slug": "baldr", "name": "Baldr", "months": [{"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Cynic", "archetype": "Treasures", "deck": ["Fortune Teller", "Miseria", "Nuada, Radiant King", "Young Hercules", "Destiny", "Maverick & Icewing", "Mortakon", "Smug", "Guinevere", "Perseus", "Sigrun, Valkyrie Queen", "The Burninator"]}, {"username": "Gukov", "archetype": "Boons", "deck": ["Bubbles", "The Raven", "Fortune Teller", "Young Hercules", "Orion, the Hunter", "Tantalus", "Fenrir", "Medea in a Tavern", "Yggdrasil Sapling", "Apophis", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "phoenicksgames", "archetype": "Boons", "deck": ["The Raven", "Fortune Teller", "Young Hercules", "Orion, the Hunter", "Rollo", "Tantalus", "Wishing Fish", "Fenrir", "Medea in a Tavern", "Flopsy", "Perseus", "Sigrun, Valkyrie Queen"]}, {"username": "WingSteel", "archetype": "Boons", "deck": ["The Raven", "Bubbles", "Young Hercules", "Fortune Teller", "Wishing Fish", "Tantalus", "Fenrir", "Orion, the Hunter", "Medea in a Tavern", "Sigrun, Valkyrie Queen", "Apophis", "Perseus"]}]}], "rules": "You start with 4 Hearts.", "cardSlugs": {"Apophis": "apophis", "Bubbles": "bubbles", "Destiny": "destiny", "Fenrir": "fenrir", "Flopsy": "flopsy", "Fortune Teller": "fortune_teller", "Guinevere": "guinevere", "Maverick & Icewing": "maverick_icewing", "Medea in a Tavern": "medea_in_a_tavern", "Miseria": "miseria", "Mortakon": "mortakon", "Nuada, Radiant King": "nuada_radiant_king", "Orion, the Hunter": "orion_the_hunter", "Perseus": "perseus", "Rollo": "rollo", "Sigrun, Valkyrie Queen": "sigrun_valkyrie_queen", "Smug": "smug", "Tantalus": "tantalus", "The Burninator": "the_burninator", "The Raven": "the_raven", "Wishing Fish": "wishing_fish", "Yggdrasil Sapling": "yggdrasil_sapling", "Young Hercules": "young_hercules"}}</script>
+<script src="../../assets/captains.js?v=6"></script>
 </body>
 </html>

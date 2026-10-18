@@ -3,9 +3,11 @@
 
 // Umami custom events (never throws; silent when the script is blocked).
 // captain is only present on per-captain pages, absent on the captains index.
-const CAP = document.getElementById('captain-data')
-  ? JSON.parse(document.getElementById('captain-data').textContent).name
-  : undefined;
+let _captain;
+function captainData() {
+  return _captain ??= JSON.parse(document.getElementById('captain-data').textContent);
+}
+const CAP = document.getElementById('captain-data') ? captainData().name : undefined;
 function trackEvt(name, props) {
   window.umami?.track(name, { ...(CAP && { captain: CAP }), ...props });
 }
@@ -57,35 +59,59 @@ function best12(decks) {
     .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1));
 }
 let best12Limit = 12;
-function renderBest12() {
-  const captain = JSON.parse(document.getElementById('captain-data').textContent);
+function selectedDecks(captain) {
   const selected = Array.from(document.querySelectorAll('#month-filter input:checked'))
     .map(cb => cb.dataset.month);
-  const decks = captain.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
+  return captain.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
+}
+// Card cells link to the guide when the payload carries a slug (parity with the
+// prerendered rows from render_captains.py _card_pill).
+function cardCell(card, cardSlugs) {
+  const td = document.createElement('td');
+  const slug = cardSlugs?.[card];
+  if (slug) {
+    const a = document.createElement('a');
+    a.className = 'deck-pill';
+    a.href = 'https://guide.galaxy.fun/cards/' + slug + '/';
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.textContent = card;
+    td.appendChild(a);
+  } else {
+    const span = document.createElement('span');
+    span.className = 'deck-pill';
+    span.textContent = card;
+    td.appendChild(span);
+  }
+  return td;
+}
+function updateMoreBtn(rankedLength) {
+  const more = document.getElementById('best12-more');
+  if (!more) return;
+  const remaining = rankedLength - best12Limit;
+  more.hidden = remaining <= 0;
+  if (remaining > 0) more.textContent = `Show ${Math.min(12, remaining)} more`;
+}
+function renderBest12() {
+  const captain = captainData();
+  const decks = selectedDecks(captain);
   const ranked = best12(decks);
   const shown = ranked.slice(0, best12Limit);
   const tbody = document.querySelector('#best12-table tbody');
   tbody.innerHTML = '';
   shown.forEach(([card, freq]) => {
     const tr = document.createElement('tr');
-    const tdCard = document.createElement('td');
-    tdCard.textContent = card;
     const tdFreq = document.createElement('td');
     tdFreq.className = 'num';
     tdFreq.textContent = freq;
     const tdPct = document.createElement('td');
     tdPct.className = 'num';
     tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
-    tr.append(tdCard, tdFreq, tdPct);
+    tr.append(cardCell(card, captain.cardSlugs), tdFreq, tdPct);
     tbody.appendChild(tr);
   });
   document.querySelector('#best12-count').textContent = decks.length;
-  const more = document.getElementById('best12-more');
-  if (more) {
-    const remaining = ranked.length - shown.length;
-    more.style.display = remaining > 0 ? '' : 'none';
-    if (remaining > 0) more.textContent = `Show ${Math.min(12, remaining)} more`;
-  }
+  updateMoreBtn(ranked.length);
 }
 
 // Captains index: rebuild the captain table from the checked month chips.
@@ -129,7 +155,13 @@ function renderIndex() {
 
 // Init: each page ships exactly one data payload; render it and wire its chips.
 if (document.getElementById('captain-data')) {
-  renderBest12();
+  if (document.querySelector('#best12-table tbody')?.rows.length) {
+    // Prerendered rows: keep the static HTML (no flicker), just reveal the
+    // show-more button when the full ranking exceeds the top 12.
+    updateMoreBtn(best12(selectedDecks(captainData())).length);
+  } else {
+    renderBest12();
+  }
   document.querySelectorAll('#month-filter input')
     .forEach(cb => cb.addEventListener('change', () => {
       best12Limit = 12; renderBest12();

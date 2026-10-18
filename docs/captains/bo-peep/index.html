@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/bo_peep__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=5">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=6">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
@@ -78,10 +78,23 @@
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-09">2026-09</label></div>
     <table class="data-table" id="best12-table">
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
-        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
-      <tbody></tbody>
+        <th class="num no-sort">% of <span id="best12-count">6</span> decks</th></tr></thead>
+      <tbody>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/crab_dragoon/" target="_blank" rel="noopener">Crab Dragoon</a></td><td class="num">5</td><td class="num">83%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/monstro/" target="_blank" rel="noopener">Monstro</a></td><td class="num">5</td><td class="num">83%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/mr_fox/" target="_blank" rel="noopener">Mr. Fox</a></td><td class="num">5</td><td class="num">83%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/snapping_hydra/" target="_blank" rel="noopener">Snapping Hydra</a></td><td class="num">5</td><td class="num">83%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/fenrir/" target="_blank" rel="noopener">Fenrir</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/leapfrog/" target="_blank" rel="noopener">Leapfrog</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/miss_muffet/" target="_blank" rel="noopener">Miss Muffet</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/the_rat_king/" target="_blank" rel="noopener">The Rat King</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/frog_prince/" target="_blank" rel="noopener">Frog Prince</a></td><td class="num">3</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/nemean_lion/" target="_blank" rel="noopener">Nemean Lion</a></td><td class="num">3</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/old_coyote/" target="_blank" rel="noopener">Old Coyote</a></td><td class="num">3</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/twilight_sprinkles/" target="_blank" rel="noopener">Twilight Sprinkles</a></td><td class="num">3</td><td class="num">50%</td></tr>
+      </tbody>
     </table>
-    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
+    <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Every winning deck across all months.</div>
@@ -103,7 +116,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "bo-peep", "name": "Bo Peep", "months": [{"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Collecter", "archetype": "Animals", "deck": ["The Raven", "Frog Prince", "Old Coyote", "Baron Bok", "Mr. Fox", "Astral Navigator", "Fenrir", "Leapfrog", "Snapping Hydra", "Crab Dragoon", "Monstro", "The Rat King"]}, {"username": "Crow 77", "archetype": "Candy", "deck": ["Gingerbread Witch", "Catatouille", "The Candy Cane Crook", "Jumping Jelly Beans", "Jaws", "The Three Chef-Keteers", "Leapfrog", "Twilight Sprinkles", "Chubby Cheep", "Jelly-ton", "Nemean Lion", "Crab Dragoon"]}, {"username": "eccelleente", "archetype": "Animals", "deck": ["Fortune Teller", "Nuada, Radiant King", "Baron Bok", "Mr. Fox", "Tsarmina, the Tyrant", "Wishing Fish", "Astral Navigator", "Snapping Hydra", "Crab Dragoon", "Miss Muffet", "Monstro", "The Burninator"]}, {"username": "Garfler", "archetype": "Animals", "deck": ["Fae Familiar", "Mr. Fox", "Fenrir", "Leapfrog", "Snapping Hydra", "Twilight Sprinkles", "Chubby Cheep", "Crab Dragoon", "Miss Muffet", "Monstro", "Nemean Lion", "The Rat King"]}, {"username": "Meralux", "archetype": "Animals", "deck": ["Frog Prince", "Fae Familiar", "Mr. Fox", "Leapfrog", "Snapping Hydra", "Charlotte", "Monstro", "The Rat King", "Miss Muffet", "Old Coyote", "Wishing Fish", "Fenrir"]}, {"username": "Revlyn", "archetype": "Animals", "deck": ["Frog Prince", "Old Coyote", "Mr. Fox", "The Three Chef-Keteers", "Fenrir", "Snapping Hydra", "Twilight Sprinkles", "Crab Dragoon", "Miss Muffet", "Monstro", "Nemean Lion", "The Rat King"]}]}], "rules": "Animals appear in your shop one rarity sooner."}</script>
-<script src="../../assets/captains.js?v=5"></script>
+<script type="application/json" id="captain-data">{"slug": "bo-peep", "name": "Bo Peep", "months": [{"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "Collecter", "archetype": "Animals", "deck": ["The Raven", "Frog Prince", "Old Coyote", "Baron Bok", "Mr. Fox", "Astral Navigator", "Fenrir", "Leapfrog", "Snapping Hydra", "Crab Dragoon", "Monstro", "The Rat King"]}, {"username": "Crow 77", "archetype": "Candy", "deck": ["Gingerbread Witch", "Catatouille", "The Candy Cane Crook", "Jumping Jelly Beans", "Jaws", "The Three Chef-Keteers", "Leapfrog", "Twilight Sprinkles", "Chubby Cheep", "Jelly-ton", "Nemean Lion", "Crab Dragoon"]}, {"username": "eccelleente", "archetype": "Animals", "deck": ["Fortune Teller", "Nuada, Radiant King", "Baron Bok", "Mr. Fox", "Tsarmina, the Tyrant", "Wishing Fish", "Astral Navigator", "Snapping Hydra", "Crab Dragoon", "Miss Muffet", "Monstro", "The Burninator"]}, {"username": "Garfler", "archetype": "Animals", "deck": ["Fae Familiar", "Mr. Fox", "Fenrir", "Leapfrog", "Snapping Hydra", "Twilight Sprinkles", "Chubby Cheep", "Crab Dragoon", "Miss Muffet", "Monstro", "Nemean Lion", "The Rat King"]}, {"username": "Meralux", "archetype": "Animals", "deck": ["Frog Prince", "Fae Familiar", "Mr. Fox", "Leapfrog", "Snapping Hydra", "Charlotte", "Monstro", "The Rat King", "Miss Muffet", "Old Coyote", "Wishing Fish", "Fenrir"]}, {"username": "Revlyn", "archetype": "Animals", "deck": ["Frog Prince", "Old Coyote", "Mr. Fox", "The Three Chef-Keteers", "Fenrir", "Snapping Hydra", "Twilight Sprinkles", "Crab Dragoon", "Miss Muffet", "Monstro", "Nemean Lion", "The Rat King"]}]}], "rules": "Animals appear in your shop one rarity sooner.", "cardSlugs": {"Astral Navigator": "astral_navigator", "Baron Bok": "baron_bok", "Catatouille": "catatouille", "Charlotte": "charlotte", "Chubby Cheep": "chubby_cheep", "Crab Dragoon": "crab_dragoon", "Fae Familiar": "fae_familiar", "Fenrir": "fenrir", "Fortune Teller": "fortune_teller", "Frog Prince": "frog_prince", "Gingerbread Witch": "gingerbread_witch", "Jaws": "jaws", "Jelly-ton": "jelly_ton", "Jumping Jelly Beans": "jumping_jelly_beans", "Leapfrog": "leapfrog", "Miss Muffet": "miss_muffet", "Monstro": "monstro", "Mr. Fox": "mr_fox", "Nemean Lion": "nemean_lion", "Nuada, Radiant King": "nuada_radiant_king", "Old Coyote": "old_coyote", "Snapping Hydra": "snapping_hydra", "The Burninator": "the_burninator", "The Candy Cane Crook": "the_candy_cane_crook", "The Rat King": "the_rat_king", "The Raven": "the_raven", "The Three Chef-Keteers": "the_three_chef_keteers", "Tsarmina, the Tyrant": "tsarmina_the_tyrant", "Twilight Sprinkles": "twilight_sprinkles", "Wishing Fish": "wishing_fish"}}</script>
+<script src="../../assets/captains.js?v=6"></script>
 </body>
 </html>

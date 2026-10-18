@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/mount_mimic__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=5">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=6">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
@@ -78,10 +78,23 @@
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-07">2026-07</label></div>
     <table class="data-table" id="best12-table">
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
-        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
-      <tbody></tbody>
+        <th class="num no-sort">% of <span id="best12-count">1</span> decks</th></tr></thead>
+      <tbody>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/candy_apple_tree/" target="_blank" rel="noopener">Candy Apple Tree</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/catatouille/" target="_blank" rel="noopener">Catatouille</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/chubby_cheep/" target="_blank" rel="noopener">Chubby Cheep</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/cotton_candy_dandy/" target="_blank" rel="noopener">Cotton Candy Dandy</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/frosting_dragon/" target="_blank" rel="noopener">Frosting Dragon</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/gingerbread_witch/" target="_blank" rel="noopener">Gingerbread Witch</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/gummy_wyrm/" target="_blank" rel="noopener">Gummy Wyrm</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/jaws/" target="_blank" rel="noopener">Jaws</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/knight_of_the_holy_cane/" target="_blank" rel="noopener">Knight of the Holy Cane</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/lollipop_faerie/" target="_blank" rel="noopener">Lollipop Faerie</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/pretty_patissier/" target="_blank" rel="noopener">Pretty Patissier</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/twilight_sprinkles/" target="_blank" rel="noopener">Twilight Sprinkles</a></td><td class="num">1</td><td class="num">100%</td></tr>
+      </tbody>
     </table>
-    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
+    <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Every winning deck across all months.</div>
@@ -98,7 +111,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "mount-mimic", "name": "Mount Mimic", "months": [{"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Buddy Pal Friend", "archetype": "Candy", "deck": ["Lollipop Faerie", "Gingerbread Witch", "Pretty Patissier", "Catatouille", "Candy Apple Tree", "Jaws", "Frosting Dragon", "Knight of the Holy Cane", "Twilight Sprinkles", "Chubby Cheep", "Gummy Wyrm", "Cotton Candy Dandy"]}]}], "rules": "When you lose a fight, if you don't have one, get a Lesser Mimic."}</script>
-<script src="../../assets/captains.js?v=5"></script>
+<script type="application/json" id="captain-data">{"slug": "mount-mimic", "name": "Mount Mimic", "months": [{"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Buddy Pal Friend", "archetype": "Candy", "deck": ["Lollipop Faerie", "Gingerbread Witch", "Pretty Patissier", "Catatouille", "Candy Apple Tree", "Jaws", "Frosting Dragon", "Knight of the Holy Cane", "Twilight Sprinkles", "Chubby Cheep", "Gummy Wyrm", "Cotton Candy Dandy"]}]}], "rules": "When you lose a fight, if you don't have one, get a Lesser Mimic.", "cardSlugs": {"Candy Apple Tree": "candy_apple_tree", "Catatouille": "catatouille", "Chubby Cheep": "chubby_cheep", "Cotton Candy Dandy": "cotton_candy_dandy", "Frosting Dragon": "frosting_dragon", "Gingerbread Witch": "gingerbread_witch", "Gummy Wyrm": "gummy_wyrm", "Jaws": "jaws", "Knight of the Holy Cane": "knight_of_the_holy_cane", "Lollipop Faerie": "lollipop_faerie", "Pretty Patissier": "pretty_patissier", "Twilight Sprinkles": "twilight_sprinkles"}}</script>
+<script src="../../assets/captains.js?v=6"></script>
 </body>
 </html>

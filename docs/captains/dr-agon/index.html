@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/dr_agon__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=5">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=6">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
@@ -78,10 +78,23 @@
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
     <table class="data-table" id="best12-table">
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
-        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
-      <tbody></tbody>
+        <th class="num no-sort">% of <span id="best12-count">6</span> decks</th></tr></thead>
+      <tbody>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/mirror_mage/" target="_blank" rel="noopener">Mirror Mage</a></td><td class="num">6</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/genie_of_the_lamp/" target="_blank" rel="noopener">Genie of the Lamp</a></td><td class="num">5</td><td class="num">83%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/moppet/" target="_blank" rel="noopener">Moppet</a></td><td class="num">5</td><td class="num">83%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/aladdin/" target="_blank" rel="noopener">Aladdin</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/hephaestus/" target="_blank" rel="noopener">Hephaestus</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/maverick_icewing/" target="_blank" rel="noopener">Maverick &amp; Icewing</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/plunder_penny/" target="_blank" rel="noopener">Plunder Penny</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/prospero/" target="_blank" rel="noopener">Prospero</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/ace_of_hearts/" target="_blank" rel="noopener">Ace of Hearts</a></td><td class="num">3</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/kid_icarus/" target="_blank" rel="noopener">Kid Icarus</a></td><td class="num">3</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/scale_a_tor/" target="_blank" rel="noopener">Scale-a-tor</a></td><td class="num">3</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/the_fates/" target="_blank" rel="noopener">The Fates</a></td><td class="num">3</td><td class="num">50%</td></tr>
+      </tbody>
     </table>
-    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
+    <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Every winning deck across all months.</div>
@@ -103,7 +116,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "dr-agon", "name": "Dr. Agon", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "Farec", "archetype": "Treasures", "deck": ["Aladdin", "Plunder Penny", "Maverick & Icewing", "Genie of the Lamp", "Mirror Mage", "Ace of Hearts", "Hephaestus", "Scale-a-tor", "Kid Icarus", "Moppet", "Prospero", "Mr. Fox"]}, {"username": "Jino", "archetype": "Mage", "deck": ["Morgan Le Fae", "Calypso", "Genie of the Lamp", "Mirror Mage", "Ogre Magi", "Chaos", "Moppet", "The Fates", "Twilight Sprinkles", "Pixie", "Kool Wip", "Lollipop Faerie"]}, {"username": "Mike Honcho", "archetype": "Treasures", "deck": ["Aladdin", "Plunder Penny", "Maverick & Icewing", "Genie of the Lamp", "Mirror Mage", "Ace of Hearts", "Hephaestus", "Scale-a-tor", "The Burninator", "Kid Icarus", "Moppet", "Flopsy"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Abello", "archetype": "Treasures", "deck": ["Hephaestus", "Aladdin", "Plunder Penny", "Frog Prince", "Kid Icarus", "Prospero", "Ace of Hearts", "Maverick & Icewing", "Moppet", "Genie of the Lamp", "Mirror Mage", "Scale-a-tor"]}, {"username": "AtlasMessiah", "archetype": "Mage", "deck": ["The Fates", "Chaos", "Miseria", "Baron Bok", "Cherry Topples", "Mr. Fox", "Weensy", "Mirror Mage", "Wicked Witch", "Crab Dragoon", "Prospero", "The Burninator"]}, {"username": "juannacho", "archetype": "Mage", "deck": ["Aladdin", "Plunder Penny", "The Fates", "Maverick & Icewing", "Moppet", "Genie of the Lamp", "Kagutsuchi", "Mirror Mage", "Mysterio, the Great and Powerful", "Smug", "Hephaestus", "Prospero"]}]}], "rules": "Cast three spells to discover a Common treasure. (X)"}</script>
-<script src="../../assets/captains.js?v=5"></script>
+<script type="application/json" id="captain-data">{"slug": "dr-agon", "name": "Dr. Agon", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "Farec", "archetype": "Treasures", "deck": ["Aladdin", "Plunder Penny", "Maverick & Icewing", "Genie of the Lamp", "Mirror Mage", "Ace of Hearts", "Hephaestus", "Scale-a-tor", "Kid Icarus", "Moppet", "Prospero", "Mr. Fox"]}, {"username": "Jino", "archetype": "Mage", "deck": ["Morgan Le Fae", "Calypso", "Genie of the Lamp", "Mirror Mage", "Ogre Magi", "Chaos", "Moppet", "The Fates", "Twilight Sprinkles", "Pixie", "Kool Wip", "Lollipop Faerie"]}, {"username": "Mike Honcho", "archetype": "Treasures", "deck": ["Aladdin", "Plunder Penny", "Maverick & Icewing", "Genie of the Lamp", "Mirror Mage", "Ace of Hearts", "Hephaestus", "Scale-a-tor", "The Burninator", "Kid Icarus", "Moppet", "Flopsy"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Abello", "archetype": "Treasures", "deck": ["Hephaestus", "Aladdin", "Plunder Penny", "Frog Prince", "Kid Icarus", "Prospero", "Ace of Hearts", "Maverick & Icewing", "Moppet", "Genie of the Lamp", "Mirror Mage", "Scale-a-tor"]}, {"username": "AtlasMessiah", "archetype": "Mage", "deck": ["The Fates", "Chaos", "Miseria", "Baron Bok", "Cherry Topples", "Mr. Fox", "Weensy", "Mirror Mage", "Wicked Witch", "Crab Dragoon", "Prospero", "The Burninator"]}, {"username": "juannacho", "archetype": "Mage", "deck": ["Aladdin", "Plunder Penny", "The Fates", "Maverick & Icewing", "Moppet", "Genie of the Lamp", "Kagutsuchi", "Mirror Mage", "Mysterio, the Great and Powerful", "Smug", "Hephaestus", "Prospero"]}]}], "rules": "Cast three spells to discover a Common treasure. (X)", "cardSlugs": {"Ace of Hearts": "ace_of_hearts", "Aladdin": "aladdin", "Baron Bok": "baron_bok", "Calypso": "calypso", "Chaos": "chaos", "Cherry Topples": "cherry_topples", "Crab Dragoon": "crab_dragoon", "Flopsy": "flopsy", "Frog Prince": "frog_prince", "Genie of the Lamp": "genie_of_the_lamp", "Hephaestus": "hephaestus", "Kagutsuchi": "kagutsuchi", "Kid Icarus": "kid_icarus", "Kool Wip": "kool_wip", "Lollipop Faerie": "lollipop_faerie", "Maverick & Icewing": "maverick_icewing", "Mirror Mage": "mirror_mage", "Miseria": "miseria", "Moppet": "moppet", "Morgan Le Fae": "morgan_le_fae", "Mr. Fox": "mr_fox", "Mysterio, the Great and Powerful": "mysterio_the_great_and_powerful", "Ogre Magi": "ogre_magi", "Pixie": "pixie", "Plunder Penny": "plunder_penny", "Prospero": "prospero", "Scale-a-tor": "scale_a_tor", "Smug": "smug", "The Burninator": "the_burninator", "The Fates": "the_fates", "Twilight Sprinkles": "twilight_sprinkles", "Weensy": "weensy", "Wicked Witch": "wicked_witch"}}</script>
+<script src="../../assets/captains.js?v=6"></script>
 </body>
 </html>

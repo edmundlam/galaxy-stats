@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/witches_iii__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=5">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=6">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
@@ -78,10 +78,23 @@
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-04">2026-04</label></div>
     <table class="data-table" id="best12-table">
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
-        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
-      <tbody></tbody>
+        <th class="num no-sort">% of <span id="best12-count">6</span> decks</th></tr></thead>
+      <tbody>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/miseria/" target="_blank" rel="noopener">Miseria</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/mr_fox/" target="_blank" rel="noopener">Mr. Fox</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/smug/" target="_blank" rel="noopener">Smug</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/wicked_witch/" target="_blank" rel="noopener">Wicked Witch</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/wormscale_tinkerer/" target="_blank" rel="noopener">Wormscale Tinkerer</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/wormtongue/" target="_blank" rel="noopener">Wormtongue</a></td><td class="num">4</td><td class="num">67%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/maverick_icewing/" target="_blank" rel="noopener">Maverick &amp; Icewing</a></td><td class="num">3</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/rollo/" target="_blank" rel="noopener">Rollo</a></td><td class="num">3</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/sir_francis_drake/" target="_blank" rel="noopener">Sir Francis Drake</a></td><td class="num">3</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/tsarmina_the_tyrant/" target="_blank" rel="noopener">Tsarmina, the Tyrant</a></td><td class="num">3</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/ace_of_hearts/" target="_blank" rel="noopener">Ace of Hearts</a></td><td class="num">2</td><td class="num">33%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/combustible_dragon/" target="_blank" rel="noopener">Combustible Dragon</a></td><td class="num">2</td><td class="num">33%</td></tr>
+      </tbody>
     </table>
-    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
+    <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Every winning deck across all months.</div>
@@ -103,7 +116,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "witches-iii", "name": "Witches, III", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "funnywille", "archetype": "Treasures", "deck": ["Black Hole", "Wicked Witch", "Anubis", "Ace of Hearts", "Mysterio, the Great and Powerful", "Wormtongue", "Sir Francis Drake", "Smug", "Snapping Hydra", "Flopsy", "Mr. Fox", "Miseria"]}, {"username": "TarquinTarquin", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Tsarmina, the Tyrant", "Guinevere", "The Burninator", "Sir Francis Drake", "Flopsy", "Wormscale Tinkerer", "Jaws", "Rollo", "Mr. Fox", "Miseria", "Crystal"]}, {"username": "ToolShedd", "archetype": "Treasures", "deck": ["Wicked Witch", "Wormtongue", "Smug", "Knight of the Holy Cane", "Lance A Little", "Netherbinder", "Rollo", "Oracle of Fortunes", "Dastardly Spirit", "Mr. Fox", "Miseria", "Barbosa"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "a breloom", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Ace of Hearts", "Guinevere", "Pisces", "Wormscale Tinkerer", "Netherbinder", "Rollo", "Mr. Fox", "Miseria", "The Blue Faerie"]}, {"username": "CandyEnjoyer", "archetype": "Treasures", "deck": ["Morgan Le Fae", "Tsarmina, the Tyrant", "Wicked Witch", "Combustible Dragon", "Mirror Mirror", "Hephaestus", "Wormtongue", "Pisces", "Chaos", "Smug", "Snapping Hydra", "Wormscale Tinkerer"]}, {"username": "leetpeet", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mechanical Dragon", "Mimic", "Tsarmina, the Tyrant", "Wicked Witch", "Combustible Dragon", "Scale-a-tor", "Wormtongue", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Wormscale Tinkerer"]}]}], "rules": "Every 3 Villains you pick, give your back row slots +3/+3."}</script>
-<script src="../../assets/captains.js?v=5"></script>
+<script type="application/json" id="captain-data">{"slug": "witches-iii", "name": "Witches, III", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "funnywille", "archetype": "Treasures", "deck": ["Black Hole", "Wicked Witch", "Anubis", "Ace of Hearts", "Mysterio, the Great and Powerful", "Wormtongue", "Sir Francis Drake", "Smug", "Snapping Hydra", "Flopsy", "Mr. Fox", "Miseria"]}, {"username": "TarquinTarquin", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Tsarmina, the Tyrant", "Guinevere", "The Burninator", "Sir Francis Drake", "Flopsy", "Wormscale Tinkerer", "Jaws", "Rollo", "Mr. Fox", "Miseria", "Crystal"]}, {"username": "ToolShedd", "archetype": "Treasures", "deck": ["Wicked Witch", "Wormtongue", "Smug", "Knight of the Holy Cane", "Lance A Little", "Netherbinder", "Rollo", "Oracle of Fortunes", "Dastardly Spirit", "Mr. Fox", "Miseria", "Barbosa"]}]}, {"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "a breloom", "archetype": "Treasures", "deck": ["Mortakon", "Mech-a-Man", "Maverick & Icewing", "Ace of Hearts", "Guinevere", "Pisces", "Wormscale Tinkerer", "Netherbinder", "Rollo", "Mr. Fox", "Miseria", "The Blue Faerie"]}, {"username": "CandyEnjoyer", "archetype": "Treasures", "deck": ["Morgan Le Fae", "Tsarmina, the Tyrant", "Wicked Witch", "Combustible Dragon", "Mirror Mirror", "Hephaestus", "Wormtongue", "Pisces", "Chaos", "Smug", "Snapping Hydra", "Wormscale Tinkerer"]}, {"username": "leetpeet", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Mechanical Dragon", "Mimic", "Tsarmina, the Tyrant", "Wicked Witch", "Combustible Dragon", "Scale-a-tor", "Wormtongue", "Thunder of Dragons", "Sir Francis Drake", "Smug", "Wormscale Tinkerer"]}]}], "rules": "Every 3 Villains you pick, give your back row slots +3/+3.", "cardSlugs": {"Ace of Hearts": "ace_of_hearts", "Anubis": "anubis", "Barbosa": "barbosa", "Black Hole": "black_hole", "Chaos": "chaos", "Combustible Dragon": "combustible_dragon", "Crystal": "crystal", "Dastardly Spirit": "dastardly_spirit", "Flopsy": "flopsy", "Guinevere": "guinevere", "Hephaestus": "hephaestus", "Jaws": "jaws", "Knight of the Holy Cane": "knight_of_the_holy_cane", "Lance A Little": "lance_a_little", "Maverick & Icewing": "maverick_icewing", "Mech-a-Man": "mech_a_man", "Mechanical Dragon": "mechanical_dragon", "Mimic": "mimic", "Mirror Mirror": "mirror_mirror", "Miseria": "miseria", "Morgan Le Fae": "morgan_le_fae", "Mortakon": "mortakon", "Mr. Fox": "mr_fox", "Mysterio, the Great and Powerful": "mysterio_the_great_and_powerful", "Netherbinder": "netherbinder", "Oracle of Fortunes": "oracle_of_fortunes", "Pisces": "pisces", "Rollo": "rollo", "Scale-a-tor": "scale_a_tor", "Sir Francis Drake": "sir_francis_drake", "Smug": "smug", "Snapping Hydra": "snapping_hydra", "The Blue Faerie": "the_blue_faerie", "The Burninator": "the_burninator", "Thunder of Dragons": "thunder_of_dragons", "Tsarmina, the Tyrant": "tsarmina_the_tyrant", "Wicked Witch": "wicked_witch", "Wormscale Tinkerer": "wormscale_tinkerer", "Wormtongue": "wormtongue"}}</script>
+<script src="../../assets/captains.js?v=6"></script>
 </body>
 </html>

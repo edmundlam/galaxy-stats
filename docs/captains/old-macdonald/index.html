@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/old_macdonald__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=5">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=6">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:11px; }
@@ -78,10 +78,23 @@
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-09">2026-09</label></div>
     <table class="data-table" id="best12-table">
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
-        <th class="num no-sort">% of <span id="best12-count">0</span> decks</th></tr></thead>
-      <tbody></tbody>
+        <th class="num no-sort">% of <span id="best12-count">1</span> decks</th></tr></thead>
+      <tbody>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/al_miraj/" target="_blank" rel="noopener">Al-mi&#x27;raj</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/beanie_baby/" target="_blank" rel="noopener">Beanie Baby</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/leapfrog/" target="_blank" rel="noopener">Leapfrog</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/miseria/" target="_blank" rel="noopener">Miseria</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/miss_muffet/" target="_blank" rel="noopener">Miss Muffet</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/monstro/" target="_blank" rel="noopener">Monstro</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/pied_piper/" target="_blank" rel="noopener">Pied Piper</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/snapping_hydra/" target="_blank" rel="noopener">Snapping Hydra</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/the_giving_tree/" target="_blank" rel="noopener">The Giving Tree</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/the_rat_king/" target="_blank" rel="noopener">The Rat King</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/tsarmina_the_tyrant/" target="_blank" rel="noopener">Tsarmina, the Tyrant</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/underdog/" target="_blank" rel="noopener">Underdog</a></td><td class="num">1</td><td class="num">100%</td></tr>
+      </tbody>
     </table>
-    <button type="button" id="best12-more" class="more-btn">Show 12 more</button>
+    <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Every winning deck across all months.</div>
@@ -98,7 +111,7 @@
     </table>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "old-macdonald", "name": "Old MacDonald", "months": [{"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "HeavyBurden", "archetype": "Animals", "deck": ["Al-mi'raj", "Beanie Baby", "Pied Piper", "Underdog", "Miseria", "The Giving Tree", "Tsarmina, the Tyrant", "Leapfrog", "Snapping Hydra", "Miss Muffet", "Monstro", "The Rat King"]}]}], "rules": "Treasures you discover from Animals are one rarity higher. They are two rarities higher if your board has five Animals."}</script>
-<script src="../../assets/captains.js?v=5"></script>
+<script type="application/json" id="captain-data">{"slug": "old-macdonald", "name": "Old MacDonald", "months": [{"id": "2026-09", "date": "2026-09-18", "event": "September Monthly", "players": [{"username": "HeavyBurden", "archetype": "Animals", "deck": ["Al-mi'raj", "Beanie Baby", "Pied Piper", "Underdog", "Miseria", "The Giving Tree", "Tsarmina, the Tyrant", "Leapfrog", "Snapping Hydra", "Miss Muffet", "Monstro", "The Rat King"]}]}], "rules": "Treasures you discover from Animals are one rarity higher. They are two rarities higher if your board has five Animals.", "cardSlugs": {"Al-mi'raj": "al_miraj", "Beanie Baby": "beanie_baby", "Leapfrog": "leapfrog", "Miseria": "miseria", "Miss Muffet": "miss_muffet", "Monstro": "monstro", "Pied Piper": "pied_piper", "Snapping Hydra": "snapping_hydra", "The Giving Tree": "the_giving_tree", "The Rat King": "the_rat_king", "Tsarmina, the Tyrant": "tsarmina_the_tyrant", "Underdog": "underdog"}}</script>
+<script src="../../assets/captains.js?v=6"></script>
 </body>
 </html>
