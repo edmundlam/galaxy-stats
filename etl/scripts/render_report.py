@@ -67,7 +67,7 @@ def get_html_template() -> str:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OUAG {EVENT_TYPE} Meta Report {EVENT_ID} — {TOP_CARD_NAME} & {TOP_CAPTAIN} | Galaxy Stats</title>
+<title>Once Upon a Galaxy — {MONTH_YEAR} Meta Report | Galaxy Stats</title>
 <meta name="description" content="OUAG {EVENT_TYPE} {EVENT_ID} results: {TOTAL_PLAYERS} players, top card {TOP_CARD_NAME} at {TOP_CARD_PCT}, top captain {TOP_CAPTAIN}. Tournament meta analysis with card popularity, captain synergies, and deck archetypes.">
 <link rel="canonical" href="https://www.galaxy-stats.com/reports/{EVENT_ID}/">
 <meta name="robots" content="index, follow">

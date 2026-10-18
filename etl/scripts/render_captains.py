@@ -83,8 +83,7 @@ def compute_best12(decks: list[list[str]]) -> list[dict]:
     Counts deck presence per card, sorts by freq desc with alphabetical
     tie-break, takes top 12. Ranking matches analyze_event.py's best12 for a
     single month (pinned by tests/test_render_captains.py); pct is half-up to
-    match captains.js Math.round, deliberately differing from analyze_event's
-    banker's round (deferred — context/agent-notes/2026-10-17-prerender-best12.md).
+    match captains.js Math.round and analyze_event.py's best12 pct.
 
     Args:
         decks: List of decks, each a list of card display names

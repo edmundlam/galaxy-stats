@@ -925,73 +925,73 @@
           "card": "Astral Navigator",
           "freq": 15,
           "n": 16,
-          "pct": 94.0
+          "pct": 94
         },
         {
           "card": "Miseria",
           "freq": 14,
           "n": 16,
-          "pct": 88.0
+          "pct": 88
         },
         {
           "card": "Orion, the Hunter",
           "freq": 12,
           "n": 16,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Sunflare Glider",
           "freq": 12,
           "n": 16,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Baron Bok",
           "freq": 11,
           "n": 16,
-          "pct": 69.0
+          "pct": 69
         },
         {
           "card": "Lance A Little",
           "freq": 11,
           "n": 16,
-          "pct": 69.0
+          "pct": 69
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 11,
           "n": 16,
-          "pct": 69.0
+          "pct": 69
         },
         {
           "card": "Eros",
           "freq": 10,
           "n": 16,
-          "pct": 62.0
+          "pct": 63
         },
         {
           "card": "Apophis",
           "freq": 8,
           "n": 16,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Destiny",
           "freq": 7,
           "n": 16,
-          "pct": 44.0
+          "pct": 44
         },
         {
           "card": "Wishing Fish",
           "freq": 7,
           "n": 16,
-          "pct": 44.0
+          "pct": 44
         },
         {
           "card": "Aladdin",
           "freq": 6,
           "n": 16,
-          "pct": 38.0
+          "pct": 38
         }
       ],
       "players": [
@@ -1344,73 +1344,73 @@
           "card": "The Burninator",
           "freq": 14,
           "n": 15,
-          "pct": 93.0
+          "pct": 93
         },
         {
           "card": "Crab Dragoon",
           "freq": 11,
           "n": 15,
-          "pct": 73.0
+          "pct": 73
         },
         {
           "card": "Maverick & Icewing",
           "freq": 11,
           "n": 15,
-          "pct": 73.0
+          "pct": 73
         },
         {
           "card": "Mechanical Dragon",
           "freq": 11,
           "n": 15,
-          "pct": 73.0
+          "pct": 73
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 9,
           "n": 15,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Miseria",
           "freq": 8,
           "n": 15,
-          "pct": 53.0
+          "pct": 53
         },
         {
           "card": "Netherbinder",
           "freq": 8,
           "n": 15,
-          "pct": 53.0
+          "pct": 53
         },
         {
           "card": "Thunder of Dragons",
           "freq": 7,
           "n": 15,
-          "pct": 47.0
+          "pct": 47
         },
         {
           "card": "Beanie Baby",
           "freq": 6,
           "n": 15,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Combustible Dragon",
           "freq": 6,
           "n": 15,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Destiny",
           "freq": 6,
           "n": 15,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Ditto",
           "freq": 6,
           "n": 15,
-          "pct": 40.0
+          "pct": 40
         }
       ],
       "players": [
@@ -1745,73 +1745,73 @@
           "card": "Ace of Hearts",
           "freq": 10,
           "n": 11,
-          "pct": 91.0
+          "pct": 91
         },
         {
           "card": "The Burninator",
           "freq": 9,
           "n": 11,
-          "pct": 82.0
+          "pct": 82
         },
         {
           "card": "Combustible Dragon",
           "freq": 6,
           "n": 11,
-          "pct": 55.0
+          "pct": 55
         },
         {
           "card": "Netherbinder",
           "freq": 6,
           "n": 11,
-          "pct": 55.0
+          "pct": 55
         },
         {
           "card": "Sunflare Glider",
           "freq": 6,
           "n": 11,
-          "pct": 55.0
+          "pct": 55
         },
         {
           "card": "Thunder of Dragons",
           "freq": 6,
           "n": 11,
-          "pct": 55.0
+          "pct": 55
         },
         {
           "card": "Hephaestus",
           "freq": 5,
           "n": 11,
-          "pct": 45.0
+          "pct": 45
         },
         {
           "card": "Mr. Fox",
           "freq": 5,
           "n": 11,
-          "pct": 45.0
+          "pct": 45
         },
         {
           "card": "Sir Francis Drake",
           "freq": 5,
           "n": 11,
-          "pct": 45.0
+          "pct": 45
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 5,
           "n": 11,
-          "pct": 45.0
+          "pct": 45
         },
         {
           "card": "Crab Dragoon",
           "freq": 4,
           "n": 11,
-          "pct": 36.0
+          "pct": 36
         },
         {
           "card": "Miseria",
           "freq": 4,
           "n": 11,
-          "pct": 36.0
+          "pct": 36
         }
       ],
       "players": [
@@ -2074,73 +2074,73 @@
           "card": "Maverick & Icewing",
           "freq": 10,
           "n": 10,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 9,
           "n": 10,
-          "pct": 90.0
+          "pct": 90
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 6,
           "n": 10,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Guinevere",
           "freq": 5,
           "n": 10,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Oracle of Fortunes",
           "freq": 5,
           "n": 10,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Baron Bok",
           "freq": 4,
           "n": 10,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Mech-a-Man",
           "freq": 4,
           "n": 10,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Mortakon",
           "freq": 4,
           "n": 10,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Pirate Prince",
           "freq": 4,
           "n": 10,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Rollo",
           "freq": 4,
           "n": 10,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Astral Navigator",
           "freq": 3,
           "n": 10,
-          "pct": 30.0
+          "pct": 30
         },
         {
           "card": "Crab Dragoon",
           "freq": 3,
           "n": 10,
-          "pct": 30.0
+          "pct": 30
         }
       ],
       "players": [
@@ -2385,73 +2385,73 @@
           "card": "Guinevere",
           "freq": 7,
           "n": 7,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Lance A Little",
           "freq": 6,
           "n": 7,
-          "pct": 86.0
+          "pct": 86
         },
         {
           "card": "Maverick & Icewing",
           "freq": 6,
           "n": 7,
-          "pct": 86.0
+          "pct": 86
         },
         {
           "card": "Mortakon",
           "freq": 6,
           "n": 7,
-          "pct": 86.0
+          "pct": 86
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 6,
           "n": 7,
-          "pct": 86.0
+          "pct": 86
         },
         {
           "card": "Destiny",
           "freq": 4,
           "n": 7,
-          "pct": 57.0
+          "pct": 57
         },
         {
           "card": "The Huntsman",
           "freq": 4,
           "n": 7,
-          "pct": 57.0
+          "pct": 57
         },
         {
           "card": "Young Hercules",
           "freq": 4,
           "n": 7,
-          "pct": 57.0
+          "pct": 57
         },
         {
           "card": "Fortune Teller",
           "freq": 3,
           "n": 7,
-          "pct": 43.0
+          "pct": 43
         },
         {
           "card": "Miseria",
           "freq": 3,
           "n": 7,
-          "pct": 43.0
+          "pct": 43
         },
         {
           "card": "Perseus",
           "freq": 3,
           "n": 7,
-          "pct": 43.0
+          "pct": 43
         },
         {
           "card": "Crab Dragoon",
           "freq": 2,
           "n": 7,
-          "pct": 29.0
+          "pct": 29
         }
       ],
       "players": [
@@ -2642,73 +2642,73 @@
           "card": "Guinevere",
           "freq": 6,
           "n": 6,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 6,
           "n": 6,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Young Hercules",
           "freq": 6,
           "n": 6,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Destiny",
           "freq": 5,
           "n": 6,
-          "pct": 83.0
+          "pct": 83
         },
         {
           "card": "Lance A Little",
           "freq": 5,
           "n": 6,
-          "pct": 83.0
+          "pct": 83
         },
         {
           "card": "Maverick & Icewing",
           "freq": 5,
           "n": 6,
-          "pct": 83.0
+          "pct": 83
         },
         {
           "card": "Mortakon",
           "freq": 4,
           "n": 6,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Perseus",
           "freq": 4,
           "n": 6,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Rollo",
           "freq": 4,
           "n": 6,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 4,
           "n": 6,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "The Burninator",
           "freq": 4,
           "n": 6,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Fortune Teller",
           "freq": 3,
           "n": 6,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -2881,73 +2881,73 @@
           "card": "Crab Dragoon",
           "freq": 5,
           "n": 6,
-          "pct": 83.0
+          "pct": 83
         },
         {
           "card": "Monstro",
           "freq": 5,
           "n": 6,
-          "pct": 83.0
+          "pct": 83
         },
         {
           "card": "Mr. Fox",
           "freq": 5,
           "n": 6,
-          "pct": 83.0
+          "pct": 83
         },
         {
           "card": "Snapping Hydra",
           "freq": 5,
           "n": 6,
-          "pct": 83.0
+          "pct": 83
         },
         {
           "card": "Fenrir",
           "freq": 4,
           "n": 6,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Leapfrog",
           "freq": 4,
           "n": 6,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Miss Muffet",
           "freq": 4,
           "n": 6,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "The Rat King",
           "freq": 4,
           "n": 6,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Frog Prince",
           "freq": 3,
           "n": 6,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Nemean Lion",
           "freq": 3,
           "n": 6,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Old Coyote",
           "freq": 3,
           "n": 6,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Twilight Sprinkles",
           "freq": 3,
           "n": 6,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -3120,73 +3120,73 @@
           "card": "Miseria",
           "freq": 5,
           "n": 5,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Crab Dragoon",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Fortune Teller",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Destiny",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Ditto",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Fenrir",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Maverick & Icewing",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Orion, the Hunter",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Ptah",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "The Huntsman",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Young Hercules",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         }
       ],
       "players": [
@@ -3341,73 +3341,73 @@
           "card": "Lollipop Faerie",
           "freq": 5,
           "n": 5,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Cherry Topples",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "Chubby Cheep",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "Cotton Candy Dandy",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "Gingerbread Witch",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "The Candy Cane Crook",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "Knight of the Holy Cane",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Kool Wip",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Oracle of Fortunes",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Pixie",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Twilight Sprinkles",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Candy Claws",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         }
       ],
       "players": [
@@ -3562,73 +3562,73 @@
           "card": "Busted Bot",
           "freq": 5,
           "n": 5,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Kagutsuchi",
           "freq": 5,
           "n": 5,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mortakon",
           "freq": 5,
           "n": 5,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Astral Navigator",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "Baron Bok",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "Barrel of Monkeys",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "Brick Monster",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Mech-a-Man",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Chip on the Ship",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Eros",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Orpheus",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Raggedy Ann",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         }
       ],
       "players": [
@@ -3783,73 +3783,73 @@
           "card": "Guinevere",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "Miseria",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "Mortakon",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "Destiny",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Young Hercules",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Maverick & Icewing",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Rollo",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "The Burninator",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Ace of Hearts",
           "freq": 1,
           "n": 5,
-          "pct": 20.0
+          "pct": 20
         },
         {
           "card": "Anubis",
           "freq": 1,
           "n": 5,
-          "pct": 20.0
+          "pct": 20
         },
         {
           "card": "Apophis",
           "freq": 1,
           "n": 5,
-          "pct": 20.0
+          "pct": 20
         }
       ],
       "players": [
@@ -4004,73 +4004,73 @@
           "card": "Combustible Dragon",
           "freq": 5,
           "n": 5,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Crab Dragoon",
           "freq": 5,
           "n": 5,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mechanical Dragon",
           "freq": 5,
           "n": 5,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 5,
           "n": 5,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Snapping Hydra",
           "freq": 5,
           "n": 5,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Giving Tree",
           "freq": 5,
           "n": 5,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Yggdrasil Sapling",
           "freq": 5,
           "n": 5,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mischief",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "Mortakon",
           "freq": 4,
           "n": 5,
-          "pct": 80.0
+          "pct": 80
         },
         {
           "card": "Nutcracker Prince",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Beanie Baby",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Chip on the Ship",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         }
       ],
       "players": [
@@ -4225,73 +4225,73 @@
           "card": "Destiny",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Miseria",
           "freq": 3,
           "n": 5,
-          "pct": 60.0
+          "pct": 60
         },
         {
           "card": "Candy Apple Tree",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Chubby Bunny",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Licorice",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Mortakon",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "The Burninator",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "The Candy Cane Crook",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "The Huntsman",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Viscount Chocolat",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         },
         {
           "card": "Weensy",
           "freq": 2,
           "n": 5,
-          "pct": 40.0
+          "pct": 40
         }
       ],
       "players": [
@@ -4446,73 +4446,73 @@
           "card": "Crab Dragoon",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mechanical Dragon",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Netherbinder",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Oracle of Fortunes",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Smug",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Thunder of Dragons",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Aladdin",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Fae Familiar",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Morgan Le Fae",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Sunflare Glider",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "The Fates",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         }
       ],
       "players": [
@@ -4649,73 +4649,73 @@
           "card": "Nightshade",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Giving Tree",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Faerie Queen",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Mech-a-Man",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Mr. Fox",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Fae Familiar",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Faerie Godfather",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Lance A Little",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Leapfrog",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Al-mi'raj",
           "freq": 1,
           "n": 4,
-          "pct": 25.0
+          "pct": 25
         },
         {
           "card": "Aladdin",
           "freq": 1,
           "n": 4,
-          "pct": 25.0
+          "pct": 25
         }
       ],
       "players": [
@@ -4852,73 +4852,73 @@
           "card": "Fortune Teller",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Perseus",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Young Hercules",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fenrir",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Medea in a Tavern",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Orion, the Hunter",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Tantalus",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "The Raven",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Apophis",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Bubbles",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Wishing Fish",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -5055,73 +5055,73 @@
           "card": "Fortune Teller",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Nightshade",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Cotton Candy Dandy",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Destiny",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Guinevere",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Halja",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Medea in a Tavern",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Mortakon",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Orion, the Hunter",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Plunder Penny",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Rudolph the Red",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "The Burninator",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -5258,73 +5258,73 @@
           "card": "Jaws",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Three Chef-Keteers",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Twilight Sprinkles",
           "freq": 4,
           "n": 4,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Chubby Cheep",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Lemonhead",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Monstro",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Pied Piper",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Viscount Chocolat",
           "freq": 3,
           "n": 4,
-          "pct": 75.0
+          "pct": 75
         },
         {
           "card": "Chubby Bunny",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Kool Wip",
           "freq": 2,
           "n": 4,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Candy Claws",
           "freq": 1,
           "n": 4,
-          "pct": 25.0
+          "pct": 25
         },
         {
           "card": "Caramel",
           "freq": 1,
           "n": 4,
-          "pct": 25.0
+          "pct": 25
         }
       ],
       "players": [
@@ -5461,73 +5461,73 @@
           "card": "Barrel of Monkeys",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Chip on the Ship",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mech-a-Man",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mortakon",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Raggedy Ann",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Space Ranger Woody",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Black Hole",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Brick Monster",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Busted Bot",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Party Pinata",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Ace of Hearts",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Beanie Baby",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         }
       ],
       "players": [
@@ -5646,73 +5646,73 @@
           "card": "Gingerbread Witch",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Keeb",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Lance A Little",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Twilight Sprinkles",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Candy Claws",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Chubby Cheep",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Jaws",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Knight of the Holy Cane",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Oracle of Fortunes",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Rollo",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "The Candy Cane Crook",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         }
       ],
       "players": [
@@ -5831,73 +5831,73 @@
           "card": "Crab Dragoon",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Perseus",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Young Hercules",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Medea in a Tavern",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Nuada, Radiant King",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Orion, the Hunter",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Orpheus",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "The Raven",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Astral Navigator",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Baron Bok",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Bubbles",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         }
       ],
       "players": [
@@ -6016,73 +6016,73 @@
           "card": "Nutty Pirates",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Plunder Penny",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Wink",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Ace of Hearts",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Apophis",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Barbosa",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Blackbeard",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Calypso",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Chaos",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Cherry Topples",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Cotton Candy Dandy",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         }
       ],
       "players": [
@@ -6201,73 +6201,73 @@
           "card": "Cotton Candy Dandy",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Gingerbread Witch",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Kool Wip",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Sour Patch Kid",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Viscount Chocolat",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Cherry Topples",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Jelly-ton",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Jumping Jelly Beans",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Lollipop Faerie",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Pretty Patissier",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "The Three Chef-Keteers",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Twilight Sprinkles",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         }
       ],
       "players": [
@@ -6386,73 +6386,73 @@
           "card": "Cherry Topples",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Gingerbread Witch",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Gummy Wyrm",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Jelly-ton",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Knight of the Holy Cane",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Kool Wip",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Lollipop Faerie",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Twilight Sprinkles",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pretty Patissier",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Candy Apple Tree",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Catatouille",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Chubby Bunny",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         }
       ],
       "players": [
@@ -6571,73 +6571,73 @@
           "card": "Apophis",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Crab Dragoon",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mr. Fox",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Nemean Lion",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Baron Bok",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Fenrir",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Old Coyote",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Orion, the Hunter",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "The Raven",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Wishing Fish",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Al-mi'raj",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Astral Navigator",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         }
       ],
       "players": [
@@ -6756,73 +6756,73 @@
           "card": "Chaos",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Elm Minster",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mirror Mage",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Morgan Le Fae",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Nightshade",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Plunder Penny",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Aladdin",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Calypso",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Prospero",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Rudolph the Red",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "The Fates",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Cherry Topples",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         }
       ],
       "players": [
@@ -6941,73 +6941,73 @@
           "card": "Lance A Little",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 3,
           "n": 3,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Knight of the Holy Cane",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Mirror Mage",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Netherbinder",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Pretty Patissier",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Catatouille",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Cherry Topples",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Cotton Candy Dandy",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Gummy Wyrm",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         }
       ],
       "players": [
@@ -7126,73 +7126,73 @@
           "card": "Cotton Candy Dandy",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Mr. Fox",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Oracle of Fortunes",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 2,
           "n": 3,
-          "pct": 67.0
+          "pct": 67
         },
         {
           "card": "Al-mi'raj",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Catatouille",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Chubby Cheep",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Crab Dragoon",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Doopity Doo",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Fenrir",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         },
         {
           "card": "Gingerbread Witch",
           "freq": 1,
           "n": 3,
-          "pct": 33.0
+          "pct": 33
         }
       ],
       "players": [
@@ -7311,73 +7311,73 @@
           "card": "Crystal",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fae Familiar",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Fates",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Al-mi'raj",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Calypso",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Chaos",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Faerie Queen",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Fortune Teller",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Fun Gal",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Genie of the Lamp",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Halja",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Mirror Mage",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -7478,73 +7478,73 @@
           "card": "Fortune Teller",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Medea in a Tavern",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Nuada, Radiant King",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Orion, the Hunter",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Orpheus",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Perseus",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Tantalus",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Raven",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Young Hercules",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Bubbles",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "The Sour Patch Kid",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -7645,73 +7645,73 @@
           "card": "Wormscale Tinkerer",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Young Hercules",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Barbosa",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Blackbeard",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Fortune Teller",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Hercules",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Innkeeper",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Jelly Roger",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Maverick & Icewing",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Mech-a-Man",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -7812,73 +7812,73 @@
           "card": "Destiny",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fortune Teller",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Guinevere",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Maverick & Icewing",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mortakon",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Rollo",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Burninator",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Young Hercules",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Ace of Hearts",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Mech-a-Man",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -7979,73 +7979,73 @@
           "card": "Eros",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Nuada, Radiant King",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Young Hercules",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Baron Bok",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Fortune Teller",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Maverick & Icewing",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Medea in a Tavern",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Mr. Fox",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Nemean Lion",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -8146,73 +8146,73 @@
           "card": "Aladdin",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Beanie Baby",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Maverick & Icewing",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mechanical Dragon",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Thunder of Dragons",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Ace of Hearts",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Black Hole",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Combustible Dragon",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Flopsy",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Frog Prince",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Lance A Little",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -8313,73 +8313,73 @@
           "card": "Lance A Little",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mr. Fox",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Fates",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Apophis",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Chaos",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Cherry Topples",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Crystal",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Fae Familiar",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -8480,73 +8480,73 @@
           "card": "Ace of Hearts",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Flopsy",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Maverick & Icewing",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mr. Fox",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Faerie Queen",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Mephisto",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Mirror Mage",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Oracle of Fortunes",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -8647,73 +8647,73 @@
           "card": "Gingerbread Witch",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Gummy Wyrm",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Jaws",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Kool Wip",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Licorice",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Lollipop Faerie",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Sour Patch Kid",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Twilight Sprinkles",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Candy Apple Tree",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Catatouille",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Cherry Topples",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Knight of the Holy Cane",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -8814,73 +8814,73 @@
           "card": "Cherry Topples",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Gingerbread Witch",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Kool Wip",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pixie",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Three Chef-Keteers",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Candy Claws",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Caramel",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Cotton Candy Dandy",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Jaws",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Jumping Jelly Beans",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Lemonhead",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Lollipop Faerie",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -8981,73 +8981,73 @@
           "card": "Chaos",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Candy Apple Tree",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Candy Claws",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Cherry Topples",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Cotton Candy Dandy",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Crystal",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Elm Minster",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Fae Familiar",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Fortune Teller",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Gingerbread Witch",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Halja",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Jelly-ton",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -9148,73 +9148,73 @@
           "card": "Miseria",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mr. Fox",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Burninator",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Flopsy",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Gulliver",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Mech-a-Man",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Mortakon",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Mysterio, the Great and Powerful",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Orion, the Hunter",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Raggedy Ann",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -9315,73 +9315,73 @@
           "card": "Caramel",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Cherry Topples",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Chubby Cheep",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Crab Dragoon",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Doopity Doo",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Gingerbread Witch",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Gulliver",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Gummy Wyrm",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Jelly-ton",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Jumping Jelly Beans",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Lemonhead",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -9482,73 +9482,73 @@
           "card": "Ptah",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Burninator",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Apophis",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Combustible Dragon",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Crab Dragoon",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Ditto",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Eros",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Faerie Queen",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Fortune Teller",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Maverick & Icewing",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -9649,73 +9649,73 @@
           "card": "Friendly Spirit",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pisces",
           "freq": 2,
           "n": 2,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Catatouille",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Chaos",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Cherry Topples",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Chubby Bunny",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Chubby Cheep",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Daedalus",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Dastardly Spirit",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Fae Familiar",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Faerie Godfather",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         },
         {
           "card": "Faerie Queen",
           "freq": 1,
           "n": 2,
-          "pct": 50.0
+          "pct": 50
         }
       ],
       "players": [
@@ -9816,73 +9816,73 @@
           "card": "Apophis",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Bubbles",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fenrir",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fortune Teller",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Medea in a Tavern",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Orion, the Hunter",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Orpheus",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Perseus",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Ptah",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Raven",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Young Hercules",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -9965,73 +9965,73 @@
           "card": "Anubis",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Astral Navigator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Baron Bok",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fortune Teller",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Lance A Little",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mech-a-Man",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mortakon",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Wicked Witch",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Young Hercules",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -10114,73 +10114,73 @@
           "card": "Astral Navigator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Baron Bok",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Combustible Dragon",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Eros",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mech-a-Man",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mechanical Dragon",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mortakon",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Burninator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Fates",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -10263,73 +10263,73 @@
           "card": "Astral Navigator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Baron Bok",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Eros",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mischief",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mr. Fox",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Smug",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Snapping Hydra",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Burninator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -10412,73 +10412,73 @@
           "card": "Astral Navigator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Baron Bok",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Barrel of Monkeys",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Brick Monster",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Ditto",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fortune Teller",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Medea in a Tavern",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Morgan Le Fae",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mortakon",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Ptah",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Raggedy Ann",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -10561,73 +10561,73 @@
           "card": "Ace of Hearts",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Maverick & Icewing",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mr. Fox",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pisces",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Rollo",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Scale-a-tor",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Burninator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Toto",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Wink",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -10710,73 +10710,73 @@
           "card": "Aladdin",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Calypso",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Chaos",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Elm Minster",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fae Familiar",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Genie of the Lamp",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Morgan Le Fae",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Nightshade",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Plunder Penny",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Prospero",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Rudolph the Red",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -10859,73 +10859,73 @@
           "card": "Candy Apple Tree",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Cotton Candy Dandy",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Doopity Doo",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Keeb",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Knight of the Holy Cane",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Kool Wip",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Lemonhead",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Licorice",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Lollipop Faerie",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pixie",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Candy Cane Crook",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Twilight Sprinkles",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -11008,73 +11008,73 @@
           "card": "Charlotte",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Faerie Queen",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Flopsy",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Frog Prince",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mimic",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Monstro",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Morgan Le Fae",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pied Piper",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pisces",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Toto",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Tsarmina, the Tyrant",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Wink",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -11157,73 +11157,73 @@
           "card": "Al-mi'raj",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Astral Navigator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Baron Bok",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fortune Teller",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Lance A Little",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Maverick & Icewing",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mech-a-Man",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mortakon",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Burninator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -11306,73 +11306,73 @@
           "card": "Al-mi'raj",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Beanie Baby",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Leapfrog",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miss Muffet",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Monstro",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pied Piper",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Snapping Hydra",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Giving Tree",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Rat King",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Tsarmina, the Tyrant",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Underdog",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -11455,73 +11455,73 @@
           "card": "Astral Navigator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Baron Bok",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fortune Teller",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mortakon",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mr. Fox",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Orion, the Hunter",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Perseus",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Sigrun, Valkyrie Queen",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Huntsman",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Young Hercules",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -11604,73 +11604,73 @@
           "card": "Aladdin",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Crystal",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Guinevere",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Maverick & Icewing",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Medea in a Tavern",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mirror Mage",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Monstro",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mr. Fox",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Prospero",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Rollo",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Tsarmina, the Tyrant",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -11753,73 +11753,73 @@
           "card": "Ace of Hearts",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Anubis",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Astral Navigator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Baron Bok",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Destiny",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fortune Teller",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Maverick & Icewing",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mortakon",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mr. Fox",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Burninator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -11902,73 +11902,73 @@
           "card": "Astral Navigator",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Barbosa",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Barrel of Monkeys",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Blackbeard",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Calypso",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Innkeeper",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Nutty Pirates",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pirate King",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pirate Prince",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Sailor Moonshine",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Huntsman",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Weird Beard",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -12051,73 +12051,73 @@
           "card": "Ace of Hearts",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Barrel of Monkeys",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Brick Monster",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Busted Bot",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Chip on the Ship",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Glory Seeker",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mech-a-Man",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mortakon",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Party Pinata",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Raggedy Ann",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Sir Francis Drake",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Space Ranger Woody",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -12200,73 +12200,73 @@
           "card": "Daedalus",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Flopsy",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Frog Prince",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Hercules",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Maverick & Icewing",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mechanical Dragon",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mirror Mage",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mysterio, the Great and Powerful",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Smug",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Fates",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Thunder of Dragons",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Toadie",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -12349,73 +12349,73 @@
           "card": "Aladdin",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Cherry Topples",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Jaws",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Keeb",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Kool Wip",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Lance A Little",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pixie",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Candy Cane Crook",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Twilight Sprinkles",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Viscount Chocolat",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Wormscale Tinkerer",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -12498,73 +12498,73 @@
           "card": "Aladdin",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Candy Apple Tree",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Catatouille",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Cherry Topples",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Jaws",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Knight of the Holy Cane",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Lance A Little",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Miseria",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Oracle of Fortunes",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pixie",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pretty Patissier",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Sunflare Glider",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -12647,73 +12647,73 @@
           "card": "Charlotte",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Cotton Candy Dandy",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Daedalus",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Doopity Doo",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fun Gal",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Keeb",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Lollipop Faerie",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Moonshadow",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pisces",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Pixie",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Prickles",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Tsarmina, the Tyrant",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [
@@ -12796,73 +12796,73 @@
           "card": "Aladdin",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Calypso",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Chaos",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Elm Minster",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Fae Familiar",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Mirror Mage",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Moppet",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Morgan Le Fae",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Ogre Magi",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Plunder Penny",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "Prospero",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         },
         {
           "card": "The Rat King",
           "freq": 1,
           "n": 1,
-          "pct": 100.0
+          "pct": 100
         }
       ],
       "players": [

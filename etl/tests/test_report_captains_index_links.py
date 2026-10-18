@@ -32,3 +32,12 @@ def test_header_link_uses_canonical_home_url():
     """Header back-link points at / (../../) rather than ../../index.html."""
     assert '<a href="../../" class="event-label">' in get_html_template()
     assert 'href="../../index.html"' not in get_html_template()
+
+
+def test_report_title_leads_with_game_name():
+    """Title is 'Once Upon a Galaxy — {MONTH_YEAR} Meta Report | Galaxy Stats'.
+
+    No card/captain names (captain pages own those queries); game name leads
+    so it survives SERP truncation.
+    """
+    assert "<title>Once Upon a Galaxy — {MONTH_YEAR} Meta Report | Galaxy Stats</title>" in get_html_template()

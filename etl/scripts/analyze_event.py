@@ -58,6 +58,15 @@ def load_data(event_id: str, dist_dir: Path) -> tuple[dict, dict, dict]:
     return event_data, cards_map, captains_map
 
 
+def _pct(freq: int, n: int) -> int:
+    """Percent as integer rounded half-up, matching render_captains._pct and captains.js Math.round.
+
+    Python's round() uses banker's rounding (2.5 -> 2, JS says 3), which would
+    make report Best Cards pcts disagree with captain pages at .5 boundaries.
+    """
+    return int(freq / n * 100 + 0.5)
+
+
 def build_cooccurrence_matrix(players: list[dict]) -> np.ndarray:
     """Build card co-occurrence matrix for clustering.
 
@@ -257,7 +266,7 @@ def calculate_captain_stats(
                     "card": cards_map[card],
                     "freq": int(cap_freq_arr[i]),
                     "n": n_players,
-                    "pct": round(cap_freq_arr[i] / n_players * 100, 0),
+                    "pct": _pct(int(cap_freq_arr[i]), n_players),
                 }
             )
         best12.sort(key=lambda x: -x["freq"])
