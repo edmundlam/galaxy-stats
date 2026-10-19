@@ -218,6 +218,11 @@ def _head(title: str, description: str, canonical: str, asset_prefix: str, og_im
 <meta name="description" content="{escape(description)}">
 <link rel="canonical" href="{escape(canonical)}">
 <meta name="robots" content="index, follow">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#1c1747">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Galaxy Stats">
 <meta property="og:title" content="{escape(title)}">
@@ -332,7 +337,7 @@ def render_captain_page(
         description,
         canonical,
         "../../",
-        og_image=f"{base_url}/assets/captains-img/{image}" if image else None,
+        og_image=f"{base_url}/assets/captains-img/{image}" if image else f"{base_url}/og-image.png",
     )
 
     header_body = """

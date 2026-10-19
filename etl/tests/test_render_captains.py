@@ -397,10 +397,23 @@ def test_captain_page_og_description_matches_meta_description(events_dir, captai
     assert f'<meta property="og:description" content="{m.group(1)}">' in html
 
 
-def test_captain_page_without_image_omits_og_image(events_dir, captains_file):
+def test_captain_page_without_image_falls_back_to_site_og_image(events_dir, captains_file):
     caps = aggregate_captains(events_dir, captains_file)
     html = render_captain_page(caps["galileo-galilei"], "https://example.com", image=None)
-    assert "og:image" not in html
+    assert '<meta property="og:image" content="https://example.com/og-image.png">' in html
+
+
+def test_captain_pages_have_icon_and_manifest_tags(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    for html in (
+        render_captain_page(caps["galileo-galilei"], "https://example.com"),
+        render_index_page(caps, "https://example.com"),
+    ):
+        assert '<link rel="icon" href="/favicon.ico" sizes="32x32">' in html
+        assert '<link rel="icon" href="/icon.svg" type="image/svg+xml">' in html
+        assert '<link rel="apple-touch-icon" href="/apple-touch-icon.png">' in html
+        assert '<link rel="manifest" href="/manifest.webmanifest">' in html
+        assert '<meta name="theme-color" content="#1c1747">' in html
 
 
 def test_index_page_has_open_graph_tags(events_dir, captains_file):
