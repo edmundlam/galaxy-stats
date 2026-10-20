@@ -214,7 +214,7 @@ function renderCaptains() {
           </div>
         `).join('')}
       </div>` :
-      '<div style="padding:16px; color:var(--muted); font-size:11px;">No decklist data available</div>';
+      '<div style="padding:16px; color:var(--muted); font-size:12px;">No decklist data available</div>';
 
     return `
       <div class="captain-card" data-archetypes="${archetypesPresent}">

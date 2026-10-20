@@ -18,7 +18,7 @@ from datetime import datetime
 from pathlib import Path
 
 # Asset version for cache busting - increment when CSS/JS changes
-ASSET_VERSION = "3"
+ASSET_VERSION = "4"
 
 
 def load_analysis(event_id: str, events_dir: Path) -> dict:
