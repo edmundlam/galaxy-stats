@@ -127,14 +127,13 @@ def get_html_template() -> str:
   <!-- CLUSTERS -->
   <div class="section" id="clusters">
     <div class="section-title">Card Archetypes</div>
-    <div class="section-desc">Archetype popularity shows which strategic approaches players brought to the event. Card clusters below show specific cards grouped by co-occurrence frequency.</div>
+    <div class="section-desc">Archetype popularity shows which strategic approaches players brought to the event. The cards below show which specific cards belong to each archetype.</div>
     <div class="bar-chart" id="archetypes-chart-container"></div>
     <div class="note">All archetypes shown by player count.</div>
 
-    <div class="section-title" style="margin-top:48px">Card Clusters</div>
-    <div class="section-desc">Cards grouped by co-occurrence frequency using hierarchical clustering. Review and adjust cluster definitions for future events as needed.</div>
+    <div class="section-title" style="margin-top:48px">Cards by Archetype</div>
+    <div class="section-desc">The specific cards that make up each archetype — curated by hand, informed by how often cards appear together in winning decks.</div>
     <div class="clusters-grid" id="clusters-container"></div>
-    <div class="note">Cards are grouped based on how often they appear together in winning decks. Cluster labels are derived from data.</div>
   </div>
 
   <!-- CAPTAINS -->

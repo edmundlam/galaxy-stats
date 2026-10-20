@@ -88,7 +88,7 @@
     </div>
     <ul>
       <li>Card popularity across the meta</li>
-      <li>Natural card archetypes through clustering</li>
+      <li>Curated card archetypes</li>
       <li>Captain-specific synergies and signatures</li>
       <li>Optimal deck building recommendations</li>
     </ul>
@@ -100,21 +100,21 @@
     <div class="card">
       <div class="card-title">Data Collection</div>
       <div class="card-content">
-        We parse public tournament results from galaxy.fun, extracting usernames, captains, and winning deck compositions. Only aggregate statistics are analyzed — individual player data is used solely for decklist and captain analysis.
+        We parse public tournament results from galaxy.fun, extracting usernames, captains, and winning deck compositions. The analysis is built on this published data — where individual players appear, such as the Decklists view, names and decklists are shown exactly as published by galaxy.fun.
       </div>
     </div>
 
     <div class="card">
       <div class="card-title">Card Archetypes</div>
       <div class="card-content">
-        Archetypes are manually curated based on co-occurrence patterns — cards that frequently appear together in winning decks are grouped into strategic archetypes (Treasures, Candy, Mage, Pirates, Animals, Toys, Boons, Fae). While <strong>hierarchical clustering</strong> helps identify natural groupings, the final classifications are human-defined to reflect meaningful playstyle patterns.
+        Card archetypes are <strong>curated by hand</strong>, informed by clustering of which cards appear together in winning decks, and kept stable across events (Treasures, Candy, Mage, Pirates, Animals, Toys, Boons, Fae) so monthly reports stay comparable.
       </div>
     </div>
 
     <div class="card">
       <div class="card-title">Captain Analysis — Lift</div>
       <div class="card-content">
-        <strong>Lift</strong> measures which cards are over-represented with specific captains. It compares how often a card appears with a captain versus how often it appears overall. A lift of 2.0× means the card appears twice as often with this captain than expected. This reveals each captain's unique "signature cards."
+        <strong>Lift</strong> measures which cards are over-represented with specific captains. It compares how often a card appears with a captain versus how often it appears overall. A lift of 2.0× means the card appears twice as often with this captain than expected. This reveals each captain's unique "signature cards" — reports show the top 8 per captain. Captains with fewer than 5 finishers are flagged; treat their data cautiously.
       </div>
     </div>
 
@@ -129,10 +129,19 @@
   <div class="section">
     <div class="section-title">What You'll Find in Reports</div>
     <div class="card-content">
-      <p><strong>Top Cards:</strong> Overall popularity across all winning decks — these are the cards players add voluntarily on top of the default set.</p>
-      <p><strong>Card Archetypes:</strong> Natural groupings based on co-occurrence patterns, showing which cards are played together.</p>
-      <p><strong>Captain Signatures:</strong> Lift-based associations revealing unique synergies between captains and specific cards.</p>
-      <p><strong>Best Picks:</strong> Frequency-based recommendations per captain for optimal deck building.</p>
+      <p><strong>Top Cards:</strong> Card popularity across all winning decks — the cards players add voluntarily on top of the default set — plus captain popularity.</p>
+      <p><strong>Card Archetypes:</strong> Curated archetype groups with per-archetype popularity, plus the specific cards in each archetype.</p>
+      <p><strong>Captains:</strong> Per-captain analysis with three views — <strong>Best 12</strong> (most-picked cards), <strong>Decklists</strong> (individual winning decklists as published by galaxy.fun), and <strong>Signature Cards</strong> (lift-based associations revealing unique synergies).</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Captain Pages</div>
+    <div class="card-content">
+      <p>Every captain gets a <strong>dedicated page</strong> aggregating their results across all monthly events: most-played cards, signature cards, Best 12 picks, and decklists — filterable by month, with links to deck building guides where available.</p>
+      <p style="margin-top:12px; font-family:'IBM Plex Mono',monospace; font-size:12px;">
+        <a href="/captains/" style="color:var(--accent); text-decoration:none;">Browse the captains index →</a>
+      </p>
     </div>
   </div>
 
