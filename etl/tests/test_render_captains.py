@@ -366,12 +366,50 @@ def test_captain_page_without_rules_omits_line_and_guide_link(events_dir, captai
 def test_captain_page_title_includes_game_name(events_dir, captains_file):
     caps = aggregate_captains(events_dir, captains_file)
     html = render_captain_page(caps["galileo-galilei"], "https://example.com")
-    assert "<title>Galileo Galilei Deck Stats &amp; Best Cards | Once Upon a Galaxy</title>" in html
+    assert "<title>Galileo Galilei Decklists &amp; Best Cards | Once Upon a Galaxy</title>" in html
+    title = re.search(r"<title>(.*?)</title>", html).group(1)
+    assert "OUAG" not in title, "titles spell out the game; the acronym lives in descriptions/body"
 
 
 def test_index_page_title_includes_game_name(events_dir, captains_file):
     html = render_index_page(aggregate_captains(events_dir, captains_file), "https://example.com")
-    assert "<title>Captains Deck Stats | Once Upon a Galaxy</title>" in html
+    assert "<title>Best Captains &amp; Tier List | Once Upon a Galaxy</title>" in html
+
+
+def test_captain_page_description_mentions_decklists_and_ouag(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    desc = re.search(r'<meta name="description" content="([^"]+)">', html).group(1)
+    assert desc == (
+        "Galileo Galilei winning decklists and best cards from Once Upon a Galaxy (OUAG) "
+        "monthly tournaments: 3 winning decks across 2 months."
+    )
+
+
+def test_captain_page_intro_prose_with_data(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    body = html.split("<body>", 1)[1]
+    assert "Galileo Galilei has 3 winning decklists across 2 Once Upon a Galaxy (OUAG) monthly tournaments." in body
+    assert "Most-played cards: Card A (100%)" in body
+
+
+def test_captain_page_intro_prose_skipped_when_empty(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["loki"], "https://example.com")
+    assert "winning decklists across" not in html
+
+
+def test_index_h1_and_description_target_tier_list_searches(events_dir, captains_file):
+    html = render_index_page(aggregate_captains(events_dir, captains_file), "https://example.com")
+    body = html.split("<body>", 1)[1]
+    assert "<h1>Captain Tier List</h1>" in body
+    assert "Best Once Upon a Galaxy (OUAG) captains ranked by winning decks" in body
+    desc = re.search(r'<meta name="description" content="([^"]+)">', html).group(1)
+    assert desc == (
+        "Best Once Upon a Galaxy (OUAG) captains ranked by winning decks across monthly tournaments, "
+        "with decklists for every captain."
+    )
 
 
 def test_captain_page_has_open_graph_and_twitter_tags(events_dir, captains_file):
@@ -380,7 +418,7 @@ def test_captain_page_has_open_graph_and_twitter_tags(events_dir, captains_file)
     assert '<meta property="og:type" content="website">' in html
     assert '<meta property="og:site_name" content="Galaxy Stats">' in html
     assert (
-        '<meta property="og:title" content="Galileo Galilei Deck Stats &amp; Best Cards | Once Upon a Galaxy">' in html
+        '<meta property="og:title" content="Galileo Galilei Decklists &amp; Best Cards | Once Upon a Galaxy">' in html
     )
     assert '<meta property="og:url" content="https://example.com/captains/galileo-galilei/">' in html
     assert (
@@ -420,7 +458,7 @@ def test_index_page_has_open_graph_tags(events_dir, captains_file):
     html = render_index_page(aggregate_captains(events_dir, captains_file), "https://example.com")
     assert '<meta property="og:type" content="website">' in html
     assert '<meta property="og:site_name" content="Galaxy Stats">' in html
-    assert '<meta property="og:title" content="Captains Deck Stats | Once Upon a Galaxy">' in html
+    assert '<meta property="og:title" content="Best Captains &amp; Tier List | Once Upon a Galaxy">' in html
     assert '<meta property="og:url" content="https://example.com/captains/">' in html
     assert "og:image" not in html
 

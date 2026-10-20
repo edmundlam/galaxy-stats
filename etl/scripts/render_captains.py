@@ -329,11 +329,11 @@ def render_captain_page(
     )
     canonical = f"{base_url}/captains/{slug}/"
     description = (
-        f"{name} captain statistics across Once Upon a Galaxy monthly tournaments: "
-        f"{total_decks} winning decks across {len(months)} months, with best 12 cards and full decklists."
+        f"{name} winning decklists and best cards from Once Upon a Galaxy (OUAG) "
+        f"monthly tournaments: {total_decks} winning decks across {len(months)} months."
     )
     head = _head(
-        f"{name} Deck Stats & Best Cards | Once Upon a Galaxy",
+        f"{name} Decklists & Best Cards | Once Upon a Galaxy",
         description,
         canonical,
         "../../",
@@ -351,7 +351,7 @@ def render_captain_page(
     rules_line = f'\n    <div class="rules-line">{escape(rules).replace("\n", "<br>")}</div>' if rules else ""
     title_cols = f"""
     <h1>{escape(name)}</h1>
-    <div class="subtitle">Captain stats · <a href="../">all captains</a>{guide_link}</div>{rules_line}
+    <div class="subtitle">Winning decklists &amp; best cards · Once Upon a Galaxy (OUAG) · <a href="../">all captains</a>{guide_link}</div>{rules_line}
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">{total_decks}</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">{len(months)}</div><div class="stat-label">Months</div></div>
@@ -385,9 +385,18 @@ def render_captain_page(
             f'<td class="num">{r["pct"]}%</td></tr>'
             for r in compute_best12(all_decks)
         )
+        top_cards = ", ".join(f"{r['card']} ({r['pct']}%)" for r in compute_best12(all_decks)[:5])
+        deck_word = "decklist" if total_decks == 1 else "decklists"
+        tournament_word = "tournament" if len(months) == 1 else "tournaments"
+        intro = (
+            f'<p class="section-desc">{escape(name)} has {total_decks} winning {deck_word} across '
+            f"{len(months)} Once Upon a Galaxy (OUAG) monthly {tournament_word}. "
+            f"Most-played cards: {escape(top_cards)}.</p>"
+        )
         body = f"""
 <main>
   <div class="section active">
+    {intro}
     <h2 class="section-title">Best Cards</h2>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
@@ -444,9 +453,9 @@ def render_index_page(captains: dict[str, dict], base_url: str) -> str:
     """
     canonical = f"{base_url}/captains/"
     head = _head(
-        "Captains Deck Stats | Once Upon a Galaxy",
-        "All Once Upon a Galaxy captains with monthly tournament statistics: winning deck counts, "
-        "best 12 cards, and full decklists per captain.",
+        "Best Captains & Tier List | Once Upon a Galaxy",
+        "Best Once Upon a Galaxy (OUAG) captains ranked by winning decks across monthly tournaments, "
+        "with decklists for every captain.",
         canonical,
         "../",
     )
@@ -472,8 +481,8 @@ def render_index_page(captains: dict[str, dict], base_url: str) -> str:
 <body>
 <header>
   <a href="../" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
-  <h1>Captains</h1>
-  <div class="subtitle">{len(captains)} captains · click a column to sort</div>
+  <h1>Captain Tier List</h1>
+  <div class="subtitle">Best Once Upon a Galaxy (OUAG) captains ranked by winning decks · click a column to sort</div>
 </header>
 <main>
   <div class="section active">
