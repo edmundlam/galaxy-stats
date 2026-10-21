@@ -35,18 +35,41 @@ function sortTable(th) {
 document.querySelectorAll('th[data-sort]').forEach(th =>
   th.addEventListener('click', () => sortTable(th)));
 
-// Deck-list filtering (#deck-filter hides rows whose text doesn't match)
+// Deck-list filtering: archetype chips AND the text filter hide non-matching
+// <details> rows. Month chips don't apply here (they drive Best Cards only).
 let deckFilterTracked = false;
 const deckFilter = document.getElementById('deck-filter');
+let activeArch = '';
+function applyDeckFilters() {
+  const q = deckFilter ? deckFilter.value.trim().toLowerCase() : '';
+  document.querySelectorAll('#deck-list details.deck').forEach(d => {
+    const okArch = !activeArch || d.dataset.archetype === activeArch;
+    const okText = !q || d.textContent.toLowerCase().includes(q);
+    d.hidden = !(okArch && okText);
+  });
+}
 if (deckFilter) {
   deckFilter.addEventListener('input', () => {
     if (!deckFilterTracked) { deckFilterTracked = true; trackEvt('deck-filter'); }
-    const q = deckFilter.value.toLowerCase();
-    document.querySelectorAll('#deck-table tbody tr').forEach(tr => {
-      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
-    });
+    applyDeckFilters();
   });
 }
+document.querySelectorAll('#arch-filter .arch-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    activeArch = chip.dataset.arch || '';
+    document.querySelectorAll('#arch-filter .arch-chip').forEach(c =>
+      c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    applyDeckFilters();
+    trackEvt('deck-archetype-filter', { archetype: activeArch || 'all' });
+  });
+});
+// <details> toggles don't bubble; capture-phase listener catches every open
+document.addEventListener('toggle', e => {
+  const d = e.target;
+  if (d.matches?.('details.deck') && d.open) {
+    trackEvt('decklist-open', { archetype: d.dataset.archetype });
+  }
+}, true);
 
 // Best Cards table: recompute from raw decks of the checked months.
 // Mirrors etl/scripts/analyze_event.py calculate_captain_stats: presence-count per

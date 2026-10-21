@@ -62,6 +62,34 @@ EXTRA_CSS = """
   .captain-portrait { width:130px; height:auto; flex:none; aspect-ratio:300/453;
                       filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
   h2.section-title { margin-top:0; }
+  /* Accordion decklist */
+  #deck-list { display:flex; flex-direction:column; gap:4px; max-width:900px; }
+  #deck-list [hidden] { display:none !important; }
+  details.deck { border:1px solid var(--border); border-radius:2px; background:var(--surface); overflow:hidden; }
+  details.deck summary { display:flex; align-items:center; gap:8px; min-height:44px; padding:0 12px;
+                         cursor:pointer; list-style:none; transition:background 0.15s; }
+  details.deck summary::-webkit-details-marker { display:none; }
+  details.deck summary:hover { background:#1e2230; }
+  .deck .mo { flex:none; width:46px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#9a9ca8; }
+  .deck .mo a { color:#9a9ca8; }
+  .deck .pl { flex:1; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:12px; overflow-wrap:anywhere; }
+  .deck .tag { flex:none; }
+  .chev { flex:none; transition:transform 0.15s; }
+  details[open] .chev { transform:rotate(90deg); }
+  .dk { display:flex; flex-wrap:wrap; gap:4px; padding:10px 12px; border-top:1px solid var(--border); }
+  .dk .deck-pill { font-size:11px; background:var(--surface2); border:1px solid var(--border);
+                   border-bottom-style:dotted; }
+  #arch-filter { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+  .arch-chip { min-height:44px; padding:0 12px; font-family:'IBM Plex Mono',monospace; font-size:10px;
+               letter-spacing:1px; text-transform:uppercase; color:#9a9ca8; background:var(--surface2);
+               border:1px solid var(--border); border-radius:2px; cursor:pointer; transition:all 0.15s; }
+  .arch-chip[aria-pressed="true"] { color:var(--accent); background:rgba(200,169,110,0.08);
+                                    border-color:rgba(200,169,110,0.4); }
+  .arch-chip:hover { color:var(--text); }
+  .filter-input { box-sizing:border-box; width:100%; min-height:44px; margin:8px 0 14px; padding:0 12px;
+                  font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text);
+                  background:var(--surface); border:1px solid var(--border); border-radius:2px; }
+  .filter-input::placeholder { color:#9a9ca8; }
 """
 
 
@@ -235,46 +263,100 @@ def _head(title: str, description: str, canonical: str, asset_prefix: str, og_im
 <script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="9d92bc0f-3019-480b-b295-2e79921d2792" data-domains="www.galaxy-stats.com"></script>"""
 
 
-def _deck_rows(captain: dict, report_ids: set[str] | None = None, card_slugs: dict[str, str] | None = None) -> str:
-    """Render static decklist table rows for every winning deck.
+CHEVRON_SVG = (
+    '<svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" '
+    'stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg>'
+)
 
-    Month cells link to the event report; months without a published report
-    stay plain text (all months link when report_ids is None). Card pills link
-    to guide.galaxy.fun when the card's slug is known, staying plain otherwise.
+
+def _deck_rows(
+    captain: dict,
+    report_ids: set[str] | None = None,
+    card_slugs: dict[str, str] | None = None,
+    arch_colors: dict[str, str] | None = None,
+    card_colors: dict[str, str] | None = None,
+) -> str:
+    """Render static collapsed deck rows for every winning deck, newest month first.
+
+    Months link to the event report; months without a published report stay
+    plain text (all months link when report_ids is None). Archetype tags are
+    tinted from arch_colors (fringe gray fallback); card pills link to
+    guide.galaxy.fun when the slug is known and carry their type color.
 
     Args:
         captain: Aggregated captain dict
         report_ids: Event ids with a published report, or None for all
         card_slugs: Card display name -> guide slug map, or None for plain pills
+        arch_colors: Archetype name -> hex color map, or None for all-fallback tags
+        card_colors: Card display name -> hex type color map, or None for untinted pills
 
     Returns:
-        HTML string of <tr> elements
+        HTML string of <details> elements
     """
     rows = []
-    for month in captain["months"]:
+    for month in reversed(captain["months"]):
         month_id = escape(month["id"])
         if report_ids is None or month["id"] in report_ids:
             month_html = f'<a href="../../reports/{month_id}/">{month_id}</a>'
         else:
             month_html = month_id
         for player in month["players"]:
-            pills = "".join(_card_pill(card, card_slugs) for card in player["deck"])
+            pills = "".join(_card_pill(card, card_slugs, (card_colors or {}).get(card)) for card in player["deck"])
+            arch = player["archetype"]
+            color = (arch_colors or {}).get(arch, "#7a7d8a")
             rows.append(
-                f'<tr><td data-v="{month_id}">{month_html}</td>'
-                f"<td>{escape(player['username'])}</td>"
-                f"<td>{escape(player['archetype'])}</td>"
-                f'<td><div class="deck-pills">{pills}</div></td></tr>'
+                f'<details class="deck" data-archetype="{escape(arch)}" data-month="{month_id}">\n'
+                f'      <summary><span class="mo">{month_html}</span>'
+                f'<span class="pl">{escape(player["username"])}</span>'
+                f'<span class="tag" style="background:{color}20;color:{color};border-color:{color}40">{escape(arch)}</span>'
+                f"{CHEVRON_SVG}</summary>\n"
+                f'      <div class="dk">{pills}</div>\n'
+                f"    </details>"
             )
-    return "\n        ".join(rows)
+    return "\n    ".join(rows)
 
 
-def _card_pill(card: str, card_slugs: dict[str, str] | None) -> str:
-    """Render one card as a guide link when its slug is known, else a plain pill."""
+def _card_pill(card: str, card_slugs: dict[str, str] | None, color: str | None = None) -> str:
+    """Render one card as a guide link when its slug is known, else a plain pill.
+
+    The pill is tinted with the card's type color when known.
+    """
     name = escape(card)
     slug = card_slugs.get(card) if card_slugs else None
+    style = f' style="color:{color}cc;border-color:{color}30"' if color else ""
     if slug:
-        return f'<a class="deck-pill" href="https://guide.galaxy.fun/cards/{escape(slug)}/" target="_blank" rel="noopener">{name}</a>'
-    return f'<span class="deck-pill">{name}</span>'
+        return (
+            f'<a class="deck-pill"{style} href="https://guide.galaxy.fun/cards/{escape(slug)}/"'
+            f' target="_blank" rel="noopener">{name}</a>'
+        )
+    return f'<span class="deck-pill"{style}>{name}</span>'
+
+
+def _archetype_chips(captain: dict) -> str:
+    """Render archetype filter chips for the deck list, count desc then name.
+
+    Hidden entirely (empty string) when the captain's decks span a single
+    archetype — there is nothing to filter.
+
+    Args:
+        captain: Aggregated captain dict
+
+    Returns:
+        HTML string of the #arch-filter container, or ""
+    """
+    counts: dict[str, int] = {}
+    for month in captain["months"]:
+        for player in month["players"]:
+            counts[player["archetype"]] = counts.get(player["archetype"], 0) + 1
+    if len(counts) <= 1:
+        return ""
+    total = sum(counts.values())
+    chips = [f'<button type="button" class="arch-chip" aria-pressed="true" data-arch="">All {total}</button>']
+    chips += [
+        f'<button type="button" class="arch-chip" aria-pressed="false" data-arch="{escape(arch)}">{escape(arch)} {n}</button>'
+        for arch, n in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+    ]
+    return f'<div id="arch-filter">{"".join(chips)}</div>'
 
 
 def _month_chips(month_ids: list[str], checked: set[str] | None = None) -> str:
@@ -300,6 +382,8 @@ def render_captain_page(
     report_ids: set[str] | None = None,
     image: str | None = None,
     card_slugs: dict[str, str] | None = None,
+    arch_colors: dict[str, str] | None = None,
+    card_colors: dict[str, str] | None = None,
 ) -> str:
     """Render one captain page.
 
@@ -312,6 +396,10 @@ def render_captain_page(
             or None to render the flat header
         card_slugs: Card display name -> guide slug map for deck pills,
             or None for plain pills
+        arch_colors: Archetype name -> hex color map for tags, or None for
+            all-fallback tints
+        card_colors: Card display name -> hex type color map for deck pills,
+            or None for untinted pills
 
     Returns:
         Self-contained HTML page string
@@ -412,17 +500,15 @@ def render_captain_page(
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Every winning deck across all months.</div>
+    {_archetype_chips(captain)}
     <div class="captain-filter">
       <input id="deck-filter" class="filter-input" type="text"
+        aria-label="Filter decks by player, archetype, month, or card"
         placeholder="Filter by player, archetype, month, or card…">
     </div>
-    <table class="data-table" id="deck-table">
-      <thead><tr><th data-sort="month">Month</th><th data-sort="player">Player</th>
-        <th data-sort="archetype">Archetype</th><th class="no-sort">Deck</th></tr></thead>
-      <tbody>
-        {_deck_rows(captain, report_ids, card_slugs)}
-      </tbody>
-    </table>
+    <div id="deck-list">
+      {_deck_rows(captain, report_ids, card_slugs, arch_colors, card_colors)}
+    </div>
   </div>
 </main>"""
         script = f'<script src="../../assets/captains.js?v={ASSET_VERSION}"></script>'
@@ -522,9 +608,21 @@ def main() -> int:
     )
     cards_file = dist_dir / "cards.json"
     card_slugs = {}
+    cards_map = {}
     if cards_file.exists():
         cards_map = json.loads(cards_file.read_text(encoding="utf-8"))
         card_slugs = {name: slug for slug, name in cards_map.items()}
+    # Type colors come from the archetype config (same source finalize_analysis
+    # tints report clusters with); card slugs resolve to display names via cards.json.
+    archetypes_file = script_dir.parent / "config" / "archetypes.json"
+    arch_colors: dict[str, str] = {}
+    card_colors: dict[str, str] = {}
+    if archetypes_file.exists():
+        for name, cfg in json.loads(archetypes_file.read_text(encoding="utf-8")).get("archetypes", {}).items():
+            color = cfg.get("color", "#7a7d8a")
+            arch_colors[name] = color
+            for slug in cfg.get("cards", []):
+                card_colors[cards_map.get(slug, slug)] = color
     reports_dir = docs_dir / "reports"
     report_ids = {p.parent.name for p in reports_dir.glob("*/index.html")} if reports_dir.exists() else set()
 
@@ -545,6 +643,8 @@ def main() -> int:
                 report_ids,
                 image if (images_dir / image).exists() else None,
                 card_slugs,
+                arch_colors,
+                card_colors,
             ),
             encoding="utf-8",
         )

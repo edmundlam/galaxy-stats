@@ -90,6 +90,7 @@ function docStub(overrides = {}) {
     recording(el({ dataset: { month: '2026-05' }, checked: true })),
     recording(el({ dataset: { month: '2026-06' }, checked: false })),
   ];
+  const chip = recording(el({ dataset: { arch: 'Treasures' }, setAttribute() {} }));
   const tbody = el();
   const byId = {
     'captain-data': { textContent: JSON.stringify({ name: 'Hannibal', months: [] }) },
@@ -100,7 +101,8 @@ function docStub(overrides = {}) {
     getElementById: (id) => byId[id] ?? null,
     querySelector: (sel) => sel === '#best12-table tbody' ? tbody : el(),
     querySelectorAll: (sel) => sel === '#month-filter input' ? monthInputs
-      : sel === '#month-filter input:checked' ? monthInputs.filter(cb => cb.checked) : [],
+      : sel === '#month-filter input:checked' ? monthInputs.filter(cb => cb.checked)
+      : sel === '#arch-filter .arch-chip' ? [chip] : [],
   });
   const { ctx, calls } = load(CAPTAINS_JS, doc);
 
@@ -138,7 +140,19 @@ function docStub(overrides = {}) {
   same(calls.at(-1), ['card-lookup', { captain: 'Hannibal', card: 'Kraken' }]);
   doc.listeners.click[0]({ target: { closest: () => null } });
   assert.strictEqual(calls.filter(([name]) => name === 'card-lookup').length, 1);
-  console.log('captains.js: 5 events OK');
+
+  // accordion row open fires decklist-open via the capture-phase toggle listener
+  doc.listeners.toggle[0]({ target: el({
+    matches: (sel) => sel === 'details.deck', open: true, dataset: { archetype: 'Pirates' } }) });
+  same(calls.at(-1), ['decklist-open', { captain: 'Hannibal', archetype: 'Pirates' }]);
+  doc.listeners.toggle[0]({ target: el({
+    matches: (sel) => sel === 'details.deck', open: false, dataset: { archetype: 'Pirates' } }) });
+  assert.strictEqual(calls.filter(([name]) => name === 'decklist-open').length, 1, 'closing a row is not tracked');
+
+  // archetype chip click fires deck-archetype-filter and re-presses the chips
+  chip.listeners.click[0]();
+  same(calls.at(-1), ['deck-archetype-filter', { captain: 'Hannibal', archetype: 'Treasures' }]);
+  console.log('captains.js: 7 events OK');
 
   // prerendered Best Cards rows: init keeps the static tbody and only reveals the more button
   {

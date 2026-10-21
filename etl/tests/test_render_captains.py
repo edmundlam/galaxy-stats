@@ -147,7 +147,7 @@ def test_captain_page_embeds_payload_and_deck_rows(events_dir, captains_file):
     assert payload["slug"] == "galileo-galilei"
     assert len(payload["months"]) == 2
     for username in ("adub", "bee", "cy"):
-        assert f"<td>{username}</td>" in html
+        assert f'<span class="pl">{username}</span>' in html
     assert '<link rel="canonical" href="https://example.com/galaxy-stats/captains/galileo-galilei/">' in html
 
 
@@ -210,7 +210,6 @@ def test_captain_page_has_no_raw_json_section(events_dir, captains_file):
     for captain in (caps["galileo-galilei"], caps["loki"]):
         html = render_captain_page(captain, "https://example.com")
         assert "Raw JSON" not in html
-        assert "<details" not in html
 
 
 def test_pages_style_anchor_links_with_accent(events_dir, captains_file):
@@ -323,14 +322,14 @@ def test_captain_page_chips_stay_all_checked(events_dir, captains_file):
 def test_captain_page_month_cells_link_to_reports(events_dir, captains_file):
     html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
     for month in ("2026-01", "2026-02"):
-        assert f'<td data-v="{month}"><a href="../../reports/{month}/">{month}</a></td>' in html
+        assert f'<span class="mo"><a href="../../reports/{month}/">{month}</a></span>' in html
 
 
 def test_captain_page_month_cells_stay_plain_when_report_missing(events_dir, captains_file):
     caps = aggregate_captains(events_dir, captains_file)
     html = render_captain_page(caps["galileo-galilei"], "https://example.com", report_ids={"2026-01"})
-    assert '<td data-v="2026-01"><a href="../../reports/2026-01/">2026-01</a></td>' in html
-    assert '<td data-v="2026-02">2026-02</td>' in html
+    assert '<span class="mo"><a href="../../reports/2026-01/">2026-01</a></span>' in html
+    assert '<span class="mo">2026-02</span>' in html
 
 
 @pytest.fixture()
@@ -609,3 +608,84 @@ def test_captain_page_payload_card_slugs_cover_only_deck_cards(events_dir, capta
         card_slugs={"Card A": "card_a", "Card F": "card_f", "Unrelated": "unrelated"},
     )
     assert extract_payload(html)["cardSlugs"] == {"Card A": "card_a", "Card F": "card_f"}
+
+
+# --- Accordion decklist (captain-page-accordion-implementation.md) ---
+
+ARCH_COLORS = {"Treasures": "#c8a96e", "Candy": "#e87d9e", "Mage": "#9e6ec8", "Toys": "#5a5d6a"}
+
+
+def test_deck_list_replaces_table_with_collapsed_details_rows(events_dir, captains_file):
+    html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
+    assert 'id="deck-list"' in html
+    assert 'id="deck-table"' not in html, "the sortable deck table is dropped with the redesign"
+    assert html.count("<details") == 3, "one collapsed row per deck, all server-rendered"
+    assert '<details class="deck" data-archetype="Treasures" data-month="2026-01">' in html
+    summary = re.search(r"<summary>(.*?)</summary>", html, re.DOTALL).group(1)
+    for part in ('class="mo"', 'class="pl"', 'class="tag"', 'class="chev"', 'aria-hidden="true"'):
+        assert part in summary
+    assert '<div class="dk">' in html
+
+
+def test_deck_list_orders_newest_month_first_keeps_within_month_order(events_dir, captains_file):
+    html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
+    deck_list = html.split('id="deck-list"', 1)[1]  # skip the payload JSON, which stays oldest-first
+    assert deck_list.index('data-month="2026-02"') < deck_list.index('data-month="2026-01"')
+    assert deck_list.index('<span class="pl">adub</span>') < deck_list.index('<span class="pl">bee</span>')
+
+
+def test_archetype_chips_render_with_counts(events_dir, captains_file):
+    html = render_captain_page(
+        aggregate_captains(events_dir, captains_file)["galileo-galilei"],
+        "https://example.com",
+        arch_colors=ARCH_COLORS,
+    )
+    assert 'id="arch-filter"' in html
+    all_chip = re.compile(r'<button type="button" class="arch-chip[^"]*" aria-pressed="true"[^>]*>\s*All 3\s*</button>')
+    assert all_chip.search(html)
+    for label in ("Treasures 1", "Candy 1", "Mage 1"):
+        assert f">{label}</button>" in html
+    assert html.count('class="arch-chip') == 4
+    assert html.count('aria-pressed="false"') == 3, "only the All chip starts active"
+
+
+def test_archetype_chips_hidden_for_single_archetype_captain():
+    html = render_captain_page(forty_deck_captain(), "https://example.com")
+    assert 'id="arch-filter"' not in html
+
+
+def test_tags_tinted_from_archetype_colors(events_dir, captains_file):
+    html = render_captain_page(
+        aggregate_captains(events_dir, captains_file)["galileo-galilei"],
+        "https://example.com",
+        arch_colors=ARCH_COLORS,
+    )
+    assert 'style="background:#c8a96e20;color:#c8a96e;border-color:#c8a96e40"' in html
+    assert 'style="background:#e87d9e20;color:#e87d9e;border-color:#e87d9e40"' in html
+
+
+def test_tags_fall_back_to_fringe_gray_when_archetype_unknown(events_dir, captains_file):
+    html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
+    assert 'style="background:#7a7d8a20;color:#7a7d8a;border-color:#7a7d8a40"' in html
+
+
+def test_deck_pills_colored_by_card_type(events_dir, captains_file):
+    html = render_captain_page(
+        aggregate_captains(events_dir, captains_file)["galileo-galilei"],
+        "https://example.com",
+        card_colors={"Card A": "#c8a96e"},
+    )
+    assert 'style="color:#c8a96ecc;border-color:#c8a96e30"' in html
+    colored = re.search(r'style="color:#c8a96ecc[^"]*"[^>]*>([^<]+)<', html).group(1)
+    assert colored == "Card A", "only cards with a known type get tinted"
+
+
+def test_deck_pills_untinted_without_card_colors(events_dir, captains_file):
+    html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
+    assert '<span class="deck-pill">Card A</span>' in html
+
+
+def test_deck_filter_input_has_aria_label(events_dir, captains_file):
+    html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
+    assert 'id="deck-filter"' in html
+    assert 'aria-label="Filter decks by player, archetype, month, or card"' in html

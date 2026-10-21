@@ -55,6 +55,34 @@
   .captain-portrait { width:130px; height:auto; flex:none; aspect-ratio:300/453;
                       filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
   h2.section-title { margin-top:0; }
+  /* Accordion decklist */
+  #deck-list { display:flex; flex-direction:column; gap:4px; max-width:900px; }
+  #deck-list [hidden] { display:none !important; }
+  details.deck { border:1px solid var(--border); border-radius:2px; background:var(--surface); overflow:hidden; }
+  details.deck summary { display:flex; align-items:center; gap:8px; min-height:44px; padding:0 12px;
+                         cursor:pointer; list-style:none; transition:background 0.15s; }
+  details.deck summary::-webkit-details-marker { display:none; }
+  details.deck summary:hover { background:#1e2230; }
+  .deck .mo { flex:none; width:46px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#9a9ca8; }
+  .deck .mo a { color:#9a9ca8; }
+  .deck .pl { flex:1; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:12px; overflow-wrap:anywhere; }
+  .deck .tag { flex:none; }
+  .chev { flex:none; transition:transform 0.15s; }
+  details[open] .chev { transform:rotate(90deg); }
+  .dk { display:flex; flex-wrap:wrap; gap:4px; padding:10px 12px; border-top:1px solid var(--border); }
+  .dk .deck-pill { font-size:11px; background:var(--surface2); border:1px solid var(--border);
+                   border-bottom-style:dotted; }
+  #arch-filter { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+  .arch-chip { min-height:44px; padding:0 12px; font-family:'IBM Plex Mono',monospace; font-size:10px;
+               letter-spacing:1px; text-transform:uppercase; color:#9a9ca8; background:var(--surface2);
+               border:1px solid var(--border); border-radius:2px; cursor:pointer; transition:all 0.15s; }
+  .arch-chip[aria-pressed="true"] { color:var(--accent); background:rgba(200,169,110,0.08);
+                                    border-color:rgba(200,169,110,0.4); }
+  .arch-chip:hover { color:var(--text); }
+  .filter-input { box-sizing:border-box; width:100%; min-height:44px; margin:8px 0 14px; padding:0 12px;
+                  font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text);
+                  background:var(--surface); border:1px solid var(--border); border-radius:2px; }
+  .filter-input::placeholder { color:#9a9ca8; }
 </style>
 <script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="9d92bc0f-3019-480b-b295-2e79921d2792" data-domains="www.galaxy-stats.com"></script>
 </head>
