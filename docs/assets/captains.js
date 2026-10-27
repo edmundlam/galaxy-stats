@@ -87,25 +87,28 @@ function selectedDecks(captain) {
     .map(cb => cb.dataset.month);
   return captain.months.filter(m => selected.includes(m.id)).flatMap(m => m.players.map(p => p.deck));
 }
-// Card cells link to the guide when the payload carries a slug (parity with the
-// prerendered rows from render_captains.py _card_pill).
-function cardCell(card, cardSlugs) {
+// Card cells link to the guide when the payload carries a slug and take their
+// type tint from cardColors (parity with _card_pill in render_captains.py).
+function cardCell(card, cardSlugs, cardColors) {
   const td = document.createElement('td');
   const slug = cardSlugs?.[card];
+  const color = cardColors?.[card];
+  let pill;
   if (slug) {
-    const a = document.createElement('a');
-    a.className = 'deck-pill';
-    a.href = 'https://guide.galaxy.fun/cards/' + slug + '/';
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.textContent = card;
-    td.appendChild(a);
+    pill = document.createElement('a');
+    pill.href = 'https://guide.galaxy.fun/cards/' + slug + '/';
+    pill.target = '_blank';
+    pill.rel = 'noopener';
   } else {
-    const span = document.createElement('span');
-    span.className = 'deck-pill';
-    span.textContent = card;
-    td.appendChild(span);
+    pill = document.createElement('span');
   }
+  pill.className = 'deck-pill';
+  if (color) {
+    pill.style.color = color + 'cc';
+    pill.style.borderColor = color + '30';
+  }
+  pill.textContent = card;
+  td.appendChild(pill);
   return td;
 }
 function updateMoreBtn(rankedLength) {
@@ -130,7 +133,7 @@ function renderBest12() {
     const tdPct = document.createElement('td');
     tdPct.className = 'num';
     tdPct.textContent = decks.length ? Math.round(freq / decks.length * 100) + '%' : '-';
-    tr.append(cardCell(card, captain.cardSlugs), tdFreq, tdPct);
+    tr.append(cardCell(card, captain.cardSlugs, captain.cardColors), tdFreq, tdPct);
     tbody.appendChild(tr);
   });
   document.querySelector('#best12-count').textContent = decks.length;

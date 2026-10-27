@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/hecate__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=6">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=7">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:12px; }
@@ -51,6 +51,8 @@
   .header-cols { display:flex; align-items:center; gap:32px; }
   .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
                 color:var(--accent); margin-top:10px; max-width:60ch; }
+  .crumb-sep { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:3px;
+               text-transform:uppercase; color:var(--accent); }
   .rules-line::before { content:"“"; }
   .rules-line::after { content:"”"; }
   .captain-portrait { width:130px; height:auto; flex:none; aspect-ratio:300/453;
@@ -89,23 +91,22 @@
 </head>
 <body>
 <header>
-    <a href="../../" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+    <a href="../../" class="event-label">Once Upon A Galaxy · Meta Analysis</a><span class="crumb-sep"> · </span><a href="../" class="event-label">All Captains</a>
   <div class="header-cols">
     <div>
     <h1>Hecate</h1>
-    <div class="subtitle">Winning decklists &amp; best cards · Once Upon a Galaxy (OUAG) · <a href="../">all captains</a> · <a href="https://guide.galaxy.fun/cards/hecate/" target="_blank" rel="noopener">Galaxy Guide ↗</a></div>
     <div class="rules-line">Your first shop is Hecate&#x27;s Spellbook. When you replace it, cast 2 random spells.</div>
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">2</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">2</div><div class="stat-label">Months</div></div>
     </div>
     </div>
-    <img class="captain-portrait" src="../../assets/captains-img/hecate__300.webp" alt="Hecate captain card art" width="130" loading="eager">
+    <a href="https://guide.galaxy.fun/cards/hecate/" target="_blank" rel="noopener" aria-label="Hecate on Galaxy Guide"><img class="captain-portrait" src="../../assets/captains-img/hecate__300.webp" alt="Hecate captain card art" width="130" loading="eager"></a>
   </div></header>
 
 <main>
   <div class="section active">
-    <p class="section-desc">Hecate has 2 winning decklists across 2 Once Upon a Galaxy (OUAG) monthly tournaments. Most-played cards: Crystal (100%), Fortune Teller (100%), Anubis (50%), Astral Navigator (50%), Baron Bok (50%).</p>
+    <p class="section-desc">Hecate has 2 winning decklists across 2 Once Upon a Galaxy (OUAG) monthly tournaments.</p>
     <h2 class="section-title">Best Cards</h2>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
@@ -114,18 +115,18 @@
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
         <th class="num no-sort">% of <span id="best12-count">2</span> decks</th></tr></thead>
       <tbody>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/crystal/" target="_blank" rel="noopener">Crystal</a></td><td class="num">2</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/fortune_teller/" target="_blank" rel="noopener">Fortune Teller</a></td><td class="num">2</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/anubis/" target="_blank" rel="noopener">Anubis</a></td><td class="num">1</td><td class="num">50%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/astral_navigator/" target="_blank" rel="noopener">Astral Navigator</a></td><td class="num">1</td><td class="num">50%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/baron_bok/" target="_blank" rel="noopener">Baron Bok</a></td><td class="num">1</td><td class="num">50%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/calypso/" target="_blank" rel="noopener">Calypso</a></td><td class="num">1</td><td class="num">50%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/chaos/" target="_blank" rel="noopener">Chaos</a></td><td class="num">1</td><td class="num">50%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/destiny/" target="_blank" rel="noopener">Destiny</a></td><td class="num">1</td><td class="num">50%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/guinevere/" target="_blank" rel="noopener">Guinevere</a></td><td class="num">1</td><td class="num">50%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/halja/" target="_blank" rel="noopener">Halja</a></td><td class="num">1</td><td class="num">50%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/medea_in_a_tavern/" target="_blank" rel="noopener">Medea in a Tavern</a></td><td class="num">1</td><td class="num">50%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/mirror_mage/" target="_blank" rel="noopener">Mirror Mage</a></td><td class="num">1</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/crystal/" target="_blank" rel="noopener">Crystal</a></td><td class="num">2</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/fortune_teller/" target="_blank" rel="noopener">Fortune Teller</a></td><td class="num">2</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/anubis/" target="_blank" rel="noopener">Anubis</a></td><td class="num">1</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/astral_navigator/" target="_blank" rel="noopener">Astral Navigator</a></td><td class="num">1</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/baron_bok/" target="_blank" rel="noopener">Baron Bok</a></td><td class="num">1</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/calypso/" target="_blank" rel="noopener">Calypso</a></td><td class="num">1</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/chaos/" target="_blank" rel="noopener">Chaos</a></td><td class="num">1</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30" href="https://guide.galaxy.fun/cards/destiny/" target="_blank" rel="noopener">Destiny</a></td><td class="num">1</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/guinevere/" target="_blank" rel="noopener">Guinevere</a></td><td class="num">1</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/halja/" target="_blank" rel="noopener">Halja</a></td><td class="num">1</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/medea_in_a_tavern/" target="_blank" rel="noopener">Medea in a Tavern</a></td><td class="num">1</td><td class="num">50%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/mirror_mage/" target="_blank" rel="noopener">Mirror Mage</a></td><td class="num">1</td><td class="num">50%</td></tr>
       </tbody>
     </table>
     <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
@@ -141,16 +142,16 @@
     <div id="deck-list">
       <details class="deck" data-archetype="Mage" data-month="2026-08">
       <summary><span class="mo"><a href="../../reports/2026-08/">2026-08</a></span><span class="pl">Kuya_Boj</span><span class="tag" style="background:#9e6ec820;color:#9e6ec8;border-color:#9e6ec840">Mage</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
-      <div class="dk"><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/the_fates/" target="_blank" rel="noopener">The Fates</a><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/chaos/" target="_blank" rel="noopener">Chaos</a><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/fortune_teller/" target="_blank" rel="noopener">Fortune Teller</a><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/calypso/" target="_blank" rel="noopener">Calypso</a><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/moppet/" target="_blank" rel="noopener">Moppet</a><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/nightshade/" target="_blank" rel="noopener">Nightshade</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/crystal/" target="_blank" rel="noopener">Crystal</a><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/medea_in_a_tavern/" target="_blank" rel="noopener">Medea in a Tavern</a><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/mirror_mage/" target="_blank" rel="noopener">Mirror Mage</a><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/rudolph_the_red/" target="_blank" rel="noopener">Rudolph the Red</a><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/halja/" target="_blank" rel="noopener">Halja</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/ptah/" target="_blank" rel="noopener">Ptah</a></div>
+      <div class="dk"><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">The Fates</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Chaos</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Fortune Teller</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Calypso</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Moppet</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Nightshade</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Crystal</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Medea in a Tavern</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Mirror Mage</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Rudolph the Red</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Halja</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Ptah</span></div>
     </details>
     <details class="deck" data-archetype="Boons" data-month="2026-07">
       <summary><span class="mo"><a href="../../reports/2026-07/">2026-07</a></span><span class="pl">Astrid The Cat</span><span class="tag" style="background:#7b9cff20;color:#7b9cff;border-color:#7b9cff40">Boons</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
-      <div class="dk"><a class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30" href="https://guide.galaxy.fun/cards/destiny/" target="_blank" rel="noopener">Destiny</a><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/fortune_teller/" target="_blank" rel="noopener">Fortune Teller</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/miseria/" target="_blank" rel="noopener">Miseria</a><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/young_hercules/" target="_blank" rel="noopener">Young Hercules</a><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/baron_bok/" target="_blank" rel="noopener">Baron Bok</a><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/mortakon/" target="_blank" rel="noopener">Mortakon</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/mr_fox/" target="_blank" rel="noopener">Mr. Fox</a><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/astral_navigator/" target="_blank" rel="noopener">Astral Navigator</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/crystal/" target="_blank" rel="noopener">Crystal</a><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/wicked_witch/" target="_blank" rel="noopener">Wicked Witch</a><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/anubis/" target="_blank" rel="noopener">Anubis</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/guinevere/" target="_blank" rel="noopener">Guinevere</a></div>
+      <div class="dk"><span class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30">Destiny</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Fortune Teller</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Miseria</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Young Hercules</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Baron Bok</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Mortakon</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Mr. Fox</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Astral Navigator</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Crystal</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Wicked Witch</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Anubis</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Guinevere</span></div>
     </details>
     </div>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "hecate", "name": "Hecate", "months": [{"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Astrid The Cat", "archetype": "Boons", "deck": ["Destiny", "Fortune Teller", "Miseria", "Young Hercules", "Baron Bok", "Mortakon", "Mr. Fox", "Astral Navigator", "Crystal", "Wicked Witch", "Anubis", "Guinevere"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Kuya_Boj", "archetype": "Mage", "deck": ["The Fates", "Chaos", "Fortune Teller", "Calypso", "Moppet", "Nightshade", "Crystal", "Medea in a Tavern", "Mirror Mage", "Rudolph the Red", "Halja", "Ptah"]}]}], "rules": "Your first shop is Hecate's Spellbook. When you replace it, cast 2 random spells.", "cardSlugs": {"Anubis": "anubis", "Astral Navigator": "astral_navigator", "Baron Bok": "baron_bok", "Calypso": "calypso", "Chaos": "chaos", "Crystal": "crystal", "Destiny": "destiny", "Fortune Teller": "fortune_teller", "Guinevere": "guinevere", "Halja": "halja", "Medea in a Tavern": "medea_in_a_tavern", "Mirror Mage": "mirror_mage", "Miseria": "miseria", "Moppet": "moppet", "Mortakon": "mortakon", "Mr. Fox": "mr_fox", "Nightshade": "nightshade", "Ptah": "ptah", "Rudolph the Red": "rudolph_the_red", "The Fates": "the_fates", "Wicked Witch": "wicked_witch", "Young Hercules": "young_hercules"}}</script>
-<script src="../../assets/captains.js?v=6"></script>
+<script type="application/json" id="captain-data">{"slug": "hecate", "name": "Hecate", "months": [{"id": "2026-07", "date": "2026-07-17", "event": "July Monthly", "players": [{"username": "Astrid The Cat", "archetype": "Boons", "deck": ["Destiny", "Fortune Teller", "Miseria", "Young Hercules", "Baron Bok", "Mortakon", "Mr. Fox", "Astral Navigator", "Crystal", "Wicked Witch", "Anubis", "Guinevere"]}]}, {"id": "2026-08", "date": "2026-08-21", "event": "August Monthly", "players": [{"username": "Kuya_Boj", "archetype": "Mage", "deck": ["The Fates", "Chaos", "Fortune Teller", "Calypso", "Moppet", "Nightshade", "Crystal", "Medea in a Tavern", "Mirror Mage", "Rudolph the Red", "Halja", "Ptah"]}]}], "rules": "Your first shop is Hecate's Spellbook. When you replace it, cast 2 random spells.", "cardSlugs": {"Anubis": "anubis", "Astral Navigator": "astral_navigator", "Baron Bok": "baron_bok", "Calypso": "calypso", "Chaos": "chaos", "Crystal": "crystal", "Destiny": "destiny", "Fortune Teller": "fortune_teller", "Guinevere": "guinevere", "Halja": "halja", "Medea in a Tavern": "medea_in_a_tavern", "Mirror Mage": "mirror_mage", "Miseria": "miseria", "Moppet": "moppet", "Mortakon": "mortakon", "Mr. Fox": "mr_fox", "Nightshade": "nightshade", "Ptah": "ptah", "Rudolph the Red": "rudolph_the_red", "The Fates": "the_fates", "Wicked Witch": "wicked_witch", "Young Hercules": "young_hercules"}, "cardColors": {"Anubis": "#7b9cff", "Astral Navigator": "#7b9cff", "Baron Bok": "#6ec89e", "Calypso": "#9e6ec8", "Chaos": "#9e6ec8", "Crystal": "#c8a96e", "Destiny": "#d87dce", "Fortune Teller": "#7b9cff", "Guinevere": "#c8a96e", "Halja": "#9e6ec8", "Medea in a Tavern": "#9e6ec8", "Mirror Mage": "#9e6ec8", "Miseria": "#c8a96e", "Moppet": "#9e6ec8", "Mortakon": "#5a5d6a", "Mr. Fox": "#c8a96e", "Nightshade": "#9e6ec8", "Ptah": "#c8a96e", "Rudolph the Red": "#9e6ec8", "The Fates": "#9e6ec8", "Wicked Witch": "#9e6ec8", "Young Hercules": "#7b9cff"}}</script>
+<script src="../../assets/captains.js?v=7"></script>
 </body>
 </html>

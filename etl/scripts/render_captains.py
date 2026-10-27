@@ -17,7 +17,7 @@ from html import escape
 from pathlib import Path
 
 BASE_URL = "https://www.galaxy-stats.com"
-ASSET_VERSION = "6"
+ASSET_VERSION = "7"
 FONTS_HREF = (
     "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900"
     "&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
@@ -57,6 +57,8 @@ EXTRA_CSS = """
   .header-cols { display:flex; align-items:center; gap:32px; }
   .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
                 color:var(--accent); margin-top:10px; max-width:60ch; }
+  .crumb-sep { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:3px;
+               text-transform:uppercase; color:var(--accent); }
   .rules-line::before { content:"“"; }
   .rules-line::after { content:"”"; }
   .captain-portrait { width:130px; height:auto; flex:none; aspect-ratio:300/453;
@@ -272,7 +274,6 @@ CHEVRON_SVG = (
 def _deck_rows(
     captain: dict,
     report_ids: set[str] | None = None,
-    card_slugs: dict[str, str] | None = None,
     arch_colors: dict[str, str] | None = None,
     card_colors: dict[str, str] | None = None,
 ) -> str:
@@ -280,13 +281,13 @@ def _deck_rows(
 
     Months link to the event report; months without a published report stay
     plain text (all months link when report_ids is None). Archetype tags are
-    tinted from arch_colors (fringe gray fallback); card pills link to
-    guide.galaxy.fun when the slug is known and carry their type color.
+    tinted from arch_colors (fringe gray fallback); card pills are plain spans
+    tinted with their type color — guide links live in the Best Cards table
+    only, keeping outbound links per page to a handful.
 
     Args:
         captain: Aggregated captain dict
         report_ids: Event ids with a published report, or None for all
-        card_slugs: Card display name -> guide slug map, or None for plain pills
         arch_colors: Archetype name -> hex color map, or None for all-fallback tags
         card_colors: Card display name -> hex type color map, or None for untinted pills
 
@@ -301,7 +302,7 @@ def _deck_rows(
         else:
             month_html = month_id
         for player in month["players"]:
-            pills = "".join(_card_pill(card, card_slugs, (card_colors or {}).get(card)) for card in player["deck"])
+            pills = "".join(_card_pill(card, None, (card_colors or {}).get(card)) for card in player["deck"])
             arch = player["archetype"]
             color = (arch_colors or {}).get(arch, "#7a7d8a")
             rows.append(
@@ -394,8 +395,8 @@ def render_captain_page(
             only to those); None links every month
         image: Filename in docs/assets/captains-img for the header portrait,
             or None to render the flat header
-        card_slugs: Card display name -> guide slug map for deck pills,
-            or None for plain pills
+        card_slugs: Card display name -> guide slug map for the Best Cards
+            table cells, or None for plain pills
         arch_colors: Archetype name -> hex color map for tags, or None for
             all-fallback tints
         card_colors: Card display name -> hex type color map for deck pills,
@@ -410,10 +411,17 @@ def render_captain_page(
     total_decks = sum(len(m["players"]) for m in months)
     all_decks = [p["deck"] for m in months for p in m["players"]]
     slugs = card_slugs or {}
-    # cardSlugs rides in the payload so JS re-renders keep the guide links;
-    # filtered to this captain's cards to avoid embedding the full card map.
+    colors = card_colors or {}
+    # cardSlugs/cardColors ride in the payload so JS re-renders keep the guide
+    # links and tints; filtered to this captain's cards to avoid embedding the
+    # full maps.
+    deck_cards = sorted({card for d in all_decks for card in d})
     payload = serialize_payload(
-        {**captain, "cardSlugs": {c: slugs[c] for c in sorted({card for d in all_decks for card in d}) if c in slugs}}
+        {
+            **captain,
+            "cardSlugs": {c: slugs[c] for c in deck_cards if c in slugs},
+            "cardColors": {c: colors[c] for c in deck_cards if c in colors},
+        }
     )
     canonical = f"{base_url}/captains/{slug}/"
     description = (
@@ -429,25 +437,21 @@ def render_captain_page(
     )
 
     header_body = """
-    <a href="../../" class="event-label">Once Upon A Galaxy · Meta Analysis</a>"""
+    <a href="../../" class="event-label">Once Upon A Galaxy · Meta Analysis</a><span class="crumb-sep"> · </span><a href="../" class="event-label">All Captains</a>"""
     rules = captain.get("rules")
-    guide_link = (
-        f' · <a href="https://guide.galaxy.fun/cards/{slug.replace("-", "_")}/" target="_blank" rel="noopener">Galaxy Guide ↗</a>'
-        if rules
-        else ""
-    )
     rules_line = f'\n    <div class="rules-line">{escape(rules).replace("\n", "<br>")}</div>' if rules else ""
     title_cols = f"""
-    <h1>{escape(name)}</h1>
-    <div class="subtitle">Winning decklists &amp; best cards · Once Upon a Galaxy (OUAG) · <a href="../">all captains</a>{guide_link}</div>{rules_line}
+    <h1>{escape(name)}</h1>{rules_line}
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">{total_decks}</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">{len(months)}</div><div class="stat-label">Months</div></div>
     </div>"""
     if image:
         portrait = (
+            f'<a href="https://guide.galaxy.fun/cards/{slug.replace("-", "_")}/" target="_blank" rel="noopener"'
+            f' aria-label="{escape(name)} on Galaxy Guide">'
             f'<img class="captain-portrait" src="../../assets/captains-img/{escape(image)}"'
-            f' alt="{escape(name)} captain card art" width="130" loading="eager">'
+            f' alt="{escape(name)} captain card art" width="130" loading="eager"></a>'
         )
         header = f"""{header_body}
   <div class="header-cols">
@@ -468,18 +472,16 @@ def render_captain_page(
         script = ""
     else:
         best12_rows = "\n        ".join(
-            f"<tr><td>{_card_pill(r['card'], card_slugs)}</td>"
+            f"<tr><td>{_card_pill(r['card'], card_slugs, (card_colors or {}).get(r['card']))}</td>"
             f'<td class="num">{r["freq"]}</td>'
             f'<td class="num">{r["pct"]}%</td></tr>'
             for r in compute_best12(all_decks)
         )
-        top_cards = ", ".join(f"{r['card']} ({r['pct']}%)" for r in compute_best12(all_decks)[:5])
         deck_word = "decklist" if total_decks == 1 else "decklists"
         tournament_word = "tournament" if len(months) == 1 else "tournaments"
         intro = (
             f'<p class="section-desc">{escape(name)} has {total_decks} winning {deck_word} across '
-            f"{len(months)} Once Upon a Galaxy (OUAG) monthly {tournament_word}. "
-            f"Most-played cards: {escape(top_cards)}.</p>"
+            f"{len(months)} Once Upon a Galaxy (OUAG) monthly {tournament_word}.</p>"
         )
         body = f"""
 <main>
@@ -507,7 +509,7 @@ def render_captain_page(
         placeholder="Filter by player, archetype, month, or card…">
     </div>
     <div id="deck-list">
-      {_deck_rows(captain, report_ids, card_slugs, arch_colors, card_colors)}
+      {_deck_rows(captain, report_ids, arch_colors, card_colors)}
     </div>
   </div>
 </main>"""

@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/king_arthur__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=6">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=7">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:12px; }
@@ -51,6 +51,8 @@
   .header-cols { display:flex; align-items:center; gap:32px; }
   .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
                 color:var(--accent); margin-top:10px; max-width:60ch; }
+  .crumb-sep { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:3px;
+               text-transform:uppercase; color:var(--accent); }
   .rules-line::before { content:"“"; }
   .rules-line::after { content:"”"; }
   .captain-portrait { width:130px; height:auto; flex:none; aspect-ratio:300/453;
@@ -89,23 +91,22 @@
 </head>
 <body>
 <header>
-    <a href="../../" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+    <a href="../../" class="event-label">Once Upon A Galaxy · Meta Analysis</a><span class="crumb-sep"> · </span><a href="../" class="event-label">All Captains</a>
   <div class="header-cols">
     <div>
     <h1>King Arthur</h1>
-    <div class="subtitle">Winning decklists &amp; best cards · Once Upon a Galaxy (OUAG) · <a href="../">all captains</a> · <a href="https://guide.galaxy.fun/cards/king_arthur/" target="_blank" rel="noopener">Galaxy Guide ↗</a></div>
     <div class="rules-line">Heroes in your shop have +2/+1.<br>When you golden a character, double this bonus.</div>
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">Months</div></div>
     </div>
     </div>
-    <img class="captain-portrait" src="../../assets/captains-img/king_arthur__300.webp" alt="King Arthur captain card art" width="130" loading="eager">
+    <a href="https://guide.galaxy.fun/cards/king_arthur/" target="_blank" rel="noopener" aria-label="King Arthur on Galaxy Guide"><img class="captain-portrait" src="../../assets/captains-img/king_arthur__300.webp" alt="King Arthur captain card art" width="130" loading="eager"></a>
   </div></header>
 
 <main>
   <div class="section active">
-    <p class="section-desc">King Arthur has 1 winning decklist across 1 Once Upon a Galaxy (OUAG) monthly tournament. Most-played cards: Ace of Hearts (100%), Glory Seeker (100%), Guinevere (100%), Hephaestus (100%), Maverick &amp; Icewing (100%).</p>
+    <p class="section-desc">King Arthur has 1 winning decklist across 1 Once Upon a Galaxy (OUAG) monthly tournament.</p>
     <h2 class="section-title">Best Cards</h2>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
@@ -114,18 +115,18 @@
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
         <th class="num no-sort">% of <span id="best12-count">1</span> decks</th></tr></thead>
       <tbody>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/ace_of_hearts/" target="_blank" rel="noopener">Ace of Hearts</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/glory_seeker/" target="_blank" rel="noopener">Glory Seeker</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/guinevere/" target="_blank" rel="noopener">Guinevere</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/hephaestus/" target="_blank" rel="noopener">Hephaestus</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/maverick_icewing/" target="_blank" rel="noopener">Maverick &amp; Icewing</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/miseria/" target="_blank" rel="noopener">Miseria</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/mr_fox/" target="_blank" rel="noopener">Mr. Fox</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/rollo/" target="_blank" rel="noopener">Rollo</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/the_butcher/" target="_blank" rel="noopener">The Butcher</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/the_giving_tree/" target="_blank" rel="noopener">The Giving Tree</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/wicked_witch/" target="_blank" rel="noopener">Wicked Witch</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/wormscale_tinkerer/" target="_blank" rel="noopener">Wormscale Tinkerer</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/ace_of_hearts/" target="_blank" rel="noopener">Ace of Hearts</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#6e9ec8cc;border-color:#6e9ec830" href="https://guide.galaxy.fun/cards/glory_seeker/" target="_blank" rel="noopener">Glory Seeker</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/guinevere/" target="_blank" rel="noopener">Guinevere</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/hephaestus/" target="_blank" rel="noopener">Hephaestus</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/maverick_icewing/" target="_blank" rel="noopener">Maverick &amp; Icewing</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/miseria/" target="_blank" rel="noopener">Miseria</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/mr_fox/" target="_blank" rel="noopener">Mr. Fox</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/rollo/" target="_blank" rel="noopener">Rollo</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/the_butcher/" target="_blank" rel="noopener">The Butcher</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/the_giving_tree/" target="_blank" rel="noopener">The Giving Tree</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/wicked_witch/" target="_blank" rel="noopener">Wicked Witch</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/wormscale_tinkerer/" target="_blank" rel="noopener">Wormscale Tinkerer</a></td><td class="num">1</td><td class="num">100%</td></tr>
       </tbody>
     </table>
     <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
@@ -141,12 +142,12 @@
     <div id="deck-list">
       <details class="deck" data-archetype="Treasures" data-month="2026-03">
       <summary><span class="mo"><a href="../../reports/2026-03/">2026-03</a></span><span class="pl">XenoGemini</span><span class="tag" style="background:#c8a96e20;color:#c8a96e;border-color:#c8a96e40">Treasures</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
-      <div class="dk"><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/maverick_icewing/" target="_blank" rel="noopener">Maverick &amp; Icewing</a><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/wicked_witch/" target="_blank" rel="noopener">Wicked Witch</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/ace_of_hearts/" target="_blank" rel="noopener">Ace of Hearts</a><a class="deck-pill" style="color:#6e9ec8cc;border-color:#6e9ec830" href="https://guide.galaxy.fun/cards/glory_seeker/" target="_blank" rel="noopener">Glory Seeker</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/guinevere/" target="_blank" rel="noopener">Guinevere</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/hephaestus/" target="_blank" rel="noopener">Hephaestus</a><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/the_giving_tree/" target="_blank" rel="noopener">The Giving Tree</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/wormscale_tinkerer/" target="_blank" rel="noopener">Wormscale Tinkerer</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/rollo/" target="_blank" rel="noopener">Rollo</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/mr_fox/" target="_blank" rel="noopener">Mr. Fox</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/miseria/" target="_blank" rel="noopener">Miseria</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/the_butcher/" target="_blank" rel="noopener">The Butcher</a></div>
+      <div class="dk"><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Maverick &amp; Icewing</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Wicked Witch</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Ace of Hearts</span><span class="deck-pill" style="color:#6e9ec8cc;border-color:#6e9ec830">Glory Seeker</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Guinevere</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Hephaestus</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">The Giving Tree</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Wormscale Tinkerer</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Rollo</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Mr. Fox</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Miseria</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">The Butcher</span></div>
     </details>
     </div>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "king-arthur", "name": "King Arthur", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "XenoGemini", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Wicked Witch", "Ace of Hearts", "Glory Seeker", "Guinevere", "Hephaestus", "The Giving Tree", "Wormscale Tinkerer", "Rollo", "Mr. Fox", "Miseria", "The Butcher"]}]}], "rules": "Heroes in your shop have +2/+1.\nWhen you golden a character, double this bonus.", "cardSlugs": {"Ace of Hearts": "ace_of_hearts", "Glory Seeker": "glory_seeker", "Guinevere": "guinevere", "Hephaestus": "hephaestus", "Maverick & Icewing": "maverick_icewing", "Miseria": "miseria", "Mr. Fox": "mr_fox", "Rollo": "rollo", "The Butcher": "the_butcher", "The Giving Tree": "the_giving_tree", "Wicked Witch": "wicked_witch", "Wormscale Tinkerer": "wormscale_tinkerer"}}</script>
-<script src="../../assets/captains.js?v=6"></script>
+<script type="application/json" id="captain-data">{"slug": "king-arthur", "name": "King Arthur", "months": [{"id": "2026-03", "date": "2026-03-20", "event": "March Monthly", "players": [{"username": "XenoGemini", "archetype": "Treasures", "deck": ["Maverick & Icewing", "Wicked Witch", "Ace of Hearts", "Glory Seeker", "Guinevere", "Hephaestus", "The Giving Tree", "Wormscale Tinkerer", "Rollo", "Mr. Fox", "Miseria", "The Butcher"]}]}], "rules": "Heroes in your shop have +2/+1.\nWhen you golden a character, double this bonus.", "cardSlugs": {"Ace of Hearts": "ace_of_hearts", "Glory Seeker": "glory_seeker", "Guinevere": "guinevere", "Hephaestus": "hephaestus", "Maverick & Icewing": "maverick_icewing", "Miseria": "miseria", "Mr. Fox": "mr_fox", "Rollo": "rollo", "The Butcher": "the_butcher", "The Giving Tree": "the_giving_tree", "Wicked Witch": "wicked_witch", "Wormscale Tinkerer": "wormscale_tinkerer"}, "cardColors": {"Ace of Hearts": "#c8a96e", "Glory Seeker": "#6e9ec8", "Guinevere": "#c8a96e", "Hephaestus": "#c8a96e", "Maverick & Icewing": "#c8a96e", "Miseria": "#c8a96e", "Mr. Fox": "#c8a96e", "Rollo": "#c8a96e", "The Butcher": "#c8a96e", "The Giving Tree": "#6ec89e", "Wicked Witch": "#9e6ec8", "Wormscale Tinkerer": "#c8a96e"}}</script>
+<script src="../../assets/captains.js?v=7"></script>
 </body>
 </html>

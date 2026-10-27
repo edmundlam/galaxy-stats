@@ -186,6 +186,34 @@ def test_captain_page_with_image_uses_two_column_header(events_dir, captains_fil
     assert 'class="captain-portrait"' in html
 
 
+def test_captain_portrait_links_to_guide(events_dir, captains_file):
+    """The portrait itself is the Galaxy Guide link; no separate text link."""
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com", image="galileo-galilei__300.webp")
+    assert (
+        '<a href="https://guide.galaxy.fun/cards/galileo_galilei/" target="_blank" rel="noopener"'
+        ' aria-label="Galileo Galilei on Galaxy Guide">' in html
+    )
+    assert "Galaxy Guide ↗" not in html
+
+
+def test_captain_page_breadcrumb_includes_all_captains(events_dir, captains_file):
+    """'All Captains' lives in the breadcrumb line, not the subtitle."""
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    assert (
+        'Meta Analysis</a><span class="crumb-sep"> · </span><a href="../" class="event-label">All Captains</a>' in html
+    )
+    assert ".crumb-sep" in html, "separator span needs event-label typography so both dots space identically"
+
+
+def test_captain_page_omits_subtitle(events_dir, captains_file):
+    """The subtitle line is gone; the intro paragraph carries that copy."""
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    assert 'class="subtitle"' not in html
+
+
 def test_captain_page_without_image_keeps_flat_header(events_dir, captains_file):
     """No image → no portrait markup and no header-cols wrapper."""
     caps = aggregate_captains(events_dir, captains_file)
@@ -351,7 +379,6 @@ def test_captain_page_renders_rules_line_in_header(events_dir, captains_file, ru
     )
     assert 'class="rules-line"' in html
     assert "Stars align.<br>Twice." in html
-    assert 'href="https://guide.galaxy.fun/cards/galileo_galilei/"' in html
 
 
 def test_captain_page_without_rules_omits_line_and_guide_link(events_dir, captains_file, rules_file):
@@ -390,7 +417,7 @@ def test_captain_page_intro_prose_with_data(events_dir, captains_file):
     html = render_captain_page(caps["galileo-galilei"], "https://example.com")
     body = html.split("<body>", 1)[1]
     assert "Galileo Galilei has 3 winning decklists across 2 Once Upon a Galaxy (OUAG) monthly tournaments." in body
-    assert "Most-played cards: Card A (100%)" in body
+    assert "Most-played" not in body, "top cards are already in the Best Cards table"
 
 
 def test_captain_page_intro_prose_skipped_when_empty(events_dir, captains_file):
@@ -488,19 +515,15 @@ def test_portrait_reserves_layout_space(events_dir, captains_file):
     assert "aspect-ratio:300/453" in html, "all portraits are 300x453; reserving the ratio avoids layout shift"
 
 
-def test_deck_pills_link_to_card_guide_when_slug_known(events_dir, captains_file):
+def test_deck_pills_stay_plain_even_with_slugs_known(events_dir, captains_file):
+    """Deck rows render plain pills only — a thousand outbound links per page
+    dilutes link equity; guide links live in the Best Cards table alone."""
     caps = aggregate_captains(events_dir, captains_file)
     html = render_captain_page(caps["galileo-galilei"], "https://example.com", card_slugs={"Card A": "card_a"})
-    assert (
-        '<a class="deck-pill" href="https://guide.galaxy.fun/cards/card_a/" target="_blank" rel="noopener">Card A</a>'
-        in html
-    )
-
-
-def test_deck_pills_stay_plain_when_slug_unknown(events_dir, captains_file):
-    caps = aggregate_captains(events_dir, captains_file)
-    html = render_captain_page(caps["galileo-galilei"], "https://example.com", card_slugs={"Card A": "card_a"})
-    assert '<span class="deck-pill">Card B</span>' in html
+    deck_list = html.split('<div id="deck-list">')[1]
+    assert "guide.galaxy.fun" not in deck_list
+    assert '<span class="deck-pill">Card A</span>' in deck_list
+    assert "guide.galaxy.fun/cards/card_a/" in best12_tbody(html), "Best Cards table keeps its guide links"
 
 
 def test_deck_pills_plain_without_slug_map(events_dir, captains_file):
@@ -600,6 +623,21 @@ def test_best12_card_cells_plain_without_slug_map(events_dir, captains_file):
     assert "guide.galaxy.fun" not in rows
 
 
+def test_best12_card_cells_tinted_from_card_colors(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(
+        caps["galileo-galilei"],
+        "https://example.com",
+        card_slugs={"Card A": "card_a"},
+        card_colors={"Card A": "#c8a96e"},
+    )
+    rows = best12_tbody(html)
+    assert (
+        '<a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30"'
+        ' href="https://guide.galaxy.fun/cards/card_a/" target="_blank" rel="noopener">Card A</a>' in rows
+    )
+
+
 def test_captain_page_payload_card_slugs_cover_only_deck_cards(events_dir, captains_file):
     caps = aggregate_captains(events_dir, captains_file)
     html = render_captain_page(
@@ -608,6 +646,17 @@ def test_captain_page_payload_card_slugs_cover_only_deck_cards(events_dir, capta
         card_slugs={"Card A": "card_a", "Card F": "card_f", "Unrelated": "unrelated"},
     )
     assert extract_payload(html)["cardSlugs"] == {"Card A": "card_a", "Card F": "card_f"}
+
+
+def test_captain_page_payload_card_colors_cover_only_deck_cards(events_dir, captains_file):
+    """cardColors rides in the payload so JS re-renders keep the table tint."""
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(
+        caps["galileo-galilei"],
+        "https://example.com",
+        card_colors={"Card A": "#c8a96e", "Unrelated": "#ffffff"},
+    )
+    assert extract_payload(html)["cardColors"] == {"Card A": "#c8a96e"}
 
 
 # --- Accordion decklist (captain-page-accordion-implementation.md) ---

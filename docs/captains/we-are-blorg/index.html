@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/we_are_blorg__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=6">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=7">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:12px; }
@@ -51,6 +51,8 @@
   .header-cols { display:flex; align-items:center; gap:32px; }
   .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
                 color:var(--accent); margin-top:10px; max-width:60ch; }
+  .crumb-sep { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:3px;
+               text-transform:uppercase; color:var(--accent); }
   .rules-line::before { content:"“"; }
   .rules-line::after { content:"”"; }
   .captain-portrait { width:130px; height:auto; flex:none; aspect-ratio:300/453;
@@ -89,23 +91,22 @@
 </head>
 <body>
 <header>
-    <a href="../../" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
+    <a href="../../" class="event-label">Once Upon A Galaxy · Meta Analysis</a><span class="crumb-sep"> · </span><a href="../" class="event-label">All Captains</a>
   <div class="header-cols">
     <div>
     <h1>We Are Blorg</h1>
-    <div class="subtitle">Winning decklists &amp; best cards · Once Upon a Galaxy (OUAG) · <a href="../">all captains</a> · <a href="https://guide.galaxy.fun/cards/we_are_blorg/" target="_blank" rel="noopener">Galaxy Guide ↗</a></div>
     <div class="rules-line">When you recruit a character, your Toys gain that character&#x27;s types.<br>Your Toys with 5 or more types have +5 Attack.</div>
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">Winning decks</div></div>
       <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">Months</div></div>
     </div>
     </div>
-    <img class="captain-portrait" src="../../assets/captains-img/we_are_blorg__300.webp" alt="We Are Blorg captain card art" width="130" loading="eager">
+    <a href="https://guide.galaxy.fun/cards/we_are_blorg/" target="_blank" rel="noopener" aria-label="We Are Blorg on Galaxy Guide"><img class="captain-portrait" src="../../assets/captains-img/we_are_blorg__300.webp" alt="We Are Blorg captain card art" width="130" loading="eager"></a>
   </div></header>
 
 <main>
   <div class="section active">
-    <p class="section-desc">We Are Blorg has 1 winning decklist across 1 Once Upon a Galaxy (OUAG) monthly tournament. Most-played cards: Brick Monster (100%), Busted Bot (100%), Chip on the Ship (100%), Knight of the Holy Cane (100%), Mech-a-Man (100%).</p>
+    <p class="section-desc">We Are Blorg has 1 winning decklist across 1 Once Upon a Galaxy (OUAG) monthly tournament.</p>
     <h2 class="section-title">Best Cards</h2>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
@@ -114,18 +115,18 @@
       <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
         <th class="num no-sort">% of <span id="best12-count">1</span> decks</th></tr></thead>
       <tbody>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/brick_monster/" target="_blank" rel="noopener">Brick Monster</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/busted_bot/" target="_blank" rel="noopener">Busted Bot</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/chip_on_the_ship/" target="_blank" rel="noopener">Chip on the Ship</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/knight_of_the_holy_cane/" target="_blank" rel="noopener">Knight of the Holy Cane</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/mech_a_man/" target="_blank" rel="noopener">Mech-a-Man</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/mirror_mage/" target="_blank" rel="noopener">Mirror Mage</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/mortakon/" target="_blank" rel="noopener">Mortakon</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/party_pinata/" target="_blank" rel="noopener">Party Pinata</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/pisces/" target="_blank" rel="noopener">Pisces</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/raggedy_ann/" target="_blank" rel="noopener">Raggedy Ann</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/space_ranger_woody/" target="_blank" rel="noopener">Space Ranger Woody</a></td><td class="num">1</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/wormscale_tinkerer/" target="_blank" rel="noopener">Wormscale Tinkerer</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/brick_monster/" target="_blank" rel="noopener">Brick Monster</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/busted_bot/" target="_blank" rel="noopener">Busted Bot</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/chip_on_the_ship/" target="_blank" rel="noopener">Chip on the Ship</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/knight_of_the_holy_cane/" target="_blank" rel="noopener">Knight of the Holy Cane</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/mech_a_man/" target="_blank" rel="noopener">Mech-a-Man</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/mirror_mage/" target="_blank" rel="noopener">Mirror Mage</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/mortakon/" target="_blank" rel="noopener">Mortakon</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/party_pinata/" target="_blank" rel="noopener">Party Pinata</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/pisces/" target="_blank" rel="noopener">Pisces</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/raggedy_ann/" target="_blank" rel="noopener">Raggedy Ann</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/space_ranger_woody/" target="_blank" rel="noopener">Space Ranger Woody</a></td><td class="num">1</td><td class="num">100%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/wormscale_tinkerer/" target="_blank" rel="noopener">Wormscale Tinkerer</a></td><td class="num">1</td><td class="num">100%</td></tr>
       </tbody>
     </table>
     <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
@@ -141,12 +142,12 @@
     <div id="deck-list">
       <details class="deck" data-archetype="Toys" data-month="2026-04">
       <summary><span class="mo"><a href="../../reports/2026-04/">2026-04</a></span><span class="pl">godsize</span><span class="tag" style="background:#5a5d6a20;color:#5a5d6a;border-color:#5a5d6a40">Toys</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
-      <div class="dk"><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/busted_bot/" target="_blank" rel="noopener">Busted Bot</a><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/mortakon/" target="_blank" rel="noopener">Mortakon</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/mech_a_man/" target="_blank" rel="noopener">Mech-a-Man</a><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/mirror_mage/" target="_blank" rel="noopener">Mirror Mage</a><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/brick_monster/" target="_blank" rel="noopener">Brick Monster</a><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/chip_on_the_ship/" target="_blank" rel="noopener">Chip on the Ship</a><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/raggedy_ann/" target="_blank" rel="noopener">Raggedy Ann</a><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/party_pinata/" target="_blank" rel="noopener">Party Pinata</a><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/space_ranger_woody/" target="_blank" rel="noopener">Space Ranger Woody</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/pisces/" target="_blank" rel="noopener">Pisces</a><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/wormscale_tinkerer/" target="_blank" rel="noopener">Wormscale Tinkerer</a><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/knight_of_the_holy_cane/" target="_blank" rel="noopener">Knight of the Holy Cane</a></div>
+      <div class="dk"><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Busted Bot</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Mortakon</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Mech-a-Man</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Mirror Mage</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Brick Monster</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Chip on the Ship</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Raggedy Ann</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Party Pinata</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Space Ranger Woody</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Pisces</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Wormscale Tinkerer</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Knight of the Holy Cane</span></div>
     </details>
     </div>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "we-are-blorg", "name": "We Are Blorg", "months": [{"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "godsize", "archetype": "Toys", "deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Mirror Mage", "Brick Monster", "Chip on the Ship", "Raggedy Ann", "Party Pinata", "Space Ranger Woody", "Pisces", "Wormscale Tinkerer", "Knight of the Holy Cane"]}]}], "rules": "When you recruit a character, your Toys gain that character's types.\nYour Toys with 5 or more types have +5 Attack.", "cardSlugs": {"Brick Monster": "brick_monster", "Busted Bot": "busted_bot", "Chip on the Ship": "chip_on_the_ship", "Knight of the Holy Cane": "knight_of_the_holy_cane", "Mech-a-Man": "mech_a_man", "Mirror Mage": "mirror_mage", "Mortakon": "mortakon", "Party Pinata": "party_pinata", "Pisces": "pisces", "Raggedy Ann": "raggedy_ann", "Space Ranger Woody": "space_ranger_woody", "Wormscale Tinkerer": "wormscale_tinkerer"}}</script>
-<script src="../../assets/captains.js?v=6"></script>
+<script type="application/json" id="captain-data">{"slug": "we-are-blorg", "name": "We Are Blorg", "months": [{"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "godsize", "archetype": "Toys", "deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Mirror Mage", "Brick Monster", "Chip on the Ship", "Raggedy Ann", "Party Pinata", "Space Ranger Woody", "Pisces", "Wormscale Tinkerer", "Knight of the Holy Cane"]}]}], "rules": "When you recruit a character, your Toys gain that character's types.\nYour Toys with 5 or more types have +5 Attack.", "cardSlugs": {"Brick Monster": "brick_monster", "Busted Bot": "busted_bot", "Chip on the Ship": "chip_on_the_ship", "Knight of the Holy Cane": "knight_of_the_holy_cane", "Mech-a-Man": "mech_a_man", "Mirror Mage": "mirror_mage", "Mortakon": "mortakon", "Party Pinata": "party_pinata", "Pisces": "pisces", "Raggedy Ann": "raggedy_ann", "Space Ranger Woody": "space_ranger_woody", "Wormscale Tinkerer": "wormscale_tinkerer"}, "cardColors": {"Brick Monster": "#5a5d6a", "Busted Bot": "#5a5d6a", "Chip on the Ship": "#5a5d6a", "Knight of the Holy Cane": "#e87d9e", "Mech-a-Man": "#c8a96e", "Mirror Mage": "#9e6ec8", "Mortakon": "#5a5d6a", "Party Pinata": "#5a5d6a", "Pisces": "#c8a96e", "Raggedy Ann": "#5a5d6a", "Space Ranger Woody": "#5a5d6a", "Wormscale Tinkerer": "#c8a96e"}}</script>
+<script src="../../assets/captains.js?v=7"></script>
 </body>
 </html>

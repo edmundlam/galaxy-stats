@@ -176,11 +176,11 @@ function docStub(overrides = {}) {
   }
 
   // JS re-render styles every card as a .deck-pill, with or without a guide
-  // slug (parity with the prerendered rows from render_captains.py _card_pill)
+  // slug, tinted from cardColors (parity with _card_pill in render_captains.py)
   {
     const built = [];
     const node = (tag) => {
-      const n = { tag, children: [], dataset: {}, className: '', textContent: '' };
+      const n = { tag, children: [], dataset: {}, className: '', textContent: '', style: {} };
       n.appendChild = (c) => { n.children.push(c); return c; };
       n.append = (...cs) => n.children.push(...cs);
       built.push(n);
@@ -192,6 +192,7 @@ function docStub(overrides = {}) {
       getElementById: (id) => id === 'captain-data'
         ? { textContent: JSON.stringify({ name: 'Hannibal',
             cardSlugs: { 'Known Card': 'known_card' },
+            cardColors: { 'Known Card': '#c8a96e' },
             months: [{ id: '2026-05', players: [{ deck: ['Known Card', 'Mystery Card'] }] }] }) }
         : null,
       querySelector: (sel) => sel === '#best12-table tbody' ? el() : el(),
@@ -204,6 +205,8 @@ function docStub(overrides = {}) {
     assert.strictEqual(link.textContent, 'Known Card');
     assert.strictEqual(link.href, 'https://guide.galaxy.fun/cards/known_card/');
     assert.strictEqual(link.target, '_blank');
+    assert.strictEqual(link.style.color, '#c8a96ecc', 'tint must survive the JS re-render');
+    assert.strictEqual(link.style.borderColor, '#c8a96e30');
     assert.strictEqual(pills.find(n => n.tag === 'span')?.textContent, 'Mystery Card',
       'cards without a slug must still render as span.deck-pill');
     console.log('captains.js: re-render pill parity OK');
