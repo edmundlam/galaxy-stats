@@ -1,5 +1,35 @@
 {
   "archetypes": {
+    "Paint": {
+      "color": "#e8985a",
+      "core_threshold": 12,
+      "cards": [
+        "rocky_the_roller",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "blue_mage",
+        "red_mage",
+        "yellow_mage",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "gingerbread_dragon",
+        "selphiea",
+        "varnish",
+        "the_mad_splatter",
+        "dotty_daughter",
+        "happy_little_painter",
+        "van_gogogo",
+        "bababanana",
+        "singe",
+        "the_green_gecko",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
     "Treasures": {
       "color": "#c8a96e",
       "core_threshold": 12,
@@ -77,6 +107,19 @@
         "ghoulade_man",
         "jumping_jelly_beans",
         "sugar_rush"
+      ]
+    },
+    "Chance Encounter": {
+      "color": "#d96e6e",
+      "cards": [
+        "comety",
+        "leprechaun",
+        "luck_dragon",
+        "owlabaster",
+        "purrfectioneer",
+        "satter_fae",
+        "serenpopity",
+        "swoop"
       ]
     },
     "Mage": {
@@ -159,7 +202,9 @@
         "chip_on_the_ship",
         "party_pinata",
         "mortakon",
-        "whirlidoo"
+        "whirlidoo",
+        "antiquitoy",
+        "model_elephant"
       ]
     },
     "Boons": {

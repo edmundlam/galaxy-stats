@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swishbuckler Decklists &amp; Best Cards | Once Upon a Galaxy</title>
+<meta name="description" content="Swishbuckler winning decklists and best cards from Once Upon a Galaxy (OUAG) monthly tournaments: 13 winning decks across 1 months.">
+<link rel="canonical" href="https://www.galaxy-stats.com/captains/swishbuckler/">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#1c1747">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Galaxy Stats">
+<meta property="og:title" content="Swishbuckler Decklists &amp; Best Cards | Once Upon a Galaxy">
+<meta property="og:description" content="Swishbuckler winning decklists and best cards from Once Upon a Galaxy (OUAG) monthly tournaments: 13 winning decks across 1 months.">
+<meta property="og:url" content="https://www.galaxy-stats.com/captains/swishbuckler/">
+<meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/swishbuckler__300.webp">
+<meta name="twitter:card" content="summary">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=7">
+<style>
+  main { max-width: 1100px; }
+  .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:12px; }
+  .data-table th { text-align:left; font-size:12px; letter-spacing:2px; text-transform:uppercase;
+                   color:var(--muted); padding:8px 10px; border-bottom:2px solid var(--border);
+                   cursor:pointer; user-select:none; white-space:nowrap; }
+  .data-table th:hover { color:var(--text); }
+  .data-table th.no-sort { cursor:default; }
+  .data-table th.no-sort:hover { color:var(--muted); }
+  .data-table td { padding:7px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .data-table tbody tr:hover { background:var(--surface); }
+  .data-table td.num, .data-table th.num { text-align:right; }
+  .month-chip { display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace;
+                font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--muted);
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:5px 10px; cursor:pointer; transition:all 0.15s; }
+  .month-chip:has(input:checked) { color:var(--accent); border-color:rgba(200,169,110,0.4);
+                                   background:rgba(200,169,110,0.08); }
+  .month-chip input { accent-color:var(--accent); margin:0; cursor:pointer; }
+  .more-btn { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:2px; text-transform:uppercase;
+              color:var(--muted); background:none; border:1px solid var(--border); border-radius:2px;
+              padding:8px 14px; margin-top:12px; cursor:pointer; transition:all 0.15s; }
+  .more-btn:hover { color:var(--accent); border-color:rgba(200,169,110,0.4); }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
+  .empty-note { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
+                padding:12px 16px; border-left:2px solid var(--border); }
+  .header-cols { display:flex; align-items:center; gap:32px; }
+  .rules-line { font-family:'IBM Plex Sans',sans-serif; font-style:italic; font-size:15px;
+                color:var(--accent); margin-top:10px; max-width:60ch; }
+  .crumb-sep { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:3px;
+               text-transform:uppercase; color:var(--accent); }
+  .rules-line::before { content:"“"; }
+  .rules-line::after { content:"”"; }
+  .captain-portrait { width:130px; height:auto; flex:none; aspect-ratio:300/453;
+                      filter:drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
+  h2.section-title { margin-top:0; }
+  /* Accordion decklist */
+  #deck-list { display:flex; flex-direction:column; gap:4px; max-width:900px; }
+  #deck-list [hidden] { display:none !important; }
+  details.deck { border:1px solid var(--border); border-radius:2px; background:var(--surface); overflow:hidden; }
+  details.deck summary { display:flex; align-items:center; gap:8px; min-height:44px; padding:0 12px;
+                         cursor:pointer; list-style:none; transition:background 0.15s; }
+  details.deck summary::-webkit-details-marker { display:none; }
+  details.deck summary:hover { background:#1e2230; }
+  .deck .mo { flex:none; width:46px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#9a9ca8; }
+  .deck .mo a { color:#9a9ca8; }
+  .deck .pl { flex:1; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:12px; overflow-wrap:anywhere; }
+  .deck .tag { flex:none; }
+  .chev { flex:none; transition:transform 0.15s; }
+  details[open] .chev { transform:rotate(90deg); }
+  .dk { display:flex; flex-wrap:wrap; gap:4px; padding:10px 12px; border-top:1px solid var(--border); }
+  .dk .deck-pill { font-size:11px; background:var(--surface2); border:1px solid var(--border);
+                   border-bottom-style:dotted; }
+  #arch-filter { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+  .arch-chip { min-height:44px; padding:0 12px; font-family:'IBM Plex Mono',monospace; font-size:10px;
+               letter-spacing:1px; text-transform:uppercase; color:#9a9ca8; background:var(--surface2);
+               border:1px solid var(--border); border-radius:2px; cursor:pointer; transition:all 0.15s; }
+  .arch-chip[aria-pressed="true"] { color:var(--accent); background:rgba(200,169,110,0.08);
+                                    border-color:rgba(200,169,110,0.4); }
+  .arch-chip:hover { color:var(--text); }
+  .filter-input { box-sizing:border-box; width:100%; min-height:44px; margin:8px 0 14px; padding:0 12px;
+                  font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text);
+                  background:var(--surface); border:1px solid var(--border); border-radius:2px; }
+  .filter-input::placeholder { color:#9a9ca8; }
+</style>
+<script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="9d92bc0f-3019-480b-b295-2e79921d2792" data-domains="www.galaxy-stats.com"></script>
+</head>
+<body>
+<header>
+    <a href="../../" class="event-label">Once Upon A Galaxy · Meta Analysis</a><span class="crumb-sep"> · </span><a href="../" class="event-label">All Captains</a>
+  <div class="header-cols">
+    <div>
+    <h1>Swishbuckler</h1>
+    <div class="rules-line">When you paint a slot Green, Purple or Orange, get a Common treasure. (X)</div>
+    <div class="stats-row">
+      <div class="stat-item"><div class="stat-value">13</div><div class="stat-label">Winning decks</div></div>
+      <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">Months</div></div>
+    </div>
+    </div>
+    <a href="https://guide.galaxy.fun/cards/swishbuckler/" target="_blank" rel="noopener" aria-label="Swishbuckler on Galaxy Guide"><img class="captain-portrait" src="../../assets/captains-img/swishbuckler__300.webp" alt="Swishbuckler captain card art" width="130" loading="eager"></a>
+  </div></header>
+
+<main>
+  <div class="section active">
+    <p class="section-desc">Swishbuckler has 13 winning decklists across 1 Once Upon a Galaxy (OUAG) monthly tournament.</p>
+    <h2 class="section-title">Best Cards</h2>
+    <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
+      below. Check or uncheck months to see how the picks shift.</div>
+    <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-10">2026-10</label></div>
+    <table class="data-table" id="best12-table">
+      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+        <th class="num no-sort">% of <span id="best12-count">13</span> decks</th></tr></thead>
+      <tbody>
+        <tr><td><a class="deck-pill" style="color:#e8985acc;border-color:#e8985a30" href="https://guide.galaxy.fun/cards/red_paintkin/" target="_blank" rel="noopener">Red Paintkin</a></td><td class="num">12</td><td class="num">92%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#e8985acc;border-color:#e8985a30" href="https://guide.galaxy.fun/cards/yellow_paintkin/" target="_blank" rel="noopener">Yellow Paintkin</a></td><td class="num">11</td><td class="num">85%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#e8985acc;border-color:#e8985a30" href="https://guide.galaxy.fun/cards/crimson_stalwart_hero/" target="_blank" rel="noopener">Crimson, Stalwart Hero</a></td><td class="num">10</td><td class="num">77%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#e8985acc;border-color:#e8985a30" href="https://guide.galaxy.fun/cards/marigold_eternal_student/" target="_blank" rel="noopener">Marigold, Eternal Student</a></td><td class="num">10</td><td class="num">77%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#e8985acc;border-color:#e8985a30" href="https://guide.galaxy.fun/cards/splat/" target="_blank" rel="noopener">Splat</a></td><td class="num">9</td><td class="num">69%</td></tr>
+        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/white_rabbit/" target="_blank" rel="noopener">White Rabbit</a></td><td class="num">9</td><td class="num">69%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#e8985acc;border-color:#e8985a30" href="https://guide.galaxy.fun/cards/cherry_bomb/" target="_blank" rel="noopener">Cherry Bomb</a></td><td class="num">8</td><td class="num">62%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#e8985acc;border-color:#e8985a30" href="https://guide.galaxy.fun/cards/the_orange_orangutan/" target="_blank" rel="noopener">The Orange Orangutan</a></td><td class="num">8</td><td class="num">62%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#e8985acc;border-color:#e8985a30" href="https://guide.galaxy.fun/cards/varnish/" target="_blank" rel="noopener">Varnish</a></td><td class="num">8</td><td class="num">62%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/antiquitoy/" target="_blank" rel="noopener">Antiquitoy</a></td><td class="num">7</td><td class="num">54%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#e8985acc;border-color:#e8985a30" href="https://guide.galaxy.fun/cards/bababanana/" target="_blank" rel="noopener">BaBaBanana</a></td><td class="num">6</td><td class="num">46%</td></tr>
+        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/model_elephant/" target="_blank" rel="noopener">Model Elephant</a></td><td class="num">6</td><td class="num">46%</td></tr>
+      </tbody>
+    </table>
+    <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
+
+    <h2 class="section-title" style="margin-top:48px">Decklists</h2>
+    <div class="section-desc">Every winning deck across all months.</div>
+    
+    <div class="captain-filter">
+      <input id="deck-filter" class="filter-input" type="text"
+        aria-label="Filter decks by player, archetype, month, or card"
+        placeholder="Filter by player, archetype, month, or card…">
+    </div>
+    <div id="deck-list">
+      <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">AmusetheMuse</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Mad Splatter</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Cherry Bomb</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Mana Potion</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Model Elephant</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Splat</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Varnish</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Dotty Daughter</span><span class="deck-pill" style="color:#d96e6ecc;border-color:#d96e6e30">Owlabaster</span><span class="deck-pill">Starry Knight</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Crimson, Stalwart Hero</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Rocky, the Roller</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Purple Peacock</span></div>
+    </details>
+    <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">Bellmeistr</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Antiquitoy</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Blue Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Mad Splatter</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Cherry Bomb</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Mana Potion</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Splat</span><span class="deck-pill">White Rabbit</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Rocky, the Roller</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Marigold, Eternal Student</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Crimson, Stalwart Hero</span></div>
+    </details>
+    <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">celephais</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Antiquitoy</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Paintkin</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Model Elephant</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Mr. Fox</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">BaBaBanana</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Snapping Hydra</span><span class="deck-pill">White Rabbit</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Apophis</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Crimson, Stalwart Hero</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Marigold, Eternal Student</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Orange Orangutan</span></div>
+    </details>
+    <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">ChillJams</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Antiquitoy</span><span class="deck-pill" style="color:#d96e6ecc;border-color:#d96e6e30">Purrfectioneer</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Paintkin</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Model Elephant</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Varnish</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">BaBaBanana</span><span class="deck-pill">White Rabbit</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Crimson, Stalwart Hero</span><span class="deck-pill" style="color:#d96e6ecc;border-color:#d96e6e30">Luck Dragon</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Marigold, Eternal Student</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Orange Orangutan</span></div>
+    </details>
+    <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">ElricTheRed</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Blue Mage</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Van GOGogo</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Mana Potion</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Splat</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Varnish</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">BaBaBanana</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Dotty Daughter</span><span class="deck-pill" style="color:#d96e6ecc;border-color:#d96e6e30">Owlabaster</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Marigold, Eternal Student</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Rocky, the Roller</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Purple Peacock</span></div>
+    </details>
+    <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">Fjord</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Antiquitoy</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Blue Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Mad Splatter</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Cherry Bomb</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Mana Potion</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Splat</span><span class="deck-pill">White Rabbit</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Rocky, the Roller</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Marigold, Eternal Student</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Crimson, Stalwart Hero</span></div>
+    </details>
+    <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">Immy</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Antiquitoy</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Paintkin</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Model Elephant</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Varnish</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Dotty Daughter</span><span class="deck-pill">White Rabbit</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Crimson, Stalwart Hero</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Marigold, Eternal Student</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Rocky, the Roller</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Orange Orangutan</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Purple Peacock</span></div>
+    </details>
+    <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">IronMicEli</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Antiquitoy</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Pied Piper</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Cherry Bomb</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Model Elephant</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Splat</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Dotty Daughter</span><span class="deck-pill">White Rabbit</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Crimson, Stalwart Hero</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Marigold, Eternal Student</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Orange Orangutan</span></div>
+    </details>
+    <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">j12601</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#6e9ec8cc;border-color:#6e9ec830">Glory Seeker</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Pied Piper</span><span class="deck-pill">Wormtongue</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Cherry Bomb</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Splat</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Varnish</span><span class="deck-pill">White Rabbit</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Barrel of Monkeys</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Crimson, Stalwart Hero</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Marigold, Eternal Student</span></div>
+    </details>
+    <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">lightbulb</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Mage</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Varnish</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Cherry Bomb</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Splat</span><span class="deck-pill" style="color:#d96e6ecc;border-color:#d96e6e30">Owlabaster</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">BaBaBanana</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Orange Orangutan</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Leapfrog</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Nemean Lion</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Monstro</span></div>
+    </details>
+    <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">ncarrta</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Mage</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Cherry Bomb</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Model Elephant</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Splat</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Varnish</span><span class="deck-pill" style="color:#d96e6ecc;border-color:#d96e6e30">Owlabaster</span><span class="deck-pill">White Rabbit</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Crimson, Stalwart Hero</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Marigold, Eternal Student</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Orange Orangutan</span></div>
+    </details>
+    <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">ScubaJohn311121</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Mage</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Varnish</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Cherry Bomb</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Splat</span><span class="deck-pill" style="color:#d96e6ecc;border-color:#d96e6e30">Owlabaster</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">BaBaBanana</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Orange Orangutan</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Leapfrog</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Nemean Lion</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Monstro</span></div>
+    </details>
+    <details class="deck" data-archetype="Paint" data-month="2026-10">
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">Uli</span><span class="tag" style="background:#e8985a20;color:#e8985a;border-color:#e8985a40">Paint</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <div class="dk"><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Antiquitoy</span><span class="deck-pill" style="color:#d96e6ecc;border-color:#d96e6e30">Swoop</span><span class="deck-pill" style="color:#d96e6ecc;border-color:#d96e6e30">Purrfectioneer</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Yellow Paintkin</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">BaBaBanana</span><span class="deck-pill">Starry Knight</span><span class="deck-pill">White Rabbit</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Crimson, Stalwart Hero</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Marigold, Eternal Student</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Rocky, the Roller</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">The Orange Orangutan</span></div>
+    </details>
+    </div>
+  </div>
+</main>
+<script type="application/json" id="captain-data">{"slug": "swishbuckler", "name": "Swishbuckler", "months": [{"id": "2026-10", "date": "2026-10-23", "event": "October Monthly", "players": [{"username": "AmusetheMuse", "archetype": "Paint", "deck": ["The Mad Splatter", "Cherry Bomb", "Mana Potion", "Model Elephant", "Splat", "Varnish", "Dotty Daughter", "Owlabaster", "Starry Knight", "Crimson, Stalwart Hero", "Rocky, the Roller", "The Purple Peacock"]}, {"username": "Bellmeistr", "archetype": "Paint", "deck": ["Antiquitoy", "Blue Paintkin", "Red Paintkin", "Yellow Paintkin", "The Mad Splatter", "Cherry Bomb", "Mana Potion", "Splat", "White Rabbit", "Rocky, the Roller", "Marigold, Eternal Student", "Crimson, Stalwart Hero"]}, {"username": "celephais", "archetype": "Paint", "deck": ["Antiquitoy", "Red Paintkin", "Yellow Paintkin", "Model Elephant", "Mr. Fox", "BaBaBanana", "Snapping Hydra", "White Rabbit", "Apophis", "Crimson, Stalwart Hero", "Marigold, Eternal Student", "The Orange Orangutan"]}, {"username": "ChillJams", "archetype": "Paint", "deck": ["Antiquitoy", "Purrfectioneer", "Red Paintkin", "Yellow Paintkin", "Model Elephant", "Varnish", "BaBaBanana", "White Rabbit", "Crimson, Stalwart Hero", "Luck Dragon", "Marigold, Eternal Student", "The Orange Orangutan"]}, {"username": "ElricTheRed", "archetype": "Paint", "deck": ["Blue Mage", "Red Paintkin", "Van GOGogo", "Mana Potion", "Splat", "Varnish", "BaBaBanana", "Dotty Daughter", "Owlabaster", "Marigold, Eternal Student", "Rocky, the Roller", "The Purple Peacock"]}, {"username": "Fjord", "archetype": "Paint", "deck": ["Antiquitoy", "Blue Paintkin", "Red Paintkin", "Yellow Paintkin", "The Mad Splatter", "Cherry Bomb", "Mana Potion", "Splat", "White Rabbit", "Rocky, the Roller", "Marigold, Eternal Student", "Crimson, Stalwart Hero"]}, {"username": "Immy", "archetype": "Paint", "deck": ["Antiquitoy", "Red Paintkin", "Yellow Paintkin", "Model Elephant", "Varnish", "Dotty Daughter", "White Rabbit", "Crimson, Stalwart Hero", "Marigold, Eternal Student", "Rocky, the Roller", "The Orange Orangutan", "The Purple Peacock"]}, {"username": "IronMicEli", "archetype": "Paint", "deck": ["Antiquitoy", "Pied Piper", "Red Paintkin", "Yellow Paintkin", "Cherry Bomb", "Model Elephant", "Splat", "Dotty Daughter", "White Rabbit", "Crimson, Stalwart Hero", "Marigold, Eternal Student", "The Orange Orangutan"]}, {"username": "j12601", "archetype": "Paint", "deck": ["Glory Seeker", "Pied Piper", "Wormtongue", "Red Paintkin", "Yellow Paintkin", "Cherry Bomb", "Splat", "Varnish", "White Rabbit", "Barrel of Monkeys", "Crimson, Stalwart Hero", "Marigold, Eternal Student"]}, {"username": "lightbulb", "archetype": "Paint", "deck": ["Yellow Mage", "Red Paintkin", "Yellow Paintkin", "Varnish", "Cherry Bomb", "Splat", "Owlabaster", "BaBaBanana", "The Orange Orangutan", "Leapfrog", "Nemean Lion", "Monstro"]}, {"username": "ncarrta", "archetype": "Paint", "deck": ["Red Paintkin", "Yellow Mage", "Yellow Paintkin", "Cherry Bomb", "Model Elephant", "Splat", "Varnish", "Owlabaster", "White Rabbit", "Crimson, Stalwart Hero", "Marigold, Eternal Student", "The Orange Orangutan"]}, {"username": "ScubaJohn311121", "archetype": "Paint", "deck": ["Yellow Mage", "Red Paintkin", "Yellow Paintkin", "Varnish", "Cherry Bomb", "Splat", "Owlabaster", "BaBaBanana", "The Orange Orangutan", "Leapfrog", "Nemean Lion", "Monstro"]}, {"username": "Uli", "archetype": "Paint", "deck": ["Antiquitoy", "Swoop", "Purrfectioneer", "Red Paintkin", "Yellow Paintkin", "BaBaBanana", "Starry Knight", "White Rabbit", "Crimson, Stalwart Hero", "Marigold, Eternal Student", "Rocky, the Roller", "The Orange Orangutan"]}]}], "rules": "When you paint a slot Green, Purple or Orange, get a Common treasure. (X)", "cardSlugs": {"Antiquitoy": "antiquitoy", "Apophis": "apophis", "BaBaBanana": "bababanana", "Barrel of Monkeys": "barrel_of_monkeys", "Blue Mage": "blue_mage", "Blue Paintkin": "blue_paintkin", "Cherry Bomb": "cherry_bomb", "Crimson, Stalwart Hero": "crimson_stalwart_hero", "Dotty Daughter": "dotty_daughter", "Glory Seeker": "glory_seeker", "Leapfrog": "leapfrog", "Luck Dragon": "luck_dragon", "Mana Potion": "mana_potion", "Marigold, Eternal Student": "marigold_eternal_student", "Model Elephant": "model_elephant", "Monstro": "monstro", "Mr. Fox": "mr_fox", "Nemean Lion": "nemean_lion", "Owlabaster": "owlabaster", "Pied Piper": "pied_piper", "Purrfectioneer": "purrfectioneer", "Red Paintkin": "red_paintkin", "Rocky, the Roller": "rocky_the_roller", "Snapping Hydra": "snapping_hydra", "Splat": "splat", "Starry Knight": "starry_knight", "Swoop": "swoop", "The Mad Splatter": "the_mad_splatter", "The Orange Orangutan": "the_orange_orangutan", "The Purple Peacock": "the_purple_peacock", "Van GOGogo": "van_gogogo", "Varnish": "varnish", "White Rabbit": "white_rabbit", "Wormtongue": "wormtongue", "Yellow Mage": "yellow_mage", "Yellow Paintkin": "yellow_paintkin"}, "cardColors": {"Antiquitoy": "#5a5d6a", "Apophis": "#c8a96e", "BaBaBanana": "#e8985a", "Barrel of Monkeys": "#5a5d6a", "Blue Mage": "#e8985a", "Blue Paintkin": "#e8985a", "Cherry Bomb": "#e8985a", "Crimson, Stalwart Hero": "#e8985a", "Dotty Daughter": "#e8985a", "Glory Seeker": "#6e9ec8", "Leapfrog": "#6ec89e", "Luck Dragon": "#d96e6e", "Mana Potion": "#e8985a", "Marigold, Eternal Student": "#e8985a", "Model Elephant": "#5a5d6a", "Monstro": "#6ec89e", "Mr. Fox": "#c8a96e", "Nemean Lion": "#6ec89e", "Owlabaster": "#d96e6e", "Pied Piper": "#6ec89e", "Purrfectioneer": "#d96e6e", "Red Paintkin": "#e8985a", "Rocky, the Roller": "#e8985a", "Snapping Hydra": "#6ec89e", "Splat": "#e8985a", "Swoop": "#d96e6e", "The Mad Splatter": "#e8985a", "The Orange Orangutan": "#e8985a", "The Purple Peacock": "#e8985a", "Van GOGogo": "#e8985a", "Varnish": "#e8985a", "Yellow Mage": "#e8985a", "Yellow Paintkin": "#e8985a"}}</script>
+<script src="../../assets/captains.js?v=7"></script>
+</body>
+</html>

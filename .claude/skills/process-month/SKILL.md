@@ -3,7 +3,7 @@ name: process-month
 description: Generate a tournament report and update the index.html page
 ---
 
-You are processing a new tournament month for Galaxy Stats. This involves generating the report and updating the index.html page.
+You are processing a new tournament month for Galaxy Stats. This involves generating the report, reporting new uncategorized cards, refreshing captain pages/art, and updating the index.html page.
 
 ## Input
 
@@ -23,7 +23,55 @@ make report HTML_FILE=context/{EVENT_ID}.html EVENT_ID={EVENT_ID}
 
 If the user doesn't provide HTML_FILE, assume `context/{EVENT_ID}.html`.
 
-### Step 2: Extract stats for index.html
+### Step 2: Report new uncategorized cards
+
+Cards not assigned an archetype in `etl/config/archetypes.json` land in the "Other" cluster of `analysis.json`. Report the NEW ones in chat (by name, against the previous month) so the user can categorize them:
+
+```bash
+python3 << 'EOF'
+import json
+eid, prev_id = "{EVENT_ID}", "{PREVIOUS_EVENT_ID}"
+cur = json.load(open(f'etl/dist/events/{eid}/analysis.json'))
+prev = json.load(open(f'etl/dist/events/{prev_id}/analysis.json'))
+other = next(c for c in cur['clusters'] if c['label'] == 'Other')
+known = {c['name'] for cl in prev['clusters'] for c in cl.get('cards', [])}
+new = [c['name'] for c in other.get('cards', []) if c['name'] not in known]
+print(f"New cards with no archetype ({len(new)}):")
+for name in sorted(new): print(" ", name)
+EOF
+```
+
+If the user categorizes them (edit `etl/config/archetypes.json`), re-run before continuing:
+`make etl-finalize-with-overrides EVENT_ID={EVENT_ID}` → `make etl-render EVENT_ID={EVENT_ID}` → `make copy-report EVENT_ID={EVENT_ID}`
+
+### Step 3: Fetch missing captain art
+
+Captain pages show a portrait only if `docs/assets/captains-img/{slug}__300.webp` exists (missing = silently no image). Fetch any missing from the source and run this BEFORE `make captains`:
+
+```bash
+python3 << 'EOF'
+import json, pathlib, urllib.request
+eid = "{EVENT_ID}"
+caps = json.load(open(f'etl/dist/events/{eid}/analysis.json'))['captains']
+imgdir = pathlib.Path('docs/assets/captains-img')
+for c in caps:
+    dest = imgdir / f"{c['slug']}__300.webp"
+    if dest.exists(): continue
+    url = f"https://static.galaxy.fun/cards/{c['slug']}__default__300.webp"
+    dest.write_bytes(urllib.request.urlopen(url).read())
+    print(f"fetched {dest.name}")
+EOF
+```
+
+### Step 4: Regenerate captain pages
+
+`make report` does NOT refresh captain pages. Run from repo root:
+
+```bash
+make captains
+```
+
+### Step 5: Extract stats for index.html
 
 Read both the analysis.json and auto-analysis.json to extract the stats needed for the index page:
 
@@ -72,7 +120,13 @@ prev_top_captain = prev['top_captains'][0]
 EOF
 ```
 
-### Step 3: Update docs/index.html
+### Step 6: Update docs/index.html
+
+Verify the row title against the canonical event name first (don't assume the "{Month} {Year} Monthly" format):
+
+```bash
+python3 -c "import json; print(json.load(open('etl/dist/events/{EVENT_ID}/event.json'))['event']['name'])"
+```
 
 Update `docs/index.html` to add the new event row. This involves:
 
@@ -136,10 +190,20 @@ The new row should follow this format (desktop):
 - Use `.report-card-m` instead of `.report-row`
 - Structure: `.card-m-title`, `.card-m-date`, `.card-m-nums`, `.card-m-picks`, `.card-m-footer`
 
+### Step 7: Verify
+
+```bash
+grep -c "latest-badge" docs/index.html                  # expect 3: CSS rule + desktop + mobile badges
+grep -q "{PLAYERS}" docs/reports/{EVENT_ID}/index.html && echo "report ok"
+grep -q "{EVENT_ID}" docs/captains/index.html && echo "captains ok"
+```
+
 ## Output
 
 Confirm completion with:
 - Report location: `docs/reports/{EVENT_ID}/index.html`
+- New uncategorized cards listed (for categorization)
+- Captain art fetched (if any) + captain pages regenerated
 - Index.html updated with new row
 - Stats summary for the new event
 
