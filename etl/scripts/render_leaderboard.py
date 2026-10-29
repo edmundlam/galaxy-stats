@@ -467,7 +467,7 @@ def render_page(embed: dict, base_url: str) -> str:
 <header>
   <a href="../" class="event-label">Once Upon A Galaxy · Meta Analysis</a>
   <h1>Leaderboard</h1>
-  <div class="subtitle">Win totals, streaks and who is hot right now.</div>
+  <div class="subtitle">Win totals, streaks, and records.</div>
   <div class="stats-row">{stats_row}</div>
 </header>
 <nav>
@@ -477,17 +477,12 @@ def render_page(embed: dict, base_url: str) -> str:
 </nav>
 <main>
   <div class="section active">
-    <div class="section-title">Who keeps winning</div>
-    <p class="section-desc">Players ranked by gauntlet wins across every event, plus the runs they&rsquo;re on right now.
-      Every finisher won their own gauntlet, so a win means one event finished on top.</p>
     <div class="grid">
       {_bars(most_wins_rows, max_wins, f" / {total}", "var(--accent)", f"Top 10 players by total wins across all {total} events.", "Most wins")}
       {_bars(streak_rows, max_streak, "", "var(--c-candy)", "Most consecutive events won. Bar labels show when the run happened.", "Longest streaks")}
       {_active_card(embed["active_streaks"], embed["events"])}
       {_records_card(record_values)}
     </div>
-    <p class="note">Names are matched case-insensitively across events and merged with the alias map in
-      etl/config/aliases.json, so a rename doesn&rsquo;t split a player&rsquo;s history.</p>
   </div>
 </main>
 <script type="application/json" id="leaderboard-data">{payload}</script>

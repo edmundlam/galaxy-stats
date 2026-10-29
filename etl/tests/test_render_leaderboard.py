@@ -304,8 +304,11 @@ def test_page_header_stats_row(page):
     assert '<div class="stat-value">67%</div><div class="stat-label">Win again</div>' in page
 
 
-def test_page_notes_name_matching(page):
-    assert "matched case-insensitively" in page.split('class="note"', 1)[1]
+def test_page_header_copy(page):
+    assert '<div class="subtitle">Win totals, streaks, and records.</div>' in page
+    assert "Who keeps winning" not in page
+    assert "gauntlet wins across every event" not in page
+    assert 'class="note"' not in page
 
 
 def test_page_most_wins_bar_shares_of_total(page):
