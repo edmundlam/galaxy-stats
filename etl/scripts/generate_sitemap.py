@@ -6,8 +6,8 @@ for search engines. It includes the index page and all event reports.
 
 lastmod reflects when a page's data last changed, not the build date:
 reports use their event date, captain pages the latest event date the
-captain appeared in, and the root/captains index the newest event date.
-Pages with no event data fall back to file mtime.
+captain appeared in, and the root/captains/leaderboard indexes the newest
+event date. Pages with no event data fall back to file mtime.
 
 Output:
     - docs/sitemap.xml - XML sitemap with lastmod dates
@@ -137,8 +137,8 @@ def generate_sitemap(docs_dir: Path, base_url: str, events_dir: Path | None = No
         """Data-driven lastmod for a page, falling back to file mtime."""
         if url_path == "/":
             index_file, data_date = docs_dir / "index.html", site_lastmod
-        elif url_path == "/captains/":
-            index_file, data_date = docs_dir / "captains" / "index.html", site_lastmod
+        elif url_path in ("/captains/", "/leaderboard/"):
+            index_file, data_date = docs_dir / url_path.lstrip("/") / "index.html", site_lastmod
         elif url_path.startswith("/reports/"):
             index_file = docs_dir / url_path.lstrip("/") / "index.html"
             data_date = event_dates.get(url_path.split("/")[2])
@@ -151,9 +151,11 @@ def generate_sitemap(docs_dir: Path, base_url: str, events_dir: Path | None = No
     root_index = docs_dir / "index.html"
     root_lastmod = page_lastmod("/") if root_index.exists() else ""
 
-    # Find all event reports and captain pages
+    # Find all event reports, captain pages and the cross-event leaderboard
     reports = find_reports(docs_dir)
     captains = find_captains(docs_dir)
+    if (docs_dir / "leaderboard" / "index.html").exists():
+        captains.append("/leaderboard/")
 
     # Build XML
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']

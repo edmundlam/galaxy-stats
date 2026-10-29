@@ -1,0 +1,2142 @@
+{
+  "events": [
+    {
+      "id": "2026-02",
+      "short": "Feb",
+      "total": 138
+    },
+    {
+      "id": "2026-03",
+      "short": "Mar",
+      "total": 273
+    },
+    {
+      "id": "2026-04",
+      "short": "Apr",
+      "total": 275
+    },
+    {
+      "id": "2026-05",
+      "short": "May",
+      "total": 260
+    },
+    {
+      "id": "2026-06",
+      "short": "Jun",
+      "total": 232
+    },
+    {
+      "id": "2026-07",
+      "short": "Jul",
+      "total": 219
+    },
+    {
+      "id": "2026-08",
+      "short": "Aug",
+      "total": 183
+    },
+    {
+      "id": "2026-09",
+      "short": "Sep",
+      "total": 202
+    },
+    {
+      "id": "2026-10",
+      "short": "Oct",
+      "total": 871
+    }
+  ],
+  "stats": {
+    "players": 1954,
+    "events": 9,
+    "longest_streak": 8,
+    "repeat_pct": 23
+  },
+  "most_wins": [
+    {
+      "name": "Astrid The Cat",
+      "wins": 8
+    },
+    {
+      "name": "XenoGemini",
+      "wins": 8
+    },
+    {
+      "name": "Applechips",
+      "wins": 7
+    },
+    {
+      "name": "Fouxdufafa",
+      "wins": 7
+    },
+    {
+      "name": "hogehoge",
+      "wins": 6
+    },
+    {
+      "name": "Katsuu",
+      "wins": 6
+    },
+    {
+      "name": "Lombi",
+      "wins": 6
+    },
+    {
+      "name": "Promil",
+      "wins": 6
+    },
+    {
+      "name": "sacakewalk",
+      "wins": 6
+    },
+    {
+      "name": "!!!",
+      "wins": 5
+    },
+    {
+      "name": "burgundymyr",
+      "wins": 5
+    },
+    {
+      "name": "Conker",
+      "wins": 5
+    },
+    {
+      "name": "Cynic",
+      "wins": 5
+    },
+    {
+      "name": "dob",
+      "wins": 5
+    },
+    {
+      "name": "eccelleente",
+      "wins": 5
+    },
+    {
+      "name": "Estanislau",
+      "wins": 5
+    },
+    {
+      "name": "Hikikomori",
+      "wins": 5
+    },
+    {
+      "name": "Jasperov",
+      "wins": 5
+    },
+    {
+      "name": "kannami",
+      "wins": 5
+    },
+    {
+      "name": "Mlordx",
+      "wins": 5
+    },
+    {
+      "name": "myrzy",
+      "wins": 5
+    },
+    {
+      "name": "perrythepig",
+      "wins": 5
+    },
+    {
+      "name": "Ryohten",
+      "wins": 5
+    },
+    {
+      "name": "Serenity",
+      "wins": 5
+    },
+    {
+      "name": "shortelf",
+      "wins": 5
+    },
+    {
+      "name": "Sycaris",
+      "wins": 5
+    },
+    {
+      "name": "tretherio",
+      "wins": 5
+    },
+    {
+      "name": "yujinskii",
+      "wins": 5
+    },
+    {
+      "name": "A-Bar",
+      "wins": 4
+    },
+    {
+      "name": "AgraZero",
+      "wins": 4
+    },
+    {
+      "name": "Bleech",
+      "wins": 4
+    },
+    {
+      "name": "Briguy",
+      "wins": 4
+    },
+    {
+      "name": "buttons gaming",
+      "wins": 4
+    },
+    {
+      "name": "Cjswoosh23",
+      "wins": 4
+    },
+    {
+      "name": "clone103",
+      "wins": 4
+    },
+    {
+      "name": "Comely",
+      "wins": 4
+    },
+    {
+      "name": "Cookar",
+      "wins": 4
+    },
+    {
+      "name": "CrilaPeoty",
+      "wins": 4
+    },
+    {
+      "name": "CunningWish",
+      "wins": 4
+    },
+    {
+      "name": "DeadlyQueen",
+      "wins": 4
+    },
+    {
+      "name": "dtrooper",
+      "wins": 4
+    },
+    {
+      "name": "EpicVapor126",
+      "wins": 4
+    },
+    {
+      "name": "Falanwe",
+      "wins": 4
+    },
+    {
+      "name": "FireOak",
+      "wins": 4
+    },
+    {
+      "name": "GoodDigestion",
+      "wins": 4
+    },
+    {
+      "name": "Jampot",
+      "wins": 4
+    },
+    {
+      "name": "JoeOnToast",
+      "wins": 4
+    },
+    {
+      "name": "Justini12",
+      "wins": 4
+    },
+    {
+      "name": "kurisu",
+      "wins": 4
+    },
+    {
+      "name": "Kvkriemhild",
+      "wins": 4
+    },
+    {
+      "name": "Leoj151",
+      "wins": 4
+    },
+    {
+      "name": "Lunco",
+      "wins": 4
+    },
+    {
+      "name": "Magus of the Moon",
+      "wins": 4
+    },
+    {
+      "name": "Nrausch1",
+      "wins": 4
+    },
+    {
+      "name": "omok23",
+      "wins": 4
+    },
+    {
+      "name": "Pastafarianx",
+      "wins": 4
+    },
+    {
+      "name": "Pirifius",
+      "wins": 4
+    },
+    {
+      "name": "Poomermon",
+      "wins": 4
+    },
+    {
+      "name": "Sn0_Man",
+      "wins": 4
+    },
+    {
+      "name": "Terroking",
+      "wins": 4
+    },
+    {
+      "name": "TheOtterRaft",
+      "wins": 4
+    },
+    {
+      "name": "Armadi",
+      "wins": 3
+    },
+    {
+      "name": "Arromir",
+      "wins": 3
+    },
+    {
+      "name": "aseraphim",
+      "wins": 3
+    },
+    {
+      "name": "ash blossom",
+      "wins": 3
+    },
+    {
+      "name": "AuroraAdventus",
+      "wins": 3
+    },
+    {
+      "name": "BeakerDan",
+      "wins": 3
+    },
+    {
+      "name": "BeKindUnwind",
+      "wins": 3
+    },
+    {
+      "name": "bourdi",
+      "wins": 3
+    },
+    {
+      "name": "Burbrujix",
+      "wins": 3
+    },
+    {
+      "name": "BustopherJones",
+      "wins": 3
+    },
+    {
+      "name": "Cactuspuppy",
+      "wins": 3
+    },
+    {
+      "name": "Chazz Big Bone",
+      "wins": 3
+    },
+    {
+      "name": "ChekhovsGum",
+      "wins": 3
+    },
+    {
+      "name": "Chilichibi",
+      "wins": 3
+    },
+    {
+      "name": "Danb1563",
+      "wins": 3
+    },
+    {
+      "name": "Dance Epidemic",
+      "wins": 3
+    },
+    {
+      "name": "Doppler",
+      "wins": 3
+    },
+    {
+      "name": "Dragalar",
+      "wins": 3
+    },
+    {
+      "name": "Echelon",
+      "wins": 3
+    },
+    {
+      "name": "Elagabalus",
+      "wins": 3
+    },
+    {
+      "name": "f300XEN",
+      "wins": 3
+    },
+    {
+      "name": "FlyingSushi",
+      "wins": 3
+    },
+    {
+      "name": "Froglodyte",
+      "wins": 3
+    },
+    {
+      "name": "funnywille",
+      "wins": 3
+    },
+    {
+      "name": "GayzerBeam=)",
+      "wins": 3
+    },
+    {
+      "name": "Gorik",
+      "wins": 3
+    },
+    {
+      "name": "Grgapm",
+      "wins": 3
+    },
+    {
+      "name": "Gricha",
+      "wins": 3
+    },
+    {
+      "name": "Gungo",
+      "wins": 3
+    },
+    {
+      "name": "Haumph",
+      "wins": 3
+    },
+    {
+      "name": "Hipoo",
+      "wins": 3
+    },
+    {
+      "name": "hitmep",
+      "wins": 3
+    },
+    {
+      "name": "HPfortheTD",
+      "wins": 3
+    },
+    {
+      "name": "Idos",
+      "wins": 3
+    },
+    {
+      "name": "ima",
+      "wins": 3
+    },
+    {
+      "name": "IvanFloch",
+      "wins": 3
+    },
+    {
+      "name": "Jallaba",
+      "wins": 3
+    },
+    {
+      "name": "Komodo",
+      "wins": 3
+    },
+    {
+      "name": "ktsbb",
+      "wins": 3
+    }
+  ],
+  "longest_streaks": [
+    {
+      "name": "XenoGemini",
+      "length": 8,
+      "start": 1,
+      "end": 8
+    },
+    {
+      "name": "Applechips",
+      "length": 7,
+      "start": 2,
+      "end": 8
+    },
+    {
+      "name": "Astrid The Cat",
+      "length": 6,
+      "start": 0,
+      "end": 5
+    },
+    {
+      "name": "Lombi",
+      "length": 6,
+      "start": 3,
+      "end": 8
+    },
+    {
+      "name": "Promil",
+      "length": 6,
+      "start": 3,
+      "end": 8
+    },
+    {
+      "name": "Hikikomori",
+      "length": 5,
+      "start": 4,
+      "end": 8
+    },
+    {
+      "name": "Katsuu",
+      "length": 5,
+      "start": 1,
+      "end": 5
+    },
+    {
+      "name": "myrzy",
+      "length": 5,
+      "start": 0,
+      "end": 4
+    },
+    {
+      "name": "Cynic",
+      "length": 4,
+      "start": 4,
+      "end": 7
+    },
+    {
+      "name": "Falanwe",
+      "length": 4,
+      "start": 5,
+      "end": 8
+    },
+    {
+      "name": "Fouxdufafa",
+      "length": 4,
+      "start": 5,
+      "end": 8
+    },
+    {
+      "name": "hogehoge",
+      "length": 4,
+      "start": 2,
+      "end": 5
+    },
+    {
+      "name": "perrythepig",
+      "length": 4,
+      "start": 2,
+      "end": 5
+    },
+    {
+      "name": "Ryohten",
+      "length": 4,
+      "start": 4,
+      "end": 7
+    },
+    {
+      "name": "Sycaris",
+      "length": 4,
+      "start": 5,
+      "end": 8
+    },
+    {
+      "name": "Terroking",
+      "length": 4,
+      "start": 0,
+      "end": 3
+    },
+    {
+      "name": "!!!",
+      "length": 3,
+      "start": 3,
+      "end": 5
+    },
+    {
+      "name": "ChekhovsGum",
+      "length": 3,
+      "start": 6,
+      "end": 8
+    },
+    {
+      "name": "dob",
+      "length": 3,
+      "start": 6,
+      "end": 8
+    },
+    {
+      "name": "dtrooper",
+      "length": 3,
+      "start": 4,
+      "end": 6
+    },
+    {
+      "name": "eccelleente",
+      "length": 3,
+      "start": 6,
+      "end": 8
+    },
+    {
+      "name": "f300XEN",
+      "length": 3,
+      "start": 1,
+      "end": 3
+    },
+    {
+      "name": "FireOak",
+      "length": 3,
+      "start": 2,
+      "end": 4
+    },
+    {
+      "name": "Jampot",
+      "length": 3,
+      "start": 4,
+      "end": 6
+    },
+    {
+      "name": "Justini12",
+      "length": 3,
+      "start": 2,
+      "end": 4
+    },
+    {
+      "name": "Komodo",
+      "length": 3,
+      "start": 0,
+      "end": 2
+    },
+    {
+      "name": "Kvkriemhild",
+      "length": 3,
+      "start": 3,
+      "end": 5
+    },
+    {
+      "name": "Magus of the Moon",
+      "length": 3,
+      "start": 2,
+      "end": 4
+    },
+    {
+      "name": "MAWRAT",
+      "length": 3,
+      "start": 6,
+      "end": 8
+    },
+    {
+      "name": "Mlordx",
+      "length": 3,
+      "start": 4,
+      "end": 6
+    },
+    {
+      "name": "Motumbo",
+      "length": 3,
+      "start": 1,
+      "end": 3
+    },
+    {
+      "name": "Nanonox",
+      "length": 3,
+      "start": 1,
+      "end": 3
+    },
+    {
+      "name": "Neffari",
+      "length": 3,
+      "start": 2,
+      "end": 4
+    },
+    {
+      "name": "OneThena",
+      "length": 3,
+      "start": 6,
+      "end": 8
+    },
+    {
+      "name": "Pirifius",
+      "length": 3,
+      "start": 6,
+      "end": 8
+    },
+    {
+      "name": "pomme verte",
+      "length": 3,
+      "start": 0,
+      "end": 2
+    },
+    {
+      "name": "RiKindred",
+      "length": 3,
+      "start": 3,
+      "end": 5
+    },
+    {
+      "name": "TurquoiseLink",
+      "length": 3,
+      "start": 1,
+      "end": 3
+    },
+    {
+      "name": "XQN",
+      "length": 3,
+      "start": 1,
+      "end": 3
+    },
+    {
+      "name": "a breloom",
+      "length": 2,
+      "start": 1,
+      "end": 2
+    },
+    {
+      "name": "A Butt?",
+      "length": 2,
+      "start": 6,
+      "end": 7
+    },
+    {
+      "name": "a duck",
+      "length": 2,
+      "start": 0,
+      "end": 1
+    },
+    {
+      "name": "A-Bar",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "aaaaaaaaaaaaaaaaa",
+      "length": 2,
+      "start": 3,
+      "end": 4
+    },
+    {
+      "name": "AgraZero",
+      "length": 2,
+      "start": 5,
+      "end": 6
+    },
+    {
+      "name": "Aikiriwae",
+      "length": 2,
+      "start": 4,
+      "end": 5
+    },
+    {
+      "name": "Alirea",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "Alnate",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "Arcaeus",
+      "length": 2,
+      "start": 2,
+      "end": 3
+    },
+    {
+      "name": "Arcaues",
+      "length": 2,
+      "start": 2,
+      "end": 3
+    },
+    {
+      "name": "Armadi",
+      "length": 2,
+      "start": 2,
+      "end": 3
+    },
+    {
+      "name": "Arromir",
+      "length": 2,
+      "start": 1,
+      "end": 2
+    },
+    {
+      "name": "aseraphim",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "ash blossom",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "Astrid The Cat",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "AsuiKitsune",
+      "length": 2,
+      "start": 4,
+      "end": 5
+    },
+    {
+      "name": "AtlasMessiah",
+      "length": 2,
+      "start": 6,
+      "end": 7
+    },
+    {
+      "name": "AuroraAdventus",
+      "length": 2,
+      "start": 5,
+      "end": 6
+    },
+    {
+      "name": "Bboy",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "BeakerDan",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "blacklotus",
+      "length": 2,
+      "start": 2,
+      "end": 3
+    },
+    {
+      "name": "Blast0is3",
+      "length": 2,
+      "start": 3,
+      "end": 4
+    },
+    {
+      "name": "Bleech",
+      "length": 2,
+      "start": 0,
+      "end": 1
+    },
+    {
+      "name": "Bleech",
+      "length": 2,
+      "start": 3,
+      "end": 4
+    },
+    {
+      "name": "Bobini",
+      "length": 2,
+      "start": 2,
+      "end": 3
+    },
+    {
+      "name": "Botticus9",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "bourdi",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "Briguy",
+      "length": 2,
+      "start": 5,
+      "end": 6
+    },
+    {
+      "name": "buffet",
+      "length": 2,
+      "start": 2,
+      "end": 3
+    },
+    {
+      "name": "burgundymyr",
+      "length": 2,
+      "start": 2,
+      "end": 3
+    },
+    {
+      "name": "burgundymyr",
+      "length": 2,
+      "start": 6,
+      "end": 7
+    },
+    {
+      "name": "buttons gaming",
+      "length": 2,
+      "start": 2,
+      "end": 3
+    },
+    {
+      "name": "Cactuspuppy",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "Caraway",
+      "length": 2,
+      "start": 5,
+      "end": 6
+    },
+    {
+      "name": "caricas",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "Champ",
+      "length": 2,
+      "start": 5,
+      "end": 6
+    },
+    {
+      "name": "Chilichibi",
+      "length": 2,
+      "start": 5,
+      "end": 6
+    },
+    {
+      "name": "Cjswoosh23",
+      "length": 2,
+      "start": 1,
+      "end": 2
+    },
+    {
+      "name": "Cjswoosh23",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "clone103",
+      "length": 2,
+      "start": 1,
+      "end": 2
+    },
+    {
+      "name": "clone103",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "Comely",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "Conker",
+      "length": 2,
+      "start": 1,
+      "end": 2
+    },
+    {
+      "name": "Conker",
+      "length": 2,
+      "start": 5,
+      "end": 6
+    },
+    {
+      "name": "Cookar",
+      "length": 2,
+      "start": 0,
+      "end": 1
+    },
+    {
+      "name": "Couldbeglorious",
+      "length": 2,
+      "start": 4,
+      "end": 5
+    },
+    {
+      "name": "CrilaPeoty",
+      "length": 2,
+      "start": 4,
+      "end": 5
+    },
+    {
+      "name": "Cryder",
+      "length": 2,
+      "start": 2,
+      "end": 3
+    },
+    {
+      "name": "CunningWish",
+      "length": 2,
+      "start": 6,
+      "end": 7
+    },
+    {
+      "name": "D's_Nutz",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "Danb1563",
+      "length": 2,
+      "start": 1,
+      "end": 2
+    },
+    {
+      "name": "Dance Epidemic",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "Darktyui",
+      "length": 2,
+      "start": 2,
+      "end": 3
+    },
+    {
+      "name": "DeadlyQueen",
+      "length": 2,
+      "start": 2,
+      "end": 3
+    },
+    {
+      "name": "doonboggle",
+      "length": 2,
+      "start": 4,
+      "end": 5
+    },
+    {
+      "name": "Doppler",
+      "length": 2,
+      "start": 1,
+      "end": 2
+    },
+    {
+      "name": "EasyE",
+      "length": 2,
+      "start": 1,
+      "end": 2
+    },
+    {
+      "name": "Echelon",
+      "length": 2,
+      "start": 7,
+      "end": 8
+    },
+    {
+      "name": "EgaL",
+      "length": 2,
+      "start": 3,
+      "end": 4
+    },
+    {
+      "name": "Elagabalus",
+      "length": 2,
+      "start": 4,
+      "end": 5
+    }
+  ],
+  "active_streaks": [
+    {
+      "name": "XenoGemini",
+      "length": 8,
+      "wins": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Applechips",
+      "length": 7,
+      "wins": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Lombi",
+      "length": 6,
+      "wins": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Promil",
+      "length": 6,
+      "wins": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Hikikomori",
+      "length": 5,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Falanwe",
+      "length": 4,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Fouxdufafa",
+      "length": 4,
+      "wins": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Sycaris",
+      "length": 4,
+      "wins": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "ChekhovsGum",
+      "length": 3,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "dob",
+      "length": 3,
+      "wins": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "eccelleente",
+      "length": 3,
+      "wins": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "MAWRAT",
+      "length": 3,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "OneThena",
+      "length": 3,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Pirifius",
+      "length": 3,
+      "wins": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "A-Bar",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Alirea",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Alnate",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "aseraphim",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "ash blossom",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Astrid The Cat",
+      "length": 2,
+      "wins": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Bboy",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "BeakerDan",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Botticus9",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "bourdi",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Cactuspuppy",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "caricas",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Cjswoosh23",
+      "length": 2,
+      "wins": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "clone103",
+      "length": 2,
+      "wins": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Comely",
+      "length": 2,
+      "wins": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "D's_Nutz",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Dance Epidemic",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Echelon",
+      "length": 2,
+      "wins": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Fjord",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "GankedByWife",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Glorfindel",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Glurg",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Gukov",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "hambo710",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "InSpades",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "IvanFloch",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Kairoswe",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "LackofCertainty",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "LorD MegOphiaS",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Lunco",
+      "length": 2,
+      "wins": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Madraslover",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "minninja8",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Mosin",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "MrEismaus",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "MrPage404",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Neonemi",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "NickNPrince",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "PhilatioPhil",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Poomermon",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Renown",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Rivo",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "sacakewalk",
+      "length": 2,
+      "wins": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Serenity",
+      "length": 2,
+      "wins": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "SeruinJanoo",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "SQM",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "SSJ5GOKU",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "SuperBuddha",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "TheHark",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "TheOtterRaft",
+      "length": 2,
+      "wins": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "tODDlife",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "turnergregs",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "turtleherd",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Turtleses",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "watson",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "WingSteel",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "ythehunter",
+      "length": 2,
+      "wins": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    }
+  ],
+  "records": {
+    "captains": [
+      {
+        "name": "Astrid The Cat",
+        "captains": 8
+      },
+      {
+        "name": "XenoGemini",
+        "captains": 8
+      },
+      {
+        "name": "Applechips",
+        "captains": 6
+      }
+    ],
+    "loyal": [],
+    "comeback": [
+      {
+        "name": "Billys",
+        "gap": 7
+      },
+      {
+        "name": "bookcell",
+        "gap": 7
+      },
+      {
+        "name": "Channing",
+        "gap": 7
+      }
+    ]
+  }
+}
