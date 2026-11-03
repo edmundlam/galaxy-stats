@@ -147,8 +147,75 @@ def test_captain_page_embeds_payload_and_deck_rows(events_dir, captains_file):
     assert payload["slug"] == "galileo-galilei"
     assert len(payload["months"]) == 2
     for username in ("adub", "bee", "cy"):
-        assert f'<span class="pl">{username}</span>' in html
+        assert username not in html, "usernames are gone from the decklist section"
+    assert html.count('<details class="deck"') == 3
     assert '<link rel="canonical" href="https://example.com/galaxy-stats/captains/galileo-galilei/">' in html
+
+
+def _capt(months: dict[str, list[dict]]) -> dict:
+    """Build a minimal captain dict: month id -> list of {username, archetype, deck}."""
+    return {
+        "slug": "x",
+        "name": "X",
+        "months": [
+            {
+                "id": mid,
+                "date": f"{mid}-15",
+                "event": "E",
+                "players": players,
+            }
+            for mid, players in months.items()
+        ],
+    }
+
+
+def test_deck_rows_group_identical_decklists_regardless_of_order():
+    captain = _capt(
+        {
+            "2026-01": [{"username": "a", "archetype": "Treasures", "deck": ["Card A", "Card B"]}],
+            "2026-02": [{"username": "b", "archetype": "Treasures", "deck": ["Card B", "Card A"]}],
+        }
+    )
+    html = render_captain_page(captain, "https://example.com")
+    assert html.count('<details class="deck"') == 1
+    assert "×2" in html
+    for month in ("2026-01", "2026-02"):
+        assert f'<a href="../../reports/{month}/">{month}</a>' in html
+
+
+def test_deck_rows_show_each_month_once_when_a_deck_wins_twice_in_one_month():
+    captain = _capt(
+        {
+            "2026-01": [
+                {"username": "a", "archetype": "Mage", "deck": ["Card A"]},
+                {"username": "b", "archetype": "Mage", "deck": ["Card A"]},
+            ]
+        }
+    )
+    html = render_captain_page(captain, "https://example.com")
+    assert html.count('<details class="deck"') == 1
+    assert "×2" in html
+    summary = re.search(r'<details class="deck".*?<summary>(.*?)</summary>', html, re.DOTALL).group(1)
+    assert summary.count(">2026-01</a>") == 1, "a month shows once per grouped row even when won twice in it"
+
+
+def test_deck_rows_sort_by_count_then_recency():
+    captain = _capt(
+        {
+            "2026-01": [
+                {"username": "a", "archetype": "Mage", "deck": ["Card P"]},
+                {"username": "b", "archetype": "Candy", "deck": ["Card Q"]},
+            ],
+            "2026-02": [
+                {"username": "c", "archetype": "Mage", "deck": ["Card P"]},
+                {"username": "d", "archetype": "Toys", "deck": ["Card R"]},
+            ],
+        }
+    )
+    html = render_captain_page(captain, "https://example.com")
+    row = r'<details class="deck".*?<span class="ct">(×\d)</span>.*?class="tag"[^>]*>(\w+)</span>'
+    order = re.findall(row, html, re.DOTALL)
+    assert [(count, arch) for count, arch in order] == [("×2", "Mage"), ("×1", "Toys"), ("×1", "Candy")]
 
 
 def test_captain_page_escapes_closing_tag_sequences():
@@ -668,10 +735,10 @@ def test_deck_list_replaces_table_with_collapsed_details_rows(events_dir, captai
     html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
     assert 'id="deck-list"' in html
     assert 'id="deck-table"' not in html, "the sortable deck table is dropped with the redesign"
-    assert html.count("<details") == 3, "one collapsed row per deck, all server-rendered"
+    assert html.count("<details") == 3, "one collapsed row per unique decklist, all server-rendered"
     assert '<details class="deck" data-archetype="Treasures" data-month="2026-01">' in html
     summary = re.search(r"<summary>(.*?)</summary>", html, re.DOTALL).group(1)
-    for part in ('class="mo"', 'class="pl"', 'class="tag"', 'class="chev"', 'aria-hidden="true"'):
+    for part in ('class="mo"', 'class="ct"', 'class="tag"', 'class="chev"', 'aria-hidden="true"'):
         assert part in summary
     assert '<div class="dk">' in html
 
@@ -679,8 +746,8 @@ def test_deck_list_replaces_table_with_collapsed_details_rows(events_dir, captai
 def test_deck_list_orders_newest_month_first_keeps_within_month_order(events_dir, captains_file):
     html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
     deck_list = html.split('id="deck-list"', 1)[1]  # skip the payload JSON, which stays oldest-first
-    assert deck_list.index('data-month="2026-02"') < deck_list.index('data-month="2026-01"')
-    assert deck_list.index('<span class="pl">adub</span>') < deck_list.index('<span class="pl">bee</span>')
+    # All counts tie at 1: newest month (Card G) leads, then the 2026-01 decks keep source order (B before E)
+    assert deck_list.index(">Card G<") < deck_list.index(">Card B<") < deck_list.index(">Card E<")
 
 
 def test_archetype_chips_render_with_counts(events_dir, captains_file):
@@ -701,6 +768,21 @@ def test_archetype_chips_render_with_counts(events_dir, captains_file):
 def test_archetype_chips_hidden_for_single_archetype_captain():
     html = render_captain_page(forty_deck_captain(), "https://example.com")
     assert 'id="arch-filter"' not in html
+
+
+def test_archetype_chips_count_unique_decklists_not_occurrences():
+    captain = _capt(
+        {
+            "2026-01": [
+                {"username": "a", "archetype": "Mage", "deck": ["Card A"]},
+                {"username": "b", "archetype": "Mage", "deck": ["Card A"]},
+                {"username": "c", "archetype": "Toys", "deck": ["Card T"]},
+            ]
+        }
+    )
+    html = render_captain_page(captain, "https://example.com")
+    assert ">All 2</button>" in html
+    assert ">Mage 1</button>" in html, "chips count grouped rows, matching the rows they filter"
 
 
 def test_tags_tinted_from_archetype_colors(events_dir, captains_file):
@@ -737,4 +819,4 @@ def test_deck_pills_untinted_without_card_colors(events_dir, captains_file):
 def test_deck_filter_input_has_aria_label(events_dir, captains_file):
     html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
     assert 'id="deck-filter"' in html
-    assert 'aria-label="Filter decks by player, archetype, month, or card"' in html
+    assert 'aria-label="Filter decks by archetype, month, or card"' in html

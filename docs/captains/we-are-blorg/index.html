@@ -66,9 +66,9 @@
                          cursor:pointer; list-style:none; transition:background 0.15s; }
   details.deck summary::-webkit-details-marker { display:none; }
   details.deck summary:hover { background:#1e2230; }
-  .deck .mo { flex:none; width:46px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#9a9ca8; }
+  .deck .mo { flex:1; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#9a9ca8; }
   .deck .mo a { color:#9a9ca8; }
-  .deck .pl { flex:1; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:12px; overflow-wrap:anywhere; }
+  .deck .ct { flex:none; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9a9ca8; }
   .deck .tag { flex:none; }
   .chev { flex:none; transition:transform 0.15s; }
   details[open] .chev { transform:rotate(90deg); }
@@ -132,22 +132,22 @@
     <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
-    <div class="section-desc">Every winning deck across all months.</div>
+    <div class="section-desc">Winning decks grouped by identical list, most popular first.</div>
     
     <div class="captain-filter">
       <input id="deck-filter" class="filter-input" type="text"
-        aria-label="Filter decks by player, archetype, month, or card"
-        placeholder="Filter by player, archetype, month, or card…">
+        aria-label="Filter decks by archetype, month, or card"
+        placeholder="Filter by archetype, month, or card…">
     </div>
     <div id="deck-list">
       <details class="deck" data-archetype="Toys" data-month="2026-04">
-      <summary><span class="mo"><a href="../../reports/2026-04/">2026-04</a></span><span class="pl">godsize</span><span class="tag" style="background:#5a5d6a20;color:#5a5d6a;border-color:#5a5d6a40">Toys</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <summary><span class="mo"><a href="../../reports/2026-04/">2026-04</a></span><span class="ct">×1</span><span class="tag" style="background:#5a5d6a20;color:#5a5d6a;border-color:#5a5d6a40">Toys</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
       <div class="dk"><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Busted Bot</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Mortakon</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Mech-a-Man</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Mirror Mage</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Brick Monster</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Chip on the Ship</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Raggedy Ann</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Party Pinata</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Space Ranger Woody</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Pisces</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Wormscale Tinkerer</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Knight of the Holy Cane</span></div>
     </details>
     </div>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "we-are-blorg", "name": "We Are Blorg", "months": [{"id": "2026-04", "date": "2026-04-17", "event": "April Monthly", "players": [{"username": "godsize", "archetype": "Toys", "deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Mirror Mage", "Brick Monster", "Chip on the Ship", "Raggedy Ann", "Party Pinata", "Space Ranger Woody", "Pisces", "Wormscale Tinkerer", "Knight of the Holy Cane"]}]}], "rules": "When you recruit a character, your Toys gain that character's types.\nYour Toys with 5 or more types have +5 Attack.", "cardSlugs": {"Brick Monster": "brick_monster", "Busted Bot": "busted_bot", "Chip on the Ship": "chip_on_the_ship", "Knight of the Holy Cane": "knight_of_the_holy_cane", "Mech-a-Man": "mech_a_man", "Mirror Mage": "mirror_mage", "Mortakon": "mortakon", "Party Pinata": "party_pinata", "Pisces": "pisces", "Raggedy Ann": "raggedy_ann", "Space Ranger Woody": "space_ranger_woody", "Wormscale Tinkerer": "wormscale_tinkerer"}, "cardColors": {"Brick Monster": "#5a5d6a", "Busted Bot": "#5a5d6a", "Chip on the Ship": "#5a5d6a", "Knight of the Holy Cane": "#e87d9e", "Mech-a-Man": "#c8a96e", "Mirror Mage": "#9e6ec8", "Mortakon": "#5a5d6a", "Party Pinata": "#5a5d6a", "Pisces": "#c8a96e", "Raggedy Ann": "#5a5d6a", "Space Ranger Woody": "#5a5d6a", "Wormscale Tinkerer": "#c8a96e"}}</script>
+<script type="application/json" id="captain-data">{"slug": "we-are-blorg", "name": "We Are Blorg", "months": [{"id": "2026-04", "players": [{"deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Mirror Mage", "Brick Monster", "Chip on the Ship", "Raggedy Ann", "Party Pinata", "Space Ranger Woody", "Pisces", "Wormscale Tinkerer", "Knight of the Holy Cane"]}]}], "rules": "When you recruit a character, your Toys gain that character's types.\nYour Toys with 5 or more types have +5 Attack.", "cardSlugs": {"Brick Monster": "brick_monster", "Busted Bot": "busted_bot", "Chip on the Ship": "chip_on_the_ship", "Knight of the Holy Cane": "knight_of_the_holy_cane", "Mech-a-Man": "mech_a_man", "Mirror Mage": "mirror_mage", "Mortakon": "mortakon", "Party Pinata": "party_pinata", "Pisces": "pisces", "Raggedy Ann": "raggedy_ann", "Space Ranger Woody": "space_ranger_woody", "Wormscale Tinkerer": "wormscale_tinkerer"}, "cardColors": {"Brick Monster": "#5a5d6a", "Busted Bot": "#5a5d6a", "Chip on the Ship": "#5a5d6a", "Knight of the Holy Cane": "#e87d9e", "Mech-a-Man": "#c8a96e", "Mirror Mage": "#9e6ec8", "Mortakon": "#5a5d6a", "Party Pinata": "#5a5d6a", "Pisces": "#c8a96e", "Raggedy Ann": "#5a5d6a", "Space Ranger Woody": "#5a5d6a", "Wormscale Tinkerer": "#c8a96e"}}</script>
 <script src="../../assets/captains.js?v=7"></script>
 </body>
 </html>

@@ -66,9 +66,9 @@
                          cursor:pointer; list-style:none; transition:background 0.15s; }
   details.deck summary::-webkit-details-marker { display:none; }
   details.deck summary:hover { background:#1e2230; }
-  .deck .mo { flex:none; width:46px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#9a9ca8; }
+  .deck .mo { flex:1; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#9a9ca8; }
   .deck .mo a { color:#9a9ca8; }
-  .deck .pl { flex:1; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:12px; overflow-wrap:anywhere; }
+  .deck .ct { flex:none; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9a9ca8; }
   .deck .tag { flex:none; }
   .chev { flex:none; transition:transform 0.15s; }
   details[open] .chev { transform:rotate(90deg); }
@@ -132,22 +132,22 @@
     <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
-    <div class="section-desc">Every winning deck across all months.</div>
+    <div class="section-desc">Winning decks grouped by identical list, most popular first.</div>
     
     <div class="captain-filter">
       <input id="deck-filter" class="filter-input" type="text"
-        aria-label="Filter decks by player, archetype, month, or card"
-        placeholder="Filter by player, archetype, month, or card…">
+        aria-label="Filter decks by archetype, month, or card"
+        placeholder="Filter by archetype, month, or card…">
     </div>
     <div id="deck-list">
       <details class="deck" data-archetype="Mage" data-month="2026-10">
-      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="pl">Astrid The Cat</span><span class="tag" style="background:#9e6ec820;color:#9e6ec8;border-color:#9e6ec840">Mage</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="ct">×1</span><span class="tag" style="background:#9e6ec820;color:#9e6ec8;border-color:#9e6ec840">Mage</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
       <div class="dk"><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Blue Paintkin</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Fae Familiar</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Morgan Le Fae</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Red Paintkin</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Wishing Fish</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Crystal</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Mirror Mage</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Rudolph the Red</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Wicked Witch</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Anubis</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Crimson, Stalwart Hero</span><span class="deck-pill" style="color:#e8985acc;border-color:#e8985a30">Rocky, the Roller</span></div>
     </details>
     </div>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "dotty-dawdles", "name": "Dotty Dawdles", "months": [{"id": "2026-10", "date": "2026-10-23", "event": "October Monthly", "players": [{"username": "Astrid The Cat", "archetype": "Mage", "deck": ["Blue Paintkin", "Fae Familiar", "Morgan Le Fae", "Red Paintkin", "Wishing Fish", "Crystal", "Mirror Mage", "Rudolph the Red", "Wicked Witch", "Anubis", "Crimson, Stalwart Hero", "Rocky, the Roller"]}]}], "rules": "Double the buffs your spells give to Mages and Animals.", "cardSlugs": {"Anubis": "anubis", "Blue Paintkin": "blue_paintkin", "Crimson, Stalwart Hero": "crimson_stalwart_hero", "Crystal": "crystal", "Fae Familiar": "fae_familiar", "Mirror Mage": "mirror_mage", "Morgan Le Fae": "morgan_le_fae", "Red Paintkin": "red_paintkin", "Rocky, the Roller": "rocky_the_roller", "Rudolph the Red": "rudolph_the_red", "Wicked Witch": "wicked_witch", "Wishing Fish": "wishing_fish"}, "cardColors": {"Anubis": "#7b9cff", "Blue Paintkin": "#e8985a", "Crimson, Stalwart Hero": "#e8985a", "Crystal": "#c8a96e", "Fae Familiar": "#9e6ec8", "Mirror Mage": "#9e6ec8", "Morgan Le Fae": "#9e6ec8", "Red Paintkin": "#e8985a", "Rocky, the Roller": "#e8985a", "Rudolph the Red": "#9e6ec8", "Wicked Witch": "#9e6ec8", "Wishing Fish": "#c8a96e"}}</script>
+<script type="application/json" id="captain-data">{"slug": "dotty-dawdles", "name": "Dotty Dawdles", "months": [{"id": "2026-10", "players": [{"deck": ["Blue Paintkin", "Fae Familiar", "Morgan Le Fae", "Red Paintkin", "Wishing Fish", "Crystal", "Mirror Mage", "Rudolph the Red", "Wicked Witch", "Anubis", "Crimson, Stalwart Hero", "Rocky, the Roller"]}]}], "rules": "Double the buffs your spells give to Mages and Animals.", "cardSlugs": {"Anubis": "anubis", "Blue Paintkin": "blue_paintkin", "Crimson, Stalwart Hero": "crimson_stalwart_hero", "Crystal": "crystal", "Fae Familiar": "fae_familiar", "Mirror Mage": "mirror_mage", "Morgan Le Fae": "morgan_le_fae", "Red Paintkin": "red_paintkin", "Rocky, the Roller": "rocky_the_roller", "Rudolph the Red": "rudolph_the_red", "Wicked Witch": "wicked_witch", "Wishing Fish": "wishing_fish"}, "cardColors": {"Anubis": "#7b9cff", "Blue Paintkin": "#e8985a", "Crimson, Stalwart Hero": "#e8985a", "Crystal": "#c8a96e", "Fae Familiar": "#9e6ec8", "Mirror Mage": "#9e6ec8", "Morgan Le Fae": "#9e6ec8", "Red Paintkin": "#e8985a", "Rocky, the Roller": "#e8985a", "Rudolph the Red": "#9e6ec8", "Wicked Witch": "#9e6ec8", "Wishing Fish": "#c8a96e"}}</script>
 <script src="../../assets/captains.js?v=7"></script>
 </body>
 </html>

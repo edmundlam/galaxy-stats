@@ -72,9 +72,9 @@ EXTRA_CSS = """
                          cursor:pointer; list-style:none; transition:background 0.15s; }
   details.deck summary::-webkit-details-marker { display:none; }
   details.deck summary:hover { background:#1e2230; }
-  .deck .mo { flex:none; width:46px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#9a9ca8; }
+  .deck .mo { flex:1; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#9a9ca8; }
   .deck .mo a { color:#9a9ca8; }
-  .deck .pl { flex:1; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:12px; overflow-wrap:anywhere; }
+  .deck .ct { flex:none; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9a9ca8; }
   .deck .tag { flex:none; }
   .chev { flex:none; transition:transform 0.15s; }
   details[open] .chev { transform:rotate(90deg); }
@@ -271,19 +271,43 @@ CHEVRON_SVG = (
 )
 
 
+def _grouped_decks(captain: dict) -> list[tuple[str, dict, list[tuple[str, dict]]]]:
+    """Group a captain's winning decks by identical card set, newest occurrence first.
+
+    Each group is (representative player, occurrences) where occurrences hold
+    (month id, player) pairs ordered newest month first; the representative is
+    the newest occurrence. Shared by the deck rows and the archetype chips so
+    chip counts always match the rows they filter.
+
+    Args:
+        captain: Aggregated captain dict
+
+    Returns:
+        List of (player, occurrences) groups in first-seen (newest) order
+    """
+    entries = [(m["id"], p) for m in reversed(captain["months"]) for p in m["players"]]
+    groups: dict[tuple[str, ...], list[tuple[str, dict]]] = {}
+    for month_id, player in entries:
+        groups.setdefault(tuple(sorted(player["deck"])), []).append((month_id, player))
+    return [(occ[0][1], occ) for occ in groups.values()]
+
+
 def _deck_rows(
     captain: dict,
     report_ids: set[str] | None = None,
     arch_colors: dict[str, str] | None = None,
     card_colors: dict[str, str] | None = None,
 ) -> str:
-    """Render static collapsed deck rows for every winning deck, newest month first.
+    """Render collapsed deck rows grouped by identical decklist, most popular first.
 
-    Months link to the event report; months without a published report stay
-    plain text (all months link when report_ids is None). Archetype tags are
-    tinted from arch_colors (fringe gray fallback); card pills are plain spans
-    tinted with their type color — guide links live in the Best Cards table
-    only, keeping outbound links per page to a handful.
+    Decks group by card set regardless of order. Each row shows its occurrence
+    count and the months it won in, each month linking to the event report;
+    months without a published report stay plain text (all months link when
+    report_ids is None). Ties sort by newest occurrence first, then first card
+    alphabetically. Archetype tags are tinted from arch_colors (fringe gray
+    fallback); card pills are plain spans tinted with their type color — guide
+    links live in the Best Cards table only, keeping outbound links per page to
+    a handful.
 
     Args:
         captain: Aggregated captain dict
@@ -294,26 +318,31 @@ def _deck_rows(
     Returns:
         HTML string of <details> elements
     """
+
+    def sort_key(group: tuple[str, dict, list[tuple[str, dict]]]):
+        # ponytail: month ids are YYYY-MM by convention, so -int digits invert cleanly
+        player, occurrences = group
+        newest = occurrences[0][0]
+        return (-len(occurrences), tuple(-int(x) for x in newest.split("-")), sorted(player["deck"])[0])
+
     rows = []
-    for month in reversed(captain["months"]):
-        month_id = escape(month["id"])
-        if report_ids is None or month["id"] in report_ids:
-            month_html = f'<a href="../../reports/{month_id}/">{month_id}</a>'
-        else:
-            month_html = month_id
-        for player in month["players"]:
-            pills = "".join(_card_pill(card, None, (card_colors or {}).get(card)) for card in player["deck"])
-            arch = player["archetype"]
-            color = (arch_colors or {}).get(arch, "#7a7d8a")
-            rows.append(
-                f'<details class="deck" data-archetype="{escape(arch)}" data-month="{month_id}">\n'
-                f'      <summary><span class="mo">{month_html}</span>'
-                f'<span class="pl">{escape(player["username"])}</span>'
-                f'<span class="tag" style="background:{color}20;color:{color};border-color:{color}40">{escape(arch)}</span>'
-                f"{CHEVRON_SVG}</summary>\n"
-                f'      <div class="dk">{pills}</div>\n'
-                f"    </details>"
-            )
+    for player, occurrences in sorted(_grouped_decks(captain), key=sort_key):
+        months = list(dict.fromkeys(escape(m) for m, _ in occurrences))
+        month_html = " · ".join(
+            f'<a href="../../reports/{m}/">{m}</a>' if report_ids is None or m in report_ids else m for m in months
+        )
+        pills = "".join(_card_pill(card, None, (card_colors or {}).get(card)) for card in player["deck"])
+        arch = player["archetype"]
+        color = (arch_colors or {}).get(arch, "#7a7d8a")
+        rows.append(
+            f'<details class="deck" data-archetype="{escape(arch)}" data-month="{" ".join(months)}">\n'
+            f'      <summary><span class="mo">{month_html}</span>'
+            f'<span class="ct">×{len(occurrences)}</span>'
+            f'<span class="tag" style="background:{color}20;color:{color};border-color:{color}40">{escape(arch)}</span>'
+            f"{CHEVRON_SVG}</summary>\n"
+            f'      <div class="dk">{pills}</div>\n'
+            f"    </details>"
+        )
     return "\n    ".join(rows)
 
 
@@ -336,8 +365,9 @@ def _card_pill(card: str, card_slugs: dict[str, str] | None, color: str | None =
 def _archetype_chips(captain: dict) -> str:
     """Render archetype filter chips for the deck list, count desc then name.
 
-    Hidden entirely (empty string) when the captain's decks span a single
-    archetype — there is nothing to filter.
+    Counts unique decklists (not raw occurrences) so chip numbers match the
+    grouped rows they filter. Hidden entirely (empty string) when the captain's
+    decks span a single archetype — there is nothing to filter.
 
     Args:
         captain: Aggregated captain dict
@@ -346,9 +376,8 @@ def _archetype_chips(captain: dict) -> str:
         HTML string of the #arch-filter container, or ""
     """
     counts: dict[str, int] = {}
-    for month in captain["months"]:
-        for player in month["players"]:
-            counts[player["archetype"]] = counts.get(player["archetype"], 0) + 1
+    for player, _occurrences in _grouped_decks(captain):
+        counts[player["archetype"]] = counts.get(player["archetype"], 0) + 1
     if len(counts) <= 1:
         return ""
     total = sum(counts.values())
@@ -414,11 +443,13 @@ def render_captain_page(
     colors = card_colors or {}
     # cardSlugs/cardColors ride in the payload so JS re-renders keep the guide
     # links and tints; filtered to this captain's cards to avoid embedding the
-    # full maps.
+    # full maps. Months trim to id + decks (all the JS reads) so usernames
+    # never ship in the page source.
     deck_cards = sorted({card for d in all_decks for card in d})
     payload = serialize_payload(
         {
             **captain,
+            "months": [{"id": m["id"], "players": [{"deck": p["deck"]} for p in m["players"]]} for m in months],
             "cardSlugs": {c: slugs[c] for c in deck_cards if c in slugs},
             "cardColors": {c: colors[c] for c in deck_cards if c in colors},
         }
@@ -501,12 +532,12 @@ def render_captain_page(
     <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
-    <div class="section-desc">Every winning deck across all months.</div>
+    <div class="section-desc">Winning decks grouped by identical list, most popular first.</div>
     {_archetype_chips(captain)}
     <div class="captain-filter">
       <input id="deck-filter" class="filter-input" type="text"
-        aria-label="Filter decks by player, archetype, month, or card"
-        placeholder="Filter by player, archetype, month, or card…">
+        aria-label="Filter decks by archetype, month, or card"
+        placeholder="Filter by archetype, month, or card…">
     </div>
     <div id="deck-list">
       {_deck_rows(captain, report_ids, arch_colors, card_colors)}
