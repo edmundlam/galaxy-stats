@@ -1,0 +1,6274 @@
+{
+  "event": {
+    "id": "2026-11",
+    "name": "November Monthly",
+    "date": "2026-11-20",
+    "total_champions": 348
+  },
+  "players": [
+    {
+      "username": "!!!",
+      "captain": "nathaniel_drake",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "lance_a_little",
+        "blue_paintkin",
+        "miseria",
+        "yellow_paintkin",
+        "destiny",
+        "mana_potion",
+        "splat",
+        "genie_of_the_lamp",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "420McSwagger",
+      "captain": "the_collector",
+      "deck": [
+        "the_raven",
+        "bubbles",
+        "young_hercules",
+        "fortune_teller",
+        "orpheus",
+        "wishing_fish",
+        "tantalus",
+        "orion_the_hunter",
+        "ditto",
+        "crab_dragoon",
+        "apophis",
+        "perseus"
+      ]
+    },
+    {
+      "username": "4tlas",
+      "captain": "jay_sparrow",
+      "deck": [
+        "bubbles",
+        "glory_seeker",
+        "the_huntsman",
+        "baron_bok",
+        "mr_fox",
+        "orion_the_hunter",
+        "tsarmina_the_tyrant",
+        "astral_navigator",
+        "innkeeper",
+        "apophis",
+        "blackbeard",
+        "hercules"
+      ]
+    },
+    {
+      "username": "Acridic",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "satter_fae",
+        "blue_mage",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "leprechaun",
+        "dotty_daughter",
+        "owlabaster",
+        "luck_dragon",
+        "rocky_the_roller",
+        "mana_potion",
+        "model_elephant"
+      ]
+    },
+    {
+      "username": "ACupOfBreadTea",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "happy_little_painter",
+        "purrfectioneer",
+        "satter_fae",
+        "the_mad_splatter",
+        "leprechaun",
+        "splat",
+        "dotty_daughter",
+        "owlabaster",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "adalaba",
+      "captain": "chromarian",
+      "deck": [
+        "happy_little_painter",
+        "blue_mage",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "owlabaster",
+        "selphiea",
+        "starry_knight",
+        "marigold_eternal_student",
+        "monstro",
+        "rocky_the_roller",
+        "the_green_gecko"
+      ]
+    },
+    {
+      "username": "adrianc",
+      "captain": "toucan_samuel",
+      "deck": [
+        "antiquitoy",
+        "serenpopity",
+        "swoop",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "gingerbread_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "adub",
+      "captain": "styx",
+      "deck": [
+        "al_miraj",
+        "bubbles",
+        "miseria",
+        "nuada_radiant_king",
+        "wink",
+        "baron_bok",
+        "tsarmina_the_tyrant",
+        "astral_navigator",
+        "charlotte",
+        "oracle_of_fortunes",
+        "the_blue_faerie",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "AGO",
+      "captain": "bo_peep",
+      "deck": [
+        "pied_piper",
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "wishing_fish",
+        "dotty_daughter",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "AgraZero",
+      "captain": "luna",
+      "deck": [
+        "al_miraj",
+        "antiquitoy",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "varnish",
+        "wishing_fish",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Akaipo",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "AlexUndertow",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "prickles",
+        "red_mage",
+        "red_paintkin",
+        "yellow_mage",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "AlphaFrog",
+      "captain": "jay_sparrow",
+      "deck": [
+        "nutty_pirates",
+        "plunder_penny",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_huntsman",
+        "wink",
+        "yellow_paintkin",
+        "orion_the_hunter",
+        "blackbeard",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "anoldoldman",
+      "captain": "swishbuckler",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "model_elephant",
+        "varnish",
+        "owlabaster",
+        "starry_knight",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Anomaly",
+      "captain": "remi",
+      "deck": [
+        "pied_piper",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "varnish",
+        "wishing_fish",
+        "dotty_daughter",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "ArhioUkr",
+      "captain": "charlie_pots",
+      "deck": [
+        "happy_little_painter",
+        "blue_paintkin",
+        "purrfectioneer",
+        "yellow_paintkin",
+        "leprechaun",
+        "mr_fox",
+        "eros",
+        "medea_in_a_tavern",
+        "owlabaster",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "ArkatGbaji",
+      "captain": "rumpelstiltskin",
+      "deck": [
+        "netherbinder",
+        "sunflare_glider",
+        "combustible_dragon",
+        "mechanical_dragon",
+        "thunder_of_dragons",
+        "smug",
+        "hephaestus",
+        "flopsy",
+        "wormscale_tinkerer",
+        "ace_of_hearts",
+        "toto",
+        "aladdin"
+      ]
+    },
+    {
+      "username": "Artilleryfrost",
+      "captain": "remi",
+      "deck": [
+        "antiquitoy",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "white_rabbit",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_green_gecko",
+        "the_orange_orangutan",
+        "the_purple_peacock",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Asmo",
+      "captain": "luna",
+      "deck": [
+        "red_mage",
+        "yellow_mage",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "singe",
+        "starry_knight",
+        "white_rabbit",
+        "the_orange_orangutan",
+        "marigold_eternal_student",
+        "crimson_stalwart_hero"
+      ]
+    },
+    {
+      "username": "Astrid The Cat",
+      "captain": "baba_yaga",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "lance_a_little",
+        "blue_paintkin",
+        "fortune_teller",
+        "miseria",
+        "young_hercules",
+        "destiny",
+        "starry_knight",
+        "guinevere",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "AsuiKitsune",
+      "captain": "bo_peep",
+      "deck": [
+        "frog_prince",
+        "old_coyote",
+        "mr_fox",
+        "eros",
+        "fenrir",
+        "leapfrog",
+        "snapping_hydra",
+        "crab_dragoon",
+        "miss_muffet",
+        "monstro",
+        "nemean_lion",
+        "the_rat_king"
+      ]
+    },
+    {
+      "username": "Aupa",
+      "captain": "silversmith",
+      "deck": [
+        "pied_piper",
+        "toto",
+        "aladdin",
+        "sailor_moonshine",
+        "mech_a_man",
+        "mimic",
+        "maverick_icewing",
+        "thunder_of_dragons",
+        "smug",
+        "the_burninator",
+        "wormscale_tinkerer",
+        "flopsy"
+      ]
+    },
+    {
+      "username": "Azurel",
+      "captain": "dracusmagus",
+      "deck": [
+        "aladdin",
+        "the_fates",
+        "morgan_le_fae",
+        "mana_potion",
+        "mechanical_dragon",
+        "netherbinder",
+        "sunflare_glider",
+        "smug",
+        "thunder_of_dragons",
+        "crab_dragoon",
+        "oracle_of_fortunes",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "badnymph",
+      "captain": "tajima_patron_of_sweets",
+      "deck": [
+        "candy_claws",
+        "catatouille",
+        "pretty_patissier",
+        "the_sour_patch_kid",
+        "jaws",
+        "the_three_chef_keteers",
+        "caramel",
+        "chubby_bunny",
+        "twilight_sprinkles",
+        "viscount_chocolat",
+        "chubby_cheep",
+        "licorice"
+      ]
+    },
+    {
+      "username": "Bboy",
+      "captain": "luna",
+      "deck": [
+        "plunder_penny",
+        "prickles",
+        "red_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "varnish",
+        "bababanana",
+        "singe",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "BeakerDan",
+      "captain": "remi",
+      "deck": [
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "singe",
+        "white_rabbit",
+        "the_green_gecko",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Bearson",
+      "captain": "bo_peep",
+      "deck": [
+        "frog_prince",
+        "fae_familiar",
+        "mr_fox",
+        "leapfrog",
+        "snapping_hydra",
+        "charlotte",
+        "monstro",
+        "the_rat_king",
+        "miss_muffet",
+        "old_coyote",
+        "wishing_fish",
+        "fenrir"
+      ]
+    },
+    {
+      "username": "BeKindUnwind",
+      "captain": "mr_monet",
+      "deck": [
+        "al_miraj",
+        "antiquitoy",
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "varnish",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "belcheck",
+      "captain": "galileo_galilei",
+      "deck": [
+        "lance_a_little",
+        "the_raven",
+        "bubbles",
+        "destiny",
+        "young_hercules",
+        "wishing_fish",
+        "baron_bok",
+        "black_hole",
+        "astral_navigator",
+        "apophis",
+        "sigrun_valkyrie_queen",
+        "guinevere"
+      ]
+    },
+    {
+      "username": "Belthezar",
+      "captain": "da_ba_de",
+      "deck": [
+        "lance_a_little",
+        "blue_paintkin",
+        "mech_a_man",
+        "baron_bok",
+        "mana_potion",
+        "mortakon",
+        "astral_navigator",
+        "kagutsuchi",
+        "selphiea",
+        "anubis",
+        "barrel_of_monkeys",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "bexic",
+      "captain": "bo_peep",
+      "deck": [
+        "red_paintkin",
+        "yellow_paintkin",
+        "mr_fox",
+        "fenrir",
+        "snapping_hydra",
+        "white_rabbit",
+        "apophis",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "monstro",
+        "the_orange_orangutan",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "bflat",
+      "captain": "bo_peep",
+      "deck": [
+        "gingerbread_witch",
+        "catatouille",
+        "the_candy_cane_crook",
+        "jumping_jelly_beans",
+        "jaws",
+        "the_three_chef_keteers",
+        "leapfrog",
+        "twilight_sprinkles",
+        "chubby_cheep",
+        "jelly_ton",
+        "nemean_lion",
+        "crab_dragoon"
+      ]
+    },
+    {
+      "username": "Blargplean",
+      "captain": "tajima_patron_of_sweets",
+      "deck": [
+        "pied_piper",
+        "candy_claws",
+        "pretty_patissier",
+        "cherry_topples",
+        "jaws",
+        "the_three_chef_keteers",
+        "chubby_bunny",
+        "keeb",
+        "leapfrog",
+        "twilight_sprinkles",
+        "chubby_cheep",
+        "monstro"
+      ]
+    },
+    {
+      "username": "Blobbo",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "purrfectioneer",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "model_elephant",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Blorange",
+      "captain": "bo_peep",
+      "deck": [
+        "gingerbread_witch",
+        "catatouille",
+        "jaws",
+        "mr_fox",
+        "the_three_chef_keteers",
+        "leapfrog",
+        "twilight_sprinkles",
+        "chubby_cheep",
+        "cotton_candy_dandy",
+        "crab_dragoon",
+        "jelly_ton",
+        "nemean_lion"
+      ]
+    },
+    {
+      "username": "BlurayTR",
+      "captain": "moonsong",
+      "deck": [
+        "happy_little_painter",
+        "the_fates",
+        "chaos",
+        "morgan_le_fae",
+        "calypso",
+        "moppet",
+        "genie_of_the_lamp",
+        "mirror_mage",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "bobobono",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "purrfectioneer",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "model_elephant",
+        "astral_navigator",
+        "white_rabbit",
+        "barrel_of_monkeys",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "BoeBoe",
+      "captain": "vena_cava",
+      "deck": [
+        "al_miraj",
+        "happy_little_painter",
+        "pied_piper",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "fun_gal",
+        "model_elephant",
+        "the_giving_tree",
+        "dotty_daughter",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Bolegda",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "happy_little_painter",
+        "blue_paintkin",
+        "satter_fae",
+        "yellow_paintkin",
+        "leprechaun",
+        "maverick_icewing",
+        "owlabaster",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_burninator"
+      ]
+    },
+    {
+      "username": "Boron?",
+      "captain": "bo_peep",
+      "deck": [
+        "frog_prince",
+        "fae_familiar",
+        "mr_fox",
+        "leapfrog",
+        "snapping_hydra",
+        "charlotte",
+        "monstro",
+        "the_rat_king",
+        "miss_muffet",
+        "old_coyote",
+        "wishing_fish",
+        "fenrir"
+      ]
+    },
+    {
+      "username": "Brenno_mc",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "plunder_penny",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Briguy",
+      "captain": "gloria_clementine",
+      "deck": [
+        "bubbles",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "model_elephant",
+        "dotty_daughter",
+        "eros",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "BubbleZ",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "blue_paintkin",
+        "purrfectioneer",
+        "satter_fae",
+        "leprechaun",
+        "mana_potion",
+        "splat",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Buffy",
+      "captain": "bo_peep",
+      "deck": [
+        "model_elephant",
+        "mr_fox",
+        "tsarmina_the_tyrant",
+        "varnish",
+        "wishing_fish",
+        "dotty_daughter",
+        "owlabaster",
+        "snapping_hydra",
+        "white_rabbit",
+        "apophis",
+        "crab_dragoon",
+        "monstro"
+      ]
+    },
+    {
+      "username": "Bugiardo",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "mana_potion",
+        "model_elephant",
+        "mr_fox",
+        "splat",
+        "the_butcher",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Bulo",
+      "captain": "romeo",
+      "deck": [
+        "lance_a_little",
+        "miseria",
+        "the_candy_cane_crook",
+        "the_huntsman",
+        "frosting_dragon",
+        "kool_wip",
+        "maverick_icewing",
+        "mr_fox",
+        "rollo",
+        "knight_of_the_holy_cane",
+        "the_burninator",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "burgundymyr",
+      "captain": "bing_wu",
+      "deck": [
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "eros",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "burroohhh",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "plunder_penny",
+        "blue_paintkin",
+        "purrfectioneer",
+        "yellow_paintkin",
+        "mana_potion",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Cage",
+      "captain": "mr_monet",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "van_gogogo",
+        "yellow_paintkin",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Calisov",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "purrfectioneer",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "mana_potion",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Candy muncher",
+      "captain": "remi",
+      "deck": [
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "singe",
+        "white_rabbit",
+        "the_green_gecko",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Cassowary_Crook",
+      "captain": "toucan_samuel",
+      "deck": [
+        "lance_a_little",
+        "toto",
+        "fortune_teller",
+        "miseria",
+        "young_hercules",
+        "maverick_icewing",
+        "mr_fox",
+        "nightshade",
+        "orion_the_hunter",
+        "rollo",
+        "pisces",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "castanet",
+      "captain": "bo_peep",
+      "deck": [
+        "gingerbread_witch",
+        "catatouille",
+        "the_candy_cane_crook",
+        "jumping_jelly_beans",
+        "jaws",
+        "the_three_chef_keteers",
+        "leapfrog",
+        "twilight_sprinkles",
+        "chubby_cheep",
+        "jelly_ton",
+        "nemean_lion",
+        "crab_dragoon"
+      ]
+    },
+    {
+      "username": "Catta",
+      "captain": "bing_wu",
+      "deck": [
+        "happy_little_painter",
+        "blue_mage",
+        "blue_paintkin",
+        "purrfectioneer",
+        "yellow_paintkin",
+        "leprechaun",
+        "mana_potion",
+        "splat",
+        "owlabaster",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Channing",
+      "captain": "bo_peep",
+      "deck": [
+        "serenpopity",
+        "swoop",
+        "the_candy_cane_crook",
+        "jaws",
+        "the_three_chef_keteers",
+        "leapfrog",
+        "twilight_sprinkles",
+        "chubby_cheep",
+        "crab_dragoon",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "nemean_lion"
+      ]
+    },
+    {
+      "username": "charpentier",
+      "captain": "bing_wu",
+      "deck": [
+        "happy_little_painter",
+        "blue_mage",
+        "blue_paintkin",
+        "fae_familiar",
+        "mana_potion",
+        "mirror_mage",
+        "owlabaster",
+        "rudolph_the_red",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Chazz Big Bone",
+      "captain": "mr_monet",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "dotty_daughter",
+        "leapfrog",
+        "white_rabbit",
+        "barrel_of_monkeys",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "CheefYeet",
+      "captain": "bo_peep",
+      "deck": [
+        "fae_familiar",
+        "baron_bok",
+        "model_elephant",
+        "bababanana",
+        "dotty_daughter",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_green_gecko",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "chieFren",
+      "captain": "mr_monet",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_topples",
+        "starry_knight",
+        "white_rabbit",
+        "cotton_candy_dandy",
+        "crimson_stalwart_hero",
+        "gingerbread_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Chotoliso",
+      "captain": "bo_peep",
+      "deck": [
+        "fae_familiar",
+        "frog_prince",
+        "mr_fox",
+        "wishing_fish",
+        "charlotte",
+        "fenrir",
+        "leapfrog",
+        "snapping_hydra",
+        "crab_dragoon",
+        "miss_muffet",
+        "monstro",
+        "the_rat_king"
+      ]
+    },
+    {
+      "username": "CilantroPlant",
+      "captain": "toucan_samuel",
+      "deck": [
+        "gingerbread_witch",
+        "lollipop_faerie",
+        "catatouille",
+        "lemonhead",
+        "jumping_jelly_beans",
+        "nightshade",
+        "doopity_doo",
+        "knight_of_the_holy_cane",
+        "medea_in_a_tavern",
+        "pixie",
+        "twilight_sprinkles",
+        "cotton_candy_dandy"
+      ]
+    },
+    {
+      "username": "Cjswoosh23",
+      "captain": "remi",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "CleverDisplayName",
+      "captain": "goat_t",
+      "deck": [
+        "al_miraj",
+        "red_paintkin",
+        "the_mad_splatter",
+        "wink",
+        "yellow_paintkin",
+        "eros",
+        "snapping_hydra",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Collecter",
+      "captain": "toucan_samuel",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Concretement",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Conker",
+      "captain": "dorothy",
+      "deck": [
+        "lance_a_little",
+        "the_raven",
+        "miseria",
+        "young_hercules",
+        "destiny",
+        "maverick_icewing",
+        "mortakon",
+        "rollo",
+        "guinevere",
+        "perseus",
+        "sigrun_valkyrie_queen",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Corn1ty",
+      "captain": "quetzalcoatl",
+      "deck": [
+        "nuada_radiant_king",
+        "van_gogogo",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "wishing_fish",
+        "ditto",
+        "fenrir",
+        "smug",
+        "crab_dragoon",
+        "luck_dragon",
+        "the_burninator",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Cornbrick",
+      "captain": "luna",
+      "deck": [
+        "red_mage",
+        "red_paintkin",
+        "yellow_mage",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "splat",
+        "singe",
+        "starry_knight",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "Cowboy John",
+      "captain": "bo_peep",
+      "deck": [
+        "frog_prince",
+        "fae_familiar",
+        "mr_fox",
+        "leapfrog",
+        "snapping_hydra",
+        "charlotte",
+        "monstro",
+        "the_rat_king",
+        "miss_muffet",
+        "old_coyote",
+        "wishing_fish",
+        "fenrir"
+      ]
+    },
+    {
+      "username": "CowsAreFood",
+      "captain": "remi",
+      "deck": [
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "singe",
+        "white_rabbit",
+        "the_green_gecko",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "CrilaPeoty",
+      "captain": "remi",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "varnish",
+        "dotty_daughter",
+        "eros",
+        "snapping_hydra",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Cryder",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "mana_potion",
+        "model_elephant",
+        "dotty_daughter",
+        "owlabaster",
+        "starry_knight",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "Cursed",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "happy_little_painter",
+        "blue_mage",
+        "blue_paintkin",
+        "purrfectioneer",
+        "yellow_paintkin",
+        "mana_potion",
+        "dotty_daughter",
+        "owlabaster",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "czhihong",
+      "captain": "remi",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "DadaYaga",
+      "captain": "luna",
+      "deck": [
+        "comety",
+        "happy_little_painter",
+        "blue_paintkin",
+        "purrfectioneer",
+        "the_mad_splatter",
+        "leprechaun",
+        "model_elephant",
+        "bababanana",
+        "snapping_hydra",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "Dark Cloud",
+      "captain": "bo_peep",
+      "deck": [
+        "frog_prince",
+        "the_giving_tree",
+        "tsarmina_the_tyrant",
+        "astral_navigator",
+        "leapfrog",
+        "snapping_hydra",
+        "apophis",
+        "barrel_of_monkeys",
+        "miss_muffet",
+        "monstro",
+        "the_green_gecko",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Darri123",
+      "captain": "bo_peep",
+      "deck": [
+        "lance_a_little",
+        "pied_piper",
+        "cherry_bomb",
+        "mr_fox",
+        "splat",
+        "fenrir",
+        "owlabaster",
+        "apophis",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "monstro",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "deadfly",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "happy_little_painter",
+        "blue_paintkin",
+        "purrfectioneer",
+        "red_paintkin",
+        "yellow_paintkin",
+        "leprechaun",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Decree",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "comety",
+        "purrfectioneer",
+        "leprechaun",
+        "mana_potion",
+        "dotty_daughter",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "flopsy",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "DefaultChar",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "splat",
+        "varnish",
+        "starry_knight",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Derky",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "van_gogogo",
+        "yellow_paintkin",
+        "model_elephant",
+        "splat",
+        "bababanana",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Derwipok",
+      "captain": "luna",
+      "deck": [
+        "red_mage",
+        "yellow_mage",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "singe",
+        "starry_knight",
+        "white_rabbit",
+        "the_orange_orangutan",
+        "marigold_eternal_student",
+        "crimson_stalwart_hero"
+      ]
+    },
+    {
+      "username": "Diablo the Cheater",
+      "captain": "mauve_maniac",
+      "deck": [
+        "toto",
+        "lance_a_little",
+        "the_huntsman",
+        "chaos",
+        "varnish",
+        "dotty_daughter",
+        "singe",
+        "starry_knight",
+        "the_purple_peacock",
+        "rocky_the_roller",
+        "crimson_stalwart_hero",
+        "antiquitoy"
+      ]
+    },
+    {
+      "username": "diorge",
+      "captain": "bo_peep",
+      "deck": [
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "wishing_fish",
+        "dotty_daughter",
+        "snapping_hydra",
+        "white_rabbit",
+        "apophis",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "DitchDigger4000",
+      "captain": "mauve_maniac",
+      "deck": [
+        "toto",
+        "lance_a_little",
+        "the_huntsman",
+        "chaos",
+        "varnish",
+        "dotty_daughter",
+        "singe",
+        "starry_knight",
+        "the_purple_peacock",
+        "rocky_the_roller",
+        "crimson_stalwart_hero",
+        "antiquitoy"
+      ]
+    },
+    {
+      "username": "DKillaKai",
+      "captain": "luna",
+      "deck": [
+        "happy_little_painter",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_green_gecko",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "dob",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "comety",
+        "happy_little_painter",
+        "blue_paintkin",
+        "purrfectioneer",
+        "red_paintkin",
+        "yellow_paintkin",
+        "leprechaun",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Doctor Robot",
+      "captain": "double_dealer",
+      "deck": [
+        "dastardly_spirit",
+        "friendly_spirit",
+        "gingerbread_witch",
+        "chaos",
+        "miseria",
+        "cherry_topples",
+        "mr_fox",
+        "weensy",
+        "pisces",
+        "pixie",
+        "daedalus",
+        "gummy_wyrm"
+      ]
+    },
+    {
+      "username": "dokodog",
+      "captain": "bo_peep",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "varnish",
+        "wishing_fish",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "donderillo",
+      "captain": "mauve_maniac",
+      "deck": [
+        "toto",
+        "lance_a_little",
+        "the_huntsman",
+        "chaos",
+        "varnish",
+        "dotty_daughter",
+        "singe",
+        "starry_knight",
+        "the_purple_peacock",
+        "rocky_the_roller",
+        "crimson_stalwart_hero",
+        "antiquitoy"
+      ]
+    },
+    {
+      "username": "Dragalar",
+      "captain": "the_beanstalk",
+      "deck": [
+        "antiquitoy",
+        "lance_a_little",
+        "swoop",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Dreams",
+      "captain": "remi",
+      "deck": [
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "singe",
+        "white_rabbit",
+        "the_green_gecko",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Dross",
+      "captain": "swishbuckler",
+      "deck": [
+        "happy_little_painter",
+        "blue_paintkin",
+        "purrfectioneer",
+        "red_paintkin",
+        "yellow_paintkin",
+        "leprechaun",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Druborg",
+      "captain": "remi",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "varnish",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "dtrooper",
+      "captain": "da_ba_de",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "duo",
+      "captain": "king_midas",
+      "deck": [
+        "beanie_baby",
+        "the_raven",
+        "ace_of_hearts",
+        "frog_prince",
+        "kid_icarus",
+        "shanty",
+        "sinbad",
+        "sunflare_glider",
+        "mirror_mage",
+        "thunder_of_dragons",
+        "flopsy",
+        "the_burninator"
+      ]
+    },
+    {
+      "username": "dynamiteSTEEL",
+      "captain": "swishbuckler",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "eccelleente",
+      "captain": "mr_monet",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "morgan_le_fae",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wicked_witch",
+        "anubis",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Echelon",
+      "captain": "swishbuckler",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "genie_of_the_lamp",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Eggy",
+      "captain": "roulette",
+      "deck": [
+        "underdog",
+        "friendly_spirit",
+        "kid_icarus",
+        "mech_a_man",
+        "mimic",
+        "mr_fox",
+        "nightshade",
+        "leapfrog",
+        "pisces",
+        "hercules",
+        "elm_minster",
+        "blackbeard"
+      ]
+    },
+    {
+      "username": "EhDrone",
+      "captain": "con_artist",
+      "deck": [
+        "aladdin",
+        "gingerbread_witch",
+        "lollipop_faerie",
+        "lemonhead",
+        "cherry_topples",
+        "maverick_icewing",
+        "rollo",
+        "caramel",
+        "mirror_mage",
+        "ogre_magi",
+        "guinevere",
+        "licorice"
+      ]
+    },
+    {
+      "username": "Elipsis08",
+      "captain": "legend_of_loxley",
+      "deck": [
+        "barbosa",
+        "miseria",
+        "red_paintkin",
+        "yellow_paintkin",
+        "combustible_dragon",
+        "maverick_icewing",
+        "model_elephant",
+        "pisces",
+        "sir_francis_drake",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "ElricTheRed",
+      "captain": "bo_peep",
+      "deck": [
+        "antiquitoy",
+        "old_coyote",
+        "the_mad_splatter",
+        "mana_potion",
+        "wishing_fish",
+        "dotty_daughter",
+        "eros",
+        "leapfrog",
+        "snapping_hydra",
+        "apophis",
+        "crab_dragoon",
+        "nemean_lion"
+      ]
+    },
+    {
+      "username": "ElronCupboard",
+      "captain": "silversmith",
+      "deck": [
+        "fortune_teller",
+        "young_hercules",
+        "baron_bok",
+        "destiny",
+        "maverick_icewing",
+        "mortakon",
+        "mr_fox",
+        "rollo",
+        "guinevere",
+        "perseus",
+        "sigrun_valkyrie_queen",
+        "the_burninator"
+      ]
+    },
+    {
+      "username": "EpicVapor126",
+      "captain": "mauve_maniac",
+      "deck": [
+        "toto",
+        "lance_a_little",
+        "the_huntsman",
+        "chaos",
+        "varnish",
+        "dotty_daughter",
+        "singe",
+        "starry_knight",
+        "the_purple_peacock",
+        "rocky_the_roller",
+        "crimson_stalwart_hero",
+        "antiquitoy"
+      ]
+    },
+    {
+      "username": "Estanislau",
+      "captain": "luna",
+      "deck": [
+        "al_miraj",
+        "antiquitoy",
+        "barbosa",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "varnish",
+        "snapping_hydra",
+        "crimson_stalwart_hero",
+        "flopsy",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Evelyth",
+      "captain": "vena_cava",
+      "deck": [
+        "lance_a_little",
+        "red_paintkin",
+        "shanty",
+        "yellow_paintkin",
+        "nightshade",
+        "the_giving_tree",
+        "crimson_stalwart_hero",
+        "faerie_godfather",
+        "faerie_queen",
+        "marigold_eternal_student",
+        "moonshadow",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "EvilDans",
+      "captain": "trash_panda",
+      "deck": [
+        "aladdin",
+        "lance_a_little",
+        "miseria",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "rollo",
+        "tsarmina_the_tyrant",
+        "sir_francis_drake",
+        "snapping_hydra",
+        "oracle_of_fortunes",
+        "the_burninator",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Evolution O'Dum",
+      "captain": "jay_sparrow",
+      "deck": [
+        "antiquitoy",
+        "nutty_pirates",
+        "red_paintkin",
+        "the_huntsman",
+        "tsarmina_the_tyrant",
+        "innkeeper",
+        "singe",
+        "snapping_hydra",
+        "blackbeard",
+        "crimson_stalwart_hero",
+        "hercules",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "Fafner",
+      "captain": "geppetto",
+      "deck": [
+        "beanie_baby",
+        "busted_bot",
+        "mech_a_man",
+        "raggedy_ann",
+        "space_ranger_woody",
+        "mechanical_dragon",
+        "mortakon",
+        "party_pinata",
+        "barrel_of_monkeys",
+        "brick_monster",
+        "chip_on_the_ship",
+        "the_blue_faerie"
+      ]
+    },
+    {
+      "username": "FairMaze3",
+      "captain": "chromarian",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "varnish",
+        "dotty_daughter",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Famous Last Words",
+      "captain": "dracusmagus",
+      "deck": [
+        "aladdin",
+        "the_fates",
+        "fortune_teller",
+        "nuada_radiant_king",
+        "combustible_dragon",
+        "mechanical_dragon",
+        "sunflare_glider",
+        "smug",
+        "thunder_of_dragons",
+        "crab_dragoon",
+        "oracle_of_fortunes",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Faraday",
+      "captain": "bing_wu",
+      "deck": [
+        "purrfectioneer",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "bababanana",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Fendaso",
+      "captain": "luna",
+      "deck": [
+        "red_mage",
+        "the_mad_splatter",
+        "yellow_mage",
+        "mr_fox",
+        "varnish",
+        "bababanana",
+        "singe",
+        "starry_knight",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Filobel",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "happy_little_painter",
+        "purrfectioneer",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Fiorious",
+      "captain": "candy_pandy",
+      "deck": [
+        "antiquitoy",
+        "lance_a_little",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "FireOak",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "comety",
+        "blue_mage",
+        "blue_paintkin",
+        "purrfectioneer",
+        "cherry_bomb",
+        "mana_potion",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "FishingEnjoyer",
+      "captain": "da_ba_de",
+      "deck": [
+        "lance_a_little",
+        "blue_paintkin",
+        "mech_a_man",
+        "baron_bok",
+        "mana_potion",
+        "astral_navigator",
+        "black_hole",
+        "kagutsuchi",
+        "selphiea",
+        "anubis",
+        "barrel_of_monkeys",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Fitz21",
+      "captain": "swishbuckler",
+      "deck": [
+        "blue_mage",
+        "blue_paintkin",
+        "red_paintkin",
+        "model_elephant",
+        "dotty_daughter",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Fjord",
+      "captain": "luna",
+      "deck": [
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "bababanana",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_green_gecko",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Fleece",
+      "captain": "luna",
+      "deck": [
+        "red_mage",
+        "red_paintkin",
+        "yellow_mage",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "splat",
+        "starry_knight",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "ForKrin",
+      "captain": "bo_peep",
+      "deck": [
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "mr_fox",
+        "splat",
+        "astral_navigator",
+        "snapping_hydra",
+        "white_rabbit",
+        "apophis",
+        "crab_dragoon",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Fouxdufafa",
+      "captain": "bo_peep",
+      "deck": [
+        "pied_piper",
+        "frog_prince",
+        "old_coyote",
+        "the_mad_splatter",
+        "baron_bok",
+        "model_elephant",
+        "astral_navigator",
+        "owlabaster",
+        "snapping_hydra",
+        "white_rabbit",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Foxor",
+      "captain": "double_dealer",
+      "deck": [
+        "blue_paintkin",
+        "nuada_radiant_king",
+        "red_paintkin",
+        "cherry_topples",
+        "jaws",
+        "kool_wip",
+        "caramel",
+        "eros",
+        "twilight_sprinkles",
+        "cotton_candy_dandy",
+        "gingerbread_dragon",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "frock211",
+      "captain": "mr_monet",
+      "deck": [
+        "busted_bot",
+        "antiquitoy",
+        "mech_a_man",
+        "ace_of_hearts",
+        "mortakon",
+        "raggedy_ann",
+        "ditto",
+        "barrel_of_monkeys",
+        "chip_on_the_ship",
+        "the_blue_faerie",
+        "brick_monster",
+        "white_rabbit"
+      ]
+    },
+    {
+      "username": "fryguy",
+      "captain": "bo_peep",
+      "deck": [
+        "old_coyote",
+        "purrfectioneer",
+        "cherry_bomb",
+        "mr_fox",
+        "splat",
+        "varnish",
+        "twilight_sprinkles",
+        "white_rabbit",
+        "crab_dragoon",
+        "crimson_stalwart_hero",
+        "gingerbread_dragon",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Fuetsu",
+      "captain": "sweet_tooth",
+      "deck": [
+        "gingerbread_witch",
+        "the_candy_cane_crook",
+        "the_sour_patch_kid",
+        "cherry_topples",
+        "jaws",
+        "kool_wip",
+        "the_three_chef_keteers",
+        "caramel",
+        "keeb",
+        "viscount_chocolat",
+        "cotton_candy_dandy",
+        "jelly_ton"
+      ]
+    },
+    {
+      "username": "funkysharkyy",
+      "captain": "the_collector",
+      "deck": [
+        "aladdin",
+        "miseria",
+        "combustible_dragon",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "mr_fox",
+        "sunflare_glider",
+        "sir_francis_drake",
+        "thunder_of_dragons",
+        "oracle_of_fortunes",
+        "the_burninator",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Game Boy Color",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "plunder_penny",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "varnish",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "GanelonSan",
+      "captain": "dinonysus",
+      "deck": [
+        "happy_little_painter",
+        "blue_paintkin",
+        "miseria",
+        "the_huntsman",
+        "van_gogogo",
+        "destiny",
+        "maverick_icewing",
+        "mortakon",
+        "selphiea",
+        "guinevere",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "GankedByWife",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "gcob",
+      "captain": "catkiss_everburn",
+      "deck": [
+        "antiquitoy",
+        "van_gogogo",
+        "red_mage",
+        "yellow_mage",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "bababanana",
+        "starry_knight",
+        "marigold_eternal_student",
+        "crimson_stalwart_hero"
+      ]
+    },
+    {
+      "username": "Genomech",
+      "captain": "mauve_maniac",
+      "deck": [
+        "toto",
+        "lance_a_little",
+        "the_huntsman",
+        "chaos",
+        "varnish",
+        "dotty_daughter",
+        "singe",
+        "starry_knight",
+        "the_purple_peacock",
+        "rocky_the_roller",
+        "crimson_stalwart_hero",
+        "antiquitoy"
+      ]
+    },
+    {
+      "username": "Geostice2",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "satter_fae",
+        "blue_mage",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "leprechaun",
+        "dotty_daughter",
+        "owlabaster",
+        "luck_dragon",
+        "rocky_the_roller",
+        "mana_potion",
+        "model_elephant"
+      ]
+    },
+    {
+      "username": "Geostri",
+      "captain": "dragonmother",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "wink",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "pisces",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "GiftsForgiven",
+      "captain": "the_beanstalk",
+      "deck": [
+        "al_miraj",
+        "antiquitoy",
+        "lance_a_little",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "splat",
+        "selphiea",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "GloryAleStormHammer",
+      "captain": "raging_bull",
+      "deck": [
+        "pied_piper",
+        "underdog",
+        "lance_a_little",
+        "frog_prince",
+        "mr_fox",
+        "tsarmina_the_tyrant",
+        "leapfrog",
+        "snapping_hydra",
+        "monstro",
+        "fenrir",
+        "crab_dragoon",
+        "apophis"
+      ]
+    },
+    {
+      "username": "GoblinSav",
+      "captain": "bo_peep",
+      "deck": [
+        "frog_prince",
+        "fae_familiar",
+        "mr_fox",
+        "leapfrog",
+        "snapping_hydra",
+        "charlotte",
+        "monstro",
+        "the_rat_king",
+        "miss_muffet",
+        "old_coyote",
+        "wishing_fish",
+        "fenrir"
+      ]
+    },
+    {
+      "username": "GREENRocker",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "mana_potion",
+        "splat",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Grexolis",
+      "captain": "vena_cava",
+      "deck": [
+        "al_miraj",
+        "blue_paintkin",
+        "fae_familiar",
+        "red_paintkin",
+        "shanty",
+        "mana_potion",
+        "nightshade",
+        "weensy",
+        "dotty_daughter",
+        "crimson_stalwart_hero",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Greybeard",
+      "captain": "osiris",
+      "deck": [
+        "mech_a_man",
+        "nutcracker_prince",
+        "whirlidoo",
+        "baron_bok",
+        "combustible_dragon",
+        "mechanical_dragon",
+        "smug",
+        "snapping_hydra",
+        "apophis",
+        "crab_dragoon",
+        "oracle_of_fortunes",
+        "sigrun_valkyrie_queen"
+      ]
+    },
+    {
+      "username": "Grgapm",
+      "captain": "dracusmagus",
+      "deck": [
+        "blue_paintkin",
+        "purrfectioneer",
+        "combustible_dragon",
+        "mana_potion",
+        "ditto",
+        "smug",
+        "thunder_of_dragons",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_burninator",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "H4nd",
+      "captain": "vena_cava",
+      "deck": [
+        "al_miraj",
+        "pied_piper",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "model_elephant",
+        "the_giving_tree",
+        "varnish",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Hairlord",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "splat",
+        "starry_knight",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "HamiMiami",
+      "captain": "da_ba_de",
+      "deck": [
+        "blue_paintkin",
+        "fae_familiar",
+        "morgan_le_fae",
+        "red_paintkin",
+        "leprechaun",
+        "mana_potion",
+        "moppet",
+        "dotty_daughter",
+        "genie_of_the_lamp",
+        "crimson_stalwart_hero",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Hatchi",
+      "captain": "goat_t",
+      "deck": [
+        "dastardly_spirit",
+        "plunder_penny",
+        "mech_a_man",
+        "the_huntsman",
+        "mechanical_dragon",
+        "mortakon",
+        "mr_fox",
+        "innkeeper",
+        "snapping_hydra",
+        "blackbeard",
+        "flopsy",
+        "miss_muffet"
+      ]
+    },
+    {
+      "username": "Heleye",
+      "captain": "the_beanstalk",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Hihatonttu",
+      "captain": "nemesis",
+      "deck": [
+        "plunder_penny",
+        "fortune_teller",
+        "miseria",
+        "purrfectioneer",
+        "the_mad_splatter",
+        "weensy",
+        "crystal",
+        "medea_in_a_tavern",
+        "owlabaster",
+        "selphiea",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "HollywoodK",
+      "captain": "bo_peep",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "wishing_fish",
+        "dotty_daughter",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Hungryhungryhomer",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "mana_potion",
+        "model_elephant",
+        "varnish",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "hypericube",
+      "captain": "thing_in_the_ice",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "baron_bok",
+        "destiny",
+        "mortakon",
+        "astral_navigator",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "sigrun_valkyrie_queen"
+      ]
+    },
+    {
+      "username": "Icarus73",
+      "captain": "zheng_yi_sao",
+      "deck": [
+        "plunder_penny",
+        "sailor_moonshine",
+        "shanty",
+        "jelly_roger",
+        "mr_fox",
+        "innkeeper",
+        "sir_francis_drake",
+        "hercules",
+        "pirate_king",
+        "pirate_prince",
+        "the_burninator",
+        "weird_beard"
+      ]
+    },
+    {
+      "username": "Idos",
+      "captain": "mauve_maniac",
+      "deck": [
+        "toto",
+        "lance_a_little",
+        "the_huntsman",
+        "chaos",
+        "varnish",
+        "dotty_daughter",
+        "singe",
+        "starry_knight",
+        "the_purple_peacock",
+        "rocky_the_roller",
+        "crimson_stalwart_hero",
+        "antiquitoy"
+      ]
+    },
+    {
+      "username": "Immy",
+      "captain": "loki",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "ImpromptuDuel",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "plunder_penny",
+        "purrfectioneer",
+        "red_paintkin",
+        "satter_fae",
+        "yellow_paintkin",
+        "leprechaun",
+        "mirror_mage",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "inigomontoya18",
+      "captain": "luna",
+      "deck": [
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "bababanana",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_green_gecko",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "IsamaruWayne",
+      "captain": "swishbuckler",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "splat",
+        "varnish",
+        "white_rabbit",
+        "apophis",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "itsHubbard",
+      "captain": "remi",
+      "deck": [
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "singe",
+        "white_rabbit",
+        "the_green_gecko",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "JakobHelms",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "comety",
+        "happy_little_painter",
+        "purrfectioneer",
+        "the_mad_splatter",
+        "leprechaun",
+        "owlabaster",
+        "selphiea",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "JamisonQuicke",
+      "captain": "bo_peep",
+      "deck": [
+        "fae_familiar",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "splat",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "miss_muffet",
+        "monstro",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Jampot",
+      "captain": "osiris",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "selphiea",
+        "white_rabbit",
+        "anubis",
+        "marigold_eternal_student",
+        "mischief",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Jasperov",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "happy_little_painter",
+        "blue_paintkin",
+        "chaos",
+        "purrfectioneer",
+        "yellow_paintkin",
+        "leprechaun",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Jenkinz",
+      "captain": "bo_peep",
+      "deck": [
+        "pied_piper",
+        "red_paintkin",
+        "yellow_paintkin",
+        "varnish",
+        "dotty_daughter",
+        "snapping_hydra",
+        "white_rabbit",
+        "barrel_of_monkeys",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Jeremiad",
+      "captain": "ammit",
+      "deck": [
+        "dastardly_spirit",
+        "nutty_pirates",
+        "chaos",
+        "fortune_teller",
+        "mech_a_man",
+        "toadie",
+        "nightshade",
+        "orion_the_hunter",
+        "fenrir",
+        "apophis",
+        "blackbeard",
+        "halja"
+      ]
+    },
+    {
+      "username": "Jess3_14",
+      "captain": "faker_the_caker_baker",
+      "deck": [
+        "gingerbread_witch",
+        "serenpopity",
+        "catatouille",
+        "the_sour_patch_kid",
+        "cherry_topples",
+        "keeb",
+        "knight_of_the_holy_cane",
+        "twilight_sprinkles",
+        "viscount_chocolat",
+        "cotton_candy_dandy",
+        "crimson_stalwart_hero",
+        "licorice"
+      ]
+    },
+    {
+      "username": "JoeOnToast",
+      "captain": "mauve_maniac",
+      "deck": [
+        "toto",
+        "lance_a_little",
+        "the_huntsman",
+        "chaos",
+        "varnish",
+        "dotty_daughter",
+        "singe",
+        "starry_knight",
+        "the_purple_peacock",
+        "rocky_the_roller",
+        "crimson_stalwart_hero",
+        "antiquitoy"
+      ]
+    },
+    {
+      "username": "jojojajo1",
+      "captain": "mr_lamppost",
+      "deck": [
+        "comety",
+        "purrfectioneer",
+        "satter_fae",
+        "the_mad_splatter",
+        "leprechaun",
+        "owlabaster",
+        "luck_dragon",
+        "the_orange_orangutan",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat"
+      ]
+    },
+    {
+      "username": "jrp",
+      "captain": "bo_peep",
+      "deck": [
+        "antiquitoy",
+        "catatouille",
+        "red_paintkin",
+        "the_mad_splatter",
+        "the_sour_patch_kid",
+        "yellow_paintkin",
+        "twilight_sprinkles",
+        "white_rabbit",
+        "barrel_of_monkeys",
+        "crimson_stalwart_hero",
+        "gingerbread_dragon",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "justcallmeanti",
+      "captain": "double_dealer",
+      "deck": [
+        "dastardly_spirit",
+        "chaos",
+        "fortune_teller",
+        "toadie",
+        "wink",
+        "nightshade",
+        "sabrina",
+        "weensy",
+        "pisces",
+        "uther_pendragon",
+        "daedalus",
+        "pirate_prince"
+      ]
+    },
+    {
+      "username": "Jymba",
+      "captain": "bo_peep",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "varnish",
+        "wishing_fish",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Jyssi",
+      "captain": "swishbuckler",
+      "deck": [
+        "plunder_penny",
+        "blue_paintkin",
+        "purrfectioneer",
+        "red_paintkin",
+        "wink",
+        "yellow_paintkin",
+        "mechanical_dragon",
+        "sir_francis_drake",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Kairoswe",
+      "captain": "swishbuckler",
+      "deck": [
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "dotty_daughter",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Kalloc",
+      "captain": "itty_aerie",
+      "deck": [
+        "antiquitoy",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "bababanana",
+        "singe",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "daedalus",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Kananaisu",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Karso",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "mech_a_man",
+        "purrfectioneer",
+        "the_mad_splatter",
+        "van_gogogo",
+        "leprechaun",
+        "wishing_fish",
+        "owlabaster",
+        "sir_francis_drake",
+        "luck_dragon",
+        "rocky_the_roller",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Kasta",
+      "captain": "chromarian",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Katsuu",
+      "captain": "zagreus",
+      "deck": [
+        "miseria",
+        "young_hercules",
+        "baron_bok",
+        "destiny",
+        "maverick_icewing",
+        "mortakon",
+        "astral_navigator",
+        "crab_dragoon",
+        "guinevere",
+        "ptah",
+        "sigrun_valkyrie_queen",
+        "the_burninator"
+      ]
+    },
+    {
+      "username": "kayleedeplume",
+      "captain": "remi",
+      "deck": [
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "singe",
+        "white_rabbit",
+        "the_green_gecko",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Kensey",
+      "captain": "swishbuckler",
+      "deck": [
+        "antiquitoy",
+        "the_mad_splatter",
+        "van_gogogo",
+        "cherry_bomb",
+        "leprechaun",
+        "mana_potion",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "killhog",
+      "captain": "quetzalcoatl",
+      "deck": [
+        "glory_seeker",
+        "aladdin",
+        "toadie",
+        "the_huntsman",
+        "maverick_icewing",
+        "netherbinder",
+        "mechanical_dragon",
+        "thunder_of_dragons",
+        "smug",
+        "the_burninator",
+        "wormscale_tinkerer",
+        "crab_dragoon"
+      ]
+    },
+    {
+      "username": "KindaFitKindaFat",
+      "captain": "luna",
+      "deck": [
+        "happy_little_painter",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "the_mad_splatter",
+        "mana_potion",
+        "model_elephant",
+        "dotty_daughter",
+        "owlabaster",
+        "rocky_the_roller",
+        "marigold_eternal_student",
+        "starry_knight",
+        "leprechaun"
+      ]
+    },
+    {
+      "username": "King of Nothing",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "comety",
+        "happy_little_painter",
+        "fae_familiar",
+        "purrfectioneer",
+        "satter_fae",
+        "the_mad_splatter",
+        "leprechaun",
+        "owlabaster",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "KKanadian",
+      "captain": "remi",
+      "deck": [
+        "happy_little_painter",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "varnish",
+        "bababanana",
+        "singe",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "KnightmareDouble",
+      "captain": "remi",
+      "deck": [
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "singe",
+        "white_rabbit",
+        "the_green_gecko",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "KS-SK",
+      "captain": "dinonysus",
+      "deck": [
+        "lance_a_little",
+        "toto",
+        "young_hercules",
+        "destiny",
+        "maverick_icewing",
+        "mirror_mage",
+        "the_huntsman",
+        "mortakon",
+        "eros",
+        "sigrun_valkyrie_queen",
+        "nuada_radiant_king",
+        "guinevere"
+      ]
+    },
+    {
+      "username": "KTFlaSh",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Kunoka",
+      "captain": "bo_peep",
+      "deck": [
+        "red_paintkin",
+        "yellow_paintkin",
+        "wishing_fish",
+        "dotty_daughter",
+        "fenrir",
+        "snapping_hydra",
+        "white_rabbit",
+        "barrel_of_monkeys",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "kurisu",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "plunder_penny",
+        "blue_mage",
+        "blue_paintkin",
+        "purrfectioneer",
+        "red_paintkin",
+        "satter_fae",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "leprechaun",
+        "owlabaster",
+        "luck_dragon"
+      ]
+    },
+    {
+      "username": "Lanxion",
+      "captain": "loki",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "the_mad_splatter",
+        "van_gogogo",
+        "mana_potion",
+        "splat",
+        "dotty_daughter",
+        "genie_of_the_lamp",
+        "mirror_mage",
+        "owlabaster",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Last Crusader",
+      "captain": "mira",
+      "deck": [
+        "happy_little_painter",
+        "blue_mage",
+        "yellow_mage",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "owlabaster",
+        "genie_of_the_lamp",
+        "halja",
+        "rocky_the_roller",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "LemonyKillit",
+      "captain": "toucan_samuel",
+      "deck": [
+        "al_miraj",
+        "bubbles",
+        "lance_a_little",
+        "old_coyote",
+        "red_paintkin",
+        "yellow_paintkin",
+        "selphiea",
+        "white_rabbit",
+        "barrel_of_monkeys",
+        "crab_dragoon",
+        "the_orange_orangutan",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Leoj151",
+      "captain": "swishbuckler",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "LiquidHustle",
+      "captain": "mauve_maniac",
+      "deck": [
+        "toto",
+        "lance_a_little",
+        "the_huntsman",
+        "chaos",
+        "varnish",
+        "dotty_daughter",
+        "singe",
+        "starry_knight",
+        "the_purple_peacock",
+        "rocky_the_roller",
+        "crimson_stalwart_hero",
+        "antiquitoy"
+      ]
+    },
+    {
+      "username": "Lord Crab",
+      "captain": "da_ba_de",
+      "deck": [
+        "maverick_icewing",
+        "mechanical_dragon",
+        "wormscale_tinkerer",
+        "oracle_of_fortunes",
+        "purrfectioneer",
+        "blue_mage",
+        "blue_paintkin",
+        "mana_potion",
+        "luck_dragon",
+        "rocky_the_roller",
+        "sunflare_glider",
+        "combustible_dragon"
+      ]
+    },
+    {
+      "username": "LordPCX",
+      "captain": "bing_wu",
+      "deck": [
+        "happy_little_painter",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Loslorien",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "lance_a_little",
+        "red_mage",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "LTheLars",
+      "captain": "styx",
+      "deck": [
+        "al_miraj",
+        "nutty_pirates",
+        "candy_claws",
+        "the_huntsman",
+        "baron_bok",
+        "tantalus",
+        "tsarmina_the_tyrant",
+        "leapfrog",
+        "twilight_sprinkles",
+        "apophis",
+        "blackbeard",
+        "hercules"
+      ]
+    },
+    {
+      "username": "Lunco",
+      "captain": "vena_cava",
+      "deck": [
+        "al_miraj",
+        "happy_little_painter",
+        "pied_piper",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "fun_gal",
+        "model_elephant",
+        "the_giving_tree",
+        "dotty_daughter",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Magicovore",
+      "captain": "tajima_patron_of_sweets",
+      "deck": [
+        "the_candy_cane_crook",
+        "the_sour_patch_kid",
+        "jaws",
+        "kool_wip",
+        "mr_fox",
+        "chubby_bunny",
+        "knight_of_the_holy_cane",
+        "viscount_chocolat",
+        "gummy_wyrm",
+        "licorice",
+        "monstro",
+        "the_burninator"
+      ]
+    },
+    {
+      "username": "MagicSven",
+      "captain": "swishbuckler",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "varnish",
+        "dotty_daughter",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "ManacleRend",
+      "captain": "chromarian",
+      "deck": [
+        "antiquitoy",
+        "barbosa",
+        "happy_little_painter",
+        "the_mad_splatter",
+        "van_gogogo",
+        "mana_potion",
+        "model_elephant",
+        "dotty_daughter",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Mandy_Fae",
+      "captain": "mr_monet",
+      "deck": [
+        "busted_bot",
+        "antiquitoy",
+        "mech_a_man",
+        "ace_of_hearts",
+        "mortakon",
+        "raggedy_ann",
+        "ditto",
+        "barrel_of_monkeys",
+        "chip_on_the_ship",
+        "the_blue_faerie",
+        "brick_monster",
+        "white_rabbit"
+      ]
+    },
+    {
+      "username": "MartinWinter7",
+      "captain": "chromarian",
+      "deck": [
+        "antiquitoy",
+        "blue_mage",
+        "red_mage",
+        "blue_paintkin",
+        "red_paintkin",
+        "cherry_bomb",
+        "mana_potion",
+        "model_elephant",
+        "dotty_daughter",
+        "the_purple_peacock",
+        "rocky_the_roller",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "Masero",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "happy_little_painter",
+        "blue_mage",
+        "blue_paintkin",
+        "purrfectioneer",
+        "yellow_paintkin",
+        "leprechaun",
+        "mana_potion",
+        "owlabaster",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "May",
+      "captain": "lightning_thief",
+      "deck": [
+        "happy_little_painter",
+        "plunder_penny",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "mr_fox",
+        "rollo",
+        "dotty_daughter",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "may451",
+      "captain": "the_beanstalk",
+      "deck": [
+        "antiquitoy",
+        "bubbles",
+        "red_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "dotty_daughter",
+        "genie_of_the_lamp",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Mercyan",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Miol29",
+      "captain": "luna",
+      "deck": [
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "bababanana",
+        "dotty_daughter",
+        "leapfrog",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "MisterSalinas",
+      "captain": "omega_yellow",
+      "deck": [
+        "antiquitoy",
+        "prickles",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "bababanana",
+        "singe",
+        "crab_dragoon",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Mlordx",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "MLZT",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Mokermooi",
+      "captain": "the_beanstalk",
+      "deck": [
+        "al_miraj",
+        "antiquitoy",
+        "happy_little_painter",
+        "baron_bok",
+        "model_elephant",
+        "splat",
+        "medea_in_a_tavern",
+        "starry_knight",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "monicaMillions",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "blue_paintkin",
+        "purrfectioneer",
+        "red_paintkin",
+        "cherry_bomb",
+        "leprechaun",
+        "mana_potion",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Mookid",
+      "captain": "cupcup",
+      "deck": [
+        "lollipop_faerie",
+        "miseria",
+        "pretty_patissier",
+        "the_candy_cane_crook",
+        "the_huntsman",
+        "the_sour_patch_kid",
+        "life_saver",
+        "keeb",
+        "knight_of_the_holy_cane",
+        "twilight_sprinkles",
+        "cotton_candy_dandy",
+        "licorice"
+      ]
+    },
+    {
+      "username": "mozzery",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "comety",
+        "happy_little_painter",
+        "blue_paintkin",
+        "purrfectioneer",
+        "yellow_paintkin",
+        "dotty_daughter",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "mr barron",
+      "captain": "bo_peep",
+      "deck": [
+        "pied_piper",
+        "red_paintkin",
+        "yellow_paintkin",
+        "varnish",
+        "dotty_daughter",
+        "snapping_hydra",
+        "white_rabbit",
+        "barrel_of_monkeys",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Mray",
+      "captain": "chromarian",
+      "deck": [
+        "antiquitoy",
+        "blue_mage",
+        "red_mage",
+        "blue_paintkin",
+        "red_paintkin",
+        "cherry_bomb",
+        "mana_potion",
+        "model_elephant",
+        "dotty_daughter",
+        "the_purple_peacock",
+        "rocky_the_roller",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "Mrizzle",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "satter_fae",
+        "blue_mage",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "leprechaun",
+        "dotty_daughter",
+        "owlabaster",
+        "luck_dragon",
+        "rocky_the_roller",
+        "mana_potion",
+        "model_elephant"
+      ]
+    },
+    {
+      "username": "Mrk_ling",
+      "captain": "professor_whos_who",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "dotty_daughter",
+        "leapfrog",
+        "white_rabbit",
+        "barrel_of_monkeys",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "mrmaster299",
+      "captain": "geppetto",
+      "deck": [
+        "beanie_baby",
+        "busted_bot",
+        "mech_a_man",
+        "mortakon",
+        "space_ranger_woody",
+        "mechanical_dragon",
+        "party_pinata",
+        "raggedy_ann",
+        "black_hole",
+        "barrel_of_monkeys",
+        "brick_monster",
+        "chip_on_the_ship"
+      ]
+    },
+    {
+      "username": "MrMorph",
+      "captain": "bo_peep",
+      "deck": [
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "model_elephant",
+        "tsarmina_the_tyrant",
+        "innkeeper",
+        "white_rabbit",
+        "apophis",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan",
+        "the_rat_king"
+      ]
+    },
+    {
+      "username": "MrSnear",
+      "captain": "toucan_samuel",
+      "deck": [
+        "pied_piper",
+        "old_coyote",
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "wishing_fish",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_green_gecko"
+      ]
+    },
+    {
+      "username": "mryapiyapo2",
+      "captain": "galileo_galilei",
+      "deck": [
+        "lance_a_little",
+        "miseria",
+        "baron_bok",
+        "sunflare_glider",
+        "tantalus",
+        "wishing_fish",
+        "astral_navigator",
+        "eros",
+        "pisces",
+        "apophis",
+        "hephaestus",
+        "sigrun_valkyrie_queen"
+      ]
+    },
+    {
+      "username": "MsCollette",
+      "captain": "galileo_galilei",
+      "deck": [
+        "lance_a_little",
+        "miseria",
+        "the_huntsman",
+        "baron_bok",
+        "destiny",
+        "mechanical_dragon",
+        "orion_the_hunter",
+        "rollo",
+        "pisces",
+        "oracle_of_fortunes",
+        "the_burninator",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Mutant913",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_mage",
+        "the_mad_splatter",
+        "van_gogogo",
+        "mana_potion",
+        "model_elephant",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "N Naps",
+      "captain": "legend_of_loxley",
+      "deck": [
+        "purrfectioneer",
+        "red_paintkin",
+        "van_gogogo",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "owlabaster",
+        "twilight_sprinkles",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_burninator"
+      ]
+    },
+    {
+      "username": "Neon2015",
+      "captain": "we_are_blorg",
+      "deck": [
+        "beanie_baby",
+        "busted_bot",
+        "mech_a_man",
+        "raggedy_ann",
+        "space_ranger_woody",
+        "mechanical_dragon",
+        "mortakon",
+        "party_pinata",
+        "pisces",
+        "brick_monster",
+        "chip_on_the_ship",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "NickNPrince",
+      "captain": "raging_bull",
+      "deck": [
+        "al_miraj",
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "wishing_fish",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "monstro",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Niradin",
+      "captain": "bo_peep",
+      "deck": [
+        "frog_prince",
+        "fae_familiar",
+        "mr_fox",
+        "leapfrog",
+        "snapping_hydra",
+        "charlotte",
+        "monstro",
+        "the_rat_king",
+        "miss_muffet",
+        "old_coyote",
+        "wishing_fish",
+        "fenrir"
+      ]
+    },
+    {
+      "username": "njw123456",
+      "captain": "catkiss_everburn",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "varnish",
+        "mirror_mage",
+        "owlabaster",
+        "white_rabbit",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "NoLucksGiven",
+      "captain": "bo_peep",
+      "deck": [
+        "frog_prince",
+        "old_coyote",
+        "mr_fox",
+        "wishing_fish",
+        "dotty_daughter",
+        "fenrir",
+        "snapping_hydra",
+        "apophis",
+        "crab_dragoon",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "monstro"
+      ]
+    },
+    {
+      "username": "NoTworthy",
+      "captain": "the_beanstalk",
+      "deck": [
+        "lance_a_little",
+        "pied_piper",
+        "mech_a_man",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "the_giving_tree",
+        "dotty_daughter",
+        "snapping_hydra",
+        "daedalus",
+        "miss_muffet",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Nrausch1",
+      "captain": "hecate",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "varnish",
+        "dotty_daughter",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "NuggetOfAwesome",
+      "captain": "dr_agon",
+      "deck": [
+        "the_fates",
+        "chaos",
+        "fortune_teller",
+        "cherry_topples",
+        "combustible_dragon",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "smug",
+        "thunder_of_dragons",
+        "crab_dragoon",
+        "flopsy",
+        "the_burninator"
+      ]
+    },
+    {
+      "username": "Okay Jeanist",
+      "captain": "dinonysus",
+      "deck": [
+        "happy_little_painter",
+        "lance_a_little",
+        "blue_paintkin",
+        "miseria",
+        "yellow_paintkin",
+        "baron_bok",
+        "destiny",
+        "mortakon",
+        "selphiea",
+        "wicked_witch",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Oli B",
+      "captain": "lightning_thief",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "red_paintkin",
+        "yellow_paintkin",
+        "wishing_fish",
+        "dotty_daughter",
+        "genie_of_the_lamp",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "olson8401",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "comety",
+        "happy_little_painter",
+        "blue_mage",
+        "purrfectioneer",
+        "cherry_bomb",
+        "leprechaun",
+        "mana_potion",
+        "splat",
+        "owlabaster",
+        "selphiea",
+        "luck_dragon"
+      ]
+    },
+    {
+      "username": "OneThena",
+      "captain": "da_ba_de",
+      "deck": [
+        "pied_piper",
+        "blue_paintkin",
+        "purrfectioneer",
+        "red_paintkin",
+        "wishing_fish",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "onkuek",
+      "captain": "luna",
+      "deck": [
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "bababanana",
+        "dotty_daughter",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Outside of the Boxxxxxxxx",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "leprechaun",
+        "model_elephant",
+        "dotty_daughter",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Panda1835",
+      "captain": "remi",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "model_elephant",
+        "dotty_daughter",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "pandafarmer",
+      "captain": "galileo_galilei",
+      "deck": [
+        "lance_a_little",
+        "mech_a_man",
+        "miseria",
+        "baron_bok",
+        "mechanical_dragon",
+        "orion_the_hunter",
+        "sunflare_glider",
+        "astral_navigator",
+        "apophis",
+        "brick_monster",
+        "guinevere",
+        "sigrun_valkyrie_queen"
+      ]
+    },
+    {
+      "username": "Pastafarianx",
+      "captain": "remi",
+      "deck": [
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "singe",
+        "white_rabbit",
+        "the_green_gecko",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Pastullio",
+      "captain": "bing_wu",
+      "deck": [
+        "al_miraj",
+        "antiquitoy",
+        "happy_little_painter",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "varnish",
+        "wishing_fish",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "pezyo",
+      "captain": "goat_t",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "ace_of_hearts",
+        "blue_paintkin",
+        "miseria",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "selphiea",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_green_gecko"
+      ]
+    },
+    {
+      "username": "Phillammon",
+      "captain": "mauve_maniac",
+      "deck": [
+        "toto",
+        "lance_a_little",
+        "the_huntsman",
+        "chaos",
+        "varnish",
+        "dotty_daughter",
+        "singe",
+        "starry_knight",
+        "the_purple_peacock",
+        "rocky_the_roller",
+        "crimson_stalwart_hero",
+        "antiquitoy"
+      ]
+    },
+    {
+      "username": "Pikapwner",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "happy_little_painter",
+        "blue_paintkin",
+        "purrfectioneer",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "leprechaun",
+        "mana_potion",
+        "splat",
+        "owlabaster",
+        "luck_dragon"
+      ]
+    },
+    {
+      "username": "Pip",
+      "captain": "quetzalcoatl",
+      "deck": [
+        "old_coyote",
+        "purrfectioneer",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "mortakon",
+        "netherbinder",
+        "crab_dragoon",
+        "luck_dragon",
+        "oracle_of_fortunes",
+        "ptah",
+        "the_burninator",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Pipmalice",
+      "captain": "luna",
+      "deck": [
+        "happy_little_painter",
+        "serenpopity",
+        "miseria",
+        "van_gogogo",
+        "mana_potion",
+        "splat",
+        "dotty_daughter",
+        "eros",
+        "genie_of_the_lamp",
+        "gingerbread_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "pollux",
+      "captain": "luna",
+      "deck": [
+        "lance_a_little",
+        "miseria",
+        "purrfectioneer",
+        "red_paintkin",
+        "yellow_paintkin",
+        "mechanical_dragon",
+        "model_elephant",
+        "pisces",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "the_orange_orangutan",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Poomermon",
+      "captain": "catkiss_everburn",
+      "deck": [
+        "fortune_teller",
+        "purrfectioneer",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "model_elephant",
+        "white_rabbit",
+        "crab_dragoon",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "monstro",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Poring",
+      "captain": "the_candyman",
+      "deck": [
+        "lollipop_faerie",
+        "serenpopity",
+        "the_candy_cane_crook",
+        "cherry_topples",
+        "jaws",
+        "kool_wip",
+        "doopity_doo",
+        "pixie",
+        "viscount_chocolat",
+        "cotton_candy_dandy",
+        "gummy_wyrm",
+        "licorice"
+      ]
+    },
+    {
+      "username": "Porkpork",
+      "captain": "bo_peep",
+      "deck": [
+        "fae_familiar",
+        "old_coyote",
+        "the_candy_cane_crook",
+        "jaws",
+        "mr_fox",
+        "the_three_chef_keteers",
+        "wishing_fish",
+        "leapfrog",
+        "owlabaster",
+        "snapping_hydra",
+        "chubby_cheep",
+        "the_rat_king"
+      ]
+    },
+    {
+      "username": "Princess_Lilly",
+      "captain": "swishbuckler",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "white_rabbit",
+        "rocky_the_roller",
+        "marigold_eternal_student",
+        "crimson_stalwart_hero"
+      ]
+    },
+    {
+      "username": "Promil",
+      "captain": "candy_pandy",
+      "deck": [
+        "glory_seeker",
+        "lance_a_little",
+        "serenpopity",
+        "miseria",
+        "purrfectioneer",
+        "the_candy_cane_crook",
+        "baron_bok",
+        "destiny",
+        "mortakon",
+        "knight_of_the_holy_cane",
+        "cotton_candy_dandy",
+        "guinevere"
+      ]
+    },
+    {
+      "username": "pupugugu",
+      "captain": "vena_cava",
+      "deck": [
+        "al_miraj",
+        "antiquitoy",
+        "miseria",
+        "red_paintkin",
+        "yellow_paintkin",
+        "the_giving_tree",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "faerie_queen",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Pzychotic",
+      "captain": "bo_peep",
+      "deck": [
+        "gingerbread_witch",
+        "catatouille",
+        "the_candy_cane_crook",
+        "jumping_jelly_beans",
+        "jaws",
+        "the_three_chef_keteers",
+        "leapfrog",
+        "twilight_sprinkles",
+        "chubby_cheep",
+        "jelly_ton",
+        "nemean_lion",
+        "crab_dragoon"
+      ]
+    },
+    {
+      "username": "Rambo408",
+      "captain": "toucan_samuel",
+      "deck": [
+        "plunder_penny",
+        "chaos",
+        "fae_familiar",
+        "morgan_le_fae",
+        "red_paintkin",
+        "yellow_paintkin",
+        "calypso",
+        "moppet",
+        "sabrina",
+        "varnish",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "Ratio",
+      "captain": "toucan_samuel",
+      "deck": [
+        "gingerbread_witch",
+        "lollipop_faerie",
+        "the_candy_cane_crook",
+        "the_sour_patch_kid",
+        "candy_apple_tree",
+        "kool_wip",
+        "knight_of_the_holy_cane",
+        "pixie",
+        "twilight_sprinkles",
+        "chubby_cheep",
+        "cotton_candy_dandy",
+        "gummy_wyrm"
+      ]
+    },
+    {
+      "username": "Rayven",
+      "captain": "da_ba_de",
+      "deck": [
+        "aladdin",
+        "antiquitoy",
+        "blue_mage",
+        "red_mage",
+        "blue_paintkin",
+        "red_paintkin",
+        "cherry_bomb",
+        "mana_potion",
+        "model_elephant",
+        "dotty_daughter",
+        "rocky_the_roller",
+        "crimson_stalwart_hero"
+      ]
+    },
+    {
+      "username": "redmeat",
+      "captain": "trash_panda",
+      "deck": [
+        "lance_a_little",
+        "gingerbread_witch",
+        "catatouille",
+        "miseria",
+        "sunflare_glider",
+        "netherbinder",
+        "rollo",
+        "gulliver",
+        "uther_pendragon",
+        "crystal",
+        "gummy_wyrm",
+        "oracle_of_fortunes"
+      ]
+    },
+    {
+      "username": "ReenWSC",
+      "captain": "jay_sparrow",
+      "deck": [
+        "plunder_penny",
+        "the_huntsman",
+        "wink",
+        "mr_fox",
+        "tsarmina_the_tyrant",
+        "fenrir",
+        "innkeeper",
+        "ogre_magi",
+        "sir_francis_drake",
+        "blackbeard",
+        "hephaestus",
+        "hercules"
+      ]
+    },
+    {
+      "username": "Reiderrabbit",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "comety",
+        "the_fates",
+        "blue_mage",
+        "mana_potion",
+        "splat",
+        "owlabaster",
+        "gingerbread_dragon",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "remember",
+      "captain": "dotty_dawdles",
+      "deck": [
+        "happy_little_painter",
+        "plunder_penny",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "sabrina",
+        "dotty_daughter",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Remornya",
+      "captain": "jason_of_the_argonauts",
+      "deck": [
+        "lance_a_little",
+        "mech_a_man",
+        "miseria",
+        "sunflare_glider",
+        "eros",
+        "smug",
+        "snapping_hydra",
+        "thunder_of_dragons",
+        "crab_dragoon",
+        "guinevere",
+        "oracle_of_fortunes",
+        "the_burninator"
+      ]
+    },
+    {
+      "username": "Renegadeloot",
+      "captain": "mauve_maniac",
+      "deck": [
+        "toto",
+        "lance_a_little",
+        "the_huntsman",
+        "chaos",
+        "varnish",
+        "dotty_daughter",
+        "singe",
+        "starry_knight",
+        "the_purple_peacock",
+        "rocky_the_roller",
+        "crimson_stalwart_hero",
+        "antiquitoy"
+      ]
+    },
+    {
+      "username": "REZ69",
+      "captain": "luna",
+      "deck": [
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "varnish",
+        "starry_knight",
+        "thunder_of_dragons",
+        "white_rabbit",
+        "crab_dragoon",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Rhymney",
+      "captain": "quetzalcoatl",
+      "deck": [
+        "aladdin",
+        "glory_seeker",
+        "toadie",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "netherbinder",
+        "smug",
+        "thunder_of_dragons",
+        "crab_dragoon",
+        "oracle_of_fortunes",
+        "the_burninator",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "RockofAegis",
+      "captain": "galileo_galilei",
+      "deck": [
+        "lance_a_little",
+        "miseria",
+        "baron_bok",
+        "destiny",
+        "orion_the_hunter",
+        "sunflare_glider",
+        "tantalus",
+        "astral_navigator",
+        "eros",
+        "anubis",
+        "guinevere",
+        "sigrun_valkyrie_queen"
+      ]
+    },
+    {
+      "username": "Roju",
+      "captain": "swishbuckler",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "white_rabbit",
+        "rocky_the_roller",
+        "marigold_eternal_student",
+        "crimson_stalwart_hero"
+      ]
+    },
+    {
+      "username": "Roseknot2",
+      "captain": "mr_monet",
+      "deck": [
+        "busted_bot",
+        "antiquitoy",
+        "mech_a_man",
+        "ace_of_hearts",
+        "mortakon",
+        "raggedy_ann",
+        "ditto",
+        "barrel_of_monkeys",
+        "chip_on_the_ship",
+        "the_blue_faerie",
+        "brick_monster",
+        "white_rabbit"
+      ]
+    },
+    {
+      "username": "sacakewalk",
+      "captain": "bo_peep",
+      "deck": [
+        "fae_familiar",
+        "frog_prince",
+        "miseria",
+        "mr_fox",
+        "fenrir",
+        "leapfrog",
+        "owlabaster",
+        "snapping_hydra",
+        "crab_dragoon",
+        "monstro",
+        "nemean_lion",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "SanderTFT",
+      "captain": "quetzalcoatl",
+      "deck": [
+        "purrfectioneer",
+        "red_paintkin",
+        "yellow_paintkin",
+        "frosting_dragon",
+        "mechanical_dragon",
+        "wishing_fish",
+        "thunder_of_dragons",
+        "crimson_stalwart_hero",
+        "gingerbread_dragon",
+        "gummy_wyrm",
+        "marigold_eternal_student",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Sayaa",
+      "captain": "bo_peep",
+      "deck": [
+        "fae_familiar",
+        "old_coyote",
+        "model_elephant",
+        "mr_fox",
+        "dotty_daughter",
+        "leapfrog",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "monstro",
+        "the_orange_orangutan",
+        "the_rat_king"
+      ]
+    },
+    {
+      "username": "Scoranio",
+      "captain": "dorothy",
+      "deck": [
+        "the_raven",
+        "toto",
+        "ace_of_hearts",
+        "maverick_icewing",
+        "mr_fox",
+        "rollo",
+        "tsarmina_the_tyrant",
+        "mirror_mage",
+        "guinevere",
+        "scale_a_tor",
+        "the_burninator",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "ScratchyCone",
+      "captain": "luna",
+      "deck": [
+        "red_mage",
+        "red_paintkin",
+        "satter_fae",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "mana_potion",
+        "model_elephant",
+        "singe",
+        "starry_knight",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "ScrubJD",
+      "captain": "bo_peep",
+      "deck": [
+        "red_paintkin",
+        "the_mad_splatter",
+        "model_elephant",
+        "wishing_fish",
+        "white_rabbit",
+        "wicked_witch",
+        "anubis",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "monstro",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "SeveralKittens",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "serenpopity",
+        "swoop",
+        "purrfectioneer",
+        "satter_fae",
+        "the_mad_splatter",
+        "leprechaun",
+        "mana_potion",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "SeveroQuo",
+      "captain": "dr_agon",
+      "deck": [
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "mana_potion",
+        "model_elephant",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "hephaestus",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Seymour Buttz",
+      "captain": "luna",
+      "deck": [
+        "happy_little_painter",
+        "pied_piper",
+        "ace_of_hearts",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "mimic",
+        "wishing_fish",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Sfeltbelt",
+      "captain": "ammit",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_huntsman",
+        "van_gogogo",
+        "wink",
+        "yellow_paintkin",
+        "genie_of_the_lamp",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "shabarky",
+      "captain": "remi",
+      "deck": [
+        "happy_little_painter",
+        "antiquitoy",
+        "blue_mage",
+        "yellow_mage",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "red_paintkin",
+        "bababanana",
+        "rocky_the_roller",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "ShadesRealm",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "van_gogogo",
+        "yellow_paintkin",
+        "wishing_fish",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "ShadowDrake64",
+      "captain": "osiris",
+      "deck": [
+        "nutcracker_prince",
+        "red_paintkin",
+        "space_ranger_woody",
+        "yellow_paintkin",
+        "the_giving_tree",
+        "wishing_fish",
+        "selphiea",
+        "white_rabbit",
+        "crab_dragoon",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "mischief"
+      ]
+    },
+    {
+      "username": "Sharp Cypher",
+      "captain": "dungeon_master",
+      "deck": [
+        "daedalus",
+        "glory_seeker",
+        "wormtongue",
+        "wink",
+        "mech_a_man",
+        "pirate_king",
+        "ace_of_hearts",
+        "mimic",
+        "combustible_dragon",
+        "pisces",
+        "smug",
+        "pirate_prince"
+      ]
+    },
+    {
+      "username": "SharpVex",
+      "captain": "elec_drake",
+      "deck": [
+        "lance_a_little",
+        "miseria",
+        "purrfectioneer",
+        "the_huntsman",
+        "mr_fox",
+        "netherbinder",
+        "sunflare_glider",
+        "sir_francis_drake",
+        "blackbeard",
+        "crab_dragoon",
+        "pirate_prince",
+        "the_burninator"
+      ]
+    },
+    {
+      "username": "shatpit",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "fae_familiar",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "owlabaster",
+        "singe",
+        "starry_knight",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "shortelf",
+      "captain": "bo_peep",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "owlabaster",
+        "snapping_hydra",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "monstro",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "SkyBreaker",
+      "captain": "trash_panda",
+      "deck": [
+        "lance_a_little",
+        "miseria",
+        "the_huntsman",
+        "destiny",
+        "frosting_dragon",
+        "maverick_icewing",
+        "mortakon",
+        "mr_fox",
+        "rollo",
+        "knight_of_the_holy_cane",
+        "guinevere",
+        "gummy_wyrm"
+      ]
+    },
+    {
+      "username": "Skylance",
+      "captain": "raging_bull",
+      "deck": [
+        "lance_a_little",
+        "pied_piper",
+        "frog_prince",
+        "mr_fox",
+        "tsarmina_the_tyrant",
+        "fenrir",
+        "leapfrog",
+        "snapping_hydra",
+        "apophis",
+        "crab_dragoon",
+        "monstro",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Sl4y",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Snej",
+      "captain": "swishbuckler",
+      "deck": [
+        "van_gogogo",
+        "blue_mage",
+        "red_mage",
+        "blue_paintkin",
+        "red_paintkin",
+        "cherry_bomb",
+        "mana_potion",
+        "model_elephant",
+        "dotty_daughter",
+        "starry_knight",
+        "the_purple_peacock",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "SoioPenguin",
+      "captain": "elec_drake",
+      "deck": [
+        "lance_a_little",
+        "miseria",
+        "combustible_dragon",
+        "leprechaun",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "netherbinder",
+        "sir_francis_drake",
+        "smug",
+        "flopsy",
+        "oracle_of_fortunes",
+        "the_burninator"
+      ]
+    },
+    {
+      "username": "Sollace",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "varnish",
+        "bababanana",
+        "singe",
+        "starry_knight",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "SrCeifador",
+      "captain": "raging_bull",
+      "deck": [
+        "pied_piper",
+        "underdog",
+        "lance_a_little",
+        "frog_prince",
+        "mr_fox",
+        "tsarmina_the_tyrant",
+        "leapfrog",
+        "snapping_hydra",
+        "monstro",
+        "fenrir",
+        "crab_dragoon",
+        "apophis"
+      ]
+    },
+    {
+      "username": "SSJ5GOKU",
+      "captain": "bo_peep",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "varnish",
+        "wishing_fish",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "StabbyKnives",
+      "captain": "princess_animall",
+      "deck": [
+        "al_miraj",
+        "antiquitoy",
+        "pied_piper",
+        "red_paintkin",
+        "yellow_paintkin",
+        "wishing_fish",
+        "dotty_daughter",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "stargatecomm",
+      "captain": "roulette",
+      "deck": [
+        "antiquitoy",
+        "pied_piper",
+        "nuada_radiant_king",
+        "red_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "varnish",
+        "barrel_of_monkeys",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "monstro",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Stethryn",
+      "captain": "luna",
+      "deck": [
+        "blue_paintkin",
+        "red_mage",
+        "red_paintkin",
+        "yellow_mage",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "selphiea",
+        "starry_knight",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Storm.",
+      "captain": "con_artist",
+      "deck": [
+        "toto",
+        "miseria",
+        "destiny",
+        "maverick_icewing",
+        "rollo",
+        "tsarmina_the_tyrant",
+        "fenrir",
+        "smug",
+        "guinevere",
+        "monstro",
+        "prospero",
+        "sigrun_valkyrie_queen"
+      ]
+    },
+    {
+      "username": "suisilas",
+      "captain": "quetzalcoatl",
+      "deck": [
+        "glory_seeker",
+        "aladdin",
+        "toadie",
+        "the_huntsman",
+        "maverick_icewing",
+        "netherbinder",
+        "mechanical_dragon",
+        "thunder_of_dragons",
+        "smug",
+        "the_burninator",
+        "wormscale_tinkerer",
+        "crab_dragoon"
+      ]
+    },
+    {
+      "username": "SuperBuddha",
+      "captain": "remi",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "genie_of_the_lamp",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "SuperFluffyKitty",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Swoonful",
+      "captain": "luna",
+      "deck": [
+        "happy_little_painter",
+        "red_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "mana_potion",
+        "model_elephant",
+        "splat",
+        "singe",
+        "starry_knight",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student"
+      ]
+    },
+    {
+      "username": "Synozeer",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "syntaxProper",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "morgan_le_fae",
+        "van_gogogo",
+        "yellow_mage",
+        "yellow_paintkin",
+        "cherry_topples",
+        "bababanana",
+        "mirror_mage",
+        "starry_knight",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Tackitty",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "fae_familiar",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "model_elephant",
+        "starry_knight",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Tagatron",
+      "captain": "swishbuckler",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "mana_potion",
+        "splat",
+        "varnish",
+        "bababanana",
+        "dotty_daughter",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_green_gecko"
+      ]
+    },
+    {
+      "username": "Terren",
+      "captain": "skip_the_time_skipper",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "ace_of_hearts",
+        "van_gogogo",
+        "baron_bok",
+        "mr_fox",
+        "eros",
+        "snapping_hydra",
+        "apophis",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "The Chromium Crusher",
+      "captain": "luna",
+      "deck": [
+        "happy_little_painter",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "the_mad_splatter",
+        "mana_potion",
+        "model_elephant",
+        "dotty_daughter",
+        "owlabaster",
+        "rocky_the_roller",
+        "marigold_eternal_student",
+        "starry_knight",
+        "leprechaun"
+      ]
+    },
+    {
+      "username": "TheAries",
+      "captain": "omega_yellow",
+      "deck": [
+        "antiquitoy",
+        "morgan_le_fae",
+        "red_mage",
+        "red_paintkin",
+        "yellow_mage",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "thedjangler",
+      "captain": "lightning_thief",
+      "deck": [
+        "blue_mage",
+        "blue_paintkin",
+        "morgan_le_fae",
+        "mana_potion",
+        "mechanical_dragon",
+        "crystal",
+        "dotty_daughter",
+        "genie_of_the_lamp",
+        "selphiea",
+        "crimson_stalwart_hero",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "TheGirlNextDoor",
+      "captain": "remi",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Thenian",
+      "captain": "legend_of_loxley",
+      "deck": [
+        "pied_piper",
+        "plunder_penny",
+        "purrfectioneer",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "Theo_Riviere",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "varnish",
+        "singe",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Thumby",
+      "captain": "bo_peep",
+      "deck": [
+        "happy_little_painter",
+        "blue_paintkin",
+        "yellow_paintkin",
+        "baron_bok",
+        "model_elephant",
+        "mr_fox",
+        "dotty_daughter",
+        "owlabaster",
+        "marigold_eternal_student",
+        "monstro",
+        "rocky_the_roller",
+        "the_green_gecko"
+      ]
+    },
+    {
+      "username": "tretherio",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "wishing_fish",
+        "snapping_hydra",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "triAngel",
+      "captain": "jay_sparrow",
+      "deck": [
+        "glory_seeker",
+        "nutty_pirates",
+        "fortune_teller",
+        "the_huntsman",
+        "wink",
+        "jelly_roger",
+        "mr_fox",
+        "orion_the_hunter",
+        "tsarmina_the_tyrant",
+        "apophis",
+        "blackbeard",
+        "hercules"
+      ]
+    },
+    {
+      "username": "Tseng",
+      "captain": "frowny_the_clown",
+      "deck": [
+        "aladdin",
+        "lollipop_faerie",
+        "blue_paintkin",
+        "red_paintkin",
+        "yellow_paintkin",
+        "candy_apple_tree",
+        "pixie",
+        "crimson_stalwart_hero",
+        "faerie_godfather",
+        "licorice",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "turtleherd",
+      "captain": "the_beanstalk",
+      "deck": [
+        "al_miraj",
+        "red_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "varnish",
+        "astral_navigator",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Tyrannosaur!",
+      "captain": "mr_monet",
+      "deck": [
+        "comety",
+        "happy_little_painter",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "yellow_paintkin",
+        "cherry_topples",
+        "leprechaun",
+        "mana_potion",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "marigold_eternal_student",
+        "the_green_gecko"
+      ]
+    },
+    {
+      "username": "TyrellBadd",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "satter_fae",
+        "blue_mage",
+        "blue_paintkin",
+        "the_mad_splatter",
+        "leprechaun",
+        "dotty_daughter",
+        "owlabaster",
+        "luck_dragon",
+        "rocky_the_roller",
+        "mana_potion",
+        "model_elephant"
+      ]
+    },
+    {
+      "username": "tyros5",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "blue_paintkin",
+        "purrfectioneer",
+        "red_paintkin",
+        "the_mad_splatter",
+        "leprechaun",
+        "mana_potion",
+        "dotty_daughter",
+        "selphiea",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Uli",
+      "captain": "bing_wu",
+      "deck": [
+        "comety",
+        "happy_little_painter",
+        "the_fates",
+        "blue_paintkin",
+        "purrfectioneer",
+        "mana_potion",
+        "splat",
+        "mirror_mage",
+        "owlabaster",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Um Yeah",
+      "captain": "mr_monet",
+      "deck": [
+        "busted_bot",
+        "antiquitoy",
+        "mech_a_man",
+        "ace_of_hearts",
+        "mortakon",
+        "raggedy_ann",
+        "ditto",
+        "barrel_of_monkeys",
+        "chip_on_the_ship",
+        "the_blue_faerie",
+        "brick_monster",
+        "white_rabbit"
+      ]
+    },
+    {
+      "username": "Vaeldria",
+      "captain": "jay_sparrow",
+      "deck": [
+        "nutty_pirates",
+        "mech_a_man",
+        "wink",
+        "mr_fox",
+        "orion_the_hunter",
+        "tsarmina_the_tyrant",
+        "innkeeper",
+        "sir_francis_drake",
+        "snapping_hydra",
+        "blackbeard",
+        "hercules",
+        "the_rat_king"
+      ]
+    },
+    {
+      "username": "Vasterbron",
+      "captain": "bo_peep",
+      "deck": [
+        "frog_prince",
+        "fae_familiar",
+        "mr_fox",
+        "leapfrog",
+        "snapping_hydra",
+        "charlotte",
+        "monstro",
+        "the_rat_king",
+        "miss_muffet",
+        "old_coyote",
+        "wishing_fish",
+        "fenrir"
+      ]
+    },
+    {
+      "username": "VeryUpsetMob",
+      "captain": "luna",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "varnish",
+        "dotty_daughter",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Vi nRos",
+      "captain": "mr_monet",
+      "deck": [
+        "happy_little_painter",
+        "pied_piper",
+        "red_paintkin",
+        "yellow_paintkin",
+        "model_elephant",
+        "wishing_fish",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "wa22aby",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "happy_little_painter",
+        "blue_paintkin",
+        "van_gogogo",
+        "yellow_paintkin",
+        "mana_potion",
+        "wishing_fish",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "watson",
+      "captain": "luna_girl",
+      "deck": [
+        "blue_paintkin",
+        "red_paintkin",
+        "the_sour_patch_kid",
+        "yellow_paintkin",
+        "cherry_topples",
+        "jaws",
+        "owlabaster",
+        "crab_dragoon",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Wilbraham",
+      "captain": "bo_peep",
+      "deck": [
+        "old_coyote",
+        "red_mage",
+        "yellow_mage",
+        "mr_fox",
+        "bababanana",
+        "fenrir",
+        "leapfrog",
+        "snapping_hydra",
+        "crab_dragoon",
+        "monstro",
+        "nemean_lion",
+        "the_rat_king"
+      ]
+    },
+    {
+      "username": "WindyKissVS2",
+      "captain": "jay_sparrow",
+      "deck": [
+        "fortune_teller",
+        "shanty",
+        "the_huntsman",
+        "model_elephant",
+        "mr_fox",
+        "orion_the_hunter",
+        "tsarmina_the_tyrant",
+        "innkeeper",
+        "twilight_sprinkles",
+        "apophis",
+        "blackbeard",
+        "hercules"
+      ]
+    },
+    {
+      "username": "Wumpelstiltskin",
+      "captain": "luna",
+      "deck": [
+        "red_paintkin",
+        "the_mad_splatter",
+        "cherry_bomb",
+        "leprechaun",
+        "varnish",
+        "dotty_daughter",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Wynyd",
+      "captain": "luna",
+      "deck": [
+        "happy_little_painter",
+        "blue_mage",
+        "cherry_bomb",
+        "mana_potion",
+        "splat",
+        "bababanana",
+        "genie_of_the_lamp",
+        "mirror_mage",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "xDingusKhan",
+      "captain": "ammit",
+      "deck": [
+        "nutty_pirates",
+        "chaos",
+        "the_huntsman",
+        "wink",
+        "mr_fox",
+        "pisces",
+        "sir_francis_drake",
+        "snapping_hydra",
+        "blackbeard",
+        "halja",
+        "hercules",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "XenoGemini",
+      "captain": "bo_peep",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "yellow_paintkin",
+        "tsarmina_the_tyrant",
+        "varnish",
+        "wishing_fish",
+        "dotty_daughter",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Xzenith",
+      "captain": "queen_harpolia",
+      "deck": [
+        "fortune_teller",
+        "miseria",
+        "young_hercules",
+        "destiny",
+        "maverick_icewing",
+        "mechanical_dragon",
+        "mortakon",
+        "sunflare_glider",
+        "starry_knight",
+        "guinevere",
+        "the_burninator",
+        "wormscale_tinkerer"
+      ]
+    },
+    {
+      "username": "ythehunter",
+      "captain": "bo_peep",
+      "deck": [
+        "model_elephant",
+        "mr_fox",
+        "tsarmina_the_tyrant",
+        "varnish",
+        "wishing_fish",
+        "dotty_daughter",
+        "owlabaster",
+        "snapping_hydra",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "yujinskii",
+      "captain": "lightning_thief",
+      "deck": [
+        "blue_paintkin",
+        "miseria",
+        "red_paintkin",
+        "van_gogogo",
+        "cherry_bomb",
+        "dotty_daughter",
+        "medea_in_a_tavern",
+        "owlabaster",
+        "selphiea",
+        "crimson_stalwart_hero",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "Zavydiel",
+      "captain": "galileo_galilei",
+      "deck": [
+        "lance_a_little",
+        "miseria",
+        "baron_bok",
+        "destiny",
+        "sunflare_glider",
+        "wishing_fish",
+        "astral_navigator",
+        "eros",
+        "apophis",
+        "guinevere",
+        "oracle_of_fortunes",
+        "sigrun_valkyrie_queen"
+      ]
+    },
+    {
+      "username": "Zazacon",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "comety",
+        "blue_paintkin",
+        "purrfectioneer",
+        "red_paintkin",
+        "leprechaun",
+        "genie_of_the_lamp",
+        "owlabaster",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "rocky_the_roller",
+        "the_purple_peacock"
+      ]
+    },
+    {
+      "username": "zecaa",
+      "captain": "rumpelstiltskin",
+      "deck": [
+        "netherbinder",
+        "sunflare_glider",
+        "combustible_dragon",
+        "mechanical_dragon",
+        "thunder_of_dragons",
+        "smug",
+        "hephaestus",
+        "flopsy",
+        "wormscale_tinkerer",
+        "ace_of_hearts",
+        "toto",
+        "aladdin"
+      ]
+    },
+    {
+      "username": "Zoga",
+      "captain": "luna",
+      "deck": [
+        "bubbles",
+        "red_paintkin",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "model_elephant",
+        "splat",
+        "bababanana",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Zoopyzoo",
+      "captain": "luna",
+      "deck": [
+        "red_mage",
+        "red_paintkin",
+        "yellow_mage",
+        "yellow_paintkin",
+        "cherry_bomb",
+        "splat",
+        "singe",
+        "starry_knight",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "marigold_eternal_student",
+        "the_orange_orangutan"
+      ]
+    },
+    {
+      "username": "Zoroaster",
+      "captain": "swishbuckler",
+      "deck": [
+        "van_gogogo",
+        "blue_mage",
+        "red_mage",
+        "blue_paintkin",
+        "red_paintkin",
+        "cherry_bomb",
+        "mana_potion",
+        "model_elephant",
+        "dotty_daughter",
+        "starry_knight",
+        "the_purple_peacock",
+        "rocky_the_roller"
+      ]
+    },
+    {
+      "username": "Zsedo",
+      "captain": "sugar_pops",
+      "deck": [
+        "lollipop_faerie",
+        "gingerbread_witch",
+        "pretty_patissier",
+        "catatouille",
+        "candy_apple_tree",
+        "cherry_topples",
+        "kool_wip",
+        "chubby_bunny",
+        "knight_of_the_holy_cane",
+        "twilight_sprinkles",
+        "gummy_wyrm",
+        "jelly_ton"
+      ]
+    },
+    {
+      "username": "Zvi",
+      "captain": "bing_wu",
+      "deck": [
+        "antiquitoy",
+        "red_paintkin",
+        "satter_fae",
+        "yellow_paintkin",
+        "varnish",
+        "dotty_daughter",
+        "owlabaster",
+        "white_rabbit",
+        "crimson_stalwart_hero",
+        "luck_dragon",
+        "rocky_the_roller",
+        "the_orange_orangutan"
+      ]
+    }
+  ]
+}
