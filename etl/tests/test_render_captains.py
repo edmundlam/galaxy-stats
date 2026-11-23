@@ -531,7 +531,7 @@ def test_captain_page_og_description_matches_meta_description(events_dir, captai
 def test_captain_page_without_image_falls_back_to_site_og_image(events_dir, captains_file):
     caps = aggregate_captains(events_dir, captains_file)
     html = render_captain_page(caps["galileo-galilei"], "https://example.com", image=None)
-    assert '<meta property="og:image" content="https://example.com/og-image.png">' in html
+    assert '<meta property="og:image" content="https://example.com/assets/og-image.png">' in html
 
 
 def test_captain_pages_have_icon_and_manifest_tags(events_dir, captains_file):

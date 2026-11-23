@@ -14,7 +14,7 @@ SNIPPET = [
     '<link rel="apple-touch-icon" href="/apple-touch-icon.png">',
     '<link rel="manifest" href="/manifest.webmanifest">',
     '<meta name="theme-color" content="#1c1747">',
-    '<meta property="og:image" content="https://www.galaxy-stats.com/og-image.png">',
+    '<meta property="og:image" content="https://www.galaxy-stats.com/assets/og-image.png">',
     '<meta name="twitter:card" content="summary_large_image">',
 ]
 
@@ -31,3 +31,10 @@ def test_static_pages_have_icon_and_social_tags():
         html = (DOCS / page).read_text()
         for tag in SNIPPET:
             assert tag in html, f"{page}: {tag}"
+
+
+def test_report_page_uses_event_preview_when_present():
+    html = render_report("2026-11", DIST / "events")
+    assert '<meta property="og:image" content="https://www.galaxy-stats.com/assets/og-image-2026-11.png">' in html
+    assert '<meta property="og:image:width" content="970">' in html
+    assert '<meta property="og:image:height" content="824">' in html

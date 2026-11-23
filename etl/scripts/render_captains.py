@@ -464,7 +464,7 @@ def render_captain_page(
         description,
         canonical,
         "../../",
-        og_image=f"{base_url}/assets/captains-img/{image}" if image else f"{base_url}/og-image.png",
+        og_image=f"{base_url}/assets/captains-img/{image}" if image else f"{base_url}/assets/og-image.png",
     )
 
     header_body = """

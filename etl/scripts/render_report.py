@@ -13,12 +13,29 @@ Output:
 
 import argparse
 import json
+import struct
 import sys
 from datetime import datetime
 from pathlib import Path
 
 # Asset version for cache busting - increment when CSS/JS changes
 ASSET_VERSION = "4"
+
+OG_IMAGE_BASE_URL = "https://www.galaxy-stats.com"
+
+
+def resolve_og_image(event_id: str, events_dir: Path) -> tuple[str, int, int]:
+    """Return (og:image URL, width, height) for an event report.
+
+    Uses docs/og-image-{event_id}.png when present, else the site-wide og-image.png.
+    """
+    docs_dir = events_dir.parents[2] / "docs" / "assets"
+    preview = docs_dir / f"og-image-{event_id}.png"
+    if not preview.exists():
+        return f"{OG_IMAGE_BASE_URL}/assets/og-image.png", 1200, 630
+    # PNG dimensions live in the IHDR chunk, right after the 8-byte signature.
+    width, height = struct.unpack(">II", preview.read_bytes()[16:24])
+    return f"{OG_IMAGE_BASE_URL}/assets/og-image-{event_id}.png", width, height
 
 
 def load_analysis(event_id: str, events_dir: Path) -> dict:
@@ -81,9 +98,9 @@ def get_html_template() -> str:
 <meta property="og:title" content="Once Upon a Galaxy — {MONTH_YEAR} Meta Report | Galaxy Stats">
 <meta property="og:description" content="OUAG {EVENT_TYPE} {EVENT_ID} results: {TOTAL_PLAYERS} players, top card {TOP_CARD_NAME} at {TOP_CARD_PCT}, top captain {TOP_CAPTAIN}. Tournament meta analysis with card popularity, captain synergies, and deck archetypes.">
 <meta property="og:url" content="https://www.galaxy-stats.com/reports/{EVENT_ID}/">
-<meta property="og:image" content="https://www.galaxy-stats.com/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="{OG_IMAGE}">
+<meta property="og:image:width" content="{OG_IMAGE_WIDTH}">
+<meta property="og:image:height" content="{OG_IMAGE_HEIGHT}">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/galaxy-report.css?v={ASSET_VERSION}">
@@ -294,8 +311,13 @@ def render_report(event_id: str, events_dir: Path) -> str:
     # Format data for template
     month_year = format_date(event_date)
 
+    og_image_url, og_image_w, og_image_h = resolve_og_image(event_id, events_dir)
+
     # Build template placeholders
     template_vars = {
+        "OG_IMAGE": og_image_url,
+        "OG_IMAGE_WIDTH": og_image_w,
+        "OG_IMAGE_HEIGHT": og_image_h,
         "EVENT_ID": event_id,
         "EVENT_NAME": event_name,
         "MONTH_YEAR": month_year,
