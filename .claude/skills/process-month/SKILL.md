@@ -63,12 +63,13 @@ for c in caps:
 EOF
 ```
 
-### Step 4: Regenerate captain pages
+### Step 4: Regenerate captain pages + leaderboard
 
-`make report` does NOT refresh captain pages. Run from repo root:
+`make report` does NOT refresh captain pages or the cross-event leaderboard. Run from repo root:
 
 ```bash
 make captains
+make leaderboard
 ```
 
 `make captains` scrapes rules text for new captains from guide.galaxy.fun first (via `etl-scrape-captain-rules`), so new captains get their rules text automatically.
