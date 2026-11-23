@@ -71,6 +71,8 @@ EOF
 make captains
 ```
 
+`make captains` scrapes rules text for new captains from guide.galaxy.fun first (via `etl-scrape-captain-rules`), so new captains get their rules text automatically.
+
 ### Step 5: Extract stats for index.html
 
 Read both the analysis.json and auto-analysis.json to extract the stats needed for the index page:

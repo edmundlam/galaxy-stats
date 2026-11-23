@@ -57,7 +57,7 @@ report-auto: etl-parse etl-analyze etl-finalize etl-render copy-report generate-
 etl-render-captains:		## Render captain pages from all events
 	cd etl && uv run scripts/render_captains.py
 
-captains: etl-render-captains generate-sitemap		## Generate all captain pages + sitemap (standalone; not part of report)
+captains: etl-scrape-captain-rules etl-render-captains generate-sitemap		## Generate all captain pages + sitemap (scrapes new captain rules first; not part of report)
 
 etl-render-leaderboard:		## Render cross-event leaderboard page from all events
 	cd etl && uv run scripts/render_leaderboard.py
