@@ -644,7 +644,14 @@ def main() -> int:
     cards_map = {}
     if cards_file.exists():
         cards_map = json.loads(cards_file.read_text(encoding="utf-8"))
-        card_slugs = {name: slug for slug, name in cards_map.items()}
+        # Invert only slugs that appear in event decks — the full catalog contains
+        # duplicate display names (e.g. Beanie Baby character vs treasure token),
+        # so unrestricted inversion would link decks to the wrong guide page.
+        used_slugs = set()
+        for path in sorted((dist_dir / "events").glob("*/event.json")):
+            for player in json.loads(path.read_text(encoding="utf-8")).get("players", []):
+                used_slugs.update(player.get("deck", []))
+        card_slugs = {entry["name"]: slug for slug, entry in cards_map.items() if slug in used_slugs}
     # Type colors come from the archetype config (same source finalize_analysis
     # tints report clusters with); card slugs resolve to display names via cards.json.
     archetypes_file = script_dir.parent / "config" / "archetypes.json"
@@ -655,7 +662,7 @@ def main() -> int:
             color = cfg.get("color", "#7a7d8a")
             arch_colors[name] = color
             for slug in cfg.get("cards", []):
-                card_colors[cards_map.get(slug, slug)] = color
+                card_colors[cards_map.get(slug, {"name": slug})["name"]] = color
     reports_dir = docs_dir / "reports"
     report_ids = {p.parent.name for p in reports_dir.glob("*/index.html")} if reports_dir.exists() else set()
 

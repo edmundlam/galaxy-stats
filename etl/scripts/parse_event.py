@@ -184,8 +184,11 @@ def main() -> int:
         existing_cards = load_existing_json(cards_path)
         existing_captains = load_existing_json(captains_path)
 
-        # Merge new cards and captains (never overwrite existing entries)
-        merged_cards, new_cards_count = merge_cards(existing_cards, cards_map)
+        # Merge new cards and captains (never overwrite existing entries).
+        # Cards are stored as {slug: {name, cid}}; the scrape step adds cids,
+        # so entries parsed here carry name only.
+        new_cards = {slug: {"name": name} for slug, name in cards_map.items()}
+        merged_cards, new_cards_count = merge_cards(existing_cards, new_cards)
         merged_captains, new_captains_count = merge_cards(existing_captains, captains_map)
 
         # Write event JSON to event-specific subdirectory

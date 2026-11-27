@@ -151,7 +151,7 @@ def get_cluster_label(cards_in_cluster: list[str], cards_map: dict, card_freq: d
 
     # Find the most frequent card in the cluster
     most_frequent = max(cards_in_cluster, key=lambda c: card_freq.get(c, 0))
-    return cards_map.get(most_frequent, most_frequent)
+    return cards_map.get(most_frequent, {"name": most_frequent})["name"]
 
 
 def assign_cluster_colors(n: int) -> list[str]:
@@ -252,7 +252,7 @@ def calculate_captain_stats(
                 continue
             lift = cap_rate[i] / base_rates[i]
             lifts.append(
-                {"card": cards_map[card], "lift": round(lift, 1), "freq": int(cap_freq_arr[i]), "n": n_players}
+                {"card": cards_map[card]["name"], "lift": round(lift, 1), "freq": int(cap_freq_arr[i]), "n": n_players}
             )
         lifts.sort(key=lambda x: -x["lift"])
 
@@ -263,7 +263,7 @@ def calculate_captain_stats(
                 continue
             best12.append(
                 {
-                    "card": cards_map[card],
+                    "card": cards_map[card]["name"],
                     "freq": int(cap_freq_arr[i]),
                     "n": n_players,
                     "pct": _pct(int(cap_freq_arr[i]), n_players),
@@ -333,7 +333,7 @@ def analyze_event(event_id: str, dist_dir: Path, n_clusters: int = 6, linkage_me
             cards_data.append(
                 {
                     "slug": card,
-                    "name": cards_map[card],
+                    "name": cards_map[card]["name"],
                     "freq": freq,
                     "pct": round(freq / total * 100, 1) if total > 0 else 0,
                 }
@@ -381,7 +381,7 @@ def analyze_event(event_id: str, dist_dir: Path, n_clusters: int = 6, linkage_me
         freq = int(card_freq[card_idx[card]])
         if freq > 0:
             top_cards.append(
-                {"name": cards_map[card], "freq": freq, "pct": round(freq / total * 100, 1) if total > 0 else 0}
+                {"name": cards_map[card]["name"], "freq": freq, "pct": round(freq / total * 100, 1) if total > 0 else 0}
             )
 
     # Build top captains list (by popularity)

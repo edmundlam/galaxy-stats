@@ -1,4 +1,4 @@
-.PHONY: help install report report-auto parse-event analyze-event render-report copy-report generate-sitemap lint format clean etl-finalize etl-finalize-with-overrides captains etl-render-captains etl-render-leaderboard leaderboard etl-scrape-captain-rules
+.PHONY: help install report report-auto parse-event analyze-event render-report copy-report generate-sitemap lint format clean etl-finalize etl-finalize-with-overrides captains etl-render-captains etl-render-leaderboard leaderboard etl-scrape-captain-rules etl-scrape-cards
 
 # === Configuration ===
 ETL_DIST = etl/dist/events
@@ -57,7 +57,7 @@ report-auto: etl-parse etl-analyze etl-finalize etl-render copy-report generate-
 etl-render-captains:		## Render captain pages from all events
 	cd etl && uv run scripts/render_captains.py
 
-captains: etl-scrape-captain-rules etl-render-captains generate-sitemap		## Generate all captain pages + sitemap (scrapes new captain rules first; not part of report)
+captains: etl-scrape-cards etl-scrape-captain-rules etl-render-captains generate-sitemap		## Generate all captain pages + sitemap (scrapes card ids + captain rules first; not part of report)
 
 etl-render-leaderboard:		## Render cross-event leaderboard page from all events
 	cd etl && uv run scripts/render_leaderboard.py
@@ -66,6 +66,9 @@ leaderboard: etl-render-leaderboard generate-sitemap		## Generate leaderboard pa
 
 etl-scrape-captain-rules:		## Scrape captain rules text from guide.galaxy.fun into etl/dist/captain_rules.json (one-time / on new captains)
 	cd etl && uv run scripts/scrape_captain_rules.py
+
+etl-scrape-cards:		## Scrape card names + cids from guide.galaxy.fun into etl/dist/cards.json (runs as part of make captains)
+	cd etl && uv run scripts/scrape_cards.py
 
 # === Convenience Commands (aliases) ===
 install: etl-install		## Install dependencies (alias)

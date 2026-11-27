@@ -23,13 +23,13 @@ from pathlib import Path
 
 
 def load_cards_json(cards_path: Path) -> dict:
-    """Load slug -> name mapping from cards.json.
+    """Load slug -> {name, cid} mapping from cards.json.
 
     Args:
         cards_path: Path to cards.json file
 
     Returns:
-        Dictionary mapping card slugs to display names
+        Dictionary mapping card slugs to card entries (name, cid)
 
     Raises:
         FileNotFoundError: If cards.json doesn't exist
@@ -103,14 +103,14 @@ def split_core_situational(cards: list, threshold: int | None) -> dict:
     return {"core": core, "situational": situational}
 
 
-def assign_cards_to_archetypes(card_lookup: dict, archetypes_config: dict, slug_to_name: dict) -> list[dict]:
+def assign_cards_to_archetypes(card_lookup: dict, archetypes_config: dict, cards_map: dict) -> list[dict]:
     """Assign cards to archetypes using slugs, create 'Other' cluster.
        Translates slugs to names in output.
 
     Args:
         card_lookup: Mapping of card slugs to card data
         archetypes_config: Config dict with archetype definitions
-        slug_to_name: Mapping of slugs to display names
+        cards_map: Mapping of slugs to display names
 
     Returns:
         List of cluster dicts with archetype assignments
@@ -135,7 +135,7 @@ def assign_cards_to_archetypes(card_lookup: dict, archetypes_config: dict, slug_
             seen_slugs.add(slug)
 
             # Skip if slug not in cards.json
-            if slug not in slug_to_name:
+            if slug not in cards_map:
                 print(f"Warning: Slug '{slug}' not found in cards.json, skipping", file=sys.stderr)
                 continue
 
@@ -146,7 +146,7 @@ def assign_cards_to_archetypes(card_lookup: dict, archetypes_config: dict, slug_
 
             # Get card data and translate slug to name (remove slug from final output)
             card_data = card_lookup[slug].copy()
-            card_data["name"] = slug_to_name[slug]
+            card_data["name"] = cards_map[slug]["name"]
             # Remove slug field from final output (keep only name)
             if "slug" in card_data:
                 del card_data["slug"]
@@ -182,7 +182,7 @@ def assign_cards_to_archetypes(card_lookup: dict, archetypes_config: dict, slug_
     for slug, card_data in card_lookup.items():
         if slug not in assigned_slugs:
             other_card = card_data.copy()
-            other_card["name"] = slug_to_name.get(slug, slug)
+            other_card["name"] = cards_map.get(slug, {"name": slug})["name"]
             # Remove slug field from final output (keep only name)
             if "slug" in other_card:
                 del other_card["slug"]
@@ -236,12 +236,12 @@ def build_slug_to_archetype_map(card_lookup: dict, archetypes_config: dict) -> d
     return slug_to_archetype
 
 
-def translate_deck_slugs(captains: list, slug_to_name: dict) -> list:
+def translate_deck_slugs(captains: list, cards_map: dict) -> list:
     """Translate deck slugs to card names for all players.
 
     Args:
         captains: List of captain dicts with players
-        slug_to_name: Mapping of card slugs to display names
+        cards_map: Mapping of card slugs to display names
 
     Returns:
         Updated captains list with deck names instead of slugs
@@ -256,7 +256,7 @@ def translate_deck_slugs(captains: list, slug_to_name: dict) -> list:
             deck = player.get("deck", [])
 
             # Translate deck slugs to names
-            deck_names = [slug_to_name.get(card_slug, card_slug) for card_slug in deck]
+            deck_names = [cards_map.get(card_slug, {"name": card_slug})["name"] for card_slug in deck]
             updated_player["deck"] = deck_names
 
             updated_players.append(updated_player)
@@ -267,14 +267,14 @@ def translate_deck_slugs(captains: list, slug_to_name: dict) -> list:
     return updated_captains
 
 
-def reassign_player_archetypes(captains: list, slug_to_archetype: dict, slug_to_name: dict) -> list:
+def reassign_player_archetypes(captains: list, slug_to_archetype: dict, cards_map: dict) -> list:
     """Reassign archetype to each player based on deck composition.
        Also translates deck slugs to card names.
 
     Args:
         captains: List of captain dicts with players
         slug_to_archetype: Mapping of card slugs to archetype labels
-        slug_to_name: Mapping of card slugs to display names
+        cards_map: Mapping of card slugs to display names
 
     Returns:
         Updated captains list with reassigned player archetypes and deck names
@@ -292,7 +292,7 @@ def reassign_player_archetypes(captains: list, slug_to_archetype: dict, slug_to_
             archetype_counts = {}
             deck_names = []
             for card_slug in deck:
-                card_name = slug_to_name.get(card_slug, card_slug)
+                card_name = cards_map.get(card_slug, {"name": card_slug})["name"]
                 deck_names.append(card_name)
 
                 archetype = slug_to_archetype.get(card_slug)
@@ -344,7 +344,7 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
         auto_analysis = json.load(f)
 
     # Load cards.json (required for slug resolution)
-    slug_to_name = load_cards_json(cards_path)
+    cards_map = load_cards_json(cards_path)
 
     if override_config:
         # Load archetype overrides
@@ -358,14 +358,14 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
         card_lookup = build_card_lookup(auto_analysis["clusters"])
 
         # Apply archetype overrides
-        clusters = assign_cards_to_archetypes(card_lookup, archetypes_config, slug_to_name)
+        clusters = assign_cards_to_archetypes(card_lookup, archetypes_config, cards_map)
 
         # Rebuild cluster map
         cluster_map = rebuild_cluster_map(clusters)
 
         # Build slug -> archetype mapping for reassigning player archetypes
         slug_to_archetype = build_slug_to_archetype_map(card_lookup, archetypes_config)
-        captains = reassign_player_archetypes(auto_analysis["captains"], slug_to_archetype, slug_to_name)
+        captains = reassign_player_archetypes(auto_analysis["captains"], slug_to_archetype, cards_map)
 
         # Build top archetypes list (by popularity)
         archetype_counts = defaultdict(int)
@@ -420,7 +420,7 @@ def finalize_analysis(event_id: str, dist_dir: Path, override_config: Path | Non
             clusters.append(new_cluster)
 
         # Translate deck slugs to names
-        captains = translate_deck_slugs(auto_analysis["captains"], slug_to_name)
+        captains = translate_deck_slugs(auto_analysis["captains"], cards_map)
 
         # Build top archetypes list (by popularity)
         archetype_counts = defaultdict(int)
