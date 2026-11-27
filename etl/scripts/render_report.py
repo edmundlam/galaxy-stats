@@ -18,8 +18,13 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+try:  # imported as a package module (pytest)
+    from scripts.render_captains import build_card_cids, deck_used_slugs
+except ImportError:  # run directly via make: sys.path[0] is scripts/
+    from render_captains import build_card_cids, deck_used_slugs
+
 # Asset version for cache busting - increment when CSS/JS changes
-ASSET_VERSION = "4"
+ASSET_VERSION = "7"
 
 OG_IMAGE_BASE_URL = "https://www.galaxy-stats.com"
 
@@ -165,9 +170,11 @@ def get_html_template() -> str:
 </main>
 
 <script src="../../assets/galaxy-report.js?v={ASSET_VERSION}"></script>
+<script src="../../assets/copy-deck.js?v={ASSET_VERSION}" data-page="report"></script>
 <script>
 const DATA = {DATA_JSON};
 const CARDS = {CARDS_JSON};
+const CARD_CIDS = {CARD_CIDS_JSON};
 
 // INIT - call render functions with data
 renderBars();
@@ -300,6 +307,13 @@ def render_report(event_id: str, events_dir: Path) -> str:
     project_root = Path(__file__).parent.parent.parent
     cards = load_cards(project_root)
 
+    # Copy buttons: name -> cid over deck-used slugs (plus this event's captains);
+    # stays undefined in the page when cards.json carries no cids, which keeps the
+    # shared JS from rendering buttons at all.
+    used_slugs = deck_used_slugs(events_dir) | {c["slug"] for c in analysis.get("captains", [])}
+    card_cids = build_card_cids(cards, used_slugs)
+    card_cids_json = json.dumps(card_cids, separators=(",", ":")) if card_cids else "undefined"
+
     # Calculate stats
     stats = calculate_stats(analysis)
 
@@ -335,6 +349,7 @@ def render_report(event_id: str, events_dir: Path) -> str:
         # Data
         "DATA_JSON": json.dumps(analysis, separators=(",", ":")),
         "CARDS_JSON": json.dumps(cards, separators=(",", ":")),
+        "CARD_CIDS_JSON": card_cids_json,
         "ASSET_VERSION": ASSET_VERSION,
     }
 

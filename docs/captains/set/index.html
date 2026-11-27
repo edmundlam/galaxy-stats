@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/set__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=7">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=10">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:12px; }
@@ -72,6 +72,12 @@
   .deck .tag { flex:none; }
   .chev { flex:none; transition:transform 0.15s; }
   details[open] .chev { transform:rotate(90deg); }
+  .copy-deck { flex:none; display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
+               margin:-12px 0; padding:0; background:none; border:none; border-radius:2px; color:#9a9ca8;
+               cursor:pointer; transition:color 0.15s, background 0.15s; }
+  .copy-deck:hover { color:var(--accent); background:rgba(200,169,110,0.08); }
+  .copy-deck:focus-visible { outline:1px solid rgba(200,169,110,0.4); outline-offset:-1px; }
+  .copy-deck svg { display:block; }
   .dk { display:flex; flex-wrap:wrap; gap:4px; padding:10px 12px; border-top:1px solid var(--border); }
   .dk .deck-pill { font-size:11px; background:var(--surface2); border:1px solid var(--border);
                    border-bottom-style:dotted; }
@@ -141,17 +147,18 @@
     </div>
     <div id="deck-list">
       <details class="deck" data-archetype="Boons" data-month="2026-09">
-      <summary><span class="mo"><a href="../../reports/2026-09/">2026-09</a></span><span class="ct">×1</span><span class="tag" style="background:#7b9cff20;color:#7b9cff;border-color:#7b9cff40">Boons</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <summary><span class="mo"><a href="../../reports/2026-09/">2026-09</a></span><span class="ct">×1</span><span class="tag" style="background:#7b9cff20;color:#7b9cff;border-color:#7b9cff40">Boons</span><button type="button" class="copy-deck" data-captain="Set" data-cids="3028-3008-3099-3111-3019-2049-3107-3085-3086-3096-3127-3128-3091" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
       <div class="dk"><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Bubbles</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">The Raven</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Fortune Teller</span><span class="deck-pill">Nuada, Radiant King</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">The Sour Patch Kid</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Young Hercules</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Orion, the Hunter</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Orpheus</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Tantalus</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Medea in a Tavern</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Perseus</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Sigrun, Valkyrie Queen</span></div>
     </details>
     <details class="deck" data-archetype="Boons" data-month="2026-09">
-      <summary><span class="mo"><a href="../../reports/2026-09/">2026-09</a></span><span class="ct">×1</span><span class="tag" style="background:#7b9cff20;color:#7b9cff;border-color:#7b9cff40">Boons</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <summary><span class="mo"><a href="../../reports/2026-09/">2026-09</a></span><span class="ct">×1</span><span class="tag" style="background:#7b9cff20;color:#7b9cff;border-color:#7b9cff40">Boons</span><button type="button" class="copy-deck" data-captain="Set" data-cids="3028-3099-3111-3019-3102-3107-3085-3086-3096-3103-3127-3128-3091" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
       <div class="dk"><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">The Raven</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Fortune Teller</span><span class="deck-pill">Nuada, Radiant King</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Whirlidoo</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Young Hercules</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Orion, the Hunter</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Orpheus</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Tantalus</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Wishing Fish</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Medea in a Tavern</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Perseus</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Sigrun, Valkyrie Queen</span></div>
     </details>
     </div>
   </div>
 </main>
 <script type="application/json" id="captain-data">{"slug": "set", "name": "Set", "months": [{"id": "2026-09", "players": [{"deck": ["Bubbles", "The Raven", "Fortune Teller", "Nuada, Radiant King", "The Sour Patch Kid", "Young Hercules", "Orion, the Hunter", "Orpheus", "Tantalus", "Medea in a Tavern", "Perseus", "Sigrun, Valkyrie Queen"]}, {"deck": ["The Raven", "Fortune Teller", "Nuada, Radiant King", "Whirlidoo", "Young Hercules", "Orion, the Hunter", "Orpheus", "Tantalus", "Wishing Fish", "Medea in a Tavern", "Perseus", "Sigrun, Valkyrie Queen"]}]}], "rules": "At the start of the game, choose a Secret Rare character. Get that character when you complete 2 boons", "cardSlugs": {"Bubbles": "bubbles", "Fortune Teller": "fortune_teller", "Medea in a Tavern": "medea_in_a_tavern", "Nuada, Radiant King": "nuada_radiant_king", "Orion, the Hunter": "orion_the_hunter", "Orpheus": "orpheus", "Perseus": "perseus", "Sigrun, Valkyrie Queen": "sigrun_valkyrie_queen", "Tantalus": "tantalus", "The Raven": "the_raven", "The Sour Patch Kid": "the_sour_patch_kid", "Whirlidoo": "whirlidoo", "Wishing Fish": "wishing_fish", "Young Hercules": "young_hercules"}, "cardColors": {"Bubbles": "#6ec89e", "Fortune Teller": "#7b9cff", "Medea in a Tavern": "#9e6ec8", "Orion, the Hunter": "#7b9cff", "Orpheus": "#7b9cff", "Perseus": "#7b9cff", "Sigrun, Valkyrie Queen": "#7b9cff", "Tantalus": "#7b9cff", "The Raven": "#7b9cff", "The Sour Patch Kid": "#e87d9e", "Whirlidoo": "#5a5d6a", "Wishing Fish": "#c8a96e", "Young Hercules": "#7b9cff"}}</script>
-<script src="../../assets/captains.js?v=7"></script>
+<script src="../../assets/captains.js?v=10"></script>
+<script src="../../assets/copy-deck.js?v=10" data-page="captain"></script>
 </body>
 </html>

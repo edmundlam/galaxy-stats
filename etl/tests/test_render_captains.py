@@ -820,3 +820,73 @@ def test_deck_filter_input_has_aria_label(events_dir, captains_file):
     html = render_captain_page(aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com")
     assert 'id="deck-filter"' in html
     assert 'aria-label="Filter decks by archetype, month, or card"' in html
+
+
+# --- Copy-decklist button ---
+
+
+def cid_map() -> dict:
+    return {
+        "Galileo Galilei": 500,
+        "Card A": 1,
+        "Card B": 2,
+        "Card C": 3,
+        "Card D": 4,
+        "Card E": 5,
+        "Card F": 6,
+        "Card G": 7,
+    }
+
+
+def galileo_page(events_dir, captains_file, card_cids=None):
+    return render_captain_page(
+        aggregate_captains(events_dir, captains_file)["galileo-galilei"], "https://example.com", card_cids=card_cids
+    )
+
+
+def test_copy_button_sits_between_tag_and_chevron(events_dir, captains_file):
+    summary = re.search(
+        r"<summary>(.*?)</summary>", galileo_page(events_dir, captains_file, cid_map()), re.DOTALL
+    ).group(1)
+    assert summary.index('class="tag"') < summary.index('class="copy-deck"') < summary.index('class="chev"')
+
+
+def test_copy_button_carries_captain_first_cids_in_display_order(events_dir, captains_file):
+    html = galileo_page(events_dir, captains_file, cid_map())
+    assert '<button type="button" class="copy-deck" data-captain="Galileo Galilei" data-cids="500-1-2-3"' in html
+    assert 'data-cids="500-1-4-5"' in html
+    assert 'aria-label="Copy decklist"' in html
+
+
+def test_missing_card_cid_omits_data_cids_but_keeps_button(events_dir, captains_file):
+    cids = cid_map()
+    del cids["Card B"]
+    html = galileo_page(events_dir, captains_file, cids)
+    assert 'data-cids="500-1-2-3"' not in html, "rows containing a cid-less card go names-only"
+    assert 'data-cids="500-1-4-5"' in html, "rows with full cids keep the ID line"
+    assert html.count('class="copy-deck"') == 3
+
+
+def test_unknown_captain_cid_omits_data_cids_on_every_row(events_dir, captains_file):
+    cids = cid_map()
+    del cids["Galileo Galilei"]
+    html = galileo_page(events_dir, captains_file, cids)
+    assert "data-cids" not in html
+    assert html.count('class="copy-deck"') == 3
+
+
+def test_copy_button_renders_without_cid_map(events_dir, captains_file):
+    html = galileo_page(events_dir, captains_file)
+    assert 'class="copy-deck"' in html
+    assert "data-cids" not in html
+
+
+def test_captain_page_loads_copy_deck_script_with_page_attr(events_dir, captains_file):
+    html = galileo_page(events_dir, captains_file)
+    assert f'<script src="../../assets/copy-deck.js?v={ASSET_VERSION}" data-page="captain"></script>' in html
+
+
+def test_empty_and_index_pages_omit_copy_deck_script(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    assert "copy-deck.js" not in render_captain_page(caps["loki"], "https://example.com")
+    assert "copy-deck.js" not in render_index_page(caps, "https://example.com")

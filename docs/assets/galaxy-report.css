@@ -137,6 +137,12 @@
   .deck-pills { display:flex; flex-wrap:wrap; gap:4px; }
   .deck-pill { font-family:'IBM Plex Mono',monospace; font-size:12px; padding:2px 8px;
                border-radius:2px; background:var(--surface2); border:1px solid var(--border); color:var(--text); }
+  .copy-deck { flex:none; display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
+               margin:-12px 0; padding:0; background:none; border:none; border-radius:2px; color:#9a9ca8;
+               cursor:pointer; transition:color 0.15s, background 0.15s; }
+  .copy-deck:hover { color:var(--accent); background:rgba(200,169,110,0.08); }
+  .copy-deck:focus-visible { outline:1px solid rgba(200,169,110,0.4); outline-offset:-1px; }
+  .copy-deck svg { display:block; }
 
   /* Legend and filter */
   .legend { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; padding:12px 14px;

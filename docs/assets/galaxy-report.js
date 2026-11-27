@@ -132,6 +132,22 @@ function pill(card, color, opacity) {
 }
 
 // CAPTAINS
+// Copy button per decklist row; only rendered when the page embeds CARD_CIDS
+// (name -> cid). Rows with an unknown card/captain cid bake no data-cids —
+// docs/assets/copy-deck.js then copies names-only rather than a wrong ID line.
+const COPY_ICON_SVG =
+  '<svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5"' +
+  ' stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+  '<rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/>' +
+  '<path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg>';
+
+function copyDeckButton(captain, deck, cidsMap) {
+  const cids = [cidsMap[captain], ...deck.map(name => cidsMap[name])];
+  const cidAttr = cids.every(Boolean) ? ` data-cids="${cids.join('-')}"` : '';
+  return `<button type="button" class="copy-deck" data-captain="${captain}"${cidAttr}` +
+    ` aria-label="Copy decklist">${COPY_ICON_SVG}</button>`;
+}
+
 function renderCaptains() {
   const c = document.getElementById('captains-container');
 
@@ -163,6 +179,7 @@ function renderCaptains() {
   c.innerHTML = DATA.captains.map((cap, i) => {
     const uid = `cap-${i}`;
     const warn = cap.n < 5;
+    const cidsMap = typeof CARD_CIDS !== 'undefined' ? CARD_CIDS : null;
 
     // Track archetypes for filtering
     const archetypesPresent = cap.players ?
@@ -201,6 +218,7 @@ function renderCaptains() {
               <span class="tag" style="background:${archColors[p.archetype]}20; color:${archColors[p.archetype]}; border-color:${archColors[p.archetype]}40">
                 ${p.archetype}
               </span>
+              ${cidsMap ? copyDeckButton(cap.name, p.deck, cidsMap) : ''}
               <span class="expand-icon">▶</span>
             </div>
             <div class="player-deck">

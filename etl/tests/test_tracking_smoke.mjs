@@ -10,6 +10,7 @@ const same = (a, b) => assert.strictEqual(JSON.stringify(a), JSON.stringify(b));
 
 const REPORT_JS = new URL('../../docs/assets/galaxy-report.js', import.meta.url);
 const CAPTAINS_JS = new URL('../../docs/assets/captains.js', import.meta.url);
+const COPY_DECK_JS = new URL('../../docs/assets/copy-deck.js', import.meta.url);
 
 function el(overrides = {}) {
   return {
@@ -211,6 +212,64 @@ function docStub(overrides = {}) {
       'cards without a slug must still render as span.deck-pill');
     console.log('captains.js: re-render pill parity OK');
   }
+}
+
+// --- copy-deck.js ---
+{
+  const row = {
+    querySelectorAll: (sel) => sel === '.deck-pill'
+      ? [{ textContent: 'Antiquitoy' }, { textContent: 'Rocky, the Roller' }] : [],
+  };
+  const btn = el({
+    dataset: { captain: 'Bing Wu', cids: '4052-4036-4029' },
+    closest: (sel) => sel === 'button.copy-deck' ? btn : row,
+    innerHTML: '<svg/>',
+  });
+  const written = [];
+  const flush = () => new Promise((resolve) => setImmediate(resolve));
+  const loadCopyDeck = (page) => {
+    const doc = docStub({ currentScript: { dataset: { page } } });
+    const loaded = load(COPY_DECK_JS, doc, {
+      navigator: { clipboard: { writeText: (t) => { written.push(t); return Promise.resolve(); } } },
+    });
+    return { ...loaded, doc };
+  };
+
+  const click = (target) => ({ target, preventDefault() {}, stopPropagation() {} });
+
+  // page attribute comes from the script tag's data-page; captain from the clicked button
+  const { calls, doc } = loadCopyDeck('captain');
+  doc.listeners.click[0](click(btn));
+  await flush();
+  same(calls.at(-1), ['deck-copy', { page: 'captain', captain: 'Bing Wu' }]);
+  same(written[0].split('\n'),
+    ['Once Upon a Galaxy - Galaxy Stats Decklist', '4052-4036-4029', 'Captain: Bing Wu', 'Antiquitoy', 'Rocky, the Roller']);
+
+  const report = loadCopyDeck('report');
+  report.doc.listeners.click[0](click(btn));
+  await flush();
+  same(report.calls.at(-1), ['deck-copy', { page: 'report', captain: 'Bing Wu' }]);
+
+  // names-only copy (no data-cids) still tracks, warns about the missing IDs, and flags the button
+  const warned = [];
+  const titles = [];
+  const bare = el({
+    dataset: { captain: 'Bing Wu' },
+    closest: (sel) => sel === 'button.copy-deck' ? bare : row,
+    innerHTML: '<svg/>',
+    setAttribute: (k, v) => { if (k === 'title') titles.push(v); },
+    removeAttribute: () => {},
+  });
+  const noIdsDoc = docStub({ currentScript: { dataset: { page: 'report' } } });
+  const noIds = load(COPY_DECK_JS, noIdsDoc, {
+    navigator: { clipboard: { writeText: () => Promise.resolve() } },
+    console: { warn: (...args) => warned.push(args.join(' ')) },
+  });
+  noIdsDoc.listeners.click[0](click(bare));
+  await flush();
+  same(noIds.calls.at(-1), ['deck-copy', { page: 'report', captain: 'Bing Wu' }]);
+  assert.match(warned.join('\n'), /Rocky, the Roller/);
+  console.log('copy-deck.js: 3 events OK');
 }
 
 console.log('all tracking smoke tests passed');

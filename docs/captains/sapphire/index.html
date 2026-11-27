@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/sapphire__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=7">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=10">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:12px; }
@@ -72,6 +72,12 @@
   .deck .tag { flex:none; }
   .chev { flex:none; transition:transform 0.15s; }
   details[open] .chev { transform:rotate(90deg); }
+  .copy-deck { flex:none; display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
+               margin:-12px 0; padding:0; background:none; border:none; border-radius:2px; color:#9a9ca8;
+               cursor:pointer; transition:color 0.15s, background 0.15s; }
+  .copy-deck:hover { color:var(--accent); background:rgba(200,169,110,0.08); }
+  .copy-deck:focus-visible { outline:1px solid rgba(200,169,110,0.4); outline-offset:-1px; }
+  .copy-deck svg { display:block; }
   .dk { display:flex; flex-wrap:wrap; gap:4px; padding:10px 12px; border-top:1px solid var(--border); }
   .dk .deck-pill { font-size:11px; background:var(--surface2); border:1px solid var(--border);
                    border-bottom-style:dotted; }
@@ -141,17 +147,18 @@
     </div>
     <div id="deck-list">
       <details class="deck" data-archetype="Fae" data-month="2026-07 2026-04">
-      <summary><span class="mo"><a href="../../reports/2026-07/">2026-07</a> · <a href="../../reports/2026-04/">2026-04</a></span><span class="ct">×2</span><span class="tag" style="background:#d87dce20;color:#d87dce;border-color:#d87dce40">Fae</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <summary><span class="mo"><a href="../../reports/2026-07/">2026-07</a> · <a href="../../reports/2026-04/">2026-04</a></span><span class="ct">×2</span><span class="tag" style="background:#d87dce20;color:#d87dce;border-color:#d87dce40">Fae</span><button type="button" class="copy-deck" data-captain="Sapphire" data-cids="2234-1077-1066-2113-2143-1135-1110-1181-1201-1212-1372-1408-1222" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
       <div class="dk"><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Toto</span><span class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30">Prickles</span><span class="deck-pill">Dastardly Spirit</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Miseria</span><span class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30">Toadie</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Morgan Le Fae</span><span class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30">Fun Gal</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Nightshade</span><span class="deck-pill">Black Hole</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Pisces</span><span class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30">Faerie Godfather</span><span class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30">Faerie Queen</span></div>
     </details>
     <details class="deck" data-archetype="Treasures" data-month="2026-07">
-      <summary><span class="mo"><a href="../../reports/2026-07/">2026-07</a></span><span class="ct">×1</span><span class="tag" style="background:#c8a96e20;color:#c8a96e;border-color:#c8a96e40">Treasures</span><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <summary><span class="mo"><a href="../../reports/2026-07/">2026-07</a></span><span class="ct">×1</span><span class="tag" style="background:#c8a96e20;color:#c8a96e;border-color:#c8a96e40">Treasures</span><button type="button" class="copy-deck" data-captain="Sapphire" data-cids="2234-3008-3070-3111-2143-3107-1166-1096-2099-2159-1416-1329-3091" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
       <div class="dk"><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Bubbles</span><span class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30">Destiny</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Fortune Teller</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Miseria</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Young Hercules</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Maverick &amp; Icewing</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Mortakon</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Rollo</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Crystal</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Snapping Hydra</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Guinevere</span><span class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30">Sigrun, Valkyrie Queen</span></div>
     </details>
     </div>
   </div>
 </main>
 <script type="application/json" id="captain-data">{"slug": "sapphire", "name": "Sapphire", "months": [{"id": "2026-04", "players": [{"deck": ["Prickles", "Toto", "Morgan Le Fae", "Toadie", "Fun Gal", "Nightshade", "Black Hole", "Faerie Queen", "Pisces", "Faerie Godfather", "Dastardly Spirit", "Miseria"]}]}, {"id": "2026-07", "players": [{"deck": ["Toto", "Prickles", "Dastardly Spirit", "Miseria", "Toadie", "Morgan Le Fae", "Fun Gal", "Nightshade", "Black Hole", "Pisces", "Faerie Godfather", "Faerie Queen"]}, {"deck": ["Bubbles", "Destiny", "Fortune Teller", "Miseria", "Young Hercules", "Maverick & Icewing", "Mortakon", "Rollo", "Crystal", "Snapping Hydra", "Guinevere", "Sigrun, Valkyrie Queen"]}]}], "rules": "When a character is KO'd, give adjacent characters +1/+1.", "cardSlugs": {"Black Hole": "black_hole", "Bubbles": "bubbles", "Crystal": "crystal", "Dastardly Spirit": "dastardly_spirit", "Destiny": "destiny", "Faerie Godfather": "faerie_godfather", "Faerie Queen": "faerie_queen", "Fortune Teller": "fortune_teller", "Fun Gal": "fun_gal", "Guinevere": "guinevere", "Maverick & Icewing": "maverick_icewing", "Miseria": "miseria", "Morgan Le Fae": "morgan_le_fae", "Mortakon": "mortakon", "Nightshade": "nightshade", "Pisces": "pisces", "Prickles": "prickles", "Rollo": "rollo", "Sigrun, Valkyrie Queen": "sigrun_valkyrie_queen", "Snapping Hydra": "snapping_hydra", "Toadie": "toadie", "Toto": "toto", "Young Hercules": "young_hercules"}, "cardColors": {"Bubbles": "#6ec89e", "Crystal": "#c8a96e", "Destiny": "#d87dce", "Faerie Godfather": "#d87dce", "Faerie Queen": "#d87dce", "Fortune Teller": "#7b9cff", "Fun Gal": "#d87dce", "Guinevere": "#c8a96e", "Maverick & Icewing": "#c8a96e", "Miseria": "#c8a96e", "Morgan Le Fae": "#9e6ec8", "Mortakon": "#5a5d6a", "Nightshade": "#9e6ec8", "Pisces": "#c8a96e", "Prickles": "#d87dce", "Rollo": "#c8a96e", "Sigrun, Valkyrie Queen": "#7b9cff", "Snapping Hydra": "#6ec89e", "Toadie": "#d87dce", "Toto": "#6ec89e", "Young Hercules": "#7b9cff"}}</script>
-<script src="../../assets/captains.js?v=7"></script>
+<script src="../../assets/captains.js?v=10"></script>
+<script src="../../assets/copy-deck.js?v=10" data-page="captain"></script>
 </body>
 </html>

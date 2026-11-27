@@ -17,7 +17,7 @@ from html import escape
 from pathlib import Path
 
 BASE_URL = "https://www.galaxy-stats.com"
-ASSET_VERSION = "7"
+ASSET_VERSION = "10"
 FONTS_HREF = (
     "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900"
     "&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
@@ -78,6 +78,12 @@ EXTRA_CSS = """
   .deck .tag { flex:none; }
   .chev { flex:none; transition:transform 0.15s; }
   details[open] .chev { transform:rotate(90deg); }
+  .copy-deck { flex:none; display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
+               margin:-12px 0; padding:0; background:none; border:none; border-radius:2px; color:#9a9ca8;
+               cursor:pointer; transition:color 0.15s, background 0.15s; }
+  .copy-deck:hover { color:var(--accent); background:rgba(200,169,110,0.08); }
+  .copy-deck:focus-visible { outline:1px solid rgba(200,169,110,0.4); outline-offset:-1px; }
+  .copy-deck svg { display:block; }
   .dk { display:flex; flex-wrap:wrap; gap:4px; padding:10px 12px; border-top:1px solid var(--border); }
   .dk .deck-pill { font-size:11px; background:var(--surface2); border:1px solid var(--border);
                    border-bottom-style:dotted; }
@@ -137,6 +143,44 @@ def _pct(freq: int, n: int) -> int:
     make the prerendered Best Cards table jump when JS re-renders it.
     """
     return int(freq / n * 100 + 0.5)
+
+
+def deck_used_slugs(events_dir: Path) -> set[str]:
+    """Slugs that appear in any event's decks (event.json decks are slugs).
+
+    Args:
+        events_dir: Path to etl/dist/events
+
+    Returns:
+        Set of card slugs used across all events
+    """
+    used: set[str] = set()
+    for path in sorted(Path(events_dir).glob("*/event.json")):
+        for player in json.loads(path.read_text(encoding="utf-8")).get("players", []):
+            used.update(player.get("deck", []))
+    return used
+
+
+def build_card_cids(cards_map: dict, used_slugs: set[str]) -> dict[str, int]:
+    """Invert cards.json to display name -> game cid over deck-used slugs only.
+
+    The full catalog contains duplicate display names (Beanie Baby character
+    cid 1036 vs treasure token cid 908), so unrestricted inversion would link
+    the wrong cid. A name mapping to two deck-used slugs is dropped entirely:
+    decks containing it copy names-only rather than risk a wrong ID line.
+
+    Args:
+        cards_map: cards.json dict (slug -> {name, cid})
+        used_slugs: Slugs that actually appear in decks (plus captain slugs)
+
+    Returns:
+        Display name -> cid map; ambiguous or cid-less entries omitted
+    """
+    by_name: dict[str, list[str]] = {}
+    for slug, entry in cards_map.items():
+        if slug in used_slugs and "cid" in entry:
+            by_name.setdefault(entry["name"], []).append(slug)
+    return {name: cards_map[slugs[0]]["cid"] for name, slugs in by_name.items() if len(slugs) == 1}
 
 
 def load_analyses(events_dir: Path) -> list[dict]:
@@ -270,6 +314,28 @@ CHEVRON_SVG = (
     'stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg>'
 )
 
+COPY_BUTTON_SVG = (
+    '<svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" '
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+    '<rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/>'
+    '<path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg>'
+)
+
+
+def _copy_button(captain_name: str, deck: list[str], card_cids: dict[str, int] | None) -> str:
+    """Render the copy-decklist button for one deck row.
+
+    data-cids holds the captain cid first, then card cids in display order;
+    it is omitted entirely when any cid is unknown — docs/assets/copy-deck.js
+    then copies names-only rather than risking a wrong ID line.
+    """
+    cids = [(card_cids or {}).get(captain_name), *((card_cids or {}).get(c) for c in deck)]
+    cid_attr = f' data-cids="{"-".join(map(str, cids))}"' if all(cids) else ""
+    return (
+        f'<button type="button" class="copy-deck" data-captain="{escape(captain_name)}"{cid_attr}'
+        f' aria-label="Copy decklist">{COPY_BUTTON_SVG}</button>'
+    )
+
 
 def _grouped_decks(captain: dict) -> list[tuple[str, dict, list[tuple[str, dict]]]]:
     """Group a captain's winning decks by identical card set, newest occurrence first.
@@ -297,6 +363,7 @@ def _deck_rows(
     report_ids: set[str] | None = None,
     arch_colors: dict[str, str] | None = None,
     card_colors: dict[str, str] | None = None,
+    card_cids: dict[str, int] | None = None,
 ) -> str:
     """Render collapsed deck rows grouped by identical decklist, most popular first.
 
@@ -314,6 +381,8 @@ def _deck_rows(
         report_ids: Event ids with a published report, or None for all
         arch_colors: Archetype name -> hex color map, or None for all-fallback tags
         card_colors: Card display name -> hex type color map, or None for untinted pills
+        card_cids: Card display name -> game cid map for copy buttons, or None for
+            buttons without data-cids (names-only copies)
 
     Returns:
         HTML string of <details> elements
@@ -339,6 +408,7 @@ def _deck_rows(
             f'      <summary><span class="mo">{month_html}</span>'
             f'<span class="ct">×{len(occurrences)}</span>'
             f'<span class="tag" style="background:{color}20;color:{color};border-color:{color}40">{escape(arch)}</span>'
+            f"{_copy_button(captain['name'], player['deck'], card_cids)}"
             f"{CHEVRON_SVG}</summary>\n"
             f'      <div class="dk">{pills}</div>\n'
             f"    </details>"
@@ -414,6 +484,7 @@ def render_captain_page(
     card_slugs: dict[str, str] | None = None,
     arch_colors: dict[str, str] | None = None,
     card_colors: dict[str, str] | None = None,
+    card_cids: dict[str, int] | None = None,
 ) -> str:
     """Render one captain page.
 
@@ -430,6 +501,8 @@ def render_captain_page(
             all-fallback tints
         card_colors: Card display name -> hex type color map for deck pills,
             or None for untinted pills
+        card_cids: Card display name -> game cid map for copy buttons, or None
+            for buttons without data-cids (names-only copies)
 
     Returns:
         Self-contained HTML page string
@@ -540,11 +613,14 @@ def render_captain_page(
         placeholder="Filter by archetype, month, or card…">
     </div>
     <div id="deck-list">
-      {_deck_rows(captain, report_ids, arch_colors, card_colors)}
+      {_deck_rows(captain, report_ids, arch_colors, card_colors, card_cids)}
     </div>
   </div>
 </main>"""
-        script = f'<script src="../../assets/captains.js?v={ASSET_VERSION}"></script>'
+        script = (
+            f'<script src="../../assets/captains.js?v={ASSET_VERSION}"></script>\n'
+            f'<script src="../../assets/copy-deck.js?v={ASSET_VERSION}" data-page="captain"></script>'
+        )
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -642,16 +718,17 @@ def main() -> int:
     cards_file = dist_dir / "cards.json"
     card_slugs = {}
     cards_map = {}
+    card_cids = {}
+    used_slugs = deck_used_slugs(dist_dir / "events")
     if cards_file.exists():
         cards_map = json.loads(cards_file.read_text(encoding="utf-8"))
         # Invert only slugs that appear in event decks — the full catalog contains
         # duplicate display names (e.g. Beanie Baby character vs treasure token),
         # so unrestricted inversion would link decks to the wrong guide page.
-        used_slugs = set()
-        for path in sorted((dist_dir / "events").glob("*/event.json")):
-            for player in json.loads(path.read_text(encoding="utf-8")).get("players", []):
-                used_slugs.update(player.get("deck", []))
         card_slugs = {entry["name"]: slug for slug, entry in cards_map.items() if slug in used_slugs}
+        # Copy buttons also need the captains' own cids; page slugs are dash-form,
+        # captains.json keys are the underscore slugs cards.json uses.
+        card_cids = build_card_cids(cards_map, used_slugs | set(captains))
     # Type colors come from the archetype config (same source finalize_analysis
     # tints report clusters with); card slugs resolve to display names via cards.json.
     archetypes_file = script_dir.parent / "config" / "archetypes.json"
@@ -685,6 +762,7 @@ def main() -> int:
                 card_slugs,
                 arch_colors,
                 card_colors,
+                card_cids,
             ),
             encoding="utf-8",
         )

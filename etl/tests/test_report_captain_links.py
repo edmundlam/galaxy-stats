@@ -1,5 +1,6 @@
 """Tests for captain links in the shared report JS (docs/assets/galaxy-report.js)."""
 
+import re
 import subprocess
 from pathlib import Path
 
@@ -60,3 +61,38 @@ def test_captain_cards_link_captain_pages():
 @pytest.fixture(autouse=True)
 def require_node():
     subprocess.run(["node", "--version"], capture_output=True, check=True)
+
+
+# --- Copy-decklist button ---
+
+DECK_DATA = (
+    "const CARDS = {};"
+    "const DATA = { clusters: [], captains: [{ slug: 'bing_wu', name: 'Bing Wu', n: 1, signature: [], best12: [],"
+    " players: [{ username: 'u', archetype: 'Toys', deck: ['Antiquitoy', 'Rocky, the Roller'] }] }] };"
+)
+
+
+def test_deck_view_has_no_copy_button_without_card_cids():
+    """Old reports lack the embedded CARD_CIDS const; the shared JS must stay button-free there."""
+    out = run_js(DOM_STUB + DECK_DATA, "renderCaptains(); console.log(captured);")
+    assert "copy-deck" not in out
+
+
+def test_deck_view_bakes_copy_button_captain_first():
+    setup = (
+        DOM_STUB + DECK_DATA + " const CARD_CIDS = { 'Bing Wu': 4052, 'Antiquitoy': 4036, 'Rocky, the Roller': 4029 };"
+    )
+    out = run_js(setup, "renderCaptains(); console.log(captured);")
+    assert (
+        '<button type="button" class="copy-deck" data-captain="Bing Wu" data-cids="4052-4036-4029"'
+        ' aria-label="Copy decklist">' in out
+    )
+    header = re.search(r'class="player-row-header"[^>]*>(.*?)<div class="player-deck">', out, re.DOTALL).group(1)
+    assert header.index('class="tag"') < header.index('class="copy-deck"') < header.index('class="expand-icon"')
+
+
+def test_deck_view_button_without_cids_when_a_card_is_unknown():
+    setup = DOM_STUB + DECK_DATA + " const CARD_CIDS = { 'Bing Wu': 4052, 'Antiquitoy': 4036 };"
+    out = run_js(setup, "renderCaptains(); console.log(captured);")
+    assert "data-cids" not in out
+    assert 'class="copy-deck"' in out
