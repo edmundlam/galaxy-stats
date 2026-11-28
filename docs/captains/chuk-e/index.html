@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/chuk_e__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=10">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=11">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:12px; }
@@ -92,6 +92,52 @@
                   font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text);
                   background:var(--surface); border:1px solid var(--border); border-radius:2px; }
   .filter-input::placeholder { color:#9a9ca8; }
+  /* Top-12 deck builder */
+  #best12-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 14px; min-height:44px; }
+  #best12-actions, #best12-building { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+  #best12-actions[hidden], #best12-building[hidden] { display:none; }
+  .tb-btn { min-height:44px; padding:10px 16px; font-family:'IBM Plex Mono',monospace; font-size:12px;
+            letter-spacing:2px; text-transform:uppercase; border-radius:2px; cursor:pointer; transition:all 0.15s; }
+  .tb-btn.pri { background:var(--accent); border:1px solid var(--accent); color:#0d0f14; font-weight:500; }
+  .tb-btn.pri:hover { filter:brightness(1.12); }
+  .tb-btn.sec { background:none; border:1px solid var(--border); color:var(--muted); }
+  .tb-btn.sec:hover { color:var(--accent); border-color:rgba(200,169,110,0.4); }
+  .building-label { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:2px;
+                    text-transform:uppercase; color:var(--accent); }
+  .tb-ghost { min-height:44px; padding:8px 4px; background:none; border:none; color:var(--accent);
+              font-family:'IBM Plex Mono',monospace; font-size:12px; text-decoration:underline; cursor:pointer; }
+  #best12-hint { display:none; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--accent);
+                 background:rgba(200,169,110,0.06); border:1px solid rgba(200,169,110,0.25); border-radius:2px;
+                 padding:8px 12px; margin-bottom:10px; }
+  #best12-sec.build #best12-hint { display:block; }
+  #best12-table th.chk-col { width:36px; padding:8px 4px; }
+  #best12-sec:not(.build) .chk-col, #best12-sec:not(.build) .chk-cell { display:none; }
+  #best12-table td.chk-cell { padding-right:2px; }
+  #best12-table td.chk-cell input { width:18px; height:18px; margin:0; accent-color:var(--accent); cursor:pointer; }
+  #best12-sec.build #best12-table tbody tr { cursor:pointer; }
+  #best12-sec.build #best12-table tbody tr.sel { background:rgba(200,169,110,0.07); }
+  #best12-sec.build #best12-table tbody td { padding:11px 10px; }
+  #best12-sec.build #best12-table a.deck-pill { pointer-events:none; }
+  #best12-bar { position:sticky; bottom:0; z-index:5; display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px;
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:10px 14px; margin-top:12px; }
+  #best12-bar[hidden] { display:none; }
+  #best12-bar .prog { flex-basis:100%; height:4px; background:var(--surface); border-radius:2px; overflow:hidden; }
+  #best12-prog { display:block; height:100%; background:var(--accent); transition:width 0.15s; }
+  #best12-prog.over { background:#d9776a; }
+  #best12-status { font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--text); white-space:nowrap; }
+  #best12-extra { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); }
+  #best12-copy-deck[aria-disabled="true"] { opacity:0.4; }
+  #best12-chip { position:fixed; left:50%; bottom:16px; transform:translateX(-50%); z-index:9;
+                 background:var(--accent); color:#0d0f14; border:none; border-radius:18px; padding:12px 18px;
+                 font-family:'IBM Plex Sans',sans-serif; font-size:13px; font-weight:500; cursor:pointer;
+                 box-shadow:0 4px 14px rgba(0,0,0,0.5); white-space:nowrap; }
+  #best12-chip[hidden] { display:none; }
+  .toast { position:fixed; left:50%; bottom:76px; transform:translateX(-50%); z-index:10; max-width:90%;
+           background:var(--surface2); color:var(--text); border:1px solid var(--border); border-radius:2px;
+           padding:9px 16px; font-family:'IBM Plex Mono',monospace; font-size:12px; text-align:center;
+           opacity:0; transition:opacity 0.2s; pointer-events:none; }
+  .toast.show { opacity:1; }
 </style>
 <script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="9d92bc0f-3019-480b-b295-2e79921d2792" data-domains="www.galaxy-stats.com"></script>
 </head>
@@ -116,26 +162,45 @@
     <h2 class="section-title">Best Cards</h2>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
+    <div id="best12-sec">
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-04">2026-04</label><label class="month-chip"><input type="checkbox" checked data-month="2026-05">2026-05</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label></div>
+    <div id="best12-toolbar">
+      <span id="best12-actions">
+        <button type="button" id="best12-copy-top" class="tb-btn pri">Copy top 12</button>
+        <button type="button" id="best12-customize" class="tb-btn sec">Customize</button>
+      </span>
+      <span id="best12-building" hidden><span class="building-label">Building a deck</span>
+        <button type="button" id="best12-cancel" class="tb-ghost">Cancel</button></span>
+    </div>
+    <div id="best12-hint">Top 12 pre-selected. Tap cards to swap.</div>
     <table class="data-table" id="best12-table">
-      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+      <thead><tr><th class="chk-col no-sort" aria-hidden="true"></th><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
         <th class="num no-sort">% of <span id="best12-count">3</span> decks</th></tr></thead>
       <tbody>
-        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/busted_bot/" target="_blank" rel="noopener">Busted Bot</a></td><td class="num">3</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/mech_a_man/" target="_blank" rel="noopener">Mech-a-Man</a></td><td class="num">3</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/mortakon/" target="_blank" rel="noopener">Mortakon</a></td><td class="num">3</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/barrel_of_monkeys/" target="_blank" rel="noopener">Barrel of Monkeys</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/brick_monster/" target="_blank" rel="noopener">Brick Monster</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/chip_on_the_ship/" target="_blank" rel="noopener">Chip on the Ship</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/party_pinata/" target="_blank" rel="noopener">Party Pinata</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/raggedy_ann/" target="_blank" rel="noopener">Raggedy Ann</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/space_ranger_woody/" target="_blank" rel="noopener">Space Ranger Woody</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/ace_of_hearts/" target="_blank" rel="noopener">Ace of Hearts</a></td><td class="num">1</td><td class="num">33%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/beanie_baby/" target="_blank" rel="noopener">Beanie Baby</a></td><td class="num">1</td><td class="num">33%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/black_hole/" target="_blank" rel="noopener">Black Hole</a></td><td class="num">1</td><td class="num">33%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/busted_bot/" target="_blank" rel="noopener">Busted Bot</a></td><td class="num">3</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/mech_a_man/" target="_blank" rel="noopener">Mech-a-Man</a></td><td class="num">3</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/mortakon/" target="_blank" rel="noopener">Mortakon</a></td><td class="num">3</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/barrel_of_monkeys/" target="_blank" rel="noopener">Barrel of Monkeys</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/brick_monster/" target="_blank" rel="noopener">Brick Monster</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/chip_on_the_ship/" target="_blank" rel="noopener">Chip on the Ship</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/party_pinata/" target="_blank" rel="noopener">Party Pinata</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/raggedy_ann/" target="_blank" rel="noopener">Raggedy Ann</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30" href="https://guide.galaxy.fun/cards/space_ranger_woody/" target="_blank" rel="noopener">Space Ranger Woody</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/ace_of_hearts/" target="_blank" rel="noopener">Ace of Hearts</a></td><td class="num">1</td><td class="num">33%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/beanie_baby/" target="_blank" rel="noopener">Beanie Baby</a></td><td class="num">1</td><td class="num">33%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/black_hole/" target="_blank" rel="noopener">Black Hole</a></td><td class="num">1</td><td class="num">33%</td></tr>
       </tbody>
     </table>
     <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
+    <div id="best12-bar" hidden>
+      <div class="prog"><i id="best12-prog"></i></div>
+      <span id="best12-status" aria-live="polite"></span>
+      <span id="best12-extra"></span>
+      <button type="button" id="best12-reset" class="tb-ghost">Reset to top 12</button>
+      <button type="button" id="best12-copy-deck" class="tb-btn pri">Copy deck</button>
+    </div>
+    </div>
+    <button type="button" id="best12-chip" hidden>Deck 12/12 · back to table</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Winning decks grouped by identical list, most popular first.</div>
@@ -147,22 +212,22 @@
     </div>
     <div id="deck-list">
       <details class="deck" data-archetype="Toys" data-month="2026-08">
-      <summary><span class="mo"><a href="../../reports/2026-08/">2026-08</a></span><span class="ct">×1</span><span class="tag" style="background:#5a5d6a20;color:#5a5d6a;border-color:#5a5d6a40">Toys</span><button type="button" class="copy-deck" data-captain="CHUK-E" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <summary><span class="mo"><a href="../../reports/2026-08/">2026-08</a></span><span class="ct">×1</span><span class="tag" style="background:#5a5d6a20;color:#5a5d6a;border-color:#5a5d6a40">Toys</span><button type="button" class="copy-deck" data-captain="CHUK-E" data-cids="1006-1259-1075-1036-1107-1333-1096-1369-1355-1337-1212-1321-1267" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
       <div class="dk"><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Brick Monster</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Busted Bot</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Beanie Baby</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Mech-a-Man</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Moonshadow</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Mortakon</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Space Ranger Woody</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Party Pinata</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Raggedy Ann</span><span class="deck-pill">Black Hole</span><span class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30">Charlotte</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Chip on the Ship</span></div>
     </details>
     <details class="deck" data-archetype="Toys" data-month="2026-05">
-      <summary><span class="mo"><a href="../../reports/2026-05/">2026-05</a></span><span class="ct">×1</span><span class="tag" style="background:#5a5d6a20;color:#5a5d6a;border-color:#5a5d6a40">Toys</span><button type="button" class="copy-deck" data-captain="CHUK-E" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <summary><span class="mo"><a href="../../reports/2026-05/">2026-05</a></span><span class="ct">×1</span><span class="tag" style="background:#5a5d6a20;color:#5a5d6a;border-color:#5a5d6a40">Toys</span><button type="button" class="copy-deck" data-captain="CHUK-E" data-cids="1006-1075-1096-1107-1176-1211-1267-1318-1337-1355-1369-1416-2182" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
       <div class="dk"><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Busted Bot</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Mortakon</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Mech-a-Man</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Mechanical Dragon</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Barrel of Monkeys</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Chip on the Ship</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Ace of Hearts</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Raggedy Ann</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Party Pinata</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Space Ranger Woody</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Snapping Hydra</span><span class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30">The Blue Faerie</span></div>
     </details>
     <details class="deck" data-archetype="Treasures" data-month="2026-04">
-      <summary><span class="mo"><a href="../../reports/2026-04/">2026-04</a></span><span class="ct">×1</span><span class="tag" style="background:#c8a96e20;color:#c8a96e;border-color:#c8a96e40">Treasures</span><button type="button" class="copy-deck" data-captain="CHUK-E" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <summary><span class="mo"><a href="../../reports/2026-04/">2026-04</a></span><span class="ct">×1</span><span class="tag" style="background:#c8a96e20;color:#c8a96e;border-color:#c8a96e40">Treasures</span><button type="button" class="copy-deck" data-captain="CHUK-E" data-cids="1006-1075-1096-1107-1166-1211-1259-1263-1349-1372-1422-2099-2123" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
       <div class="dk"><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Busted Bot</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Mortakon</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Mech-a-Man</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Maverick &amp; Icewing</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Barrel of Monkeys</span><span class="deck-pill" style="color:#5a5d6acc;border-color:#5a5d6a30">Brick Monster</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Wicked Witch</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">The Burninator</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Pisces</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Wormscale Tinkerer</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Rollo</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">Mr. Fox</span></div>
     </details>
     </div>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "chuk-e", "name": "CHUK-E", "months": [{"id": "2026-04", "players": [{"deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Maverick & Icewing", "Barrel of Monkeys", "Brick Monster", "Wicked Witch", "The Burninator", "Pisces", "Wormscale Tinkerer", "Rollo", "Mr. Fox"]}]}, {"id": "2026-05", "players": [{"deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Mechanical Dragon", "Barrel of Monkeys", "Chip on the Ship", "Ace of Hearts", "Raggedy Ann", "Party Pinata", "Space Ranger Woody", "Snapping Hydra", "The Blue Faerie"]}]}, {"id": "2026-08", "players": [{"deck": ["Brick Monster", "Busted Bot", "Beanie Baby", "Mech-a-Man", "Moonshadow", "Mortakon", "Space Ranger Woody", "Party Pinata", "Raggedy Ann", "Black Hole", "Charlotte", "Chip on the Ship"]}]}], "rules": "Your Toys have +4 Attack and are Villains.", "cardSlugs": {"Ace of Hearts": "ace_of_hearts", "Barrel of Monkeys": "barrel_of_monkeys", "Beanie Baby": "beanie_baby", "Black Hole": "black_hole", "Brick Monster": "brick_monster", "Busted Bot": "busted_bot", "Charlotte": "charlotte", "Chip on the Ship": "chip_on_the_ship", "Maverick & Icewing": "maverick_icewing", "Mech-a-Man": "mech_a_man", "Mechanical Dragon": "mechanical_dragon", "Moonshadow": "moonshadow", "Mortakon": "mortakon", "Mr. Fox": "mr_fox", "Party Pinata": "party_pinata", "Pisces": "pisces", "Raggedy Ann": "raggedy_ann", "Rollo": "rollo", "Snapping Hydra": "snapping_hydra", "Space Ranger Woody": "space_ranger_woody", "The Blue Faerie": "the_blue_faerie", "The Burninator": "the_burninator", "Wicked Witch": "wicked_witch", "Wormscale Tinkerer": "wormscale_tinkerer"}, "cardColors": {"Ace of Hearts": "#c8a96e", "Barrel of Monkeys": "#5a5d6a", "Beanie Baby": "#c8a96e", "Brick Monster": "#5a5d6a", "Busted Bot": "#5a5d6a", "Charlotte": "#d87dce", "Chip on the Ship": "#5a5d6a", "Maverick & Icewing": "#c8a96e", "Mech-a-Man": "#c8a96e", "Mechanical Dragon": "#c8a96e", "Moonshadow": "#6ec89e", "Mortakon": "#5a5d6a", "Mr. Fox": "#c8a96e", "Party Pinata": "#5a5d6a", "Pisces": "#c8a96e", "Raggedy Ann": "#5a5d6a", "Rollo": "#c8a96e", "Snapping Hydra": "#6ec89e", "Space Ranger Woody": "#5a5d6a", "The Blue Faerie": "#d87dce", "The Burninator": "#c8a96e", "Wicked Witch": "#9e6ec8", "Wormscale Tinkerer": "#c8a96e"}}</script>
-<script src="../../assets/captains.js?v=10"></script>
-<script src="../../assets/copy-deck.js?v=10" data-page="captain"></script>
+<script type="application/json" id="captain-data">{"slug": "chuk-e", "name": "CHUK-E", "months": [{"id": "2026-04", "players": [{"deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Maverick & Icewing", "Barrel of Monkeys", "Brick Monster", "Wicked Witch", "The Burninator", "Pisces", "Wormscale Tinkerer", "Rollo", "Mr. Fox"]}]}, {"id": "2026-05", "players": [{"deck": ["Busted Bot", "Mortakon", "Mech-a-Man", "Mechanical Dragon", "Barrel of Monkeys", "Chip on the Ship", "Ace of Hearts", "Raggedy Ann", "Party Pinata", "Space Ranger Woody", "Snapping Hydra", "The Blue Faerie"]}]}, {"id": "2026-08", "players": [{"deck": ["Brick Monster", "Busted Bot", "Beanie Baby", "Mech-a-Man", "Moonshadow", "Mortakon", "Space Ranger Woody", "Party Pinata", "Raggedy Ann", "Black Hole", "Charlotte", "Chip on the Ship"]}]}], "rules": "Your Toys have +4 Attack and are Villains.", "cardSlugs": {"Ace of Hearts": "ace_of_hearts", "Barrel of Monkeys": "barrel_of_monkeys", "Beanie Baby": "beanie_baby", "Black Hole": "black_hole", "Brick Monster": "brick_monster", "Busted Bot": "busted_bot", "Charlotte": "charlotte", "Chip on the Ship": "chip_on_the_ship", "Maverick & Icewing": "maverick_icewing", "Mech-a-Man": "mech_a_man", "Mechanical Dragon": "mechanical_dragon", "Moonshadow": "moonshadow", "Mortakon": "mortakon", "Mr. Fox": "mr_fox", "Party Pinata": "party_pinata", "Pisces": "pisces", "Raggedy Ann": "raggedy_ann", "Rollo": "rollo", "Snapping Hydra": "snapping_hydra", "Space Ranger Woody": "space_ranger_woody", "The Blue Faerie": "the_blue_faerie", "The Burninator": "the_burninator", "Wicked Witch": "wicked_witch", "Wormscale Tinkerer": "wormscale_tinkerer"}, "cardColors": {"Ace of Hearts": "#c8a96e", "Barrel of Monkeys": "#5a5d6a", "Beanie Baby": "#c8a96e", "Brick Monster": "#5a5d6a", "Busted Bot": "#5a5d6a", "Charlotte": "#d87dce", "Chip on the Ship": "#5a5d6a", "Maverick & Icewing": "#c8a96e", "Mech-a-Man": "#c8a96e", "Mechanical Dragon": "#c8a96e", "Moonshadow": "#6ec89e", "Mortakon": "#5a5d6a", "Mr. Fox": "#c8a96e", "Party Pinata": "#5a5d6a", "Pisces": "#c8a96e", "Raggedy Ann": "#5a5d6a", "Rollo": "#c8a96e", "Snapping Hydra": "#6ec89e", "Space Ranger Woody": "#5a5d6a", "The Blue Faerie": "#d87dce", "The Burninator": "#c8a96e", "Wicked Witch": "#9e6ec8", "Wormscale Tinkerer": "#c8a96e"}, "cardCids": {"Mech-a-Man": 1107, "Maverick & Icewing": 1166, "Wicked Witch": 1263, "Wormscale Tinkerer": 1422, "Rollo": 2099, "Mr. Fox": 2123, "Ace of Hearts": 1318, "Beanie Baby": 1036, "Mechanical Dragon": 1176, "The Burninator": 1349, "Mortakon": 1096, "Pisces": 1372, "Barrel of Monkeys": 1211, "Snapping Hydra": 1416, "Space Ranger Woody": 1369, "Charlotte": 1321, "Moonshadow": 1333, "The Blue Faerie": 2182, "Black Hole": 1212, "Raggedy Ann": 1337, "Busted Bot": 1075, "Brick Monster": 1259, "Chip on the Ship": 1267, "Party Pinata": 1355, "CHUK-E": 1006}}</script>
+<script src="../../assets/captains.js?v=11"></script>
+<script src="../../assets/copy-deck.js?v=11" data-page="captain"></script>
 </body>
 </html>

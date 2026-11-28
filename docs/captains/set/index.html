@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/set__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=10">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=11">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:12px; }
@@ -92,6 +92,52 @@
                   font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text);
                   background:var(--surface); border:1px solid var(--border); border-radius:2px; }
   .filter-input::placeholder { color:#9a9ca8; }
+  /* Top-12 deck builder */
+  #best12-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 14px; min-height:44px; }
+  #best12-actions, #best12-building { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+  #best12-actions[hidden], #best12-building[hidden] { display:none; }
+  .tb-btn { min-height:44px; padding:10px 16px; font-family:'IBM Plex Mono',monospace; font-size:12px;
+            letter-spacing:2px; text-transform:uppercase; border-radius:2px; cursor:pointer; transition:all 0.15s; }
+  .tb-btn.pri { background:var(--accent); border:1px solid var(--accent); color:#0d0f14; font-weight:500; }
+  .tb-btn.pri:hover { filter:brightness(1.12); }
+  .tb-btn.sec { background:none; border:1px solid var(--border); color:var(--muted); }
+  .tb-btn.sec:hover { color:var(--accent); border-color:rgba(200,169,110,0.4); }
+  .building-label { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:2px;
+                    text-transform:uppercase; color:var(--accent); }
+  .tb-ghost { min-height:44px; padding:8px 4px; background:none; border:none; color:var(--accent);
+              font-family:'IBM Plex Mono',monospace; font-size:12px; text-decoration:underline; cursor:pointer; }
+  #best12-hint { display:none; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--accent);
+                 background:rgba(200,169,110,0.06); border:1px solid rgba(200,169,110,0.25); border-radius:2px;
+                 padding:8px 12px; margin-bottom:10px; }
+  #best12-sec.build #best12-hint { display:block; }
+  #best12-table th.chk-col { width:36px; padding:8px 4px; }
+  #best12-sec:not(.build) .chk-col, #best12-sec:not(.build) .chk-cell { display:none; }
+  #best12-table td.chk-cell { padding-right:2px; }
+  #best12-table td.chk-cell input { width:18px; height:18px; margin:0; accent-color:var(--accent); cursor:pointer; }
+  #best12-sec.build #best12-table tbody tr { cursor:pointer; }
+  #best12-sec.build #best12-table tbody tr.sel { background:rgba(200,169,110,0.07); }
+  #best12-sec.build #best12-table tbody td { padding:11px 10px; }
+  #best12-sec.build #best12-table a.deck-pill { pointer-events:none; }
+  #best12-bar { position:sticky; bottom:0; z-index:5; display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px;
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:10px 14px; margin-top:12px; }
+  #best12-bar[hidden] { display:none; }
+  #best12-bar .prog { flex-basis:100%; height:4px; background:var(--surface); border-radius:2px; overflow:hidden; }
+  #best12-prog { display:block; height:100%; background:var(--accent); transition:width 0.15s; }
+  #best12-prog.over { background:#d9776a; }
+  #best12-status { font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--text); white-space:nowrap; }
+  #best12-extra { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); }
+  #best12-copy-deck[aria-disabled="true"] { opacity:0.4; }
+  #best12-chip { position:fixed; left:50%; bottom:16px; transform:translateX(-50%); z-index:9;
+                 background:var(--accent); color:#0d0f14; border:none; border-radius:18px; padding:12px 18px;
+                 font-family:'IBM Plex Sans',sans-serif; font-size:13px; font-weight:500; cursor:pointer;
+                 box-shadow:0 4px 14px rgba(0,0,0,0.5); white-space:nowrap; }
+  #best12-chip[hidden] { display:none; }
+  .toast { position:fixed; left:50%; bottom:76px; transform:translateX(-50%); z-index:10; max-width:90%;
+           background:var(--surface2); color:var(--text); border:1px solid var(--border); border-radius:2px;
+           padding:9px 16px; font-family:'IBM Plex Mono',monospace; font-size:12px; text-align:center;
+           opacity:0; transition:opacity 0.2s; pointer-events:none; }
+  .toast.show { opacity:1; }
 </style>
 <script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="9d92bc0f-3019-480b-b295-2e79921d2792" data-domains="www.galaxy-stats.com"></script>
 </head>
@@ -116,26 +162,45 @@
     <h2 class="section-title">Best Cards</h2>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
+    <div id="best12-sec">
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-09">2026-09</label></div>
+    <div id="best12-toolbar">
+      <span id="best12-actions">
+        <button type="button" id="best12-copy-top" class="tb-btn pri">Copy top 12</button>
+        <button type="button" id="best12-customize" class="tb-btn sec">Customize</button>
+      </span>
+      <span id="best12-building" hidden><span class="building-label">Building a deck</span>
+        <button type="button" id="best12-cancel" class="tb-ghost">Cancel</button></span>
+    </div>
+    <div id="best12-hint">Top 12 pre-selected. Tap cards to swap.</div>
     <table class="data-table" id="best12-table">
-      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+      <thead><tr><th class="chk-col no-sort" aria-hidden="true"></th><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
         <th class="num no-sort">% of <span id="best12-count">2</span> decks</th></tr></thead>
       <tbody>
-        <tr><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/fortune_teller/" target="_blank" rel="noopener">Fortune Teller</a></td><td class="num">2</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/medea_in_a_tavern/" target="_blank" rel="noopener">Medea in a Tavern</a></td><td class="num">2</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/nuada_radiant_king/" target="_blank" rel="noopener">Nuada, Radiant King</a></td><td class="num">2</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/orion_the_hunter/" target="_blank" rel="noopener">Orion, the Hunter</a></td><td class="num">2</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/orpheus/" target="_blank" rel="noopener">Orpheus</a></td><td class="num">2</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/perseus/" target="_blank" rel="noopener">Perseus</a></td><td class="num">2</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/sigrun_valkyrie_queen/" target="_blank" rel="noopener">Sigrun, Valkyrie Queen</a></td><td class="num">2</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/tantalus/" target="_blank" rel="noopener">Tantalus</a></td><td class="num">2</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/the_raven/" target="_blank" rel="noopener">The Raven</a></td><td class="num">2</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/young_hercules/" target="_blank" rel="noopener">Young Hercules</a></td><td class="num">2</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/bubbles/" target="_blank" rel="noopener">Bubbles</a></td><td class="num">1</td><td class="num">50%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/the_sour_patch_kid/" target="_blank" rel="noopener">The Sour Patch Kid</a></td><td class="num">1</td><td class="num">50%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/fortune_teller/" target="_blank" rel="noopener">Fortune Teller</a></td><td class="num">2</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/medea_in_a_tavern/" target="_blank" rel="noopener">Medea in a Tavern</a></td><td class="num">2</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" href="https://guide.galaxy.fun/cards/nuada_radiant_king/" target="_blank" rel="noopener">Nuada, Radiant King</a></td><td class="num">2</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/orion_the_hunter/" target="_blank" rel="noopener">Orion, the Hunter</a></td><td class="num">2</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/orpheus/" target="_blank" rel="noopener">Orpheus</a></td><td class="num">2</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/perseus/" target="_blank" rel="noopener">Perseus</a></td><td class="num">2</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/sigrun_valkyrie_queen/" target="_blank" rel="noopener">Sigrun, Valkyrie Queen</a></td><td class="num">2</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/tantalus/" target="_blank" rel="noopener">Tantalus</a></td><td class="num">2</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/the_raven/" target="_blank" rel="noopener">The Raven</a></td><td class="num">2</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#7b9cffcc;border-color:#7b9cff30" href="https://guide.galaxy.fun/cards/young_hercules/" target="_blank" rel="noopener">Young Hercules</a></td><td class="num">2</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/bubbles/" target="_blank" rel="noopener">Bubbles</a></td><td class="num">1</td><td class="num">50%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/the_sour_patch_kid/" target="_blank" rel="noopener">The Sour Patch Kid</a></td><td class="num">1</td><td class="num">50%</td></tr>
       </tbody>
     </table>
     <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
+    <div id="best12-bar" hidden>
+      <div class="prog"><i id="best12-prog"></i></div>
+      <span id="best12-status" aria-live="polite"></span>
+      <span id="best12-extra"></span>
+      <button type="button" id="best12-reset" class="tb-ghost">Reset to top 12</button>
+      <button type="button" id="best12-copy-deck" class="tb-btn pri">Copy deck</button>
+    </div>
+    </div>
+    <button type="button" id="best12-chip" hidden>Deck 12/12 · back to table</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Winning decks grouped by identical list, most popular first.</div>
@@ -157,8 +222,8 @@
     </div>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "set", "name": "Set", "months": [{"id": "2026-09", "players": [{"deck": ["Bubbles", "The Raven", "Fortune Teller", "Nuada, Radiant King", "The Sour Patch Kid", "Young Hercules", "Orion, the Hunter", "Orpheus", "Tantalus", "Medea in a Tavern", "Perseus", "Sigrun, Valkyrie Queen"]}, {"deck": ["The Raven", "Fortune Teller", "Nuada, Radiant King", "Whirlidoo", "Young Hercules", "Orion, the Hunter", "Orpheus", "Tantalus", "Wishing Fish", "Medea in a Tavern", "Perseus", "Sigrun, Valkyrie Queen"]}]}], "rules": "At the start of the game, choose a Secret Rare character. Get that character when you complete 2 boons", "cardSlugs": {"Bubbles": "bubbles", "Fortune Teller": "fortune_teller", "Medea in a Tavern": "medea_in_a_tavern", "Nuada, Radiant King": "nuada_radiant_king", "Orion, the Hunter": "orion_the_hunter", "Orpheus": "orpheus", "Perseus": "perseus", "Sigrun, Valkyrie Queen": "sigrun_valkyrie_queen", "Tantalus": "tantalus", "The Raven": "the_raven", "The Sour Patch Kid": "the_sour_patch_kid", "Whirlidoo": "whirlidoo", "Wishing Fish": "wishing_fish", "Young Hercules": "young_hercules"}, "cardColors": {"Bubbles": "#6ec89e", "Fortune Teller": "#7b9cff", "Medea in a Tavern": "#9e6ec8", "Orion, the Hunter": "#7b9cff", "Orpheus": "#7b9cff", "Perseus": "#7b9cff", "Sigrun, Valkyrie Queen": "#7b9cff", "Tantalus": "#7b9cff", "The Raven": "#7b9cff", "The Sour Patch Kid": "#e87d9e", "Whirlidoo": "#5a5d6a", "Wishing Fish": "#c8a96e", "Young Hercules": "#7b9cff"}}</script>
-<script src="../../assets/captains.js?v=10"></script>
-<script src="../../assets/copy-deck.js?v=10" data-page="captain"></script>
+<script type="application/json" id="captain-data">{"slug": "set", "name": "Set", "months": [{"id": "2026-09", "players": [{"deck": ["Bubbles", "The Raven", "Fortune Teller", "Nuada, Radiant King", "The Sour Patch Kid", "Young Hercules", "Orion, the Hunter", "Orpheus", "Tantalus", "Medea in a Tavern", "Perseus", "Sigrun, Valkyrie Queen"]}, {"deck": ["The Raven", "Fortune Teller", "Nuada, Radiant King", "Whirlidoo", "Young Hercules", "Orion, the Hunter", "Orpheus", "Tantalus", "Wishing Fish", "Medea in a Tavern", "Perseus", "Sigrun, Valkyrie Queen"]}]}], "rules": "At the start of the game, choose a Secret Rare character. Get that character when you complete 2 boons", "cardSlugs": {"Bubbles": "bubbles", "Fortune Teller": "fortune_teller", "Medea in a Tavern": "medea_in_a_tavern", "Nuada, Radiant King": "nuada_radiant_king", "Orion, the Hunter": "orion_the_hunter", "Orpheus": "orpheus", "Perseus": "perseus", "Sigrun, Valkyrie Queen": "sigrun_valkyrie_queen", "Tantalus": "tantalus", "The Raven": "the_raven", "The Sour Patch Kid": "the_sour_patch_kid", "Whirlidoo": "whirlidoo", "Wishing Fish": "wishing_fish", "Young Hercules": "young_hercules"}, "cardColors": {"Bubbles": "#6ec89e", "Fortune Teller": "#7b9cff", "Medea in a Tavern": "#9e6ec8", "Orion, the Hunter": "#7b9cff", "Orpheus": "#7b9cff", "Perseus": "#7b9cff", "Sigrun, Valkyrie Queen": "#7b9cff", "Tantalus": "#7b9cff", "The Raven": "#7b9cff", "The Sour Patch Kid": "#e87d9e", "Whirlidoo": "#5a5d6a", "Wishing Fish": "#c8a96e", "Young Hercules": "#7b9cff"}, "cardCids": {"The Sour Patch Kid": 2049, "Sigrun, Valkyrie Queen": 3091, "Young Hercules": 3107, "Fortune Teller": 3111, "Perseus": 3128, "Nuada, Radiant King": 3019, "The Raven": 3099, "Orion, the Hunter": 3085, "Medea in a Tavern": 3127, "Wishing Fish": 3103, "Bubbles": 3008, "Whirlidoo": 3102, "Tantalus": 3096, "Orpheus": 3086, "Set": 3028}}</script>
+<script src="../../assets/captains.js?v=11"></script>
+<script src="../../assets/copy-deck.js?v=11" data-page="captain"></script>
 </body>
 </html>

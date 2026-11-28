@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/omniverse_omnivore__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=10">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=11">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:12px; }
@@ -92,6 +92,52 @@
                   font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text);
                   background:var(--surface); border:1px solid var(--border); border-radius:2px; }
   .filter-input::placeholder { color:#9a9ca8; }
+  /* Top-12 deck builder */
+  #best12-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 14px; min-height:44px; }
+  #best12-actions, #best12-building { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+  #best12-actions[hidden], #best12-building[hidden] { display:none; }
+  .tb-btn { min-height:44px; padding:10px 16px; font-family:'IBM Plex Mono',monospace; font-size:12px;
+            letter-spacing:2px; text-transform:uppercase; border-radius:2px; cursor:pointer; transition:all 0.15s; }
+  .tb-btn.pri { background:var(--accent); border:1px solid var(--accent); color:#0d0f14; font-weight:500; }
+  .tb-btn.pri:hover { filter:brightness(1.12); }
+  .tb-btn.sec { background:none; border:1px solid var(--border); color:var(--muted); }
+  .tb-btn.sec:hover { color:var(--accent); border-color:rgba(200,169,110,0.4); }
+  .building-label { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:2px;
+                    text-transform:uppercase; color:var(--accent); }
+  .tb-ghost { min-height:44px; padding:8px 4px; background:none; border:none; color:var(--accent);
+              font-family:'IBM Plex Mono',monospace; font-size:12px; text-decoration:underline; cursor:pointer; }
+  #best12-hint { display:none; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--accent);
+                 background:rgba(200,169,110,0.06); border:1px solid rgba(200,169,110,0.25); border-radius:2px;
+                 padding:8px 12px; margin-bottom:10px; }
+  #best12-sec.build #best12-hint { display:block; }
+  #best12-table th.chk-col { width:36px; padding:8px 4px; }
+  #best12-sec:not(.build) .chk-col, #best12-sec:not(.build) .chk-cell { display:none; }
+  #best12-table td.chk-cell { padding-right:2px; }
+  #best12-table td.chk-cell input { width:18px; height:18px; margin:0; accent-color:var(--accent); cursor:pointer; }
+  #best12-sec.build #best12-table tbody tr { cursor:pointer; }
+  #best12-sec.build #best12-table tbody tr.sel { background:rgba(200,169,110,0.07); }
+  #best12-sec.build #best12-table tbody td { padding:11px 10px; }
+  #best12-sec.build #best12-table a.deck-pill { pointer-events:none; }
+  #best12-bar { position:sticky; bottom:0; z-index:5; display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px;
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:10px 14px; margin-top:12px; }
+  #best12-bar[hidden] { display:none; }
+  #best12-bar .prog { flex-basis:100%; height:4px; background:var(--surface); border-radius:2px; overflow:hidden; }
+  #best12-prog { display:block; height:100%; background:var(--accent); transition:width 0.15s; }
+  #best12-prog.over { background:#d9776a; }
+  #best12-status { font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--text); white-space:nowrap; }
+  #best12-extra { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); }
+  #best12-copy-deck[aria-disabled="true"] { opacity:0.4; }
+  #best12-chip { position:fixed; left:50%; bottom:16px; transform:translateX(-50%); z-index:9;
+                 background:var(--accent); color:#0d0f14; border:none; border-radius:18px; padding:12px 18px;
+                 font-family:'IBM Plex Sans',sans-serif; font-size:13px; font-weight:500; cursor:pointer;
+                 box-shadow:0 4px 14px rgba(0,0,0,0.5); white-space:nowrap; }
+  #best12-chip[hidden] { display:none; }
+  .toast { position:fixed; left:50%; bottom:76px; transform:translateX(-50%); z-index:10; max-width:90%;
+           background:var(--surface2); color:var(--text); border:1px solid var(--border); border-radius:2px;
+           padding:9px 16px; font-family:'IBM Plex Mono',monospace; font-size:12px; text-align:center;
+           opacity:0; transition:opacity 0.2s; pointer-events:none; }
+  .toast.show { opacity:1; }
 </style>
 <script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="9d92bc0f-3019-480b-b295-2e79921d2792" data-domains="www.galaxy-stats.com"></script>
 </head>
@@ -116,26 +162,45 @@
     <h2 class="section-title">Best Cards</h2>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
+    <div id="best12-sec">
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-04">2026-04</label><label class="month-chip"><input type="checkbox" checked data-month="2026-10">2026-10</label></div>
+    <div id="best12-toolbar">
+      <span id="best12-actions">
+        <button type="button" id="best12-copy-top" class="tb-btn pri">Copy top 12</button>
+        <button type="button" id="best12-customize" class="tb-btn sec">Customize</button>
+      </span>
+      <span id="best12-building" hidden><span class="building-label">Building a deck</span>
+        <button type="button" id="best12-cancel" class="tb-ghost">Cancel</button></span>
+    </div>
+    <div id="best12-hint">Top 12 pre-selected. Tap cards to swap.</div>
     <table class="data-table" id="best12-table">
-      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+      <thead><tr><th class="chk-col no-sort" aria-hidden="true"></th><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
         <th class="num no-sort">% of <span id="best12-count">3</span> decks</th></tr></thead>
       <tbody>
-        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/gingerbread_witch/" target="_blank" rel="noopener">Gingerbread Witch</a></td><td class="num">3</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/jelly_ton/" target="_blank" rel="noopener">Jelly-ton</a></td><td class="num">3</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/lollipop_faerie/" target="_blank" rel="noopener">Lollipop Faerie</a></td><td class="num">3</td><td class="num">100%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/cherry_topples/" target="_blank" rel="noopener">Cherry Topples</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/doopity_doo/" target="_blank" rel="noopener">Doopity Doo</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/ghoulade_man/" target="_blank" rel="noopener">Ghoulade Man</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/jaws/" target="_blank" rel="noopener">Jaws</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/kool_wip/" target="_blank" rel="noopener">Kool Wip</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/licorice/" target="_blank" rel="noopener">Licorice</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/pixie/" target="_blank" rel="noopener">Pixie</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/pretty_patissier/" target="_blank" rel="noopener">Pretty Patissier</a></td><td class="num">2</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/viscount_chocolat/" target="_blank" rel="noopener">Viscount Chocolat</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/gingerbread_witch/" target="_blank" rel="noopener">Gingerbread Witch</a></td><td class="num">3</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/jelly_ton/" target="_blank" rel="noopener">Jelly-ton</a></td><td class="num">3</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/lollipop_faerie/" target="_blank" rel="noopener">Lollipop Faerie</a></td><td class="num">3</td><td class="num">100%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/cherry_topples/" target="_blank" rel="noopener">Cherry Topples</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/doopity_doo/" target="_blank" rel="noopener">Doopity Doo</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/ghoulade_man/" target="_blank" rel="noopener">Ghoulade Man</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/jaws/" target="_blank" rel="noopener">Jaws</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/kool_wip/" target="_blank" rel="noopener">Kool Wip</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/licorice/" target="_blank" rel="noopener">Licorice</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/pixie/" target="_blank" rel="noopener">Pixie</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/pretty_patissier/" target="_blank" rel="noopener">Pretty Patissier</a></td><td class="num">2</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30" href="https://guide.galaxy.fun/cards/viscount_chocolat/" target="_blank" rel="noopener">Viscount Chocolat</a></td><td class="num">2</td><td class="num">67%</td></tr>
       </tbody>
     </table>
     <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
+    <div id="best12-bar" hidden>
+      <div class="prog"><i id="best12-prog"></i></div>
+      <span id="best12-status" aria-live="polite"></span>
+      <span id="best12-extra"></span>
+      <button type="button" id="best12-reset" class="tb-ghost">Reset to top 12</button>
+      <button type="button" id="best12-copy-deck" class="tb-btn pri">Copy deck</button>
+    </div>
+    </div>
+    <button type="button" id="best12-chip" hidden>Deck 12/12 · back to table</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Winning decks grouped by identical list, most popular first.</div>
@@ -147,22 +212,22 @@
     </div>
     <div id="deck-list">
       <details class="deck" data-archetype="Candy" data-month="2026-10">
-      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="ct">×1</span><span class="tag" style="background:#e87d9e20;color:#e87d9e;border-color:#e87d9e40">Candy</span><button type="button" class="copy-deck" data-captain="Omniverse Omnivore" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <summary><span class="mo"><a href="../../reports/2026-10/">2026-10</a></span><span class="ct">×1</span><span class="tag" style="background:#e87d9e20;color:#e87d9e;border-color:#e87d9e40">Candy</span><button type="button" class="copy-deck" data-captain="Omniverse Omnivore" data-cids="2219-2071-2056-2186-2151-2042-2031-2035-2078-2021-2004-2082-2112" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
       <div class="dk"><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Gingerbread Witch</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Lollipop Faerie</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Pretty Patissier</span><span class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30">The Huntsman</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Cherry Topples</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Jaws</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Kool Wip</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Chubby Bunny</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Ghoulade Man</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Viscount Chocolat</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Jelly-ton</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Licorice</span></div>
     </details>
     <details class="deck" data-archetype="Candy" data-month="2026-04">
-      <summary><span class="mo"><a href="../../reports/2026-04/">2026-04</a></span><span class="ct">×1</span><span class="tag" style="background:#e87d9e20;color:#e87d9e;border-color:#e87d9e40">Candy</span><button type="button" class="copy-deck" data-captain="Omniverse Omnivore" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <summary><span class="mo"><a href="../../reports/2026-04/">2026-04</a></span><span class="ct">×1</span><span class="tag" style="background:#e87d9e20;color:#e87d9e;border-color:#e87d9e40">Candy</span><button type="button" class="copy-deck" data-captain="Omniverse Omnivore" data-cids="2219-2004-2024-2031-2035-2042-2048-2056-2071-2082-2112-2127-2186" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
       <div class="dk"><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Viscount Chocolat</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Pixie</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Jaws</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Kool Wip</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Cherry Topples</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Catatouille</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Lollipop Faerie</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Gingerbread Witch</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Jelly-ton</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Licorice</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Doopity Doo</span><span class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30">Pretty Patissier</span></div>
     </details>
     <details class="deck" data-archetype="Candy" data-month="2026-03">
-      <summary><span class="mo"><a href="../../reports/2026-03/">2026-03</a></span><span class="ct">×1</span><span class="tag" style="background:#e87d9e20;color:#e87d9e;border-color:#e87d9e40">Candy</span><button type="button" class="copy-deck" data-captain="Omniverse Omnivore" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
+      <summary><span class="mo"><a href="../../reports/2026-03/">2026-03</a></span><span class="ct">×1</span><span class="tag" style="background:#e87d9e20;color:#e87d9e;border-color:#e87d9e40">Candy</span><button type="button" class="copy-deck" data-captain="Omniverse Omnivore" data-cids="2219-1110-1375-2011-2021-2024-2027-2043-2055-2056-2071-2082-2127" aria-label="Copy decklist"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9a9ca8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="8.5" height="8.5" rx="1.3"/><path d="M3.5 10.5h-.8A1.3 1.3 0 0 1 1.4 9.2v-6.5A1.3 1.3 0 0 1 2.7 1.4h6.5a1.3 1.3 0 0 1 1.3 1.3v.8"/></svg></button><svg class="chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#9a9ca8" stroke-width="1.5" aria-hidden="true"><path d="M3 1.5 7 5 3 8.5"/></svg></summary>
       <div class="dk"><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Morgan Le Fae</span><span class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830">Chaos</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Gummy Wyrm</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Ghoulade Man</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Pixie</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Life Saver</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Candy Apple Tree</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Chubby Cheep</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Lollipop Faerie</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Gingerbread Witch</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Jelly-ton</span><span class="deck-pill" style="color:#e87d9ecc;border-color:#e87d9e30">Doopity Doo</span></div>
     </details>
     </div>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "omniverse-omnivore", "name": "Omniverse Omnivore", "months": [{"id": "2026-03", "players": [{"deck": ["Morgan Le Fae", "Chaos", "Gummy Wyrm", "Ghoulade Man", "Pixie", "Life Saver", "Candy Apple Tree", "Chubby Cheep", "Lollipop Faerie", "Gingerbread Witch", "Jelly-ton", "Doopity Doo"]}]}, {"id": "2026-04", "players": [{"deck": ["Viscount Chocolat", "Pixie", "Jaws", "Kool Wip", "Cherry Topples", "Catatouille", "Lollipop Faerie", "Gingerbread Witch", "Jelly-ton", "Licorice", "Doopity Doo", "Pretty Patissier"]}]}, {"id": "2026-10", "players": [{"deck": ["Gingerbread Witch", "Lollipop Faerie", "Pretty Patissier", "The Huntsman", "Cherry Topples", "Jaws", "Kool Wip", "Chubby Bunny", "Ghoulade Man", "Viscount Chocolat", "Jelly-ton", "Licorice"]}]}], "rules": "After you attack with 3 villains, sweeten your candy.", "cardSlugs": {"Candy Apple Tree": "candy_apple_tree", "Catatouille": "catatouille", "Chaos": "chaos", "Cherry Topples": "cherry_topples", "Chubby Bunny": "chubby_bunny", "Chubby Cheep": "chubby_cheep", "Doopity Doo": "doopity_doo", "Ghoulade Man": "ghoulade_man", "Gingerbread Witch": "gingerbread_witch", "Gummy Wyrm": "gummy_wyrm", "Jaws": "jaws", "Jelly-ton": "jelly_ton", "Kool Wip": "kool_wip", "Licorice": "licorice", "Life Saver": "life_saver", "Lollipop Faerie": "lollipop_faerie", "Morgan Le Fae": "morgan_le_fae", "Pixie": "pixie", "Pretty Patissier": "pretty_patissier", "The Huntsman": "the_huntsman", "Viscount Chocolat": "viscount_chocolat"}, "cardColors": {"Candy Apple Tree": "#e87d9e", "Catatouille": "#e87d9e", "Chaos": "#9e6ec8", "Cherry Topples": "#e87d9e", "Chubby Bunny": "#e87d9e", "Chubby Cheep": "#e87d9e", "Doopity Doo": "#e87d9e", "Ghoulade Man": "#e87d9e", "Gingerbread Witch": "#e87d9e", "Gummy Wyrm": "#e87d9e", "Jaws": "#e87d9e", "Jelly-ton": "#e87d9e", "Kool Wip": "#e87d9e", "Licorice": "#e87d9e", "Life Saver": "#e87d9e", "Lollipop Faerie": "#e87d9e", "Morgan Le Fae": "#9e6ec8", "Pixie": "#e87d9e", "Pretty Patissier": "#6ec89e", "The Huntsman": "#c8a96e", "Viscount Chocolat": "#e87d9e"}}</script>
-<script src="../../assets/captains.js?v=10"></script>
-<script src="../../assets/copy-deck.js?v=10" data-page="captain"></script>
+<script type="application/json" id="captain-data">{"slug": "omniverse-omnivore", "name": "Omniverse Omnivore", "months": [{"id": "2026-03", "players": [{"deck": ["Morgan Le Fae", "Chaos", "Gummy Wyrm", "Ghoulade Man", "Pixie", "Life Saver", "Candy Apple Tree", "Chubby Cheep", "Lollipop Faerie", "Gingerbread Witch", "Jelly-ton", "Doopity Doo"]}]}, {"id": "2026-04", "players": [{"deck": ["Viscount Chocolat", "Pixie", "Jaws", "Kool Wip", "Cherry Topples", "Catatouille", "Lollipop Faerie", "Gingerbread Witch", "Jelly-ton", "Licorice", "Doopity Doo", "Pretty Patissier"]}]}, {"id": "2026-10", "players": [{"deck": ["Gingerbread Witch", "Lollipop Faerie", "Pretty Patissier", "The Huntsman", "Cherry Topples", "Jaws", "Kool Wip", "Chubby Bunny", "Ghoulade Man", "Viscount Chocolat", "Jelly-ton", "Licorice"]}]}], "rules": "After you attack with 3 villains, sweeten your candy.", "cardSlugs": {"Candy Apple Tree": "candy_apple_tree", "Catatouille": "catatouille", "Chaos": "chaos", "Cherry Topples": "cherry_topples", "Chubby Bunny": "chubby_bunny", "Chubby Cheep": "chubby_cheep", "Doopity Doo": "doopity_doo", "Ghoulade Man": "ghoulade_man", "Gingerbread Witch": "gingerbread_witch", "Gummy Wyrm": "gummy_wyrm", "Jaws": "jaws", "Jelly-ton": "jelly_ton", "Kool Wip": "kool_wip", "Licorice": "licorice", "Life Saver": "life_saver", "Lollipop Faerie": "lollipop_faerie", "Morgan Le Fae": "morgan_le_fae", "Pixie": "pixie", "Pretty Patissier": "pretty_patissier", "The Huntsman": "the_huntsman", "Viscount Chocolat": "viscount_chocolat"}, "cardColors": {"Candy Apple Tree": "#e87d9e", "Catatouille": "#e87d9e", "Chaos": "#9e6ec8", "Cherry Topples": "#e87d9e", "Chubby Bunny": "#e87d9e", "Chubby Cheep": "#e87d9e", "Doopity Doo": "#e87d9e", "Ghoulade Man": "#e87d9e", "Gingerbread Witch": "#e87d9e", "Gummy Wyrm": "#e87d9e", "Jaws": "#e87d9e", "Jelly-ton": "#e87d9e", "Kool Wip": "#e87d9e", "Licorice": "#e87d9e", "Life Saver": "#e87d9e", "Lollipop Faerie": "#e87d9e", "Morgan Le Fae": "#9e6ec8", "Pixie": "#e87d9e", "Pretty Patissier": "#6ec89e", "The Huntsman": "#c8a96e", "Viscount Chocolat": "#e87d9e"}, "cardCids": {"Viscount Chocolat": 2004, "Pixie": 2024, "Life Saver": 2027, "Kool Wip": 2035, "Cherry Topples": 2042, "Gingerbread Witch": 2071, "Doopity Doo": 2127, "The Huntsman": 2151, "Pretty Patissier": 2186, "Chubby Cheep": 2055, "Lollipop Faerie": 2056, "Chaos": 1375, "Morgan Le Fae": 1110, "Gummy Wyrm": 2011, "Jelly-ton": 2082, "Jaws": 2031, "Candy Apple Tree": 2043, "Licorice": 2112, "Catatouille": 2048, "Chubby Bunny": 2078, "Ghoulade Man": 2021, "Omniverse Omnivore": 2219}}</script>
+<script src="../../assets/captains.js?v=11"></script>
+<script src="../../assets/copy-deck.js?v=11" data-page="captain"></script>
 </body>
 </html>

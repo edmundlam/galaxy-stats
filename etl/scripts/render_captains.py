@@ -17,7 +17,7 @@ from html import escape
 from pathlib import Path
 
 BASE_URL = "https://www.galaxy-stats.com"
-ASSET_VERSION = "10"
+ASSET_VERSION = "11"
 FONTS_HREF = (
     "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900"
     "&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
@@ -98,6 +98,52 @@ EXTRA_CSS = """
                   font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text);
                   background:var(--surface); border:1px solid var(--border); border-radius:2px; }
   .filter-input::placeholder { color:#9a9ca8; }
+  /* Top-12 deck builder */
+  #best12-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 14px; min-height:44px; }
+  #best12-actions, #best12-building { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+  #best12-actions[hidden], #best12-building[hidden] { display:none; }
+  .tb-btn { min-height:44px; padding:10px 16px; font-family:'IBM Plex Mono',monospace; font-size:12px;
+            letter-spacing:2px; text-transform:uppercase; border-radius:2px; cursor:pointer; transition:all 0.15s; }
+  .tb-btn.pri { background:var(--accent); border:1px solid var(--accent); color:#0d0f14; font-weight:500; }
+  .tb-btn.pri:hover { filter:brightness(1.12); }
+  .tb-btn.sec { background:none; border:1px solid var(--border); color:var(--muted); }
+  .tb-btn.sec:hover { color:var(--accent); border-color:rgba(200,169,110,0.4); }
+  .building-label { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:2px;
+                    text-transform:uppercase; color:var(--accent); }
+  .tb-ghost { min-height:44px; padding:8px 4px; background:none; border:none; color:var(--accent);
+              font-family:'IBM Plex Mono',monospace; font-size:12px; text-decoration:underline; cursor:pointer; }
+  #best12-hint { display:none; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--accent);
+                 background:rgba(200,169,110,0.06); border:1px solid rgba(200,169,110,0.25); border-radius:2px;
+                 padding:8px 12px; margin-bottom:10px; }
+  #best12-sec.build #best12-hint { display:block; }
+  #best12-table th.chk-col { width:36px; padding:8px 4px; }
+  #best12-sec:not(.build) .chk-col, #best12-sec:not(.build) .chk-cell { display:none; }
+  #best12-table td.chk-cell { padding-right:2px; }
+  #best12-table td.chk-cell input { width:18px; height:18px; margin:0; accent-color:var(--accent); cursor:pointer; }
+  #best12-sec.build #best12-table tbody tr { cursor:pointer; }
+  #best12-sec.build #best12-table tbody tr.sel { background:rgba(200,169,110,0.07); }
+  #best12-sec.build #best12-table tbody td { padding:11px 10px; }
+  #best12-sec.build #best12-table a.deck-pill { pointer-events:none; }
+  #best12-bar { position:sticky; bottom:0; z-index:5; display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px;
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:10px 14px; margin-top:12px; }
+  #best12-bar[hidden] { display:none; }
+  #best12-bar .prog { flex-basis:100%; height:4px; background:var(--surface); border-radius:2px; overflow:hidden; }
+  #best12-prog { display:block; height:100%; background:var(--accent); transition:width 0.15s; }
+  #best12-prog.over { background:#d9776a; }
+  #best12-status { font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--text); white-space:nowrap; }
+  #best12-extra { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); }
+  #best12-copy-deck[aria-disabled="true"] { opacity:0.4; }
+  #best12-chip { position:fixed; left:50%; bottom:16px; transform:translateX(-50%); z-index:9;
+                 background:var(--accent); color:#0d0f14; border:none; border-radius:18px; padding:12px 18px;
+                 font-family:'IBM Plex Sans',sans-serif; font-size:13px; font-weight:500; cursor:pointer;
+                 box-shadow:0 4px 14px rgba(0,0,0,0.5); white-space:nowrap; }
+  #best12-chip[hidden] { display:none; }
+  .toast { position:fixed; left:50%; bottom:76px; transform:translateX(-50%); z-index:10; max-width:90%;
+           background:var(--surface2); color:var(--text); border:1px solid var(--border); border-radius:2px;
+           padding:9px 16px; font-family:'IBM Plex Mono',monospace; font-size:12px; text-align:center;
+           opacity:0; transition:opacity 0.2s; pointer-events:none; }
+  .toast.show { opacity:1; }
 """
 
 
@@ -519,12 +565,17 @@ def render_captain_page(
     # full maps. Months trim to id + decks (all the JS reads) so usernames
     # never ship in the page source.
     deck_cards = sorted({card for d in all_decks for card in d})
+    deck_set = set(deck_cards)
+    cids = card_cids or {}
     payload = serialize_payload(
         {
             **captain,
             "months": [{"id": m["id"], "players": [{"deck": p["deck"]} for p in m["players"]]} for m in months],
             "cardSlugs": {c: slugs[c] for c in deck_cards if c in slugs},
             "cardColors": {c: colors[c] for c in deck_cards if c in colors},
+            # Captain name stays in so JS can lead the ID line with its cid. Iterating
+            # cids (cards.json order) keeps the JSON key order deterministic across runs.
+            "cardCids": {c: cid for c, cid in cids.items() if c in deck_set or c == name},
         }
     )
     canonical = f"{base_url}/captains/{slug}/"
@@ -576,7 +627,7 @@ def render_captain_page(
         script = ""
     else:
         best12_rows = "\n        ".join(
-            f"<tr><td>{_card_pill(r['card'], card_slugs, (card_colors or {}).get(r['card']))}</td>"
+            f'<tr><td class="chk-cell"></td><td>{_card_pill(r["card"], card_slugs, (card_colors or {}).get(r["card"]))}</td>'
             f'<td class="num">{r["freq"]}</td>'
             f'<td class="num">{r["pct"]}%</td></tr>'
             for r in compute_best12(all_decks)
@@ -594,15 +645,34 @@ def render_captain_page(
     <h2 class="section-title">Best Cards</h2>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
+    <div id="best12-sec">
     <div class="captain-filter" id="month-filter">{_month_chips([m["id"] for m in captain["months"]])}</div>
+    <div id="best12-toolbar">
+      <span id="best12-actions">
+        <button type="button" id="best12-copy-top" class="tb-btn pri">Copy top 12</button>
+        <button type="button" id="best12-customize" class="tb-btn sec">Customize</button>
+      </span>
+      <span id="best12-building" hidden><span class="building-label">Building a deck</span>
+        <button type="button" id="best12-cancel" class="tb-ghost">Cancel</button></span>
+    </div>
+    <div id="best12-hint">Top 12 pre-selected. Tap cards to swap.</div>
     <table class="data-table" id="best12-table">
-      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+      <thead><tr><th class="chk-col no-sort" aria-hidden="true"></th><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
         <th class="num no-sort">% of <span id="best12-count">{total_decks}</span> decks</th></tr></thead>
       <tbody>
         {best12_rows}
       </tbody>
     </table>
     <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
+    <div id="best12-bar" hidden>
+      <div class="prog"><i id="best12-prog"></i></div>
+      <span id="best12-status" aria-live="polite"></span>
+      <span id="best12-extra"></span>
+      <button type="button" id="best12-reset" class="tb-ghost">Reset to top 12</button>
+      <button type="button" id="best12-copy-deck" class="tb-btn pri">Copy deck</button>
+    </div>
+    </div>
+    <button type="button" id="best12-chip" hidden>Deck 12/12 · back to table</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Winning decks grouped by identical list, most popular first.</div>
@@ -726,9 +796,9 @@ def main() -> int:
         # duplicate display names (e.g. Beanie Baby character vs treasure token),
         # so unrestricted inversion would link decks to the wrong guide page.
         card_slugs = {entry["name"]: slug for slug, entry in cards_map.items() if slug in used_slugs}
-        # Copy buttons also need the captains' own cids; page slugs are dash-form,
-        # captains.json keys are the underscore slugs cards.json uses.
-        card_cids = build_card_cids(cards_map, used_slugs | set(captains))
+        # Copy buttons also need the captains' own cids; aggregate keys are dash-form,
+        # captains.json/cards.json use the underscore slugs.
+        card_cids = build_card_cids(cards_map, used_slugs | {s.replace("-", "_") for s in captains})
     # Type colors come from the archetype config (same source finalize_analysis
     # tints report clusters with); card slugs resolve to display names via cards.json.
     archetypes_file = script_dir.parent / "config" / "archetypes.json"

@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://www.galaxy-stats.com/assets/captains-img/maximus__300.webp">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/galaxy-report.css?v=10">
+<link rel="stylesheet" href="../../assets/galaxy-report.css?v=11">
 <style>
   main { max-width: 1100px; }
   .data-table { width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:12px; }
@@ -92,6 +92,52 @@
                   font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text);
                   background:var(--surface); border:1px solid var(--border); border-radius:2px; }
   .filter-input::placeholder { color:#9a9ca8; }
+  /* Top-12 deck builder */
+  #best12-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 14px; min-height:44px; }
+  #best12-actions, #best12-building { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+  #best12-actions[hidden], #best12-building[hidden] { display:none; }
+  .tb-btn { min-height:44px; padding:10px 16px; font-family:'IBM Plex Mono',monospace; font-size:12px;
+            letter-spacing:2px; text-transform:uppercase; border-radius:2px; cursor:pointer; transition:all 0.15s; }
+  .tb-btn.pri { background:var(--accent); border:1px solid var(--accent); color:#0d0f14; font-weight:500; }
+  .tb-btn.pri:hover { filter:brightness(1.12); }
+  .tb-btn.sec { background:none; border:1px solid var(--border); color:var(--muted); }
+  .tb-btn.sec:hover { color:var(--accent); border-color:rgba(200,169,110,0.4); }
+  .building-label { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:2px;
+                    text-transform:uppercase; color:var(--accent); }
+  .tb-ghost { min-height:44px; padding:8px 4px; background:none; border:none; color:var(--accent);
+              font-family:'IBM Plex Mono',monospace; font-size:12px; text-decoration:underline; cursor:pointer; }
+  #best12-hint { display:none; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--accent);
+                 background:rgba(200,169,110,0.06); border:1px solid rgba(200,169,110,0.25); border-radius:2px;
+                 padding:8px 12px; margin-bottom:10px; }
+  #best12-sec.build #best12-hint { display:block; }
+  #best12-table th.chk-col { width:36px; padding:8px 4px; }
+  #best12-sec:not(.build) .chk-col, #best12-sec:not(.build) .chk-cell { display:none; }
+  #best12-table td.chk-cell { padding-right:2px; }
+  #best12-table td.chk-cell input { width:18px; height:18px; margin:0; accent-color:var(--accent); cursor:pointer; }
+  #best12-sec.build #best12-table tbody tr { cursor:pointer; }
+  #best12-sec.build #best12-table tbody tr.sel { background:rgba(200,169,110,0.07); }
+  #best12-sec.build #best12-table tbody td { padding:11px 10px; }
+  #best12-sec.build #best12-table a.deck-pill { pointer-events:none; }
+  #best12-bar { position:sticky; bottom:0; z-index:5; display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px;
+                background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+                padding:10px 14px; margin-top:12px; }
+  #best12-bar[hidden] { display:none; }
+  #best12-bar .prog { flex-basis:100%; height:4px; background:var(--surface); border-radius:2px; overflow:hidden; }
+  #best12-prog { display:block; height:100%; background:var(--accent); transition:width 0.15s; }
+  #best12-prog.over { background:#d9776a; }
+  #best12-status { font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--text); white-space:nowrap; }
+  #best12-extra { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); }
+  #best12-copy-deck[aria-disabled="true"] { opacity:0.4; }
+  #best12-chip { position:fixed; left:50%; bottom:16px; transform:translateX(-50%); z-index:9;
+                 background:var(--accent); color:#0d0f14; border:none; border-radius:18px; padding:12px 18px;
+                 font-family:'IBM Plex Sans',sans-serif; font-size:13px; font-weight:500; cursor:pointer;
+                 box-shadow:0 4px 14px rgba(0,0,0,0.5); white-space:nowrap; }
+  #best12-chip[hidden] { display:none; }
+  .toast { position:fixed; left:50%; bottom:76px; transform:translateX(-50%); z-index:10; max-width:90%;
+           background:var(--surface2); color:var(--text); border:1px solid var(--border); border-radius:2px;
+           padding:9px 16px; font-family:'IBM Plex Mono',monospace; font-size:12px; text-align:center;
+           opacity:0; transition:opacity 0.2s; pointer-events:none; }
+  .toast.show { opacity:1; }
 </style>
 <script defer src="https://umami-taupe-gamma.vercel.app/script.js" data-website-id="9d92bc0f-3019-480b-b295-2e79921d2792" data-domains="www.galaxy-stats.com"></script>
 </head>
@@ -116,26 +162,45 @@
     <h2 class="section-title">Best Cards</h2>
     <div class="section-desc">Most-picked cards across the checked months, recomputed from the raw decks
       below. Check or uncheck months to see how the picks shift.</div>
+    <div id="best12-sec">
     <div class="captain-filter" id="month-filter"><label class="month-chip"><input type="checkbox" checked data-month="2026-03">2026-03</label><label class="month-chip"><input type="checkbox" checked data-month="2026-04">2026-04</label><label class="month-chip"><input type="checkbox" checked data-month="2026-05">2026-05</label><label class="month-chip"><input type="checkbox" checked data-month="2026-07">2026-07</label><label class="month-chip"><input type="checkbox" checked data-month="2026-08">2026-08</label><label class="month-chip"><input type="checkbox" checked data-month="2026-09">2026-09</label></div>
+    <div id="best12-toolbar">
+      <span id="best12-actions">
+        <button type="button" id="best12-copy-top" class="tb-btn pri">Copy top 12</button>
+        <button type="button" id="best12-customize" class="tb-btn sec">Customize</button>
+      </span>
+      <span id="best12-building" hidden><span class="building-label">Building a deck</span>
+        <button type="button" id="best12-cancel" class="tb-ghost">Cancel</button></span>
+    </div>
+    <div id="best12-hint">Top 12 pre-selected. Tap cards to swap.</div>
     <table class="data-table" id="best12-table">
-      <thead><tr><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
+      <thead><tr><th class="chk-col no-sort" aria-hidden="true"></th><th data-sort="card">Card</th><th class="num" data-sort="freq">Freq</th>
         <th class="num no-sort">% of <span id="best12-count">9</span> decks</th></tr></thead>
       <tbody>
-        <tr><td><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/snapping_hydra/" target="_blank" rel="noopener">Snapping Hydra</a></td><td class="num">7</td><td class="num">78%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/ace_of_hearts/" target="_blank" rel="noopener">Ace of Hearts</a></td><td class="num">6</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/beanie_baby/" target="_blank" rel="noopener">Beanie Baby</a></td><td class="num">6</td><td class="num">67%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/guinevere/" target="_blank" rel="noopener">Guinevere</a></td><td class="num">5</td><td class="num">56%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/monstro/" target="_blank" rel="noopener">Monstro</a></td><td class="num">5</td><td class="num">56%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#6e9ec8cc;border-color:#6e9ec830" href="https://guide.galaxy.fun/cards/sinbad/" target="_blank" rel="noopener">Sinbad</a></td><td class="num">4</td><td class="num">44%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/chaos/" target="_blank" rel="noopener">Chaos</a></td><td class="num">3</td><td class="num">33%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30" href="https://guide.galaxy.fun/cards/charlotte/" target="_blank" rel="noopener">Charlotte</a></td><td class="num">3</td><td class="num">33%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/flopsy/" target="_blank" rel="noopener">Flopsy</a></td><td class="num">3</td><td class="num">33%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/frog_prince/" target="_blank" rel="noopener">Frog Prince</a></td><td class="num">3</td><td class="num">33%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/maverick_icewing/" target="_blank" rel="noopener">Maverick &amp; Icewing</a></td><td class="num">3</td><td class="num">33%</td></tr>
-        <tr><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/mech_a_man/" target="_blank" rel="noopener">Mech-a-Man</a></td><td class="num">3</td><td class="num">33%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/snapping_hydra/" target="_blank" rel="noopener">Snapping Hydra</a></td><td class="num">7</td><td class="num">78%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/ace_of_hearts/" target="_blank" rel="noopener">Ace of Hearts</a></td><td class="num">6</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/beanie_baby/" target="_blank" rel="noopener">Beanie Baby</a></td><td class="num">6</td><td class="num">67%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/guinevere/" target="_blank" rel="noopener">Guinevere</a></td><td class="num">5</td><td class="num">56%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/monstro/" target="_blank" rel="noopener">Monstro</a></td><td class="num">5</td><td class="num">56%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#6e9ec8cc;border-color:#6e9ec830" href="https://guide.galaxy.fun/cards/sinbad/" target="_blank" rel="noopener">Sinbad</a></td><td class="num">4</td><td class="num">44%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#9e6ec8cc;border-color:#9e6ec830" href="https://guide.galaxy.fun/cards/chaos/" target="_blank" rel="noopener">Chaos</a></td><td class="num">3</td><td class="num">33%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#d87dcecc;border-color:#d87dce30" href="https://guide.galaxy.fun/cards/charlotte/" target="_blank" rel="noopener">Charlotte</a></td><td class="num">3</td><td class="num">33%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/flopsy/" target="_blank" rel="noopener">Flopsy</a></td><td class="num">3</td><td class="num">33%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#6ec89ecc;border-color:#6ec89e30" href="https://guide.galaxy.fun/cards/frog_prince/" target="_blank" rel="noopener">Frog Prince</a></td><td class="num">3</td><td class="num">33%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/maverick_icewing/" target="_blank" rel="noopener">Maverick &amp; Icewing</a></td><td class="num">3</td><td class="num">33%</td></tr>
+        <tr><td class="chk-cell"></td><td><a class="deck-pill" style="color:#c8a96ecc;border-color:#c8a96e30" href="https://guide.galaxy.fun/cards/mech_a_man/" target="_blank" rel="noopener">Mech-a-Man</a></td><td class="num">3</td><td class="num">33%</td></tr>
       </tbody>
     </table>
     <button type="button" id="best12-more" class="more-btn" hidden>Show 12 more</button>
+    <div id="best12-bar" hidden>
+      <div class="prog"><i id="best12-prog"></i></div>
+      <span id="best12-status" aria-live="polite"></span>
+      <span id="best12-extra"></span>
+      <button type="button" id="best12-reset" class="tb-ghost">Reset to top 12</button>
+      <button type="button" id="best12-copy-deck" class="tb-btn pri">Copy deck</button>
+    </div>
+    </div>
+    <button type="button" id="best12-chip" hidden>Deck 12/12 · back to table</button>
 
     <h2 class="section-title" style="margin-top:48px">Decklists</h2>
     <div class="section-desc">Winning decks grouped by identical list, most popular first.</div>
@@ -177,8 +242,8 @@
     </div>
   </div>
 </main>
-<script type="application/json" id="captain-data">{"slug": "maximus", "name": "Maximus", "months": [{"id": "2026-03", "players": [{"deck": ["Beanie Baby", "Frog Prince", "Toadie", "Tsarmina, the Tyrant", "Ace of Hearts", "Charlotte", "Guinevere", "Pied Piper", "Sinbad", "Monstro", "Snapping Hydra", "The Rat King"]}, {"deck": ["Beanie Baby", "Frog Prince", "Toadie", "Tsarmina, the Tyrant", "Ace of Hearts", "Charlotte", "Guinevere", "Pied Piper", "Sinbad", "Monstro", "Snapping Hydra", "The Rat King"]}]}, {"id": "2026-04", "players": [{"deck": ["Morgan Le Fae", "Calypso", "Mirror Mage", "Ogre Magi", "Elm Minster", "Mirror Mirror", "Mysterio, the Great and Powerful", "Wormtongue", "Sabrina", "Chaos", "Fae Familiar", "Prospero"]}, {"deck": ["Beanie Baby", "Mech-a-Man", "Maverick & Icewing", "Ace of Hearts", "Thunder of Dragons", "Chaos", "Smug", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Rollo", "Oracle of Fortunes"]}, {"deck": ["Beanie Baby", "Maverick & Icewing", "Mechanical Dragon", "Underdog", "The Burninator", "Pisces", "Wink", "The Fates", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Gummy Wyrm"]}]}, {"id": "2026-05", "players": [{"deck": ["Beanie Baby", "Mortakon", "Mech-a-Man", "Black Hole", "Wicked Witch", "Anubis", "Ace of Hearts", "Guinevere", "Monstro", "Smug", "Snapping Hydra", "Mr. Fox"]}]}, {"id": "2026-07", "players": [{"deck": ["Ace of Hearts", "Chaos", "Maverick & Icewing", "Mr. Fox", "Sinbad", "Snapping Hydra", "Viscount Chocolat", "Wicked Witch", "Crab Dragoon", "Flopsy", "Hercules", "Monstro"]}]}, {"id": "2026-08", "players": [{"deck": ["Monstro", "Pied Piper", "Beanie Baby", "Frog Prince", "Toadie", "Guinevere", "Ace of Hearts", "Tsarmina, the Tyrant", "Sinbad", "Charlotte", "Snapping Hydra", "The Rat King"]}]}, {"id": "2026-09", "players": [{"deck": ["The Fates", "Mech-a-Man", "Baron Bok", "Combustible Dragon", "Destiny", "Mechanical Dragon", "Mortakon", "Astral Navigator", "Eros", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}]}], "rules": "After you KO 15 enemies get a random Silver Rare character. After 40, get a random Golden Legendary character.", "cardSlugs": {"Ace of Hearts": "ace_of_hearts", "Anubis": "anubis", "Astral Navigator": "astral_navigator", "Baron Bok": "baron_bok", "Beanie Baby": "beanie_baby", "Black Hole": "black_hole", "Calypso": "calypso", "Chaos": "chaos", "Charlotte": "charlotte", "Combustible Dragon": "combustible_dragon", "Crab Dragoon": "crab_dragoon", "Destiny": "destiny", "Elm Minster": "elm_minster", "Eros": "eros", "Fae Familiar": "fae_familiar", "Flopsy": "flopsy", "Frog Prince": "frog_prince", "Guinevere": "guinevere", "Gummy Wyrm": "gummy_wyrm", "Hercules": "hercules", "Maverick & Icewing": "maverick_icewing", "Mech-a-Man": "mech_a_man", "Mechanical Dragon": "mechanical_dragon", "Mirror Mage": "mirror_mage", "Mirror Mirror": "mirror_mirror", "Monstro": "monstro", "Morgan Le Fae": "morgan_le_fae", "Mortakon": "mortakon", "Mr. Fox": "mr_fox", "Mysterio, the Great and Powerful": "mysterio_the_great_and_powerful", "Ogre Magi": "ogre_magi", "Oracle of Fortunes": "oracle_of_fortunes", "Pied Piper": "pied_piper", "Pisces": "pisces", "Prospero": "prospero", "Rollo": "rollo", "Sabrina": "sabrina", "Sigrun, Valkyrie Queen": "sigrun_valkyrie_queen", "Sinbad": "sinbad", "Smug": "smug", "Snapping Hydra": "snapping_hydra", "The Burninator": "the_burninator", "The Fates": "the_fates", "The Rat King": "the_rat_king", "Thunder of Dragons": "thunder_of_dragons", "Toadie": "toadie", "Tsarmina, the Tyrant": "tsarmina_the_tyrant", "Underdog": "underdog", "Viscount Chocolat": "viscount_chocolat", "Wicked Witch": "wicked_witch", "Wink": "wink", "Wormscale Tinkerer": "wormscale_tinkerer", "Wormtongue": "wormtongue"}, "cardColors": {"Ace of Hearts": "#c8a96e", "Anubis": "#7b9cff", "Astral Navigator": "#7b9cff", "Baron Bok": "#6ec89e", "Beanie Baby": "#c8a96e", "Calypso": "#9e6ec8", "Chaos": "#9e6ec8", "Charlotte": "#d87dce", "Combustible Dragon": "#c8a96e", "Crab Dragoon": "#c8a96e", "Destiny": "#d87dce", "Elm Minster": "#9e6ec8", "Fae Familiar": "#9e6ec8", "Flopsy": "#c8a96e", "Frog Prince": "#6ec89e", "Guinevere": "#c8a96e", "Gummy Wyrm": "#e87d9e", "Hercules": "#6e9ec8", "Maverick & Icewing": "#c8a96e", "Mech-a-Man": "#c8a96e", "Mechanical Dragon": "#c8a96e", "Mirror Mage": "#9e6ec8", "Monstro": "#6ec89e", "Morgan Le Fae": "#9e6ec8", "Mortakon": "#5a5d6a", "Mr. Fox": "#c8a96e", "Mysterio, the Great and Powerful": "#9e6ec8", "Ogre Magi": "#9e6ec8", "Oracle of Fortunes": "#c8a96e", "Pied Piper": "#6ec89e", "Pisces": "#c8a96e", "Prospero": "#9e6ec8", "Rollo": "#c8a96e", "Sabrina": "#9e6ec8", "Sigrun, Valkyrie Queen": "#7b9cff", "Sinbad": "#6e9ec8", "Smug": "#c8a96e", "Snapping Hydra": "#6ec89e", "The Burninator": "#c8a96e", "The Fates": "#9e6ec8", "The Rat King": "#6e9ec8", "Thunder of Dragons": "#c8a96e", "Toadie": "#d87dce", "Tsarmina, the Tyrant": "#6ec89e", "Underdog": "#6ec89e", "Viscount Chocolat": "#e87d9e", "Wicked Witch": "#9e6ec8", "Wink": "#6e9ec8", "Wormscale Tinkerer": "#c8a96e"}}</script>
-<script src="../../assets/captains.js?v=10"></script>
-<script src="../../assets/copy-deck.js?v=10" data-page="captain"></script>
+<script type="application/json" id="captain-data">{"slug": "maximus", "name": "Maximus", "months": [{"id": "2026-03", "players": [{"deck": ["Beanie Baby", "Frog Prince", "Toadie", "Tsarmina, the Tyrant", "Ace of Hearts", "Charlotte", "Guinevere", "Pied Piper", "Sinbad", "Monstro", "Snapping Hydra", "The Rat King"]}, {"deck": ["Beanie Baby", "Frog Prince", "Toadie", "Tsarmina, the Tyrant", "Ace of Hearts", "Charlotte", "Guinevere", "Pied Piper", "Sinbad", "Monstro", "Snapping Hydra", "The Rat King"]}]}, {"id": "2026-04", "players": [{"deck": ["Morgan Le Fae", "Calypso", "Mirror Mage", "Ogre Magi", "Elm Minster", "Mirror Mirror", "Mysterio, the Great and Powerful", "Wormtongue", "Sabrina", "Chaos", "Fae Familiar", "Prospero"]}, {"deck": ["Beanie Baby", "Mech-a-Man", "Maverick & Icewing", "Ace of Hearts", "Thunder of Dragons", "Chaos", "Smug", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Rollo", "Oracle of Fortunes"]}, {"deck": ["Beanie Baby", "Maverick & Icewing", "Mechanical Dragon", "Underdog", "The Burninator", "Pisces", "Wink", "The Fates", "Snapping Hydra", "Flopsy", "Wormscale Tinkerer", "Gummy Wyrm"]}]}, {"id": "2026-05", "players": [{"deck": ["Beanie Baby", "Mortakon", "Mech-a-Man", "Black Hole", "Wicked Witch", "Anubis", "Ace of Hearts", "Guinevere", "Monstro", "Smug", "Snapping Hydra", "Mr. Fox"]}]}, {"id": "2026-07", "players": [{"deck": ["Ace of Hearts", "Chaos", "Maverick & Icewing", "Mr. Fox", "Sinbad", "Snapping Hydra", "Viscount Chocolat", "Wicked Witch", "Crab Dragoon", "Flopsy", "Hercules", "Monstro"]}]}, {"id": "2026-08", "players": [{"deck": ["Monstro", "Pied Piper", "Beanie Baby", "Frog Prince", "Toadie", "Guinevere", "Ace of Hearts", "Tsarmina, the Tyrant", "Sinbad", "Charlotte", "Snapping Hydra", "The Rat King"]}]}, {"id": "2026-09", "players": [{"deck": ["The Fates", "Mech-a-Man", "Baron Bok", "Combustible Dragon", "Destiny", "Mechanical Dragon", "Mortakon", "Astral Navigator", "Eros", "Guinevere", "Sigrun, Valkyrie Queen", "The Burninator"]}]}], "rules": "After you KO 15 enemies get a random Silver Rare character. After 40, get a random Golden Legendary character.", "cardSlugs": {"Ace of Hearts": "ace_of_hearts", "Anubis": "anubis", "Astral Navigator": "astral_navigator", "Baron Bok": "baron_bok", "Beanie Baby": "beanie_baby", "Black Hole": "black_hole", "Calypso": "calypso", "Chaos": "chaos", "Charlotte": "charlotte", "Combustible Dragon": "combustible_dragon", "Crab Dragoon": "crab_dragoon", "Destiny": "destiny", "Elm Minster": "elm_minster", "Eros": "eros", "Fae Familiar": "fae_familiar", "Flopsy": "flopsy", "Frog Prince": "frog_prince", "Guinevere": "guinevere", "Gummy Wyrm": "gummy_wyrm", "Hercules": "hercules", "Maverick & Icewing": "maverick_icewing", "Mech-a-Man": "mech_a_man", "Mechanical Dragon": "mechanical_dragon", "Mirror Mage": "mirror_mage", "Mirror Mirror": "mirror_mirror", "Monstro": "monstro", "Morgan Le Fae": "morgan_le_fae", "Mortakon": "mortakon", "Mr. Fox": "mr_fox", "Mysterio, the Great and Powerful": "mysterio_the_great_and_powerful", "Ogre Magi": "ogre_magi", "Oracle of Fortunes": "oracle_of_fortunes", "Pied Piper": "pied_piper", "Pisces": "pisces", "Prospero": "prospero", "Rollo": "rollo", "Sabrina": "sabrina", "Sigrun, Valkyrie Queen": "sigrun_valkyrie_queen", "Sinbad": "sinbad", "Smug": "smug", "Snapping Hydra": "snapping_hydra", "The Burninator": "the_burninator", "The Fates": "the_fates", "The Rat King": "the_rat_king", "Thunder of Dragons": "thunder_of_dragons", "Toadie": "toadie", "Tsarmina, the Tyrant": "tsarmina_the_tyrant", "Underdog": "underdog", "Viscount Chocolat": "viscount_chocolat", "Wicked Witch": "wicked_witch", "Wink": "wink", "Wormscale Tinkerer": "wormscale_tinkerer", "Wormtongue": "wormtongue"}, "cardColors": {"Ace of Hearts": "#c8a96e", "Anubis": "#7b9cff", "Astral Navigator": "#7b9cff", "Baron Bok": "#6ec89e", "Beanie Baby": "#c8a96e", "Calypso": "#9e6ec8", "Chaos": "#9e6ec8", "Charlotte": "#d87dce", "Combustible Dragon": "#c8a96e", "Crab Dragoon": "#c8a96e", "Destiny": "#d87dce", "Elm Minster": "#9e6ec8", "Fae Familiar": "#9e6ec8", "Flopsy": "#c8a96e", "Frog Prince": "#6ec89e", "Guinevere": "#c8a96e", "Gummy Wyrm": "#e87d9e", "Hercules": "#6e9ec8", "Maverick & Icewing": "#c8a96e", "Mech-a-Man": "#c8a96e", "Mechanical Dragon": "#c8a96e", "Mirror Mage": "#9e6ec8", "Monstro": "#6ec89e", "Morgan Le Fae": "#9e6ec8", "Mortakon": "#5a5d6a", "Mr. Fox": "#c8a96e", "Mysterio, the Great and Powerful": "#9e6ec8", "Ogre Magi": "#9e6ec8", "Oracle of Fortunes": "#c8a96e", "Pied Piper": "#6ec89e", "Pisces": "#c8a96e", "Prospero": "#9e6ec8", "Rollo": "#c8a96e", "Sabrina": "#9e6ec8", "Sigrun, Valkyrie Queen": "#7b9cff", "Sinbad": "#6e9ec8", "Smug": "#c8a96e", "Snapping Hydra": "#6ec89e", "The Burninator": "#c8a96e", "The Fates": "#9e6ec8", "The Rat King": "#6e9ec8", "Thunder of Dragons": "#c8a96e", "Toadie": "#d87dce", "Tsarmina, the Tyrant": "#6ec89e", "Underdog": "#6ec89e", "Viscount Chocolat": "#e87d9e", "Wicked Witch": "#9e6ec8", "Wink": "#6e9ec8", "Wormscale Tinkerer": "#c8a96e"}, "cardCids": {"Mech-a-Man": 1107, "Maverick & Icewing": 1166, "Wicked Witch": 1263, "Anubis": 1266, "Combustible Dragon": 1323, "Thunder of Dragons": 1368, "Wormscale Tinkerer": 1422, "Rollo": 2099, "Oracle of Fortunes": 2102, "Mr. Fox": 2123, "Ace of Hearts": 1318, "Mysterio, the Great and Powerful": 1340, "Sinbad": 1387, "Smug": 1415, "Viscount Chocolat": 2004, "Beanie Baby": 1036, "Toadie": 1135, "Mechanical Dragon": 1176, "Wink": 1381, "Flopsy": 1420, "Calypso": 1200, "Hercules": 1283, "The Burninator": 1349, "Mortakon": 1096, "Guinevere": 1329, "Mirror Mage": 1227, "Frog Prince": 1046, "Tsarmina, the Tyrant": 1198, "Pisces": 1372, "Pied Piper": 1356, "Snapping Hydra": 1416, "Wormtongue": 1344, "Chaos": 1375, "Fae Familiar": 1384, "Prospero": 1412, "Morgan Le Fae": 1110, "The Fates": 1405, "Gummy Wyrm": 2011, "Elm Minster": 1277, "Monstro": 1409, "Ogre Magi": 1243, "Charlotte": 1321, "The Rat King": 1418, "Sabrina": 1354, "Black Hole": 1212, "Underdog": 1343, "Mirror Mirror": 1328, "Destiny": 3070, "Sigrun, Valkyrie Queen": 3091, "Crab Dragoon": 3068, "Eros": 3020, "Astral Navigator": 3005, "Baron Bok": 3051, "Maximus": 1362}}</script>
+<script src="../../assets/captains.js?v=11"></script>
+<script src="../../assets/copy-deck.js?v=11" data-page="captain"></script>
 </body>
 </html>

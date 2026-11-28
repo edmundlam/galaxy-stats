@@ -53,6 +53,17 @@ function docStub(overrides = {}) {
   };
 }
 
+// Shared recording classList for the DOM node stubs built below
+function classListStub() {
+  const cls = new Set();
+  return {
+    add: (c) => cls.add(c),
+    remove: (c) => cls.delete(c),
+    toggle: (c, f) => ((f === undefined ? !cls.has(c) : f) ? cls.add(c) : cls.delete(c)),
+    contains: (c) => cls.has(c),
+  };
+}
+
 // --- galaxy-report.js ---
 {
   const DATA = { event: { id: '2026-09' } };
@@ -184,6 +195,7 @@ function docStub(overrides = {}) {
       const n = { tag, children: [], dataset: {}, className: '', textContent: '', style: {} };
       n.appendChild = (c) => { n.children.push(c); return c; };
       n.append = (...cs) => n.children.push(...cs);
+      n.classList = classListStub();
       built.push(n);
       return n;
     };
@@ -214,7 +226,179 @@ function docStub(overrides = {}) {
   }
 }
 
-// --- copy-deck.js ---
+  // Top-12 deck builder: toolbar copy, build mode, soft cap, captain-first cid line
+  {
+    const cards13 = Array.from({ length: 13 }, (_, i) => `Card ${i}`);
+    const payload = {
+      name: 'Hannibal',
+      cardCids: Object.fromEntries([...cards13.map((c, i) => [c, 100 + i]), ['Hannibal', 555]]),
+      months: [
+        { id: '2026-05', players: cards13.map(c => ({ deck: [c] })) },
+        { id: '2026-06', players: [{ deck: ['Only A'] }] },
+      ],
+    };
+    const built = [];
+    const node = (tag) => {
+      const n = {
+        tag, children: [], dataset: {}, style: {}, attrs: {}, className: '', textContent: '',
+        hidden: false, listeners: {},
+        addEventListener(t, fn) { (n.listeners[t] ??= []).push(fn); },
+        setAttribute(k, v) { n.attrs[k] = v; },
+        removeAttribute() {},
+        appendChild(c) { n.children.push(c); return c; },
+        append(...cs) { n.children.push(...cs); },
+        // tr.querySelector('input') → the checkbox rendered into td.chk-cell
+        querySelector: (sel) => sel === 'input' ? n.children[0]?.children[0] ?? null : null,
+        closest: () => null,
+        classList: classListStub(),
+        scrollIntoView: () => { n.scrolled = true; },
+      };
+      built.push(n);
+      return n;
+    };
+    const tbody = {
+      rows: [],
+      set innerHTML(v) { this.rows.length = 0; },
+      appendChild: (tr) => tbody.rows.push(tr),
+    };
+    const byId = {
+      'captain-data': { textContent: JSON.stringify(payload) },
+      ...Object.fromEntries([
+      'best12-sec', 'best12-table', 'best12-toolbar', 'best12-actions', 'best12-building',
+      'best12-copy-top', 'best12-customize', 'best12-cancel', 'best12-reset', 'best12-copy-deck',
+      'best12-bar', 'best12-status', 'best12-extra', 'best12-prog', 'best12-chip', 'best12-more',
+    ].map(id => [id, node(id === 'best12-sec' ? 'div' : id === 'best12-table' ? 'table' : 'button')])),
+    };
+    const recording = (o) => { o.listeners = {}; o.addEventListener = (t, fn) => { (o.listeners[t] ??= []).push(fn); }; return o; };
+    const monthInputs = [
+      recording(el({ dataset: { month: '2026-05' }, checked: true })),
+      recording(el({ dataset: { month: '2026-06' }, checked: false })),
+    ];
+    const written = [];
+    const observers = [];
+    const calls = [];
+    const doc = {
+      currentScript: { dataset: { page: 'captain' } },
+      listeners: {},
+      addEventListener(t, fn) { (doc.listeners[t] ??= []).push(fn); },
+      getElementById: (id) => byId[id] ?? null,
+      querySelector: (sel) => sel === '#best12-table tbody' ? tbody : el(),
+      querySelectorAll: (sel) => sel === '#month-filter input' ? monthInputs
+        : sel === '#month-filter input:checked' ? monthInputs.filter(cb => cb.checked) : [],
+      createElement: node,
+      body: { appendChild() {} },
+    };
+    const ctx = {
+      document: doc,
+      setTimeout: (fn) => fn(),
+      clearTimeout: () => {},
+      window: {
+        umami: { track: (name, props) => calls.push([name, props]) },
+        IntersectionObserver: class { constructor(cb) { this.cb = cb; } observe() { observers.push(this); } },
+      },
+      navigator: { clipboard: { writeText: (t) => { written.push(t); return Promise.resolve(); } } },
+    };
+    vm.createContext(ctx);
+    vm.runInContext(readFileSync(CAPTAINS_JS, 'utf8'), ctx);
+    vm.runInContext(readFileSync(COPY_DECK_JS, 'utf8'), ctx);
+
+    // browse: Copy top 12 writes the captain-first 13-value cid line, no build mode
+    byId['best12-copy-top'].listeners.click[0]();
+    await new Promise((resolve) => setImmediate(resolve));
+    const lines = written[0].split('\n');
+    assert.strictEqual(lines[0], 'Once Upon a Galaxy - Galaxy Stats Decklist');
+    assert.strictEqual(lines[1], '555-100-101-110-111-112-102-103-104-105-106-107-108',
+      'cid line must lead with the captain cid and carry 12 card cids');
+    assert.strictEqual(lines[2], 'Captain: Hannibal');
+    assert.strictEqual(lines.length, 15);
+    assert.strictEqual(byId['best12-sec'].classList.contains('build'), false);
+    same(calls.at(-1), ['copy-top-12', { captain: 'Hannibal' }]);
+
+    // customize: enters build mode with the top 12 pre-selected
+    byId['best12-customize'].listeners.click[0]();
+    assert.strictEqual(byId['best12-sec'].classList.contains('build'), true);
+    assert.strictEqual(tbody.rows.length, 12);
+    assert.strictEqual(byId['best12-status'].textContent, '12/12 · ready to copy');
+    assert.strictEqual(byId['best12-copy-deck'].attrs['aria-disabled'], 'false');
+    assert.strictEqual(byId['best12-chip'].textContent, 'Deck 12/12 · back to table');
+    assert.strictEqual(byId['best12-chip'].hidden, true, 'chip hidden while the table is in view');
+    assert.strictEqual(byId['best12-actions'].hidden, true, 'toolbar swaps: browse actions hidden while building');
+    assert.strictEqual(byId['best12-building'].hidden, false);
+    same(calls.at(-1), ['deck-customize', { captain: 'Hannibal' }]);
+
+    // chip visibility follows the IntersectionObserver; tap scrolls back
+    observers[0].cb([{ isIntersecting: false }]);
+    assert.strictEqual(byId['best12-chip'].hidden, false);
+    byId['best12-chip'].listeners.click[0]();
+    assert.strictEqual(byId['best12-sec'].scrolled, true, 'chip tap scrolls to the table section');
+    observers[0].cb([{ isIntersecting: true }]);
+    assert.strictEqual(byId['best12-chip'].hidden, true);
+
+    // show-more keeps working; picking a 13th card flips the bar to remove-mode
+    byId['best12-more'].listeners.click[0]();
+    assert.strictEqual(tbody.rows.length, 13);
+    const rowInput = (i) => tbody.rows[i].children[0].children[0];
+    rowInput(12).listeners.change[0](); // Card 9: 13 selected
+    assert.strictEqual(byId['best12-status'].textContent, '13/12 · remove 1');
+    assert.strictEqual(byId['best12-copy-deck'].attrs['aria-disabled'], 'true');
+    assert.strictEqual(byId['best12-prog'].classList.contains('over'), true);
+    byId['best12-copy-deck'].listeners.click[0]();
+    const toastEl = built.find(n => n.className === 'toast');
+    assert.strictEqual(toastEl.textContent, 'Remove 1 first');
+    assert.strictEqual(written.length, 1, 'over 12 must not copy');
+
+    // under 12 toasts the shortfall too
+    rowInput(12).listeners.change[0]();
+    rowInput(0).listeners.change[0]();
+    assert.strictEqual(byId['best12-status'].textContent, '11/12 · add 1');
+    byId['best12-copy-deck'].listeners.click[0]();
+    assert.strictEqual(toastEl.textContent, 'Add 1 more');
+    assert.strictEqual(written.length, 1);
+
+    // exactly 12 (one swap: Card 0 out, Card 9 in) copies with the swap count
+    rowInput(12).listeners.change[0]();
+    assert.strictEqual(byId['best12-status'].textContent, '12/12 · ready to copy');
+    assert.strictEqual(byId['best12-copy-deck'].attrs['aria-disabled'], 'false', 'copy re-enables at exactly 12');
+    byId['best12-copy-deck'].listeners.click[0]();
+    await new Promise((resolve) => setImmediate(resolve));
+    assert.strictEqual(written.length, 2);
+    assert.strictEqual(written[1].split('\n')[1], '555-101-110-111-112-102-103-104-105-106-107-108-109');
+    same(calls.filter(([name]) => name === 'deck-copy').at(-1),
+      ['deck-copy', { captain: 'Hannibal', swaps: 1 }]);
+
+    // month-filter re-render keeps the name-keyed selection
+    monthInputs[0].listeners.change[0]();
+    assert.strictEqual(byId['best12-status'].textContent, '12/12 · ready to copy');
+
+    // deselect two selected cards, then reset restores the top 12 from the current filter
+    rowInput(1).listeners.change[0]();
+    rowInput(2).listeners.change[0]();
+    assert.strictEqual(byId['best12-status'].textContent, '10/12 · add 2');
+    byId['best12-reset'].listeners.click[0]();
+    assert.strictEqual(byId['best12-status'].textContent, '12/12 · ready to copy');
+
+    // a selected card that drops out of the ranking (month filter) stays selected
+    // and counted — copying still yields all 12 cards, not the ranking intersection
+    monthInputs[0].checked = false;
+    monthInputs[1].checked = true;
+    monthInputs[0].listeners.change[0]();
+    assert.strictEqual(byId['best12-status'].textContent, '12/12 · ready to copy');
+    byId['best12-copy-deck'].listeners.click[0]();
+    await new Promise((resolve) => setImmediate(resolve));
+    assert.strictEqual(written.length, 3);
+    assert.strictEqual(written[2].split('\n').length, 15,
+      'all 12 selected cards copy even after they left the current ranking');
+    assert.ok(written[2].split('\n').includes('Card 0'), 'ranked-out selections are appended, not dropped');
+
+    // cancel exits build mode: rows lose their checkboxes
+    byId['best12-cancel'].listeners.click[0]();
+    assert.strictEqual(byId['best12-sec'].classList.contains('build'), false);
+    assert.strictEqual(byId['best12-bar'].hidden, true);
+    assert.strictEqual(byId['best12-chip'].hidden, true);
+    assert.strictEqual(tbody.rows[0].children[0].children.length, 0, 'browse rows carry no checkbox');
+    console.log('captains.js: top-12 builder OK');
+  }
+
 {
   const row = {
     querySelectorAll: (sel) => sel === '.deck-pill'

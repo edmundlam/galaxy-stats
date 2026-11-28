@@ -2,6 +2,7 @@
 
 import json
 import re
+import sys
 from html import escape
 from pathlib import Path
 
@@ -11,6 +12,7 @@ from scripts.render_captains import (
     ASSET_VERSION,
     aggregate_captains,
     compute_best12,
+    main,
     render_captain_page,
     render_index_page,
     slug_to_dash,
@@ -890,3 +892,129 @@ def test_empty_and_index_pages_omit_copy_deck_script(events_dir, captains_file):
     caps = aggregate_captains(events_dir, captains_file)
     assert "copy-deck.js" not in render_captain_page(caps["loki"], "https://example.com")
     assert "copy-deck.js" not in render_index_page(caps, "https://example.com")
+
+
+# --- Top-12 deck builder (context/specs/copy_decklists/top-12-copy-spec.md) ---
+
+
+def test_captain_page_payload_card_cids_cover_deck_cards_and_captain(events_dir, captains_file):
+    """cardCids rides in the payload, captain cid included, so JS can build the
+    captain-first 13-value ID line and pre-check all 13 cids itself."""
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(
+        caps["galileo-galilei"],
+        "https://example.com",
+        card_cids={"Galileo Galilei": 500, "Card A": 1, "Card F": 6, "Unrelated": 9},
+    )
+    assert extract_payload(html)["cardCids"] == {"Galileo Galilei": 500, "Card A": 1, "Card F": 6}
+
+
+def test_captain_page_payload_card_cids_key_order_follows_cid_map(events_dir, captains_file):
+    """cardCids key order must follow the cid map's own order (cards.json order),
+    never set iteration — set order varies with PYTHONHASHSEED and would churn
+    every regenerated captain page's git diff."""
+    caps = aggregate_captains(events_dir, captains_file)
+    cids = {"Galileo Galilei": 500, "Card G": 7, "Card A": 1, "Card F": 6, "Card B": 2, "Card E": 5, "Card C": 3}
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com", card_cids=cids)
+    expected_keys = ["Galileo Galilei", "Card G", "Card A", "Card F", "Card B", "Card E", "Card C"]
+    assert list(extract_payload(html)["cardCids"]) == expected_keys
+
+
+def test_main_inverts_captain_cids_from_underscore_slug_keys(tmp_path, monkeypatch):
+    """captains.json/cards.json key captains with underscores while aggregate keys are
+    dashed — the cid inversion must union the underscore forms, or every multi-word
+    captain silently copies names-only (no captain-first cid line anywhere)."""
+    events = tmp_path / "events" / "2026-01"
+    events.mkdir(parents=True)
+    (events / "analysis.json").write_text(
+        json.dumps(
+            {
+                "event": {"id": "2026-01", "name": "E", "date": "2026-01-16"},
+                "captains": [
+                    {
+                        "slug": "galileo_galilei",
+                        "name": "Galileo Galilei",
+                        "n": 1,
+                        "signature": [],
+                        "best12": [],
+                        "players": [{"username": "u", "archetype": "a", "deck": ["Card A"]}],
+                    }
+                ],
+            }
+        )
+    )
+    (events / "event.json").write_text(json.dumps({"players": [{"deck": ["card_a"]}]}))
+    (tmp_path / "captains.json").write_text(json.dumps({"galileo_galilei": "Galileo Galilei"}))
+    (tmp_path / "cards.json").write_text(
+        json.dumps({"card_a": {"name": "Card A", "cid": 1}, "galileo_galilei": {"name": "Galileo Galilei", "cid": 500}})
+    )
+    docs = tmp_path / "docs"
+    (docs / "reports").mkdir(parents=True)
+    monkeypatch.setattr(sys, "argv", ["render_captains.py", "--dist-dir", str(tmp_path), "--docs-dir", str(docs)])
+    assert main() == 0
+    html = (docs / "captains" / "galileo-galilei" / "index.html").read_text()
+    assert extract_payload(html)["cardCids"] == {"Card A": 1, "Galileo Galilei": 500}
+    assert 'data-cids="500-1"' in html, "per-deck copy buttons carry the captain-first ID line too"
+
+
+def test_best12_region_wrapped_for_sticky_bar(events_dir, captains_file):
+    """Month chips + toolbar + table + show-more + action bar share #best12-sec so
+    the sticky bar scopes to the region and the chip observer has an element."""
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    start = html.index('id="best12-sec"')
+    end = html.index('id="deck-list"')
+    for marker in (
+        'id="month-filter"',
+        'id="best12-toolbar"',
+        'id="best12-table"',
+        'id="best12-more"',
+        'id="best12-bar"',
+    ):
+        assert start < html.index(marker) < end, f"{marker} must live inside #best12-sec"
+    assert html.index('id="month-filter"') < html.index('id="best12-toolbar"') < html.index('id="best12-table"'), (
+        "toolbar sits between the month chips and the table"
+    )
+    assert html.index('id="best12-more"') < html.index('id="best12-bar"'), "bar follows show-more so it never covers it"
+
+
+def test_captain_page_bakes_top12_toolbar(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    assert '<button type="button" id="best12-copy-top" class="tb-btn pri">Copy top 12</button>' in html
+    assert '<button type="button" id="best12-customize" class="tb-btn sec">Customize</button>' in html
+    assert 'id="best12-building"' in html
+    assert ">Cancel</button>" in html
+    assert "Top 12 pre-selected. Tap cards to swap." in html
+
+
+def test_captain_page_bakes_action_bar_and_floating_chip(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    bar = html.split('id="best12-bar"', 1)[1]
+    assert '<span id="best12-status" aria-live="polite"></span>' in bar
+    assert ">Reset to top 12</button>" in bar
+    assert ">Copy deck</button>" in bar
+    assert ">Reset to top 12</button>" in html
+    assert ">Copy deck</button>" in html
+    assert 'id="best12-prog"' in html
+    assert 'id="best12-chip" hidden' in html
+
+
+def test_best12_thead_leads_with_hidden_checkbox_spacer(events_dir, captains_file):
+    """The build-mode checkbox column must not shift sortTable's cell index:
+    a leading no-sort th pairs with a chk-cell td in every prerendered row."""
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["galileo-galilei"], "https://example.com")
+    thead = re.search(r'id="best12-table".*?<thead>(.*?)</thead>', html, re.DOTALL).group(1)
+    assert thead.index('class="chk-col') < thead.index('data-sort="card"')
+    tbody_html = best12_tbody(html)
+    assert tbody_html.count('<td class="chk-cell"></td>') == tbody_html.count("<tr>")
+
+
+def test_empty_page_omits_builder_ui(events_dir, captains_file):
+    caps = aggregate_captains(events_dir, captains_file)
+    html = render_captain_page(caps["loki"], "https://example.com")
+    body = html.split("<body>", 1)[1]
+    for marker in ("best12-sec", "best12-toolbar", "best12-bar", "best12-chip"):
+        assert marker not in body
